@@ -43,7 +43,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "testvpc"
+		opt1 := "attachments.txt"
+		attachmentsDs, err := oss.GetInstanceAttachments(ctx, &oss.GetInstanceAttachmentsArgs{
+			InstanceName: "sample-instance",
+			NameRegex:    &opt0,
+			OutputFile:   &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstOtsAttachmentId", attachmentsDs.Attachments[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -54,7 +79,7 @@ import pulumi_alicloud as alicloud
 attachments_ds = alicloud.oss.get_instance_attachments(instance_name="sample-instance",
     name_regex="testvpc",
     output_file="attachments.txt")
-pulumi.export("firstOtsAttachmentId", attachments_ds.attachments[0]["id"])
+pulumi.export("firstOtsAttachmentId", attachments_ds.attachments[0].id)
 ```
 
 {{% /example %}}
@@ -90,7 +115,7 @@ export const firstOtsAttachmentId = attachmentsDs.attachments[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instance_attachments(</span>instance_name=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_attachments(</span><span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceAttachmentsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -983,6 +1008,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

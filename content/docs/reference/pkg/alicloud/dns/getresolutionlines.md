@@ -47,7 +47,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/dns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "support_lines.txt"
+		resolutionLinesDs, err := dns.GetResolutionLines(ctx, &dns.GetResolutionLinesArgs{
+			LineCodes: []string{
+				"cn_unicom_shanxi",
+			},
+			OutputFile: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstLineCode", resolutionLinesDs.Lines[0].LineCode)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -57,7 +82,7 @@ import pulumi_alicloud as alicloud
 
 resolution_lines_ds = alicloud.dns.get_resolution_lines(line_codes=["cn_unicom_shanxi"],
     output_file="support_lines.txt")
-pulumi.export("firstLineCode", resolution_lines_ds.lines[0]["lineCode"])
+pulumi.export("firstLineCode", resolution_lines_ds.lines[0].line_code)
 ```
 
 {{% /example %}}
@@ -92,7 +117,7 @@ export const firstLineCode = resolutionLinesDs.lines[0].lineCode;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_resolution_lines(</span>domain_name=None<span class="p">, </span>lang=None<span class="p">, </span>line_codes=None<span class="p">, </span>line_display_names=None<span class="p">, </span>line_names=None<span class="p">, </span>output_file=None<span class="p">, </span>user_client_ip=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_resolution_lines(</span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lang</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">line_codes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">line_display_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">line_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_client_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetResolutionLinesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -125,7 +150,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Domain Name. 
+    <dd>{{% md %}}Domain Name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -207,7 +232,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Domain Name. 
+    <dd>{{% md %}}Domain Name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -289,7 +314,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Domain Name. 
+    <dd>{{% md %}}Domain Name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -371,7 +396,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Domain Name. 
+    <dd>{{% md %}}Domain Name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1005,8 +1030,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="linecode_python">
-<a href="#linecode_python" style="color: inherit; text-decoration: inherit;">line<wbr>Code</a>
+        <span id="line_code_python">
+<a href="#line_code_python" style="color: inherit; text-decoration: inherit;">line_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1015,8 +1040,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="linedisplayname_python">
-<a href="#linedisplayname_python" style="color: inherit; text-decoration: inherit;">line<wbr>Display<wbr>Name</a>
+        <span id="line_display_name_python">
+<a href="#line_display_name_python" style="color: inherit; text-decoration: inherit;">line_<wbr>display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1026,8 +1051,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="linename_python">
-<a href="#linename_python" style="color: inherit; text-decoration: inherit;">line<wbr>Name</a>
+        <span id="line_name_python">
+<a href="#line_name_python" style="color: inherit; text-decoration: inherit;">line_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1053,6 +1078,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

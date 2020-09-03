@@ -48,7 +48,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/edas"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "groups.txt"
+		groups, err := edas.GetDeployGroups(ctx, &edas.GetDeployGroupsArgs{
+			AppId: "xxx",
+			Ids: []string{
+				"xxx",
+			},
+			OutputFile: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstGroupName", groups.Groups[0].GroupName)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -59,7 +85,7 @@ import pulumi_alicloud as alicloud
 groups = alicloud.edas.get_deploy_groups(app_id="xxx",
     ids=["xxx"],
     output_file="groups.txt")
-pulumi.export("firstGroupName", groups.groups[0]["group_name"])
+pulumi.export("firstGroupName", groups.groups[0].group_name)
 ```
 
 {{% /example %}}
@@ -94,7 +120,7 @@ export const firstGroupName = groups.then(groups => groups.groups[0].groupName);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_deploy_groups(</span>app_id=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_deploy_groups(</span><span class="nx">app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDeployGroupsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -138,7 +164,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the deploy group name. 
+    <dd>{{% md %}}A regex string to filter results by the deploy group name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -177,7 +203,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the deploy group name. 
+    <dd>{{% md %}}A regex string to filter results by the deploy group name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -216,7 +242,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the deploy group name. 
+    <dd>{{% md %}}A regex string to filter results by the deploy group name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -255,7 +281,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the deploy group name. 
+    <dd>{{% md %}}A regex string to filter results by the deploy group name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -916,17 +942,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="appversionid_python">
-<a href="#appversionid_python" style="color: inherit; text-decoration: inherit;">app<wbr>Version<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The version of the deployment package for the application.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="app_id_python">
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
 </span> 
@@ -934,6 +949,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the EDAS application.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="app_version_id_python">
+<a href="#app_version_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>version_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the deployment package for the application.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -993,8 +1019,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="packageversionid_python">
-<a href="#packageversionid_python" style="color: inherit; text-decoration: inherit;">package<wbr>Version<wbr>Id</a>
+        <span id="package_version_id_python">
+<a href="#package_version_id_python" style="color: inherit; text-decoration: inherit;">package_<wbr>version_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1031,6 +1057,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -45,7 +45,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/nas"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "protocols.txt"
+		opt1 := "cn-beijing-e"
+		_default, err := nas.GetProtocols(ctx, &nas.GetProtocolsArgs{
+			OutputFile: &opt0,
+			Type:       "Performance",
+			ZoneId:     &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("nasProtocolsProtocol", _default.Protocols[0])
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -92,7 +117,7 @@ export const nasProtocolsProtocol = defaultProtocols.protocols[0];
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_protocols(</span>output_file=None<span class="p">, </span>type=None<span class="p">, </span>zone_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_protocols(</span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProtocolsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -125,7 +150,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The file system type. Valid Values: Performance and Capacity.  
+    <dd>{{% md %}}The file system type. Valid Values: Performance and Capacity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -146,7 +171,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String to filter results by zone id. 
+    <dd>{{% md %}}String to filter results by zone id.
 {{% /md %}}</dd>
 
 </dl>
@@ -164,7 +189,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The file system type. Valid Values: Performance and Capacity.  
+    <dd>{{% md %}}The file system type. Valid Values: Performance and Capacity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -185,7 +210,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String to filter results by zone id. 
+    <dd>{{% md %}}String to filter results by zone id.
 {{% /md %}}</dd>
 
 </dl>
@@ -203,7 +228,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The file system type. Valid Values: Performance and Capacity.  
+    <dd>{{% md %}}The file system type. Valid Values: Performance and Capacity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -224,7 +249,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String to filter results by zone id. 
+    <dd>{{% md %}}String to filter results by zone id.
 {{% /md %}}</dd>
 
 </dl>
@@ -242,7 +267,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The file system type. Valid Values: Performance and Capacity.  
+    <dd>{{% md %}}The file system type. Valid Values: Performance and Capacity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -263,7 +288,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String to filter results by zone id. 
+    <dd>{{% md %}}String to filter results by zone id.
 {{% /md %}}</dd>
 
 </dl>
@@ -533,6 +558,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

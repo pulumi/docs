@@ -45,7 +45,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "web_server"
+		opt1 := "Running"
+		instancesDs, err := ecs.GetInstances(ctx, &ecs.GetInstancesArgs{
+			NameRegex: &opt0,
+			Status:    &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstInstanceId", instancesDs.Instances[0].Id)
+		ctx.Export("instanceIds", instancesDs.Ids)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -55,7 +80,7 @@ import pulumi_alicloud as alicloud
 
 instances_ds = alicloud.ecs.get_instances(name_regex="web_server",
     status="Running")
-pulumi.export("firstInstanceId", instances_ds.instances[0]["id"])
+pulumi.export("firstInstanceId", instances_ds.instances[0].id)
 pulumi.export("instanceIds", instances_ds.ids)
 ```
 
@@ -92,7 +117,7 @@ export const instanceIds = instancesDs.ids!;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instances(</span>availability_zone=None<span class="p">, </span>ids=None<span class="p">, </span>image_id=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>ram_role_name=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ram_role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -213,12 +238,67 @@ The following arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the ECS instances. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const taggedInstances = pulumi.output(alicloud.ecs.getInstances({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.ecs.getInstances" "taggedInstances" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+tagged_instances = alicloud.ecs.get_instances(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var taggedInstances = Output.Create(AliCloud.Ecs.GetInstances.InvokeAsync(new AliCloud.Ecs.GetInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.GetInstances(ctx, &ecs.GetInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -348,12 +428,67 @@ tagKey2 = "tagValue2"
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the ECS instances. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const taggedInstances = pulumi.output(alicloud.ecs.getInstances({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.ecs.getInstances" "taggedInstances" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+tagged_instances = alicloud.ecs.get_instances(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var taggedInstances = Output.Create(AliCloud.Ecs.GetInstances.InvokeAsync(new AliCloud.Ecs.GetInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.GetInstances(ctx, &ecs.GetInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -483,12 +618,67 @@ tagKey2 = "tagValue2"
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the ECS instances. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const taggedInstances = pulumi.output(alicloud.ecs.getInstances({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.ecs.getInstances" "taggedInstances" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+tagged_instances = alicloud.ecs.get_instances(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var taggedInstances = Output.Create(AliCloud.Ecs.GetInstances.InvokeAsync(new AliCloud.Ecs.GetInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.GetInstances(ctx, &ecs.GetInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -615,15 +805,70 @@ tagKey2 = "tagValue2"
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the ECS instances. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const taggedInstances = pulumi.output(alicloud.ecs.getInstances({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.ecs.getInstances" "taggedInstances" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+tagged_instances = alicloud.ecs.get_instances(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var taggedInstances = Output.Create(AliCloud.Ecs.GetInstances.InvokeAsync(new AliCloud.Ecs.GetInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.GetInstances(ctx, &ecs.GetInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -711,7 +956,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of instances names. 
+    <dd>{{% md %}}A list of instances names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -870,7 +1115,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of instances names. 
+    <dd>{{% md %}}A list of instances names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1029,7 +1274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of instances names. 
+    <dd>{{% md %}}A list of instances names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1188,7 +1433,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of instances names. 
+    <dd>{{% md %}}A list of instances names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1272,7 +1517,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the ECS instance.
 {{% /md %}}</dd>
@@ -1592,12 +1837,67 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the ECS instances. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const taggedInstances = pulumi.output(alicloud.ecs.getInstances({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.ecs.getInstances" "taggedInstances" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+tagged_instances = alicloud.ecs.get_instances(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var taggedInstances = Output.Create(AliCloud.Ecs.GetInstances.InvokeAsync(new AliCloud.Ecs.GetInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.GetInstances(ctx, &ecs.GetInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -1871,12 +2171,67 @@ tagKey2 = "tagValue2"
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the ECS instances. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const taggedInstances = pulumi.output(alicloud.ecs.getInstances({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.ecs.getInstances" "taggedInstances" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+tagged_instances = alicloud.ecs.get_instances(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var taggedInstances = Output.Create(AliCloud.Ecs.GetInstances.InvokeAsync(new AliCloud.Ecs.GetInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.GetInstances(ctx, &ecs.GetInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -2150,12 +2505,67 @@ tagKey2 = "tagValue2"
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the ECS instances. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const taggedInstances = pulumi.output(alicloud.ecs.getInstances({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.ecs.getInstances" "taggedInstances" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+tagged_instances = alicloud.ecs.get_instances(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var taggedInstances = Output.Create(AliCloud.Ecs.GetInstances.InvokeAsync(new AliCloud.Ecs.GetInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.GetInstances(ctx, &ecs.GetInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -2206,7 +2616,7 @@ tagKey2 = "tagValue2"
 <a href="#disk_device_mappings_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>device_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancesinstancediskdevicemapping">List[Get<wbr>Instances<wbr>Instance<wbr>Disk<wbr>Device<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#getinstancesinstancediskdevicemapping">List[Get<wbr>Instances<wbr>Instance<wbr>Disk<wbr>Device<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Description of the attached disks.
 {{% /md %}}</dd>
@@ -2345,8 +2755,8 @@ tagKey2 = "tagValue2"
 
     <dt class="property-required"
             title="Required">
-        <span id="regionid_python">
-<a href="#regionid_python" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2426,15 +2836,70 @@ tagKey2 = "tagValue2"
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the ECS instances. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const taggedInstances = pulumi.output(alicloud.ecs.getInstances({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.ecs.getInstances" "taggedInstances" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+tagged_instances = alicloud.ecs.get_instances(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var taggedInstances = Output.Create(AliCloud.Ecs.GetInstances.InvokeAsync(new AliCloud.Ecs.GetInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.GetInstances(ctx, &ecs.GetInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -2679,6 +3144,6 @@ tagKey2 = "tagValue2"
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

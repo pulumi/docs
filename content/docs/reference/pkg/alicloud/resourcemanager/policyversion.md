@@ -22,7 +22,7 @@ meta_desc: "Explore the PolicyVersion resource of the resourcemanager module, in
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/resourcemanager/#pulumi_alicloud.resourcemanager.PolicyVersion">PolicyVersion</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>is_default_version=None<span class="p">, </span>policy_document=None<span class="p">, </span>policy_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/resourcemanager/#pulumi_alicloud.resourcemanager.PolicyVersion">PolicyVersion</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">is_default_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_document</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -224,7 +224,7 @@ The PolicyVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to set the policy version as the default version. Default to `false`. 
+    <dd>{{% md %}}Specifies whether to set the policy version as the default version. Default to `false`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;is_default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
 
 </dl>
@@ -264,7 +264,7 @@ The PolicyVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to set the policy version as the default version. Default to `false`. 
+    <dd>{{% md %}}Specifies whether to set the policy version as the default version. Default to `false`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;is_default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
 
 </dl>
@@ -304,7 +304,7 @@ The PolicyVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to set the policy version as the default version. Default to `false`. 
+    <dd>{{% md %}}Specifies whether to set the policy version as the default version. Default to `false`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;is_default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
 
 </dl>
@@ -344,7 +344,7 @@ The PolicyVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to set the policy version as the default version. Default to `false`. 
+    <dd>{{% md %}}Specifies whether to set the policy version as the default version. Default to `false`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;is_default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
 
 </dl>
@@ -533,7 +533,8 @@ Get an existing PolicyVersion resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>create_date=None<span class="p">, </span>is_default_version=None<span class="p">, </span>policy_document=None<span class="p">, </span>policy_name=None<span class="p">, </span>version_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_default_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_document</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PolicyVersion</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -541,7 +542,7 @@ Get an existing PolicyVersion resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ResourceManager.PolicyVersion.html">PolicyVersion</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ResourceManager.PolicyVersionState.html">PolicyVersionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ResourceManager.PolicyVersion.html">PolicyVersion</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ResourceManager.PolicyVersionState.html">PolicyVersionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -666,7 +667,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to set the policy version as the default version. Default to `false`. 
+    <dd>{{% md %}}Specifies whether to set the policy version as the default version. Default to `false`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;is_default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -728,7 +729,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to set the policy version as the default version. Default to `false`. 
+    <dd>{{% md %}}Specifies whether to set the policy version as the default version. Default to `false`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;is_default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -790,7 +791,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to set the policy version as the default version. Default to `false`. 
+    <dd>{{% md %}}Specifies whether to set the policy version as the default version. Default to `false`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;is_default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -852,7 +853,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to set the policy version as the default version. Default to `false`. 
+    <dd>{{% md %}}Specifies whether to set the policy version as the default version. Default to `false`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;is_default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -908,6 +909,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

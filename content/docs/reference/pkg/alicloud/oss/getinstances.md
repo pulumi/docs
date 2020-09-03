@@ -42,7 +42,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "sample-instance"
+		opt1 := "instances.txt"
+		instancesDs, err := oss.GetInstances(ctx, &oss.GetInstancesArgs{
+			NameRegex:  &opt0,
+			OutputFile: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstInstanceId", instancesDs.Instances[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -52,7 +76,7 @@ import pulumi_alicloud as alicloud
 
 instances_ds = alicloud.oss.get_instances(name_regex="sample-instance",
     output_file="instances.txt")
-pulumi.export("firstInstanceId", instances_ds.instances[0]["id"])
+pulumi.export("firstInstanceId", instances_ds.instances[0].id)
 ```
 
 {{% /example %}}
@@ -87,7 +111,7 @@ export const firstInstanceId = instancesDs.instances[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instances(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -153,12 +177,67 @@ The following arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instancesDs = pulumi.output(alicloud.oss.getInstances({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.oss.getInstances" "instances_ds" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instances_ds = alicloud.oss.get_instances(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instancesDs = Output.Create(AliCloud.Oss.GetInstances.InvokeAsync(new AliCloud.Oss.GetInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := oss.GetInstances(ctx, &oss.GetInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -211,12 +290,67 @@ tagKey2 = "tagValue2"
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instancesDs = pulumi.output(alicloud.oss.getInstances({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.oss.getInstances" "instances_ds" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instances_ds = alicloud.oss.get_instances(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instancesDs = Output.Create(AliCloud.Oss.GetInstances.InvokeAsync(new AliCloud.Oss.GetInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := oss.GetInstances(ctx, &oss.GetInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -269,12 +403,67 @@ tagKey2 = "tagValue2"
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instancesDs = pulumi.output(alicloud.oss.getInstances({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.oss.getInstances" "instances_ds" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instances_ds = alicloud.oss.get_instances(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instancesDs = Output.Create(AliCloud.Oss.GetInstances.InvokeAsync(new AliCloud.Oss.GetInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := oss.GetInstances(ctx, &oss.GetInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -324,15 +513,70 @@ tagKey2 = "tagValue2"
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instancesDs = pulumi.output(alicloud.oss.getInstances({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.oss.getInstances" "instances_ds" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instances_ds = alicloud.oss.get_instances(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instancesDs = Output.Create(AliCloud.Oss.GetInstances.InvokeAsync(new AliCloud.Oss.GetInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := oss.GetInstances(ctx, &oss.GetInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -673,7 +917,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The tags of the instance.
 {{% /md %}}</dd>
@@ -817,12 +1061,67 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instancesDs = pulumi.output(alicloud.oss.getInstances({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.oss.getInstances" "instances_ds" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instances_ds = alicloud.oss.get_instances(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instancesDs = Output.Create(AliCloud.Oss.GetInstances.InvokeAsync(new AliCloud.Oss.GetInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := oss.GetInstances(ctx, &oss.GetInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -964,12 +1263,67 @@ tagKey2 = "tagValue2"
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instancesDs = pulumi.output(alicloud.oss.getInstances({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.oss.getInstances" "instances_ds" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instances_ds = alicloud.oss.get_instances(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instancesDs = Output.Create(AliCloud.Oss.GetInstances.InvokeAsync(new AliCloud.Oss.GetInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := oss.GetInstances(ctx, &oss.GetInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -1111,12 +1465,67 @@ tagKey2 = "tagValue2"
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instancesDs = pulumi.output(alicloud.oss.getInstances({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.oss.getInstances" "instances_ds" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instances_ds = alicloud.oss.get_instances(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instancesDs = Output.Create(AliCloud.Oss.GetInstances.InvokeAsync(new AliCloud.Oss.GetInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := oss.GetInstances(ctx, &oss.GetInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -1185,8 +1594,8 @@ tagKey2 = "tagValue2"
 
     <dt class="property-required"
             title="Required">
-        <span id="entityquota_python">
-<a href="#entityquota_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Quota</a>
+        <span id="entity_quota_python">
+<a href="#entity_quota_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>quota</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1229,8 +1638,8 @@ tagKey2 = "tagValue2"
 
     <dt class="property-required"
             title="Required">
-        <span id="readcapacity_python">
-<a href="#readcapacity_python" style="color: inherit; text-decoration: inherit;">read<wbr>Capacity</a>
+        <span id="read_capacity_python">
+<a href="#read_capacity_python" style="color: inherit; text-decoration: inherit;">read_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1255,23 +1664,78 @@ tagKey2 = "tagValue2"
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instancesDs = pulumi.output(alicloud.oss.getInstances({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.oss.getInstances" "instances_ds" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instances_ds = alicloud.oss.get_instances(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instancesDs = Output.Create(AliCloud.Oss.GetInstances.InvokeAsync(new AliCloud.Oss.GetInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := oss.GetInstances(ctx, &oss.GetInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="userid_python">
-<a href="#userid_python" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
+        <span id="user_id_python">
+<a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1281,8 +1745,8 @@ tagKey2 = "tagValue2"
 
     <dt class="property-required"
             title="Required">
-        <span id="writecapacity_python">
-<a href="#writecapacity_python" style="color: inherit; text-decoration: inherit;">write<wbr>Capacity</a>
+        <span id="write_capacity_python">
+<a href="#write_capacity_python" style="color: inherit; text-decoration: inherit;">write_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1308,6 +1772,6 @@ tagKey2 = "tagValue2"
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

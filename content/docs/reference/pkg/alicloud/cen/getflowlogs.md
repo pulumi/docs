@@ -47,7 +47,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "^foo"
+		_, err := cen.GetFlowlogs(ctx, &cen.GetFlowlogsArgs{
+			Ids: []string{
+				"flowlog-tig1xxxxx",
+			},
+			NameRegex: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstCenFlowlogId", data.Alicloud_cen_instances.Default.Flowlogs[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -57,7 +82,7 @@ import pulumi_alicloud as alicloud
 
 default = alicloud.cen.get_flowlogs(ids=["flowlog-tig1xxxxx"],
     name_regex="^foo")
-pulumi.export("firstCenFlowlogId", data["alicloud.cen.getInstances"]["default"]["flowlogs"][0]["id"])
+pulumi.export("firstCenFlowlogId", data["alicloud_cen_instances"]["default"]["flowlogs"][0]["id"])
 ```
 
 {{% /example %}}
@@ -92,7 +117,7 @@ export const firstCenFlowlogId = alicloud_cen_instances_default.flowlogs.0.id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_flowlogs(</span>cen_id=None<span class="p">, </span>description=None<span class="p">, </span>ids=None<span class="p">, </span>log_store_name=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>project_name=None<span class="p">, </span>status=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_flowlogs(</span><span class="nx">cen_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">log_store_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFlowlogsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -546,7 +571,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of CEN flow log names. 
+    <dd>{{% md %}}A list of CEN flow log names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -671,7 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of CEN flow log names. 
+    <dd>{{% md %}}A list of CEN flow log names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -796,7 +821,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of CEN flow log names. 
+    <dd>{{% md %}}A list of CEN flow log names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -921,7 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of CEN flow log names. 
+    <dd>{{% md %}}A list of CEN flow log names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1339,8 +1364,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="flowlogid_python">
-<a href="#flowlogid_python" style="color: inherit; text-decoration: inherit;">flow<wbr>Log<wbr>Id</a>
+        <span id="flow_log_id_python">
+<a href="#flow_log_id_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>log_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1421,6 +1446,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -47,7 +47,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "scaling_configuration_name"
+		opt1 := "scaling_group_id"
+		scalingconfigurationsDs, err := ess.GetScalingConfigurations(ctx, &ess.GetScalingConfigurationsArgs{
+			Ids: []string{
+				"scaling_configuration_id1",
+				"scaling_configuration_id2",
+			},
+			NameRegex:      &opt0,
+			ScalingGroupId: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstScalingRule", scalingconfigurationsDs.Configurations[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -61,7 +89,7 @@ scalingconfigurations_ds = alicloud.ess.get_scaling_configurations(ids=[
     ],
     name_regex="scaling_configuration_name",
     scaling_group_id="scaling_group_id")
-pulumi.export("firstScalingRule", scalingconfigurations_ds.configurations[0]["id"])
+pulumi.export("firstScalingRule", scalingconfigurations_ds.configurations[0].id)
 ```
 
 {{% /example %}}
@@ -100,7 +128,7 @@ export const firstScalingRule = scalingconfigurationsDs.configurations[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_scaling_configurations(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_scaling_configurations(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetScalingConfigurationsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1190,7 +1218,7 @@ The following output properties are available:
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getscalingconfigurationsconfigurationdatadisk">List[Get<wbr>Scaling<wbr>Configurations<wbr>Configuration<wbr>Data<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#getscalingconfigurationsconfigurationdatadisk">List[Get<wbr>Scaling<wbr>Configurations<wbr>Configuration<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Data disks of the scaling configuration.
 {{% /md %}}</dd>
@@ -1263,8 +1291,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lifecyclestate_python">
-<a href="#lifecyclestate_python" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>State</a>
+        <span id="lifecycle_state_python">
+<a href="#lifecycle_state_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1611,6 +1639,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

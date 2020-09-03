@@ -53,7 +53,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/emr"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "ecs.g5.2xlarge"
+		opt1 := false
+		_default, err := emr.GetInstanceTypes(ctx, &emr.GetInstanceTypesArgs{
+			ClusterType:         "HADOOP",
+			DestinationResource: "InstanceType",
+			InstanceChargeType:  "PostPaid",
+			InstanceType:        &opt0,
+			SupportLocalStorage: &opt1,
+			SupportNodeTypes: []string{
+				"MASTER",
+				"CORE",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstInstanceType", _default.Types[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -70,7 +101,7 @@ default = alicloud.emr.get_instance_types(cluster_type="HADOOP",
         "MASTER",
         "CORE",
     ])
-pulumi.export("firstInstanceType", default.types[0]["id"])
+pulumi.export("firstInstanceType", default.types[0].id)
 ```
 
 {{% /example %}}
@@ -112,7 +143,7 @@ export const firstInstanceType = defaultInstanceTypes.types[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instance_types(</span>cluster_type=None<span class="p">, </span>destination_resource=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>instance_type=None<span class="p">, </span>output_file=None<span class="p">, </span>support_local_storage=None<span class="p">, </span>support_node_types=None<span class="p">, </span>zone_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_types(</span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_resource</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support_local_storage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">support_node_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceTypesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -569,7 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of emr instance types IDs. 
+    <dd>{{% md %}}A list of emr instance types IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -690,7 +721,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of emr instance types IDs. 
+    <dd>{{% md %}}A list of emr instance types IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -811,7 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of emr instance types IDs. 
+    <dd>{{% md %}}A list of emr instance types IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -932,7 +963,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of emr instance types IDs. 
+    <dd>{{% md %}}A list of emr instance types IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1171,8 +1202,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="localstoragecapacity_python">
-<a href="#localstoragecapacity_python" style="color: inherit; text-decoration: inherit;">local<wbr>Storage<wbr>Capacity</a>
+        <span id="local_storage_capacity_python">
+<a href="#local_storage_capacity_python" style="color: inherit; text-decoration: inherit;">local_<wbr>storage_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1209,6 +1240,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

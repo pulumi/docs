@@ -18,6 +18,49 @@ For information about Sag Acl Rule and how to use it, see [What is access contro
 
 > **NOTE:** Only the following regions support create Cloud Connect Network. [`cn-shanghai`, `cn-shanghai-finance-1`, `cn-hongkong`, `ap-southeast-1`, `ap-southeast-2`, `ap-southeast-3`, `ap-southeast-5`, `ap-northeast-1`, `eu-central-1`]
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultAcl = new alicloud.rocketmq.Acl("default", {
+    sagCount: "0",
+});
+const defaultAclRule = new alicloud.rocketmq.AclRule("default", {
+    aclId: defaultAcl.id,
+    description: "tf-testSagAclRule",
+    destCidr: "192.168.1.0/24",
+    destPortRange: "-1/-1",
+    direction: "in",
+    ipProtocol: "ALL",
+    policy: "accept",
+    priority: 1,
+    sourceCidr: "10.10.1.0/24",
+    sourcePortRange: "-1/-1",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AclRule Resource {#create}
@@ -29,7 +72,7 @@ For information about Sag Acl Rule and how to use it, see [What is access contro
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/rocketmq/#pulumi_alicloud.rocketmq.AclRule">AclRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl_id=None<span class="p">, </span>description=None<span class="p">, </span>dest_cidr=None<span class="p">, </span>dest_port_range=None<span class="p">, </span>direction=None<span class="p">, </span>ip_protocol=None<span class="p">, </span>policy=None<span class="p">, </span>priority=None<span class="p">, </span>source_cidr=None<span class="p">, </span>source_port_range=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/rocketmq/#pulumi_alicloud.rocketmq.AclRule">AclRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dest_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dest_port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">source_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -231,7 +274,7 @@ The AclRule resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The range of the destination port. Valid value: 80/80. 
+    <dd>{{% md %}}The range of the destination port. Valid value: 80/80.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -308,7 +351,7 @@ The AclRule resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The priority of the ACL rule. Value range: 1 to 100. 
+    <dd>{{% md %}}The priority of the ACL rule. Value range: 1 to 100.
 {{% /md %}}</dd>
 
 </dl>
@@ -348,7 +391,7 @@ The AclRule resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The range of the destination port. Valid value: 80/80. 
+    <dd>{{% md %}}The range of the destination port. Valid value: 80/80.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -425,7 +468,7 @@ The AclRule resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The priority of the ACL rule. Value range: 1 to 100. 
+    <dd>{{% md %}}The priority of the ACL rule. Value range: 1 to 100.
 {{% /md %}}</dd>
 
 </dl>
@@ -465,7 +508,7 @@ The AclRule resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The range of the destination port. Valid value: 80/80. 
+    <dd>{{% md %}}The range of the destination port. Valid value: 80/80.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -542,7 +585,7 @@ The AclRule resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The priority of the ACL rule. Value range: 1 to 100. 
+    <dd>{{% md %}}The priority of the ACL rule. Value range: 1 to 100.
 {{% /md %}}</dd>
 
 </dl>
@@ -582,7 +625,7 @@ The AclRule resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The range of the destination port. Valid value: 80/80. 
+    <dd>{{% md %}}The range of the destination port. Valid value: 80/80.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -659,7 +702,7 @@ The AclRule resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The priority of the ACL rule. Value range: 1 to 100. 
+    <dd>{{% md %}}The priority of the ACL rule. Value range: 1 to 100.
 {{% /md %}}</dd>
 
 </dl>
@@ -760,7 +803,8 @@ Get an existing AclRule resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acl_id=None<span class="p">, </span>description=None<span class="p">, </span>dest_cidr=None<span class="p">, </span>dest_port_range=None<span class="p">, </span>direction=None<span class="p">, </span>ip_protocol=None<span class="p">, </span>policy=None<span class="p">, </span>priority=None<span class="p">, </span>source_cidr=None<span class="p">, </span>source_port_range=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dest_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dest_port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">source_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AclRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -768,7 +812,7 @@ Get an existing AclRule resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.RocketMQ.AclRule.html">AclRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.RocketMQ.AclRuleState.html">AclRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.RocketMQ.AclRule.html">AclRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.RocketMQ.AclRuleState.html">AclRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -915,7 +959,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The range of the destination port. Valid value: 80/80. 
+    <dd>{{% md %}}The range of the destination port. Valid value: 80/80.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -959,7 +1003,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The priority of the ACL rule. Value range: 1 to 100. 
+    <dd>{{% md %}}The priority of the ACL rule. Value range: 1 to 100.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1032,7 +1076,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The range of the destination port. Valid value: 80/80. 
+    <dd>{{% md %}}The range of the destination port. Valid value: 80/80.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1076,7 +1120,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The priority of the ACL rule. Value range: 1 to 100. 
+    <dd>{{% md %}}The priority of the ACL rule. Value range: 1 to 100.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1149,7 +1193,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The range of the destination port. Valid value: 80/80. 
+    <dd>{{% md %}}The range of the destination port. Valid value: 80/80.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1193,7 +1237,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The priority of the ACL rule. Value range: 1 to 100. 
+    <dd>{{% md %}}The priority of the ACL rule. Value range: 1 to 100.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1266,7 +1310,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The range of the destination port. Valid value: 80/80. 
+    <dd>{{% md %}}The range of the destination port. Valid value: 80/80.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1310,7 +1354,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The priority of the ACL rule. Value range: 1 to 100. 
+    <dd>{{% md %}}The priority of the ACL rule. Value range: 1 to 100.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1355,6 +1399,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -41,7 +41,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "sample_slb"
+		slbsDs, err := slb.GetLoadBalancers(ctx, &slb.GetLoadBalancersArgs{
+			NameRegex: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstSlbId", slbsDs.Slbs[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -50,7 +72,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 slbs_ds = alicloud.slb.get_load_balancers(name_regex="sample_slb")
-pulumi.export("firstSlbId", slbs_ds.slbs[0]["id"])
+pulumi.export("firstSlbId", slbs_ds.slbs[0].id)
 ```
 
 {{% /example %}}
@@ -84,7 +106,7 @@ export const firstSlbId = slbsDs.slbs[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_load_balancers(</span>address=None<span class="p">, </span>ids=None<span class="p">, </span>master_availability_zone=None<span class="p">, </span>name_regex=None<span class="p">, </span>network_type=None<span class="p">, </span>output_file=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>slave_availability_zone=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_load_balancers(</span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">master_availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slave_availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLoadBalancersResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -205,12 +227,67 @@ The following arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the SLB instances. The `tags` can have a maximum of 5 tag. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const taggedInstances = pulumi.output(alicloud.slb.getLoadBalancers({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.slb.getLoadBalancers" "taggedInstances" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+tagged_instances = alicloud.slb.get_load_balancers(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var taggedInstances = Output.Create(AliCloud.Slb.GetLoadBalancers.InvokeAsync(new AliCloud.Slb.GetLoadBalancersArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := slb.GetLoadBalancers(ctx, &slb.GetLoadBalancersArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -340,12 +417,67 @@ tagKey2 = "tagValue2"
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the SLB instances. The `tags` can have a maximum of 5 tag. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const taggedInstances = pulumi.output(alicloud.slb.getLoadBalancers({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.slb.getLoadBalancers" "taggedInstances" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+tagged_instances = alicloud.slb.get_load_balancers(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var taggedInstances = Output.Create(AliCloud.Slb.GetLoadBalancers.InvokeAsync(new AliCloud.Slb.GetLoadBalancersArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := slb.GetLoadBalancers(ctx, &slb.GetLoadBalancersArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -475,12 +607,67 @@ tagKey2 = "tagValue2"
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the SLB instances. The `tags` can have a maximum of 5 tag. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const taggedInstances = pulumi.output(alicloud.slb.getLoadBalancers({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.slb.getLoadBalancers" "taggedInstances" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+tagged_instances = alicloud.slb.get_load_balancers(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var taggedInstances = Output.Create(AliCloud.Slb.GetLoadBalancers.InvokeAsync(new AliCloud.Slb.GetLoadBalancersArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := slb.GetLoadBalancers(ctx, &slb.GetLoadBalancersArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -607,15 +794,70 @@ tagKey2 = "tagValue2"
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the SLB instances. The `tags` can have a maximum of 5 tag. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const taggedInstances = pulumi.output(alicloud.slb.getLoadBalancers({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.slb.getLoadBalancers" "taggedInstances" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+tagged_instances = alicloud.slb.get_load_balancers(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var taggedInstances = Output.Create(AliCloud.Slb.GetLoadBalancers.InvokeAsync(new AliCloud.Slb.GetLoadBalancersArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := slb.GetLoadBalancers(ctx, &slb.GetLoadBalancersArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -1260,7 +1502,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the SLB instance.
 {{% /md %}}</dd>
@@ -1437,12 +1679,67 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the SLB instances. The `tags` can have a maximum of 5 tag. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const taggedInstances = pulumi.output(alicloud.slb.getLoadBalancers({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.slb.getLoadBalancers" "taggedInstances" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+tagged_instances = alicloud.slb.get_load_balancers(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var taggedInstances = Output.Create(AliCloud.Slb.GetLoadBalancers.InvokeAsync(new AliCloud.Slb.GetLoadBalancersArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := slb.GetLoadBalancers(ctx, &slb.GetLoadBalancersArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -1595,12 +1892,67 @@ tagKey2 = "tagValue2"
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the SLB instances. The `tags` can have a maximum of 5 tag. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const taggedInstances = pulumi.output(alicloud.slb.getLoadBalancers({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.slb.getLoadBalancers" "taggedInstances" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+tagged_instances = alicloud.slb.get_load_balancers(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var taggedInstances = Output.Create(AliCloud.Slb.GetLoadBalancers.InvokeAsync(new AliCloud.Slb.GetLoadBalancersArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := slb.GetLoadBalancers(ctx, &slb.GetLoadBalancersArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -1753,12 +2105,67 @@ tagKey2 = "tagValue2"
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the SLB instances. The `tags` can have a maximum of 5 tag. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const taggedInstances = pulumi.output(alicloud.slb.getLoadBalancers({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.slb.getLoadBalancers" "taggedInstances" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+tagged_instances = alicloud.slb.get_load_balancers(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var taggedInstances = Output.Create(AliCloud.Slb.GetLoadBalancers.InvokeAsync(new AliCloud.Slb.GetLoadBalancersArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := slb.GetLoadBalancers(ctx, &slb.GetLoadBalancersArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -1838,8 +2245,8 @@ tagKey2 = "tagValue2"
 
     <dt class="property-required"
             title="Required">
-        <span id="masteravailabilityzone_python">
-<a href="#masteravailabilityzone_python" style="color: inherit; text-decoration: inherit;">master<wbr>Availability<wbr>Zone</a>
+        <span id="master_availability_zone_python">
+<a href="#master_availability_zone_python" style="color: inherit; text-decoration: inherit;">master_<wbr>availability_<wbr>zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1871,8 +2278,8 @@ tagKey2 = "tagValue2"
 
     <dt class="property-required"
             title="Required">
-        <span id="regionid_python">
-<a href="#regionid_python" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1882,8 +2289,8 @@ tagKey2 = "tagValue2"
 
     <dt class="property-required"
             title="Required">
-        <span id="slaveavailabilityzone_python">
-<a href="#slaveavailabilityzone_python" style="color: inherit; text-decoration: inherit;">slave<wbr>Availability<wbr>Zone</a>
+        <span id="slave_availability_zone_python">
+<a href="#slave_availability_zone_python" style="color: inherit; text-decoration: inherit;">slave_<wbr>availability_<wbr>zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1908,15 +2315,70 @@ tagKey2 = "tagValue2"
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the SLB instances. The `tags` can have a maximum of 5 tag. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const taggedInstances = pulumi.output(alicloud.slb.getLoadBalancers({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.slb.getLoadBalancers" "taggedInstances" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+tagged_instances = alicloud.slb.get_load_balancers(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var taggedInstances = Output.Create(AliCloud.Slb.GetLoadBalancers.InvokeAsync(new AliCloud.Slb.GetLoadBalancersArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := slb.GetLoadBalancers(ctx, &slb.GetLoadBalancersArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -1961,6 +2423,6 @@ tagKey2 = "tagValue2"
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -16,70 +16,6 @@ This data source provides Sag Acls available to the user.
 
 > **NOTE:** Only the following regions support create Cloud Connect Network. [`cn-shanghai`, `cn-shanghai-finance-1`, `cn-hongkong`, `ap-southeast-1`, `ap-southeast-2`, `ap-southeast-3`, `ap-southeast-5`, `ap-northeast-1`, `eu-central-1`]
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AliCloud = Pulumi.AliCloud;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var defaultAcls = Output.Create(AliCloud.Sag.GetAcls.InvokeAsync(new AliCloud.Sag.GetAclsArgs
-        {
-            Ids = 
-            {
-                alicloud_sag_acls.Default.Id,
-            },
-            NameRegex = "^tf-testAcc.*",
-        }));
-        var defaultAcl = new AliCloud.RocketMQ.Acl("defaultAcl", new AliCloud.RocketMQ.AclArgs
-        {
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_alicloud as alicloud
-
-default_acls = alicloud.sag.get_acls(ids=[alicloud_sag_acls["default"]["id"]],
-    name_regex="^tf-testAcc.*")
-default_acl = alicloud.rocketmq.Acl("defaultAcl")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const defaultAcls = alicloud_sag_acls_default.id.apply(id => alicloud.sag.getAcls({
-    ids: [id],
-    nameRegex: "^tf-testAcc.*",
-}, { async: true }));
-const defaultAcl = new alicloud.rocketmq.Acl("default", {});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetAcls {#using}
@@ -93,7 +29,7 @@ const defaultAcl = new alicloud.rocketmq.Acl("default", {});
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_acls(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_acls(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAclsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -328,7 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of Sag Acls names. 
+    <dd>{{% md %}}A list of Sag Acls names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -399,7 +335,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of Sag Acls names. 
+    <dd>{{% md %}}A list of Sag Acls names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -470,7 +406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Sag Acls names. 
+    <dd>{{% md %}}A list of Sag Acls names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -541,7 +477,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Sag Acls names. 
+    <dd>{{% md %}}A list of Sag Acls names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -722,6 +658,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -41,7 +41,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "outgroups"
+		dataApigatway, err := apigateway.GetGroups(ctx, &apigateway.GetGroupsArgs{
+			OutputFile: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstGroupId", dataApigatway.Groups[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -50,7 +72,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 data_apigatway = alicloud.apigateway.get_groups(output_file="outgroups")
-pulumi.export("firstGroupId", data_apigatway.groups[0]["id"])
+pulumi.export("firstGroupId", data_apigatway.groups[0].id)
 ```
 
 {{% /example %}}
@@ -84,7 +106,7 @@ export const firstGroupId = dataApigatway.groups[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_groups(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_groups(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGroupsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -117,7 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of api group IDs. 
+    <dd>{{% md %}}A list of api group IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -156,7 +178,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of api group IDs. 
+    <dd>{{% md %}}A list of api group IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -195,7 +217,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of api group IDs. 
+    <dd>{{% md %}}A list of api group IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -234,7 +256,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of api group IDs. 
+    <dd>{{% md %}}A list of api group IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -308,7 +330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of api group IDs. 
+    <dd>{{% md %}}A list of api group IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -319,7 +341,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of api group names. 
+    <dd>{{% md %}}A list of api group names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -379,7 +401,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of api group IDs. 
+    <dd>{{% md %}}A list of api group IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -390,7 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of api group names. 
+    <dd>{{% md %}}A list of api group names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -450,7 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of api group IDs. 
+    <dd>{{% md %}}A list of api group IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -461,7 +483,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of api group names. 
+    <dd>{{% md %}}A list of api group names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -521,7 +543,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of api group IDs. 
+    <dd>{{% md %}}A list of api group IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -532,7 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of api group names. 
+    <dd>{{% md %}}A list of api group names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -951,8 +973,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="billingstatus_python">
-<a href="#billingstatus_python" style="color: inherit; text-decoration: inherit;">billing<wbr>Status</a>
+        <span id="billing_status_python">
+<a href="#billing_status_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -964,8 +986,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="createdtime_python">
-<a href="#createdtime_python" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
+        <span id="created_time_python">
+<a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -997,8 +1019,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="illegalstatus_python">
-<a href="#illegalstatus_python" style="color: inherit; text-decoration: inherit;">illegal<wbr>Status</a>
+        <span id="illegal_status_python">
+<a href="#illegal_status_python" style="color: inherit; text-decoration: inherit;">illegal_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1010,8 +1032,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="modifiedtime_python">
-<a href="#modifiedtime_python" style="color: inherit; text-decoration: inherit;">modified<wbr>Time</a>
+        <span id="modified_time_python">
+<a href="#modified_time_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1032,8 +1054,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="regionid_python">
-<a href="#regionid_python" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1054,8 +1076,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="trafficlimit_python">
-<a href="#trafficlimit_python" style="color: inherit; text-decoration: inherit;">traffic<wbr>Limit</a>
+        <span id="traffic_limit_python">
+<a href="#traffic_limit_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1081,6 +1103,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

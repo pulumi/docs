@@ -40,7 +40,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/resourcemanager"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_default, err := resourcemanager.GetAccounts(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstAccountId", _default.Accounts[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -49,7 +68,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 default = alicloud.resourcemanager.get_accounts()
-pulumi.export("firstAccountId", default.accounts[0]["id"])
+pulumi.export("firstAccountId", default.accounts[0].id)
 ```
 
 {{% /example %}}
@@ -81,7 +100,7 @@ export const firstAccountId = defaultAccounts.accounts[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_accounts(</span>ids=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_accounts(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAccountsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -507,7 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The way in which the member account joined the resource directory. 
+    <dd>{{% md %}}The way in which the member account joined the resource directory.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -551,7 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The status of the member account. 
+    <dd>{{% md %}}The status of the member account.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -562,7 +581,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the member account. 
+    <dd>{{% md %}}The type of the member account.
 {{% /md %}}</dd>
 
 </dl>
@@ -624,7 +643,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The way in which the member account joined the resource directory. 
+    <dd>{{% md %}}The way in which the member account joined the resource directory.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -668,7 +687,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The status of the member account. 
+    <dd>{{% md %}}The status of the member account.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -679,7 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the member account. 
+    <dd>{{% md %}}The type of the member account.
 {{% /md %}}</dd>
 
 </dl>
@@ -741,7 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The way in which the member account joined the resource directory. 
+    <dd>{{% md %}}The way in which the member account joined the resource directory.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -785,7 +804,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The status of the member account. 
+    <dd>{{% md %}}The status of the member account.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -796,7 +815,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the member account. 
+    <dd>{{% md %}}The type of the member account.
 {{% /md %}}</dd>
 
 </dl>
@@ -858,7 +877,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The way in which the member account joined the resource directory. 
+    <dd>{{% md %}}The way in which the member account joined the resource directory.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -902,7 +921,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The status of the member account. 
+    <dd>{{% md %}}The status of the member account.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -913,7 +932,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the member account. 
+    <dd>{{% md %}}The type of the member account.
 {{% /md %}}</dd>
 
 </dl>
@@ -934,6 +953,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

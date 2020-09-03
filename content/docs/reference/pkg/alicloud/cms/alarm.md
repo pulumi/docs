@@ -13,6 +13,51 @@ meta_desc: "Explore the Alarm resource of the cms module, including examples, in
 This resource provides a alarm rule resource and it can be used to monitor several cloud services according different metrics.
 Details for [alarm rule](https://www.alibabacloud.com/help/doc-detail/28608.htm).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const basic = new alicloud.cms.Alarm("basic", {
+    contactGroups: ["test-group"],
+    dimensions: {
+        device: "/dev/vda1,/dev/vdb1",
+        instanceId: "i-bp1247,i-bp11gd",
+    },
+    effectiveInterval: "0:00-2:00",
+    metric: "disk_writebytes",
+    notifyType: 1,
+    operator: "<=",
+    period: 900,
+    project: "acs_ecs_dashboard",
+    statistics: "Average",
+    threshold: "35",
+    triggeredCount: 2,
+    webhook: pulumi.interpolate`https://${alicloud_account_current.id}.eu-central-1.fc.aliyuncs.com/2016-08-15/proxy/Terraform/AlarmEndpointMock/`,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Alarm Resource {#create}
@@ -24,7 +69,7 @@ Details for [alarm rule](https://www.alibabacloud.com/help/doc-detail/28608.htm)
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cms/#pulumi_alicloud.cms.Alarm">Alarm</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>contact_groups=None<span class="p">, </span>dimensions=None<span class="p">, </span>effective_interval=None<span class="p">, </span>enabled=None<span class="p">, </span>end_time=None<span class="p">, </span>metric=None<span class="p">, </span>name=None<span class="p">, </span>operator=None<span class="p">, </span>period=None<span class="p">, </span>project=None<span class="p">, </span>silence_time=None<span class="p">, </span>start_time=None<span class="p">, </span>statistics=None<span class="p">, </span>threshold=None<span class="p">, </span>triggered_count=None<span class="p">, </span>webhook=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cms/#pulumi_alicloud.cms.Alarm">Alarm</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">contact_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">effective_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">escalations_critical</span><span class="p">:</span> <span class="nx">Optional[AlarmEscalationsCriticalArgs]</span> = None<span class="p">, </span><span class="nx">escalations_info</span><span class="p">:</span> <span class="nx">Optional[AlarmEscalationsInfoArgs]</span> = None<span class="p">, </span><span class="nx">escalations_warn</span><span class="p">:</span> <span class="nx">Optional[AlarmEscalationsWarnArgs]</span> = None<span class="p">, </span><span class="nx">metric</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">silence_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">statistics</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">triggered_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">webhook</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -240,17 +285,6 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Monitor project name, such as "acs_ecs_dashboard" and "acs_rds_dashboard". For more information, see [Metrics Reference](https://www.alibabacloud.com/help/doc-detail/28619.htm).
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="threshold_csharp">
-<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Alarm threshold value, which must be a numeric value currently.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="effectiveinterval_csharp">
@@ -286,6 +320,39 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
+        <span id="escalationscritical_csharp">
+<a href="#escalationscritical_csharp" style="color: inherit; text-decoration: inherit;">Escalations<wbr>Critical</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationscritical">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cms.<wbr>Inputs.<wbr>Alarm<wbr>Escalations<wbr>Critical<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical alarm (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="escalationsinfo_csharp">
+<a href="#escalationsinfo_csharp" style="color: inherit; text-decoration: inherit;">Escalations<wbr>Info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationsinfo">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cms.<wbr>Inputs.<wbr>Alarm<wbr>Escalations<wbr>Info<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical info (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="escalationswarn_csharp">
+<a href="#escalationswarn_csharp" style="color: inherit; text-decoration: inherit;">Escalations<wbr>Warn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationswarn">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cms.<wbr>Inputs.<wbr>Alarm<wbr>Escalations<wbr>Warn<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical warn (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -295,16 +362,16 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The alarm rule name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.comparison_operator' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;operator&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.comparison_operator&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -339,27 +406,38 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}It has been deprecated from provider version 1.50.0 and 'effective_interval' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;start_time&#39; has been deprecated from provider version 1.50.0. New field &#39;effective_interval&#39; instead.{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="statistics_csharp">
 <a href="#statistics_csharp" style="color: inherit; text-decoration: inherit;">Statistics</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Statistical method. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
-{{% /md %}}</dd>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;statistics&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.statistics&#39; instead.{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;threshold&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.threshold&#39; instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="triggeredcount_csharp">
 <a href="#triggeredcount_csharp" style="color: inherit; text-decoration: inherit;">Triggered<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of consecutive times it has been detected that the values exceed the threshold. Default to 3.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.times' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;triggered_count&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.times&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -423,17 +501,6 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Monitor project name, such as "acs_ecs_dashboard" and "acs_rds_dashboard". For more information, see [Metrics Reference](https://www.alibabacloud.com/help/doc-detail/28619.htm).
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="threshold_go">
-<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Alarm threshold value, which must be a numeric value currently.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="effectiveinterval_go">
@@ -469,6 +536,39 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
+        <span id="escalationscritical_go">
+<a href="#escalationscritical_go" style="color: inherit; text-decoration: inherit;">Escalations<wbr>Critical</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationscritical">Alarm<wbr>Escalations<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical alarm (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="escalationsinfo_go">
+<a href="#escalationsinfo_go" style="color: inherit; text-decoration: inherit;">Escalations<wbr>Info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationsinfo">Alarm<wbr>Escalations<wbr>Info</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical info (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="escalationswarn_go">
+<a href="#escalationswarn_go" style="color: inherit; text-decoration: inherit;">Escalations<wbr>Warn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationswarn">Alarm<wbr>Escalations<wbr>Warn</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical warn (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -478,16 +578,16 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The alarm rule name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.comparison_operator' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;operator&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.comparison_operator&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -522,27 +622,38 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}It has been deprecated from provider version 1.50.0 and 'effective_interval' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;start_time&#39; has been deprecated from provider version 1.50.0. New field &#39;effective_interval&#39; instead.{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="statistics_go">
 <a href="#statistics_go" style="color: inherit; text-decoration: inherit;">Statistics</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Statistical method. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
-{{% /md %}}</dd>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;statistics&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.statistics&#39; instead.{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;threshold&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.threshold&#39; instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="triggeredcount_go">
 <a href="#triggeredcount_go" style="color: inherit; text-decoration: inherit;">Triggered<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of consecutive times it has been detected that the values exceed the threshold. Default to 3.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.times' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;triggered_count&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.times&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -606,17 +717,6 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Monitor project name, such as "acs_ecs_dashboard" and "acs_rds_dashboard". For more information, see [Metrics Reference](https://www.alibabacloud.com/help/doc-detail/28619.htm).
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="threshold_nodejs">
-<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Alarm threshold value, which must be a numeric value currently.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="effectiveinterval_nodejs">
@@ -652,6 +752,39 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
+        <span id="escalationscritical_nodejs">
+<a href="#escalationscritical_nodejs" style="color: inherit; text-decoration: inherit;">escalations<wbr>Critical</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationscritical">Alarm<wbr>Escalations<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical alarm (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="escalationsinfo_nodejs">
+<a href="#escalationsinfo_nodejs" style="color: inherit; text-decoration: inherit;">escalations<wbr>Info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationsinfo">Alarm<wbr>Escalations<wbr>Info</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical info (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="escalationswarn_nodejs">
+<a href="#escalationswarn_nodejs" style="color: inherit; text-decoration: inherit;">escalations<wbr>Warn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationswarn">Alarm<wbr>Escalations<wbr>Warn</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical warn (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -661,16 +794,16 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The alarm rule name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.comparison_operator' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;operator&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.comparison_operator&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -705,27 +838,38 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}It has been deprecated from provider version 1.50.0 and 'effective_interval' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;start_time&#39; has been deprecated from provider version 1.50.0. New field &#39;effective_interval&#39; instead.{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="statistics_nodejs">
 <a href="#statistics_nodejs" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Statistical method. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
-{{% /md %}}</dd>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;statistics&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.statistics&#39; instead.{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;threshold&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.threshold&#39; instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="triggeredcount_nodejs">
 <a href="#triggeredcount_nodejs" style="color: inherit; text-decoration: inherit;">triggered<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Number of consecutive times it has been detected that the values exceed the threshold. Default to 3.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.times' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;triggered_count&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.times&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -762,7 +906,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of the resources associated with the alarm rule, such as "instanceId", "device" and "port". Each key's value is a string and it uses comma to split multiple items. For more information, see [Metrics Reference](https://www.alibabacloud.com/help/doc-detail/28619.htm).
 {{% /md %}}</dd>
@@ -787,17 +931,6 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Monitor project name, such as "acs_ecs_dashboard" and "acs_rds_dashboard". For more information, see [Metrics Reference](https://www.alibabacloud.com/help/doc-detail/28619.htm).
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="threshold_python">
-<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Alarm threshold value, which must be a numeric value currently.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -835,6 +968,39 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
+        <span id="escalations_critical_python">
+<a href="#escalations_critical_python" style="color: inherit; text-decoration: inherit;">escalations_<wbr>critical</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationscritical">Alarm<wbr>Escalations<wbr>Critical<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical alarm (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="escalations_info_python">
+<a href="#escalations_info_python" style="color: inherit; text-decoration: inherit;">escalations_<wbr>info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationsinfo">Alarm<wbr>Escalations<wbr>Info<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical info (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="escalations_warn_python">
+<a href="#escalations_warn_python" style="color: inherit; text-decoration: inherit;">escalations_<wbr>warn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationswarn">Alarm<wbr>Escalations<wbr>Warn<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical warn (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -844,16 +1010,16 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The alarm rule name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.comparison_operator' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;operator&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.comparison_operator&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -888,27 +1054,38 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}It has been deprecated from provider version 1.50.0 and 'effective_interval' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;start_time&#39; has been deprecated from provider version 1.50.0. New field &#39;effective_interval&#39; instead.{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="statistics_python">
 <a href="#statistics_python" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Statistical method. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
-{{% /md %}}</dd>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;statistics&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.statistics&#39; instead.{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;threshold&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.threshold&#39; instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="triggered_count_python">
 <a href="#triggered_count_python" style="color: inherit; text-decoration: inherit;">triggered_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Number of consecutive times it has been detected that the values exceed the threshold. Default to 3.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.times' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;triggered_count&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.times&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1063,7 +1240,8 @@ Get an existing Alarm resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>contact_groups=None<span class="p">, </span>dimensions=None<span class="p">, </span>effective_interval=None<span class="p">, </span>enabled=None<span class="p">, </span>end_time=None<span class="p">, </span>metric=None<span class="p">, </span>name=None<span class="p">, </span>operator=None<span class="p">, </span>period=None<span class="p">, </span>project=None<span class="p">, </span>silence_time=None<span class="p">, </span>start_time=None<span class="p">, </span>statistics=None<span class="p">, </span>status=None<span class="p">, </span>threshold=None<span class="p">, </span>triggered_count=None<span class="p">, </span>webhook=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">contact_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">effective_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">escalations_critical</span><span class="p">:</span> <span class="nx">Optional[AlarmEscalationsCriticalArgs]</span> = None<span class="p">, </span><span class="nx">escalations_info</span><span class="p">:</span> <span class="nx">Optional[AlarmEscalationsInfoArgs]</span> = None<span class="p">, </span><span class="nx">escalations_warn</span><span class="p">:</span> <span class="nx">Optional[AlarmEscalationsWarnArgs]</span> = None<span class="p">, </span><span class="nx">metric</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">silence_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">statistics</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">triggered_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">webhook</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Alarm</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1071,7 +1249,7 @@ Get an existing Alarm resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cms.Alarm.html">Alarm</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cms.AlarmState.html">AlarmState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cms.Alarm.html">Alarm</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cms.AlarmState.html">AlarmState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1234,6 +1412,39 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_escalationscritical_csharp">
+<a href="#state_escalationscritical_csharp" style="color: inherit; text-decoration: inherit;">Escalations<wbr>Critical</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationscritical">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cms.<wbr>Inputs.<wbr>Alarm<wbr>Escalations<wbr>Critical<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical alarm (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_escalationsinfo_csharp">
+<a href="#state_escalationsinfo_csharp" style="color: inherit; text-decoration: inherit;">Escalations<wbr>Info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationsinfo">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cms.<wbr>Inputs.<wbr>Alarm<wbr>Escalations<wbr>Info<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical info (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_escalationswarn_csharp">
+<a href="#state_escalationswarn_csharp" style="color: inherit; text-decoration: inherit;">Escalations<wbr>Warn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationswarn">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cms.<wbr>Inputs.<wbr>Alarm<wbr>Escalations<wbr>Warn<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical warn (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_metric_csharp">
 <a href="#state_metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
 </span> 
@@ -1254,16 +1465,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The alarm rule name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_operator_csharp">
 <a href="#state_operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.comparison_operator' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;operator&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.comparison_operator&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1309,16 +1520,16 @@ The following state arguments are supported:
     <dd>{{% md %}}It has been deprecated from provider version 1.50.0 and 'effective_interval' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;start_time&#39; has been deprecated from provider version 1.50.0. New field &#39;effective_interval&#39; instead.{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_statistics_csharp">
 <a href="#state_statistics_csharp" style="color: inherit; text-decoration: inherit;">Statistics</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Statistical method. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
-{{% /md %}}</dd>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;statistics&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.statistics&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1331,27 +1542,27 @@ The following state arguments are supported:
     <dd>{{% md %}}The current alarm rule status.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_threshold_csharp">
 <a href="#state_threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Alarm threshold value, which must be a numeric value currently.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;threshold&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.threshold&#39; instead.{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_triggeredcount_csharp">
 <a href="#state_triggeredcount_csharp" style="color: inherit; text-decoration: inherit;">Triggered<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of consecutive times it has been detected that the values exceed the threshold. Default to 3.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.times' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;triggered_count&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.times&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1428,6 +1639,39 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_escalationscritical_go">
+<a href="#state_escalationscritical_go" style="color: inherit; text-decoration: inherit;">Escalations<wbr>Critical</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationscritical">Alarm<wbr>Escalations<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical alarm (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_escalationsinfo_go">
+<a href="#state_escalationsinfo_go" style="color: inherit; text-decoration: inherit;">Escalations<wbr>Info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationsinfo">Alarm<wbr>Escalations<wbr>Info</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical info (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_escalationswarn_go">
+<a href="#state_escalationswarn_go" style="color: inherit; text-decoration: inherit;">Escalations<wbr>Warn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationswarn">Alarm<wbr>Escalations<wbr>Warn</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical warn (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_metric_go">
 <a href="#state_metric_go" style="color: inherit; text-decoration: inherit;">Metric</a>
 </span> 
@@ -1448,16 +1692,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The alarm rule name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_operator_go">
 <a href="#state_operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.comparison_operator' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;operator&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.comparison_operator&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1503,16 +1747,16 @@ The following state arguments are supported:
     <dd>{{% md %}}It has been deprecated from provider version 1.50.0 and 'effective_interval' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;start_time&#39; has been deprecated from provider version 1.50.0. New field &#39;effective_interval&#39; instead.{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_statistics_go">
 <a href="#state_statistics_go" style="color: inherit; text-decoration: inherit;">Statistics</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Statistical method. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
-{{% /md %}}</dd>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;statistics&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.statistics&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1525,27 +1769,27 @@ The following state arguments are supported:
     <dd>{{% md %}}The current alarm rule status.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_threshold_go">
 <a href="#state_threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Alarm threshold value, which must be a numeric value currently.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;threshold&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.threshold&#39; instead.{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_triggeredcount_go">
 <a href="#state_triggeredcount_go" style="color: inherit; text-decoration: inherit;">Triggered<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of consecutive times it has been detected that the values exceed the threshold. Default to 3.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.times' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;triggered_count&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.times&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1622,6 +1866,39 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_escalationscritical_nodejs">
+<a href="#state_escalationscritical_nodejs" style="color: inherit; text-decoration: inherit;">escalations<wbr>Critical</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationscritical">Alarm<wbr>Escalations<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical alarm (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_escalationsinfo_nodejs">
+<a href="#state_escalationsinfo_nodejs" style="color: inherit; text-decoration: inherit;">escalations<wbr>Info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationsinfo">Alarm<wbr>Escalations<wbr>Info</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical info (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_escalationswarn_nodejs">
+<a href="#state_escalationswarn_nodejs" style="color: inherit; text-decoration: inherit;">escalations<wbr>Warn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationswarn">Alarm<wbr>Escalations<wbr>Warn</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical warn (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_metric_nodejs">
 <a href="#state_metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span> 
@@ -1642,16 +1919,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The alarm rule name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_operator_nodejs">
 <a href="#state_operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.comparison_operator' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;operator&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.comparison_operator&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1697,16 +1974,16 @@ The following state arguments are supported:
     <dd>{{% md %}}It has been deprecated from provider version 1.50.0 and 'effective_interval' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;start_time&#39; has been deprecated from provider version 1.50.0. New field &#39;effective_interval&#39; instead.{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_statistics_nodejs">
 <a href="#state_statistics_nodejs" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Statistical method. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
-{{% /md %}}</dd>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;statistics&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.statistics&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1719,27 +1996,27 @@ The following state arguments are supported:
     <dd>{{% md %}}The current alarm rule status.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_threshold_nodejs">
 <a href="#state_threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Alarm threshold value, which must be a numeric value currently.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;threshold&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.threshold&#39; instead.{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_triggeredcount_nodejs">
 <a href="#state_triggeredcount_nodejs" style="color: inherit; text-decoration: inherit;">triggered<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Number of consecutive times it has been detected that the values exceed the threshold. Default to 3.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.times' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;triggered_count&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.times&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1776,7 +2053,7 @@ The following state arguments are supported:
 <a href="#state_dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of the resources associated with the alarm rule, such as "instanceId", "device" and "port". Each key's value is a string and it uses comma to split multiple items. For more information, see [Metrics Reference](https://www.alibabacloud.com/help/doc-detail/28619.htm).
 {{% /md %}}</dd>
@@ -1816,6 +2093,39 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_escalations_critical_python">
+<a href="#state_escalations_critical_python" style="color: inherit; text-decoration: inherit;">escalations_<wbr>critical</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationscritical">Alarm<wbr>Escalations<wbr>Critical<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical alarm (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_escalations_info_python">
+<a href="#state_escalations_info_python" style="color: inherit; text-decoration: inherit;">escalations_<wbr>info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationsinfo">Alarm<wbr>Escalations<wbr>Info<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical info (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_escalations_warn_python">
+<a href="#state_escalations_warn_python" style="color: inherit; text-decoration: inherit;">escalations_<wbr>warn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alarmescalationswarn">Alarm<wbr>Escalations<wbr>Warn<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of critical warn (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_metric_python">
 <a href="#state_metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span> 
@@ -1836,16 +2146,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The alarm rule name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_operator_python">
 <a href="#state_operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.comparison_operator' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;operator&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.comparison_operator&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1891,16 +2201,16 @@ The following state arguments are supported:
     <dd>{{% md %}}It has been deprecated from provider version 1.50.0 and 'effective_interval' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;start_time&#39; has been deprecated from provider version 1.50.0. New field &#39;effective_interval&#39; instead.{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_statistics_python">
 <a href="#state_statistics_python" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Statistical method. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
-{{% /md %}}</dd>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;statistics&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.statistics&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1913,27 +2223,27 @@ The following state arguments are supported:
     <dd>{{% md %}}The current alarm rule status.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_threshold_python">
 <a href="#state_threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Alarm threshold value, which must be a numeric value currently.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;threshold&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.threshold&#39; instead.{{% /md %}}</p></dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_triggered_count_python">
 <a href="#state_triggered_count_python" style="color: inherit; text-decoration: inherit;">triggered_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Number of consecutive times it has been detected that the values exceed the threshold. Default to 3.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.times' instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;triggered_count&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.times&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1958,6 +2268,678 @@ The following state arguments are supported:
 
 
 
+## Supporting Types
+
+
+<h4 id="alarmescalationscritical">Alarm<wbr>Escalations<wbr>Critical</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#AlarmEscalationsCritical">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#AlarmEscalationsCritical">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cms?tab=doc#AlarmEscalationsCriticalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cms?tab=doc#AlarmEscalationsCriticalOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cms.Inputs.AlarmEscalationsCriticalArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cms.Outputs.AlarmEscalationsCritical.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="comparisonoperator_csharp">
+<a href="#comparisonoperator_csharp" style="color: inherit; text-decoration: inherit;">Comparison<wbr>Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statistics_csharp">
+<a href="#statistics_csharp" style="color: inherit; text-decoration: inherit;">Statistics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="times_csharp">
+<a href="#times_csharp" style="color: inherit; text-decoration: inherit;">Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm retry times. Default to 3.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="comparisonoperator_go">
+<a href="#comparisonoperator_go" style="color: inherit; text-decoration: inherit;">Comparison<wbr>Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statistics_go">
+<a href="#statistics_go" style="color: inherit; text-decoration: inherit;">Statistics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="times_go">
+<a href="#times_go" style="color: inherit; text-decoration: inherit;">Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm retry times. Default to 3.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="comparisonoperator_nodejs">
+<a href="#comparisonoperator_nodejs" style="color: inherit; text-decoration: inherit;">comparison<wbr>Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statistics_nodejs">
+<a href="#statistics_nodejs" style="color: inherit; text-decoration: inherit;">statistics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="times_nodejs">
+<a href="#times_nodejs" style="color: inherit; text-decoration: inherit;">times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm retry times. Default to 3.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="comparison_operator_python">
+<a href="#comparison_operator_python" style="color: inherit; text-decoration: inherit;">comparison_<wbr>operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statistics_python">
+<a href="#statistics_python" style="color: inherit; text-decoration: inherit;">statistics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="times_python">
+<a href="#times_python" style="color: inherit; text-decoration: inherit;">times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm retry times. Default to 3.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="alarmescalationsinfo">Alarm<wbr>Escalations<wbr>Info</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#AlarmEscalationsInfo">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#AlarmEscalationsInfo">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cms?tab=doc#AlarmEscalationsInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cms?tab=doc#AlarmEscalationsInfoOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cms.Inputs.AlarmEscalationsInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cms.Outputs.AlarmEscalationsInfo.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="comparisonoperator_csharp">
+<a href="#comparisonoperator_csharp" style="color: inherit; text-decoration: inherit;">Comparison<wbr>Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statistics_csharp">
+<a href="#statistics_csharp" style="color: inherit; text-decoration: inherit;">Statistics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="times_csharp">
+<a href="#times_csharp" style="color: inherit; text-decoration: inherit;">Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm retry times. Default to 3.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="comparisonoperator_go">
+<a href="#comparisonoperator_go" style="color: inherit; text-decoration: inherit;">Comparison<wbr>Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statistics_go">
+<a href="#statistics_go" style="color: inherit; text-decoration: inherit;">Statistics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="times_go">
+<a href="#times_go" style="color: inherit; text-decoration: inherit;">Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm retry times. Default to 3.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="comparisonoperator_nodejs">
+<a href="#comparisonoperator_nodejs" style="color: inherit; text-decoration: inherit;">comparison<wbr>Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statistics_nodejs">
+<a href="#statistics_nodejs" style="color: inherit; text-decoration: inherit;">statistics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="times_nodejs">
+<a href="#times_nodejs" style="color: inherit; text-decoration: inherit;">times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm retry times. Default to 3.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="comparison_operator_python">
+<a href="#comparison_operator_python" style="color: inherit; text-decoration: inherit;">comparison_<wbr>operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statistics_python">
+<a href="#statistics_python" style="color: inherit; text-decoration: inherit;">statistics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="times_python">
+<a href="#times_python" style="color: inherit; text-decoration: inherit;">times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm retry times. Default to 3.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="alarmescalationswarn">Alarm<wbr>Escalations<wbr>Warn</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#AlarmEscalationsWarn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#AlarmEscalationsWarn">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cms?tab=doc#AlarmEscalationsWarnArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cms?tab=doc#AlarmEscalationsWarnOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cms.Inputs.AlarmEscalationsWarnArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cms.Outputs.AlarmEscalationsWarn.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="comparisonoperator_csharp">
+<a href="#comparisonoperator_csharp" style="color: inherit; text-decoration: inherit;">Comparison<wbr>Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statistics_csharp">
+<a href="#statistics_csharp" style="color: inherit; text-decoration: inherit;">Statistics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="times_csharp">
+<a href="#times_csharp" style="color: inherit; text-decoration: inherit;">Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm retry times. Default to 3.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="comparisonoperator_go">
+<a href="#comparisonoperator_go" style="color: inherit; text-decoration: inherit;">Comparison<wbr>Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statistics_go">
+<a href="#statistics_go" style="color: inherit; text-decoration: inherit;">Statistics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="times_go">
+<a href="#times_go" style="color: inherit; text-decoration: inherit;">Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm retry times. Default to 3.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="comparisonoperator_nodejs">
+<a href="#comparisonoperator_nodejs" style="color: inherit; text-decoration: inherit;">comparison<wbr>Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statistics_nodejs">
+<a href="#statistics_nodejs" style="color: inherit; text-decoration: inherit;">statistics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="times_nodejs">
+<a href="#times_nodejs" style="color: inherit; text-decoration: inherit;">times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm retry times. Default to 3.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="comparison_operator_python">
+<a href="#comparison_operator_python" style="color: inherit; text-decoration: inherit;">comparison_<wbr>operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statistics_python">
+<a href="#statistics_python" style="color: inherit; text-decoration: inherit;">statistics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="times_python">
+<a href="#times_python" style="color: inherit; text-decoration: inherit;">times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Critical level alarm retry times. Default to 3.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
@@ -1966,6 +2948,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

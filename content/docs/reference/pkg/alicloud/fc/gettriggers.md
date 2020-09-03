@@ -43,7 +43,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/fc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "sample_fc_trigger"
+		fcTriggersDs, err := fc.GetTriggers(ctx, &fc.GetTriggersArgs{
+			FunctionName: "sample_function",
+			NameRegex:    &opt0,
+			ServiceName:  "sample_service",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstFcTriggerName", fcTriggersDs.Triggers[0].Name)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -54,7 +78,7 @@ import pulumi_alicloud as alicloud
 fc_triggers_ds = alicloud.fc.get_triggers(function_name="sample_function",
     name_regex="sample_fc_trigger",
     service_name="sample_service")
-pulumi.export("firstFcTriggerName", fc_triggers_ds.triggers[0]["name"])
+pulumi.export("firstFcTriggerName", fc_triggers_ds.triggers[0].name)
 ```
 
 {{% /example %}}
@@ -90,7 +114,7 @@ export const firstFcTriggerName = fcTriggersDs.triggers[0].name;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_triggers(</span>function_name=None<span class="p">, </span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>service_name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_triggers(</span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTriggersResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1080,8 +1104,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="invocationrole_python">
-<a href="#invocationrole_python" style="color: inherit; text-decoration: inherit;">invocation<wbr>Role</a>
+        <span id="invocation_role_python">
+<a href="#invocation_role_python" style="color: inherit; text-decoration: inherit;">invocation_<wbr>role</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1091,8 +1115,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lastmodificationtime_python">
-<a href="#lastmodificationtime_python" style="color: inherit; text-decoration: inherit;">last<wbr>Modification<wbr>Time</a>
+        <span id="last_modification_time_python">
+<a href="#last_modification_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modification_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1151,6 +1175,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

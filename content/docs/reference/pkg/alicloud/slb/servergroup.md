@@ -22,6 +22,7 @@ and to meet the personalized requirements of domain name and URL forwarding.
 > **NOTE:** One Classic and Intranet load balancer, its virtual server group can only add Classic ECS instances.
 
 > **NOTE:** One VPC load balancer, its virtual server group can only add the same VPC ECS instances.
+
 ## Block servers
 
 The servers mapping supports the following:
@@ -31,247 +32,6 @@ The servers mapping supports the following:
 * `weight` - (Optional) Weight of the backend server. Valid value range: [0-100]. Default to 100.
 * `type` - (Optional, Available in 1.51.0+) Type of the backend server. Valid value ecs, eni. Default to eni.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using System.Collections.Generic;
-using System.Linq;
-using Pulumi;
-using AliCloud = Pulumi.AliCloud;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var config = new Config();
-        var name = config.Get("name") ?? "slbservergroupvpc";
-        var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
-        {
-            AvailableDiskCategory = "cloud_efficiency",
-            AvailableResourceCreation = "VSwitch",
-        }));
-        var defaultInstanceTypes = defaultZones.Apply(defaultZones => Output.Create(AliCloud.Ecs.GetInstanceTypes.InvokeAsync(new AliCloud.Ecs.GetInstanceTypesArgs
-        {
-            AvailabilityZone = defaultZones.Zones[0].Id,
-            CpuCoreCount = 1,
-            MemorySize = 2,
-        })));
-        var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
-        {
-            MostRecent = true,
-            NameRegex = "^ubuntu_18.*64",
-            Owners = "system",
-        }));
-        var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
-        {
-            CidrBlock = "172.16.0.0/16",
-        });
-        var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
-        {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/16",
-            VpcId = defaultNetwork.Id,
-        });
-        var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup("defaultSecurityGroup", new AliCloud.Ecs.SecurityGroupArgs
-        {
-            VpcId = defaultNetwork.Id,
-        });
-        var instance = new List<AliCloud.Ecs.Instance>();
-        for (var rangeIndex = 0; rangeIndex < 2; rangeIndex++)
-        {
-            var range = new { Value = rangeIndex };
-            instance.Add(new AliCloud.Ecs.Instance($"instance-{range.Value}", new AliCloud.Ecs.InstanceArgs
-            {
-                AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-                ImageId = defaultImages.Apply(defaultImages => defaultImages.Images[0].Id),
-                InstanceChargeType = "PostPaid",
-                InstanceName = name,
-                InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.InstanceTypes[0].Id),
-                InternetChargeType = "PayByTraffic",
-                InternetMaxBandwidthOut = 10,
-                SecurityGroups = 
-                {
-                    defaultSecurityGroup,
-                }.Select(__item => __item.Id).ToList(),
-                SystemDiskCategory = "cloud_efficiency",
-                VswitchId = defaultSwitch.Id,
-            }));
-        }
-        var defaultLoadBalancer = new AliCloud.Slb.LoadBalancer("defaultLoadBalancer", new AliCloud.Slb.LoadBalancerArgs
-        {
-            VswitchId = defaultSwitch.Id,
-        });
-        var defaultServerGroup = new AliCloud.Slb.ServerGroup("defaultServerGroup", new AliCloud.Slb.ServerGroupArgs
-        {
-            LoadBalancerId = defaultLoadBalancer.Id,
-            Servers = 
-            {
-                new AliCloud.Slb.Inputs.ServerGroupServerArgs
-                {
-                    Port = 100,
-                    ServerIds = 
-                    {
-                        instance[0].Id,
-                        instance[1].Id,
-                    },
-                    Weight = 10,
-                },
-                new AliCloud.Slb.Inputs.ServerGroupServerArgs
-                {
-                    Port = 80,
-                    ServerIds = instance.Select(__item => __item.Id).ToList(),
-                    Weight = 100,
-                },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_alicloud as alicloud
-
-config = pulumi.Config()
-name = config.get("name")
-if name is None:
-    name = "slbservergroupvpc"
-default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
-    available_resource_creation="VSwitch")
-default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0]["id"],
-    cpu_core_count=1,
-    memory_size=2)
-default_images = alicloud.ecs.get_images(most_recent=True,
-    name_regex="^ubuntu_18.*64",
-    owners="system")
-default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
-default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0]["id"],
-    cidr_block="172.16.0.0/16",
-    vpc_id=default_network.id)
-default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup", vpc_id=default_network.id)
-instance = []
-for range in [{"value": i} for i in range(0, 2)]:
-    instance.append(alicloud.ecs.Instance(f"instance-{range['value']}",
-        availability_zone=default_zones.zones[0]["id"],
-        image_id=default_images.images[0]["id"],
-        instance_charge_type="PostPaid",
-        instance_name=name,
-        instance_type=default_instance_types.instance_types[0]["id"],
-        internet_charge_type="PayByTraffic",
-        internet_max_bandwidth_out="10",
-        security_groups=[__item.id for __item in [default_security_group]],
-        system_disk_category="cloud_efficiency",
-        vswitch_id=default_switch.id))
-default_load_balancer = alicloud.slb.LoadBalancer("defaultLoadBalancer", vswitch_id=default_switch.id)
-default_server_group = alicloud.slb.ServerGroup("defaultServerGroup",
-    load_balancer_id=default_load_balancer.id,
-    servers=[
-        {
-            "port": 100,
-            "serverIds": [
-                instance[0].id,
-                instance[1].id,
-            ],
-            "weight": 10,
-        },
-        {
-            "port": 80,
-            "serverIds": [__item.id for __item in instance],
-            "weight": 100,
-        },
-    ])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const config = new pulumi.Config();
-const name = config.get("name") || "slbservergroupvpc";
-
-const defaultZones = pulumi.output(alicloud.getZones({
-    availableDiskCategory: "cloud_efficiency",
-    availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
-    availabilityZone: defaultZones.zones[0].id,
-    cpuCoreCount: 1,
-    memorySize: 2,
-}, { async: true }));
-const defaultImages = pulumi.output(alicloud.ecs.getImages({
-    mostRecent: true,
-    nameRegex: "^ubuntu_18.*64",
-    owners: "system",
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/16",
-});
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/16",
-    vpcId: defaultNetwork.id,
-});
-const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("default", {
-    vpcId: defaultNetwork.id,
-});
-const instance: alicloud.ecs.Instance[] = [];
-for (let i = 0; i < 2; i++) {
-    instance.push(new alicloud.ecs.Instance(`instance-${i}`, {
-        availabilityZone: defaultZones.zones[0].id,
-        imageId: defaultImages.images[0].id,
-        instanceChargeType: "PostPaid",
-        instanceName: name,
-        instanceType: defaultInstanceTypes.instanceTypes[0].id,
-        internetChargeType: "PayByTraffic",
-        internetMaxBandwidthOut: 10,
-        securityGroups: defaultSecurityGroup.id,
-        systemDiskCategory: "cloud_efficiency",
-        vswitchId: defaultSwitch.id,
-    }));
-}
-const defaultLoadBalancer = new alicloud.slb.LoadBalancer("default", {
-    vswitchId: defaultSwitch.id,
-});
-const defaultServerGroup = new alicloud.slb.ServerGroup("default", {
-    loadBalancerId: defaultLoadBalancer.id,
-    servers: [
-        {
-            port: 100,
-            serverIds: [
-                instance[0].id,
-                instance[1].id,
-            ],
-            weight: 10,
-        },
-        {
-            port: 80,
-            serverIds: instance.map(v => v.id),
-            weight: 100,
-        },
-    ],
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ServerGroup Resource {#create}
@@ -283,7 +43,7 @@ const defaultServerGroup = new alicloud.slb.ServerGroup("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/slb/#pulumi_alicloud.slb.ServerGroup">ServerGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>delete_protection_validation=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>name=None<span class="p">, </span>servers=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/slb/#pulumi_alicloud.slb.ServerGroup">ServerGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">delete_protection_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">servers</span><span class="p">:</span> <span class="nx">Optional[List[ServerGroupServerArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -647,7 +407,7 @@ The ServerGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servergroupserver">List[Server<wbr>Group<wbr>Server]</a></span>
+        <span class="property-type"><a href="#servergroupserver">List[Server<wbr>Group<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ECS instances to be added. At most 20 ECS instances can be supported in one resource. It contains three sub-fields as `Block server` follows.
 {{% /md %}}</dd>
@@ -750,7 +510,8 @@ Get an existing ServerGroup resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>delete_protection_validation=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>name=None<span class="p">, </span>servers=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">delete_protection_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">servers</span><span class="p">:</span> <span class="nx">Optional[List[ServerGroupServerArgs]]</span> = None<span class="p">) -&gt;</span> ServerGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -758,7 +519,7 @@ Get an existing ServerGroup resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.ServerGroup.html">ServerGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.ServerGroupState.html">ServerGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.ServerGroup.html">ServerGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.ServerGroupState.html">ServerGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1056,7 +817,7 @@ The following state arguments are supported:
 <a href="#state_servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servergroupserver">List[Server<wbr>Group<wbr>Server]</a></span>
+        <span class="property-type"><a href="#servergroupserver">List[Server<wbr>Group<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ECS instances to be added. At most 20 ECS instances can be supported in one resource. It contains three sub-fields as `Block server` follows.
 {{% /md %}}</dd>
@@ -1247,8 +1008,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="serverids_python">
-<a href="#serverids_python" style="color: inherit; text-decoration: inherit;">server<wbr>Ids</a>
+        <span id="server_ids_python">
+<a href="#server_ids_python" style="color: inherit; text-decoration: inherit;">server_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1293,6 +1054,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

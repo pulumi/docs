@@ -41,7 +41,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "sample_oss_bucket"
+		ossBucketsDs, err := oss.GetBuckets(ctx, &oss.GetBucketsArgs{
+			NameRegex: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstOssBucketName", ossBucketsDs.Buckets[0].Name)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -50,7 +72,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 oss_buckets_ds = alicloud.oss.get_buckets(name_regex="sample_oss_bucket")
-pulumi.export("firstOssBucketName", oss_buckets_ds.buckets[0]["name"])
+pulumi.export("firstOssBucketName", oss_buckets_ds.buckets[0].name)
 ```
 
 {{% /example %}}
@@ -84,7 +106,7 @@ export const firstOssBucketName = ossBucketsDs.buckets[0].name;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_buckets(</span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_buckets(</span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBucketsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -264,7 +286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of bucket names. 
+    <dd>{{% md %}}A list of bucket names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -324,7 +346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of bucket names. 
+    <dd>{{% md %}}A list of bucket names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -384,7 +406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of bucket names. 
+    <dd>{{% md %}}A list of bucket names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -444,7 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of bucket names. 
+    <dd>{{% md %}}A list of bucket names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1127,7 +1149,7 @@ The following output properties are available:
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketcorsrule">List[Get<wbr>Buckets<wbr>Bucket<wbr>Cors<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getbucketsbucketcorsrule">List[Get<wbr>Buckets<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of CORS rule configurations. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -1171,7 +1193,7 @@ The following output properties are available:
 <a href="#lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketlifecyclerule">List[Get<wbr>Buckets<wbr>Bucket<wbr>Lifecycle<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getbucketsbucketlifecyclerule">List[Get<wbr>Buckets<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list CORS of lifecycle configurations. When Lifecycle is enabled, OSS automatically deletes the objects or transitions the objects (to another storage class) corresponding the lifecycle rules on a regular basis. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -1193,7 +1215,7 @@ The following output properties are available:
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketlogging">Dict[Get<wbr>Buckets<wbr>Bucket<wbr>Logging]</a></span>
+        <span class="property-type"><a href="#getbucketsbucketlogging">Get<wbr>Buckets<wbr>Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing configuration parameters used for storing access log information. It contains the following attributes:
 {{% /md %}}</dd>
@@ -1237,7 +1259,7 @@ The following output properties are available:
 <a href="#referer_config_python" style="color: inherit; text-decoration: inherit;">referer_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketrefererconfig">Dict[Get<wbr>Buckets<wbr>Bucket<wbr>Referer<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getbucketsbucketrefererconfig">Get<wbr>Buckets<wbr>Bucket<wbr>Referer<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing referer configuration. It contains the following attributes:
 {{% /md %}}</dd>
@@ -1248,7 +1270,7 @@ The following output properties are available:
 <a href="#server_side_encryption_rule_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketserversideencryptionrule">Dict[Get<wbr>Buckets<wbr>Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getbucketsbucketserversideencryptionrule">Get<wbr>Buckets<wbr>Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of default encryption for a bucket. It contains the following attributes:
 {{% /md %}}</dd>
@@ -1270,7 +1292,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags.
 {{% /md %}}</dd>
@@ -1281,7 +1303,7 @@ The following output properties are available:
 <a href="#versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketversioning">Dict[Get<wbr>Buckets<wbr>Bucket<wbr>Versioning]</a></span>
+        <span class="property-type"><a href="#getbucketsbucketversioning">Get<wbr>Buckets<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If present , the versioning state has been set on the bucket. It contains the following attribute.
 {{% /md %}}</dd>
@@ -1292,7 +1314,7 @@ The following output properties are available:
 <a href="#website_python" style="color: inherit; text-decoration: inherit;">website</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketwebsite">Dict[Get<wbr>Buckets<wbr>Bucket<wbr>Website]</a></span>
+        <span class="property-type"><a href="#getbucketsbucketwebsite">Get<wbr>Buckets<wbr>Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing configuration parameters used when the bucket is used as a website. It contains the following attributes:
 {{% /md %}}</dd>
@@ -1520,8 +1542,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedheaders_python">
-<a href="#allowedheaders_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
+        <span id="allowed_headers_python">
+<a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1531,8 +1553,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedmethods_python">
-<a href="#allowedmethods_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+        <span id="allowed_methods_python">
+<a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1542,8 +1564,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedorigins_python">
-<a href="#allowedorigins_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
+        <span id="allowed_origins_python">
+<a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1553,8 +1575,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="exposeheaders_python">
-<a href="#exposeheaders_python" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
+        <span id="expose_headers_python">
+<a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1564,8 +1586,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxageseconds_python">
-<a href="#maxageseconds_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>Seconds</a>
+        <span id="max_age_seconds_python">
+<a href="#max_age_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1768,7 +1790,7 @@ The following output properties are available:
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketlifecycleruleexpiration">Dict[Get<wbr>Buckets<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration]</a></span>
+        <span class="property-type"><a href="#getbucketsbucketlifecycleruleexpiration">Get<wbr>Buckets<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing expiration attributes of an object. It contains the following attributes:
 {{% /md %}}</dd>
@@ -2043,8 +2065,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="targetbucket_python">
-<a href="#targetbucket_python" style="color: inherit; text-decoration: inherit;">target<wbr>Bucket</a>
+        <span id="target_bucket_python">
+<a href="#target_bucket_python" style="color: inherit; text-decoration: inherit;">target_<wbr>bucket</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2054,8 +2076,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="targetprefix_python">
-<a href="#targetprefix_python" style="color: inherit; text-decoration: inherit;">target<wbr>Prefix</a>
+        <span id="target_prefix_python">
+<a href="#target_prefix_python" style="color: inherit; text-decoration: inherit;">target_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2177,8 +2199,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="allowempty_python">
-<a href="#allowempty_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Empty</a>
+        <span id="allow_empty_python">
+<a href="#allow_empty_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>empty</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2230,7 +2252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The alibaba cloud KMS master key ID used for the SSE-KMS encryption. 
+    <dd>{{% md %}}The alibaba cloud KMS master key ID used for the SSE-KMS encryption.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2259,7 +2281,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The alibaba cloud KMS master key ID used for the SSE-KMS encryption. 
+    <dd>{{% md %}}The alibaba cloud KMS master key ID used for the SSE-KMS encryption.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2288,7 +2310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The alibaba cloud KMS master key ID used for the SSE-KMS encryption. 
+    <dd>{{% md %}}The alibaba cloud KMS master key ID used for the SSE-KMS encryption.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2311,19 +2333,19 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="kmsmasterkeyid_python">
-<a href="#kmsmasterkeyid_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Master<wbr>Key<wbr>Id</a>
+        <span id="kms_master_key_id_python">
+<a href="#kms_master_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>master_<wbr>key_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The alibaba cloud KMS master key ID used for the SSE-KMS encryption. 
+    <dd>{{% md %}}The alibaba cloud KMS master key ID used for the SSE-KMS encryption.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="ssealgorithm_python">
-<a href="#ssealgorithm_python" style="color: inherit; text-decoration: inherit;">sse<wbr>Algorithm</a>
+        <span id="sse_algorithm_python">
+<a href="#sse_algorithm_python" style="color: inherit; text-decoration: inherit;">sse_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2535,8 +2557,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="errordocument_python">
-<a href="#errordocument_python" style="color: inherit; text-decoration: inherit;">error<wbr>Document</a>
+        <span id="error_document_python">
+<a href="#error_document_python" style="color: inherit; text-decoration: inherit;">error_<wbr>document</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2546,8 +2568,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="indexdocument_python">
-<a href="#indexdocument_python" style="color: inherit; text-decoration: inherit;">index<wbr>Document</a>
+        <span id="index_document_python">
+<a href="#index_document_python" style="color: inherit; text-decoration: inherit;">index_<wbr>document</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2573,6 +2595,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

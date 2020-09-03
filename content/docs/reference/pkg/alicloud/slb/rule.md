@@ -23,299 +23,6 @@ You can add forwarding rules to a listener to forward requests based on the doma
 
 > **NOTE:** Only rule's virtual server group can be modified.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using System.Linq;
-using Pulumi;
-using AliCloud = Pulumi.AliCloud;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var config = new Config();
-        var name = config.Get("name") ?? "slbrulebasicconfig";
-        var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
-        {
-            AvailableDiskCategory = "cloud_efficiency",
-            AvailableResourceCreation = "VSwitch",
-        }));
-        var defaultInstanceTypes = defaultZones.Apply(defaultZones => Output.Create(AliCloud.Ecs.GetInstanceTypes.InvokeAsync(new AliCloud.Ecs.GetInstanceTypesArgs
-        {
-            AvailabilityZone = defaultZones.Zones[0].Id,
-            CpuCoreCount = 1,
-            MemorySize = 2,
-        })));
-        var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
-        {
-            MostRecent = true,
-            NameRegex = "^ubuntu_18.*64",
-            Owners = "system",
-        }));
-        var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
-        {
-            CidrBlock = "172.16.0.0/16",
-        });
-        var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
-        {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/16",
-            VpcId = defaultNetwork.Id,
-        });
-        var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup("defaultSecurityGroup", new AliCloud.Ecs.SecurityGroupArgs
-        {
-            VpcId = defaultNetwork.Id,
-        });
-        var defaultInstance = new AliCloud.Ecs.Instance("defaultInstance", new AliCloud.Ecs.InstanceArgs
-        {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            ImageId = defaultImages.Apply(defaultImages => defaultImages.Images[0].Id),
-            InstanceChargeType = "PostPaid",
-            InstanceName = name,
-            InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.InstanceTypes[0].Id),
-            InternetChargeType = "PayByTraffic",
-            InternetMaxBandwidthOut = 10,
-            SecurityGroups = 
-            {
-                defaultSecurityGroup,
-            }.Select(__item => __item.Id).ToList(),
-            SystemDiskCategory = "cloud_efficiency",
-            VswitchId = defaultSwitch.Id,
-        });
-        var defaultLoadBalancer = new AliCloud.Slb.LoadBalancer("defaultLoadBalancer", new AliCloud.Slb.LoadBalancerArgs
-        {
-            VswitchId = defaultSwitch.Id,
-        });
-        var defaultListener = new AliCloud.Slb.Listener("defaultListener", new AliCloud.Slb.ListenerArgs
-        {
-            BackendPort = 22,
-            Bandwidth = 5,
-            FrontendPort = 22,
-            HealthCheckConnectPort = 20,
-            LoadBalancerId = defaultLoadBalancer.Id,
-            Protocol = "http",
-        });
-        var defaultServerGroup = new AliCloud.Slb.ServerGroup("defaultServerGroup", new AliCloud.Slb.ServerGroupArgs
-        {
-            LoadBalancerId = defaultLoadBalancer.Id,
-            Servers = 
-            {
-                new AliCloud.Slb.Inputs.ServerGroupServerArgs
-                {
-                    Port = 80,
-                    ServerIds = 
-                    {
-                        defaultInstance,
-                    }.Select(__item => __item.Id).ToList(),
-                    Weight = 100,
-                },
-            },
-        });
-        var defaultRule = new AliCloud.Slb.Rule("defaultRule", new AliCloud.Slb.RuleArgs
-        {
-            Cookie = "23ffsa",
-            CookieTimeout = 100,
-            Domain = "*.aliyun.com",
-            FrontendPort = defaultListener.FrontendPort,
-            HealthCheck = "on",
-            HealthCheckConnectPort = 80,
-            HealthCheckDomain = "test",
-            HealthCheckHttpCode = "http_2xx",
-            HealthCheckInterval = 10,
-            HealthCheckTimeout = 30,
-            HealthCheckUri = "/test",
-            HealthyThreshold = 3,
-            ListenerSync = "off",
-            LoadBalancerId = defaultLoadBalancer.Id,
-            Scheduler = "rr",
-            ServerGroupId = defaultServerGroup.Id,
-            StickySession = "on",
-            StickySessionType = "server",
-            UnhealthyThreshold = 5,
-            Url = "/image",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_alicloud as alicloud
-
-config = pulumi.Config()
-name = config.get("name")
-if name is None:
-    name = "slbrulebasicconfig"
-default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
-    available_resource_creation="VSwitch")
-default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0]["id"],
-    cpu_core_count=1,
-    memory_size=2)
-default_images = alicloud.ecs.get_images(most_recent=True,
-    name_regex="^ubuntu_18.*64",
-    owners="system")
-default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
-default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0]["id"],
-    cidr_block="172.16.0.0/16",
-    vpc_id=default_network.id)
-default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup", vpc_id=default_network.id)
-default_instance = alicloud.ecs.Instance("defaultInstance",
-    availability_zone=default_zones.zones[0]["id"],
-    image_id=default_images.images[0]["id"],
-    instance_charge_type="PostPaid",
-    instance_name=name,
-    instance_type=default_instance_types.instance_types[0]["id"],
-    internet_charge_type="PayByTraffic",
-    internet_max_bandwidth_out="10",
-    security_groups=[__item.id for __item in [default_security_group]],
-    system_disk_category="cloud_efficiency",
-    vswitch_id=default_switch.id)
-default_load_balancer = alicloud.slb.LoadBalancer("defaultLoadBalancer", vswitch_id=default_switch.id)
-default_listener = alicloud.slb.Listener("defaultListener",
-    backend_port=22,
-    bandwidth=5,
-    frontend_port=22,
-    health_check_connect_port="20",
-    load_balancer_id=default_load_balancer.id,
-    protocol="http")
-default_server_group = alicloud.slb.ServerGroup("defaultServerGroup",
-    load_balancer_id=default_load_balancer.id,
-    servers=[{
-        "port": 80,
-        "serverIds": [__item.id for __item in [default_instance]],
-        "weight": 100,
-    }])
-default_rule = alicloud.slb.Rule("defaultRule",
-    cookie="23ffsa",
-    cookie_timeout=100,
-    domain="*.aliyun.com",
-    frontend_port=default_listener.frontend_port,
-    health_check="on",
-    health_check_connect_port=80,
-    health_check_domain="test",
-    health_check_http_code="http_2xx",
-    health_check_interval=10,
-    health_check_timeout=30,
-    health_check_uri="/test",
-    healthy_threshold=3,
-    listener_sync="off",
-    load_balancer_id=default_load_balancer.id,
-    scheduler="rr",
-    server_group_id=default_server_group.id,
-    sticky_session="on",
-    sticky_session_type="server",
-    unhealthy_threshold=5,
-    url="/image")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const config = new pulumi.Config();
-const name = config.get("name") || "slbrulebasicconfig";
-
-const defaultZones = pulumi.output(alicloud.getZones({
-    availableDiskCategory: "cloud_efficiency",
-    availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
-    availabilityZone: defaultZones.zones[0].id,
-    cpuCoreCount: 1,
-    memorySize: 2,
-}, { async: true }));
-const defaultImages = pulumi.output(alicloud.ecs.getImages({
-    mostRecent: true,
-    nameRegex: "^ubuntu_18.*64",
-    owners: "system",
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/16",
-});
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/16",
-    vpcId: defaultNetwork.id,
-});
-const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("default", {
-    vpcId: defaultNetwork.id,
-});
-const defaultInstance = new alicloud.ecs.Instance("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    imageId: defaultImages.images[0].id,
-    instanceChargeType: "PostPaid",
-    instanceName: name,
-    instanceType: defaultInstanceTypes.instanceTypes[0].id,
-    internetChargeType: "PayByTraffic",
-    internetMaxBandwidthOut: 10,
-    securityGroups: defaultSecurityGroup.id,
-    systemDiskCategory: "cloud_efficiency",
-    vswitchId: defaultSwitch.id,
-});
-const defaultLoadBalancer = new alicloud.slb.LoadBalancer("default", {
-    vswitchId: defaultSwitch.id,
-});
-const defaultListener = new alicloud.slb.Listener("default", {
-    backendPort: 22,
-    bandwidth: 5,
-    frontendPort: 22,
-    healthCheckConnectPort: 20,
-    loadBalancerId: defaultLoadBalancer.id,
-    protocol: "http",
-});
-const defaultServerGroup = new alicloud.slb.ServerGroup("default", {
-    loadBalancerId: defaultLoadBalancer.id,
-    servers: [{
-        port: 80,
-        serverIds: defaultInstance.id,
-        weight: 100,
-    }],
-});
-const defaultRule = new alicloud.slb.Rule("default", {
-    cookie: "23ffsa",
-    cookieTimeout: 100,
-    domain: "*.aliyun.com",
-    frontendPort: defaultListener.frontendPort,
-    healthCheck: "on",
-    healthCheckConnectPort: 80,
-    healthCheckDomain: "test",
-    healthCheckHttpCode: "http_2xx",
-    healthCheckInterval: 10,
-    healthCheckTimeout: 30,
-    healthCheckUri: "/test",
-    healthyThreshold: 3,
-    listenerSync: "off",
-    loadBalancerId: defaultLoadBalancer.id,
-    scheduler: "rr",
-    serverGroupId: defaultServerGroup.id,
-    stickySession: "on",
-    stickySessionType: "server",
-    unhealthyThreshold: 5,
-    url: "/image",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Rule Resource {#create}
@@ -327,7 +34,7 @@ const defaultRule = new alicloud.slb.Rule("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/slb/#pulumi_alicloud.slb.Rule">Rule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cookie=None<span class="p">, </span>cookie_timeout=None<span class="p">, </span>delete_protection_validation=None<span class="p">, </span>domain=None<span class="p">, </span>frontend_port=None<span class="p">, </span>health_check=None<span class="p">, </span>health_check_connect_port=None<span class="p">, </span>health_check_domain=None<span class="p">, </span>health_check_http_code=None<span class="p">, </span>health_check_interval=None<span class="p">, </span>health_check_timeout=None<span class="p">, </span>health_check_uri=None<span class="p">, </span>healthy_threshold=None<span class="p">, </span>listener_sync=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>name=None<span class="p">, </span>scheduler=None<span class="p">, </span>server_group_id=None<span class="p">, </span>sticky_session=None<span class="p">, </span>sticky_session_type=None<span class="p">, </span>unhealthy_threshold=None<span class="p">, </span>url=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/slb/#pulumi_alicloud.slb.Rule">Rule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cookie</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cookie_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">delete_protection_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_connect_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_http_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_interval</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">healthy_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">listener_sync</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduler</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sticky_session</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sticky_session_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unhealthy_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -708,7 +415,7 @@ and wildcard characters. The following two domain name formats are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether to enable session persistence, Valid values are `on` and `off`. Default to `off`. This parameter is required  and takes effect only when ListenerSync is set to off.                                                                                                                                                                                                                                                 
+    <dd>{{% md %}}Whether to enable session persistence, Valid values are `on` and `off`. Default to `off`. This parameter is required  and takes effect only when ListenerSync is set to off.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -961,7 +668,7 @@ and wildcard characters. The following two domain name formats are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether to enable session persistence, Valid values are `on` and `off`. Default to `off`. This parameter is required  and takes effect only when ListenerSync is set to off.                                                                                                                                                                                                                                                 
+    <dd>{{% md %}}Whether to enable session persistence, Valid values are `on` and `off`. Default to `off`. This parameter is required  and takes effect only when ListenerSync is set to off.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1214,7 +921,7 @@ and wildcard characters. The following two domain name formats are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether to enable session persistence, Valid values are `on` and `off`. Default to `off`. This parameter is required  and takes effect only when ListenerSync is set to off.                                                                                                                                                                                                                                                 
+    <dd>{{% md %}}Whether to enable session persistence, Valid values are `on` and `off`. Default to `off`. This parameter is required  and takes effect only when ListenerSync is set to off.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1467,7 +1174,7 @@ and wildcard characters. The following two domain name formats are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Whether to enable session persistence, Valid values are `on` and `off`. Default to `off`. This parameter is required  and takes effect only when ListenerSync is set to off.                                                                                                                                                                                                                                                 
+    <dd>{{% md %}}Whether to enable session persistence, Valid values are `on` and `off`. Default to `off`. This parameter is required  and takes effect only when ListenerSync is set to off.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1602,7 +1309,8 @@ Get an existing Rule resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cookie=None<span class="p">, </span>cookie_timeout=None<span class="p">, </span>delete_protection_validation=None<span class="p">, </span>domain=None<span class="p">, </span>frontend_port=None<span class="p">, </span>health_check=None<span class="p">, </span>health_check_connect_port=None<span class="p">, </span>health_check_domain=None<span class="p">, </span>health_check_http_code=None<span class="p">, </span>health_check_interval=None<span class="p">, </span>health_check_timeout=None<span class="p">, </span>health_check_uri=None<span class="p">, </span>healthy_threshold=None<span class="p">, </span>listener_sync=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>name=None<span class="p">, </span>scheduler=None<span class="p">, </span>server_group_id=None<span class="p">, </span>sticky_session=None<span class="p">, </span>sticky_session_type=None<span class="p">, </span>unhealthy_threshold=None<span class="p">, </span>url=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cookie</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cookie_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">delete_protection_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_connect_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_http_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_interval</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">healthy_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">listener_sync</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduler</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sticky_session</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sticky_session_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unhealthy_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Rule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1610,7 +1318,7 @@ Get an existing Rule resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.Rule.html">Rule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.RuleState.html">RuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.Rule.html">Rule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.RuleState.html">RuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1925,7 +1633,7 @@ and wildcard characters. The following two domain name formats are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether to enable session persistence, Valid values are `on` and `off`. Default to `off`. This parameter is required  and takes effect only when ListenerSync is set to off.                                                                                                                                                                                                                                                 
+    <dd>{{% md %}}Whether to enable session persistence, Valid values are `on` and `off`. Default to `off`. This parameter is required  and takes effect only when ListenerSync is set to off.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2178,7 +1886,7 @@ and wildcard characters. The following two domain name formats are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether to enable session persistence, Valid values are `on` and `off`. Default to `off`. This parameter is required  and takes effect only when ListenerSync is set to off.                                                                                                                                                                                                                                                 
+    <dd>{{% md %}}Whether to enable session persistence, Valid values are `on` and `off`. Default to `off`. This parameter is required  and takes effect only when ListenerSync is set to off.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2431,7 +2139,7 @@ and wildcard characters. The following two domain name formats are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether to enable session persistence, Valid values are `on` and `off`. Default to `off`. This parameter is required  and takes effect only when ListenerSync is set to off.                                                                                                                                                                                                                                                 
+    <dd>{{% md %}}Whether to enable session persistence, Valid values are `on` and `off`. Default to `off`. This parameter is required  and takes effect only when ListenerSync is set to off.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2684,7 +2392,7 @@ and wildcard characters. The following two domain name formats are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Whether to enable session persistence, Valid values are `on` and `off`. Default to `off`. This parameter is required  and takes effect only when ListenerSync is set to off.                                                                                                                                                                                                                                                 
+    <dd>{{% md %}}Whether to enable session persistence, Valid values are `on` and `off`. Default to `off`. This parameter is required  and takes effect only when ListenerSync is set to off.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2741,6 +2449,6 @@ and characters '-' '/' '?' '%' '#' and '&' are allowed. URLs must be started wit
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

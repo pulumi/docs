@@ -43,7 +43,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "^centos_6"
+		opt1 := "system"
+		imagesDs, err := ecs.GetImages(ctx, &ecs.GetImagesArgs{
+			NameRegex: &opt0,
+			Owners:    &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstImageId", imagesDs.Images[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -53,7 +77,7 @@ import pulumi_alicloud as alicloud
 
 images_ds = alicloud.ecs.get_images(name_regex="^centos_6",
     owners="system")
-pulumi.export("firstImageId", images_ds.images[0]["id"])
+pulumi.export("firstImageId", images_ds.images[0].id)
 ```
 
 {{% /example %}}
@@ -88,7 +112,7 @@ export const firstImageId = imagesDs.images[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_images(</span>most_recent=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>owners=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_images(</span><span class="nx">most_recent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owners</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetImagesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -132,7 +156,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter resulting images by name. 
+    <dd>{{% md %}}A regex string to filter resulting images by name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -182,7 +206,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter resulting images by name. 
+    <dd>{{% md %}}A regex string to filter resulting images by name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -232,7 +256,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter resulting images by name. 
+    <dd>{{% md %}}A regex string to filter resulting images by name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -282,7 +306,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter resulting images by name. 
+    <dd>{{% md %}}A regex string to filter resulting images by name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1492,7 +1516,7 @@ The following output properties are available:
 <a href="#disk_device_mappings_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>device_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getimagesimagediskdevicemapping">List[Get<wbr>Images<wbr>Image<wbr>Disk<wbr>Device<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#getimagesimagediskdevicemapping">List[Get<wbr>Images<wbr>Image<wbr>Disk<wbr>Device<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Description of the system with disks and snapshots under the image.
 {{% /md %}}</dd>
@@ -1506,17 +1530,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the image.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="imageversion_python">
-<a href="#imageversion_python" style="color: inherit; text-decoration: inherit;">image<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Version of the image.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1542,8 +1555,19 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="iscopied_python">
-<a href="#iscopied_python" style="color: inherit; text-decoration: inherit;">is<wbr>Copied</a>
+        <span id="image_version_python">
+<a href="#image_version_python" style="color: inherit; text-decoration: inherit;">image_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Version of the image.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="is_copied_python">
+<a href="#is_copied_python" style="color: inherit; text-decoration: inherit;">is_<wbr>copied</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1552,8 +1576,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="isselfshared_python">
-<a href="#isselfshared_python" style="color: inherit; text-decoration: inherit;">is<wbr>Self<wbr>Shared</a>
+        <span id="is_self_shared_python">
+<a href="#is_self_shared_python" style="color: inherit; text-decoration: inherit;">is_<wbr>self_<wbr>shared</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1562,8 +1586,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="issubscribed_python">
-<a href="#issubscribed_python" style="color: inherit; text-decoration: inherit;">is<wbr>Subscribed</a>
+        <span id="is_subscribed_python">
+<a href="#is_subscribed_python" style="color: inherit; text-decoration: inherit;">is_<wbr>subscribed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1573,8 +1597,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="issupportiooptimized_python">
-<a href="#issupportiooptimized_python" style="color: inherit; text-decoration: inherit;">is<wbr>Support<wbr>Io<wbr>Optimized</a>
+        <span id="is_support_io_optimized_python">
+<a href="#is_support_io_optimized_python" style="color: inherit; text-decoration: inherit;">is_<wbr>support_<wbr>io_<wbr>optimized</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1593,8 +1617,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="osname_python">
-<a href="#osname_python" style="color: inherit; text-decoration: inherit;">os<wbr>Name</a>
+        <span id="os_name_python">
+<a href="#os_name_python" style="color: inherit; text-decoration: inherit;">os_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1604,8 +1628,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="osnameen_python">
-<a href="#osnameen_python" style="color: inherit; text-decoration: inherit;">os<wbr>Name<wbr>En</a>
+        <span id="os_name_en_python">
+<a href="#os_name_en_python" style="color: inherit; text-decoration: inherit;">os_<wbr>name_<wbr>en</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1703,7 +1727,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1903,6 +1927,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

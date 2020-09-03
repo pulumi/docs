@@ -42,7 +42,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cas"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "^cas"
+		opt1 := fmt.Sprintf("%v%v", path.Module, "/cas_certificates.json")
+		certs, err := cas.GetCertificates(ctx, &cas.GetCertificatesArgs{
+			NameRegex:  &opt0,
+			OutputFile: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("cert", certs.Certificates[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -52,7 +78,7 @@ import pulumi_alicloud as alicloud
 
 certs = alicloud.cas.get_certificates(name_regex="^cas",
     output_file=f"{path['module']}/cas_certificates.json")
-pulumi.export("cert", certs.certificates[0]["id"])
+pulumi.export("cert", certs.certificates[0].id)
 ```
 
 {{% /example %}}
@@ -87,7 +113,7 @@ export const cert = certs.certificates[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_certificates(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_certificates(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCertificatesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -322,7 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of cert names. 
+    <dd>{{% md %}}A list of cert names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -393,7 +419,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of cert names. 
+    <dd>{{% md %}}A list of cert names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -464,7 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of cert names. 
+    <dd>{{% md %}}A list of cert names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -535,7 +561,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of cert names. 
+    <dd>{{% md %}}A list of cert names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1074,8 +1100,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="buyinaliyun_python">
-<a href="#buyinaliyun_python" style="color: inherit; text-decoration: inherit;">buy<wbr>In<wbr>Aliyun</a>
+        <span id="buy_in_aliyun_python">
+<a href="#buy_in_aliyun_python" style="color: inherit; text-decoration: inherit;">buy_<wbr>in_<wbr>aliyun</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1118,8 +1144,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="enddate_python">
-<a href="#enddate_python" style="color: inherit; text-decoration: inherit;">end<wbr>Date</a>
+        <span id="end_date_python">
+<a href="#end_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1184,8 +1210,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="orgname_python">
-<a href="#orgname_python" style="color: inherit; text-decoration: inherit;">org<wbr>Name</a>
+        <span id="org_name_python">
+<a href="#org_name_python" style="color: inherit; text-decoration: inherit;">org_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1217,8 +1243,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="startdate_python">
-<a href="#startdate_python" style="color: inherit; text-decoration: inherit;">start<wbr>Date</a>
+        <span id="start_date_python">
+<a href="#start_date_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1244,6 +1270,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

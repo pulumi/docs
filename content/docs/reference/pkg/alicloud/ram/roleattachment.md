@@ -12,271 +12,6 @@ meta_desc: "Explore the RoleAttachment resource of the ram module, including exa
 
 Provides a RAM role attachment resource to bind role for several ECS instances.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using System.Linq;
-using Pulumi;
-using AliCloud = Pulumi.AliCloud;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
-        {
-            AvailableDiskCategory = "cloud_efficiency",
-            AvailableResourceCreation = "VSwitch",
-        }));
-        var defaultInstanceTypes = defaultZones.Apply(defaultZones => Output.Create(AliCloud.Ecs.GetInstanceTypes.InvokeAsync(new AliCloud.Ecs.GetInstanceTypesArgs
-        {
-            AvailabilityZone = defaultZones.Zones[0].Id,
-            CpuCoreCount = 2,
-            MemorySize = 4,
-        })));
-        var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
-        {
-            MostRecent = true,
-            NameRegex = "^ubuntu_18.*64",
-            Owners = "system",
-        }));
-        var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
-        {
-            CidrBlock = "172.16.0.0/16",
-        });
-        var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
-        {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/24",
-            VpcId = defaultNetwork.Id,
-        });
-        var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup("defaultSecurityGroup", new AliCloud.Ecs.SecurityGroupArgs
-        {
-            VpcId = defaultNetwork.Id,
-        });
-        var defaultSecurityGroupRule = new AliCloud.Ecs.SecurityGroupRule("defaultSecurityGroupRule", new AliCloud.Ecs.SecurityGroupRuleArgs
-        {
-            CidrIp = "172.16.0.0/24",
-            IpProtocol = "tcp",
-            NicType = "intranet",
-            Policy = "accept",
-            PortRange = "22/22",
-            Priority = 1,
-            SecurityGroupId = defaultSecurityGroup.Id,
-            Type = "ingress",
-        });
-        var config = new Config();
-        var name = config.Get("name") ?? "ecsInstanceVPCExample";
-        var foo = new AliCloud.Ecs.Instance("foo", new AliCloud.Ecs.InstanceArgs
-        {
-            ImageId = defaultImages.Apply(defaultImages => defaultImages.Images[0].Id),
-            InstanceName = name,
-            InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.InstanceTypes[0].Id),
-            InternetChargeType = "PayByTraffic",
-            InternetMaxBandwidthOut = 5,
-            SecurityGroups = 
-            {
-                defaultSecurityGroup.Id,
-            },
-            SystemDiskCategory = "cloud_efficiency",
-            VswitchId = defaultSwitch.Id,
-        });
-        var role = new AliCloud.Ram.Role("role", new AliCloud.Ram.RoleArgs
-        {
-            Description = "this is a test",
-            Document = @"  {
-    ""Statement"": [
-      {
-        ""Action"": ""sts:AssumeRole"",
-        ""Effect"": ""Allow"",
-        ""Principal"": {
-          ""Service"": [
-            ""ecs.aliyuncs.com""
-          ]
-        }
-      }
-    ],
-    ""Version"": ""1""
-  }
-  
-",
-            Force = true,
-        });
-        var attach = new AliCloud.Ram.RoleAttachment("attach", new AliCloud.Ram.RoleAttachmentArgs
-        {
-            InstanceIds = 
-            {
-                
-                {
-                    foo,
-                }.Select(__item => __item.Id).ToList(),
-            },
-            RoleName = role.Name,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_alicloud as alicloud
-
-default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
-    available_resource_creation="VSwitch")
-default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0]["id"],
-    cpu_core_count=2,
-    memory_size=4)
-default_images = alicloud.ecs.get_images(most_recent=True,
-    name_regex="^ubuntu_18.*64",
-    owners="system")
-default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
-default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0]["id"],
-    cidr_block="172.16.0.0/24",
-    vpc_id=default_network.id)
-default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup", vpc_id=default_network.id)
-default_security_group_rule = alicloud.ecs.SecurityGroupRule("defaultSecurityGroupRule",
-    cidr_ip="172.16.0.0/24",
-    ip_protocol="tcp",
-    nic_type="intranet",
-    policy="accept",
-    port_range="22/22",
-    priority=1,
-    security_group_id=default_security_group.id,
-    type="ingress")
-config = pulumi.Config()
-name = config.get("name")
-if name is None:
-    name = "ecsInstanceVPCExample"
-foo = alicloud.ecs.Instance("foo",
-    image_id=default_images.images[0]["id"],
-    instance_name=name,
-    instance_type=default_instance_types.instance_types[0]["id"],
-    internet_charge_type="PayByTraffic",
-    internet_max_bandwidth_out=5,
-    security_groups=[default_security_group.id],
-    system_disk_category="cloud_efficiency",
-    vswitch_id=default_switch.id)
-role = alicloud.ram.Role("role",
-    description="this is a test",
-    document="""  {
-    "Statement": [
-      {
-        "Action": "sts:AssumeRole",
-        "Effect": "Allow",
-        "Principal": {
-          "Service": [
-            "ecs.aliyuncs.com"
-          ]
-        }
-      }
-    ],
-    "Version": "1"
-  }
-  
-""",
-    force=True)
-attach = alicloud.ram.RoleAttachment("attach",
-    instance_ids=[[__item.id for __item in [foo]]],
-    role_name=role.name)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const config = new pulumi.Config();
-const name = config.get("name") || "ecsInstanceVPCExample";
-
-const defaultZones = pulumi.output(alicloud.getZones({
-    availableDiskCategory: "cloud_efficiency",
-    availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
-    availabilityZone: defaultZones.zones[0].id,
-    cpuCoreCount: 2,
-    memorySize: 4,
-}, { async: true }));
-const defaultImages = pulumi.output(alicloud.ecs.getImages({
-    mostRecent: true,
-    nameRegex: "^ubuntu_18.*64",
-    owners: "system",
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/16",
-});
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/24",
-    vpcId: defaultNetwork.id,
-});
-const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("default", {
-    vpcId: defaultNetwork.id,
-});
-const defaultSecurityGroupRule = new alicloud.ecs.SecurityGroupRule("default", {
-    cidrIp: "172.16.0.0/24",
-    ipProtocol: "tcp",
-    nicType: "intranet",
-    policy: "accept",
-    portRange: "22/22",
-    priority: 1,
-    securityGroupId: defaultSecurityGroup.id,
-    type: "ingress",
-});
-const foo = new alicloud.ecs.Instance("foo", {
-    imageId: defaultImages.images[0].id,
-    instanceName: name,
-    instanceType: defaultInstanceTypes.instanceTypes[0].id,
-    internetChargeType: "PayByTraffic",
-    internetMaxBandwidthOut: 5,
-    securityGroups: [defaultSecurityGroup.id],
-    systemDiskCategory: "cloud_efficiency",
-    vswitchId: defaultSwitch.id,
-});
-const role = new alicloud.ram.Role("role", {
-    description: "this is a test",
-    document: `  {
-    "Statement": [
-      {
-        "Action": "sts:AssumeRole",
-        "Effect": "Allow",
-        "Principal": {
-          "Service": [
-            "ecs.aliyuncs.com"
-          ]
-        }
-      }
-    ],
-    "Version": "1"
-  }
-  `,
-    force: true,
-});
-const attach = new alicloud.ram.RoleAttachment("attach", {
-    instanceIds: [foo.id],
-    roleName: role.name,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a RoleAttachment Resource {#create}
@@ -288,7 +23,7 @@ const attach = new alicloud.ram.RoleAttachment("attach", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ram/#pulumi_alicloud.ram.RoleAttachment">RoleAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>instance_ids=None<span class="p">, </span>role_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ram/#pulumi_alicloud.ram.RoleAttachment">RoleAttachment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">instance_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -667,7 +402,8 @@ Get an existing RoleAttachment resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>instance_ids=None<span class="p">, </span>role_name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">instance_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RoleAttachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -675,7 +411,7 @@ Get an existing RoleAttachment resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ram.RoleAttachment.html">RoleAttachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ram.RoleAttachmentState.html">RoleAttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ram.RoleAttachment.html">RoleAttachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ram.RoleAttachmentState.html">RoleAttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -910,6 +646,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

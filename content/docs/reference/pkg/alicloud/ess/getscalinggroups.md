@@ -46,7 +46,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "scaling_group_name"
+		scalinggroupsDs, err := ess.GetScalingGroups(ctx, &ess.GetScalingGroupsArgs{
+			Ids: []string{
+				"scaling_group_id1",
+				"scaling_group_id2",
+			},
+			NameRegex: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstScalingGroup", scalinggroupsDs.Groups[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -59,7 +85,7 @@ scalinggroups_ds = alicloud.ess.get_scaling_groups(ids=[
         "scaling_group_id2",
     ],
     name_regex="scaling_group_name")
-pulumi.export("firstScalingGroup", scalinggroups_ds.groups[0]["id"])
+pulumi.export("firstScalingGroup", scalinggroups_ds.groups[0].id)
 ```
 
 {{% /example %}}
@@ -97,7 +123,7 @@ export const firstScalingGroup = scalinggroupsDs.groups[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_scaling_groups(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_scaling_groups(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetScalingGroupsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1249,8 +1275,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="activecapacity_python">
-<a href="#activecapacity_python" style="color: inherit; text-decoration: inherit;">active<wbr>Capacity</a>
+        <span id="active_capacity_python">
+<a href="#active_capacity_python" style="color: inherit; text-decoration: inherit;">active_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1260,8 +1286,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="activescalingconfiguration_python">
-<a href="#activescalingconfiguration_python" style="color: inherit; text-decoration: inherit;">active<wbr>Scaling<wbr>Configuration</a>
+        <span id="active_scaling_configuration_python">
+<a href="#active_scaling_configuration_python" style="color: inherit; text-decoration: inherit;">active_<wbr>scaling_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1270,8 +1296,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="cooldowntime_python">
-<a href="#cooldowntime_python" style="color: inherit; text-decoration: inherit;">cooldown<wbr>Time</a>
+        <span id="cooldown_time_python">
+<a href="#cooldown_time_python" style="color: inherit; text-decoration: inherit;">cooldown_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1336,8 +1362,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lifecyclestate_python">
-<a href="#lifecyclestate_python" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>State</a>
+        <span id="lifecycle_state_python">
+<a href="#lifecycle_state_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1347,8 +1373,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="loadbalancerids_python">
-<a href="#loadbalancerids_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Ids</a>
+        <span id="load_balancer_ids_python">
+<a href="#load_balancer_ids_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1392,8 +1418,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="pendingcapacity_python">
-<a href="#pendingcapacity_python" style="color: inherit; text-decoration: inherit;">pending<wbr>Capacity</a>
+        <span id="pending_capacity_python">
+<a href="#pending_capacity_python" style="color: inherit; text-decoration: inherit;">pending_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1403,8 +1429,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="regionid_python">
-<a href="#regionid_python" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1425,8 +1451,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="removingcapacity_python">
-<a href="#removingcapacity_python" style="color: inherit; text-decoration: inherit;">removing<wbr>Capacity</a>
+        <span id="removing_capacity_python">
+<a href="#removing_capacity_python" style="color: inherit; text-decoration: inherit;">removing_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1436,8 +1462,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="totalcapacity_python">
-<a href="#totalcapacity_python" style="color: inherit; text-decoration: inherit;">total<wbr>Capacity</a>
+        <span id="total_capacity_python">
+<a href="#total_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1474,6 +1500,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

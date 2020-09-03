@@ -43,16 +43,25 @@ class MyStack : Stack
         var name = config.Get("name") ?? "tf-testAccCenInstanceGrantBasic";
         var cen = new AliCloud.Cen.Instance("cen", new AliCloud.Cen.InstanceArgs
         {
+        }, new CustomResourceOptions
+        {
+            Provider = "alicloud.account2",
         });
         var vpc = new AliCloud.Vpc.Network("vpc", new AliCloud.Vpc.NetworkArgs
         {
             CidrBlock = "192.168.0.0/16",
+        }, new CustomResourceOptions
+        {
+            Provider = "alicloud.account1",
         });
         var fooInstanceGrant = new AliCloud.Cen.InstanceGrant("fooInstanceGrant", new AliCloud.Cen.InstanceGrantArgs
         {
             CenId = cen.Id,
             CenOwnerId = "uid2",
             ChildInstanceId = vpc.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = "alicloud.account1",
         });
         var fooInstanceAttachment = new AliCloud.Cen.InstanceAttachment("fooInstanceAttachment", new AliCloud.Cen.InstanceAttachmentArgs
         {
@@ -60,6 +69,13 @@ class MyStack : Stack
             ChildInstanceOwnerId = "uid1",
             ChildInstanceRegionId = "cn-qingdao",
             InstanceId = cen.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = "alicloud.account2",
+            DependsOn = 
+            {
+                "alicloud_cen_instance_grant.foo",
+            },
         });
     }
 
@@ -69,7 +85,66 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/providers"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := providers.Newalicloud(ctx, "account1", &providers.alicloudArgs{
+			AccessKey: pulumi.String("access123"),
+			SecretKey: pulumi.String("secret123"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = providers.Newalicloud(ctx, "account2", &providers.alicloudArgs{
+			AccessKey: pulumi.String("access456"),
+			SecretKey: pulumi.String("secret456"),
+		})
+		if err != nil {
+			return err
+		}
+		cen, err := cen.NewInstance(ctx, "cen", nil, pulumi.Provider("alicloud.account2"))
+		if err != nil {
+			return err
+		}
+		vpc, err := vpc.NewNetwork(ctx, "vpc", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("192.168.0.0/16"),
+		}, pulumi.Provider("alicloud.account1"))
+		if err != nil {
+			return err
+		}
+		_, err = cen.NewInstanceGrant(ctx, "fooInstanceGrant", &cen.InstanceGrantArgs{
+			CenId:           cen.ID(),
+			CenOwnerId:      pulumi.String("uid2"),
+			ChildInstanceId: vpc.ID(),
+		}, pulumi.Provider("alicloud.account1"))
+		if err != nil {
+			return err
+		}
+		_, err = cen.NewInstanceAttachment(ctx, "fooInstanceAttachment", &cen.InstanceAttachmentArgs{
+			ChildInstanceId:       vpc.ID(),
+			ChildInstanceOwnerId:  pulumi.String("uid1"),
+			ChildInstanceRegionId: pulumi.String("cn-qingdao"),
+			InstanceId:            cen.ID(),
+		}, pulumi.Provider("alicloud.account2"), pulumi.DependsOn([]pulumi.Resource{
+			"alicloud_cen_instance_grant.foo",
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -89,17 +164,21 @@ config = pulumi.Config()
 name = config.get("name")
 if name is None:
     name = "tf-testAccCenInstanceGrantBasic"
-cen = alicloud.cen.Instance("cen")
-vpc = alicloud.vpc.Network("vpc", cidr_block="192.168.0.0/16")
+cen = alicloud.cen.Instance("cen", opts=ResourceOptions(provider="alicloud.account2"))
+vpc = alicloud.vpc.Network("vpc", cidr_block="192.168.0.0/16",
+opts=ResourceOptions(provider="alicloud.account1"))
 foo_instance_grant = alicloud.cen.InstanceGrant("fooInstanceGrant",
     cen_id=cen.id,
     cen_owner_id="uid2",
-    child_instance_id=vpc.id)
+    child_instance_id=vpc.id,
+    opts=ResourceOptions(provider="alicloud.account1"))
 foo_instance_attachment = alicloud.cen.InstanceAttachment("fooInstanceAttachment",
     child_instance_id=vpc.id,
     child_instance_owner_id="uid1",
     child_instance_region_id="cn-qingdao",
-    instance_id=cen.id)
+    instance_id=cen.id,
+    opts=ResourceOptions(provider="alicloud.account2",
+        depends_on=["alicloud_cen_instance_grant.foo"]))
 ```
 
 {{% /example %}}
@@ -153,7 +232,7 @@ const fooInstanceAttachment = new alicloud.cen.InstanceAttachment("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.InstanceGrant">InstanceGrant</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cen_id=None<span class="p">, </span>cen_owner_id=None<span class="p">, </span>child_instance_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.InstanceGrant">InstanceGrant</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cen_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cen_owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">child_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -576,7 +655,8 @@ Get an existing InstanceGrant resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cen_id=None<span class="p">, </span>cen_owner_id=None<span class="p">, </span>child_instance_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cen_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cen_owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">child_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> InstanceGrant</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -584,7 +664,7 @@ Get an existing InstanceGrant resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.InstanceGrant.html">InstanceGrant</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.InstanceGrantState.html">InstanceGrantState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.InstanceGrant.html">InstanceGrant</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.InstanceGrantState.html">InstanceGrantState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -863,6 +943,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

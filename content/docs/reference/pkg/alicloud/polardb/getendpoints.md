@@ -49,7 +49,37 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "pc-\\w+"
+		opt1 := "Running"
+		polardbClustersDs, err := polardb.GetClusters(ctx, &polardb.GetClustersArgs{
+			DescriptionRegex: &opt0,
+			Status:           &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_default, err := polardb.GetEndpoints(ctx, &polardb.GetEndpointsArgs{
+			DbClusterId: polardbClustersDs.Clusters[0].Id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("ends", _default.Endpoints[0].DbEndpointId)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -59,8 +89,8 @@ import pulumi_alicloud as alicloud
 
 polardb_clusters_ds = alicloud.polardb.get_clusters(description_regex="pc-\\w+",
     status="Running")
-default = alicloud.polardb.get_endpoints(db_cluster_id=polardb_clusters_ds.clusters[0]["id"])
-pulumi.export("ends", default.endpoints[0]["db_endpoint_id"])
+default = alicloud.polardb.get_endpoints(db_cluster_id=polardb_clusters_ds.clusters[0].id)
+pulumi.export("ends", default.endpoints[0].db_endpoint_id)
 ```
 
 {{% /example %}}
@@ -97,7 +127,7 @@ export const ends = _default.then(_default => _default.endpoints[0].dbEndpointId
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_endpoints(</span>db_cluster_id=None<span class="p">, </span>db_endpoint_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_endpoints(</span><span class="nx">db_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEndpointsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -130,7 +160,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}PolarDB cluster ID. 
+    <dd>{{% md %}}PolarDB cluster ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -159,7 +189,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}PolarDB cluster ID. 
+    <dd>{{% md %}}PolarDB cluster ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -188,7 +218,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}PolarDB cluster ID. 
+    <dd>{{% md %}}PolarDB cluster ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -217,7 +247,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}PolarDB cluster ID. 
+    <dd>{{% md %}}PolarDB cluster ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -729,11 +759,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="addressitems_python">
-<a href="#addressitems_python" style="color: inherit; text-decoration: inherit;">address<wbr>Items</a>
+        <span id="address_items_python">
+<a href="#address_items_python" style="color: inherit; text-decoration: inherit;">address_<wbr>items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getendpointsendpointaddressitem">List[Get<wbr>Endpoints<wbr>Endpoint<wbr>Address<wbr>Item]</a></span>
+        <span class="property-type"><a href="#getendpointsendpointaddressitem">List[Get<wbr>Endpoints<wbr>Endpoint<wbr>Address<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoint addresses. Each element contains the following attributes.
 {{% /md %}}</dd>
@@ -1132,6 +1162,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

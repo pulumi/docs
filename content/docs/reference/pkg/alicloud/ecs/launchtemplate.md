@@ -96,7 +96,84 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "system"
+		images, err := ecs.GetImages(ctx, &ecs.GetImagesArgs{
+			Owners: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		instances, err := ecs.GetInstances(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		_, err = ecs.NewLaunchTemplate(ctx, "template", &ecs.LaunchTemplateArgs{
+			DataDisks: ecs.LaunchTemplateDataDiskArray{
+				&ecs.LaunchTemplateDataDiskArgs{
+					Description: pulumi.String("test1"),
+					Name:        pulumi.String("disk1"),
+				},
+				&ecs.LaunchTemplateDataDiskArgs{
+					Description: pulumi.String("test2"),
+					Name:        pulumi.String("disk2"),
+				},
+			},
+			Description:             pulumi.String("test1"),
+			HostName:                pulumi.String("tf-test-host"),
+			ImageId:                 pulumi.String(images.Images[0].Id),
+			InstanceChargeType:      pulumi.String("PrePaid"),
+			InstanceName:            pulumi.String("tf-instance-name"),
+			InstanceType:            pulumi.String(instances.Instances[0].InstanceType),
+			InternetChargeType:      pulumi.String("PayByBandwidth"),
+			InternetMaxBandwidthIn:  pulumi.Int(5),
+			InternetMaxBandwidthOut: pulumi.Int(0),
+			IoOptimized:             pulumi.String("none"),
+			KeyPairName:             pulumi.String("test-key-pair"),
+			NetworkInterfaces: &ecs.LaunchTemplateNetworkInterfacesArgs{
+				Description:     pulumi.String("hello1"),
+				Name:            pulumi.String("eth0"),
+				PrimaryIp:       pulumi.String("10.0.0.2"),
+				SecurityGroupId: pulumi.String("xxxx"),
+				VswitchId:       pulumi.String("xxxxxxx"),
+			},
+			NetworkType:                 pulumi.String("vpc"),
+			RamRoleName:                 pulumi.String("xxxxx"),
+			ResourceGroupId:             pulumi.String("rg-zkdfjahg9zxncv0"),
+			SecurityEnhancementStrategy: pulumi.String("Active"),
+			SecurityGroupId:             pulumi.String("sg-zxcvj0lasdf102350asdf9a"),
+			SpotPriceLimit:              pulumi.Float64(5),
+			SpotStrategy:                pulumi.String("SpotWithPriceLimit"),
+			SystemDiskCategory:          pulumi.String("cloud_ssd"),
+			SystemDiskDescription:       pulumi.String("test disk"),
+			SystemDiskName:              pulumi.String("hello"),
+			SystemDiskSize:              pulumi.Int(40),
+			Tags: pulumi.StringMap{
+				"tag1": pulumi.String("hello"),
+				"tag2": pulumi.String("world"),
+			},
+			Userdata:  pulumi.String("xxxxxxxxxxxxxx"),
+			VpcId:     pulumi.String("vpc-asdfnbg0as8dfk1nb2"),
+			VswitchId: pulumi.String("sw-ljkngaksdjfj0nnasdf"),
+			ZoneId:    pulumi.String("beijing-a"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -108,33 +185,33 @@ images = alicloud.ecs.get_images(owners="system")
 instances = alicloud.ecs.get_instances()
 template = alicloud.ecs.LaunchTemplate("template",
     data_disks=[
-        {
-            "description": "test1",
-            "name": "disk1",
-        },
-        {
-            "description": "test2",
-            "name": "disk2",
-        },
+        alicloud.ecs.LaunchTemplateDataDiskArgs(
+            description="test1",
+            name="disk1",
+        ),
+        alicloud.ecs.LaunchTemplateDataDiskArgs(
+            description="test2",
+            name="disk2",
+        ),
     ],
     description="test1",
     host_name="tf-test-host",
-    image_id=images.images[0]["id"],
+    image_id=images.images[0].id,
     instance_charge_type="PrePaid",
     instance_name="tf-instance-name",
-    instance_type=instances.instances[0]["instance_type"],
+    instance_type=instances.instances[0].instance_type,
     internet_charge_type="PayByBandwidth",
     internet_max_bandwidth_in=5,
     internet_max_bandwidth_out=0,
     io_optimized="none",
     key_pair_name="test-key-pair",
-    network_interfaces={
-        "description": "hello1",
-        "name": "eth0",
-        "primaryIp": "10.0.0.2",
-        "security_group_id": "xxxx",
-        "vswitch_id": "xxxxxxx",
-    },
+    network_interfaces=alicloud.ecs.LaunchTemplateNetworkInterfacesArgs(
+        description="hello1",
+        name="eth0",
+        primary_ip="10.0.0.2",
+        security_group_id="xxxx",
+        vswitch_id="xxxxxxx",
+    ),
     network_type="vpc",
     ram_role_name="xxxxx",
     resource_group_id="rg-zkdfjahg9zxncv0",
@@ -233,7 +310,7 @@ const template = new alicloud.ecs.LaunchTemplate("template", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ecs/#pulumi_alicloud.ecs.LaunchTemplate">LaunchTemplate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_release_time=None<span class="p">, </span>data_disks=None<span class="p">, </span>description=None<span class="p">, </span>host_name=None<span class="p">, </span>image_id=None<span class="p">, </span>image_owner_alias=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>instance_name=None<span class="p">, </span>instance_type=None<span class="p">, </span>internet_charge_type=None<span class="p">, </span>internet_max_bandwidth_in=None<span class="p">, </span>internet_max_bandwidth_out=None<span class="p">, </span>io_optimized=None<span class="p">, </span>key_pair_name=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>network_type=None<span class="p">, </span>ram_role_name=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>security_enhancement_strategy=None<span class="p">, </span>security_group_id=None<span class="p">, </span>spot_price_limit=None<span class="p">, </span>spot_strategy=None<span class="p">, </span>system_disk_category=None<span class="p">, </span>system_disk_description=None<span class="p">, </span>system_disk_name=None<span class="p">, </span>system_disk_size=None<span class="p">, </span>tags=None<span class="p">, </span>userdata=None<span class="p">, </span>vpc_id=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ecs/#pulumi_alicloud.ecs.LaunchTemplate">LaunchTemplate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_release_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[List[LaunchTemplateDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_owner_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internet_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internet_max_bandwidth_in</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">internet_max_bandwidth_out</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">io_optimized</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_pair_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateNetworkInterfacesArgs]</span> = None<span class="p">, </span><span class="nx">network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ram_role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_enhancement_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_price_limit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">spot_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_disk_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_disk_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_disk_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">userdata</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1538,7 +1615,7 @@ The LaunchTemplate resource accepts the following [input]({{< relref "/docs/intr
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatedatadisk">List[Launch<wbr>Template<wbr>Data<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#launchtemplatedatadisk">List[Launch<wbr>Template<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of data disks created with instance.
 {{% /md %}}</dd>
@@ -1697,7 +1774,7 @@ The LaunchTemplate resource accepts the following [input]({{< relref "/docs/intr
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatenetworkinterfaces">Dict[Launch<wbr>Template<wbr>Network<wbr>Interfaces]</a></span>
+        <span class="property-type"><a href="#launchtemplatenetworkinterfaces">Launch<wbr>Template<wbr>Network<wbr>Interfaces<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of network interfaces created with instance.
 {{% /md %}}</dd>
@@ -1836,7 +1913,7 @@ The LaunchTemplate resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -1984,7 +2061,8 @@ Get an existing LaunchTemplate resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_release_time=None<span class="p">, </span>data_disks=None<span class="p">, </span>description=None<span class="p">, </span>host_name=None<span class="p">, </span>image_id=None<span class="p">, </span>image_owner_alias=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>instance_name=None<span class="p">, </span>instance_type=None<span class="p">, </span>internet_charge_type=None<span class="p">, </span>internet_max_bandwidth_in=None<span class="p">, </span>internet_max_bandwidth_out=None<span class="p">, </span>io_optimized=None<span class="p">, </span>key_pair_name=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>network_type=None<span class="p">, </span>ram_role_name=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>security_enhancement_strategy=None<span class="p">, </span>security_group_id=None<span class="p">, </span>spot_price_limit=None<span class="p">, </span>spot_strategy=None<span class="p">, </span>system_disk_category=None<span class="p">, </span>system_disk_description=None<span class="p">, </span>system_disk_name=None<span class="p">, </span>system_disk_size=None<span class="p">, </span>tags=None<span class="p">, </span>userdata=None<span class="p">, </span>vpc_id=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_release_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[List[LaunchTemplateDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_owner_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internet_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internet_max_bandwidth_in</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">internet_max_bandwidth_out</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">io_optimized</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_pair_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateNetworkInterfacesArgs]</span> = None<span class="p">, </span><span class="nx">network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ram_role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_enhancement_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_price_limit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">spot_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_disk_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_disk_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_disk_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">userdata</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LaunchTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1992,7 +2070,7 @@ Get an existing LaunchTemplate resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.LaunchTemplate.html">LaunchTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.LaunchTemplateState.html">LaunchTemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.LaunchTemplate.html">LaunchTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.LaunchTemplateState.html">LaunchTemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3231,7 +3309,7 @@ The following state arguments are supported:
 <a href="#state_data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatedatadisk">List[Launch<wbr>Template<wbr>Data<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#launchtemplatedatadisk">List[Launch<wbr>Template<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of data disks created with instance.
 {{% /md %}}</dd>
@@ -3390,7 +3468,7 @@ The following state arguments are supported:
 <a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatenetworkinterfaces">Dict[Launch<wbr>Template<wbr>Network<wbr>Interfaces]</a></span>
+        <span class="property-type"><a href="#launchtemplatenetworkinterfaces">Launch<wbr>Template<wbr>Network<wbr>Interfaces<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of network interfaces created with instance.
 {{% /md %}}</dd>
@@ -3529,7 +3607,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -4216,8 +4294,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primaryip_python">
-<a href="#primaryip_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Ip</a>
+        <span id="primary_ip_python">
+<a href="#primary_ip_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4265,6 +4343,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

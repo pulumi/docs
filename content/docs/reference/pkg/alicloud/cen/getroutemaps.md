@@ -51,7 +51,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "cn-hangzhou"
+		opt1 := "datasource_test"
+		opt2 := "Active"
+		opt3 := "RegionIn"
+		this, err := cen.GetRouteMaps(ctx, &cen.GetRouteMapsArgs{
+			CenId:            "cen-ihdlgo87ai********",
+			CenRegionId:      &opt0,
+			DescriptionRegex: &opt1,
+			Ids: []string{
+				"cenrmap-bnh97kb3mn********",
+			},
+			Status:            &opt2,
+			TransmitDirection: &opt3,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstCenRouteMapId", this.Maps[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -65,7 +97,7 @@ this = alicloud.cen.get_route_maps(cen_id="cen-ihdlgo87ai********",
     ids=["cenrmap-bnh97kb3mn********"],
     status="Active",
     transmit_direction="RegionIn")
-pulumi.export("firstCenRouteMapId", this.maps[0]["id"])
+pulumi.export("firstCenRouteMapId", this.maps[0].id)
 ```
 
 {{% /example %}}
@@ -104,7 +136,7 @@ export const firstCenRouteMapId = thisRouteMaps.maps[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_route_maps(</span>cen_id=None<span class="p">, </span>cen_region_id=None<span class="p">, </span>description_regex=None<span class="p">, </span>ids=None<span class="p">, </span>output_file=None<span class="p">, </span>status=None<span class="p">, </span>transmit_direction=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_route_maps(</span><span class="nx">cen_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cen_region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transmit_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRouteMapsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1032,7 +1064,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether to enable the reverse match method of the DestinationInstanceIds match condition. 
+    <dd>{{% md %}}Indicates whether to enable the reverse match method of the DestinationInstanceIds match condition.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1098,7 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The priority of the next route map that is associated with the current route map. 
+    <dd>{{% md %}}The priority of the next route map that is associated with the current route map.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1369,7 +1401,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether to enable the reverse match method of the DestinationInstanceIds match condition. 
+    <dd>{{% md %}}Indicates whether to enable the reverse match method of the DestinationInstanceIds match condition.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1435,7 +1467,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The priority of the next route map that is associated with the current route map. 
+    <dd>{{% md %}}The priority of the next route map that is associated with the current route map.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1706,7 +1738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether to enable the reverse match method of the DestinationInstanceIds match condition. 
+    <dd>{{% md %}}Indicates whether to enable the reverse match method of the DestinationInstanceIds match condition.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1772,7 +1804,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The priority of the next route map that is associated with the current route map. 
+    <dd>{{% md %}}The priority of the next route map that is associated with the current route map.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2043,7 +2075,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether to enable the reverse match method of the DestinationInstanceIds match condition. 
+    <dd>{{% md %}}Indicates whether to enable the reverse match method of the DestinationInstanceIds match condition.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2109,7 +2141,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The priority of the next route map that is associated with the current route map. 
+    <dd>{{% md %}}The priority of the next route map that is associated with the current route map.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2273,6 +2305,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

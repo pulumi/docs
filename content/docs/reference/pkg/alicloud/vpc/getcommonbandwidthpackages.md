@@ -55,7 +55,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		fooCommonBandwithPackage, err := vpc.NewCommonBandwithPackage(ctx, "fooCommonBandwithPackage", &vpc.CommonBandwithPackageArgs{
+			Bandwidth:   pulumi.Int(2),
+			Description: pulumi.String("tf-testAcc-CommonBandwidthPackage"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -64,7 +85,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 foo_common_bandwith_package = alicloud.vpc.CommonBandwithPackage("fooCommonBandwithPackage",
-    bandwidth="2",
+    bandwidth=2,
     description="tf-testAcc-CommonBandwidthPackage")
 foo_common_bandwidth_packages = foo_common_bandwith_package.id.apply(lambda id: alicloud.vpc.get_common_bandwidth_packages(ids=[id],
     name_regex="^tf-testAcc.*"))
@@ -104,7 +125,7 @@ const fooCommonBandwidthPackages = fooCommonBandwithPackage.id.apply(id => alicl
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_common_bandwidth_packages(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_common_bandwidth_packages(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCommonBandwidthPackagesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1124,11 +1145,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="publicipaddresses_python">
-<a href="#publicipaddresses_python" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
+        <span id="public_ip_addresses_python">
+<a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcommonbandwidthpackagespackagepublicipaddress">List[Get<wbr>Common<wbr>Bandwidth<wbr>Packages<wbr>Package<wbr>Public<wbr>Ip<wbr>Address]</a></span>
+        <span class="property-type"><a href="#getcommonbandwidthpackagespackagepublicipaddress">List[Get<wbr>Common<wbr>Bandwidth<wbr>Packages<wbr>Package<wbr>Public<wbr>Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Public ip addresses that in the Common Bandwidth Pakcage.
 {{% /md %}}</dd>
@@ -1299,6 +1320,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

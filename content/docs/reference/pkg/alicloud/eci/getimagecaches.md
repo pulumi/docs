@@ -27,7 +27,7 @@ Provides a collection of ECI Image Cache to the specified filters.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_image_caches(</span>ids=None<span class="p">, </span>image=None<span class="p">, </span>image_cache_name=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>status=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_image_caches(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetImageCachesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -885,7 +885,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of container group. 
+    <dd>{{% md %}}The id of container group.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1002,7 +1002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of container group. 
+    <dd>{{% md %}}The id of container group.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1119,7 +1119,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of container group. 
+    <dd>{{% md %}}The id of container group.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1236,7 +1236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The id of container group. 
+    <dd>{{% md %}}The id of container group.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1245,15 +1245,15 @@ The following output properties are available:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getimagecachescachevent">List[Get<wbr>Image<wbr>Caches<wbr>Cach<wbr>Event]</a></span>
+        <span class="property-type"><a href="#getimagecachescachevent">List[Get<wbr>Image<wbr>Caches<wbr>Cach<wbr>Event<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Image cache pulls image event information.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="expiredatetime_python">
-<a href="#expiredatetime_python" style="color: inherit; text-decoration: inherit;">expire<wbr>Date<wbr>Time</a>
+        <span id="expire_date_time_python">
+<a href="#expire_date_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>date_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1274,8 +1274,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="imagecacheid_python">
-<a href="#imagecacheid_python" style="color: inherit; text-decoration: inherit;">image<wbr>Cache<wbr>Id</a>
+        <span id="image_cache_id_python">
+<a href="#image_cache_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>cache_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1371,7 +1371,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of events.   
+    <dd>{{% md %}}Number of events.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1382,7 +1382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Start time.   
+    <dd>{{% md %}}Start time.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1393,7 +1393,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}End time.   
+    <dd>{{% md %}}End time.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1414,7 +1414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of event.   
+    <dd>{{% md %}}The name of event.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1425,7 +1425,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of event.  
+    <dd>{{% md %}}The type of event.
 {{% /md %}}</dd>
 
 </dl>
@@ -1443,7 +1443,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of events.   
+    <dd>{{% md %}}Number of events.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1454,7 +1454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Start time.   
+    <dd>{{% md %}}Start time.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1465,7 +1465,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}End time.   
+    <dd>{{% md %}}End time.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1486,7 +1486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of event.   
+    <dd>{{% md %}}The name of event.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1497,7 +1497,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of event.  
+    <dd>{{% md %}}The type of event.
 {{% /md %}}</dd>
 
 </dl>
@@ -1515,7 +1515,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Number of events.   
+    <dd>{{% md %}}Number of events.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1526,7 +1526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Start time.   
+    <dd>{{% md %}}Start time.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1537,7 +1537,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}End time.   
+    <dd>{{% md %}}End time.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1558,7 +1558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of event.   
+    <dd>{{% md %}}The name of event.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1569,7 +1569,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of event.  
+    <dd>{{% md %}}The type of event.
 {{% /md %}}</dd>
 
 </dl>
@@ -1587,29 +1587,29 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Number of events.   
+    <dd>{{% md %}}Number of events.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="firsttimestamp_python">
-<a href="#firsttimestamp_python" style="color: inherit; text-decoration: inherit;">first<wbr>Timestamp</a>
+        <span id="first_timestamp_python">
+<a href="#first_timestamp_python" style="color: inherit; text-decoration: inherit;">first_<wbr>timestamp</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Start time.   
+    <dd>{{% md %}}Start time.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="lasttimestamp_python">
-<a href="#lasttimestamp_python" style="color: inherit; text-decoration: inherit;">last<wbr>Timestamp</a>
+        <span id="last_timestamp_python">
+<a href="#last_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>timestamp</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}End time.   
+    <dd>{{% md %}}End time.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1630,7 +1630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of event.   
+    <dd>{{% md %}}The name of event.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1641,7 +1641,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of event.  
+    <dd>{{% md %}}The type of event.
 {{% /md %}}</dd>
 
 </dl>
@@ -1662,6 +1662,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

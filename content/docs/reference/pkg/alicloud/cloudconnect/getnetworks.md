@@ -16,80 +16,6 @@ This data source provides Cloud Connect Networks available to the user.
 
 > **NOTE:** Only the following regions support create Cloud Connect Network. [`cn-shanghai`, `cn-shanghai-finance-1`, `cn-hongkong`, `ap-southeast-1`, `ap-southeast-2`, `ap-southeast-3`, `ap-southeast-5`, `ap-northeast-1`, `eu-central-1`]
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AliCloud = Pulumi.AliCloud;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var defaultNetworks = Output.Create(AliCloud.CloudConnect.GetNetworks.InvokeAsync(new AliCloud.CloudConnect.GetNetworksArgs
-        {
-            Ids = 
-            {
-                alicloud_cloud_connect_networks.Default.Id,
-            },
-            NameRegex = "^tf-testAcc.*",
-        }));
-        var defaultNetwork = new AliCloud.CloudConnect.Network("defaultNetwork", new AliCloud.CloudConnect.NetworkArgs
-        {
-            CidrBlock = "192.168.0.0/24",
-            Description = "tf-testAccCloudConnectNetworkDescription",
-            IsDefault = true,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_alicloud as alicloud
-
-default_networks = alicloud.cloudconnect.get_networks(ids=[alicloud_cloud_connect_networks["default"]["id"]],
-    name_regex="^tf-testAcc.*")
-default_network = alicloud.cloudconnect.Network("defaultNetwork",
-    cidr_block="192.168.0.0/24",
-    description="tf-testAccCloudConnectNetworkDescription",
-    is_default=True)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const defaultNetworks = alicloud_cloud_connect_networks_default.id.apply(id => alicloud.cloudconnect.getNetworks({
-    ids: [id],
-    nameRegex: "^tf-testAcc.*",
-}, { async: true }));
-const defaultNetwork = new alicloud.cloudconnect.Network("default", {
-    cidrBlock: "192.168.0.0/24",
-    description: "tf-testAccCloudConnectNetworkDescription",
-    isDefault: true,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetNetworks {#using}
@@ -103,7 +29,7 @@ const defaultNetwork = new alicloud.cloudconnect.Network("default", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_networks(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_networks(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNetworksResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -327,7 +253,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of CCN instances names. 
+    <dd>{{% md %}}A list of CCN instances names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -398,7 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of CCN instances names. 
+    <dd>{{% md %}}A list of CCN instances names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -469,7 +395,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of CCN instances names. 
+    <dd>{{% md %}}A list of CCN instances names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -540,7 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of CCN instances names. 
+    <dd>{{% md %}}A list of CCN instances names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -860,6 +786,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

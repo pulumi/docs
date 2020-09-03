@@ -3,7 +3,7 @@ title: "Module cloudconnect"
 title_tag: "Module cloudconnect | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "cloudconnect"
 meta_desc: "Explore members of the cloudconnect module in the @pulumi/alicloud package."
-git_sha: "70979907924ce961ff86ab63063f73d6a5bce811"
+git_sha: "b7b59fa875693ba8460f61295cc547d3028192d6"
 block_external_search_index: true
 ---
 
@@ -42,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Network" data-link-title="Network">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L31">
         Resource <strong>Network</strong>
     </a>
 </h3>
@@ -59,7 +59,7 @@ For information about cloud connect network and how to use it, see [What is Clou
 
 #### Example Usage
 
-
+Basic Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -73,7 +73,7 @@ const defaultNetwork = new alicloud.cloudconnect.Network("default", {
 ```
 
 <h4 class="pdoc-member-header" id="Network-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L74"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L74"> <b>constructor</b></a>
 </h4>
 
 
@@ -87,7 +87,7 @@ Create a Network resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Network-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -98,14 +98,14 @@ Get an existing Network resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Network-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Network-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -116,7 +116,7 @@ Returns true if the given object is an instance of Network.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Network-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L62">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L62">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -124,7 +124,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The CidrBlock of the CCN instance. Defaults to null.
 
 <h4 class="pdoc-member-header" id="Network-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L66">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L66">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -132,7 +132,7 @@ The CidrBlock of the CCN instance. Defaults to null.
 The description of the CCN instance. The description can contain 2 to 256 characters. The description must start with English letters, but cannot start with http:// or https://.
 
 <h4 class="pdoc-member-header" id="Network-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -141,7 +141,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Network-isDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L70">property <b>isDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L70">property <b>isDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isDefault: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -149,7 +149,7 @@ deployments and may be missing (undefined) during planning phases.
 Created by default. If the client does not have ccn in the binding, it will create a ccn for the user to replace.
 
 <h4 class="pdoc-member-header" id="Network-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L74">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -157,7 +157,7 @@ Created by default. If the client does not have ccn in the binding, it will crea
 The name of the CCN instance. The name can contain 2 to 128 characters including a-z, A-Z, 0-9, periods, underlines, and hyphens. The name must start with an English letter, but cannot start with http:// or https://.
 
 <h4 class="pdoc-member-header" id="Network-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -166,7 +166,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="NetworkAttachment" data-link-title="NetworkAttachment">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkAttachment.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkAttachment.ts#L33">
         Resource <strong>NetworkAttachment</strong>
     </a>
 </h3>
@@ -183,7 +183,7 @@ For information about Cloud Connect Network Attachment and how to use it, see [W
 
 #### Example Usage
 
-
+Basic Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -199,7 +199,7 @@ const defaultNetworkAttachment = new alicloud.cloudconnect.NetworkAttachment("de
 ```
 
 <h4 class="pdoc-member-header" id="NetworkAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkAttachment.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkAttachment.ts#L68"> <b>constructor</b></a>
 </h4>
 
 
@@ -213,7 +213,7 @@ Create a NetworkAttachment resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NetworkAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkAttachment.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkAttachment.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -224,14 +224,14 @@ Get an existing NetworkAttachment resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NetworkAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkAttachment.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkAttachment.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkAttachment.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkAttachment.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -242,7 +242,7 @@ Returns true if the given object is an instance of NetworkAttachment.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NetworkAttachment-ccnId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkAttachment.ts#L64">property <b>ccnId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkAttachment.ts#L64">property <b>ccnId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ccnId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -250,7 +250,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the CCN instance.
 
 <h4 class="pdoc-member-header" id="NetworkAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkAttachment.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkAttachment.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -259,7 +259,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NetworkAttachment-sagId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkAttachment.ts#L68">property <b>sagId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkAttachment.ts#L68">property <b>sagId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sagId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -267,7 +267,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the Smart Access Gateway instance.
 
 <h4 class="pdoc-member-header" id="NetworkAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkAttachment.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkAttachment.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -276,7 +276,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="NetworkGrant" data-link-title="NetworkGrant">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkGrant.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkGrant.ts#L41">
         Resource <strong>NetworkGrant</strong>
     </a>
 </h3>
@@ -293,14 +293,14 @@ For information about Cloud Connect Network Grant and how to use it, see [What i
 
 #### Example Usage
 
-
+Basic Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const ccnAccount = new alicloud.Provider("ccnAccount", {});
-const cenAccount = new alicloud.Provider("cenAccount", {
+const ccnAccount = new alicloud.Provider("ccn_account", {});
+const cenAccount = new alicloud.Provider("cen_account", {
     accessKey: "xxxxxx",
     region: "cn-hangzhou",
     secretKey: "xxxxxx",
@@ -317,7 +317,7 @@ const defaultNetworkGrant = new alicloud.cloudconnect.NetworkGrant("default", {
 ```
 
 <h4 class="pdoc-member-header" id="NetworkGrant-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkGrant.ts#L80"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkGrant.ts#L80"> <b>constructor</b></a>
 </h4>
 
 
@@ -331,7 +331,7 @@ Create a NetworkGrant resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NetworkGrant-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkGrant.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkGrant.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -342,14 +342,14 @@ Get an existing NetworkGrant resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NetworkGrant-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkGrant.ts#L41">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkGrant.ts#L41">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkGrant-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkGrant.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkGrant.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -360,7 +360,7 @@ Returns true if the given object is an instance of NetworkGrant.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NetworkGrant-ccnId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkGrant.ts#L72">property <b>ccnId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkGrant.ts#L72">property <b>ccnId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ccnId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -368,7 +368,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the CCN instance.
 
 <h4 class="pdoc-member-header" id="NetworkGrant-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkGrant.ts#L76">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkGrant.ts#L76">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cenId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -376,7 +376,7 @@ The ID of the CCN instance.
 The ID of the CEN instance.
 
 <h4 class="pdoc-member-header" id="NetworkGrant-cenUid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkGrant.ts#L80">property <b>cenUid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkGrant.ts#L80">property <b>cenUid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cenUid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -384,7 +384,7 @@ The ID of the CEN instance.
 The ID of the account to which the CEN instance belongs.
 
 <h4 class="pdoc-member-header" id="NetworkGrant-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkGrant.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkGrant.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -393,7 +393,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NetworkGrant-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkGrant.ts#L41">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkGrant.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -404,7 +404,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getNetworks" data-link-title="getNetworks">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/getNetworks.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/getNetworks.ts#L33">
         Function <strong>getNetworks</strong>
     </a>
 </h3>
@@ -420,8 +420,6 @@ This data source provides Cloud Connect Networks available to the user.
 > **NOTE:** Only the following regions support create Cloud Connect Network. [`cn-shanghai`, `cn-shanghai-finance-1`, `cn-hongkong`, `ap-southeast-1`, `ap-southeast-2`, `ap-southeast-3`, `ap-southeast-5`, `ap-northeast-1`, `eu-central-1`]
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -441,7 +439,7 @@ const defaultNetwork = new alicloud.cloudconnect.Network("default", {
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetNetworksArgs" data-link-title="GetNetworksArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/getNetworks.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/getNetworks.ts#L52">
         interface <strong>GetNetworksArgs</strong>
     </a>
 </h3>
@@ -451,7 +449,7 @@ const defaultNetwork = new alicloud.cloudconnect.Network("default", {
 A collection of arguments for invoking getNetworks.
 
 <h4 class="pdoc-member-header" id="GetNetworksArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/getNetworks.ts#L58">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/getNetworks.ts#L56">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -459,7 +457,7 @@ A collection of arguments for invoking getNetworks.
 A list of CCN instances IDs.
 
 <h4 class="pdoc-member-header" id="GetNetworksArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/getNetworks.ts#L62">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/getNetworks.ts#L60">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -467,12 +465,12 @@ A list of CCN instances IDs.
 A regex string to filter CCN instances by name.
 
 <h4 class="pdoc-member-header" id="GetNetworksArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/getNetworks.ts#L63">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/getNetworks.ts#L61">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetNetworksResult" data-link-title="GetNetworksResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/getNetworks.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/getNetworks.ts#L67">
         interface <strong>GetNetworksResult</strong>
     </a>
 </h3>
@@ -482,7 +480,7 @@ A regex string to filter CCN instances by name.
 A collection of values returned by getNetworks.
 
 <h4 class="pdoc-member-header" id="GetNetworksResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/getNetworks.ts#L73">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/getNetworks.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -490,7 +488,7 @@ A collection of values returned by getNetworks.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetNetworksResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/getNetworks.ts#L77">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/getNetworks.ts#L75">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -498,12 +496,12 @@ The provider-assigned unique ID for this managed resource.
 A list of CCN instances IDs.
 
 <h4 class="pdoc-member-header" id="GetNetworksResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/getNetworks.ts#L78">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/getNetworks.ts#L76">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNetworksResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/getNetworks.ts#L82">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/getNetworks.ts#L80">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -511,7 +509,7 @@ A list of CCN instances IDs.
 A list of CCN instances names.
 
 <h4 class="pdoc-member-header" id="GetNetworksResult-networks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/getNetworks.ts#L86">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/getNetworks.ts#L84">property <b>networks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetNetworksNetwork'>GetNetworksNetwork</a>[];</code></pre>
@@ -519,12 +517,12 @@ A list of CCN instances names.
 A list of CCN instances. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetNetworksResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/getNetworks.ts#L87">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/getNetworks.ts#L85">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="NetworkArgs" data-link-title="NetworkArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L138">
         interface <strong>NetworkArgs</strong>
     </a>
 </h3>
@@ -534,7 +532,7 @@ A list of CCN instances. Each element contains the following attributes:
 The set of arguments for constructing a Network resource.
 
 <h4 class="pdoc-member-header" id="NetworkArgs-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L142">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L142">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrBlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -542,7 +540,7 @@ The set of arguments for constructing a Network resource.
 The CidrBlock of the CCN instance. Defaults to null.
 
 <h4 class="pdoc-member-header" id="NetworkArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L146">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L146">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -550,7 +548,7 @@ The CidrBlock of the CCN instance. Defaults to null.
 The description of the CCN instance. The description can contain 2 to 256 characters. The description must start with English letters, but cannot start with http:// or https://.
 
 <h4 class="pdoc-member-header" id="NetworkArgs-isDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L150">property <b>isDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L150">property <b>isDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isDefault: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -558,7 +556,7 @@ The description of the CCN instance. The description can contain 2 to 256 charac
 Created by default. If the client does not have ccn in the binding, it will create a ccn for the user to replace.
 
 <h4 class="pdoc-member-header" id="NetworkArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L154">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L154">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -566,7 +564,7 @@ Created by default. If the client does not have ccn in the binding, it will crea
 The name of the CCN instance. The name can contain 2 to 128 characters including a-z, A-Z, 0-9, periods, underlines, and hyphens. The name must start with an English letter, but cannot start with http:// or https://.
 
 <h3 class="pdoc-module-header" id="NetworkAttachmentArgs" data-link-title="NetworkAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkAttachment.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkAttachment.ts#L123">
         interface <strong>NetworkAttachmentArgs</strong>
     </a>
 </h3>
@@ -576,7 +574,7 @@ The name of the CCN instance. The name can contain 2 to 128 characters including
 The set of arguments for constructing a NetworkAttachment resource.
 
 <h4 class="pdoc-member-header" id="NetworkAttachmentArgs-ccnId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkAttachment.ts#L127">property <b>ccnId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkAttachment.ts#L127">property <b>ccnId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ccnId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -584,7 +582,7 @@ The set of arguments for constructing a NetworkAttachment resource.
 The ID of the CCN instance.
 
 <h4 class="pdoc-member-header" id="NetworkAttachmentArgs-sagId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkAttachment.ts#L131">property <b>sagId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkAttachment.ts#L131">property <b>sagId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sagId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -592,7 +590,7 @@ The ID of the CCN instance.
 The ID of the Smart Access Gateway instance.
 
 <h3 class="pdoc-module-header" id="NetworkAttachmentState" data-link-title="NetworkAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkAttachment.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkAttachment.ts#L109">
         interface <strong>NetworkAttachmentState</strong>
     </a>
 </h3>
@@ -602,7 +600,7 @@ The ID of the Smart Access Gateway instance.
 Input properties used for looking up and filtering NetworkAttachment resources.
 
 <h4 class="pdoc-member-header" id="NetworkAttachmentState-ccnId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkAttachment.ts#L113">property <b>ccnId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkAttachment.ts#L113">property <b>ccnId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ccnId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -610,7 +608,7 @@ Input properties used for looking up and filtering NetworkAttachment resources.
 The ID of the CCN instance.
 
 <h4 class="pdoc-member-header" id="NetworkAttachmentState-sagId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkAttachment.ts#L117">property <b>sagId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkAttachment.ts#L117">property <b>sagId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sagId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -618,7 +616,7 @@ The ID of the CCN instance.
 The ID of the Smart Access Gateway instance.
 
 <h3 class="pdoc-module-header" id="NetworkGrantArgs" data-link-title="NetworkGrantArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkGrant.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkGrant.ts#L144">
         interface <strong>NetworkGrantArgs</strong>
     </a>
 </h3>
@@ -628,7 +626,7 @@ The ID of the Smart Access Gateway instance.
 The set of arguments for constructing a NetworkGrant resource.
 
 <h4 class="pdoc-member-header" id="NetworkGrantArgs-ccnId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkGrant.ts#L148">property <b>ccnId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkGrant.ts#L148">property <b>ccnId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ccnId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -636,7 +634,7 @@ The set of arguments for constructing a NetworkGrant resource.
 The ID of the CCN instance.
 
 <h4 class="pdoc-member-header" id="NetworkGrantArgs-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkGrant.ts#L152">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkGrant.ts#L152">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -644,7 +642,7 @@ The ID of the CCN instance.
 The ID of the CEN instance.
 
 <h4 class="pdoc-member-header" id="NetworkGrantArgs-cenUid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkGrant.ts#L156">property <b>cenUid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkGrant.ts#L156">property <b>cenUid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenUid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -652,7 +650,7 @@ The ID of the CEN instance.
 The ID of the account to which the CEN instance belongs.
 
 <h3 class="pdoc-module-header" id="NetworkGrantState" data-link-title="NetworkGrantState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkGrant.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkGrant.ts#L126">
         interface <strong>NetworkGrantState</strong>
     </a>
 </h3>
@@ -662,7 +660,7 @@ The ID of the account to which the CEN instance belongs.
 Input properties used for looking up and filtering NetworkGrant resources.
 
 <h4 class="pdoc-member-header" id="NetworkGrantState-ccnId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkGrant.ts#L130">property <b>ccnId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkGrant.ts#L130">property <b>ccnId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ccnId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -670,7 +668,7 @@ Input properties used for looking up and filtering NetworkGrant resources.
 The ID of the CCN instance.
 
 <h4 class="pdoc-member-header" id="NetworkGrantState-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkGrant.ts#L134">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkGrant.ts#L134">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -678,7 +676,7 @@ The ID of the CCN instance.
 The ID of the CEN instance.
 
 <h4 class="pdoc-member-header" id="NetworkGrantState-cenUid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/networkGrant.ts#L138">property <b>cenUid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/networkGrant.ts#L138">property <b>cenUid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenUid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -686,7 +684,7 @@ The ID of the CEN instance.
 The ID of the account to which the CEN instance belongs.
 
 <h3 class="pdoc-module-header" id="NetworkState" data-link-title="NetworkState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L116">
         interface <strong>NetworkState</strong>
     </a>
 </h3>
@@ -696,7 +694,7 @@ The ID of the account to which the CEN instance belongs.
 Input properties used for looking up and filtering Network resources.
 
 <h4 class="pdoc-member-header" id="NetworkState-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L120">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L120">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrBlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -704,7 +702,7 @@ Input properties used for looking up and filtering Network resources.
 The CidrBlock of the CCN instance. Defaults to null.
 
 <h4 class="pdoc-member-header" id="NetworkState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L124">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L124">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -712,7 +710,7 @@ The CidrBlock of the CCN instance. Defaults to null.
 The description of the CCN instance. The description can contain 2 to 256 characters. The description must start with English letters, but cannot start with http:// or https://.
 
 <h4 class="pdoc-member-header" id="NetworkState-isDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L128">property <b>isDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L128">property <b>isDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -720,7 +718,7 @@ The description of the CCN instance. The description can contain 2 to 256 charac
 Created by default. If the client does not have ccn in the binding, it will create a ccn for the user to replace.
 
 <h4 class="pdoc-member-header" id="NetworkState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cloudconnect/network.ts#L132">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/cloudconnect/network.ts#L132">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

@@ -22,7 +22,7 @@ meta_desc: "Explore the ShardingInstance resource of the mongodb module, includi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/mongodb/#pulumi_alicloud.mongodb.ShardingInstance">ShardingInstance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_password=None<span class="p">, </span>backup_periods=None<span class="p">, </span>backup_time=None<span class="p">, </span>engine_version=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>mongo_lists=None<span class="p">, </span>name=None<span class="p">, </span>period=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_ip_lists=None<span class="p">, </span>shard_lists=None<span class="p">, </span>storage_engine=None<span class="p">, </span>tde_status=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/mongodb/#pulumi_alicloud.mongodb.ShardingInstance">ShardingInstance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_periods</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encrypted_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encryption_context</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">mongo_lists</span><span class="p">:</span> <span class="nx">Optional[List[ShardingInstanceMongoListArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_ip_lists</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">shard_lists</span><span class="p">:</span> <span class="nx">Optional[List[ShardingInstanceShardListArgs]]</span> = None<span class="p">, </span><span class="nx">storage_engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tde_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -202,7 +202,7 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`. 
+    <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -397,7 +397,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`. 
+    <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -592,7 +592,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`. 
+    <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -787,7 +787,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`. 
+    <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -796,7 +796,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 <a href="#mongo_lists_python" style="color: inherit; text-decoration: inherit;">mongo_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shardinginstancemongolist">List[Sharding<wbr>Instance<wbr>Mongo<wbr>List]</a></span>
+        <span class="property-type"><a href="#shardinginstancemongolist">List[Sharding<wbr>Instance<wbr>Mongo<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The mongo-node count can be purchased is in range of [2, 32].
 {{% /md %}}</dd>
@@ -807,7 +807,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 <a href="#shard_lists_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shardinginstanceshardlist">List[Sharding<wbr>Instance<wbr>Shard<wbr>List]</a></span>
+        <span class="property-type"><a href="#shardinginstanceshardlist">List[Sharding<wbr>Instance<wbr>Shard<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the shard-node count can be purchased is in range of [2, 32].
 {{% /md %}}</dd>
@@ -873,7 +873,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 <a href="#kms_encryption_context_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encryption_<wbr>context</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
 {{% /md %}}</dd>
@@ -1109,7 +1109,8 @@ Get an existing ShardingInstance resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_password=None<span class="p">, </span>backup_periods=None<span class="p">, </span>backup_time=None<span class="p">, </span>engine_version=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>mongo_lists=None<span class="p">, </span>name=None<span class="p">, </span>period=None<span class="p">, </span>retention_period=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_ip_lists=None<span class="p">, </span>shard_lists=None<span class="p">, </span>storage_engine=None<span class="p">, </span>tde_status=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_periods</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encrypted_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encryption_context</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">mongo_lists</span><span class="p">:</span> <span class="nx">Optional[List[ShardingInstanceMongoListArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">retention_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_ip_lists</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">shard_lists</span><span class="p">:</span> <span class="nx">Optional[List[ShardingInstanceShardListArgs]]</span> = None<span class="p">, </span><span class="nx">storage_engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tde_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ShardingInstance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1117,7 +1118,7 @@ Get an existing ShardingInstance resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.MongoDB.ShardingInstance.html">ShardingInstance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.MongoDB.ShardingInstanceState.html">ShardingInstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.MongoDB.ShardingInstance.html">ShardingInstance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.MongoDB.ShardingInstanceState.html">ShardingInstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1264,7 +1265,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`. 
+    <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1470,7 +1471,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`. 
+    <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1676,7 +1677,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`. 
+    <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1882,7 +1883,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`. 
+    <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1913,7 +1914,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 <a href="#state_kms_encryption_context_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encryption_<wbr>context</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
 {{% /md %}}</dd>
@@ -1924,7 +1925,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 <a href="#state_mongo_lists_python" style="color: inherit; text-decoration: inherit;">mongo_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shardinginstancemongolist">List[Sharding<wbr>Instance<wbr>Mongo<wbr>List]</a></span>
+        <span class="property-type"><a href="#shardinginstancemongolist">List[Sharding<wbr>Instance<wbr>Mongo<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The mongo-node count can be purchased is in range of [2, 32].
 {{% /md %}}</dd>
@@ -1990,7 +1991,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 <a href="#state_shard_lists_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shardinginstanceshardlist">List[Sharding<wbr>Instance<wbr>Shard<wbr>List]</a></span>
+        <span class="property-type"><a href="#shardinginstanceshardlist">List[Sharding<wbr>Instance<wbr>Shard<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the shard-node count can be purchased is in range of [2, 32].
 {{% /md %}}</dd>
@@ -2231,8 +2232,8 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span id="nodeclass_python">
-<a href="#nodeclass_python" style="color: inherit; text-decoration: inherit;">node<wbr>Class</a>
+        <span id="node_class_python">
+<a href="#node_class_python" style="color: inherit; text-decoration: inherit;">node_<wbr>class</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2242,8 +2243,8 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectstring_python">
-<a href="#connectstring_python" style="color: inherit; text-decoration: inherit;">connect<wbr>String</a>
+        <span id="connect_string_python">
+<a href="#connect_string_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2253,8 +2254,8 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodeid_python">
-<a href="#nodeid_python" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+        <span id="node_id_python">
+<a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2318,8 +2319,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}
-- Custom storage space; value range: [10, 1,000]
+    <dd>{{% md %}}- Custom storage space; value range: [10, 1,000]
 - 10-GB increments. Unit: GB.
 {{% /md %}}</dd>
 
@@ -2360,8 +2360,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}
-- Custom storage space; value range: [10, 1,000]
+    <dd>{{% md %}}- Custom storage space; value range: [10, 1,000]
 - 10-GB increments. Unit: GB.
 {{% /md %}}</dd>
 
@@ -2402,8 +2401,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}
-- Custom storage space; value range: [10, 1,000]
+    <dd>{{% md %}}- Custom storage space; value range: [10, 1,000]
 - 10-GB increments. Unit: GB.
 {{% /md %}}</dd>
 
@@ -2427,8 +2425,8 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span id="nodeclass_python">
-<a href="#nodeclass_python" style="color: inherit; text-decoration: inherit;">node<wbr>Class</a>
+        <span id="node_class_python">
+<a href="#node_class_python" style="color: inherit; text-decoration: inherit;">node_<wbr>class</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2438,21 +2436,20 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span id="nodestorage_python">
-<a href="#nodestorage_python" style="color: inherit; text-decoration: inherit;">node<wbr>Storage</a>
+        <span id="node_storage_python">
+<a href="#node_storage_python" style="color: inherit; text-decoration: inherit;">node_<wbr>storage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}
-- Custom storage space; value range: [10, 1,000]
+    <dd>{{% md %}}- Custom storage space; value range: [10, 1,000]
 - 10-GB increments. Unit: GB.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodeid_python">
-<a href="#nodeid_python" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+        <span id="node_id_python">
+<a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2478,6 +2475,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

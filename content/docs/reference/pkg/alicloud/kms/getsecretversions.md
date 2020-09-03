@@ -44,7 +44,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/kms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := true
+		kmsSecretVersionsDs, err := kms.GetSecretVersions(ctx, &kms.GetSecretVersionsArgs{
+			EnableDetails: &opt0,
+			SecretName:    "secret_name",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstSecretData", kmsSecretVersionsDs.Versions[0].SecretData)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -54,7 +77,7 @@ import pulumi_alicloud as alicloud
 
 kms_secret_versions_ds = alicloud.kms.get_secret_versions(enable_details=True,
     secret_name="secret_name")
-pulumi.export("firstSecretData", kms_secret_versions_ds.versions[0]["secret_data"])
+pulumi.export("firstSecretData", kms_secret_versions_ds.versions[0].secret_data)
 ```
 
 {{% /example %}}
@@ -90,7 +113,7 @@ export const firstSecretData = kmsSecretVersionsDs.versions[0].secretData;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_secret_versions(</span>enable_details=None<span class="p">, </span>ids=None<span class="p">, </span>include_deprecated=None<span class="p">, </span>output_file=None<span class="p">, </span>secret_name=None<span class="p">, </span>version_stage=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_secret_versions(</span><span class="nx">enable_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">include_deprecated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_stage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSecretVersionsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -435,7 +458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of Kms Secret Version ids. 
+    <dd>{{% md %}}A list of Kms Secret Version ids.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -526,7 +549,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of Kms Secret Version ids. 
+    <dd>{{% md %}}A list of Kms Secret Version ids.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -617,7 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Kms Secret Version ids. 
+    <dd>{{% md %}}A list of Kms Secret Version ids.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -708,7 +731,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Kms Secret Version ids. 
+    <dd>{{% md %}}A list of Kms Secret Version ids.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1063,6 +1086,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -14,6 +14,41 @@ This data source provides CEN Private Zones available to the user.
 
 > **NOTE:** Available in v1.88.0+.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const thisPrivateZones = pulumi.output(alicloud.cen.getPrivateZones({
+    cenId: "cen-o40h17ll9w********",
+    ids: ["cn-hangzhou"],
+    status: "Active",
+}, { async: true }));
+
+export const firstCenPrivateZonesId = thisPrivateZones.zones[0].id;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetPrivateZones {#using}
@@ -27,7 +62,7 @@ This data source provides CEN Private Zones available to the user.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_private_zones(</span>cen_id=None<span class="p">, </span>host_region_id=None<span class="p">, </span>ids=None<span class="p">, </span>output_file=None<span class="p">, </span>status=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_private_zones(</span><span class="nx">cen_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPrivateZonesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -934,8 +969,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="privatezonednsservers_python">
-<a href="#privatezonednsservers_python" style="color: inherit; text-decoration: inherit;">private<wbr>Zone<wbr>Dns<wbr>Servers</a>
+        <span id="private_zone_dns_servers_python">
+<a href="#private_zone_dns_servers_python" style="color: inherit; text-decoration: inherit;">private_<wbr>zone_<wbr>dns_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -972,6 +1007,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

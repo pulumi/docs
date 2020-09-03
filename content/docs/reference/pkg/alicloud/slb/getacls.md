@@ -53,7 +53,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		sampleDs, err := slb.GetAcls(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstSlbAclId", sampleDs.Acls[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -62,7 +81,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 sample_ds = alicloud.slb.get_acls()
-pulumi.export("firstSlbAclId", sample_ds.acls[0]["id"])
+pulumi.export("firstSlbAclId", sample_ds.acls[0].id)
 ```
 
 {{% /example %}}
@@ -94,7 +113,7 @@ export const firstSlbAclId = sampleDs.acls[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_acls(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_acls(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAclsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -351,7 +370,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -736,7 +755,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1027,7 +1046,7 @@ The following output properties are available:
 <a href="#entry_lists_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaclsaclentrylist">List[Get<wbr>Acls<wbr>Acl<wbr>Entry<wbr>List]</a></span>
+        <span class="property-type"><a href="#getaclsaclentrylist">List[Get<wbr>Acls<wbr>Acl<wbr>Entry<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of entry (IP addresses or CIDR blocks).  Each entry contains two sub-fields as `Entry Block` follows.
 {{% /md %}}</dd>
@@ -1066,11 +1085,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="relatedlisteners_python">
-<a href="#relatedlisteners_python" style="color: inherit; text-decoration: inherit;">related<wbr>Listeners</a>
+        <span id="related_listeners_python">
+<a href="#related_listeners_python" style="color: inherit; text-decoration: inherit;">related_<wbr>listeners</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaclsaclrelatedlistener">List[Get<wbr>Acls<wbr>Acl<wbr>Related<wbr>Listener]</a></span>
+        <span class="property-type"><a href="#getaclsaclrelatedlistener">List[Get<wbr>Acls<wbr>Acl<wbr>Related<wbr>Listener<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of listener are attached by the acl.  Each listener contains four sub-fields as `Listener Block` follows.
 {{% /md %}}</dd>
@@ -1092,7 +1111,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1447,6 +1466,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -48,7 +48,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "data-\\d+"
+		opt1 := "Running"
+		dbInstancesDs, err := rds.GetInstances(ctx, &rds.GetInstancesArgs{
+			NameRegex: &opt0,
+			Status:    &opt1,
+			Tags: map[string]interface{}{
+				"size": "tiny",
+				"type": "database",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstDbInstanceId", dbInstancesDs.Instances[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -62,7 +90,7 @@ db_instances_ds = alicloud.rds.get_instances(name_regex="data-\\d+",
         "size": "tiny",
         "type": "database",
     })
-pulumi.export("firstDbInstanceId", db_instances_ds.instances[0]["id"])
+pulumi.export("firstDbInstanceId", db_instances_ds.instances[0].id)
 ```
 
 {{% /example %}}
@@ -101,7 +129,7 @@ export const firstDbInstanceId = dbInstancesDs.instances[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instances(</span>connection_mode=None<span class="p">, </span>db_type=None<span class="p">, </span>engine=None<span class="p">, </span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">connection_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -167,7 +195,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of RDS instance IDs. 
+    <dd>{{% md %}}A list of RDS instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -284,7 +312,7 @@ Note: Before 1.60.0, the value's format is a `json` string which including `TagK
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of RDS instance IDs. 
+    <dd>{{% md %}}A list of RDS instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -401,7 +429,7 @@ Note: Before 1.60.0, the value's format is a `json` string which including `TagK
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of RDS instance IDs. 
+    <dd>{{% md %}}A list of RDS instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -518,7 +546,7 @@ Note: Before 1.60.0, the value's format is a `json` string which including `TagK
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of RDS instance IDs. 
+    <dd>{{% md %}}A list of RDS instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -559,7 +587,7 @@ Note: Before 1.60.0, the value's format is a `json` string which including `TagK
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the DB instances. 
 Note: Before 1.60.0, the value's format is a `json` string which including `TagKey` and `TagValue`. `TagKey` cannot be null, and `TagValue` can be empty. Format example `"{\"key1\":\"value1\"}"`
@@ -626,7 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of RDS instance IDs. 
+    <dd>{{% md %}}A list of RDS instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -648,7 +676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of RDS instance names. 
+    <dd>{{% md %}}A list of RDS instance names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -773,7 +801,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of RDS instance IDs. 
+    <dd>{{% md %}}A list of RDS instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -795,7 +823,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of RDS instance names. 
+    <dd>{{% md %}}A list of RDS instance names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -920,7 +948,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of RDS instance IDs. 
+    <dd>{{% md %}}A list of RDS instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -942,7 +970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of RDS instance names. 
+    <dd>{{% md %}}A list of RDS instance names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1067,7 +1095,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of RDS instance IDs. 
+    <dd>{{% md %}}A list of RDS instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1089,7 +1117,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of RDS instance names. 
+    <dd>{{% md %}}A list of RDS instance names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1162,7 +1190,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2056,8 +2084,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="connectionmode_python">
-<a href="#connectionmode_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Mode</a>
+        <span id="connection_mode_python">
+<a href="#connection_mode_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2144,8 +2172,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="guardinstanceid_python">
-<a href="#guardinstanceid_python" style="color: inherit; text-decoration: inherit;">guard<wbr>Instance<wbr>Id</a>
+        <span id="guard_instance_id_python">
+<a href="#guard_instance_id_python" style="color: inherit; text-decoration: inherit;">guard_<wbr>instance_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2188,8 +2216,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="masterinstanceid_python">
-<a href="#masterinstanceid_python" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Id</a>
+        <span id="master_instance_id_python">
+<a href="#master_instance_id_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2232,8 +2260,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="readonlyinstanceids_python">
-<a href="#readonlyinstanceids_python" style="color: inherit; text-decoration: inherit;">readonly<wbr>Instance<wbr>Ids</a>
+        <span id="readonly_instance_ids_python">
+<a href="#readonly_instance_ids_python" style="color: inherit; text-decoration: inherit;">readonly_<wbr>instance_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2243,8 +2271,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="regionid_python">
-<a href="#regionid_python" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2265,8 +2293,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="tempinstanceid_python">
-<a href="#tempinstanceid_python" style="color: inherit; text-decoration: inherit;">temp<wbr>Instance<wbr>Id</a>
+        <span id="temp_instance_id_python">
+<a href="#temp_instance_id_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>instance_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2314,6 +2342,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

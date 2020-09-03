@@ -14,6 +14,98 @@ This data source provides a list of ECS Dedicated Hosts in an Alibaba Cloud acco
 
 > **NOTE:** Available in v1.91.0+.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dedicatedHostsDs = Output.Create(AliCloud.Ecs.GetDedicatedHosts.InvokeAsync(new AliCloud.Ecs.GetDedicatedHostsArgs
+        {
+            DedicatedHostType = "ddh.g5",
+            NameRegex = "tf-testAcc",
+            Status = "Available",
+        }));
+        this.FirstDedicatedHostsId = dedicatedHostsDs.Apply(dedicatedHostsDs => dedicatedHostsDs.Hosts[0].Id);
+    }
+
+    [Output("firstDedicatedHostsId")]
+    public Output<string> FirstDedicatedHostsId { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "ddh.g5"
+		opt1 := "tf-testAcc"
+		opt2 := "Available"
+		dedicatedHostsDs, err := ecs.GetDedicatedHosts(ctx, &ecs.GetDedicatedHostsArgs{
+			DedicatedHostType: &opt0,
+			NameRegex:         &opt1,
+			Status:            &opt2,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstDedicatedHostsId", dedicatedHostsDs.Hosts[0].Id)
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+dedicated_hosts_ds = alicloud.ecs.get_dedicated_hosts(dedicated_host_type="ddh.g5",
+    name_regex="tf-testAcc",
+    status="Available")
+pulumi.export("firstDedicatedHostsId", dedicated_hosts_ds.hosts[0].id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Declare the data source
+const dedicatedHostsDs = pulumi.output(alicloud.ecs.getDedicatedHosts({
+    dedicatedHostType: "ddh.g5",
+    nameRegex: "tf-testAcc",
+    status: "Available",
+}, { async: true }));
+
+export const firstDedicatedHostsId = dedicatedHostsDs.hosts[0].id;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetDedicatedHosts {#using}
@@ -27,7 +119,7 @@ This data source provides a list of ECS Dedicated Hosts in an Alibaba Cloud acco
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_dedicated_hosts(</span>dedicated_host_id=None<span class="p">, </span>dedicated_host_name=None<span class="p">, </span>dedicated_host_type=None<span class="p">, </span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>zone_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_dedicated_hosts(</span><span class="nx">dedicated_host_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dedicated_host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dedicated_host_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDedicatedHostsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -497,7 +589,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -563,7 +655,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of ECS Dedicated Host ids. 
+    <dd>{{% md %}}A list of ECS Dedicated Host ids.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -709,7 +801,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of ECS Dedicated Host ids. 
+    <dd>{{% md %}}A list of ECS Dedicated Host ids.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -855,7 +947,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of ECS Dedicated Host ids. 
+    <dd>{{% md %}}A list of ECS Dedicated Host ids.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1001,7 +1093,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of ECS Dedicated Host ids. 
+    <dd>{{% md %}}A list of ECS Dedicated Host ids.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1096,7 +1188,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1901,8 +1993,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="dedicatedhostid_python">
-<a href="#dedicatedhostid_python" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Host<wbr>Id</a>
+        <span id="dedicated_host_id_python">
+<a href="#dedicated_host_id_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>host_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1956,8 +2048,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="gpuspec_python">
-<a href="#gpuspec_python" style="color: inherit; text-decoration: inherit;">gpu<wbr>Spec</a>
+        <span id="gpu_spec_python">
+<a href="#gpu_spec_python" style="color: inherit; text-decoration: inherit;">gpu_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1978,8 +2070,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="machineid_python">
-<a href="#machineid_python" style="color: inherit; text-decoration: inherit;">machine<wbr>Id</a>
+        <span id="machine_id_python">
+<a href="#machine_id_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2000,8 +2092,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="physicalgpus_python">
-<a href="#physicalgpus_python" style="color: inherit; text-decoration: inherit;">physical<wbr>Gpus</a>
+        <span id="physical_gpus_python">
+<a href="#physical_gpus_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>gpus</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2055,8 +2147,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="supportedinstancetypeslists_python">
-<a href="#supportedinstancetypeslists_python" style="color: inherit; text-decoration: inherit;">supported<wbr>Instance<wbr>Types<wbr>Lists</a>
+        <span id="supported_instance_types_lists_python">
+<a href="#supported_instance_types_lists_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>instance_<wbr>types_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2070,7 +2162,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2104,6 +2196,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

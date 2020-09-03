@@ -49,7 +49,37 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "pc-\\w+"
+		opt1 := "Running"
+		polardbClustersDs, err := polardb.GetClusters(ctx, &polardb.GetClustersArgs{
+			DescriptionRegex: &opt0,
+			Status:           &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_default, err := polardb.GetAccounts(ctx, &polardb.GetAccountsArgs{
+			DbClusterId: polardbClustersDs.Clusters[0].Id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("ends", _default.Accounts[0].AccountName)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -59,8 +89,8 @@ import pulumi_alicloud as alicloud
 
 polardb_clusters_ds = alicloud.polardb.get_clusters(description_regex="pc-\\w+",
     status="Running")
-default = alicloud.polardb.get_accounts(db_cluster_id=polardb_clusters_ds.clusters[0]["id"])
-pulumi.export("ends", default.accounts[0]["account_name"])
+default = alicloud.polardb.get_accounts(db_cluster_id=polardb_clusters_ds.clusters[0].id)
+pulumi.export("ends", default.accounts[0].account_name)
 ```
 
 {{% /example %}}
@@ -97,7 +127,7 @@ export const ends = _default.then(_default => _default.accounts[0].accountName);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_accounts(</span>db_cluster_id=None<span class="p">, </span>name_regex=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_accounts(</span><span class="nx">db_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAccountsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -130,7 +160,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The polarDB cluster ID. 
+    <dd>{{% md %}}The polarDB cluster ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -159,7 +189,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The polarDB cluster ID. 
+    <dd>{{% md %}}The polarDB cluster ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -188,7 +218,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The polarDB cluster ID. 
+    <dd>{{% md %}}The polarDB cluster ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -217,7 +247,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The polarDB cluster ID. 
+    <dd>{{% md %}}The polarDB cluster ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -736,28 +766,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="accountlockstate_python">
-<a href="#accountlockstate_python" style="color: inherit; text-decoration: inherit;">account<wbr>Lock<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Account lock state, Valid values are `Lock`, `UnLock`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="accountstatus_python">
-<a href="#accountstatus_python" style="color: inherit; text-decoration: inherit;">account<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Cluster address type.`Cluster`: the default address of the Cluster.`Primary`: Primary address.`Custom`: Custom cluster addresses.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="account_description_python">
 <a href="#account_description_python" style="color: inherit; text-decoration: inherit;">account_<wbr>description</a>
 </span> 
@@ -765,6 +773,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Account description.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="account_lock_state_python">
+<a href="#account_lock_state_python" style="color: inherit; text-decoration: inherit;">account_<wbr>lock_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Account lock state, Valid values are `Lock`, `UnLock`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -780,6 +799,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="account_status_python">
+<a href="#account_status_python" style="color: inherit; text-decoration: inherit;">account_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Cluster address type.`Cluster`: the default address of the Cluster.`Primary`: Primary address.`Custom`: Custom cluster addresses.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="account_type_python">
 <a href="#account_type_python" style="color: inherit; text-decoration: inherit;">account_<wbr>type</a>
 </span> 
@@ -791,11 +821,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="databaseprivileges_python">
-<a href="#databaseprivileges_python" style="color: inherit; text-decoration: inherit;">database<wbr>Privileges</a>
+        <span id="database_privileges_python">
+<a href="#database_privileges_python" style="color: inherit; text-decoration: inherit;">database_<wbr>privileges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccountsaccountdatabaseprivilege">List[Get<wbr>Accounts<wbr>Account<wbr>Database<wbr>Privilege]</a></span>
+        <span class="property-type"><a href="#getaccountsaccountdatabaseprivilege">List[Get<wbr>Accounts<wbr>Account<wbr>Database<wbr>Privilege<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of database privilege. Each element contains the following attributes.
 {{% /md %}}</dd>
@@ -844,7 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The account owned database name 
+    <dd>{{% md %}}The account owned database name
 {{% /md %}}</dd>
 
 </dl>
@@ -873,7 +903,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The account owned database name 
+    <dd>{{% md %}}The account owned database name
 {{% /md %}}</dd>
 
 </dl>
@@ -902,7 +932,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The account owned database name 
+    <dd>{{% md %}}The account owned database name
 {{% /md %}}</dd>
 
 </dl>
@@ -931,7 +961,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The account owned database name 
+    <dd>{{% md %}}The account owned database name
 {{% /md %}}</dd>
 
 </dl>
@@ -952,6 +982,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

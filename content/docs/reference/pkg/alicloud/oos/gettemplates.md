@@ -14,6 +14,114 @@ This data source provides a list of OOS Templates in an Alibaba Cloud account ac
 
 > **NOTE:** Available in v1.92.0+.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(AliCloud.Oos.GetTemplates.InvokeAsync(new AliCloud.Oos.GetTemplatesArgs
+        {
+            HasTrigger = false,
+            NameRegex = "test",
+            ShareType = "Private",
+            Tags = 
+            {
+                { "Created", "TF" },
+                { "For", "template Test" },
+            },
+        }));
+        this.FirstTemplateName = example.Apply(example => example.Templates[0].TemplateName);
+    }
+
+    [Output("firstTemplateName")]
+    public Output<string> FirstTemplateName { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oos"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := false
+		opt1 := "test"
+		opt2 := "Private"
+		example, err := oos.GetTemplates(ctx, &oos.GetTemplatesArgs{
+			HasTrigger: &opt0,
+			NameRegex:  &opt1,
+			ShareType:  &opt2,
+			Tags: map[string]interface{}{
+				"Created": "TF",
+				"For":     "template Test",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstTemplateName", example.Templates[0].TemplateName)
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+example = alicloud.oos.get_templates(has_trigger=False,
+    name_regex="test",
+    share_type="Private",
+    tags={
+        "Created": "TF",
+        "For": "template Test",
+    })
+pulumi.export("firstTemplateName", example.templates[0].template_name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const example = pulumi.output(alicloud.oos.getTemplates({
+    hasTrigger: false,
+    nameRegex: "test",
+    shareType: "Private",
+    tags: {
+        Created: "TF",
+        For: "template Test",
+    },
+}, { async: true }));
+
+export const firstTemplateName = example.templates[0].templateName;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetTemplates {#using}
@@ -27,7 +135,7 @@ This data source provides a list of OOS Templates in an Alibaba Cloud account ac
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_templates(</span>category=None<span class="p">, </span>created_by=None<span class="p">, </span>created_date=None<span class="p">, </span>created_date_after=None<span class="p">, </span>has_trigger=None<span class="p">, </span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>share_type=None<span class="p">, </span>sort_field=None<span class="p">, </span>sort_order=None<span class="p">, </span>tags=None<span class="p">, </span>template_format=None<span class="p">, </span>template_type=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_templates(</span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_date_after</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">has_trigger</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sort_field</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sort_order</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">template_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTemplatesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -658,7 +766,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1354,7 +1462,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2008,7 +2116,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2108,6 +2216,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 
