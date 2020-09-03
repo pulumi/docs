@@ -339,6 +339,6 @@ export let URL = clientsideListener.endpoint.hostname;
 
 In this example, I explained the basic principles behind PERN stack applications and showed how to create the infrastructure to deploy them on ECS. A flexible and optimized tool, Pulumi Crosswalk allows everything from rapidly prototyping applications, to scaling workload, to securing and integrating it with your existing infrastructure, or going to production in multiple complex environments.
 
-Next week, I'll _______.
+Next week, I'll demonstrate how to integrate applications with Kubernetes, and how to seamlessly deploy them to EKS using Pulumi.
 
 The blog post's code can be [found on Github](https://github.com/pulumi/examples/tree/vova/aws-pern-voting-app/aws-pern-voting-app).
