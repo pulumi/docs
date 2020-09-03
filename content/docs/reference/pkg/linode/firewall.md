@@ -14,6 +14,207 @@ meta_desc: "Explore the Firewall resource of the Linode package, including examp
 
 Manages a Linode Firewall.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myInstance = new Linode.Instance("myInstance", new Linode.InstanceArgs
+        {
+            Label = "my_instance",
+            Image = "linode/ubuntu18.04",
+            Region = "us-east",
+            Type = "g6-standard-1",
+            RootPass = "bogusPassword$",
+            SwapSize = 256,
+        });
+        var myFirewall = new Linode.Firewall("myFirewall", new Linode.FirewallArgs
+        {
+            Label = "my_firewall",
+            Tags = 
+            {
+                "test",
+            },
+            Inbounds = 
+            {
+                new Linode.Inputs.FirewallInboundArgs
+                {
+                    Protocol = "TCP",
+                    Ports = 
+                    {
+                        "80",
+                    },
+                    Addresses = 
+                    {
+                        "0.0.0.0/0",
+                    },
+                },
+            },
+            Outbounds = 
+            {
+                new Linode.Inputs.FirewallOutboundArgs
+                {
+                    Protocol = "TCP",
+                    Ports = 
+                    {
+                        "80",
+                    },
+                    Addresses = 
+                    {
+                        "0.0.0.0/0",
+                    },
+                },
+            },
+            Linodes = 
+            {
+                myInstance.Id,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-linode/sdk/v2/go/linode"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myInstance, err := linode.NewInstance(ctx, "myInstance", &linode.InstanceArgs{
+			Label:    pulumi.String("my_instance"),
+			Image:    pulumi.String("linode/ubuntu18.04"),
+			Region:   pulumi.String("us-east"),
+			Type:     pulumi.String("g6-standard-1"),
+			RootPass: pulumi.String(fmt.Sprintf("%v%v", "bogusPassword", "$")),
+			SwapSize: pulumi.Int(256),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = linode.NewFirewall(ctx, "myFirewall", &linode.FirewallArgs{
+			Label: pulumi.String("my_firewall"),
+			Tags: pulumi.StringArray{
+				pulumi.String("test"),
+			},
+			Inbounds: linode.FirewallInboundArray{
+				&linode.FirewallInboundArgs{
+					Protocol: pulumi.String("TCP"),
+					Ports: pulumi.StringArray{
+						pulumi.String("80"),
+					},
+					Addresses: pulumi.StringArray{
+						pulumi.String("0.0.0.0/0"),
+					},
+				},
+			},
+			Outbounds: linode.FirewallOutboundArray{
+				&linode.FirewallOutboundArgs{
+					Protocol: pulumi.String("TCP"),
+					Ports: pulumi.StringArray{
+						pulumi.String("80"),
+					},
+					Addresses: pulumi.StringArray{
+						pulumi.String("0.0.0.0/0"),
+					},
+				},
+			},
+			Linodes: pulumi.IntArray{
+				myInstance.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_linode as linode
+
+my_instance = linode.Instance("myInstance",
+    label="my_instance",
+    image="linode/ubuntu18.04",
+    region="us-east",
+    type="g6-standard-1",
+    root_pass="bogusPassword$",
+    swap_size=256)
+my_firewall = linode.Firewall("myFirewall",
+    label="my_firewall",
+    tags=["test"],
+    inbounds=[linode.FirewallInboundArgs(
+        protocol="TCP",
+        ports=["80"],
+        addresses=["0.0.0.0/0"],
+    )],
+    outbounds=[linode.FirewallOutboundArgs(
+        protocol="TCP",
+        ports=["80"],
+        addresses=["0.0.0.0/0"],
+    )],
+    linodes=[my_instance.id])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const myInstance = new linode.Instance("myInstance", {
+    label: "my_instance",
+    image: "linode/ubuntu18.04",
+    region: "us-east",
+    type: "g6-standard-1",
+    rootPass: `bogusPassword$`,
+    swapSize: 256,
+});
+const myFirewall = new linode.Firewall("myFirewall", {
+    label: "my_firewall",
+    tags: ["test"],
+    inbounds: [{
+        protocol: "TCP",
+        ports: ["80"],
+        addresses: ["0.0.0.0/0"],
+    }],
+    outbounds: [{
+        protocol: "TCP",
+        ports: ["80"],
+        addresses: ["0.0.0.0/0"],
+    }],
+    linodes: [myInstance.id],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Firewall Resource {#create}
@@ -25,7 +226,7 @@ Manages a Linode Firewall.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.Firewall">Firewall</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>disabled=None<span class="p">, </span>inbounds=None<span class="p">, </span>label=None<span class="p">, </span>linodes=None<span class="p">, </span>outbounds=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.Firewall">Firewall</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">inbounds</span><span class="p">:</span> <span class="nx">Optional[List[FirewallInboundArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linodes</span><span class="p">:</span> <span class="nx">Optional[List[float]]</span> = None<span class="p">, </span><span class="nx">outbounds</span><span class="p">:</span> <span class="nx">Optional[List[FirewallOutboundArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -422,7 +623,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#linodes_python" style="color: inherit; text-decoration: inherit;">linodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
 {{% /md %}}</dd>
@@ -444,7 +645,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#inbounds_python" style="color: inherit; text-decoration: inherit;">inbounds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinbound">List[Firewall<wbr>Inbound]</a></span>
+        <span class="property-type"><a href="#firewallinbound">List[Firewall<wbr>Inbound<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A firewall rule that specifies what inbound network traffic is allowed.
 {{% /md %}}</dd>
@@ -466,7 +667,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#outbounds_python" style="color: inherit; text-decoration: inherit;">outbounds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutbound">List[Firewall<wbr>Outbound]</a></span>
+        <span class="property-type"><a href="#firewalloutbound">List[Firewall<wbr>Outbound<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A firewall rule that specifies what outbound network traffic is allowed.
 {{% /md %}}</dd>
@@ -668,7 +869,8 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>devices=None<span class="p">, </span>disabled=None<span class="p">, </span>inbounds=None<span class="p">, </span>label=None<span class="p">, </span>linodes=None<span class="p">, </span>outbounds=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[List[FirewallDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">inbounds</span><span class="p">:</span> <span class="nx">Optional[List[FirewallInboundArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linodes</span><span class="p">:</span> <span class="nx">Optional[List[float]]</span> = None<span class="p">, </span><span class="nx">outbounds</span><span class="p">:</span> <span class="nx">Optional[List[FirewallOutboundArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -676,7 +878,7 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Firewall.html">Firewall</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..FirewallState.html">FirewallState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Firewall.html">Firewall</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..FirewallState.html">FirewallState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1073,7 +1275,7 @@ The following state arguments are supported:
 <a href="#state_devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalldevice">List[Firewall<wbr>Device]</a></span>
+        <span class="property-type"><a href="#firewalldevice">List[Firewall<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The devices associated with this firewall.
 {{% /md %}}</dd>
@@ -1095,7 +1297,7 @@ The following state arguments are supported:
 <a href="#state_inbounds_python" style="color: inherit; text-decoration: inherit;">inbounds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinbound">List[Firewall<wbr>Inbound]</a></span>
+        <span class="property-type"><a href="#firewallinbound">List[Firewall<wbr>Inbound<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A firewall rule that specifies what inbound network traffic is allowed.
 {{% /md %}}</dd>
@@ -1117,7 +1319,7 @@ The following state arguments are supported:
 <a href="#state_linodes_python" style="color: inherit; text-decoration: inherit;">linodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
 {{% /md %}}</dd>
@@ -1128,7 +1330,7 @@ The following state arguments are supported:
 <a href="#state_outbounds_python" style="color: inherit; text-decoration: inherit;">outbounds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutbound">List[Firewall<wbr>Outbound]</a></span>
+        <span class="property-type"><a href="#firewalloutbound">List[Firewall<wbr>Outbound<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A firewall rule that specifies what outbound network traffic is allowed.
 {{% /md %}}</dd>
@@ -1373,8 +1575,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="entityid_python">
-<a href="#entityid_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+        <span id="entity_id_python">
+<a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

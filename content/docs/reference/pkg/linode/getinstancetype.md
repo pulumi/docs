@@ -57,7 +57,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-linode/sdk/v2/go/linode"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := linode.GetInstanceType(ctx, &linode.GetInstanceTypeArgs{
+			Id: "g6-standard-2",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -97,7 +117,7 @@ const defaultInstanceType = pulumi.output(linode.getInstanceType({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instance_type(</span>id=None<span class="p">, </span>label=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_type(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceTypeResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -574,7 +594,7 @@ The following output properties are available:
 <a href="#addons_python" style="color: inherit; text-decoration: inherit;">addons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypeaddons">Dict[Get<wbr>Instance<wbr>Type<wbr>Addons]</a></span>
+        <span class="property-type"><a href="#getinstancetypeaddons">Get<wbr>Instance<wbr>Type<wbr>Addons</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -644,7 +664,7 @@ The following output properties are available:
 <a href="#price_python" style="color: inherit; text-decoration: inherit;">price</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypeprice">Dict[Get<wbr>Instance<wbr>Type<wbr>Price]</a></span>
+        <span class="property-type"><a href="#getinstancetypeprice">Get<wbr>Instance<wbr>Type<wbr>Price</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -756,7 +776,7 @@ The following output properties are available:
 <a href="#backups_python" style="color: inherit; text-decoration: inherit;">backups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypeaddonsbackups">Dict[Get<wbr>Instance<wbr>Type<wbr>Addons<wbr>Backups]</a></span>
+        <span class="property-type"><a href="#getinstancetypeaddonsbackups">Get<wbr>Instance<wbr>Type<wbr>Addons<wbr>Backups<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -842,7 +862,7 @@ The following output properties are available:
 <a href="#price_python" style="color: inherit; text-decoration: inherit;">price</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypeaddonsbackupsprice">Dict[Get<wbr>Instance<wbr>Type<wbr>Addons<wbr>Backups<wbr>Price]</a></span>
+        <span class="property-type"><a href="#getinstancetypeaddonsbackupsprice">Get<wbr>Instance<wbr>Type<wbr>Addons<wbr>Backups<wbr>Price<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
