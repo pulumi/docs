@@ -18,7 +18,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_dnsimple"></span><dl class="py class">
 <dt id="pulumi_dnsimple.Provider">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_dnsimple.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_dnsimple.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_dnsimple.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_dnsimple.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the dnsimple package. By default, resources use package-wide configuration
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
@@ -73,74 +73,56 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_dnsimple.Record">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_dnsimple.</code><code class="sig-name descname">Record</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_dnsimple.Record" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Record resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] domain: The domain to add the record to
-:param pulumi.Input[str] name: The name of the record
-:param pulumi.Input[float] priority: The priority of the record - only useful for some record types
-:param pulumi.Input[float] ttl: The TTL of the record
-:param pulumi.Input[str] type: The type of the record
-:param pulumi.Input[str] value: The value of the record</p>
-<dl class="py attribute">
-<dt id="pulumi_dnsimple.Record.domain">
-<code class="sig-name descname">domain</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_dnsimple.Record.domain" title="Permalink to this definition">¶</a></dt>
-<dd><p>The domain to add the record to</p>
-</dd></dl>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_dnsimple.</code><code class="sig-name descname">Record</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_dnsimple.Record" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a DNSimple record resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_dnsimple</span> <span class="k">as</span> <span class="nn">dnsimple</span>
 
-<dl class="py attribute">
-<dt id="pulumi_dnsimple.Record.domain_id">
-<code class="sig-name descname">domain_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_dnsimple.Record.domain_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The domain ID of the record</p>
-</dd></dl>
+<span class="c1"># Add a record to the root domain</span>
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">dnsimple</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;dnsimple_domain&quot;</span><span class="p">],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;192.168.0.11&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_dnsimple</span> <span class="k">as</span> <span class="nn">dnsimple</span>
 
-<dl class="py attribute">
-<dt id="pulumi_dnsimple.Record.hostname">
-<code class="sig-name descname">hostname</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_dnsimple.Record.hostname" title="Permalink to this definition">¶</a></dt>
-<dd><p>The FQDN of the record</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_dnsimple.Record.name">
-<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_dnsimple.Record.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the record</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_dnsimple.Record.priority">
-<code class="sig-name descname">priority</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_dnsimple.Record.priority" title="Permalink to this definition">¶</a></dt>
-<dd><p>The priority of the record - only useful for some record types</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_dnsimple.Record.ttl">
-<code class="sig-name descname">ttl</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_dnsimple.Record.ttl" title="Permalink to this definition">¶</a></dt>
-<dd><p>The TTL of the record</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_dnsimple.Record.type">
-<code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_dnsimple.Record.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of the record</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_dnsimple.Record.value">
-<code class="sig-name descname">value</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_dnsimple.Record.value" title="Permalink to this definition">¶</a></dt>
-<dd><p>The value of the record</p>
-</dd></dl>
-
+<span class="c1"># Add a record to a sub-domain</span>
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">dnsimple</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;dnsimple_domain&quot;</span><span class="p">],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;terraform&quot;</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;192.168.0.11&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain to add the record to</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the record</p></li>
+<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of the record - only useful for some record types</p></li>
+<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The TTL of the record</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the record</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the record</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_dnsimple.Record.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_dnsimple.Record.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_dnsimple.record.Record<a class="headerlink" href="#pulumi_dnsimple.Record.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Record resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain to add the record to</p></li>
 <li><p><strong>domain_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain ID of the record</p></li>
@@ -153,6 +135,54 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_dnsimple.Record.domain">
+<em class="property">property </em><code class="sig-name descname">domain</code><a class="headerlink" href="#pulumi_dnsimple.Record.domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>The domain to add the record to</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_dnsimple.Record.domain_id">
+<em class="property">property </em><code class="sig-name descname">domain_id</code><a class="headerlink" href="#pulumi_dnsimple.Record.domain_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The domain ID of the record</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_dnsimple.Record.hostname">
+<em class="property">property </em><code class="sig-name descname">hostname</code><a class="headerlink" href="#pulumi_dnsimple.Record.hostname" title="Permalink to this definition">¶</a></dt>
+<dd><p>The FQDN of the record</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_dnsimple.Record.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_dnsimple.Record.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the record</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_dnsimple.Record.priority">
+<em class="property">property </em><code class="sig-name descname">priority</code><a class="headerlink" href="#pulumi_dnsimple.Record.priority" title="Permalink to this definition">¶</a></dt>
+<dd><p>The priority of the record - only useful for some record types</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_dnsimple.Record.ttl">
+<em class="property">property </em><code class="sig-name descname">ttl</code><a class="headerlink" href="#pulumi_dnsimple.Record.ttl" title="Permalink to this definition">¶</a></dt>
+<dd><p>The TTL of the record</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_dnsimple.Record.type">
+<em class="property">property </em><code class="sig-name descname">type</code><a class="headerlink" href="#pulumi_dnsimple.Record.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of the record</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_dnsimple.Record.value">
+<em class="property">property </em><code class="sig-name descname">value</code><a class="headerlink" href="#pulumi_dnsimple.Record.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of the record</p>
 </dd></dl>
 
 <dl class="py method">

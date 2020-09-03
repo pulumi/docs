@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/dnsimple | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/dnsimple package."
-git_sha: "a62bdfdb81a20bbd22c4500ac559caa508a84621"
+git_sha: "00b84da99d40ba29fee1d3e6ca40645e8a35c81d"
 block_external_search_index: true
 ---
 
@@ -11,13 +11,6 @@ block_external_search_index: true
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/tscdocgen. -->
 
 {{< resource-docs-alert "dnsimple" >}}
-
-
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-dnsimple)
-> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
-> first check the [`pulumi/pulumi-dnsimple` repo](https://github.com/pulumi/pulumi-dnsimple/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-dnsimple` repo](https://github.com/terraform-providers/terraform-provider-dnsimple/issues).
-
 
 
 
@@ -35,7 +28,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="account" data-link-title="account">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/a62bdfdb81a20bbd22c4500ac559caa508a84621/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/00b84da99d40ba29fee1d3e6ca40645e8a35c81d/sdk/nodejs/config/vars.ts#L12">
         let <strong>account</strong>
     </a>
 </h3>
@@ -45,7 +38,7 @@ block_external_search_index: true
 The account for API operations.
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/a62bdfdb81a20bbd22c4500ac559caa508a84621/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/00b84da99d40ba29fee1d3e6ca40645e8a35c81d/sdk/nodejs/config/vars.ts#L16">
         let <strong>token</strong>
     </a>
 </h3>
