@@ -25,7 +25,7 @@ Provides a Datadog timeboard resource. This can be used to create and manage Dat
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.TimeBoard">TimeBoard</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>graphs=None<span class="p">, </span>read_only=None<span class="p">, </span>template_variables=None<span class="p">, </span>title=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.TimeBoard">TimeBoard</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">graphs</span><span class="p">:</span> <span class="nx">Optional[List[TimeBoardGraphArgs]]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">template_variables</span><span class="p">:</span> <span class="nx">Optional[List[TimeBoardTemplateVariableArgs]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -216,7 +216,7 @@ The TimeBoard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraph">List&lt;Time<wbr>Board<wbr>Graph<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of graph definitions.
+    <dd>{{% md %}}Nested block describing a graph definition. The structure of this block is described below. Multiple graph blocks are allowed within a datadog.TimeBoard resource.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -238,7 +238,8 @@ The TimeBoard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The read-only status of the timeboard. Default is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -248,7 +249,7 @@ The TimeBoard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardtemplatevariable">List&lt;Time<wbr>Board<wbr>Template<wbr>Variable<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of template variables for using Dashboard templating.
+    <dd>{{% md %}}Nested block describing a template variable. The structure of this block is described below. Multiple template_variable blocks are allowed within a datadog.TimeBoard resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -277,7 +278,7 @@ The TimeBoard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraph">[]Time<wbr>Board<wbr>Graph</a></span>
     </dt>
-    <dd>{{% md %}}A list of graph definitions.
+    <dd>{{% md %}}Nested block describing a graph definition. The structure of this block is described below. Multiple graph blocks are allowed within a datadog.TimeBoard resource.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -299,7 +300,8 @@ The TimeBoard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The read-only status of the timeboard. Default is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -309,7 +311,7 @@ The TimeBoard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardtemplatevariable">[]Time<wbr>Board<wbr>Template<wbr>Variable</a></span>
     </dt>
-    <dd>{{% md %}}A list of template variables for using Dashboard templating.
+    <dd>{{% md %}}Nested block describing a template variable. The structure of this block is described below. Multiple template_variable blocks are allowed within a datadog.TimeBoard resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -338,7 +340,7 @@ The TimeBoard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraph">Time<wbr>Board<wbr>Graph[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of graph definitions.
+    <dd>{{% md %}}Nested block describing a graph definition. The structure of this block is described below. Multiple graph blocks are allowed within a datadog.TimeBoard resource.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -360,7 +362,8 @@ The TimeBoard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The read-only status of the timeboard. Default is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -370,7 +373,7 @@ The TimeBoard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardtemplatevariable">Time<wbr>Board<wbr>Template<wbr>Variable[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of template variables for using Dashboard templating.
+    <dd>{{% md %}}Nested block describing a template variable. The structure of this block is described below. Multiple template_variable blocks are allowed within a datadog.TimeBoard resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -397,9 +400,9 @@ The TimeBoard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#graphs_python" style="color: inherit; text-decoration: inherit;">graphs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeboardgraph">List[Time<wbr>Board<wbr>Graph]</a></span>
+        <span class="property-type"><a href="#timeboardgraph">List[Time<wbr>Board<wbr>Graph<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of graph definitions.
+    <dd>{{% md %}}Nested block describing a graph definition. The structure of this block is described below. Multiple graph blocks are allowed within a datadog.TimeBoard resource.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -421,7 +424,8 @@ The TimeBoard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The read-only status of the timeboard. Default is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -429,9 +433,9 @@ The TimeBoard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#template_variables_python" style="color: inherit; text-decoration: inherit;">template_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeboardtemplatevariable">List[Time<wbr>Board<wbr>Template<wbr>Variable]</a></span>
+        <span class="property-type"><a href="#timeboardtemplatevariable">List[Time<wbr>Board<wbr>Template<wbr>Variable<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of template variables for using Dashboard templating.
+    <dd>{{% md %}}Nested block describing a template variable. The structure of this block is described below. Multiple template_variable blocks are allowed within a datadog.TimeBoard resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -532,7 +536,8 @@ Get an existing TimeBoard resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>graphs=None<span class="p">, </span>read_only=None<span class="p">, </span>template_variables=None<span class="p">, </span>title=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">graphs</span><span class="p">:</span> <span class="nx">Optional[List[TimeBoardGraphArgs]]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">template_variables</span><span class="p">:</span> <span class="nx">Optional[List[TimeBoardTemplateVariableArgs]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TimeBoard</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -540,7 +545,7 @@ Get an existing TimeBoard resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.TimeBoard.html">TimeBoard</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog..TimeBoardState.html">TimeBoardState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.TimeBoard.html">TimeBoard</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog..TimeBoardState.html">TimeBoardState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -665,7 +670,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraph">List&lt;Time<wbr>Board<wbr>Graph<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of graph definitions.
+    <dd>{{% md %}}Nested block describing a graph definition. The structure of this block is described below. Multiple graph blocks are allowed within a datadog.TimeBoard resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -676,7 +681,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The read-only status of the timeboard. Default is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -686,7 +692,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardtemplatevariable">List&lt;Time<wbr>Board<wbr>Template<wbr>Variable<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of template variables for using Dashboard templating.
+    <dd>{{% md %}}Nested block describing a template variable. The structure of this block is described below. Multiple template_variable blocks are allowed within a datadog.TimeBoard resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -726,7 +732,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraph">[]Time<wbr>Board<wbr>Graph</a></span>
     </dt>
-    <dd>{{% md %}}A list of graph definitions.
+    <dd>{{% md %}}Nested block describing a graph definition. The structure of this block is described below. Multiple graph blocks are allowed within a datadog.TimeBoard resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -737,7 +743,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The read-only status of the timeboard. Default is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -747,7 +754,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardtemplatevariable">[]Time<wbr>Board<wbr>Template<wbr>Variable</a></span>
     </dt>
-    <dd>{{% md %}}A list of template variables for using Dashboard templating.
+    <dd>{{% md %}}Nested block describing a template variable. The structure of this block is described below. Multiple template_variable blocks are allowed within a datadog.TimeBoard resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -787,7 +794,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraph">Time<wbr>Board<wbr>Graph[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of graph definitions.
+    <dd>{{% md %}}Nested block describing a graph definition. The structure of this block is described below. Multiple graph blocks are allowed within a datadog.TimeBoard resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -798,7 +805,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The read-only status of the timeboard. Default is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -808,7 +816,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardtemplatevariable">Time<wbr>Board<wbr>Template<wbr>Variable[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of template variables for using Dashboard templating.
+    <dd>{{% md %}}Nested block describing a template variable. The structure of this block is described below. Multiple template_variable blocks are allowed within a datadog.TimeBoard resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -846,9 +854,9 @@ The following state arguments are supported:
 <a href="#state_graphs_python" style="color: inherit; text-decoration: inherit;">graphs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeboardgraph">List[Time<wbr>Board<wbr>Graph]</a></span>
+        <span class="property-type"><a href="#timeboardgraph">List[Time<wbr>Board<wbr>Graph<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of graph definitions.
+    <dd>{{% md %}}Nested block describing a graph definition. The structure of this block is described below. Multiple graph blocks are allowed within a datadog.TimeBoard resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -859,7 +867,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The read-only status of the timeboard. Default is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -867,9 +876,9 @@ The following state arguments are supported:
 <a href="#state_template_variables_python" style="color: inherit; text-decoration: inherit;">template_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeboardtemplatevariable">List[Time<wbr>Board<wbr>Template<wbr>Variable]</a></span>
+        <span class="property-type"><a href="#timeboardtemplatevariable">List[Time<wbr>Board<wbr>Template<wbr>Variable<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of template variables for using Dashboard templating.
+    <dd>{{% md %}}Nested block describing a template variable. The structure of this block is described below. Multiple template_variable blocks are allowed within a datadog.TimeBoard resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -924,7 +933,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequest">List&lt;Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block describing a graph definition request (a metric query to plot on the graph). The structure of this block is described below. Multiple request blocks are allowed within a graph block.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -934,7 +944,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the graph.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -944,7 +955,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of visualization to use for the graph. Valid choices are "change", "distribution", "heatmap", "hostmap", "query_value", timeseries", and "toplist".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -954,7 +966,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Boolean that determines whether to autoscale graphs.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -964,7 +977,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Display a custom unit on the graph (such as 'hertz')
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -974,7 +988,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of event filter strings. Note that, while supported by the Datadog API, the Datadog UI does not (currently) support multiple event filters very well, so use at your own risk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -984,7 +999,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of groups for hostmaps (shown as 'group by' in the UI).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -994,7 +1010,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, will display hosts on hostmap that have no reported metrics.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1004,7 +1021,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, will display hosts without groups on hostmaps.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1014,7 +1032,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphmarker">List&lt;Time<wbr>Board<wbr>Graph<wbr>Marker<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block describing lines / ranges added to graph for formatting. The structure of this block is described below. Multiple marker blocks are allowed within a graph block.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1024,7 +1043,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}What nodes to display in a hostmap. Can be one of 'host' (default) or 'container'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1034,7 +1054,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of digits displayed, use `*` for full precision.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1044,7 +1065,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of scopes for hostmaps (shown as 'filter by' in the UI).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1054,7 +1076,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block to customize the graph style.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1064,7 +1087,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How to align text in the graph, can be one of 'left', 'center', or 'right'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1074,7 +1098,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block describing modifications to the yaxis rendering. The structure of this block is described below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1091,7 +1116,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequest">[]Time<wbr>Board<wbr>Graph<wbr>Request</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block describing a graph definition request (a metric query to plot on the graph). The structure of this block is described below. Multiple request blocks are allowed within a graph block.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1101,7 +1127,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the graph.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1111,7 +1138,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of visualization to use for the graph. Valid choices are "change", "distribution", "heatmap", "hostmap", "query_value", timeseries", and "toplist".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1121,7 +1149,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Boolean that determines whether to autoscale graphs.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1131,7 +1160,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Display a custom unit on the graph (such as 'hertz')
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1141,7 +1171,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of event filter strings. Note that, while supported by the Datadog API, the Datadog UI does not (currently) support multiple event filters very well, so use at your own risk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1151,7 +1182,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of groups for hostmaps (shown as 'group by' in the UI).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1161,7 +1193,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, will display hosts on hostmap that have no reported metrics.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1171,7 +1204,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, will display hosts without groups on hostmaps.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1181,7 +1215,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphmarker">[]Time<wbr>Board<wbr>Graph<wbr>Marker</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block describing lines / ranges added to graph for formatting. The structure of this block is described below. Multiple marker blocks are allowed within a graph block.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1191,7 +1226,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}What nodes to display in a hostmap. Can be one of 'host' (default) or 'container'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1201,7 +1237,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of digits displayed, use `*` for full precision.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1211,7 +1248,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of scopes for hostmaps (shown as 'filter by' in the UI).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1221,7 +1259,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block to customize the graph style.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1231,7 +1270,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How to align text in the graph, can be one of 'left', 'center', or 'right'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1241,7 +1281,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block describing modifications to the yaxis rendering. The structure of this block is described below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1258,7 +1299,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequest">Time<wbr>Board<wbr>Graph<wbr>Request[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block describing a graph definition request (a metric query to plot on the graph). The structure of this block is described below. Multiple request blocks are allowed within a graph block.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1268,7 +1310,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the graph.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1278,7 +1321,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of visualization to use for the graph. Valid choices are "change", "distribution", "heatmap", "hostmap", "query_value", timeseries", and "toplist".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1288,7 +1332,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Boolean that determines whether to autoscale graphs.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1298,7 +1343,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Display a custom unit on the graph (such as 'hertz')
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1308,7 +1354,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of event filter strings. Note that, while supported by the Datadog API, the Datadog UI does not (currently) support multiple event filters very well, so use at your own risk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1318,7 +1365,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of groups for hostmaps (shown as 'group by' in the UI).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1328,7 +1376,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, will display hosts on hostmap that have no reported metrics.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1338,7 +1387,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, will display hosts without groups on hostmaps.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1348,7 +1398,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphmarker">Time<wbr>Board<wbr>Graph<wbr>Marker[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block describing lines / ranges added to graph for formatting. The structure of this block is described below. Multiple marker blocks are allowed within a graph block.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1358,7 +1409,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}What nodes to display in a hostmap. Can be one of 'host' (default) or 'container'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1368,7 +1420,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of digits displayed, use `*` for full precision.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1378,7 +1431,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of scopes for hostmaps (shown as 'filter by' in the UI).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1388,7 +1442,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block to customize the graph style.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1398,7 +1453,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How to align text in the graph, can be one of 'left', 'center', or 'right'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1408,7 +1464,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block describing modifications to the yaxis rendering. The structure of this block is described below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1423,9 +1480,10 @@ The following state arguments are supported:
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeboardgraphrequest">List[Time<wbr>Board<wbr>Graph<wbr>Request]</a></span>
+        <span class="property-type"><a href="#timeboardgraphrequest">List[Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block describing a graph definition request (a metric query to plot on the graph). The structure of this block is described below. Multiple request blocks are allowed within a graph block.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1435,7 +1493,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the graph.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1445,7 +1504,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of visualization to use for the graph. Valid choices are "change", "distribution", "heatmap", "hostmap", "query_value", timeseries", and "toplist".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1455,17 +1515,19 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Boolean that determines whether to autoscale graphs.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customunit_python">
-<a href="#customunit_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Unit</a>
+        <span id="custom_unit_python">
+<a href="#custom_unit_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Display a custom unit on the graph (such as 'hertz')
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1475,7 +1537,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of event filter strings. Note that, while supported by the Datadog API, the Datadog UI does not (currently) support multiple event filters very well, so use at your own risk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1485,27 +1548,30 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of groups for hostmaps (shown as 'group by' in the UI).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includenometrichosts_python">
-<a href="#includenometrichosts_python" style="color: inherit; text-decoration: inherit;">include<wbr>No<wbr>Metric<wbr>Hosts</a>
+        <span id="include_no_metric_hosts_python">
+<a href="#include_no_metric_hosts_python" style="color: inherit; text-decoration: inherit;">include_<wbr>no_<wbr>metric_<wbr>hosts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, will display hosts on hostmap that have no reported metrics.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includeungroupedhosts_python">
-<a href="#includeungroupedhosts_python" style="color: inherit; text-decoration: inherit;">include<wbr>Ungrouped<wbr>Hosts</a>
+        <span id="include_ungrouped_hosts_python">
+<a href="#include_ungrouped_hosts_python" style="color: inherit; text-decoration: inherit;">include_<wbr>ungrouped_<wbr>hosts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, will display hosts without groups on hostmaps.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1513,19 +1579,21 @@ The following state arguments are supported:
 <a href="#markers_python" style="color: inherit; text-decoration: inherit;">markers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeboardgraphmarker">List[Time<wbr>Board<wbr>Graph<wbr>Marker]</a></span>
+        <span class="property-type"><a href="#timeboardgraphmarker">List[Time<wbr>Board<wbr>Graph<wbr>Marker<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block describing lines / ranges added to graph for formatting. The structure of this block is described below. Multiple marker blocks are allowed within a graph block.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodetype_python">
-<a href="#nodetype_python" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
+        <span id="node_type_python">
+<a href="#node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}What nodes to display in a hostmap. Can be one of 'host' (default) or 'container'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1535,7 +1603,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of digits displayed, use `*` for full precision.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1545,7 +1614,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of scopes for hostmaps (shown as 'filter by' in the UI).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1553,19 +1623,21 @@ The following state arguments are supported:
 <a href="#style_python" style="color: inherit; text-decoration: inherit;">style</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block to customize the graph style.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="textalign_python">
-<a href="#textalign_python" style="color: inherit; text-decoration: inherit;">text<wbr>Align</a>
+        <span id="text_align_python">
+<a href="#text_align_python" style="color: inherit; text-decoration: inherit;">text_<wbr>align</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How to align text in the graph, can be one of 'left', 'center', or 'right'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1573,9 +1645,10 @@ The following state arguments are supported:
 <a href="#yaxis_python" style="color: inherit; text-decoration: inherit;">yaxis</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block describing modifications to the yaxis rendering. The structure of this block is described below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1610,7 +1683,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How the marker lines will look. Possible values are {"error", "warning", "info", "ok"} {"dashed", "solid", "bold"}. Example: "error dashed".
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1620,7 +1694,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Mathematical expression describing the marker. Examples: "y > 1", "-5 < y < 0", "y = 19".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1630,7 +1705,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A label for the line or range. **Warning:** when a label is enabled but left empty through the UI, the Datadog API returns a boolean value, not a string. This makes `pulumi up` fail with a JSON decoding error.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1647,7 +1723,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How the marker lines will look. Possible values are {"error", "warning", "info", "ok"} {"dashed", "solid", "bold"}. Example: "error dashed".
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1657,7 +1734,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Mathematical expression describing the marker. Examples: "y > 1", "-5 < y < 0", "y = 19".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1667,7 +1745,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A label for the line or range. **Warning:** when a label is enabled but left empty through the UI, the Datadog API returns a boolean value, not a string. This makes `pulumi up` fail with a JSON decoding error.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1684,7 +1763,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How the marker lines will look. Possible values are {"error", "warning", "info", "ok"} {"dashed", "solid", "bold"}. Example: "error dashed".
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1694,7 +1774,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Mathematical expression describing the marker. Examples: "y > 1", "-5 < y < 0", "y = 19".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1704,7 +1785,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A label for the line or range. **Warning:** when a label is enabled but left empty through the UI, the Datadog API returns a boolean value, not a string. This makes `pulumi up` fail with a JSON decoding error.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1721,7 +1803,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How the marker lines will look. Possible values are {"error", "warning", "info", "ok"} {"dashed", "solid", "bold"}. Example: "error dashed".
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1731,7 +1814,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Mathematical expression describing the marker. Examples: "y > 1", "-5 < y < 0", "y = 19".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1741,7 +1825,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A label for the line or range. **Warning:** when a label is enabled but left empty through the UI, the Datadog API returns a boolean value, not a string. This makes `pulumi up` fail with a JSON decoding error.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1776,7 +1861,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method used when the number of data points outnumbers the max that can be shown.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1786,7 +1872,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestapmquery">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The APM query to use in the widget. The structure of this block is described below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1816,7 +1903,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestconditionalformat">List&lt;Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Conditional<wbr>Format<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block to customize the graph style if certain conditions are met. Currently only applies to `Query Value` and `Top List` type graphs.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1826,7 +1914,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to "present", displays current value. Can be left empty otherwise.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1846,7 +1935,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestlogquery">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The log query to use in the widget. The structure of this block is described below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1856,7 +1946,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A JSON blob representing mapping of query expressions to alias names. Note that the query expressions in `metadata_json` will be ignored if they're not present in the query. For example:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1886,7 +1977,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestprocessquery">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Process<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The process query to use in the widget. The structure of this block is described below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1896,7 +1988,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The query of the request. Pro tip: Use the JSON tab inside the Datadog UI to help build you query strings.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1906,7 +1999,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Boolean value to determine if this is this a stacked area graph. Default: false (line chart).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1916,7 +2010,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block describing hostmaps. The structure of this block is described below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1926,7 +2021,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How the marker lines will look. Possible values are {"error", "warning", "info", "ok"} {"dashed", "solid", "bold"}. Example: "error dashed".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1943,7 +2039,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method used when the number of data points outnumbers the max that can be shown.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1953,7 +2050,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestapmquery">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The APM query to use in the widget. The structure of this block is described below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1983,7 +2081,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestconditionalformat">[]Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Conditional<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block to customize the graph style if certain conditions are met. Currently only applies to `Query Value` and `Top List` type graphs.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1993,7 +2092,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to "present", displays current value. Can be left empty otherwise.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2013,7 +2113,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestlogquery">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The log query to use in the widget. The structure of this block is described below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2023,7 +2124,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A JSON blob representing mapping of query expressions to alias names. Note that the query expressions in `metadata_json` will be ignored if they're not present in the query. For example:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2053,7 +2155,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestprocessquery">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Process<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The process query to use in the widget. The structure of this block is described below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2063,7 +2166,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The query of the request. Pro tip: Use the JSON tab inside the Datadog UI to help build you query strings.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2073,7 +2177,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Boolean value to determine if this is this a stacked area graph. Default: false (line chart).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2083,7 +2188,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block describing hostmaps. The structure of this block is described below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2093,7 +2199,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How the marker lines will look. Possible values are {"error", "warning", "info", "ok"} {"dashed", "solid", "bold"}. Example: "error dashed".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2110,7 +2217,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method used when the number of data points outnumbers the max that can be shown.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2120,7 +2228,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestapmquery">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The APM query to use in the widget. The structure of this block is described below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2150,7 +2259,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestconditionalformat">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Conditional<wbr>Format[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block to customize the graph style if certain conditions are met. Currently only applies to `Query Value` and `Top List` type graphs.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2160,7 +2270,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to "present", displays current value. Can be left empty otherwise.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2180,7 +2291,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestlogquery">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The log query to use in the widget. The structure of this block is described below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2190,7 +2302,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A JSON blob representing mapping of query expressions to alias names. Note that the query expressions in `metadata_json` will be ignored if they're not present in the query. For example:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2220,7 +2333,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestprocessquery">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Process<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The process query to use in the widget. The structure of this block is described below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2230,7 +2344,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The query of the request. Pro tip: Use the JSON tab inside the Datadog UI to help build you query strings.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2240,7 +2355,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Boolean value to determine if this is this a stacked area graph. Default: false (line chart).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2250,7 +2366,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block describing hostmaps. The structure of this block is described below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2260,7 +2377,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How the marker lines will look. Possible values are {"error", "warning", "info", "ok"} {"dashed", "solid", "bold"}. Example: "error dashed".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2277,32 +2395,24 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method used when the number of data points outnumbers the max that can be shown.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="apmquery_python">
-<a href="#apmquery_python" style="color: inherit; text-decoration: inherit;">apm<wbr>Query</a>
+        <span id="apm_query_python">
+<a href="#apm_query_python" style="color: inherit; text-decoration: inherit;">apm_<wbr>query</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeboardgraphrequestapmquery">Dict[Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query]</a></span>
+        <span class="property-type"><a href="#timeboardgraphrequestapmquery">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The APM query to use in the widget. The structure of this block is described below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="changetype_python">
-<a href="#changetype_python" style="color: inherit; text-decoration: inherit;">change<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="compareto_python">
-<a href="#compareto_python" style="color: inherit; text-decoration: inherit;">compare<wbr>To</a>
+        <span id="change_type_python">
+<a href="#change_type_python" style="color: inherit; text-decoration: inherit;">change_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2311,18 +2421,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="conditionalformats_python">
-<a href="#conditionalformats_python" style="color: inherit; text-decoration: inherit;">conditional<wbr>Formats</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeboardgraphrequestconditionalformat">List[Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Conditional<wbr>Format]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="extracol_python">
-<a href="#extracol_python" style="color: inherit; text-decoration: inherit;">extra<wbr>Col</a>
+        <span id="compare_to_python">
+<a href="#compare_to_python" style="color: inherit; text-decoration: inherit;">compare_<wbr>to</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2331,8 +2431,30 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="increasegood_python">
-<a href="#increasegood_python" style="color: inherit; text-decoration: inherit;">increase<wbr>Good</a>
+        <span id="conditional_formats_python">
+<a href="#conditional_formats_python" style="color: inherit; text-decoration: inherit;">conditional_<wbr>formats</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeboardgraphrequestconditionalformat">List[Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Conditional<wbr>Format<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Nested block to customize the graph style if certain conditions are met. Currently only applies to `Query Value` and `Top List` type graphs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extra_col_python">
+<a href="#extra_col_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>col</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}If set to "present", displays current value. Can be left empty otherwise.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="increase_good_python">
+<a href="#increase_good_python" style="color: inherit; text-decoration: inherit;">increase_<wbr>good</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2341,18 +2463,30 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logquery_python">
-<a href="#logquery_python" style="color: inherit; text-decoration: inherit;">log<wbr>Query</a>
+        <span id="log_query_python">
+<a href="#log_query_python" style="color: inherit; text-decoration: inherit;">log_<wbr>query</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeboardgraphrequestlogquery">Dict[Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query]</a></span>
+        <span class="property-type"><a href="#timeboardgraphrequestlogquery">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The log query to use in the widget. The structure of this block is described below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metadatajson_python">
-<a href="#metadatajson_python" style="color: inherit; text-decoration: inherit;">metadata<wbr>Json</a>
+        <span id="metadata_json_python">
+<a href="#metadata_json_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>json</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A JSON blob representing mapping of query expressions to alias names. Note that the query expressions in `metadata_json` will be ignored if they're not present in the query. For example:
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="order_by_python">
+<a href="#order_by_python" style="color: inherit; text-decoration: inherit;">order_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2361,8 +2495,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="orderby_python">
-<a href="#orderby_python" style="color: inherit; text-decoration: inherit;">order<wbr>By</a>
+        <span id="order_direction_python">
+<a href="#order_direction_python" style="color: inherit; text-decoration: inherit;">order_<wbr>direction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2371,23 +2505,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="orderdirection_python">
-<a href="#orderdirection_python" style="color: inherit; text-decoration: inherit;">order<wbr>Direction</a>
+        <span id="process_query_python">
+<a href="#process_query_python" style="color: inherit; text-decoration: inherit;">process_<wbr>query</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="#timeboardgraphrequestprocessquery">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Process<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="processquery_python">
-<a href="#processquery_python" style="color: inherit; text-decoration: inherit;">process<wbr>Query</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeboardgraphrequestprocessquery">Dict[Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Process<wbr>Query]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The process query to use in the widget. The structure of this block is described below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2397,7 +2522,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The query of the request. Pro tip: Use the JSON tab inside the Datadog UI to help build you query strings.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2407,7 +2533,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Boolean value to determine if this is this a stacked area graph. Default: false (line chart).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2415,9 +2542,10 @@ The following state arguments are supported:
 <a href="#style_python" style="color: inherit; text-decoration: inherit;">style</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nested block describing hostmaps. The structure of this block is described below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2427,7 +2555,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How the marker lines will look. Possible values are {"error", "warning", "info", "ok"} {"dashed", "solid", "bold"}. Example: "error dashed".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2462,7 +2591,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestapmquerycompute">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. Exactly one nested block is required with the following structure:
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2482,7 +2612,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestapmquerygroupby">List&lt;Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. Multiple nested blocks are allowed with the following structure:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2492,7 +2623,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestapmquerysearch">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Search<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. One nested block is allowed with the following structure:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2509,7 +2641,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestapmquerycompute">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. Exactly one nested block is required with the following structure:
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2529,7 +2662,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestapmquerygroupby">[]Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. Multiple nested blocks are allowed with the following structure:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2539,7 +2673,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestapmquerysearch">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. One nested block is allowed with the following structure:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2556,7 +2691,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestapmquerycompute">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. Exactly one nested block is required with the following structure:
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2576,7 +2712,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestapmquerygroupby">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. Multiple nested blocks are allowed with the following structure:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2586,7 +2723,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestapmquerysearch">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. One nested block is allowed with the following structure:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2601,9 +2739,10 @@ The following state arguments are supported:
 <a href="#compute_python" style="color: inherit; text-decoration: inherit;">compute</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeboardgraphrequestapmquerycompute">Dict[Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute]</a></span>
+        <span class="property-type"><a href="#timeboardgraphrequestapmquerycompute">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. Exactly one nested block is required with the following structure:
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2617,13 +2756,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupbies_python">
-<a href="#groupbies_python" style="color: inherit; text-decoration: inherit;">group<wbr>Bies</a>
+        <span id="group_bies_python">
+<a href="#group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeboardgraphrequestapmquerygroupby">List[Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By]</a></span>
+        <span class="property-type"><a href="#timeboardgraphrequestapmquerygroupby">List[Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. Multiple nested blocks are allowed with the following structure:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2631,9 +2771,10 @@ The following state arguments are supported:
 <a href="#search_python" style="color: inherit; text-decoration: inherit;">search</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeboardgraphrequestapmquerysearch">Dict[Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Search]</a></span>
+        <span class="property-type"><a href="#timeboardgraphrequestapmquerysearch">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Search<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. One nested block is allowed with the following structure:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2854,7 +2995,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestapmquerygroupbysort">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. One nested block is allowed with the following structure:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2891,7 +3033,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestapmquerygroupbysort">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. One nested block is allowed with the following structure:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2928,7 +3071,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestapmquerygroupbysort">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. One nested block is allowed with the following structure:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2963,9 +3107,10 @@ The following state arguments are supported:
 <a href="#sort_python" style="color: inherit; text-decoration: inherit;">sort</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeboardgraphrequestapmquerygroupbysort">Dict[Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort]</a></span>
+        <span class="property-type"><a href="#timeboardgraphrequestapmquerygroupbysort">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. One nested block is allowed with the following structure:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3252,7 +3397,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Comparison operator. Example: ">", "<".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3262,7 +3408,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Used when `palette` is set to `custom_bg`. Set the color of the background to a custom web color, such as "#205081".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3272,7 +3419,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Used when `palette` is set to `custom_text`. Set the color of the text to a custom web color, such as "#205081".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3282,7 +3430,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Color scheme to be used if the condition is met. For example: "red_on_white", "white_on_red", "yellow_on_white", "white_on_yellow", "green_on_white", "white_on_green", "gray_on_white", "white_on_gray", "custom_text", "custom_bg", "custom_image".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3292,7 +3441,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value that is the threshold for the conditional format.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3309,7 +3459,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Comparison operator. Example: ">", "<".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3319,7 +3470,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Used when `palette` is set to `custom_bg`. Set the color of the background to a custom web color, such as "#205081".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3329,7 +3481,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Used when `palette` is set to `custom_text`. Set the color of the text to a custom web color, such as "#205081".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3339,7 +3492,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Color scheme to be used if the condition is met. For example: "red_on_white", "white_on_red", "yellow_on_white", "white_on_yellow", "green_on_white", "white_on_green", "gray_on_white", "white_on_gray", "custom_text", "custom_bg", "custom_image".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3349,7 +3503,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value that is the threshold for the conditional format.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3366,7 +3521,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Comparison operator. Example: ">", "<".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3376,7 +3532,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Used when `palette` is set to `custom_bg`. Set the color of the background to a custom web color, such as "#205081".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3386,7 +3543,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Used when `palette` is set to `custom_text`. Set the color of the text to a custom web color, such as "#205081".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3396,7 +3554,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Color scheme to be used if the condition is met. For example: "red_on_white", "white_on_red", "yellow_on_white", "white_on_yellow", "green_on_white", "white_on_green", "gray_on_white", "white_on_gray", "custom_text", "custom_bg", "custom_image".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3406,7 +3565,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value that is the threshold for the conditional format.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3423,27 +3583,30 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Comparison operator. Example: ">", "<".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="custombgcolor_python">
-<a href="#custombgcolor_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Bg<wbr>Color</a>
+        <span id="custom_bg_color_python">
+<a href="#custom_bg_color_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>bg_<wbr>color</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Used when `palette` is set to `custom_bg`. Set the color of the background to a custom web color, such as "#205081".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customfgcolor_python">
-<a href="#customfgcolor_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Fg<wbr>Color</a>
+        <span id="custom_fg_color_python">
+<a href="#custom_fg_color_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>fg_<wbr>color</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Used when `palette` is set to `custom_text`. Set the color of the text to a custom web color, such as "#205081".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3453,7 +3616,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Color scheme to be used if the condition is met. For example: "red_on_white", "white_on_red", "yellow_on_white", "white_on_yellow", "green_on_white", "white_on_green", "gray_on_white", "white_on_gray", "custom_text", "custom_bg", "custom_image".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3463,7 +3627,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value that is the threshold for the conditional format.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3498,7 +3663,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestlogquerycompute">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Compute<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. Exactly one nested block is required with the following structure:
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3518,7 +3684,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestlogquerygroupby">List&lt;Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. Multiple nested blocks are allowed with the following structure:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3528,7 +3695,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestlogquerysearch">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Search<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. One nested block is allowed with the following structure:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3545,7 +3713,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestlogquerycompute">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. Exactly one nested block is required with the following structure:
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3565,7 +3734,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestlogquerygroupby">[]Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. Multiple nested blocks are allowed with the following structure:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3575,7 +3745,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestlogquerysearch">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Search</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. One nested block is allowed with the following structure:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3592,7 +3763,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestlogquerycompute">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. Exactly one nested block is required with the following structure:
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3612,7 +3784,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestlogquerygroupby">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. Multiple nested blocks are allowed with the following structure:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3622,7 +3795,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestlogquerysearch">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Search</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. One nested block is allowed with the following structure:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3637,9 +3811,10 @@ The following state arguments are supported:
 <a href="#compute_python" style="color: inherit; text-decoration: inherit;">compute</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeboardgraphrequestlogquerycompute">Dict[Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Compute]</a></span>
+        <span class="property-type"><a href="#timeboardgraphrequestlogquerycompute">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Compute<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. Exactly one nested block is required with the following structure:
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3653,13 +3828,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupbies_python">
-<a href="#groupbies_python" style="color: inherit; text-decoration: inherit;">group<wbr>Bies</a>
+        <span id="group_bies_python">
+<a href="#group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeboardgraphrequestlogquerygroupby">List[Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By]</a></span>
+        <span class="property-type"><a href="#timeboardgraphrequestlogquerygroupby">List[Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. Multiple nested blocks are allowed with the following structure:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3667,9 +3843,10 @@ The following state arguments are supported:
 <a href="#search_python" style="color: inherit; text-decoration: inherit;">search</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeboardgraphrequestlogquerysearch">Dict[Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Search]</a></span>
+        <span class="property-type"><a href="#timeboardgraphrequestlogquerysearch">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Search<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. One nested block is allowed with the following structure:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3890,7 +4067,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestlogquerygroupbysort">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. One nested block is allowed with the following structure:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3927,7 +4105,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestlogquerygroupbysort">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. One nested block is allowed with the following structure:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3964,7 +4143,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeboardgraphrequestlogquerygroupbysort">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. One nested block is allowed with the following structure:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3999,9 +4179,10 @@ The following state arguments are supported:
 <a href="#sort_python" style="color: inherit; text-decoration: inherit;">sort</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeboardgraphrequestlogquerygroupbysort">Dict[Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort]</a></span>
+        <span class="property-type"><a href="#timeboardgraphrequestlogquerygroupbysort">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. One nested block is allowed with the following structure:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4433,8 +4614,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filterbies_python">
-<a href="#filterbies_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Bies</a>
+        <span id="filter_bies_python">
+<a href="#filter_bies_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>bies</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4453,8 +4634,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="searchby_python">
-<a href="#searchby_python" style="color: inherit; text-decoration: inherit;">search<wbr>By</a>
+        <span id="search_by_python">
+<a href="#search_by_python" style="color: inherit; text-decoration: inherit;">search_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4494,7 +4675,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The variable name. Can be referenced as \$name in `graph` `request` `q` query strings.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4504,7 +4686,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default tag. Default: "\*" (match all).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4514,7 +4697,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The tag group. Default: no tag group.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4531,7 +4715,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The variable name. Can be referenced as \$name in `graph` `request` `q` query strings.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4541,7 +4726,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default tag. Default: "\*" (match all).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4551,7 +4737,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The tag group. Default: no tag group.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4568,7 +4755,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The variable name. Can be referenced as \$name in `graph` `request` `q` query strings.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4578,7 +4766,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default tag. Default: "\*" (match all).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4588,7 +4777,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The tag group. Default: no tag group.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4605,7 +4795,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The variable name. Can be referenced as \$name in `graph` `request` `q` query strings.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4615,7 +4806,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default tag. Default: "\*" (match all).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4625,7 +4817,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The tag group. Default: no tag group.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
