@@ -25,7 +25,7 @@ This resource allows you to configure branch protection for repositories in your
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.BranchProtection">BranchProtection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>branch=None<span class="p">, </span>enforce_admins=None<span class="p">, </span>repository=None<span class="p">, </span>require_signed_commits=None<span class="p">, </span>required_pull_request_reviews=None<span class="p">, </span>required_status_checks=None<span class="p">, </span>restrictions=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.BranchProtection">BranchProtection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforce_admins</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">require_signed_commits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">required_pull_request_reviews</span><span class="p">:</span> <span class="nx">Optional[BranchProtectionRequiredPullRequestReviewsArgs]</span> = None<span class="p">, </span><span class="nx">required_status_checks</span><span class="p">:</span> <span class="nx">Optional[BranchProtectionRequiredStatusChecksArgs]</span> = None<span class="p">, </span><span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[BranchProtectionRestrictionsArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -499,7 +499,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#required_pull_request_reviews_python" style="color: inherit; text-decoration: inherit;">required_<wbr>pull_<wbr>request_<wbr>reviews</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Dict[Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews]</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
 {{% /md %}}</dd>
@@ -510,7 +510,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#required_status_checks_python" style="color: inherit; text-decoration: inherit;">required_<wbr>status_<wbr>checks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Dict[Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks]</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
 {{% /md %}}</dd>
@@ -521,7 +521,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrestrictions">Dict[Branch<wbr>Protection<wbr>Restrictions]</a></span>
+        <span class="property-type"><a href="#branchprotectionrestrictions">Branch<wbr>Protection<wbr>Restrictions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for the users and teams that may push to the branch. See Restrictions below for details.
 {{% /md %}}</dd>
@@ -664,7 +664,8 @@ Get an existing BranchProtection resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>branch=None<span class="p">, </span>enforce_admins=None<span class="p">, </span>etag=None<span class="p">, </span>repository=None<span class="p">, </span>require_signed_commits=None<span class="p">, </span>required_pull_request_reviews=None<span class="p">, </span>required_status_checks=None<span class="p">, </span>restrictions=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforce_admins</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">require_signed_commits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">required_pull_request_reviews</span><span class="p">:</span> <span class="nx">Optional[BranchProtectionRequiredPullRequestReviewsArgs]</span> = None<span class="p">, </span><span class="nx">required_status_checks</span><span class="p">:</span> <span class="nx">Optional[BranchProtectionRequiredStatusChecksArgs]</span> = None<span class="p">, </span><span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[BranchProtectionRestrictionsArgs]</span> = None<span class="p">) -&gt;</span> BranchProtection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -672,7 +673,7 @@ Get an existing BranchProtection resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.BranchProtection.html">BranchProtection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github..BranchProtectionState.html">BranchProtectionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.BranchProtection.html">BranchProtection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github..BranchProtectionState.html">BranchProtectionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1120,7 +1121,7 @@ The following state arguments are supported:
 <a href="#state_required_pull_request_reviews_python" style="color: inherit; text-decoration: inherit;">required_<wbr>pull_<wbr>request_<wbr>reviews</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Dict[Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews]</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
 {{% /md %}}</dd>
@@ -1131,7 +1132,7 @@ The following state arguments are supported:
 <a href="#state_required_status_checks_python" style="color: inherit; text-decoration: inherit;">required_<wbr>status_<wbr>checks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Dict[Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks]</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
 {{% /md %}}</dd>
@@ -1142,7 +1143,7 @@ The following state arguments are supported:
 <a href="#state_restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrestrictions">Dict[Branch<wbr>Protection<wbr>Restrictions]</a></span>
+        <span class="property-type"><a href="#branchprotectionrestrictions">Branch<wbr>Protection<wbr>Restrictions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for the users and teams that may push to the branch. See Restrictions below for details.
 {{% /md %}}</dd>
@@ -1383,8 +1384,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dismissstalereviews_python">
-<a href="#dismissstalereviews_python" style="color: inherit; text-decoration: inherit;">dismiss<wbr>Stale<wbr>Reviews</a>
+        <span id="dismiss_stale_reviews_python">
+<a href="#dismiss_stale_reviews_python" style="color: inherit; text-decoration: inherit;">dismiss_<wbr>stale_<wbr>reviews</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1393,8 +1394,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dismissalteams_python">
-<a href="#dismissalteams_python" style="color: inherit; text-decoration: inherit;">dismissal<wbr>Teams</a>
+        <span id="dismissal_teams_python">
+<a href="#dismissal_teams_python" style="color: inherit; text-decoration: inherit;">dismissal_<wbr>teams</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1403,8 +1404,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dismissalusers_python">
-<a href="#dismissalusers_python" style="color: inherit; text-decoration: inherit;">dismissal<wbr>Users</a>
+        <span id="dismissal_users_python">
+<a href="#dismissal_users_python" style="color: inherit; text-decoration: inherit;">dismissal_<wbr>users</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1413,8 +1414,8 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="includeadmins_python">
-<a href="#includeadmins_python" style="color: inherit; text-decoration: inherit;">include<wbr>Admins</a>
+        <span id="include_admins_python">
+<a href="#include_admins_python" style="color: inherit; text-decoration: inherit;">include_<wbr>admins</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1423,8 +1424,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requirecodeownerreviews_python">
-<a href="#requirecodeownerreviews_python" style="color: inherit; text-decoration: inherit;">require<wbr>Code<wbr>Owner<wbr>Reviews</a>
+        <span id="require_code_owner_reviews_python">
+<a href="#require_code_owner_reviews_python" style="color: inherit; text-decoration: inherit;">require_<wbr>code_<wbr>owner_<wbr>reviews</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1433,8 +1434,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requiredapprovingreviewcount_python">
-<a href="#requiredapprovingreviewcount_python" style="color: inherit; text-decoration: inherit;">required<wbr>Approving<wbr>Review<wbr>Count</a>
+        <span id="required_approving_review_count_python">
+<a href="#required_approving_review_count_python" style="color: inherit; text-decoration: inherit;">required_<wbr>approving_<wbr>review_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1589,8 +1590,8 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="includeadmins_python">
-<a href="#includeadmins_python" style="color: inherit; text-decoration: inherit;">include<wbr>Admins</a>
+        <span id="include_admins_python">
+<a href="#include_admins_python" style="color: inherit; text-decoration: inherit;">include_<wbr>admins</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

@@ -91,7 +91,7 @@ const test = pulumi.output(github.getOrganizationTeamSyncGroups({ async: true })
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_organization_team_sync_groups(</span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_organization_team_sync_groups(</span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetOrganizationTeamSyncGroupsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -382,8 +382,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="groupdescription_python">
-<a href="#groupdescription_python" style="color: inherit; text-decoration: inherit;">group<wbr>Description</a>
+        <span id="group_description_python">
+<a href="#group_description_python" style="color: inherit; text-decoration: inherit;">group_<wbr>description</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -393,8 +393,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="groupid_python">
-<a href="#groupid_python" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+        <span id="group_id_python">
+<a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -404,8 +404,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="groupname_python">
-<a href="#groupname_python" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
+        <span id="group_name_python">
+<a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -102,7 +102,7 @@ const test = pulumi.output(github.getCollaborators({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_collaborators(</span>affiliation=None<span class="p">, </span>owner=None<span class="p">, </span>repository=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_collaborators(</span><span class="nx">affiliation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCollaboratorsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1111,8 +1111,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="eventsurl_python">
-<a href="#eventsurl_python" style="color: inherit; text-decoration: inherit;">events<wbr>Url</a>
+        <span id="events_url_python">
+<a href="#events_url_python" style="color: inherit; text-decoration: inherit;">events_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1122,8 +1122,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="followersurl_python">
-<a href="#followersurl_python" style="color: inherit; text-decoration: inherit;">followers<wbr>Url</a>
+        <span id="followers_url_python">
+<a href="#followers_url_python" style="color: inherit; text-decoration: inherit;">followers_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1133,8 +1133,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="followingurl_python">
-<a href="#followingurl_python" style="color: inherit; text-decoration: inherit;">following<wbr>Url</a>
+        <span id="following_url_python">
+<a href="#following_url_python" style="color: inherit; text-decoration: inherit;">following_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1144,8 +1144,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="gistsurl_python">
-<a href="#gistsurl_python" style="color: inherit; text-decoration: inherit;">gists<wbr>Url</a>
+        <span id="gists_url_python">
+<a href="#gists_url_python" style="color: inherit; text-decoration: inherit;">gists_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1188,8 +1188,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="organizationsurl_python">
-<a href="#organizationsurl_python" style="color: inherit; text-decoration: inherit;">organizations<wbr>Url</a>
+        <span id="organizations_url_python">
+<a href="#organizations_url_python" style="color: inherit; text-decoration: inherit;">organizations_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1210,8 +1210,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="receivedeventsurl_python">
-<a href="#receivedeventsurl_python" style="color: inherit; text-decoration: inherit;">received<wbr>Events<wbr>Url</a>
+        <span id="received_events_url_python">
+<a href="#received_events_url_python" style="color: inherit; text-decoration: inherit;">received_<wbr>events_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1221,8 +1221,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="reposurl_python">
-<a href="#reposurl_python" style="color: inherit; text-decoration: inherit;">repos<wbr>Url</a>
+        <span id="repos_url_python">
+<a href="#repos_url_python" style="color: inherit; text-decoration: inherit;">repos_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1232,8 +1232,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="siteadmin_python">
-<a href="#siteadmin_python" style="color: inherit; text-decoration: inherit;">site<wbr>Admin</a>
+        <span id="site_admin_python">
+<a href="#site_admin_python" style="color: inherit; text-decoration: inherit;">site_<wbr>admin</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1243,8 +1243,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="starredurl_python">
-<a href="#starredurl_python" style="color: inherit; text-decoration: inherit;">starred<wbr>Url</a>
+        <span id="starred_url_python">
+<a href="#starred_url_python" style="color: inherit; text-decoration: inherit;">starred_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1254,8 +1254,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="subscriptionsurl_python">
-<a href="#subscriptionsurl_python" style="color: inherit; text-decoration: inherit;">subscriptions<wbr>Url</a>
+        <span id="subscriptions_url_python">
+<a href="#subscriptions_url_python" style="color: inherit; text-decoration: inherit;">subscriptions_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
