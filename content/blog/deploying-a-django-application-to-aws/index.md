@@ -28,7 +28,7 @@ $ django-admin startproject mysite
 $ cd mysite
 ```
 
-This tutorial was written for the [aws-django-voting-app example](https://github.com/pulumi/examples/tree/vova/aws-django-voting-app/aws-django-voting-app) but will work with any other Django application. The most important file is `./mysite/settings.py`, which we will modify to accept secrets and configuration parameters in the form of environment variables. A common mistake that programmers make is to submit files with important data to source code repositories. Even if it is a private repository, it is still not recommended to leave passwords and private keys in your files.
+This tutorial was written for the [aws-django-voting-app example](https://github.com/pulumi/examples/tree/master/aws-django-voting-app) but will work with any other Django application. The most important file is `./mysite/settings.py`, which we will modify to accept secrets and configuration parameters in the form of environment variables. A common mistake that programmers make is to submit files with important data to source code repositories. Even if it is a private repository, it is still not recommended to leave passwords and private keys in your files.
 
 ```python
 SECRET_KEY = os.environ['SECRET_KEY']
@@ -132,7 +132,7 @@ django_admin_password = config.require_secret("django-admin-password")
 django_secret_key = config.require_secret("django-secret-key")
 ```
 
-After setting up the imports and configurations, we create an ECS Cluster, VPC, Subnet, RDS instance, and several other items. All the components are identical to the ones in the [first]({{< relref "/blog/creating-a-python-aws-application-using-flask-and-redis" >}}) and [second]({{< relref "/blog/deploying-mysql-schemas-using-dynamic-providers" >}}) blog posts, and the full code can be seen in this example's [github repository](https://github.com/pulumi/examples/tree/vova/aws-django-voting-app/aws-django-voting-app).
+After setting up the imports and configurations, we create an ECS Cluster, VPC, Subnet, RDS instance, and several other items. All the components are identical to the ones in the [first]({{< relref "/blog/creating-a-python-aws-application-using-flask-and-redis" >}}) and [second]({{< relref "/blog/deploying-mysql-schemas-using-dynamic-providers" >}}) blog posts, and the full code can be seen in this example's [github repository](https://github.com/pulumi/examples/tree/master/aws-django-voting-app).
 
 ```python
 app_cluster = aws.ecs.Cluster(...)
@@ -404,4 +404,4 @@ In this example, I described how to set up a basic Django voting application and
 
 Next week, we'll explore PostgreSQL, Express, React, and Node.js, and use them to create a simple application.
 
-The blog post's full code and an in-depth explanation for each component are on [Github](https://github.com/pulumi/examples/tree/vova/aws-django-voting-app/aws-django-voting-app).
+The blog post's full code and an in-depth explanation for each component are on [Github](https://github.com/pulumi/examples/tree/master/aws-django-voting-app).
