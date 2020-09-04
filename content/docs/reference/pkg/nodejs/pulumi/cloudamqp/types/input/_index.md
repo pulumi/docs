@@ -3,7 +3,7 @@ title: "Module types/input"
 title_tag: "Module types/input | Package @pulumi/cloudamqp | Node.js SDK"
 linktitle: "input"
 meta_desc: "Explore members of the input module in the @pulumi/cloudamqp package."
-git_sha: "d662056d40d1c88eb4ca5273cd2be43111c68325"
+git_sha: "3875474620a0b94a4f03550812fdf5ee7d6fa69c"
 block_external_search_index: true
 ---
 
@@ -19,6 +19,7 @@ block_external_search_index: true
 
 <h3>APIs</h3>
 <ul class="api">
+    <li><a href="#GetNodesNode"><span class="symbol api"></span>GetNodesNode</a></li>
     <li><a href="#GetPluginsCommunityPlugin"><span class="symbol api"></span>GetPluginsCommunityPlugin</a></li>
     <li><a href="#GetPluginsPlugin"><span class="symbol api"></span>GetPluginsPlugin</a></li>
     <li><a href="#SecurityFirewallRule"><span class="symbol api"></span>SecurityFirewallRule</a></li>
@@ -28,74 +29,128 @@ block_external_search_index: true
 
 
 <h2 id="apis">APIs</h2>
+<h3 class="pdoc-module-header" id="GetNodesNode" data-link-title="GetNodesNode">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L8">
+        interface <strong>GetNodesNode</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetNodesNode</span></code></pre>
+<h4 class="pdoc-member-header" id="GetNodesNode-erlangVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L9">property <b>erlangVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>erlangVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetNodesNode-hipe">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L10">property <b>hipe</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>hipe?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetNodesNode-hostname">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L11">property <b>hostname</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>hostname?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetNodesNode-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L12">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetNodesNode-rabbitmqVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L13">property <b>rabbitmqVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>rabbitmqVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetNodesNode-running">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L14">property <b>running</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>running?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetPluginsCommunityPlugin" data-link-title="GetPluginsCommunityPlugin">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/d662056d40d1c88eb4ca5273cd2be43111c68325/sdk/nodejs/types/input.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L17">
         interface <strong>GetPluginsCommunityPlugin</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPluginsCommunityPlugin</span></code></pre>
 <h4 class="pdoc-member-header" id="GetPluginsCommunityPlugin-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/d662056d40d1c88eb4ca5273cd2be43111c68325/sdk/nodejs/types/input.ts#L9">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L18">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPluginsCommunityPlugin-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/d662056d40d1c88eb4ca5273cd2be43111c68325/sdk/nodejs/types/input.ts#L10">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L19">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPluginsCommunityPlugin-require">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/d662056d40d1c88eb4ca5273cd2be43111c68325/sdk/nodejs/types/input.ts#L11">property <b>require</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L20">property <b>require</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>require?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetPluginsPlugin" data-link-title="GetPluginsPlugin">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/d662056d40d1c88eb4ca5273cd2be43111c68325/sdk/nodejs/types/input.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L23">
         interface <strong>GetPluginsPlugin</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPluginsPlugin</span></code></pre>
 <h4 class="pdoc-member-header" id="GetPluginsPlugin-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/d662056d40d1c88eb4ca5273cd2be43111c68325/sdk/nodejs/types/input.ts#L15">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L24">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPluginsPlugin-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/d662056d40d1c88eb4ca5273cd2be43111c68325/sdk/nodejs/types/input.ts#L16">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L25">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPluginsPlugin-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/d662056d40d1c88eb4ca5273cd2be43111c68325/sdk/nodejs/types/input.ts#L17">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L26">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPluginsPlugin-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/d662056d40d1c88eb4ca5273cd2be43111c68325/sdk/nodejs/types/input.ts#L18">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L27">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="SecurityFirewallRule" data-link-title="SecurityFirewallRule">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/d662056d40d1c88eb4ca5273cd2be43111c68325/sdk/nodejs/types/input.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L30">
         interface <strong>SecurityFirewallRule</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SecurityFirewallRule</span></code></pre>
+<h4 class="pdoc-member-header" id="SecurityFirewallRule-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L34">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Description name of the rule. e.g. Default.
+
 <h4 class="pdoc-member-header" id="SecurityFirewallRule-ip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/d662056d40d1c88eb4ca5273cd2be43111c68325/sdk/nodejs/types/input.ts#L22">property <b>ip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L38">property <b>ip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ip: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Source ip and netmask for the rule. (e.g. 10.56.72.0/24)
+
 <h4 class="pdoc-member-header" id="SecurityFirewallRule-ports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/d662056d40d1c88eb4ca5273cd2be43111c68325/sdk/nodejs/types/input.ts#L23">property <b>ports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L42">property <b>ports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ports?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
+
+Custom ports to be opened
+
 <h4 class="pdoc-member-header" id="SecurityFirewallRule-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/d662056d40d1c88eb4ca5273cd2be43111c68325/sdk/nodejs/types/input.ts#L24">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/3875474620a0b94a4f03550812fdf5ee7d6fa69c/sdk/nodejs/types/input.ts#L46">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>services?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+Pre-defined service ports
+
