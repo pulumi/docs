@@ -14,7 +14,7 @@ menu:
 aliases: ["/docs/quickstart/aws/next-steps/"]
 ---
 
-We've seen how to quickly get started using AWS with Pulumi.
+You've seen how to quickly get started using AWS with Pulumi.
 
 From here, you can dive deeper with additional AWS tutorials:
 
