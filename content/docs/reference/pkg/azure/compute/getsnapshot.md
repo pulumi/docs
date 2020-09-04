@@ -883,11 +883,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="diskencryptionkeys_python">
-<a href="#diskencryptionkeys_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Keys</a>
+        <span id="disk_encryption_keys_python">
+<a href="#disk_encryption_keys_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsnapshotencryptionsettingdiskencryptionkey">List[Get<wbr>Snapshot<wbr>Encryption<wbr>Setting<wbr>Disk<wbr>Encryption<wbr>Key]</a></span>
+        <span class="property-type"><a href="#getsnapshotencryptionsettingdiskencryptionkey">List[Get<wbr>Snapshot<wbr>Encryption<wbr>Setting<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -903,11 +903,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="keyencryptionkeys_python">
-<a href="#keyencryptionkeys_python" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Keys</a>
+        <span id="key_encryption_keys_python">
+<a href="#key_encryption_keys_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsnapshotencryptionsettingkeyencryptionkey">List[Get<wbr>Snapshot<wbr>Encryption<wbr>Setting<wbr>Key<wbr>Encryption<wbr>Key]</a></span>
+        <span class="property-type"><a href="#getsnapshotencryptionsettingkeyencryptionkey">List[Get<wbr>Snapshot<wbr>Encryption<wbr>Setting<wbr>Key<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1019,8 +1019,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="secreturl_python">
-<a href="#secreturl_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Url</a>
+        <span id="secret_url_python">
+<a href="#secret_url_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1029,8 +1029,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcevaultid_python">
-<a href="#sourcevaultid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Vault<wbr>Id</a>
+        <span id="source_vault_id_python">
+<a href="#source_vault_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1145,8 +1145,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="keyurl_python">
-<a href="#keyurl_python" style="color: inherit; text-decoration: inherit;">key<wbr>Url</a>
+        <span id="key_url_python">
+<a href="#key_url_python" style="color: inherit; text-decoration: inherit;">key_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1155,8 +1155,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcevaultid_python">
-<a href="#sourcevaultid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Vault<wbr>Id</a>
+        <span id="source_vault_id_python">
+<a href="#source_vault_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -122,17 +122,17 @@ example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", locati
 example_network_security_group = azure.network.NetworkSecurityGroup("exampleNetworkSecurityGroup",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    security_rules=[{
-        "name": "test123",
-        "priority": 100,
-        "direction": "Inbound",
-        "access": "Allow",
-        "protocol": "Tcp",
-        "source_port_range": "*",
-        "destination_port_range": "*",
-        "source_address_prefix": "*",
-        "destination_address_prefix": "*",
-    }],
+    security_rules=[azure.network.NetworkSecurityGroupSecurityRuleArgs(
+        name="test123",
+        priority=100,
+        direction="Inbound",
+        access="Allow",
+        protocol="Tcp",
+        source_port_range="*",
+        destination_port_range="*",
+        source_address_prefix="*",
+        destination_address_prefix="*",
+    )],
     tags={
         "environment": "Production",
     })
@@ -181,7 +181,7 @@ const exampleNetworkSecurityGroup = new azure.network.NetworkSecurityGroup("exam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.NetworkSecurityGroup">NetworkSecurityGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_rules</span><span class="p">:</span> <span class="nx">Optional[List[NetworkSecurityGroupSecurityRule]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.NetworkSecurityGroup">NetworkSecurityGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_rules</span><span class="p">:</span> <span class="nx">Optional[List[NetworkSecurityGroupSecurityRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -578,7 +578,7 @@ The NetworkSecurityGroup resource accepts the following [input]({{< relref "/doc
 <a href="#security_rules_python" style="color: inherit; text-decoration: inherit;">security_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygroupsecurityrule">List[Network<wbr>Security<wbr>Group<wbr>Security<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#networksecuritygroupsecurityrule">List[Network<wbr>Security<wbr>Group<wbr>Security<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of objects representing security rules, as defined below.
 {{% /md %}}</dd>
@@ -589,7 +589,7 @@ The NetworkSecurityGroup resource accepts the following [input]({{< relref "/doc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -693,7 +693,7 @@ Get an existing NetworkSecurityGroup resource's state with the given name, ID, a
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_rules</span><span class="p">:</span> <span class="nx">Optional[List[NetworkSecurityGroupSecurityRule]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> NetworkSecurityGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_rules</span><span class="p">:</span> <span class="nx">Optional[List[NetworkSecurityGroupSecurityRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> NetworkSecurityGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1032,7 +1032,7 @@ The following state arguments are supported:
 <a href="#state_security_rules_python" style="color: inherit; text-decoration: inherit;">security_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygroupsecurityrule">List[Network<wbr>Security<wbr>Group<wbr>Security<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#networksecuritygroupsecurityrule">List[Network<wbr>Security<wbr>Group<wbr>Security<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of objects representing security rules, as defined below.
 {{% /md %}}</dd>
@@ -1043,7 +1043,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>

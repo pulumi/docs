@@ -23,7 +23,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/siterecovery/#pulumi_azure.siterecovery.ReplicatedVM">ReplicatedVM</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">managed_disks</span><span class="p">:</span> <span class="nx">Optional[List[ReplicatedVMManagedDisk]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[ReplicatedVMNetworkInterface]]</span> = None<span class="p">, </span><span class="nx">recovery_replication_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_recovery_fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_recovery_protection_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_vm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_availability_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_recovery_fabric_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_recovery_protection_container_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/siterecovery/#pulumi_azure.siterecovery.ReplicatedVM">ReplicatedVM</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">managed_disks</span><span class="p">:</span> <span class="nx">Optional[List[ReplicatedVMManagedDiskArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[ReplicatedVMNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">recovery_replication_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_recovery_fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_recovery_protection_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_vm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_availability_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_recovery_fabric_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_recovery_protection_container_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -779,7 +779,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#managed_disks_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmmanageddisk">List[Replicated<wbr>VMManaged<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#replicatedvmmanageddisk">List[Replicated<wbr>VMManaged<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_disk` block.
 {{% /md %}}</dd>
@@ -801,7 +801,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmnetworkinterface">List[Replicated<wbr>VMNetwork<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#replicatedvmnetworkinterface">List[Replicated<wbr>VMNetwork<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` block.
 {{% /md %}}</dd>
@@ -927,7 +927,7 @@ Get an existing ReplicatedVM resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">managed_disks</span><span class="p">:</span> <span class="nx">Optional[List[ReplicatedVMManagedDisk]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[ReplicatedVMNetworkInterface]]</span> = None<span class="p">, </span><span class="nx">recovery_replication_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_recovery_fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_recovery_protection_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_vm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_availability_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_recovery_fabric_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_recovery_protection_container_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ReplicatedVM</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">managed_disks</span><span class="p">:</span> <span class="nx">Optional[List[ReplicatedVMManagedDiskArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[ReplicatedVMNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">recovery_replication_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_recovery_fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_recovery_protection_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_vm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_availability_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_recovery_fabric_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_recovery_protection_container_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ReplicatedVM</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1527,7 +1527,7 @@ The following state arguments are supported:
 <a href="#state_managed_disks_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmmanageddisk">List[Replicated<wbr>VMManaged<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#replicatedvmmanageddisk">List[Replicated<wbr>VMManaged<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_disk` block.
 {{% /md %}}</dd>
@@ -1549,7 +1549,7 @@ The following state arguments are supported:
 <a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmnetworkinterface">List[Replicated<wbr>VMNetwork<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#replicatedvmnetworkinterface">List[Replicated<wbr>VMNetwork<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` block.
 {{% /md %}}</dd>
@@ -1895,8 +1895,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="diskid_python">
-<a href="#diskid_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
+        <span id="disk_id_python">
+<a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1906,8 +1906,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="stagingstorageaccountid_python">
-<a href="#stagingstorageaccountid_python" style="color: inherit; text-decoration: inherit;">staging<wbr>Storage<wbr>Account<wbr>Id</a>
+        <span id="staging_storage_account_id_python">
+<a href="#staging_storage_account_id_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>storage_<wbr>account_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1917,8 +1917,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="targetdisktype_python">
-<a href="#targetdisktype_python" style="color: inherit; text-decoration: inherit;">target<wbr>Disk<wbr>Type</a>
+        <span id="target_disk_type_python">
+<a href="#target_disk_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1928,8 +1928,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="targetreplicadisktype_python">
-<a href="#targetreplicadisktype_python" style="color: inherit; text-decoration: inherit;">target<wbr>Replica<wbr>Disk<wbr>Type</a>
+        <span id="target_replica_disk_type_python">
+<a href="#target_replica_disk_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>replica_<wbr>disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2095,8 +2095,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcenetworkinterfaceid_python">
-<a href="#sourcenetworkinterfaceid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Network<wbr>Interface<wbr>Id</a>
+        <span id="source_network_interface_id_python">
+<a href="#source_network_interface_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>network_<wbr>interface_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2106,8 +2106,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetstaticip_python">
-<a href="#targetstaticip_python" style="color: inherit; text-decoration: inherit;">target<wbr>Static<wbr>Ip</a>
+        <span id="target_static_ip_python">
+<a href="#target_static_ip_python" style="color: inherit; text-decoration: inherit;">target_<wbr>static_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2117,8 +2117,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetsubnetname_python">
-<a href="#targetsubnetname_python" style="color: inherit; text-decoration: inherit;">target<wbr>Subnet<wbr>Name</a>
+        <span id="target_subnet_name_python">
+<a href="#target_subnet_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>subnet_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

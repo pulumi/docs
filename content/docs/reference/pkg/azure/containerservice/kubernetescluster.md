@@ -121,18 +121,18 @@ example_kubernetes_cluster = azure.containerservice.KubernetesCluster("exampleKu
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
     dns_prefix="exampleaks1",
-    default_node_pool={
-        "name": "default",
-        "node_count": 1,
-        "vm_size": "Standard_D2_v2",
-    },
-    identity={
-        "type": "SystemAssigned",
-    },
+    default_node_pool=azure.containerservice.KubernetesClusterDefaultNodePoolArgs(
+        name="default",
+        node_count=1,
+        vm_size="Standard_D2_v2",
+    ),
+    identity=azure.containerservice.KubernetesClusterIdentityArgs(
+        type="SystemAssigned",
+    ),
     tags={
         "Environment": "Production",
     })
-pulumi.export("clientCertificate", example_kubernetes_cluster.kube_configs[0]["clientCertificate"])
+pulumi.export("clientCertificate", example_kubernetes_cluster.kube_configs[0].client_certificate)
 pulumi.export("kubeConfig", example_kubernetes_cluster.kube_config_raw)
 ```
 
@@ -179,7 +179,7 @@ export const kubeConfig = exampleKubernetesCluster.kubeConfigRaw;
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/containerservice/#pulumi_azure.containerservice.KubernetesCluster">KubernetesCluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addon_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[KubernetesClusterAddonProfile]]</span> = None<span class="p">, </span><span class="nx">api_server_authorized_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">auto_scaler_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[KubernetesClusterAutoScalerProfile]]</span> = None<span class="p">, </span><span class="nx">default_node_pool</span><span class="p">:</span> <span class="nx">Optional[Dict[KubernetesClusterDefaultNodePool]]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_pod_security_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[KubernetesClusterIdentity]]</span> = None<span class="p">, </span><span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[KubernetesClusterLinuxProfile]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[KubernetesClusterNetworkProfile]]</span> = None<span class="p">, </span><span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">private_link_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_based_access_control</span><span class="p">:</span> <span class="nx">Optional[Dict[KubernetesClusterRoleBasedAccessControl]]</span> = None<span class="p">, </span><span class="nx">service_principal</span><span class="p">:</span> <span class="nx">Optional[Dict[KubernetesClusterServicePrincipal]]</span> = None<span class="p">, </span><span class="nx">sku_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">windows_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[KubernetesClusterWindowsProfile]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/containerservice/#pulumi_azure.containerservice.KubernetesCluster">KubernetesCluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addon_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAddonProfileArgs]</span> = None<span class="p">, </span><span class="nx">api_server_authorized_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">auto_scaler_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAutoScalerProfileArgs]</span> = None<span class="p">, </span><span class="nx">default_node_pool</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterDefaultNodePoolArgs]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_pod_security_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterLinuxProfileArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">private_link_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_based_access_control</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterRoleBasedAccessControlArgs]</span> = None<span class="p">, </span><span class="nx">service_principal</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterServicePrincipalArgs]</span> = None<span class="p">, </span><span class="nx">sku_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">windows_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterWindowsProfileArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1101,7 +1101,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#default_node_pool_python" style="color: inherit; text-decoration: inherit;">default_<wbr>node_<wbr>pool</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Dict[Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `default_node_pool` block as defined below.
 {{% /md %}}</dd>
@@ -1134,7 +1134,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#addon_profile_python" style="color: inherit; text-decoration: inherit;">addon_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofile">Dict[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `addon_profile` block as defined below.
 {{% /md %}}</dd>
@@ -1156,7 +1156,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#auto_scaler_profile_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaler_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Dict[Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scaler_profile` block as defined below.
 {{% /md %}}</dd>
@@ -1189,7 +1189,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteridentity">Dict[Kubernetes<wbr>Cluster<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1211,7 +1211,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#linux_profile_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Dict[Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `linux_profile` block as defined below.
 {{% /md %}}</dd>
@@ -1244,7 +1244,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusternetworkprofile">Dict[Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_profile` block as defined below.
 {{% /md %}}</dd>
@@ -1287,7 +1287,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#role_based_access_control_python" style="color: inherit; text-decoration: inherit;">role_<wbr>based_<wbr>access_<wbr>control</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Dict[Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `role_based_access_control` block. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1298,7 +1298,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#service_principal_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Dict[Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `service_principal` block as documented below.
 {{% /md %}}</dd>
@@ -1320,7 +1320,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1331,7 +1331,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#windows_profile_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Dict[Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `windows_profile` block as defined below.
 {{% /md %}}</dd>
@@ -1743,7 +1743,7 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addon_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[KubernetesClusterAddonProfile]]</span> = None<span class="p">, </span><span class="nx">api_server_authorized_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">auto_scaler_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[KubernetesClusterAutoScalerProfile]]</span> = None<span class="p">, </span><span class="nx">default_node_pool</span><span class="p">:</span> <span class="nx">Optional[Dict[KubernetesClusterDefaultNodePool]]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_pod_security_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[KubernetesClusterIdentity]]</span> = None<span class="p">, </span><span class="nx">kube_admin_config_raw</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_admin_configs</span><span class="p">:</span> <span class="nx">Optional[List[KubernetesClusterKubeAdminConfig]]</span> = None<span class="p">, </span><span class="nx">kube_config_raw</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_configs</span><span class="p">:</span> <span class="nx">Optional[List[KubernetesClusterKubeConfig]]</span> = None<span class="p">, </span><span class="nx">kubelet_identities</span><span class="p">:</span> <span class="nx">Optional[List[KubernetesClusterKubeletIdentity]]</span> = None<span class="p">, </span><span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[KubernetesClusterLinuxProfile]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[KubernetesClusterNetworkProfile]]</span> = None<span class="p">, </span><span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">private_fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_based_access_control</span><span class="p">:</span> <span class="nx">Optional[Dict[KubernetesClusterRoleBasedAccessControl]]</span> = None<span class="p">, </span><span class="nx">service_principal</span><span class="p">:</span> <span class="nx">Optional[Dict[KubernetesClusterServicePrincipal]]</span> = None<span class="p">, </span><span class="nx">sku_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">windows_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[KubernetesClusterWindowsProfile]]</span> = None<span class="p">) -&gt;</span> KubernetesCluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addon_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAddonProfileArgs]</span> = None<span class="p">, </span><span class="nx">api_server_authorized_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">auto_scaler_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAutoScalerProfileArgs]</span> = None<span class="p">, </span><span class="nx">default_node_pool</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterDefaultNodePoolArgs]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_pod_security_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kube_admin_config_raw</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_admin_configs</span><span class="p">:</span> <span class="nx">Optional[List[KubernetesClusterKubeAdminConfigArgs]]</span> = None<span class="p">, </span><span class="nx">kube_config_raw</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_configs</span><span class="p">:</span> <span class="nx">Optional[List[KubernetesClusterKubeConfigArgs]]</span> = None<span class="p">, </span><span class="nx">kubelet_identities</span><span class="p">:</span> <span class="nx">Optional[List[KubernetesClusterKubeletIdentityArgs]]</span> = None<span class="p">, </span><span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterLinuxProfileArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">private_fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_based_access_control</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterRoleBasedAccessControlArgs]</span> = None<span class="p">, </span><span class="nx">service_principal</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterServicePrincipalArgs]</span> = None<span class="p">, </span><span class="nx">sku_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">windows_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterWindowsProfileArgs]</span> = None<span class="p">) -&gt;</span> KubernetesCluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2838,7 +2838,7 @@ The following state arguments are supported:
 <a href="#state_addon_profile_python" style="color: inherit; text-decoration: inherit;">addon_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofile">Dict[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `addon_profile` block as defined below.
 {{% /md %}}</dd>
@@ -2860,7 +2860,7 @@ The following state arguments are supported:
 <a href="#state_auto_scaler_profile_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaler_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Dict[Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scaler_profile` block as defined below.
 {{% /md %}}</dd>
@@ -2871,7 +2871,7 @@ The following state arguments are supported:
 <a href="#state_default_node_pool_python" style="color: inherit; text-decoration: inherit;">default_<wbr>node_<wbr>pool</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Dict[Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `default_node_pool` block as defined below.
 {{% /md %}}</dd>
@@ -2926,7 +2926,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteridentity">Dict[Kubernetes<wbr>Cluster<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2948,7 +2948,7 @@ The following state arguments are supported:
 <a href="#state_kube_admin_configs_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>admin_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterkubeadminconfig">List[Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterkubeadminconfig">List[Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 {{% /md %}}</dd>
@@ -2970,7 +2970,7 @@ The following state arguments are supported:
 <a href="#state_kube_configs_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterkubeconfig">List[Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterkubeconfig">List[Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `kube_config` block as defined below.
 {{% /md %}}</dd>
@@ -2981,7 +2981,7 @@ The following state arguments are supported:
 <a href="#state_kubelet_identities_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterkubeletidentity">List[Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterkubeletidentity">List[Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `kubelet_identity` block as defined below.
 {{% /md %}}</dd>
@@ -3003,7 +3003,7 @@ The following state arguments are supported:
 <a href="#state_linux_profile_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Dict[Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `linux_profile` block as defined below.
 {{% /md %}}</dd>
@@ -3036,7 +3036,7 @@ The following state arguments are supported:
 <a href="#state_network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusternetworkprofile">Dict[Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_profile` block as defined below.
 {{% /md %}}</dd>
@@ -3101,7 +3101,7 @@ The following state arguments are supported:
 <a href="#state_role_based_access_control_python" style="color: inherit; text-decoration: inherit;">role_<wbr>based_<wbr>access_<wbr>control</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Dict[Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `role_based_access_control` block. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -3112,7 +3112,7 @@ The following state arguments are supported:
 <a href="#state_service_principal_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Dict[Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `service_principal` block as documented below.
 {{% /md %}}</dd>
@@ -3134,7 +3134,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -3145,7 +3145,7 @@ The following state arguments are supported:
 <a href="#state_windows_profile_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Dict[Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `windows_profile` block as defined below.
 {{% /md %}}</dd>
@@ -3371,55 +3371,55 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aciconnectorlinux_python">
-<a href="#aciconnectorlinux_python" style="color: inherit; text-decoration: inherit;">aci<wbr>Connector<wbr>Linux</a>
+        <span id="aci_connector_linux_python">
+<a href="#aci_connector_linux_python" style="color: inherit; text-decoration: inherit;">aci_<wbr>connector_<wbr>linux</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileaciconnectorlinux">Dict[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Aci<wbr>Connector<wbr>Linux]</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileaciconnectorlinux">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Aci<wbr>Connector<wbr>Linux<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `aci_connector_linux` block. For more details, please visit [Create and configure an AKS cluster to use virtual nodes](https://docs.microsoft.com/en-us/azure/aks/virtual-nodes-portal).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azurepolicy_python">
-<a href="#azurepolicy_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Policy</a>
+        <span id="azure_policy_python">
+<a href="#azure_policy_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileazurepolicy">Dict[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileazurepolicy">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `azure_policy` block as defined below. For more details please visit [Understand Azure Policy for Azure Kubernetes Service](https://docs.microsoft.com/en-ie/azure/governance/policy/concepts/rego-for-aks)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpapplicationrouting_python">
-<a href="#httpapplicationrouting_python" style="color: inherit; text-decoration: inherit;">http<wbr>Application<wbr>Routing</a>
+        <span id="http_application_routing_python">
+<a href="#http_application_routing_python" style="color: inherit; text-decoration: inherit;">http_<wbr>application_<wbr>routing</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofilehttpapplicationrouting">Dict[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing]</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofilehttpapplicationrouting">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kubedashboard_python">
-<a href="#kubedashboard_python" style="color: inherit; text-decoration: inherit;">kube<wbr>Dashboard</a>
+        <span id="kube_dashboard_python">
+<a href="#kube_dashboard_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>dashboard</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofilekubedashboard">Dict[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard]</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofilekubedashboard">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `kube_dashboard` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="omsagent_python">
-<a href="#omsagent_python" style="color: inherit; text-decoration: inherit;">oms<wbr>Agent</a>
+        <span id="oms_agent_python">
+<a href="#oms_agent_python" style="color: inherit; text-decoration: inherit;">oms_<wbr>agent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Dict[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent]</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block as defined below. For more details, please visit [How to onboard Azure Monitor for containers](https://docs.microsoft.com/en-us/azure/monitoring/monitoring-container-insights-onboard).
 {{% /md %}}</dd>
@@ -3549,8 +3549,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="subnetname_python">
-<a href="#subnetname_python" style="color: inherit; text-decoration: inherit;">subnet<wbr>Name</a>
+        <span id="subnet_name_python">
+<a href="#subnet_name_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3773,8 +3773,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpapplicationroutingzonename_python">
-<a href="#httpapplicationroutingzonename_python" style="color: inherit; text-decoration: inherit;">http<wbr>Application<wbr>Routing<wbr>Zone<wbr>Name</a>
+        <span id="http_application_routing_zone_name_python">
+<a href="#http_application_routing_zone_name_python" style="color: inherit; text-decoration: inherit;">http_<wbr>application_<wbr>routing_<wbr>zone_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4041,11 +4041,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="omsagentidentities_python">
-<a href="#omsagentidentities_python" style="color: inherit; text-decoration: inherit;">oms<wbr>Agent<wbr>Identities</a>
+        <span id="oms_agent_identities_python">
+<a href="#oms_agent_identities_python" style="color: inherit; text-decoration: inherit;">oms_<wbr>agent_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagentomsagentidentity">List[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagentomsagentidentity">List[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `oms_agent_identity` block as defined below.
 {{% /md %}}</dd>
@@ -4219,8 +4219,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="userassignedidentityid_python">
-<a href="#userassignedidentityid_python" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Id</a>
+        <span id="user_assigned_identity_id_python">
+<a href="#user_assigned_identity_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4573,8 +4573,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="balancesimilarnodegroups_python">
-<a href="#balancesimilarnodegroups_python" style="color: inherit; text-decoration: inherit;">balance<wbr>Similar<wbr>Node<wbr>Groups</a>
+        <span id="balance_similar_node_groups_python">
+<a href="#balance_similar_node_groups_python" style="color: inherit; text-decoration: inherit;">balance_<wbr>similar_<wbr>node_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4584,8 +4584,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxgracefulterminationsec_python">
-<a href="#maxgracefulterminationsec_python" style="color: inherit; text-decoration: inherit;">max<wbr>Graceful<wbr>Termination<wbr>Sec</a>
+        <span id="max_graceful_termination_sec_python">
+<a href="#max_graceful_termination_sec_python" style="color: inherit; text-decoration: inherit;">max_<wbr>graceful_<wbr>termination_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4595,8 +4595,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scaledowndelayafteradd_python">
-<a href="#scaledowndelayafteradd_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Delay<wbr>After<wbr>Add</a>
+        <span id="scale_down_delay_after_add_python">
+<a href="#scale_down_delay_after_add_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>delay_<wbr>after_<wbr>add</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4606,8 +4606,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scaledowndelayafterdelete_python">
-<a href="#scaledowndelayafterdelete_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Delay<wbr>After<wbr>Delete</a>
+        <span id="scale_down_delay_after_delete_python">
+<a href="#scale_down_delay_after_delete_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>delay_<wbr>after_<wbr>delete</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4617,8 +4617,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scaledowndelayafterfailure_python">
-<a href="#scaledowndelayafterfailure_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Delay<wbr>After<wbr>Failure</a>
+        <span id="scale_down_delay_after_failure_python">
+<a href="#scale_down_delay_after_failure_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>delay_<wbr>after_<wbr>failure</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4628,8 +4628,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scaledownunneeded_python">
-<a href="#scaledownunneeded_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Unneeded</a>
+        <span id="scale_down_unneeded_python">
+<a href="#scale_down_unneeded_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>unneeded</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4639,8 +4639,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scaledownunready_python">
-<a href="#scaledownunready_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Unready</a>
+        <span id="scale_down_unready_python">
+<a href="#scale_down_unready_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>unready</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4650,8 +4650,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scaledownutilizationthreshold_python">
-<a href="#scaledownutilizationthreshold_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Utilization<wbr>Threshold</a>
+        <span id="scale_down_utilization_threshold_python">
+<a href="#scale_down_utilization_threshold_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>utilization_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4661,8 +4661,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scaninterval_python">
-<a href="#scaninterval_python" style="color: inherit; text-decoration: inherit;">scan<wbr>Interval</a>
+        <span id="scan_interval_python">
+<a href="#scan_interval_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5349,7 +5349,7 @@ The following state arguments are supported:
 <a href="#node_labels_python" style="color: inherit; text-decoration: inherit;">node_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in the Default Node Pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -5393,7 +5393,7 @@ The following state arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Node Pool.
 {{% /md %}}</dd>
@@ -5844,8 +5844,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientcertificate_python">
-<a href="#clientcertificate_python" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
+        <span id="client_certificate_python">
+<a href="#client_certificate_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5855,8 +5855,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientkey_python">
-<a href="#clientkey_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+        <span id="client_key_python">
+<a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5866,8 +5866,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clustercacertificate_python">
-<a href="#clustercacertificate_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ca<wbr>Certificate</a>
+        <span id="cluster_ca_certificate_python">
+<a href="#cluster_ca_certificate_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ca_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6154,8 +6154,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientcertificate_python">
-<a href="#clientcertificate_python" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
+        <span id="client_certificate_python">
+<a href="#client_certificate_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6165,8 +6165,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientkey_python">
-<a href="#clientkey_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+        <span id="client_key_python">
+<a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6176,8 +6176,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clustercacertificate_python">
-<a href="#clustercacertificate_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ca<wbr>Certificate</a>
+        <span id="cluster_ca_certificate_python">
+<a href="#cluster_ca_certificate_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ca_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6387,8 +6387,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="userassignedidentityid_python">
-<a href="#userassignedidentityid_python" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Id</a>
+        <span id="user_assigned_identity_id_python">
+<a href="#user_assigned_identity_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6525,7 +6525,7 @@ The following state arguments are supported:
 <a href="#ssh_key_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterlinuxprofilesshkey">Dict[Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterlinuxprofilesshkey">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `ssh_key` block. Only one is currently allowed. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -6611,8 +6611,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="keydata_python">
-<a href="#keydata_python" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
+        <span id="key_data_python">
+<a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6965,8 +6965,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="networkplugin_python">
-<a href="#networkplugin_python" style="color: inherit; text-decoration: inherit;">network<wbr>Plugin</a>
+        <span id="network_plugin_python">
+<a href="#network_plugin_python" style="color: inherit; text-decoration: inherit;">network_<wbr>plugin</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6976,8 +6976,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dnsserviceip_python">
-<a href="#dnsserviceip_python" style="color: inherit; text-decoration: inherit;">dns<wbr>Service<wbr>Ip</a>
+        <span id="dns_service_ip_python">
+<a href="#dns_service_ip_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>service_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6987,8 +6987,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dockerbridgecidr_python">
-<a href="#dockerbridgecidr_python" style="color: inherit; text-decoration: inherit;">docker<wbr>Bridge<wbr>Cidr</a>
+        <span id="docker_bridge_cidr_python">
+<a href="#docker_bridge_cidr_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>bridge_<wbr>cidr</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6998,19 +6998,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="loadbalancerprofile_python">
-<a href="#loadbalancerprofile_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Profile</a>
+        <span id="load_balancer_profile_python">
+<a href="#load_balancer_profile_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusternetworkprofileloadbalancerprofile">Dict[Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Load<wbr>Balancer<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#kubernetesclusternetworkprofileloadbalancerprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `load_balancer_profile` block. This can only be specified when `load_balancer_sku` is set to `Standard`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="loadbalancersku_python">
-<a href="#loadbalancersku_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Sku</a>
+        <span id="load_balancer_sku_python">
+<a href="#load_balancer_sku_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>sku</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7020,8 +7020,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networkpolicy_python">
-<a href="#networkpolicy_python" style="color: inherit; text-decoration: inherit;">network<wbr>Policy</a>
+        <span id="network_policy_python">
+<a href="#network_policy_python" style="color: inherit; text-decoration: inherit;">network_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7031,8 +7031,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="outboundtype_python">
-<a href="#outboundtype_python" style="color: inherit; text-decoration: inherit;">outbound<wbr>Type</a>
+        <span id="outbound_type_python">
+<a href="#outbound_type_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7042,8 +7042,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="podcidr_python">
-<a href="#podcidr_python" style="color: inherit; text-decoration: inherit;">pod<wbr>Cidr</a>
+        <span id="pod_cidr_python">
+<a href="#pod_cidr_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>cidr</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7053,8 +7053,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicecidr_python">
-<a href="#servicecidr_python" style="color: inherit; text-decoration: inherit;">service<wbr>Cidr</a>
+        <span id="service_cidr_python">
+<a href="#service_cidr_python" style="color: inherit; text-decoration: inherit;">service_<wbr>cidr</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7308,8 +7308,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="effectiveoutboundips_python">
-<a href="#effectiveoutboundips_python" style="color: inherit; text-decoration: inherit;">effective<wbr>Outbound<wbr>Ips</a>
+        <span id="effective_outbound_ips_python">
+<a href="#effective_outbound_ips_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>outbound_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -7330,8 +7330,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="managedoutboundipcount_python">
-<a href="#managedoutboundipcount_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Outbound<wbr>Ip<wbr>Count</a>
+        <span id="managed_outbound_ip_count_python">
+<a href="#managed_outbound_ip_count_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>outbound_<wbr>ip_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7341,8 +7341,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="outboundipaddressids_python">
-<a href="#outboundipaddressids_python" style="color: inherit; text-decoration: inherit;">outbound<wbr>Ip<wbr>Address<wbr>Ids</a>
+        <span id="outbound_ip_address_ids_python">
+<a href="#outbound_ip_address_ids_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ip_<wbr>address_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -7352,8 +7352,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="outboundipprefixids_python">
-<a href="#outboundipprefixids_python" style="color: inherit; text-decoration: inherit;">outbound<wbr>Ip<wbr>Prefix<wbr>Ids</a>
+        <span id="outbound_ip_prefix_ids_python">
+<a href="#outbound_ip_prefix_ids_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ip_<wbr>prefix_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -7363,8 +7363,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="outboundportsallocated_python">
-<a href="#outboundportsallocated_python" style="color: inherit; text-decoration: inherit;">outbound<wbr>Ports<wbr>Allocated</a>
+        <span id="outbound_ports_allocated_python">
+<a href="#outbound_ports_allocated_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ports_<wbr>allocated</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7501,7 +7501,7 @@ The following state arguments are supported:
 <a href="#azure_active_directory_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrolazureactivedirectory">Dict[Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrolazureactivedirectory">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_active_directory` block.
 {{% /md %}}</dd>
@@ -7752,8 +7752,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="admingroupobjectids_python">
-<a href="#admingroupobjectids_python" style="color: inherit; text-decoration: inherit;">admin<wbr>Group<wbr>Object<wbr>Ids</a>
+        <span id="admin_group_object_ids_python">
+<a href="#admin_group_object_ids_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>group_<wbr>object_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -7763,8 +7763,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientappid_python">
-<a href="#clientappid_python" style="color: inherit; text-decoration: inherit;">client<wbr>App<wbr>Id</a>
+        <span id="client_app_id_python">
+<a href="#client_app_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>app_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7785,8 +7785,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serverappid_python">
-<a href="#serverappid_python" style="color: inherit; text-decoration: inherit;">server<wbr>App<wbr>Id</a>
+        <span id="server_app_id_python">
+<a href="#server_app_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>app_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7796,8 +7796,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serverappsecret_python">
-<a href="#serverappsecret_python" style="color: inherit; text-decoration: inherit;">server<wbr>App<wbr>Secret</a>
+        <span id="server_app_secret_python">
+<a href="#server_app_secret_python" style="color: inherit; text-decoration: inherit;">server_<wbr>app_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

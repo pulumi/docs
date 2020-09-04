@@ -76,7 +76,7 @@ import pulumi_azure as azure
 
 example = azure.privatelink.get_service_endpoint_connections(service_id=azurerm_private_link_service["example"]["id"],
     resource_group_name=azurerm_resource_group["example"]["name"])
-pulumi.export("privateEndpointStatus", example.private_endpoint_connections[0]["status"])
+pulumi.export("privateEndpointStatus", example.private_endpoint_connections[0].status)
 ```
 
 {{% /example %}}
@@ -818,8 +818,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="actionrequired_python">
-<a href="#actionrequired_python" style="color: inherit; text-decoration: inherit;">action<wbr>Required</a>
+        <span id="action_required_python">
+<a href="#action_required_python" style="color: inherit; text-decoration: inherit;">action_<wbr>required</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -829,8 +829,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="connectionid_python">
-<a href="#connectionid_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
+        <span id="connection_id_python">
+<a href="#connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -840,8 +840,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="connectionname_python">
-<a href="#connectionname_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
+        <span id="connection_name_python">
+<a href="#connection_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -862,8 +862,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="privateendpointid_python">
-<a href="#privateendpointid_python" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Id</a>
+        <span id="private_endpoint_id_python">
+<a href="#private_endpoint_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -873,8 +873,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="privateendpointname_python">
-<a href="#privateendpointname_python" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Name</a>
+        <span id="private_endpoint_name_python">
+<a href="#private_endpoint_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

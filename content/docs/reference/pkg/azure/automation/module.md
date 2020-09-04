@@ -26,25 +26,7 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
-example_account = azure.automation.Account("exampleAccount",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    sku=[{
-        "name": "Basic",
-    }])
-example_module = azure.automation.Module("exampleModule",
-    resource_group_name=example_resource_group.name,
-    automation_account_name=example_account.name,
-    module_link={
-        "uri": "https://devopsgallerystorage.blob.core.windows.net/packages/xactivedirectory.2.19.0.nupkg",
-    })
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example typescript %}}
@@ -84,7 +66,7 @@ const exampleModule = new azure.automation.Module("exampleModule", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/automation/#pulumi_azure.automation.Module">Module</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">module_link</span><span class="p">:</span> <span class="nx">Optional[Dict[ModuleModuleLink]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/automation/#pulumi_azure.automation.Module">Module</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">module_link</span><span class="p">:</span> <span class="nx">Optional[ModuleModuleLinkArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -426,7 +408,7 @@ The Module resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#module_link_python" style="color: inherit; text-decoration: inherit;">module_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modulemodulelink">Dict[Module<wbr>Module<wbr>Link]</a></span>
+        <span class="property-type"><a href="#modulemodulelink">Module<wbr>Module<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The published Module link.
 {{% /md %}}</dd>
@@ -552,7 +534,7 @@ Get an existing Module resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">module_link</span><span class="p">:</span> <span class="nx">Optional[Dict[ModuleModuleLink]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Module</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">module_link</span><span class="p">:</span> <span class="nx">Optional[ModuleModuleLinkArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Module</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -836,7 +818,7 @@ The following state arguments are supported:
 <a href="#state_module_link_python" style="color: inherit; text-decoration: inherit;">module_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modulemodulelink">Dict[Module<wbr>Module<wbr>Link]</a></span>
+        <span class="property-type"><a href="#modulemodulelink">Module<wbr>Module<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The published Module link.
 {{% /md %}}</dd>
@@ -997,7 +979,7 @@ The following state arguments are supported:
 <a href="#hash_python" style="color: inherit; text-decoration: inherit;">hash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modulemodulelinkhash">Dict[Module<wbr>Module<wbr>Link<wbr>Hash]</a></span>
+        <span class="property-type"><a href="#modulemodulelinkhash">Module<wbr>Module<wbr>Link<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

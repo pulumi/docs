@@ -188,9 +188,9 @@ example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", locati
 example_account = azure.datashare.Account("exampleAccount",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    identity={
-        "type": "SystemAssigned",
-    })
+    identity=azure.datashare.AccountIdentityArgs(
+        type="SystemAssigned",
+    ))
 example_share = azure.datashare.Share("exampleShare",
     account_id=example_account.id,
     kind="CopyBased")
@@ -210,11 +210,11 @@ example_assignment = azure.authorization.Assignment("exampleAssignment",
 example_dataset_blob_storage = azure.datashare.DatasetBlobStorage("exampleDatasetBlobStorage",
     data_share_id=example_share.id,
     container_name=example_container.name,
-    storage_account={
-        "name": example_storage / account_account["name"],
-        "resource_group_name": example_storage / account_account["resourceGroupName"],
-        "subscription_id": "00000000-0000-0000-0000-000000000000",
-    },
+    storage_account=azure.datashare.DatasetBlobStorageStorageAccountArgs(
+        name=example_storage / account_account["name"],
+        resource_group_name=example_storage / account_account["resourceGroupName"],
+        subscription_id="00000000-0000-0000-0000-000000000000",
+    ),
     file_path="myfile.txt",
     opts=ResourceOptions(depends_on=[example_assignment]))
 ```
@@ -286,7 +286,7 @@ const exampleDatasetBlobStorage = new azure.datashare.DatasetBlobStorage("exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datashare/#pulumi_azure.datashare.DatasetBlobStorage">DatasetBlobStorage</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_share_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account</span><span class="p">:</span> <span class="nx">Optional[Dict[DatasetBlobStorageStorageAccount]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datashare/#pulumi_azure.datashare.DatasetBlobStorage">DatasetBlobStorage</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_share_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account</span><span class="p">:</span> <span class="nx">Optional[DatasetBlobStorageStorageAccountArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -705,7 +705,7 @@ The DatasetBlobStorage resource accepts the following [input]({{< relref "/docs/
 <a href="#storage_account_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetblobstoragestorageaccount">Dict[Dataset<wbr>Blob<wbr>Storage<wbr>Storage<wbr>Account]</a></span>
+        <span class="property-type"><a href="#datasetblobstoragestorageaccount">Dataset<wbr>Blob<wbr>Storage<wbr>Storage<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account` block as defined below.
 {{% /md %}}</dd>
@@ -886,7 +886,7 @@ Get an existing DatasetBlobStorage resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_share_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account</span><span class="p">:</span> <span class="nx">Optional[Dict[DatasetBlobStorageStorageAccount]]</span> = None<span class="p">) -&gt;</span> DatasetBlobStorage</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_share_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account</span><span class="p">:</span> <span class="nx">Optional[DatasetBlobStorageStorageAccountArgs]</span> = None<span class="p">) -&gt;</span> DatasetBlobStorage</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1324,7 +1324,7 @@ The following state arguments are supported:
 <a href="#state_storage_account_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetblobstoragestorageaccount">Dict[Dataset<wbr>Blob<wbr>Storage<wbr>Storage<wbr>Account]</a></span>
+        <span class="property-type"><a href="#datasetblobstoragestorageaccount">Dataset<wbr>Blob<wbr>Storage<wbr>Storage<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account` block as defined below.
 {{% /md %}}</dd>

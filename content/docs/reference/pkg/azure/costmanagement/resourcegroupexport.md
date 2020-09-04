@@ -131,15 +131,15 @@ example_resource_group_export = azure.costmanagement.ResourceGroupExport("exampl
     recurrence_type="Monthly",
     recurrence_period_start="2020-08-18T00:00:00Z",
     recurrence_period_end="2020-09-18T00:00:00Z",
-    delivery_info={
-        "storage_account_id": example_account.id,
-        "container_name": "examplecontainer",
-        "rootFolderPath": "/root/updated",
-    },
-    query={
-        "type": "Usage",
-        "timeFrame": "WeekToDate",
-    })
+    delivery_info=azure.costmanagement.ResourceGroupExportDeliveryInfoArgs(
+        storage_account_id=example_account.id,
+        container_name="examplecontainer",
+        root_folder_path="/root/updated",
+    ),
+    query=azure.costmanagement.ResourceGroupExportQueryArgs(
+        type="Usage",
+        time_frame="WeekToDate",
+    ))
 ```
 
 {{% /example %}}
@@ -188,7 +188,7 @@ const exampleResourceGroupExport = new azure.costmanagement.ResourceGroupExport(
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/costmanagement/#pulumi_azure.costmanagement.ResourceGroupExport">ResourceGroupExport</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">delivery_info</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceGroupExportDeliveryInfo]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceGroupExportQuery]]</span> = None<span class="p">, </span><span class="nx">recurrence_period_end</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recurrence_period_start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recurrence_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/costmanagement/#pulumi_azure.costmanagement.ResourceGroupExport">ResourceGroupExport</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">delivery_info</span><span class="p">:</span> <span class="nx">Optional[ResourceGroupExportDeliveryInfoArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[ResourceGroupExportQueryArgs]</span> = None<span class="p">, </span><span class="nx">recurrence_period_end</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recurrence_period_start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recurrence_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -651,7 +651,7 @@ The ResourceGroupExport resource accepts the following [input]({{< relref "/docs
 <a href="#delivery_info_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcegroupexportdeliveryinfo">Dict[Resource<wbr>Group<wbr>Export<wbr>Delivery<wbr>Info]</a></span>
+        <span class="property-type"><a href="#resourcegroupexportdeliveryinfo">Resource<wbr>Group<wbr>Export<wbr>Delivery<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `delivery_info` block as defined below.
 {{% /md %}}</dd>
@@ -662,7 +662,7 @@ The ResourceGroupExport resource accepts the following [input]({{< relref "/docs
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcegroupexportquery">Dict[Resource<wbr>Group<wbr>Export<wbr>Query]</a></span>
+        <span class="property-type"><a href="#resourcegroupexportquery">Resource<wbr>Group<wbr>Export<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `query` block as defined below.
 {{% /md %}}</dd>
@@ -832,7 +832,7 @@ Get an existing ResourceGroupExport resource's state with the given name, ID, an
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">delivery_info</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceGroupExportDeliveryInfo]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceGroupExportQuery]]</span> = None<span class="p">, </span><span class="nx">recurrence_period_end</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recurrence_period_start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recurrence_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ResourceGroupExport</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">delivery_info</span><span class="p">:</span> <span class="nx">Optional[ResourceGroupExportDeliveryInfoArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[ResourceGroupExportQueryArgs]</span> = None<span class="p">, </span><span class="nx">recurrence_period_end</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recurrence_period_start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recurrence_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ResourceGroupExport</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1248,7 +1248,7 @@ The following state arguments are supported:
 <a href="#state_delivery_info_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcegroupexportdeliveryinfo">Dict[Resource<wbr>Group<wbr>Export<wbr>Delivery<wbr>Info]</a></span>
+        <span class="property-type"><a href="#resourcegroupexportdeliveryinfo">Resource<wbr>Group<wbr>Export<wbr>Delivery<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `delivery_info` block as defined below.
 {{% /md %}}</dd>
@@ -1270,7 +1270,7 @@ The following state arguments are supported:
 <a href="#state_query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcegroupexportquery">Dict[Resource<wbr>Group<wbr>Export<wbr>Query]</a></span>
+        <span class="property-type"><a href="#resourcegroupexportquery">Resource<wbr>Group<wbr>Export<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `query` block as defined below.
 {{% /md %}}</dd>
@@ -1485,8 +1485,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="rootfolderpath_python">
-<a href="#rootfolderpath_python" style="color: inherit; text-decoration: inherit;">root<wbr>Folder<wbr>Path</a>
+        <span id="root_folder_path_python">
+<a href="#root_folder_path_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1619,8 +1619,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="timeframe_python">
-<a href="#timeframe_python" style="color: inherit; text-decoration: inherit;">time<wbr>Frame</a>
+        <span id="time_frame_python">
+<a href="#time_frame_python" style="color: inherit; text-decoration: inherit;">time_<wbr>frame</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

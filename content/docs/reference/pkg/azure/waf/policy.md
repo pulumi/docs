@@ -295,81 +295,81 @@ example_policy = azure.waf.Policy("examplePolicy",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
     custom_rules=[
-        {
-            "name": "Rule1",
-            "priority": 1,
-            "ruleType": "MatchRule",
-            "matchConditions": [{
-                "matchVariables": [{
-                    "variableName": "RemoteAddr",
-                }],
-                "operator": "IPMatch",
-                "negationCondition": False,
-                "matchValues": [
+        azure.waf.PolicyCustomRuleArgs(
+            name="Rule1",
+            priority=1,
+            rule_type="MatchRule",
+            match_conditions=[azure.waf.PolicyCustomRuleMatchConditionArgs(
+                match_variables=[azure.waf.PolicyCustomRuleMatchConditionMatchVariableArgs(
+                    variable_name="RemoteAddr",
+                )],
+                operator="IPMatch",
+                negation_condition=False,
+                match_values=[
                     "192.168.1.0/24",
                     "10.0.0.0/24",
                 ],
-            }],
-            "action": "Block",
-        },
-        {
-            "name": "Rule2",
-            "priority": 2,
-            "ruleType": "MatchRule",
-            "matchConditions": [
-                {
-                    "matchVariables": [{
-                        "variableName": "RemoteAddr",
-                    }],
-                    "operator": "IPMatch",
-                    "negationCondition": False,
-                    "matchValues": ["192.168.1.0/24"],
-                },
-                {
-                    "matchVariables": [{
-                        "variableName": "RequestHeaders",
-                        "selector": "UserAgent",
-                    }],
-                    "operator": "Contains",
-                    "negationCondition": False,
-                    "matchValues": ["Windows"],
-                },
+            )],
+            action="Block",
+        ),
+        azure.waf.PolicyCustomRuleArgs(
+            name="Rule2",
+            priority=2,
+            rule_type="MatchRule",
+            match_conditions=[
+                azure.waf.PolicyCustomRuleMatchConditionArgs(
+                    match_variables=[azure.waf.PolicyCustomRuleMatchConditionMatchVariableArgs(
+                        variable_name="RemoteAddr",
+                    )],
+                    operator="IPMatch",
+                    negation_condition=False,
+                    match_values=["192.168.1.0/24"],
+                ),
+                azure.waf.PolicyCustomRuleMatchConditionArgs(
+                    match_variables=[azure.waf.PolicyCustomRuleMatchConditionMatchVariableArgs(
+                        variable_name="RequestHeaders",
+                        selector="UserAgent",
+                    )],
+                    operator="Contains",
+                    negation_condition=False,
+                    match_values=["Windows"],
+                ),
             ],
-            "action": "Block",
-        },
+            action="Block",
+        ),
     ],
-    policy_settings={
-        "enabled": True,
-        "mode": "Prevention",
-        "requestBodyCheck": True,
-        "fileUploadLimitInMb": 100,
-        "maxRequestBodySizeInKb": 128,
-    },
-    managed_rules={
-        "exclusions": [
-            {
-                "matchVariable": "RequestHeaderNames",
-                "selector": "x-company-secret-header",
-                "selectorMatchOperator": "Equals",
-            },
-            {
-                "matchVariable": "RequestCookieNames",
-                "selector": "too-tasty",
-                "selectorMatchOperator": "EndsWith",
-            },
+    policy_settings=azure.waf.PolicyPolicySettingsArgs(
+        enabled=True,
+        mode="Prevention",
+        request_body_check=True,
+        file_upload_limit_in_mb=100,
+        max_request_body_size_in_kb=128,
+    ),
+    managed_rules=azure.waf.PolicyManagedRulesArgs(
+        exclusions=[
+            azure.waf.PolicyManagedRulesExclusionArgs(
+                match_variable="RequestHeaderNames",
+                selector="x-company-secret-header",
+                selector_match_operator="Equals",
+            ),
+            azure.waf.PolicyManagedRulesExclusionArgs(
+                match_variable="RequestCookieNames",
+                selector="too-tasty",
+                selector_match_operator="EndsWith",
+            ),
         ],
-        "managedRuleSets": [{
-            "type": "OWASP",
-            "version": "3.1",
-            "ruleGroupOverrides": [{
-                "ruleGroupName": "REQUEST-920-PROTOCOL-ENFORCEMENT",
-                "disabledRules": [
+        managed_rule_sets=[azure.waf.PolicyManagedRulesManagedRuleSetArgs(
+            type="OWASP",
+            version="3.1",
+            rule_group_overrides=[azure.waf.PolicyManagedRulesManagedRuleSetRuleGroupOverrideArgs(
+                rule_group_name="REQUEST-920-PROTOCOL-ENFORCEMENT",
+                disabled_rules=[
                     "920300",
                     "920440",
                 ],
-            }],
-        }],
-    })
+            )],
+        )],
+    ))
 ```
 
 {{% /example %}}
@@ -477,7 +477,7 @@ const examplePolicy = new azure.waf.Policy("examplePolicy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/waf/#pulumi_azure.waf.Policy">Policy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[List[PolicyCustomRule]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[Dict[PolicyManagedRules]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[PolicyPolicySettings]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/waf/#pulumi_azure.waf.Policy">Policy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[List[PolicyCustomRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[PolicyManagedRulesArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_settings</span><span class="p">:</span> <span class="nx">Optional[PolicyPolicySettingsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -907,7 +907,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#managed_rules_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policymanagedrules">Dict[Policy<wbr>Managed<wbr>Rules]</a></span>
+        <span class="property-type"><a href="#policymanagedrules">Policy<wbr>Managed<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `managed_rules` blocks as defined below.
 {{% /md %}}</dd>
@@ -929,7 +929,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#custom_rules_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policycustomrule">List[Policy<wbr>Custom<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#policycustomrule">List[Policy<wbr>Custom<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd>
@@ -962,7 +962,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#policy_settings_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypolicysettings">Dict[Policy<wbr>Policy<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#policypolicysettings">Policy<wbr>Policy<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `policy_settings` block as defined below.
 {{% /md %}}</dd>
@@ -973,7 +973,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Web Application Firewall Policy.
 {{% /md %}}</dd>
@@ -1077,7 +1077,7 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[List[PolicyCustomRule]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[Dict[PolicyManagedRules]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[PolicyPolicySettings]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[List[PolicyCustomRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[PolicyManagedRulesArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_settings</span><span class="p">:</span> <span class="nx">Optional[PolicyPolicySettingsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1449,7 +1449,7 @@ The following state arguments are supported:
 <a href="#state_custom_rules_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policycustomrule">List[Policy<wbr>Custom<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#policycustomrule">List[Policy<wbr>Custom<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd>
@@ -1471,7 +1471,7 @@ The following state arguments are supported:
 <a href="#state_managed_rules_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policymanagedrules">Dict[Policy<wbr>Managed<wbr>Rules]</a></span>
+        <span class="property-type"><a href="#policymanagedrules">Policy<wbr>Managed<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `managed_rules` blocks as defined below.
 {{% /md %}}</dd>
@@ -1493,7 +1493,7 @@ The following state arguments are supported:
 <a href="#state_policy_settings_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypolicysettings">Dict[Policy<wbr>Policy<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#policypolicysettings">Policy<wbr>Policy<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `policy_settings` block as defined below.
 {{% /md %}}</dd>
@@ -1515,7 +1515,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Web Application Firewall Policy.
 {{% /md %}}</dd>
@@ -1752,11 +1752,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchconditions_python">
-<a href="#matchconditions_python" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
+        <span id="match_conditions_python">
+<a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policycustomrulematchcondition">List[Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#policycustomrulematchcondition">List[Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `match_conditions` blocks as defined below.
 {{% /md %}}</dd>
@@ -1774,8 +1774,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="ruletype_python">
-<a href="#ruletype_python" style="color: inherit; text-decoration: inherit;">rule<wbr>Type</a>
+        <span id="rule_type_python">
+<a href="#rule_type_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2007,8 +2007,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2018,11 +2018,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvariables_python">
-<a href="#matchvariables_python" style="color: inherit; text-decoration: inherit;">match<wbr>Variables</a>
+        <span id="match_variables_python">
+<a href="#match_variables_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policycustomrulematchconditionmatchvariable">List[Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Match<wbr>Variable]</a></span>
+        <span class="property-type"><a href="#policycustomrulematchconditionmatchvariable">List[Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Match<wbr>Variable<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `match_variables` blocks as defined below.
 {{% /md %}}</dd>
@@ -2040,8 +2040,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negationcondition_python">
-<a href="#negationcondition_python" style="color: inherit; text-decoration: inherit;">negation<wbr>Condition</a>
+        <span id="negation_condition_python">
+<a href="#negation_condition_python" style="color: inherit; text-decoration: inherit;">negation_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2174,8 +2174,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="variablename_python">
-<a href="#variablename_python" style="color: inherit; text-decoration: inherit;">variable<wbr>Name</a>
+        <span id="variable_name_python">
+<a href="#variable_name_python" style="color: inherit; text-decoration: inherit;">variable_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2308,11 +2308,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="managedrulesets_python">
-<a href="#managedrulesets_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Rule<wbr>Sets</a>
+        <span id="managed_rule_sets_python">
+<a href="#managed_rule_sets_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rule_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policymanagedrulesmanagedruleset">List[Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set]</a></span>
+        <span class="property-type"><a href="#policymanagedrulesmanagedruleset">List[Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_rule_set` block defined below.
 {{% /md %}}</dd>
@@ -2323,7 +2323,7 @@ The following state arguments are supported:
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policymanagedrulesexclusion">List[Policy<wbr>Managed<wbr>Rules<wbr>Exclusion]</a></span>
+        <span class="property-type"><a href="#policymanagedrulesexclusion">List[Policy<wbr>Managed<wbr>Rules<wbr>Exclusion<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `exclusion` block defined below.
 {{% /md %}}</dd>
@@ -2475,8 +2475,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvariable_python">
-<a href="#matchvariable_python" style="color: inherit; text-decoration: inherit;">match<wbr>Variable</a>
+        <span id="match_variable_python">
+<a href="#match_variable_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variable</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2497,8 +2497,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="selectormatchoperator_python">
-<a href="#selectormatchoperator_python" style="color: inherit; text-decoration: inherit;">selector<wbr>Match<wbr>Operator</a>
+        <span id="selector_match_operator_python">
+<a href="#selector_match_operator_python" style="color: inherit; text-decoration: inherit;">selector_<wbr>match_<wbr>operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2664,11 +2664,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rulegroupoverrides_python">
-<a href="#rulegroupoverrides_python" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Overrides</a>
+        <span id="rule_group_overrides_python">
+<a href="#rule_group_overrides_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policymanagedrulesmanagedrulesetrulegroupoverride">List[Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set<wbr>Rule<wbr>Group<wbr>Override]</a></span>
+        <span class="property-type"><a href="#policymanagedrulesmanagedrulesetrulegroupoverride">List[Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set<wbr>Rule<wbr>Group<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule_group_override` block defined below.
 {{% /md %}}</dd>
@@ -2798,8 +2798,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="disabledrules_python">
-<a href="#disabledrules_python" style="color: inherit; text-decoration: inherit;">disabled<wbr>Rules</a>
+        <span id="disabled_rules_python">
+<a href="#disabled_rules_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2809,8 +2809,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="rulegroupname_python">
-<a href="#rulegroupname_python" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Name</a>
+        <span id="rule_group_name_python">
+<a href="#rule_group_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3036,8 +3036,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fileuploadlimitinmb_python">
-<a href="#fileuploadlimitinmb_python" style="color: inherit; text-decoration: inherit;">file<wbr>Upload<wbr>Limit<wbr>In<wbr>Mb</a>
+        <span id="file_upload_limit_in_mb_python">
+<a href="#file_upload_limit_in_mb_python" style="color: inherit; text-decoration: inherit;">file_<wbr>upload_<wbr>limit_<wbr>in_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3046,8 +3046,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxrequestbodysizeinkb_python">
-<a href="#maxrequestbodysizeinkb_python" style="color: inherit; text-decoration: inherit;">max<wbr>Request<wbr>Body<wbr>Size<wbr>In<wbr>Kb</a>
+        <span id="max_request_body_size_in_kb_python">
+<a href="#max_request_body_size_in_kb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>request_<wbr>body_<wbr>size_<wbr>in_<wbr>kb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3067,8 +3067,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestbodycheck_python">
-<a href="#requestbodycheck_python" style="color: inherit; text-decoration: inherit;">request<wbr>Body<wbr>Check</a>
+        <span id="request_body_check_python">
+<a href="#request_body_check_python" style="color: inherit; text-decoration: inherit;">request_<wbr>body_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

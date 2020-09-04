@@ -755,7 +755,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}a mapping of tags to assigned to the resource.
 {{% /md %}}</dd>
@@ -1021,8 +1021,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="bloburi_python">
-<a href="#bloburi_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Uri</a>
+        <span id="blob_uri_python">
+<a href="#blob_uri_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1065,8 +1065,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sizegb_python">
-<a href="#sizegb_python" style="color: inherit; text-decoration: inherit;">size<wbr>Gb</a>
+        <span id="size_gb_python">
+<a href="#size_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1320,8 +1320,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="bloburi_python">
-<a href="#bloburi_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Uri</a>
+        <span id="blob_uri_python">
+<a href="#blob_uri_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1353,8 +1353,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="osstate_python">
-<a href="#osstate_python" style="color: inherit; text-decoration: inherit;">os<wbr>State</a>
+        <span id="os_state_python">
+<a href="#os_state_python" style="color: inherit; text-decoration: inherit;">os_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1375,8 +1375,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sizegb_python">
-<a href="#sizegb_python" style="color: inherit; text-decoration: inherit;">size<wbr>Gb</a>
+        <span id="size_gb_python">
+<a href="#size_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

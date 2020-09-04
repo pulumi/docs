@@ -255,36 +255,36 @@ internal = azure.network.Subnet("internal",
 main_network_interface = azure.network.NetworkInterface("mainNetworkInterface",
     location=main_resource_group.location,
     resource_group_name=main_resource_group.name,
-    ip_configurations=[{
-        "name": "internal",
-        "subnet_id": internal.id,
-        "privateIpAddressAllocation": "Dynamic",
-    }])
+    ip_configurations=[azure.network.NetworkInterfaceIpConfigurationArgs(
+        name="internal",
+        subnet_id=internal.id,
+        private_ip_address_allocation="Dynamic",
+    )])
 example_virtual_machine = azure.compute.VirtualMachine("exampleVirtualMachine",
     location=main_resource_group.location,
     resource_group_name=main_resource_group.name,
     network_interface_ids=[main_network_interface.id],
     vm_size="Standard_F2",
-    storage_image_reference={
-        "publisher": "Canonical",
-        "offer": "UbuntuServer",
-        "sku": "16.04-LTS",
-        "version": "latest",
-    },
-    storage_os_disk={
-        "name": "myosdisk1",
-        "caching": "ReadWrite",
-        "create_option": "FromImage",
-        "managedDiskType": "Standard_LRS",
-    },
-    os_profile={
-        "computer_name": vm_name,
-        "admin_username": "testadmin",
-        "admin_password": "Password1234!",
-    },
-    os_profile_linux_config={
-        "disable_password_authentication": False,
-    })
+    storage_image_reference=azure.compute.VirtualMachineStorageImageReferenceArgs(
+        publisher="Canonical",
+        offer="UbuntuServer",
+        sku="16.04-LTS",
+        version="latest",
+    ),
+    storage_os_disk=azure.compute.VirtualMachineStorageOsDiskArgs(
+        name="myosdisk1",
+        caching="ReadWrite",
+        create_option="FromImage",
+        managed_disk_type="Standard_LRS",
+    ),
+    os_profile=azure.compute.VirtualMachineOsProfileArgs(
+        computer_name=vm_name,
+        admin_username="testadmin",
+        admin_password="Password1234!",
+    ),
+    os_profile_linux_config=azure.compute.VirtualMachineOsProfileLinuxConfigArgs(
+        disable_password_authentication=False,
+    ))
 example_managed_disk = azure.compute.ManagedDisk("exampleManagedDisk",
     location=main_resource_group.location,
     resource_group_name=main_resource_group.name,
@@ -294,7 +294,7 @@ example_managed_disk = azure.compute.ManagedDisk("exampleManagedDisk",
 example_data_disk_attachment = azure.compute.DataDiskAttachment("exampleDataDiskAttachment",
     managed_disk_id=example_managed_disk.id,
     virtual_machine_id=example_virtual_machine.id,
-    lun="10",
+    lun=10,
     caching="ReadWrite")
 ```
 

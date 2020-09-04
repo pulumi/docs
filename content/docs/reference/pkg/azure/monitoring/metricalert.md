@@ -191,29 +191,29 @@ to_monitor = azure.storage.Account("toMonitor",
 main_action_group = azure.monitoring.ActionGroup("mainActionGroup",
     resource_group_name=main_resource_group.name,
     short_name="exampleact",
-    webhook_receivers=[{
-        "name": "callmyapi",
-        "service_uri": "http://example.com/alert",
-    }])
+    webhook_receivers=[azure.monitoring.ActionGroupWebhookReceiverArgs(
+        name="callmyapi",
+        service_uri="http://example.com/alert",
+    )])
 example = azure.monitoring.MetricAlert("example",
     resource_group_name=main_resource_group.name,
     scopes=[to_monitor.id],
     description="Action will be triggered when Transactions count is greater than 50.",
-    criterias=[{
-        "metricNamespace": "Microsoft.Storage/storageAccounts",
-        "metricName": "Transactions",
-        "aggregation": "Total",
-        "operator": "GreaterThan",
-        "threshold": 50,
-        "dimensions": [{
-            "name": "ApiName",
-            "operator": "Include",
-            "values": ["*"],
-        }],
-    }],
-    actions=[{
-        "action_group_id": main_action_group.id,
-    }])
+    criterias=[azure.monitoring.MetricAlertCriteriaArgs(
+        metric_namespace="Microsoft.Storage/storageAccounts",
+        metric_name="Transactions",
+        aggregation="Total",
+        operator="GreaterThan",
+        threshold=50,
+        dimensions=[azure.monitoring.MetricAlertCriteriaDimensionArgs(
+            name="ApiName",
+            operator="Include",
+            values=["*"],
+        )],
+    )],
+    actions=[azure.monitoring.MetricAlertActionArgs(
+        action_group_id=main_action_group.id,
+    )])
 ```
 
 {{% /example %}}
@@ -275,7 +275,7 @@ const example = new azure.monitoring.MetricAlert("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.MetricAlert">MetricAlert</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[MetricAlertAction]]</span> = None<span class="p">, </span><span class="nx">application_insights_web_test_location_availability_criteria</span><span class="p">:</span> <span class="nx">Optional[Dict[MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria]]</span> = None<span class="p">, </span><span class="nx">auto_mitigate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">criterias</span><span class="p">:</span> <span class="nx">Optional[List[MetricAlertCriteria]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamic_criteria</span><span class="p">:</span> <span class="nx">Optional[Dict[MetricAlertDynamicCriteria]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">window_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.MetricAlert">MetricAlert</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[MetricAlertActionArgs]]</span> = None<span class="p">, </span><span class="nx">application_insights_web_test_location_availability_criteria</span><span class="p">:</span> <span class="nx">Optional[MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaArgs]</span> = None<span class="p">, </span><span class="nx">auto_mitigate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">criterias</span><span class="p">:</span> <span class="nx">Optional[List[MetricAlertCriteriaArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamic_criteria</span><span class="p">:</span> <span class="nx">Optional[MetricAlertDynamicCriteriaArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">window_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1024,7 +1024,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertaction">List[Metric<wbr>Alert<wbr>Action]</a></span>
+        <span class="property-type"><a href="#metricalertaction">List[Metric<wbr>Alert<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `action` blocks as defined below.
 {{% /md %}}</dd>
@@ -1035,7 +1035,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#application_insights_web_test_location_availability_criteria_python" style="color: inherit; text-decoration: inherit;">application_<wbr>insights_<wbr>web_<wbr>test_<wbr>location_<wbr>availability_<wbr>criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Dict[Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria]</a></span>
+        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `application_insights_web_test_location_availability_criteria` block as defined below.
 {{% /md %}}</dd>
@@ -1057,7 +1057,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#criterias_python" style="color: inherit; text-decoration: inherit;">criterias</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertcriteria">List[Metric<wbr>Alert<wbr>Criteria]</a></span>
+        <span class="property-type"><a href="#metricalertcriteria">List[Metric<wbr>Alert<wbr>Criteria<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more (static) `criteria` blocks as defined below.
 {{% /md %}}</dd>
@@ -1079,7 +1079,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#dynamic_criteria_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertdynamiccriteria">Dict[Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria]</a></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteria">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `dynamic_criteria` block as defined below.
 {{% /md %}}</dd>
@@ -1134,7 +1134,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1271,7 +1271,7 @@ Get an existing MetricAlert resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[MetricAlertAction]]</span> = None<span class="p">, </span><span class="nx">application_insights_web_test_location_availability_criteria</span><span class="p">:</span> <span class="nx">Optional[Dict[MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria]]</span> = None<span class="p">, </span><span class="nx">auto_mitigate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">criterias</span><span class="p">:</span> <span class="nx">Optional[List[MetricAlertCriteria]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamic_criteria</span><span class="p">:</span> <span class="nx">Optional[Dict[MetricAlertDynamicCriteria]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">window_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> MetricAlert</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[MetricAlertActionArgs]]</span> = None<span class="p">, </span><span class="nx">application_insights_web_test_location_availability_criteria</span><span class="p">:</span> <span class="nx">Optional[MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaArgs]</span> = None<span class="p">, </span><span class="nx">auto_mitigate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">criterias</span><span class="p">:</span> <span class="nx">Optional[List[MetricAlertCriteriaArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamic_criteria</span><span class="p">:</span> <span class="nx">Optional[MetricAlertDynamicCriteriaArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">window_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> MetricAlert</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1940,7 +1940,7 @@ The following state arguments are supported:
 <a href="#state_actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertaction">List[Metric<wbr>Alert<wbr>Action]</a></span>
+        <span class="property-type"><a href="#metricalertaction">List[Metric<wbr>Alert<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `action` blocks as defined below.
 {{% /md %}}</dd>
@@ -1951,7 +1951,7 @@ The following state arguments are supported:
 <a href="#state_application_insights_web_test_location_availability_criteria_python" style="color: inherit; text-decoration: inherit;">application_<wbr>insights_<wbr>web_<wbr>test_<wbr>location_<wbr>availability_<wbr>criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Dict[Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria]</a></span>
+        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `application_insights_web_test_location_availability_criteria` block as defined below.
 {{% /md %}}</dd>
@@ -1973,7 +1973,7 @@ The following state arguments are supported:
 <a href="#state_criterias_python" style="color: inherit; text-decoration: inherit;">criterias</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertcriteria">List[Metric<wbr>Alert<wbr>Criteria]</a></span>
+        <span class="property-type"><a href="#metricalertcriteria">List[Metric<wbr>Alert<wbr>Criteria<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more (static) `criteria` blocks as defined below.
 {{% /md %}}</dd>
@@ -1995,7 +1995,7 @@ The following state arguments are supported:
 <a href="#state_dynamic_criteria_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertdynamiccriteria">Dict[Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria]</a></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteria">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `dynamic_criteria` block as defined below.
 {{% /md %}}</dd>
@@ -2072,7 +2072,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2243,11 +2243,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="webhookproperties_python">
-<a href="#webhookproperties_python" style="color: inherit; text-decoration: inherit;">webhook<wbr>Properties</a>
+        <span id="webhook_properties_python">
+<a href="#webhook_properties_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The map of custom string properties to include with the post operation. These data are appended to the webhook payload.
 {{% /md %}}</dd>
@@ -2399,8 +2399,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="componentid_python">
-<a href="#componentid_python" style="color: inherit; text-decoration: inherit;">component<wbr>Id</a>
+        <span id="component_id_python">
+<a href="#component_id_python" style="color: inherit; text-decoration: inherit;">component_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2410,8 +2410,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="failedlocationcount_python">
-<a href="#failedlocationcount_python" style="color: inherit; text-decoration: inherit;">failed<wbr>Location<wbr>Count</a>
+        <span id="failed_location_count_python">
+<a href="#failed_location_count_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>location_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2421,8 +2421,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="webtestid_python">
-<a href="#webtestid_python" style="color: inherit; text-decoration: inherit;">web<wbr>Test<wbr>Id</a>
+        <span id="web_test_id_python">
+<a href="#web_test_id_python" style="color: inherit; text-decoration: inherit;">web_<wbr>test_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2687,8 +2687,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2698,8 +2698,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricnamespace_python">
-<a href="#metricnamespace_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
+        <span id="metric_namespace_python">
+<a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2735,7 +2735,7 @@ The following state arguments are supported:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertcriteriadimension">List[Metric<wbr>Alert<wbr>Criteria<wbr>Dimension]</a></span>
+        <span class="property-type"><a href="#metricalertcriteriadimension">List[Metric<wbr>Alert<wbr>Criteria<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimension` blocks as defined below.
 {{% /md %}}</dd>
@@ -3274,8 +3274,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="alertsensitivity_python">
-<a href="#alertsensitivity_python" style="color: inherit; text-decoration: inherit;">alert<wbr>Sensitivity</a>
+        <span id="alert_sensitivity_python">
+<a href="#alert_sensitivity_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>sensitivity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3285,8 +3285,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3296,8 +3296,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricnamespace_python">
-<a href="#metricnamespace_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
+        <span id="metric_namespace_python">
+<a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3322,15 +3322,15 @@ The following state arguments are supported:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertdynamiccriteriadimension">List[Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Dimension]</a></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteriadimension">List[Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimension` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="evaluationfailurecount_python">
-<a href="#evaluationfailurecount_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Failure<wbr>Count</a>
+        <span id="evaluation_failure_count_python">
+<a href="#evaluation_failure_count_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>failure_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3340,8 +3340,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="evaluationtotalcount_python">
-<a href="#evaluationtotalcount_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Total<wbr>Count</a>
+        <span id="evaluation_total_count_python">
+<a href="#evaluation_total_count_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>total_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3351,8 +3351,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ignoredatabefore_python">
-<a href="#ignoredatabefore_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Data<wbr>Before</a>
+        <span id="ignore_data_before_python">
+<a href="#ignore_data_before_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>data_<wbr>before</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

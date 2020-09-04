@@ -147,11 +147,11 @@ example_dataset_delimited_text = azure.datafactory.DatasetDelimitedText("example
     resource_group_name=example_resource_group.name,
     data_factory_name=example_factory.name,
     linked_service_name=example_linked_service_web.name,
-    http_server_location={
-        "relative_url": "http://www.bing.com",
-        "path": "foo/bar/",
-        "filename": "fizz.txt",
-    },
+    http_server_location=azure.datafactory.DatasetDelimitedTextHttpServerLocationArgs(
+        relative_url="http://www.bing.com",
+        path="foo/bar/",
+        filename="fizz.txt",
+    ),
     column_delimiter=",",
     row_delimiter="NEW",
     encoding="UTF-8",
@@ -213,7 +213,7 @@ const exampleDatasetDelimitedText = new azure.datafactory.DatasetDelimitedText("
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datafactory/#pulumi_azure.datafactory.DatasetDelimitedText">DatasetDelimitedText</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">azure_blob_storage_location</span><span class="p">:</span> <span class="nx">Optional[Dict[DatasetDelimitedTextAzureBlobStorageLocation]]</span> = None<span class="p">, </span><span class="nx">column_delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encoding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">escape_character</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_row_as_header</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_server_location</span><span class="p">:</span> <span class="nx">Optional[Dict[DatasetDelimitedTextHttpServerLocation]]</span> = None<span class="p">, </span><span class="nx">linked_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">null_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">quote_character</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">row_delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_columns</span><span class="p">:</span> <span class="nx">Optional[List[DatasetDelimitedTextSchemaColumn]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datafactory/#pulumi_azure.datafactory.DatasetDelimitedText">DatasetDelimitedText</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">azure_blob_storage_location</span><span class="p">:</span> <span class="nx">Optional[DatasetDelimitedTextAzureBlobStorageLocationArgs]</span> = None<span class="p">, </span><span class="nx">column_delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encoding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">escape_character</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_row_as_header</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_server_location</span><span class="p">:</span> <span class="nx">Optional[DatasetDelimitedTextHttpServerLocationArgs]</span> = None<span class="p">, </span><span class="nx">linked_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">null_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">quote_character</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">row_delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_columns</span><span class="p">:</span> <span class="nx">Optional[List[DatasetDelimitedTextSchemaColumnArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1072,7 +1072,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
 <a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of additional properties to associate with the Data Factory Dataset.
 {{% /md %}}</dd>
@@ -1094,7 +1094,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
 <a href="#azure_blob_storage_location_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdelimitedtextazureblobstoragelocation">Dict[Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location]</a></span>
+        <span class="property-type"><a href="#datasetdelimitedtextazureblobstoragelocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `azure_blob_storage_location` block as defined below.
 {{% /md %}}</dd>
@@ -1171,7 +1171,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
 <a href="#http_server_location_python" style="color: inherit; text-decoration: inherit;">http_<wbr>server_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdelimitedtexthttpserverlocation">Dict[Dataset<wbr>Delimited<wbr>Text<wbr>Http<wbr>Server<wbr>Location]</a></span>
+        <span class="property-type"><a href="#datasetdelimitedtexthttpserverlocation">Dataset<wbr>Delimited<wbr>Text<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_server_location` block as defined below.
 {{% /md %}}</dd>
@@ -1204,7 +1204,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Dataset.
 {{% /md %}}</dd>
@@ -1237,7 +1237,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
 <a href="#schema_columns_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdelimitedtextschemacolumn">List[Dataset<wbr>Delimited<wbr>Text<wbr>Schema<wbr>Column]</a></span>
+        <span class="property-type"><a href="#datasetdelimitedtextschemacolumn">List[Dataset<wbr>Delimited<wbr>Text<wbr>Schema<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `schema_column` block as defined below.
 {{% /md %}}</dd>
@@ -1341,7 +1341,7 @@ Get an existing DatasetDelimitedText resource's state with the given name, ID, a
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">azure_blob_storage_location</span><span class="p">:</span> <span class="nx">Optional[Dict[DatasetDelimitedTextAzureBlobStorageLocation]]</span> = None<span class="p">, </span><span class="nx">column_delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encoding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">escape_character</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_row_as_header</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_server_location</span><span class="p">:</span> <span class="nx">Optional[Dict[DatasetDelimitedTextHttpServerLocation]]</span> = None<span class="p">, </span><span class="nx">linked_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">null_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">quote_character</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">row_delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_columns</span><span class="p">:</span> <span class="nx">Optional[List[DatasetDelimitedTextSchemaColumn]]</span> = None<span class="p">) -&gt;</span> DatasetDelimitedText</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">azure_blob_storage_location</span><span class="p">:</span> <span class="nx">Optional[DatasetDelimitedTextAzureBlobStorageLocationArgs]</span> = None<span class="p">, </span><span class="nx">column_delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encoding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">escape_character</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_row_as_header</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_server_location</span><span class="p">:</span> <span class="nx">Optional[DatasetDelimitedTextHttpServerLocationArgs]</span> = None<span class="p">, </span><span class="nx">linked_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">null_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">quote_character</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">row_delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_columns</span><span class="p">:</span> <span class="nx">Optional[List[DatasetDelimitedTextSchemaColumnArgs]]</span> = None<span class="p">) -&gt;</span> DatasetDelimitedText</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2109,7 +2109,7 @@ The following state arguments are supported:
 <a href="#state_additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of additional properties to associate with the Data Factory Dataset.
 {{% /md %}}</dd>
@@ -2131,7 +2131,7 @@ The following state arguments are supported:
 <a href="#state_azure_blob_storage_location_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdelimitedtextazureblobstoragelocation">Dict[Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location]</a></span>
+        <span class="property-type"><a href="#datasetdelimitedtextazureblobstoragelocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `azure_blob_storage_location` block as defined below.
 {{% /md %}}</dd>
@@ -2219,7 +2219,7 @@ The following state arguments are supported:
 <a href="#state_http_server_location_python" style="color: inherit; text-decoration: inherit;">http_<wbr>server_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdelimitedtexthttpserverlocation">Dict[Dataset<wbr>Delimited<wbr>Text<wbr>Http<wbr>Server<wbr>Location]</a></span>
+        <span class="property-type"><a href="#datasetdelimitedtexthttpserverlocation">Dataset<wbr>Delimited<wbr>Text<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_server_location` block as defined below.
 {{% /md %}}</dd>
@@ -2263,7 +2263,7 @@ The following state arguments are supported:
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Dataset.
 {{% /md %}}</dd>
@@ -2307,7 +2307,7 @@ The following state arguments are supported:
 <a href="#state_schema_columns_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdelimitedtextschemacolumn">List[Dataset<wbr>Delimited<wbr>Text<wbr>Schema<wbr>Column]</a></span>
+        <span class="property-type"><a href="#datasetdelimitedtextschemacolumn">List[Dataset<wbr>Delimited<wbr>Text<wbr>Schema<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `schema_column` block as defined below.
 {{% /md %}}</dd>

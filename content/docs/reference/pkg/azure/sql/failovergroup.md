@@ -180,13 +180,13 @@ example_failover_group = azure.sql.FailoverGroup("exampleFailoverGroup",
     resource_group_name=primary.resource_group_name,
     server_name=primary.name,
     databases=[db1.id],
-    partner_servers=[{
-        "id": secondary.id,
-    }],
-    read_write_endpoint_failover_policy={
-        "mode": "Automatic",
-        "graceMinutes": 60,
-    })
+    partner_servers=[azure.sql.FailoverGroupPartnerServerArgs(
+        id=secondary.id,
+    )],
+    read_write_endpoint_failover_policy=azure.sql.FailoverGroupReadWriteEndpointFailoverPolicyArgs(
+        mode="Automatic",
+        grace_minutes=60,
+    ))
 ```
 
 {{% /example %}}
@@ -245,7 +245,7 @@ const exampleFailoverGroup = new azure.sql.FailoverGroup("exampleFailoverGroup",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/sql/#pulumi_azure.sql.FailoverGroup">FailoverGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">databases</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_servers</span><span class="p">:</span> <span class="nx">Optional[List[FailoverGroupPartnerServer]]</span> = None<span class="p">, </span><span class="nx">read_write_endpoint_failover_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[FailoverGroupReadWriteEndpointFailoverPolicy]]</span> = None<span class="p">, </span><span class="nx">readonly_endpoint_failover_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[FailoverGroupReadonlyEndpointFailoverPolicy]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/sql/#pulumi_azure.sql.FailoverGroup">FailoverGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">databases</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_servers</span><span class="p">:</span> <span class="nx">Optional[List[FailoverGroupPartnerServerArgs]]</span> = None<span class="p">, </span><span class="nx">read_write_endpoint_failover_policy</span><span class="p">:</span> <span class="nx">Optional[FailoverGroupReadWriteEndpointFailoverPolicyArgs]</span> = None<span class="p">, </span><span class="nx">readonly_endpoint_failover_policy</span><span class="p">:</span> <span class="nx">Optional[FailoverGroupReadonlyEndpointFailoverPolicyArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -708,7 +708,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#partner_servers_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovergrouppartnerserver">List[Failover<wbr>Group<wbr>Partner<wbr>Server]</a></span>
+        <span class="property-type"><a href="#failovergrouppartnerserver">List[Failover<wbr>Group<wbr>Partner<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of secondary servers as documented below
 {{% /md %}}</dd>
@@ -719,7 +719,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#read_write_endpoint_failover_policy_python" style="color: inherit; text-decoration: inherit;">read_<wbr>write_<wbr>endpoint_<wbr>failover_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovergroupreadwriteendpointfailoverpolicy">Dict[Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#failovergroupreadwriteendpointfailoverpolicy">Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A read/write policy as documented below
 {{% /md %}}</dd>
@@ -774,7 +774,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#readonly_endpoint_failover_policy_python" style="color: inherit; text-decoration: inherit;">readonly_<wbr>endpoint_<wbr>failover_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovergroupreadonlyendpointfailoverpolicy">Dict[Failover<wbr>Group<wbr>Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#failovergroupreadonlyendpointfailoverpolicy">Failover<wbr>Group<wbr>Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}a read-only policy as documented below
 {{% /md %}}</dd>
@@ -785,7 +785,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -977,7 +977,7 @@ Get an existing FailoverGroup resource's state with the given name, ID, and opti
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">databases</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_servers</span><span class="p">:</span> <span class="nx">Optional[List[FailoverGroupPartnerServer]]</span> = None<span class="p">, </span><span class="nx">read_write_endpoint_failover_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[FailoverGroupReadWriteEndpointFailoverPolicy]]</span> = None<span class="p">, </span><span class="nx">readonly_endpoint_failover_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[FailoverGroupReadonlyEndpointFailoverPolicy]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> FailoverGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">databases</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_servers</span><span class="p">:</span> <span class="nx">Optional[List[FailoverGroupPartnerServerArgs]]</span> = None<span class="p">, </span><span class="nx">read_write_endpoint_failover_policy</span><span class="p">:</span> <span class="nx">Optional[FailoverGroupReadWriteEndpointFailoverPolicyArgs]</span> = None<span class="p">, </span><span class="nx">readonly_endpoint_failover_policy</span><span class="p">:</span> <span class="nx">Optional[FailoverGroupReadonlyEndpointFailoverPolicyArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> FailoverGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1481,7 +1481,7 @@ The following state arguments are supported:
 <a href="#state_partner_servers_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovergrouppartnerserver">List[Failover<wbr>Group<wbr>Partner<wbr>Server]</a></span>
+        <span class="property-type"><a href="#failovergrouppartnerserver">List[Failover<wbr>Group<wbr>Partner<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of secondary servers as documented below
 {{% /md %}}</dd>
@@ -1492,7 +1492,7 @@ The following state arguments are supported:
 <a href="#state_read_write_endpoint_failover_policy_python" style="color: inherit; text-decoration: inherit;">read_<wbr>write_<wbr>endpoint_<wbr>failover_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovergroupreadwriteendpointfailoverpolicy">Dict[Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#failovergroupreadwriteendpointfailoverpolicy">Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A read/write policy as documented below
 {{% /md %}}</dd>
@@ -1503,7 +1503,7 @@ The following state arguments are supported:
 <a href="#state_readonly_endpoint_failover_policy_python" style="color: inherit; text-decoration: inherit;">readonly_<wbr>endpoint_<wbr>failover_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovergroupreadonlyendpointfailoverpolicy">Dict[Failover<wbr>Group<wbr>Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#failovergroupreadonlyendpointfailoverpolicy">Failover<wbr>Group<wbr>Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}a read-only policy as documented below
 {{% /md %}}</dd>
@@ -1547,7 +1547,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1863,8 +1863,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="graceminutes_python">
-<a href="#graceminutes_python" style="color: inherit; text-decoration: inherit;">grace<wbr>Minutes</a>
+        <span id="grace_minutes_python">
+<a href="#grace_minutes_python" style="color: inherit; text-decoration: inherit;">grace_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

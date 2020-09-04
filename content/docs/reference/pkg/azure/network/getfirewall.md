@@ -74,7 +74,7 @@ import pulumi_azure as azure
 
 example = azure.network.get_firewall(name="firewall1",
     resource_group_name="firewall-RG")
-pulumi.export("firewallPrivateIp", example.ip_configurations[0]["private_ip_address"])
+pulumi.export("firewallPrivateIp", example.ip_configurations[0].private_ip_address)
 ```
 
 {{% /example %}}
@@ -529,7 +529,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -746,8 +746,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="internalpublicipaddressid_python">
-<a href="#internalpublicipaddressid_python" style="color: inherit; text-decoration: inherit;">internal<wbr>Public<wbr>Ip<wbr>Address<wbr>Id</a>
+        <span id="internal_public_ip_address_id_python">
+<a href="#internal_public_ip_address_id_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>public_<wbr>ip_<wbr>address_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

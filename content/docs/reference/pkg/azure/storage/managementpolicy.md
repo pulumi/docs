@@ -214,45 +214,45 @@ example_account = azure.storage.Account("exampleAccount",
 example_management_policy = azure.storage.ManagementPolicy("exampleManagementPolicy",
     storage_account_id=example_account.id,
     rules=[
-        {
-            "name": "rule1",
-            "enabled": True,
-            "filters": {
-                "prefixMatches": ["container1/prefix1"],
-                "blobTypes": ["blockBlob"],
-            },
-            "actions": {
-                "baseBlob": {
-                    "tierToCoolAfterDaysSinceModificationGreaterThan": 10,
-                    "tierToArchiveAfterDaysSinceModificationGreaterThan": 50,
-                    "deleteAfterDaysSinceModificationGreaterThan": 100,
-                },
-                "snapshot": {
-                    "deleteAfterDaysSinceCreationGreaterThan": 30,
-                },
-            },
-        },
-        {
-            "name": "rule2",
-            "enabled": False,
-            "filters": {
-                "prefixMatches": [
+        azure.storage.ManagementPolicyRuleArgs(
+            name="rule1",
+            enabled=True,
+            filters=azure.storage.ManagementPolicyRuleFiltersArgs(
+                prefix_matches=["container1/prefix1"],
+                blob_types=["blockBlob"],
+            ),
+            actions=azure.storage.ManagementPolicyRuleActionsArgs(
+                base_blob=azure.storage.ManagementPolicyRuleActionsBaseBlobArgs(
+                    tier_to_cool_after_days_since_modification_greater_than=10,
+                    tier_to_archive_after_days_since_modification_greater_than=50,
+                    delete_after_days_since_modification_greater_than=100,
+                ),
+                snapshot=azure.storage.ManagementPolicyRuleActionsSnapshotArgs(
+                    delete_after_days_since_creation_greater_than=30,
+                ),
+            ),
+        ),
+        azure.storage.ManagementPolicyRuleArgs(
+            name="rule2",
+            enabled=False,
+            filters=azure.storage.ManagementPolicyRuleFiltersArgs(
+                prefix_matches=[
                     "container2/prefix1",
                     "container2/prefix2",
                 ],
-                "blobTypes": ["blockBlob"],
-            },
-            "actions": {
-                "baseBlob": {
-                    "tierToCoolAfterDaysSinceModificationGreaterThan": 11,
-                    "tierToArchiveAfterDaysSinceModificationGreaterThan": 51,
-                    "deleteAfterDaysSinceModificationGreaterThan": 101,
-                },
-                "snapshot": {
-                    "deleteAfterDaysSinceCreationGreaterThan": 31,
-                },
-            },
-        },
+                blob_types=["blockBlob"],
+            ),
+            actions=azure.storage.ManagementPolicyRuleActionsArgs(
+                base_blob=azure.storage.ManagementPolicyRuleActionsBaseBlobArgs(
+                    tier_to_cool_after_days_since_modification_greater_than=11,
+                    tier_to_archive_after_days_since_modification_greater_than=51,
+                    delete_after_days_since_modification_greater_than=101,
+                ),
+                snapshot=azure.storage.ManagementPolicyRuleActionsSnapshotArgs(
+                    delete_after_days_since_creation_greater_than=31,
+                ),
+            ),
+        ),
     ])
 ```
 
@@ -332,7 +332,7 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/storage/#pulumi_azure.storage.ManagementPolicy">ManagementPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[ManagementPolicyRule]]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/storage/#pulumi_azure.storage.ManagementPolicy">ManagementPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[ManagementPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -608,7 +608,7 @@ The ManagementPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrule">List[Management<wbr>Policy<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#managementpolicyrule">List[Management<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `rule` block as documented below.
 {{% /md %}}</dd>
@@ -712,7 +712,7 @@ Get an existing ManagementPolicy resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[ManagementPolicyRule]]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ManagementPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[ManagementPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ManagementPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -919,7 +919,7 @@ The following state arguments are supported:
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrule">List[Management<wbr>Policy<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#managementpolicyrule">List[Management<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `rule` block as documented below.
 {{% /md %}}</dd>
@@ -1127,7 +1127,7 @@ The following state arguments are supported:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactions">Dict[Management<wbr>Policy<wbr>Rule<wbr>Actions]</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactions">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `actions` block as documented below.
 {{% /md %}}</dd>
@@ -1160,7 +1160,7 @@ The following state arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrulefilters">Dict[Management<wbr>Policy<wbr>Rule<wbr>Filters]</a></span>
+        <span class="property-type"><a href="#managementpolicyrulefilters">Management<wbr>Policy<wbr>Rule<wbr>Filters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as documented below.
 {{% /md %}}</dd>
@@ -1279,11 +1279,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="baseblob_python">
-<a href="#baseblob_python" style="color: inherit; text-decoration: inherit;">base<wbr>Blob</a>
+        <span id="base_blob_python">
+<a href="#base_blob_python" style="color: inherit; text-decoration: inherit;">base_<wbr>blob</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactionsbaseblob">Dict[Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Base<wbr>Blob]</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactionsbaseblob">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Base<wbr>Blob<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `base_blob` block as documented below.
 {{% /md %}}</dd>
@@ -1294,7 +1294,7 @@ The following state arguments are supported:
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Dict[Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot]</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
 {{% /md %}}</dd>
@@ -1446,8 +1446,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deleteafterdayssincemodificationgreaterthan_python">
-<a href="#deleteafterdayssincemodificationgreaterthan_python" style="color: inherit; text-decoration: inherit;">delete<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
+        <span id="delete_after_days_since_modification_greater_than_python">
+<a href="#delete_after_days_since_modification_greater_than_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after_<wbr>days_<wbr>since_<wbr>modification_<wbr>greater_<wbr>than</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1457,8 +1457,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tiertoarchiveafterdayssincemodificationgreaterthan_python">
-<a href="#tiertoarchiveafterdayssincemodificationgreaterthan_python" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
+        <span id="tier_to_archive_after_days_since_modification_greater_than_python">
+<a href="#tier_to_archive_after_days_since_modification_greater_than_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive_<wbr>after_<wbr>days_<wbr>since_<wbr>modification_<wbr>greater_<wbr>than</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1468,8 +1468,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tiertocoolafterdayssincemodificationgreaterthan_python">
-<a href="#tiertocoolafterdayssincemodificationgreaterthan_python" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
+        <span id="tier_to_cool_after_days_since_modification_greater_than_python">
+<a href="#tier_to_cool_after_days_since_modification_greater_than_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool_<wbr>after_<wbr>days_<wbr>since_<wbr>modification_<wbr>greater_<wbr>than</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1558,8 +1558,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deleteafterdayssincecreationgreaterthan_python">
-<a href="#deleteafterdayssincecreationgreaterthan_python" style="color: inherit; text-decoration: inherit;">delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</a>
+        <span id="delete_after_days_since_creation_greater_than_python">
+<a href="#delete_after_days_since_creation_greater_than_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after_<wbr>days_<wbr>since_<wbr>creation_<wbr>greater_<wbr>than</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1681,8 +1681,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="blobtypes_python">
-<a href="#blobtypes_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Types</a>
+        <span id="blob_types_python">
+<a href="#blob_types_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1692,8 +1692,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="prefixmatches_python">
-<a href="#prefixmatches_python" style="color: inherit; text-decoration: inherit;">prefix<wbr>Matches</a>
+        <span id="prefix_matches_python">
+<a href="#prefix_matches_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>matches</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

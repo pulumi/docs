@@ -118,10 +118,10 @@ example_time_series_insights_standard_environment = azure.iot.TimeSeriesInsights
 example_time_series_insights_reference_data_set = azure.iot.TimeSeriesInsightsReferenceDataSet("exampleTimeSeriesInsightsReferenceDataSet",
     time_series_insights_environment_id=example_time_series_insights_standard_environment.id,
     location=example_resource_group.location,
-    key_properties=[{
-        "name": "keyProperty1",
-        "type": "String",
-    }])
+    key_properties=[azure.iot.TimeSeriesInsightsReferenceDataSetKeyPropertyArgs(
+        name="keyProperty1",
+        type="String",
+    )])
 ```
 
 {{% /example %}}
@@ -163,7 +163,7 @@ const exampleTimeSeriesInsightsReferenceDataSet = new azure.iot.TimeSeriesInsigh
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/iot/#pulumi_azure.iot.TimeSeriesInsightsReferenceDataSet">TimeSeriesInsightsReferenceDataSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_string_comparison_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_properties</span><span class="p">:</span> <span class="nx">Optional[List[TimeSeriesInsightsReferenceDataSetKeyProperty]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">time_series_insights_environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/iot/#pulumi_azure.iot.TimeSeriesInsightsReferenceDataSet">TimeSeriesInsightsReferenceDataSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_string_comparison_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_properties</span><span class="p">:</span> <span class="nx">Optional[List[TimeSeriesInsightsReferenceDataSetKeyPropertyArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">time_series_insights_environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -560,7 +560,7 @@ The TimeSeriesInsightsReferenceDataSet resource accepts the following [input]({{
 <a href="#key_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesinsightsreferencedatasetkeyproperty">List[Time<wbr>Series<wbr>Insights<wbr>Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property]</a></span>
+        <span class="property-type"><a href="#timeseriesinsightsreferencedatasetkeyproperty">List[Time<wbr>Series<wbr>Insights<wbr>Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `key_property` block as defined below.
 {{% /md %}}</dd>
@@ -615,7 +615,7 @@ The TimeSeriesInsightsReferenceDataSet resource accepts the following [input]({{
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -719,7 +719,7 @@ Get an existing TimeSeriesInsightsReferenceDataSet resource's state with the giv
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_string_comparison_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_properties</span><span class="p">:</span> <span class="nx">Optional[List[TimeSeriesInsightsReferenceDataSetKeyProperty]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">time_series_insights_environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TimeSeriesInsightsReferenceDataSet</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_string_comparison_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_properties</span><span class="p">:</span> <span class="nx">Optional[List[TimeSeriesInsightsReferenceDataSetKeyPropertyArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">time_series_insights_environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TimeSeriesInsightsReferenceDataSet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1069,7 +1069,7 @@ The following state arguments are supported:
 <a href="#state_key_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesinsightsreferencedatasetkeyproperty">List[Time<wbr>Series<wbr>Insights<wbr>Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property]</a></span>
+        <span class="property-type"><a href="#timeseriesinsightsreferencedatasetkeyproperty">List[Time<wbr>Series<wbr>Insights<wbr>Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `key_property` block as defined below.
 {{% /md %}}</dd>
@@ -1102,7 +1102,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>

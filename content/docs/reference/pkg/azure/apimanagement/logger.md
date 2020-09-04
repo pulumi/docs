@@ -133,9 +133,9 @@ example_service = azure.apimanagement.Service("exampleService",
 example_logger = azure.apimanagement.Logger("exampleLogger",
     api_management_name=example_service.name,
     resource_group_name=example_resource_group.name,
-    application_insights={
-        "instrumentation_key": example_insights.instrumentation_key,
-    })
+    application_insights=azure.apimanagement.LoggerApplicationInsightsArgs(
+        instrumentation_key=example_insights.instrumentation_key,
+    ))
 ```
 
 {{% /example %}}
@@ -182,7 +182,7 @@ const exampleLogger = new azure.apimanagement.Logger("exampleLogger", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.Logger">Logger</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_insights</span><span class="p">:</span> <span class="nx">Optional[Dict[LoggerApplicationInsights]]</span> = None<span class="p">, </span><span class="nx">buffered</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub</span><span class="p">:</span> <span class="nx">Optional[Dict[LoggerEventhub]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.Logger">Logger</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_insights</span><span class="p">:</span> <span class="nx">Optional[LoggerApplicationInsightsArgs]</span> = None<span class="p">, </span><span class="nx">buffered</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub</span><span class="p">:</span> <span class="nx">Optional[LoggerEventhubArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -634,7 +634,7 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#application_insights_python" style="color: inherit; text-decoration: inherit;">application_<wbr>insights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggerapplicationinsights">Dict[Logger<wbr>Application<wbr>Insights]</a></span>
+        <span class="property-type"><a href="#loggerapplicationinsights">Logger<wbr>Application<wbr>Insights<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `application_insights` block as documented below.
 {{% /md %}}</dd>
@@ -667,7 +667,7 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#eventhub_python" style="color: inherit; text-decoration: inherit;">eventhub</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggereventhub">Dict[Logger<wbr>Eventhub]</a></span>
+        <span class="property-type"><a href="#loggereventhub">Logger<wbr>Eventhub<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `eventhub` block as documented below.
 {{% /md %}}</dd>
@@ -782,7 +782,7 @@ Get an existing Logger resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_insights</span><span class="p">:</span> <span class="nx">Optional[Dict[LoggerApplicationInsights]]</span> = None<span class="p">, </span><span class="nx">buffered</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub</span><span class="p">:</span> <span class="nx">Optional[Dict[LoggerEventhub]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Logger</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_insights</span><span class="p">:</span> <span class="nx">Optional[LoggerApplicationInsightsArgs]</span> = None<span class="p">, </span><span class="nx">buffered</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub</span><span class="p">:</span> <span class="nx">Optional[LoggerEventhubArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Logger</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1165,7 +1165,7 @@ The following state arguments are supported:
 <a href="#state_application_insights_python" style="color: inherit; text-decoration: inherit;">application_<wbr>insights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggerapplicationinsights">Dict[Logger<wbr>Application<wbr>Insights]</a></span>
+        <span class="property-type"><a href="#loggerapplicationinsights">Logger<wbr>Application<wbr>Insights<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `application_insights` block as documented below.
 {{% /md %}}</dd>
@@ -1198,7 +1198,7 @@ The following state arguments are supported:
 <a href="#state_eventhub_python" style="color: inherit; text-decoration: inherit;">eventhub</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggereventhub">Dict[Logger<wbr>Eventhub]</a></span>
+        <span class="property-type"><a href="#loggereventhub">Logger<wbr>Eventhub<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `eventhub` block as documented below.
 {{% /md %}}</dd>

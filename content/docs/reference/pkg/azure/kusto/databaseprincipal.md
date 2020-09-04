@@ -114,7 +114,7 @@ func main() {
 		_, err = kusto.NewDatabasePrincipal(ctx, "principal", &kusto.DatabasePrincipalArgs{
 			ResourceGroupName: rg.Name,
 			ClusterName:       cluster.Name,
-			DatabaseName:      pulumi.String(azurerm_kusto_database.Test.Name),
+			DatabaseName:      pulumi.Any(azurerm_kusto_database.Test.Name),
 			Role:              pulumi.String("Viewer"),
 			Type:              pulumi.String("User"),
 			ClientId:          pulumi.String(current.TenantId),
@@ -140,10 +140,10 @@ rg = azure.core.ResourceGroup("rg", location="East US")
 cluster = azure.kusto.Cluster("cluster",
     location=rg.location,
     resource_group_name=rg.name,
-    sku={
-        "name": "Standard_D13_v2",
-        "capacity": 2,
-    })
+    sku=azure.kusto.ClusterSkuArgs(
+        name="Standard_D13_v2",
+        capacity=2,
+    ))
 database = azure.kusto.Database("database",
     resource_group_name=rg.name,
     location=rg.location,

@@ -540,7 +540,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to Spring Cloud Service.
 {{% /md %}}</dd>
@@ -797,11 +797,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="httpbasicauths_python">
-<a href="#httpbasicauths_python" style="color: inherit; text-decoration: inherit;">http<wbr>Basic<wbr>Auths</a>
+        <span id="http_basic_auths_python">
+<a href="#http_basic_auths_python" style="color: inherit; text-decoration: inherit;">http_<wbr>basic_<wbr>auths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettinghttpbasicauth">List[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth]</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettinghttpbasicauth">List[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
 {{% /md %}}</dd>
@@ -823,15 +823,15 @@ The following output properties are available:
 <a href="#repositories_python" style="color: inherit; text-decoration: inherit;">repositories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepository">List[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository]</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepository">List[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `repository` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="searchpaths_python">
-<a href="#searchpaths_python" style="color: inherit; text-decoration: inherit;">search<wbr>Paths</a>
+        <span id="search_paths_python">
+<a href="#search_paths_python" style="color: inherit; text-decoration: inherit;">search_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -841,11 +841,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sshauths_python">
-<a href="#sshauths_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Auths</a>
+        <span id="ssh_auths_python">
+<a href="#ssh_auths_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>auths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingsshauth">List[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth]</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingsshauth">List[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
 {{% /md %}}</dd>
@@ -1274,11 +1274,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="httpbasicauths_python">
-<a href="#httpbasicauths_python" style="color: inherit; text-decoration: inherit;">http<wbr>Basic<wbr>Auths</a>
+        <span id="http_basic_auths_python">
+<a href="#http_basic_auths_python" style="color: inherit; text-decoration: inherit;">http_<wbr>basic_<wbr>auths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepositoryhttpbasicauth">List[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth]</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepositoryhttpbasicauth">List[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
 {{% /md %}}</dd>
@@ -1318,8 +1318,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="searchpaths_python">
-<a href="#searchpaths_python" style="color: inherit; text-decoration: inherit;">search<wbr>Paths</a>
+        <span id="search_paths_python">
+<a href="#search_paths_python" style="color: inherit; text-decoration: inherit;">search_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1329,11 +1329,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sshauths_python">
-<a href="#sshauths_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Auths</a>
+        <span id="ssh_auths_python">
+<a href="#ssh_auths_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>auths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepositorysshauth">List[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth]</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepositorysshauth">List[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
 {{% /md %}}</dd>
@@ -1663,8 +1663,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="hostkey_python">
-<a href="#hostkey_python" style="color: inherit; text-decoration: inherit;">host<wbr>Key</a>
+        <span id="host_key_python">
+<a href="#host_key_python" style="color: inherit; text-decoration: inherit;">host_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1674,8 +1674,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="hostkeyalgorithm_python">
-<a href="#hostkeyalgorithm_python" style="color: inherit; text-decoration: inherit;">host<wbr>Key<wbr>Algorithm</a>
+        <span id="host_key_algorithm_python">
+<a href="#host_key_algorithm_python" style="color: inherit; text-decoration: inherit;">host_<wbr>key_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1685,8 +1685,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="privatekey_python">
-<a href="#privatekey_python" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
+        <span id="private_key_python">
+<a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1696,8 +1696,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="stricthostkeycheckingenabled_python">
-<a href="#stricthostkeycheckingenabled_python" style="color: inherit; text-decoration: inherit;">strict<wbr>Host<wbr>Key<wbr>Checking<wbr>Enabled</a>
+        <span id="strict_host_key_checking_enabled_python">
+<a href="#strict_host_key_checking_enabled_python" style="color: inherit; text-decoration: inherit;">strict_<wbr>host_<wbr>key_<wbr>checking_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1885,8 +1885,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="hostkey_python">
-<a href="#hostkey_python" style="color: inherit; text-decoration: inherit;">host<wbr>Key</a>
+        <span id="host_key_python">
+<a href="#host_key_python" style="color: inherit; text-decoration: inherit;">host_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1896,8 +1896,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="hostkeyalgorithm_python">
-<a href="#hostkeyalgorithm_python" style="color: inherit; text-decoration: inherit;">host<wbr>Key<wbr>Algorithm</a>
+        <span id="host_key_algorithm_python">
+<a href="#host_key_algorithm_python" style="color: inherit; text-decoration: inherit;">host_<wbr>key_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1907,8 +1907,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="privatekey_python">
-<a href="#privatekey_python" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
+        <span id="private_key_python">
+<a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1918,8 +1918,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="stricthostkeycheckingenabled_python">
-<a href="#stricthostkeycheckingenabled_python" style="color: inherit; text-decoration: inherit;">strict<wbr>Host<wbr>Key<wbr>Checking<wbr>Enabled</a>
+        <span id="strict_host_key_checking_enabled_python">
+<a href="#strict_host_key_checking_enabled_python" style="color: inherit; text-decoration: inherit;">strict_<wbr>host_<wbr>key_<wbr>checking_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

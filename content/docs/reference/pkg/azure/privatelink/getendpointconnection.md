@@ -76,7 +76,7 @@ import pulumi_azure as azure
 
 example = azure.privatelink.get_endpoint_connection(name="example-private-endpoint",
     resource_group_name="example-rg")
-pulumi.export("privateEndpointStatus", example.private_service_connections[0]["status"])
+pulumi.export("privateEndpointStatus", example.private_service_connections[0].status)
 ```
 
 {{% /example %}}
@@ -720,8 +720,8 @@ Value | Meaning
 
     <dt class="property-required"
             title="Required">
-        <span id="requestresponse_python">
-<a href="#requestresponse_python" style="color: inherit; text-decoration: inherit;">request<wbr>Response</a>
+        <span id="request_response_python">
+<a href="#request_response_python" style="color: inherit; text-decoration: inherit;">request_<wbr>response</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

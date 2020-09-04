@@ -225,36 +225,36 @@ internal = azure.network.Subnet("internal",
 main_network_interface = azure.network.NetworkInterface("mainNetworkInterface",
     location=main_resource_group.location,
     resource_group_name=main_resource_group.name,
-    ip_configurations=[{
-        "name": "testconfiguration1",
-        "subnet_id": internal.id,
-        "privateIpAddressAllocation": "Dynamic",
-    }])
+    ip_configurations=[azure.network.NetworkInterfaceIpConfigurationArgs(
+        name="testconfiguration1",
+        subnet_id=internal.id,
+        private_ip_address_allocation="Dynamic",
+    )])
 main_virtual_machine = azure.compute.VirtualMachine("mainVirtualMachine",
     location=main_resource_group.location,
     resource_group_name=main_resource_group.name,
     network_interface_ids=[main_network_interface.id],
     vm_size="Standard_DS1_v2",
-    storage_image_reference={
-        "publisher": "Canonical",
-        "offer": "UbuntuServer",
-        "sku": "16.04-LTS",
-        "version": "latest",
-    },
-    storage_os_disk={
-        "name": "myosdisk1",
-        "caching": "ReadWrite",
-        "create_option": "FromImage",
-        "managedDiskType": "Standard_LRS",
-    },
-    os_profile={
-        "computer_name": "hostname",
-        "admin_username": "testadmin",
-        "admin_password": "Password1234!",
-    },
-    os_profile_linux_config={
-        "disable_password_authentication": False,
-    },
+    storage_image_reference=azure.compute.VirtualMachineStorageImageReferenceArgs(
+        publisher="Canonical",
+        offer="UbuntuServer",
+        sku="16.04-LTS",
+        version="latest",
+    ),
+    storage_os_disk=azure.compute.VirtualMachineStorageOsDiskArgs(
+        name="myosdisk1",
+        caching="ReadWrite",
+        create_option="FromImage",
+        managed_disk_type="Standard_LRS",
+    ),
+    os_profile=azure.compute.VirtualMachineOsProfileArgs(
+        computer_name="hostname",
+        admin_username="testadmin",
+        admin_password="Password1234!",
+    ),
+    os_profile_linux_config=azure.compute.VirtualMachineOsProfileLinuxConfigArgs(
+        disable_password_authentication=False,
+    ),
     tags={
         "environment": "staging",
     })
@@ -335,7 +335,7 @@ const mainVirtualMachine = new azure.compute.VirtualMachine("mainVirtualMachine"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#pulumi_azure.compute.VirtualMachine">VirtualMachine</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineAdditionalCapabilities]]</span> = None<span class="p">, </span><span class="nx">availability_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineBootDiagnostics]]</span> = None<span class="p">, </span><span class="nx">delete_data_disks_on_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">delete_os_disk_on_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineIdentity]]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineOsProfile]]</span> = None<span class="p">, </span><span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineOsProfileLinuxConfig]]</span> = None<span class="p">, </span><span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[List[VirtualMachineOsProfileSecret]]</span> = None<span class="p">, </span><span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineOsProfileWindowsConfig]]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachinePlan]]</span> = None<span class="p">, </span><span class="nx">primary_network_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_data_disks</span><span class="p">:</span> <span class="nx">Optional[List[VirtualMachineStorageDataDisk]]</span> = None<span class="p">, </span><span class="nx">storage_image_reference</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineStorageImageReference]]</span> = None<span class="p">, </span><span class="nx">storage_os_disk</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineStorageOsDisk]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#pulumi_azure.compute.VirtualMachine">VirtualMachine</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAdditionalCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">availability_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineBootDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">delete_data_disks_on_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">delete_os_disk_on_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineIdentityArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineOsProfileArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineOsProfileLinuxConfigArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[List[VirtualMachineOsProfileSecretArgs]]</span> = None<span class="p">, </span><span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineOsProfileWindowsConfigArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[VirtualMachinePlanArgs]</span> = None<span class="p">, </span><span class="nx">primary_network_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_data_disks</span><span class="p">:</span> <span class="nx">Optional[List[VirtualMachineStorageDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">storage_image_reference</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineStorageImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">storage_os_disk</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineStorageOsDiskArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1348,7 +1348,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storage_os_disk_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>os_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageosdisk">Dict[Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_os_disk` block.
 {{% /md %}}</dd>
@@ -1370,7 +1370,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#additional_capabilities_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Dict[Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities]</a></span>
+        <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block.
 {{% /md %}}</dd>
@@ -1392,7 +1392,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinebootdiagnostics">Dict[Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics]</a></span>
+        <span class="property-type"><a href="#virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block.
 {{% /md %}}</dd>
@@ -1425,7 +1425,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineidentity">Dict[Virtual<wbr>Machine<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
 {{% /md %}}</dd>
@@ -1469,7 +1469,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofile">Dict[Virtual<wbr>Machine<wbr>Os<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `os_profile` block. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
 {{% /md %}}</dd>
@@ -1480,7 +1480,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#os_profile_linux_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>linux_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Dict[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_linux_config` block.
 {{% /md %}}</dd>
@@ -1491,7 +1491,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#os_profile_secrets_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilesecret">List[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilesecret">List[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_profile_secrets` blocks.
 {{% /md %}}</dd>
@@ -1502,7 +1502,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#os_profile_windows_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>windows_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Dict[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_windows_config` block.
 {{% /md %}}</dd>
@@ -1513,7 +1513,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineplan">Dict[Virtual<wbr>Machine<wbr>Plan]</a></span>
+        <span class="property-type"><a href="#virtualmachineplan">Virtual<wbr>Machine<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block.
 {{% /md %}}</dd>
@@ -1546,7 +1546,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storage_data_disks_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestoragedatadisk">List[Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#virtualmachinestoragedatadisk">List[Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_data_disk` blocks.
 {{% /md %}}</dd>
@@ -1557,7 +1557,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storage_image_reference_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageimagereference">Dict[Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` block.
 {{% /md %}}</dd>
@@ -1568,7 +1568,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Virtual Machine.
 {{% /md %}}</dd>
@@ -1683,7 +1683,7 @@ Get an existing VirtualMachine resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineAdditionalCapabilities]]</span> = None<span class="p">, </span><span class="nx">availability_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineBootDiagnostics]]</span> = None<span class="p">, </span><span class="nx">delete_data_disks_on_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">delete_os_disk_on_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineIdentity]]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineOsProfile]]</span> = None<span class="p">, </span><span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineOsProfileLinuxConfig]]</span> = None<span class="p">, </span><span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[List[VirtualMachineOsProfileSecret]]</span> = None<span class="p">, </span><span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineOsProfileWindowsConfig]]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachinePlan]]</span> = None<span class="p">, </span><span class="nx">primary_network_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_data_disks</span><span class="p">:</span> <span class="nx">Optional[List[VirtualMachineStorageDataDisk]]</span> = None<span class="p">, </span><span class="nx">storage_image_reference</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineStorageImageReference]]</span> = None<span class="p">, </span><span class="nx">storage_os_disk</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineStorageOsDisk]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VirtualMachine</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAdditionalCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">availability_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineBootDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">delete_data_disks_on_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">delete_os_disk_on_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineIdentityArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineOsProfileArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineOsProfileLinuxConfigArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[List[VirtualMachineOsProfileSecretArgs]]</span> = None<span class="p">, </span><span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineOsProfileWindowsConfigArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[VirtualMachinePlanArgs]</span> = None<span class="p">, </span><span class="nx">primary_network_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_data_disks</span><span class="p">:</span> <span class="nx">Optional[List[VirtualMachineStorageDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">storage_image_reference</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineStorageImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">storage_os_disk</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineStorageOsDiskArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VirtualMachine</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2616,7 +2616,7 @@ The following state arguments are supported:
 <a href="#state_additional_capabilities_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Dict[Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities]</a></span>
+        <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block.
 {{% /md %}}</dd>
@@ -2638,7 +2638,7 @@ The following state arguments are supported:
 <a href="#state_boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinebootdiagnostics">Dict[Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics]</a></span>
+        <span class="property-type"><a href="#virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block.
 {{% /md %}}</dd>
@@ -2671,7 +2671,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineidentity">Dict[Virtual<wbr>Machine<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
 {{% /md %}}</dd>
@@ -2726,7 +2726,7 @@ The following state arguments are supported:
 <a href="#state_os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofile">Dict[Virtual<wbr>Machine<wbr>Os<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `os_profile` block. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
 {{% /md %}}</dd>
@@ -2737,7 +2737,7 @@ The following state arguments are supported:
 <a href="#state_os_profile_linux_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>linux_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Dict[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_linux_config` block.
 {{% /md %}}</dd>
@@ -2748,7 +2748,7 @@ The following state arguments are supported:
 <a href="#state_os_profile_secrets_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilesecret">List[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilesecret">List[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_profile_secrets` blocks.
 {{% /md %}}</dd>
@@ -2759,7 +2759,7 @@ The following state arguments are supported:
 <a href="#state_os_profile_windows_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>windows_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Dict[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_windows_config` block.
 {{% /md %}}</dd>
@@ -2770,7 +2770,7 @@ The following state arguments are supported:
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineplan">Dict[Virtual<wbr>Machine<wbr>Plan]</a></span>
+        <span class="property-type"><a href="#virtualmachineplan">Virtual<wbr>Machine<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block.
 {{% /md %}}</dd>
@@ -2814,7 +2814,7 @@ The following state arguments are supported:
 <a href="#state_storage_data_disks_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestoragedatadisk">List[Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#virtualmachinestoragedatadisk">List[Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_data_disk` blocks.
 {{% /md %}}</dd>
@@ -2825,7 +2825,7 @@ The following state arguments are supported:
 <a href="#state_storage_image_reference_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageimagereference">Dict[Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` block.
 {{% /md %}}</dd>
@@ -2836,7 +2836,7 @@ The following state arguments are supported:
 <a href="#state_storage_os_disk_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>os_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageosdisk">Dict[Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_os_disk` block.
 {{% /md %}}</dd>
@@ -2847,7 +2847,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Virtual Machine.
 {{% /md %}}</dd>
@@ -2963,8 +2963,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="ultrassdenabled_python">
-<a href="#ultrassdenabled_python" style="color: inherit; text-decoration: inherit;">ultra<wbr>Ssd<wbr>Enabled</a>
+        <span id="ultra_ssd_enabled_python">
+<a href="#ultra_ssd_enabled_python" style="color: inherit; text-decoration: inherit;">ultra_<wbr>ssd_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3097,8 +3097,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="storageuri_python">
-<a href="#storageuri_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Uri</a>
+        <span id="storage_uri_python">
+<a href="#storage_uri_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3264,8 +3264,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityids_python">
-<a href="#identityids_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
+        <span id="identity_ids_python">
+<a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3631,11 +3631,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkeys_python">
-<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+        <span id="ssh_keys_python">
+<a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfigsshkey">List[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfigsshkey">List[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ssh_keys` blocks. This field is required if `disable_password_authentication` is set to `true`.
 {{% /md %}}</dd>
@@ -3754,8 +3754,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="keydata_python">
-<a href="#keydata_python" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
+        <span id="key_data_python">
+<a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3888,8 +3888,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcevaultid_python">
-<a href="#sourcevaultid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Vault<wbr>Id</a>
+        <span id="source_vault_id_python">
+<a href="#source_vault_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3899,11 +3899,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vaultcertificates_python">
-<a href="#vaultcertificates_python" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
+        <span id="vault_certificates_python">
+<a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilesecretvaultcertificate">List[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilesecretvaultcertificate">List[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `vault_certificates` blocks.
 {{% /md %}}</dd>
@@ -4022,8 +4022,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="certificateurl_python">
-<a href="#certificateurl_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
+        <span id="certificate_url_python">
+<a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4033,8 +4033,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificatestore_python">
-<a href="#certificatestore_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Store</a>
+        <span id="certificate_store_python">
+<a href="#certificate_store_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4255,19 +4255,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalunattendconfigs_python">
-<a href="#additionalunattendconfigs_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Unattend<wbr>Configs</a>
+        <span id="additional_unattend_configs_python">
+<a href="#additional_unattend_configs_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>unattend_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigadditionalunattendconfig">List[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigadditionalunattendconfig">List[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `additional_unattend_config` block.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enableautomaticupgrades_python">
-<a href="#enableautomaticupgrades_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Automatic<wbr>Upgrades</a>
+        <span id="enable_automatic_upgrades_python">
+<a href="#enable_automatic_upgrades_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>automatic_<wbr>upgrades</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4303,7 +4303,7 @@ The following state arguments are supported:
 <a href="#winrms_python" style="color: inherit; text-decoration: inherit;">winrms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigwinrm">List[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigwinrm">List[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `winrm` block.
 {{% /md %}}</dd>
@@ -4510,8 +4510,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="pass_python">
-<a href="#pass_python" style="color: inherit; text-decoration: inherit;">pass</a>
+        <span id="pass__python">
+<a href="#pass__python" style="color: inherit; text-decoration: inherit;">pass_</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4521,8 +4521,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="settingname_python">
-<a href="#settingname_python" style="color: inherit; text-decoration: inherit;">setting<wbr>Name</a>
+        <span id="setting_name_python">
+<a href="#setting_name_python" style="color: inherit; text-decoration: inherit;">setting_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4655,8 +4655,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificateurl_python">
-<a href="#certificateurl_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
+        <span id="certificate_url_python">
+<a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5242,17 +5242,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="manageddisktype_python">
-<a href="#manageddisktype_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the type of managed disk to create. Possible values are either `Standard_LRS`, `StandardSSD_LRS`, `Premium_LRS` or `UltraSSD_LRS`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="managed_disk_id_python">
 <a href="#managed_disk_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>id</a>
 </span> 
@@ -5264,8 +5253,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vhduri_python">
-<a href="#vhduri_python" style="color: inherit; text-decoration: inherit;">vhd<wbr>Uri</a>
+        <span id="managed_disk_type_python">
+<a href="#managed_disk_type_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of managed disk to create. Possible values are either `Standard_LRS`, `StandardSSD_LRS`, `Premium_LRS` or `UltraSSD_LRS`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vhd_uri_python">
+<a href="#vhd_uri_python" style="color: inherit; text-decoration: inherit;">vhd_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5972,24 +5972,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imageuri_python">
-<a href="#imageuri_python" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
+        <span id="image_uri_python">
+<a href="#image_uri_python" style="color: inherit; text-decoration: inherit;">image_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Image URI in the format `publisherName:offer:skus:version`. This field can also specify the [VHD uri](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-cli-deploy-templates/#create-a-custom-vm-image) of a custom VM image to clone. When cloning a Custom (Unmanaged) Disk Image the `os_type` field must be set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="manageddisktype_python">
-<a href="#manageddisktype_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the type of Managed Disk which should be created. Possible values are `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6005,6 +5994,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="managed_disk_type_python">
+<a href="#managed_disk_type_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Disk which should be created. Possible values are `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span> 
@@ -6016,8 +6016,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vhduri_python">
-<a href="#vhduri_python" style="color: inherit; text-decoration: inherit;">vhd<wbr>Uri</a>
+        <span id="vhd_uri_python">
+<a href="#vhd_uri_python" style="color: inherit; text-decoration: inherit;">vhd_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

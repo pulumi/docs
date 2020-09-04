@@ -1443,7 +1443,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1645,44 +1645,44 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="azurepolicies_python">
-<a href="#azurepolicies_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Policies</a>
+        <span id="azure_policies_python">
+<a href="#azure_policies_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileazurepolicy">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileazurepolicy">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_policy` block.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="httpapplicationroutings_python">
-<a href="#httpapplicationroutings_python" style="color: inherit; text-decoration: inherit;">http<wbr>Application<wbr>Routings</a>
+        <span id="http_application_routings_python">
+<a href="#http_application_routings_python" style="color: inherit; text-decoration: inherit;">http_<wbr>application_<wbr>routings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="kubedashboards_python">
-<a href="#kubedashboards_python" style="color: inherit; text-decoration: inherit;">kube<wbr>Dashboards</a>
+        <span id="kube_dashboards_python">
+<a href="#kube_dashboards_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>dashboards</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofilekubedashboard">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofilekubedashboard">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `kube_dashboard` block.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="omsagents_python">
-<a href="#omsagents_python" style="color: inherit; text-decoration: inherit;">oms<wbr>Agents</a>
+        <span id="oms_agents_python">
+<a href="#oms_agents_python" style="color: inherit; text-decoration: inherit;">oms_<wbr>agents</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block.
 {{% /md %}}</dd>
@@ -1902,8 +1902,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="httpapplicationroutingzonename_python">
-<a href="#httpapplicationroutingzonename_python" style="color: inherit; text-decoration: inherit;">http<wbr>Application<wbr>Routing<wbr>Zone<wbr>Name</a>
+        <span id="http_application_routing_zone_name_python">
+<a href="#http_application_routing_zone_name_python" style="color: inherit; text-decoration: inherit;">http_<wbr>application_<wbr>routing_<wbr>zone_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2170,11 +2170,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="omsagentidentities_python">
-<a href="#omsagentidentities_python" style="color: inherit; text-decoration: inherit;">oms<wbr>Agent<wbr>Identities</a>
+        <span id="oms_agent_identities_python">
+<a href="#oms_agent_identities_python" style="color: inherit; text-decoration: inherit;">oms_<wbr>agent_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `oms_agent_identity` block as defined below.
 {{% /md %}}</dd>
@@ -2348,8 +2348,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="userassignedidentityid_python">
-<a href="#userassignedidentityid_python" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Id</a>
+        <span id="user_assigned_identity_id_python">
+<a href="#user_assigned_identity_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3051,7 +3051,7 @@ The following output properties are available:
 <a href="#node_labels_python" style="color: inherit; text-decoration: inherit;">node_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3105,7 +3105,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -3567,8 +3567,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="clientcertificate_python">
-<a href="#clientcertificate_python" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
+        <span id="client_certificate_python">
+<a href="#client_certificate_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3578,8 +3578,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="clientkey_python">
-<a href="#clientkey_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+        <span id="client_key_python">
+<a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3589,8 +3589,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="clustercacertificate_python">
-<a href="#clustercacertificate_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ca<wbr>Certificate</a>
+        <span id="cluster_ca_certificate_python">
+<a href="#cluster_ca_certificate_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ca_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3877,8 +3877,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="clientcertificate_python">
-<a href="#clientcertificate_python" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
+        <span id="client_certificate_python">
+<a href="#client_certificate_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3888,8 +3888,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="clientkey_python">
-<a href="#clientkey_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+        <span id="client_key_python">
+<a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3899,8 +3899,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="clustercacertificate_python">
-<a href="#clustercacertificate_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ca<wbr>Certificate</a>
+        <span id="cluster_ca_certificate_python">
+<a href="#cluster_ca_certificate_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ca_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4110,8 +4110,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="userassignedidentityid_python">
-<a href="#userassignedidentityid_python" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Id</a>
+        <span id="user_assigned_identity_id_python">
+<a href="#user_assigned_identity_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4244,11 +4244,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sshkeys_python">
-<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+        <span id="ssh_keys_python">
+<a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterlinuxprofilesshkey">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterlinuxprofilesshkey">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `ssh_key` block as defined below.
 {{% /md %}}</dd>
@@ -4334,8 +4334,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="keydata_python">
-<a href="#keydata_python" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
+        <span id="key_data_python">
+<a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4619,8 +4619,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="dnsserviceip_python">
-<a href="#dnsserviceip_python" style="color: inherit; text-decoration: inherit;">dns<wbr>Service<wbr>Ip</a>
+        <span id="dns_service_ip_python">
+<a href="#dns_service_ip_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>service_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4630,8 +4630,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="dockerbridgecidr_python">
-<a href="#dockerbridgecidr_python" style="color: inherit; text-decoration: inherit;">docker<wbr>Bridge<wbr>Cidr</a>
+        <span id="docker_bridge_cidr_python">
+<a href="#docker_bridge_cidr_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>bridge_<wbr>cidr</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4641,8 +4641,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="loadbalancersku_python">
-<a href="#loadbalancersku_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Sku</a>
+        <span id="load_balancer_sku_python">
+<a href="#load_balancer_sku_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>sku</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4651,8 +4651,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="networkplugin_python">
-<a href="#networkplugin_python" style="color: inherit; text-decoration: inherit;">network<wbr>Plugin</a>
+        <span id="network_plugin_python">
+<a href="#network_plugin_python" style="color: inherit; text-decoration: inherit;">network_<wbr>plugin</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4662,8 +4662,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="networkpolicy_python">
-<a href="#networkpolicy_python" style="color: inherit; text-decoration: inherit;">network<wbr>Policy</a>
+        <span id="network_policy_python">
+<a href="#network_policy_python" style="color: inherit; text-decoration: inherit;">network_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4673,8 +4673,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="podcidr_python">
-<a href="#podcidr_python" style="color: inherit; text-decoration: inherit;">pod<wbr>Cidr</a>
+        <span id="pod_cidr_python">
+<a href="#pod_cidr_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>cidr</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4684,8 +4684,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="servicecidr_python">
-<a href="#servicecidr_python" style="color: inherit; text-decoration: inherit;">service<wbr>Cidr</a>
+        <span id="service_cidr_python">
+<a href="#service_cidr_python" style="color: inherit; text-decoration: inherit;">service_<wbr>cidr</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4807,11 +4807,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="azureactivedirectories_python">
-<a href="#azureactivedirectories_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directories</a>
+        <span id="azure_active_directories_python">
+<a href="#azure_active_directories_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrolazureactivedirectory">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrolazureactivedirectory">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory` block as documented above.
 {{% /md %}}</dd>
@@ -5040,8 +5040,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="admingroupobjectids_python">
-<a href="#admingroupobjectids_python" style="color: inherit; text-decoration: inherit;">admin<wbr>Group<wbr>Object<wbr>Ids</a>
+        <span id="admin_group_object_ids_python">
+<a href="#admin_group_object_ids_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>group_<wbr>object_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5051,8 +5051,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="clientappid_python">
-<a href="#clientappid_python" style="color: inherit; text-decoration: inherit;">client<wbr>App<wbr>Id</a>
+        <span id="client_app_id_python">
+<a href="#client_app_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>app_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5073,8 +5073,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="serverappid_python">
-<a href="#serverappid_python" style="color: inherit; text-decoration: inherit;">server<wbr>App<wbr>Id</a>
+        <span id="server_app_id_python">
+<a href="#server_app_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>app_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

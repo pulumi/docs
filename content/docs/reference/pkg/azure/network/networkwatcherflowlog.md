@@ -193,17 +193,17 @@ test_network_watcher_flow_log = azure.network.NetworkWatcherFlowLog("testNetwork
     network_security_group_id=test_network_security_group.id,
     storage_account_id=test_account.id,
     enabled=True,
-    retention_policy={
-        "enabled": True,
-        "days": 7,
-    },
-    traffic_analytics={
-        "enabled": True,
-        "workspace_id": test_analytics_workspace.workspace_id,
-        "workspaceRegion": test_analytics_workspace.location,
-        "workspace_resource_id": test_analytics_workspace.id,
-        "intervalInMinutes": 10,
-    })
+    retention_policy=azure.network.NetworkWatcherFlowLogRetentionPolicyArgs(
+        enabled=True,
+        days=7,
+    ),
+    traffic_analytics=azure.network.NetworkWatcherFlowLogTrafficAnalyticsArgs(
+        enabled=True,
+        workspace_id=test_analytics_workspace.workspace_id,
+        workspace_region=test_analytics_workspace.location,
+        workspace_resource_id=test_analytics_workspace.id,
+        interval_in_minutes=10,
+    ))
 ```
 
 {{% /example %}}
@@ -270,7 +270,7 @@ const testNetworkWatcherFlowLog = new azure.network.NetworkWatcherFlowLog("testN
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.NetworkWatcherFlowLog">NetworkWatcherFlowLog</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[NetworkWatcherFlowLogRetentionPolicy]]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_analytics</span><span class="p">:</span> <span class="nx">Optional[Dict[NetworkWatcherFlowLogTrafficAnalytics]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.NetworkWatcherFlowLog">NetworkWatcherFlowLog</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[NetworkWatcherFlowLogRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_analytics</span><span class="p">:</span> <span class="nx">Optional[NetworkWatcherFlowLogTrafficAnalyticsArgs]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -777,7 +777,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkwatcherflowlogretentionpolicy">Dict[Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Retention<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#networkwatcherflowlogretentionpolicy">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
 {{% /md %}}</dd>
@@ -799,7 +799,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#traffic_analytics_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>analytics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkwatcherflowlogtrafficanalytics">Dict[Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Traffic<wbr>Analytics]</a></span>
+        <span class="property-type"><a href="#networkwatcherflowlogtrafficanalytics">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Traffic<wbr>Analytics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `traffic_analytics` block as documented below.
 {{% /md %}}</dd>
@@ -914,7 +914,7 @@ Get an existing NetworkWatcherFlowLog resource's state with the given name, ID, 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[NetworkWatcherFlowLogRetentionPolicy]]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_analytics</span><span class="p">:</span> <span class="nx">Optional[Dict[NetworkWatcherFlowLogTrafficAnalytics]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> NetworkWatcherFlowLog</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[NetworkWatcherFlowLogRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_analytics</span><span class="p">:</span> <span class="nx">Optional[NetworkWatcherFlowLogTrafficAnalyticsArgs]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> NetworkWatcherFlowLog</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1363,7 +1363,7 @@ The following state arguments are supported:
 <a href="#state_retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkwatcherflowlogretentionpolicy">Dict[Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Retention<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#networkwatcherflowlogretentionpolicy">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
 {{% /md %}}</dd>
@@ -1385,7 +1385,7 @@ The following state arguments are supported:
 <a href="#state_traffic_analytics_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>analytics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkwatcherflowlogtrafficanalytics">Dict[Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Traffic<wbr>Analytics]</a></span>
+        <span class="property-type"><a href="#networkwatcherflowlogtrafficanalytics">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Traffic<wbr>Analytics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `traffic_analytics` block as documented below.
 {{% /md %}}</dd>
@@ -1767,17 +1767,6 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="workspaceregion_python">
-<a href="#workspaceregion_python" style="color: inherit; text-decoration: inherit;">workspace<wbr>Region</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The location of the attached workspace.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="workspace_id_python">
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
 </span> 
@@ -1785,6 +1774,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The resource guid of the attached workspace.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workspace_region_python">
+<a href="#workspace_region_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the attached workspace.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1800,8 +1800,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="intervalinminutes_python">
-<a href="#intervalinminutes_python" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Minutes</a>
+        <span id="interval_in_minutes_python">
+<a href="#interval_in_minutes_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
