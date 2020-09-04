@@ -7,11 +7,11 @@ authors: ["vova-ivanov"]
 tags: ["aws", "typescript", "docker"]
 ---
 
-In this blog post, we will explore PERN stack applications and deploy one to AWS. *PERN* is an acronym for PostgreSQL, Express, React, and Node; and a PERN stack application is a project that uses PostgreSQL, Express as an application framework, React as a user interface framework, and runs on Node. We will also use [Pulumi Crosswalk]({{< relref "/docs/guides/crosswalk/aws" >}}) to reduce the amount of code and provide a quick and straightforward path for deploying the application.
+In this blog post, we will explore PERN stack applications and deploy one to AWS. *PERN* is an acronym for PostgreSQL, Express, React, and Node. A PERN stack application is a project that uses PostgreSQL, Express as an application framework, React as a user interface framework, and runs on Node. We will also use [Pulumi Crosswalk]({{< relref "/docs/guides/crosswalk/aws" >}}) to reduce the amount of code and provide a quick and straightforward path for deploying the application.
 
 <!--more-->
 
-The nature of the project means that it has 4 distinct tiers: a database that keeps track of our data, a stateless server that receives commands and manipulates the database, a clientside server that contains and send out the user interface code, and the internet browser that downloads that code, presents the UI, and sends requests to the stateless server.
+The nature of the project means that it has four distinct tiers: a database that keeps track of our data, a stateless server that receives commands and manipulates the database, a clientside server that contains and send out the user interface code, and the internet browser that downloads that code, presents the UI and sends requests to the stateless server.
 
 PERN projects have four distinct tiers:
 
@@ -25,7 +25,7 @@ PERN projects have four distinct tiers:
 
 ![PERN app diagram](diagram.png)
 
-An advantage of infrastructure as code is that the application and infrastructure deployment can use the same language. As React and the other components use NodeJS, we'll use it for our infrastructure too by writing it TypeScript. The first step is to create a new directory and initialize a Pulumi project with `pulumi new aws-typescript`.
+An advantage of infrastructure as code is that the application and infrastructure deployment can use the same language. As React and the other components use NodeJS, we'll use it for our infrastructure by writing it in TypeScript. The first step is to create a new directory and initialize a Pulumi project with `pulumi new aws-typescript`.
 
 ```bash
 $ mkdir aws-pern-voting-app && cd aws-pern-voting-app
@@ -34,7 +34,7 @@ $ pulumi new aws-typescript
 
 This tutorial was written for the [aws-pern-voting-app example](https://github.com/pulumi/examples/tree/vova/aws-pern-voting-app/aws-pern-voting-app) but will work with any other PERN stack application. The example uses two folders to hold the client and server tiers and a Dockerfile that builds images that run as containers in AWS.
 
-To deploy our PERN stack, the project requires several configuration variables, which we set using `pulumi config set`. The variables are used to configure the PostgreSQL admin account, a user account for initializing the schema and table, and the region of our database.
+To deploy our PERN stack, the project requires several configuration variables, which we set using `pulumi config set`. The variables are used to configure the PostgreSQL admin account, a user account for initializing the schema and table, and the database's region.
 
 ```bash
 $ pulumi config set sql-admin-name <NAME>
@@ -52,7 +52,7 @@ The `package.json` file lists the libraries used by the project. We will add the
 "pg": "^8.3.3"
 ```
 
-Our project uses a Dynamic Provider to help create tables and Schemas. It offers the same exact features as our [MySQL provider]({{< relref "/blog/deploying-mysql-schemas-using-dynamic-providers" >}}), but for PostgreSQL.
+Our project uses a Dynamic Provider to help create tables and Schemas. It offers the same features as our [MySQL provider]({{< relref "/blog/deploying-mysql-schemas-using-dynamic-providers" >}}), but for PostgreSQL.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -290,7 +290,7 @@ const postgresqlVotesTable = new Schema("postgresql-votes-schema", {
 });
 ```
 
-With the basic infrastructure and provider completed, we can write the application deployment code to ECS. We will use Pulumi Crosswalk, which is a collection of libraries that makes common infrastructure-as-code tasks in AWS easier and more secure by using well-architected best practices automatically.
+With the basic infrastructure and provider completed, we can write the application deployment code to ECS. We will use Pulumi Crosswalk, a collection of libraries that makes common infrastructure-as-code tasks in AWS easier and more secure by automatically using well-architected best practices.
 
 We'll first set up the server. The Network Listener is assigned the same port as the server, which is, in our case, port 5000. A set of environment variables representing our PostgreSQL connection credentials are passed directly to the `awsx.ecs.FargateService`. With AWS Crosswalk, what would have been over 150 lines of code is reduced to just under 20 lines of code.
 
@@ -316,7 +316,7 @@ const serversideService = new awsx.ecs.FargateService("server-side-service", {
 });
 ```
 
-The same is true for the client service, which can be reduced to a short and easy to understand format. By default, React uses port 3000, but it can set to a different port. The `SERVER_HOSTNAME` environment variable which we pass in is used when the container starts to generate a tiny configuration file at runtime called `serverParams.js` with the URL. This way, we do not have to rebuild the entire docker image should the server URL change.
+The same is true for the client service, which is reduced to a short and easy to understand format. By default, React uses port 3000, but it can set to a different port. The `SERVER_HOSTNAME` environment variable is passed in when the container starts to generate a tiny configuration file at runtime called `serverParams.js` with the URL. This way, we do not have to rebuild the entire docker image should the server URL change.
 
 ```typescript
 const clientsideListener = new awsx.elasticloadbalancingv2.NetworkListener("client-side-listener", { port: 3000 });
@@ -336,14 +336,14 @@ const clientsideService = new awsx.ecs.FargateService("client-side-service", {
 });
 ```
 
-To make our PERN stack application available on the Internet, we export the address of the clientside listener. We can open a browser window with the URL and port to view our application.
+To make our PERN stack application available on the Internet, we export the clientside listener's address. We can open a browser window with the URL and port to view our application.
 
 ```typescript
 export let URL = clientsideListener.endpoint.hostname;
 ```
 
-In this example, I explained the basic principles behind PERN stack applications and showed how to create the infrastructure to deploy them on ECS. A flexible and optimized tool, Pulumi Crosswalk allows everything from rapidly prototyping applications, to scaling workload, to securing and integrating it with your existing infrastructure, or going to production in multiple complex environments.
+In this example, I explained the basic principles behind PERN stack applications and showed how to create the infrastructure to deploy them on ECS. A flexible and optimized tool, Pulumi Crosswalk supports rapidly prototyping applications, scaling workloads, securing and integrating applications in existing infrastructure, and going to production in multiple complex environments.
 
-Next week, I'll demonstrate how to integrate applications with Kubernetes, and how to seamlessly deploy them to EKS using Pulumi.
+Next week, I'll demonstrate how to integrate applications with Kubernetes, and seamlessly deploy them to EKS using Pulumi.
 
 The blog post's code can be [found on Github](https://github.com/pulumi/examples/tree/vova/aws-pern-voting-app/aws-pern-voting-app).
