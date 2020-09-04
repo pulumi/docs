@@ -104,8 +104,8 @@ pulumi.export('bucket_name',  bucket.id)
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kms"
-    "github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+    "github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kms"
+    "github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
     "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
