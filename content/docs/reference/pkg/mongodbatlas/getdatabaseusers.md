@@ -132,24 +132,24 @@ test_database_user = mongodbatlas.DatabaseUser("testDatabaseUser",
     project_id="<PROJECT-ID>",
     auth_database_name="admin",
     roles=[
-        {
-            "role_name": "readWrite",
-            "database_name": "admin",
-        },
-        {
-            "role_name": "atlasAdmin",
-            "database_name": "admin",
-        },
+        mongodbatlas.DatabaseUserRoleArgs(
+            role_name="readWrite",
+            database_name="admin",
+        ),
+        mongodbatlas.DatabaseUserRoleArgs(
+            role_name="atlasAdmin",
+            database_name="admin",
+        ),
     ],
     labels=[
-        {
-            "key": "key 1",
-            "value": "value 1",
-        },
-        {
-            "key": "key 2",
-            "value": "value 2",
-        },
+        mongodbatlas.DatabaseUserLabelArgs(
+            key="key 1",
+            value="value 1",
+        ),
+        mongodbatlas.DatabaseUserLabelArgs(
+            key="key 2",
+            value="value 2",
+        ),
     ])
 test_database_users = test_database_user.project_id.apply(lambda project_id: mongodbatlas.get_database_users(project_id=project_id))
 ```
@@ -209,7 +209,7 @@ const testDatabaseUsers = testDatabaseUser.projectId.apply(projectId => mongodba
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_database_users(</span>project_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_database_users(</span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDatabaseUsersResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -511,7 +511,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The user’s authentication database. A user must provide both a username and authentication database to log into MongoDB. In Atlas deployments of MongoDB, the authentication database is always the admin database.
+    <dd>{{% md %}}(Required) Database against which Atlas authenticates the user. A user must provide both a username and authentication database to log into MongoDB.
+Possible values include:
+* `admin` if `x509_type` and `aws_iam_type` are omitted or NONE.
+* `$external` if:
+* `x509_type` is MANAGED or CUSTOMER, or
+* `aws_iam_type` is USER or ROLE.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="awsiamtype_csharp">
+<a href="#awsiamtype_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Iam<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The new database user authenticates with AWS IAM credentials. Default is `NONE`, `USER` means user has AWS IAM user credentials, `ROLE` - means user has credentials associated with an AWS IAM role.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -583,7 +599,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The user’s authentication database. A user must provide both a username and authentication database to log into MongoDB. In Atlas deployments of MongoDB, the authentication database is always the admin database.
+    <dd>{{% md %}}(Required) Database against which Atlas authenticates the user. A user must provide both a username and authentication database to log into MongoDB.
+Possible values include:
+* `admin` if `x509_type` and `aws_iam_type` are omitted or NONE.
+* `$external` if:
+* `x509_type` is MANAGED or CUSTOMER, or
+* `aws_iam_type` is USER or ROLE.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="awsiamtype_go">
+<a href="#awsiamtype_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Iam<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The new database user authenticates with AWS IAM credentials. Default is `NONE`, `USER` means user has AWS IAM user credentials, `ROLE` - means user has credentials associated with an AWS IAM role.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -655,7 +687,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The user’s authentication database. A user must provide both a username and authentication database to log into MongoDB. In Atlas deployments of MongoDB, the authentication database is always the admin database.
+    <dd>{{% md %}}(Required) Database against which Atlas authenticates the user. A user must provide both a username and authentication database to log into MongoDB.
+Possible values include:
+* `admin` if `x509_type` and `aws_iam_type` are omitted or NONE.
+* `$external` if:
+* `x509_type` is MANAGED or CUSTOMER, or
+* `aws_iam_type` is USER or ROLE.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="awsiamtype_nodejs">
+<a href="#awsiamtype_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Iam<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The new database user authenticates with AWS IAM credentials. Default is `NONE`, `USER` means user has AWS IAM user credentials, `ROLE` - means user has credentials associated with an AWS IAM role.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -727,7 +775,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The user’s authentication database. A user must provide both a username and authentication database to log into MongoDB. In Atlas deployments of MongoDB, the authentication database is always the admin database.
+    <dd>{{% md %}}(Required) Database against which Atlas authenticates the user. A user must provide both a username and authentication database to log into MongoDB.
+Possible values include:
+* `admin` if `x509_type` and `aws_iam_type` are omitted or NONE.
+* `$external` if:
+* `x509_type` is MANAGED or CUSTOMER, or
+* `aws_iam_type` is USER or ROLE.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="aws_iam_type_python">
+<a href="#aws_iam_type_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>iam_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The new database user authenticates with AWS IAM credentials. Default is `NONE`, `USER` means user has AWS IAM user credentials, `ROLE` - means user has credentials associated with an AWS IAM role.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -736,7 +800,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseusersresultlabel">List[Get<wbr>Database<wbr>Users<wbr>Result<wbr>Label]</a></span>
+        <span class="property-type"><a href="#getdatabaseusersresultlabel">List[Get<wbr>Database<wbr>Users<wbr>Result<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -757,7 +821,7 @@ The following output properties are available:
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseusersresultrole">List[Get<wbr>Database<wbr>Users<wbr>Result<wbr>Role]</a></span>
+        <span class="property-type"><a href="#getdatabaseusersresultrole">List[Get<wbr>Database<wbr>Users<wbr>Result<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
 {{% /md %}}</dd>
@@ -1062,8 +1126,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="collectionname_python">
-<a href="#collectionname_python" style="color: inherit; text-decoration: inherit;">collection<wbr>Name</a>
+        <span id="collection_name_python">
+<a href="#collection_name_python" style="color: inherit; text-decoration: inherit;">collection_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1110,6 +1174,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mongodbatlas).</dd>
+	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
 </dl>
 

@@ -135,29 +135,29 @@ import pulumi_mongodbatlas as mongodbatlas
 test = mongodbatlas.AlertConfiguration("test",
     enabled=True,
     event_type="OUTSIDE_METRIC_THRESHOLD",
-    matchers=[{
-        "fieldName": "HOSTNAME_AND_PORT",
-        "operator": "EQUALS",
-        "value": "SECONDARY",
-    }],
-    metric_threshold={
-        "metric_name": "ASSERT_REGULAR",
-        "mode": "AVERAGE",
-        "operator": "LESS_THAN",
-        "threshold": 99,
-        "units": "RAW",
-    },
-    notifications=[{
-        "delayMin": 0,
-        "emailEnabled": True,
-        "intervalMin": 5,
-        "roles": [
+    matchers=[mongodbatlas.AlertConfigurationMatcherArgs(
+        field_name="HOSTNAME_AND_PORT",
+        operator="EQUALS",
+        value="SECONDARY",
+    )],
+    metric_threshold=mongodbatlas.AlertConfigurationMetricThresholdArgs(
+        metric_name="ASSERT_REGULAR",
+        mode="AVERAGE",
+        operator="LESS_THAN",
+        threshold=99,
+        units="RAW",
+    ),
+    notifications=[mongodbatlas.AlertConfigurationNotificationArgs(
+        delay_min=0,
+        email_enabled=True,
+        interval_min=5,
+        roles=[
             "GROUP_CHARTS_ADMIN",
             "GROUP_CLUSTER_MANAGER",
         ],
-        "smsEnabled": False,
-        "typeName": "GROUP",
-    }],
+        sms_enabled=False,
+        type_name="GROUP",
+    )],
     project_id="<PROJECT-ID>")
 ```
 
@@ -213,7 +213,7 @@ const test = new mongodbatlas.AlertConfiguration("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.AlertConfiguration">AlertConfiguration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enabled=None<span class="p">, </span>event_type=None<span class="p">, </span>matchers=None<span class="p">, </span>metric_threshold=None<span class="p">, </span>notifications=None<span class="p">, </span>project_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.AlertConfiguration">AlertConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">matchers</span><span class="p">:</span> <span class="nx">Optional[List[AlertConfigurationMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">metric_threshold</span><span class="p">:</span> <span class="nx">Optional[AlertConfigurationMetricThresholdArgs]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[List[AlertConfigurationNotificationArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[AlertConfigurationThresholdArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -394,39 +394,6 @@ The AlertConfiguration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of event that will trigger an alert.
-Alert type 	Possible values:
-* Host
-- `OUTSIDE_METRIC_THRESHOLD`
-- `HOST_RESTARTED`
-- `HOST_UPGRADED`
-- `HOST_NOW_SECONDARY`
-- `HOST_NOW_PRIMARY`
-* Replica set
-- `NO_PRIMARY`
-- `TOO_MANY_ELECTIONS`
-* Sharded cluster
-- `CLUSTER_MONGOS_IS_MISSING`
-- `User`
-- `JOINED_GROUP`
-- `REMOVED_FROM_GROUP`
-- `USER_ROLES_CHANGED_AUDIT`
-* Project
-- `USERS_AWAITING_APPROVAL`
-- `USERS_WITHOUT_MULTI_FACTOR_AUTH`
-- `GROUP_CREATED`
-* Team
-- `JOINED_TEAM`
-- `REMOVED_FROM_TEAM`
-* Organization
-- `INVITED_TO_ORG`
-- `JOINED_ORG`
-* Data Explorer
-- `DATA_EXPLORER`
-- `DATA_EXPLORER_CRUD`
-* Billing
-- `CREDIT_CARD_ABOUT_TO_EXPIRE`
-- `CHARGE_SUCCEEDED`
-- `INVOICE_CLOSED`
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -481,6 +448,17 @@ Alert type 	Possible values:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertconfigurationthreshold">Alert<wbr>Configuration<wbr>Threshold<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -497,39 +475,6 @@ Alert type 	Possible values:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of event that will trigger an alert.
-Alert type 	Possible values:
-* Host
-- `OUTSIDE_METRIC_THRESHOLD`
-- `HOST_RESTARTED`
-- `HOST_UPGRADED`
-- `HOST_NOW_SECONDARY`
-- `HOST_NOW_PRIMARY`
-* Replica set
-- `NO_PRIMARY`
-- `TOO_MANY_ELECTIONS`
-* Sharded cluster
-- `CLUSTER_MONGOS_IS_MISSING`
-- `User`
-- `JOINED_GROUP`
-- `REMOVED_FROM_GROUP`
-- `USER_ROLES_CHANGED_AUDIT`
-* Project
-- `USERS_AWAITING_APPROVAL`
-- `USERS_WITHOUT_MULTI_FACTOR_AUTH`
-- `GROUP_CREATED`
-* Team
-- `JOINED_TEAM`
-- `REMOVED_FROM_TEAM`
-* Organization
-- `INVITED_TO_ORG`
-- `JOINED_ORG`
-* Data Explorer
-- `DATA_EXPLORER`
-- `DATA_EXPLORER_CRUD`
-* Billing
-- `CREDIT_CARD_ABOUT_TO_EXPIRE`
-- `CHARGE_SUCCEEDED`
-- `INVOICE_CLOSED`
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -584,6 +529,17 @@ Alert type 	Possible values:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertconfigurationthreshold">Alert<wbr>Configuration<wbr>Threshold</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -600,39 +556,6 @@ Alert type 	Possible values:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of event that will trigger an alert.
-Alert type 	Possible values:
-* Host
-- `OUTSIDE_METRIC_THRESHOLD`
-- `HOST_RESTARTED`
-- `HOST_UPGRADED`
-- `HOST_NOW_SECONDARY`
-- `HOST_NOW_PRIMARY`
-* Replica set
-- `NO_PRIMARY`
-- `TOO_MANY_ELECTIONS`
-* Sharded cluster
-- `CLUSTER_MONGOS_IS_MISSING`
-- `User`
-- `JOINED_GROUP`
-- `REMOVED_FROM_GROUP`
-- `USER_ROLES_CHANGED_AUDIT`
-* Project
-- `USERS_AWAITING_APPROVAL`
-- `USERS_WITHOUT_MULTI_FACTOR_AUTH`
-- `GROUP_CREATED`
-* Team
-- `JOINED_TEAM`
-- `REMOVED_FROM_TEAM`
-* Organization
-- `INVITED_TO_ORG`
-- `JOINED_ORG`
-* Data Explorer
-- `DATA_EXPLORER`
-- `DATA_EXPLORER_CRUD`
-* Billing
-- `CREDIT_CARD_ABOUT_TO_EXPIRE`
-- `CHARGE_SUCCEEDED`
-- `INVOICE_CLOSED`
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -687,6 +610,17 @@ Alert type 	Possible values:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertconfigurationthreshold">Alert<wbr>Configuration<wbr>Threshold</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -703,39 +637,6 @@ Alert type 	Possible values:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of event that will trigger an alert.
-Alert type 	Possible values:
-* Host
-- `OUTSIDE_METRIC_THRESHOLD`
-- `HOST_RESTARTED`
-- `HOST_UPGRADED`
-- `HOST_NOW_SECONDARY`
-- `HOST_NOW_PRIMARY`
-* Replica set
-- `NO_PRIMARY`
-- `TOO_MANY_ELECTIONS`
-* Sharded cluster
-- `CLUSTER_MONGOS_IS_MISSING`
-- `User`
-- `JOINED_GROUP`
-- `REMOVED_FROM_GROUP`
-- `USER_ROLES_CHANGED_AUDIT`
-* Project
-- `USERS_AWAITING_APPROVAL`
-- `USERS_WITHOUT_MULTI_FACTOR_AUTH`
-- `GROUP_CREATED`
-* Team
-- `JOINED_TEAM`
-- `REMOVED_FROM_TEAM`
-* Organization
-- `INVITED_TO_ORG`
-- `JOINED_ORG`
-* Data Explorer
-- `DATA_EXPLORER`
-- `DATA_EXPLORER_CRUD`
-* Billing
-- `CREDIT_CARD_ABOUT_TO_EXPIRE`
-- `CHARGE_SUCCEEDED`
-- `INVOICE_CLOSED`
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -744,7 +645,7 @@ Alert type 	Possible values:
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationnotification">List[Alert<wbr>Configuration<wbr>Notification]</a></span>
+        <span class="property-type"><a href="#alertconfigurationnotification">List[Alert<wbr>Configuration<wbr>Notification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -776,7 +677,7 @@ Alert type 	Possible values:
 <a href="#matchers_python" style="color: inherit; text-decoration: inherit;">matchers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationmatcher">List[Alert<wbr>Configuration<wbr>Matcher]</a></span>
+        <span class="property-type"><a href="#alertconfigurationmatcher">List[Alert<wbr>Configuration<wbr>Matcher<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -786,9 +687,20 @@ Alert type 	Possible values:
 <a href="#metric_threshold_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationmetricthreshold">Dict[Alert<wbr>Configuration<wbr>Metric<wbr>Threshold]</a></span>
+        <span class="property-type"><a href="#alertconfigurationmetricthreshold">Alert<wbr>Configuration<wbr>Metric<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertconfigurationthreshold">Alert<wbr>Configuration<wbr>Threshold<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1020,7 +932,8 @@ Get an existing AlertConfiguration resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>alert_configuration_id=None<span class="p">, </span>created=None<span class="p">, </span>enabled=None<span class="p">, </span>event_type=None<span class="p">, </span>matchers=None<span class="p">, </span>metric_threshold=None<span class="p">, </span>notifications=None<span class="p">, </span>project_id=None<span class="p">, </span>updated=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">matchers</span><span class="p">:</span> <span class="nx">Optional[List[AlertConfigurationMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">metric_threshold</span><span class="p">:</span> <span class="nx">Optional[AlertConfigurationMetricThresholdArgs]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[List[AlertConfigurationNotificationArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[AlertConfigurationThresholdArgs]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AlertConfiguration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1028,7 +941,7 @@ Get an existing AlertConfiguration resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.AlertConfiguration.html">AlertConfiguration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas..AlertConfigurationState.html">AlertConfigurationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.AlertConfiguration.html">AlertConfiguration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas..AlertConfigurationState.html">AlertConfigurationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1176,39 +1089,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of event that will trigger an alert.
-Alert type 	Possible values:
-* Host
-- `OUTSIDE_METRIC_THRESHOLD`
-- `HOST_RESTARTED`
-- `HOST_UPGRADED`
-- `HOST_NOW_SECONDARY`
-- `HOST_NOW_PRIMARY`
-* Replica set
-- `NO_PRIMARY`
-- `TOO_MANY_ELECTIONS`
-* Sharded cluster
-- `CLUSTER_MONGOS_IS_MISSING`
-- `User`
-- `JOINED_GROUP`
-- `REMOVED_FROM_GROUP`
-- `USER_ROLES_CHANGED_AUDIT`
-* Project
-- `USERS_AWAITING_APPROVAL`
-- `USERS_WITHOUT_MULTI_FACTOR_AUTH`
-- `GROUP_CREATED`
-* Team
-- `JOINED_TEAM`
-- `REMOVED_FROM_TEAM`
-* Organization
-- `INVITED_TO_ORG`
-- `JOINED_ORG`
-* Data Explorer
-- `DATA_EXPLORER`
-- `DATA_EXPLORER_CRUD`
-* Billing
-- `CREDIT_CARD_ABOUT_TO_EXPIRE`
-- `CHARGE_SUCCEEDED`
-- `INVOICE_CLOSED`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1250,6 +1130,17 @@ Alert type 	Possible values:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project where the alert configuration will create.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_threshold_csharp">
+<a href="#state_threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertconfigurationthreshold">Alert<wbr>Configuration<wbr>Threshold<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1312,39 +1203,6 @@ Alert type 	Possible values:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of event that will trigger an alert.
-Alert type 	Possible values:
-* Host
-- `OUTSIDE_METRIC_THRESHOLD`
-- `HOST_RESTARTED`
-- `HOST_UPGRADED`
-- `HOST_NOW_SECONDARY`
-- `HOST_NOW_PRIMARY`
-* Replica set
-- `NO_PRIMARY`
-- `TOO_MANY_ELECTIONS`
-* Sharded cluster
-- `CLUSTER_MONGOS_IS_MISSING`
-- `User`
-- `JOINED_GROUP`
-- `REMOVED_FROM_GROUP`
-- `USER_ROLES_CHANGED_AUDIT`
-* Project
-- `USERS_AWAITING_APPROVAL`
-- `USERS_WITHOUT_MULTI_FACTOR_AUTH`
-- `GROUP_CREATED`
-* Team
-- `JOINED_TEAM`
-- `REMOVED_FROM_TEAM`
-* Organization
-- `INVITED_TO_ORG`
-- `JOINED_ORG`
-* Data Explorer
-- `DATA_EXPLORER`
-- `DATA_EXPLORER_CRUD`
-* Billing
-- `CREDIT_CARD_ABOUT_TO_EXPIRE`
-- `CHARGE_SUCCEEDED`
-- `INVOICE_CLOSED`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1386,6 +1244,17 @@ Alert type 	Possible values:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project where the alert configuration will create.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_threshold_go">
+<a href="#state_threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertconfigurationthreshold">Alert<wbr>Configuration<wbr>Threshold</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1448,39 +1317,6 @@ Alert type 	Possible values:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of event that will trigger an alert.
-Alert type 	Possible values:
-* Host
-- `OUTSIDE_METRIC_THRESHOLD`
-- `HOST_RESTARTED`
-- `HOST_UPGRADED`
-- `HOST_NOW_SECONDARY`
-- `HOST_NOW_PRIMARY`
-* Replica set
-- `NO_PRIMARY`
-- `TOO_MANY_ELECTIONS`
-* Sharded cluster
-- `CLUSTER_MONGOS_IS_MISSING`
-- `User`
-- `JOINED_GROUP`
-- `REMOVED_FROM_GROUP`
-- `USER_ROLES_CHANGED_AUDIT`
-* Project
-- `USERS_AWAITING_APPROVAL`
-- `USERS_WITHOUT_MULTI_FACTOR_AUTH`
-- `GROUP_CREATED`
-* Team
-- `JOINED_TEAM`
-- `REMOVED_FROM_TEAM`
-* Organization
-- `INVITED_TO_ORG`
-- `JOINED_ORG`
-* Data Explorer
-- `DATA_EXPLORER`
-- `DATA_EXPLORER_CRUD`
-* Billing
-- `CREDIT_CARD_ABOUT_TO_EXPIRE`
-- `CHARGE_SUCCEEDED`
-- `INVOICE_CLOSED`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1522,6 +1358,17 @@ Alert type 	Possible values:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project where the alert configuration will create.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_threshold_nodejs">
+<a href="#state_threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertconfigurationthreshold">Alert<wbr>Configuration<wbr>Threshold</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1584,39 +1431,6 @@ Alert type 	Possible values:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of event that will trigger an alert.
-Alert type 	Possible values:
-* Host
-- `OUTSIDE_METRIC_THRESHOLD`
-- `HOST_RESTARTED`
-- `HOST_UPGRADED`
-- `HOST_NOW_SECONDARY`
-- `HOST_NOW_PRIMARY`
-* Replica set
-- `NO_PRIMARY`
-- `TOO_MANY_ELECTIONS`
-* Sharded cluster
-- `CLUSTER_MONGOS_IS_MISSING`
-- `User`
-- `JOINED_GROUP`
-- `REMOVED_FROM_GROUP`
-- `USER_ROLES_CHANGED_AUDIT`
-* Project
-- `USERS_AWAITING_APPROVAL`
-- `USERS_WITHOUT_MULTI_FACTOR_AUTH`
-- `GROUP_CREATED`
-* Team
-- `JOINED_TEAM`
-- `REMOVED_FROM_TEAM`
-* Organization
-- `INVITED_TO_ORG`
-- `JOINED_ORG`
-* Data Explorer
-- `DATA_EXPLORER`
-- `DATA_EXPLORER_CRUD`
-* Billing
-- `CREDIT_CARD_ABOUT_TO_EXPIRE`
-- `CHARGE_SUCCEEDED`
-- `INVOICE_CLOSED`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1625,7 +1439,7 @@ Alert type 	Possible values:
 <a href="#state_matchers_python" style="color: inherit; text-decoration: inherit;">matchers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationmatcher">List[Alert<wbr>Configuration<wbr>Matcher]</a></span>
+        <span class="property-type"><a href="#alertconfigurationmatcher">List[Alert<wbr>Configuration<wbr>Matcher<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1635,7 +1449,7 @@ Alert type 	Possible values:
 <a href="#state_metric_threshold_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationmetricthreshold">Dict[Alert<wbr>Configuration<wbr>Metric<wbr>Threshold]</a></span>
+        <span class="property-type"><a href="#alertconfigurationmetricthreshold">Alert<wbr>Configuration<wbr>Metric<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1645,7 +1459,7 @@ Alert type 	Possible values:
 <a href="#state_notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationnotification">List[Alert<wbr>Configuration<wbr>Notification]</a></span>
+        <span class="property-type"><a href="#alertconfigurationnotification">List[Alert<wbr>Configuration<wbr>Notification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1658,6 +1472,17 @@ Alert type 	Possible values:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project where the alert configuration will create.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_threshold_python">
+<a href="#state_threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertconfigurationthreshold">Alert<wbr>Configuration<wbr>Threshold<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1713,19 +1538,6 @@ Alert type 	Possible values:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the field in the target object to match on.
-Host alerts support these fields:
-- `TYPE_NAME`
-- `HOSTNAME`
-- `PORT`
-- `HOSTNAME_AND_PORT`
-- `REPLICA_SET_NAME`
-Replica set alerts support these fields:
-- `REPLICA_SET_NAME`
-- `SHARD_NAME`
-- `CLUSTER_NAME`
-Sharded cluster alerts support these fields:
-- `CLUSTER_NAME`
-- `SHARD_NAME`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1774,19 +1586,6 @@ Accepted values are:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the field in the target object to match on.
-Host alerts support these fields:
-- `TYPE_NAME`
-- `HOSTNAME`
-- `PORT`
-- `HOSTNAME_AND_PORT`
-- `REPLICA_SET_NAME`
-Replica set alerts support these fields:
-- `REPLICA_SET_NAME`
-- `SHARD_NAME`
-- `CLUSTER_NAME`
-Sharded cluster alerts support these fields:
-- `CLUSTER_NAME`
-- `SHARD_NAME`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1835,19 +1634,6 @@ Accepted values are:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the field in the target object to match on.
-Host alerts support these fields:
-- `TYPE_NAME`
-- `HOSTNAME`
-- `PORT`
-- `HOSTNAME_AND_PORT`
-- `REPLICA_SET_NAME`
-Replica set alerts support these fields:
-- `REPLICA_SET_NAME`
-- `SHARD_NAME`
-- `CLUSTER_NAME`
-Sharded cluster alerts support these fields:
-- `CLUSTER_NAME`
-- `SHARD_NAME`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1889,26 +1675,13 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fieldname_python">
-<a href="#fieldname_python" style="color: inherit; text-decoration: inherit;">field<wbr>Name</a>
+        <span id="field_name_python">
+<a href="#field_name_python" style="color: inherit; text-decoration: inherit;">field_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the field in the target object to match on.
-Host alerts support these fields:
-- `TYPE_NAME`
-- `HOSTNAME`
-- `PORT`
-- `HOSTNAME_AND_PORT`
-- `REPLICA_SET_NAME`
-Replica set alerts support these fields:
-- `REPLICA_SET_NAME`
-- `SHARD_NAME`
-- `CLUSTER_NAME`
-Sharded cluster alerts support these fields:
-- `CLUSTER_NAME`
-- `SHARD_NAME`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1974,7 +1747,7 @@ Accepted values are:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the metric to check.
+    <dd>{{% md %}}Name of the metric to check. The full list of current options is available [here](https://docs.atlas.mongodb.com/reference/alert-host-metrics/#measurement-types)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2056,7 +1829,7 @@ Accepted values are:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the metric to check.
+    <dd>{{% md %}}Name of the metric to check. The full list of current options is available [here](https://docs.atlas.mongodb.com/reference/alert-host-metrics/#measurement-types)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2138,7 +1911,7 @@ Accepted values are:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the metric to check.
+    <dd>{{% md %}}Name of the metric to check. The full list of current options is available [here](https://docs.atlas.mongodb.com/reference/alert-host-metrics/#measurement-types)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2220,7 +1993,7 @@ Accepted values are:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the metric to check.
+    <dd>{{% md %}}Name of the metric to check. The full list of current options is available [here](https://docs.atlas.mongodb.com/reference/alert-host-metrics/#measurement-types)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2522,16 +2295,6 @@ Accepted values are:
 - `DATADOG`
 - `EMAIL`
 - `FLOWDOCK`
-- `GROUP` (Project)
-- `OPS_GENIE`
-- `ORG`
-- `PAGER_DUTY`
-- `SLACK`
-- `SMS`
-- `TEAM`
-- `USER`
-- `VICTOR_OPS`
-- `WEBHOOK`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2784,16 +2547,6 @@ Accepted values are:
 - `DATADOG`
 - `EMAIL`
 - `FLOWDOCK`
-- `GROUP` (Project)
-- `OPS_GENIE`
-- `ORG`
-- `PAGER_DUTY`
-- `SLACK`
-- `SMS`
-- `TEAM`
-- `USER`
-- `VICTOR_OPS`
-- `WEBHOOK`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3046,16 +2799,6 @@ Accepted values are:
 - `DATADOG`
 - `EMAIL`
 - `FLOWDOCK`
-- `GROUP` (Project)
-- `OPS_GENIE`
-- `ORG`
-- `PAGER_DUTY`
-- `SLACK`
-- `SMS`
-- `TEAM`
-- `USER`
-- `VICTOR_OPS`
-- `WEBHOOK`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3100,8 +2843,8 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="apitoken_python">
-<a href="#apitoken_python" style="color: inherit; text-decoration: inherit;">api<wbr>Token</a>
+        <span id="api_token_python">
+<a href="#api_token_python" style="color: inherit; text-decoration: inherit;">api_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3111,8 +2854,8 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="channelname_python">
-<a href="#channelname_python" style="color: inherit; text-decoration: inherit;">channel<wbr>Name</a>
+        <span id="channel_name_python">
+<a href="#channel_name_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3122,8 +2865,8 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datadogapikey_python">
-<a href="#datadogapikey_python" style="color: inherit; text-decoration: inherit;">datadog<wbr>Api<wbr>Key</a>
+        <span id="datadog_api_key_python">
+<a href="#datadog_api_key_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>api_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3133,8 +2876,8 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datadogregion_python">
-<a href="#datadogregion_python" style="color: inherit; text-decoration: inherit;">datadog<wbr>Region</a>
+        <span id="datadog_region_python">
+<a href="#datadog_region_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>region</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3144,8 +2887,8 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="delaymin_python">
-<a href="#delaymin_python" style="color: inherit; text-decoration: inherit;">delay<wbr>Min</a>
+        <span id="delay_min_python">
+<a href="#delay_min_python" style="color: inherit; text-decoration: inherit;">delay_<wbr>min</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3155,8 +2898,8 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emailaddress_python">
-<a href="#emailaddress_python" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
+        <span id="email_address_python">
+<a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3166,8 +2909,8 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emailenabled_python">
-<a href="#emailenabled_python" style="color: inherit; text-decoration: inherit;">email<wbr>Enabled</a>
+        <span id="email_enabled_python">
+<a href="#email_enabled_python" style="color: inherit; text-decoration: inherit;">email_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3177,8 +2920,8 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="flowname_python">
-<a href="#flowname_python" style="color: inherit; text-decoration: inherit;">flow<wbr>Name</a>
+        <span id="flow_name_python">
+<a href="#flow_name_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3188,8 +2931,8 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="flowdockapitoken_python">
-<a href="#flowdockapitoken_python" style="color: inherit; text-decoration: inherit;">flowdock<wbr>Api<wbr>Token</a>
+        <span id="flowdock_api_token_python">
+<a href="#flowdock_api_token_python" style="color: inherit; text-decoration: inherit;">flowdock_<wbr>api_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3199,8 +2942,8 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="intervalmin_python">
-<a href="#intervalmin_python" style="color: inherit; text-decoration: inherit;">interval<wbr>Min</a>
+        <span id="interval_min_python">
+<a href="#interval_min_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>min</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3210,8 +2953,8 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mobilenumber_python">
-<a href="#mobilenumber_python" style="color: inherit; text-decoration: inherit;">mobile<wbr>Number</a>
+        <span id="mobile_number_python">
+<a href="#mobile_number_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3221,8 +2964,8 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="opsgenieapikey_python">
-<a href="#opsgenieapikey_python" style="color: inherit; text-decoration: inherit;">ops<wbr>Genie<wbr>Api<wbr>Key</a>
+        <span id="ops_genie_api_key_python">
+<a href="#ops_genie_api_key_python" style="color: inherit; text-decoration: inherit;">ops_<wbr>genie_<wbr>api_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3232,8 +2975,8 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="opsgenieregion_python">
-<a href="#opsgenieregion_python" style="color: inherit; text-decoration: inherit;">ops<wbr>Genie<wbr>Region</a>
+        <span id="ops_genie_region_python">
+<a href="#ops_genie_region_python" style="color: inherit; text-decoration: inherit;">ops_<wbr>genie_<wbr>region</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3243,8 +2986,8 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="orgname_python">
-<a href="#orgname_python" style="color: inherit; text-decoration: inherit;">org<wbr>Name</a>
+        <span id="org_name_python">
+<a href="#org_name_python" style="color: inherit; text-decoration: inherit;">org_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3264,8 +3007,8 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicekey_python">
-<a href="#servicekey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Key</a>
+        <span id="service_key_python">
+<a href="#service_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3275,8 +3018,8 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="smsenabled_python">
-<a href="#smsenabled_python" style="color: inherit; text-decoration: inherit;">sms<wbr>Enabled</a>
+        <span id="sms_enabled_python">
+<a href="#sms_enabled_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3297,8 +3040,8 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="typename_python">
-<a href="#typename_python" style="color: inherit; text-decoration: inherit;">type<wbr>Name</a>
+        <span id="type_name_python">
+<a href="#type_name_python" style="color: inherit; text-decoration: inherit;">type_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3308,16 +3051,6 @@ Accepted values are:
 - `DATADOG`
 - `EMAIL`
 - `FLOWDOCK`
-- `GROUP` (Project)
-- `OPS_GENIE`
-- `ORG`
-- `PAGER_DUTY`
-- `SLACK`
-- `SMS`
-- `TEAM`
-- `USER`
-- `VICTOR_OPS`
-- `WEBHOOK`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3333,8 +3066,8 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="victoropsapikey_python">
-<a href="#victoropsapikey_python" style="color: inherit; text-decoration: inherit;">victor<wbr>Ops<wbr>Api<wbr>Key</a>
+        <span id="victor_ops_api_key_python">
+<a href="#victor_ops_api_key_python" style="color: inherit; text-decoration: inherit;">victor_<wbr>ops_<wbr>api_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3344,13 +3077,271 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="victoropsroutingkey_python">
-<a href="#victoropsroutingkey_python" style="color: inherit; text-decoration: inherit;">victor<wbr>Ops<wbr>Routing<wbr>Key</a>
+        <span id="victor_ops_routing_key_python">
+<a href="#victor_ops_routing_key_python" style="color: inherit; text-decoration: inherit;">victor_<wbr>ops_<wbr>routing_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}VictorOps routing key. Optional for the `VICTOR_OPS` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="alertconfigurationthreshold">Alert<wbr>Configuration<wbr>Threshold</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/input/#AlertConfigurationThreshold">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#AlertConfigurationThreshold">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#AlertConfigurationThresholdArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#AlertConfigurationThresholdOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Inputs.AlertConfigurationThresholdArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.AlertConfigurationThreshold.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operator to apply when checking the current metric value against the threshold value.
+Accepted values are:
+- `GREATER_THAN`
+- `LESS_THAN`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="units_csharp">
+<a href="#units_csharp" style="color: inherit; text-decoration: inherit;">Units</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The units for the threshold value. Depends on the type of metric.
+Accepted values are:
+- `RAW`
+- `BITS`
+- `BYTES`
+- `KILOBITS`
+- `KILOBYTES`
+- `MEGABITS`
+- `MEGABYTES`
+- `GIGABITS`
+- `GIGABYTES`
+- `TERABYTES`
+- `PETABYTES`
+- `MILLISECONDS`
+- `SECONDS`
+- `MINUTES`
+- `HOURS`
+- `DAYS`
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operator to apply when checking the current metric value against the threshold value.
+Accepted values are:
+- `GREATER_THAN`
+- `LESS_THAN`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="units_go">
+<a href="#units_go" style="color: inherit; text-decoration: inherit;">Units</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The units for the threshold value. Depends on the type of metric.
+Accepted values are:
+- `RAW`
+- `BITS`
+- `BYTES`
+- `KILOBITS`
+- `KILOBYTES`
+- `MEGABITS`
+- `MEGABYTES`
+- `GIGABITS`
+- `GIGABYTES`
+- `TERABYTES`
+- `PETABYTES`
+- `MILLISECONDS`
+- `SECONDS`
+- `MINUTES`
+- `HOURS`
+- `DAYS`
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operator to apply when checking the current metric value against the threshold value.
+Accepted values are:
+- `GREATER_THAN`
+- `LESS_THAN`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="units_nodejs">
+<a href="#units_nodejs" style="color: inherit; text-decoration: inherit;">units</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The units for the threshold value. Depends on the type of metric.
+Accepted values are:
+- `RAW`
+- `BITS`
+- `BYTES`
+- `KILOBITS`
+- `KILOBYTES`
+- `MEGABITS`
+- `MEGABYTES`
+- `GIGABITS`
+- `GIGABYTES`
+- `TERABYTES`
+- `PETABYTES`
+- `MILLISECONDS`
+- `SECONDS`
+- `MINUTES`
+- `HOURS`
+- `DAYS`
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Operator to apply when checking the current metric value against the threshold value.
+Accepted values are:
+- `GREATER_THAN`
+- `LESS_THAN`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="units_python">
+<a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The units for the threshold value. Depends on the type of metric.
+Accepted values are:
+- `RAW`
+- `BITS`
+- `BYTES`
+- `KILOBITS`
+- `KILOBYTES`
+- `MEGABITS`
+- `MEGABYTES`
+- `GIGABITS`
+- `GIGABYTES`
+- `TERABYTES`
+- `PETABYTES`
+- `MILLISECONDS`
+- `SECONDS`
+- `MINUTES`
+- `HOURS`
+- `DAYS`
 {{% /md %}}</dd>
 
 </dl>
@@ -3371,6 +3362,6 @@ Accepted values are:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mongodbatlas).</dd>
+	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
 </dl>
 

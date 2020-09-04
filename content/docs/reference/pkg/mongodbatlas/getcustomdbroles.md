@@ -112,14 +112,14 @@ test_database_user = mongodbatlas.DatabaseUser("testDatabaseUser",
     password="test-acc-password",
     project_id="<PROJECT-ID>",
     roles=[
-        {
-            "database_name": "admin",
-            "role_name": "readWrite",
-        },
-        {
-            "database_name": "admin",
-            "role_name": "atlasAdmin",
-        },
+        mongodbatlas.DatabaseUserRoleArgs(
+            database_name="admin",
+            role_name="readWrite",
+        ),
+        mongodbatlas.DatabaseUserRoleArgs(
+            database_name="admin",
+            role_name="atlasAdmin",
+        ),
     ],
     username="test-acc-username")
 test_custom_db_roles = mongodbatlas.get_custom_db_roles(project_id=mongodbatlas_custom_db_role["test"]["project_id"])
@@ -170,7 +170,7 @@ const testCustomDbRoles = mongodbatlas_custom_db_role_test.projectId.apply(proje
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_custom_db_roles(</span>project_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_custom_db_roles(</span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCustomDbRolesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -577,7 +577,7 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcustomdbrolesresultaction">List[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Action]</a></span>
+        <span class="property-type"><a href="#getcustomdbrolesresultaction">List[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -587,7 +587,7 @@ The following output properties are available:
 <a href="#inherited_roles_python" style="color: inherit; text-decoration: inherit;">inherited_<wbr>roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcustomdbrolesresultinheritedrole">List[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Inherited<wbr>Role]</a></span>
+        <span class="property-type"><a href="#getcustomdbrolesresultinheritedrole">List[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Inherited<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -730,7 +730,7 @@ The following output properties are available:
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcustomdbrolesresultactionresource">List[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Action<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#getcustomdbrolesresultactionresource">List[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Action<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Required) Contains information on where the action is granted. Each object in the array either indicates a database and collection on which the action is granted, or indicates that the action is granted on the cluster resource.
 {{% /md %}}</dd>
@@ -883,8 +883,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="collectionname_python">
-<a href="#collectionname_python" style="color: inherit; text-decoration: inherit;">collection<wbr>Name</a>
+        <span id="collection_name_python">
+<a href="#collection_name_python" style="color: inherit; text-decoration: inherit;">collection_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1045,6 +1045,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mongodbatlas).</dd>
+	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
 </dl>
 

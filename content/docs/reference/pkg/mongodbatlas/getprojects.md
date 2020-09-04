@@ -27,7 +27,7 @@ meta_desc: "Explore the GetProjects function of the MongoDB Atlas package, inclu
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_projects(</span>items_per_page=None<span class="p">, </span>page_num=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_projects(</span><span class="nx">items_per_page</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">page_num</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProjectsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -750,7 +750,7 @@ The following are valid roles:
 <a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectsresultteam">List[Get<wbr>Projects<wbr>Result<wbr>Team]</a></span>
+        <span class="property-type"><a href="#getprojectsresultteam">List[Get<wbr>Projects<wbr>Result<wbr>Team<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -862,8 +862,8 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span id="rolenames_python">
-<a href="#rolenames_python" style="color: inherit; text-decoration: inherit;">role<wbr>Names</a>
+        <span id="role_names_python">
+<a href="#role_names_python" style="color: inherit; text-decoration: inherit;">role_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -898,6 +898,6 @@ The following are valid roles:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mongodbatlas).</dd>
+	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
 </dl>
 

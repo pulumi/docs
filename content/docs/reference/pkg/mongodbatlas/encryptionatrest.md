@@ -132,29 +132,29 @@ import pulumi
 import pulumi_mongodbatlas as mongodbatlas
 
 test = mongodbatlas.EncryptionAtRest("test",
-    aws_kms={
-        "access_key_id": "AKIAIOSFODNN7EXAMPLE",
-        "customer_master_key_id": "030gce02-586d-48d2-a966-05ea954fde0g",
-        "enabled": True,
-        "region": "US_EAST_1",
-        "secret_access_key": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
-    },
-    azure_key_vault={
-        "azure_environment": "AZURE",
-        "client_id": "g54f9e2-89e3-40fd-8188-EXAMPLEID",
-        "enabled": True,
-        "key_identifier": "https://EXAMPLEKeyVault.vault.azure.net/keys/EXAMPLEKey/d891821e3d364e9eb88fbd3d11807b86",
-        "key_vault_name": "EXAMPLEKeyVault",
-        "resource_group_name": "ExampleRGName",
-        "secret": "EXAMPLESECRET",
-        "subscription_id": "0ec944e3-g725-44f9-a147-EXAMPLEID",
-        "tenant_id": "e8e4b6ba-ff32-4c88-a9af-EXAMPLEID",
-    },
-    google_cloud_kms={
-        "enabled": True,
-        "key_version_resource_id": "projects/my-project-common-0/locations/us-east4/keyRings/my-key-ring-0/cryptoKeys/my-key-0/cryptoKeyVersions/1",
-        "service_account_key": "{\"type\": \"service_account\",\"project_id\": \"my-project-common-0\",\"private_key_id\": \"e120598ea4f88249469fcdd75a9a785c1bb3\",\"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEuwIBA(truncated)SfecnS0mT94D9\\n-----END PRIVATE KEY-----\\n\",\"client_email\": \"my-email-kms-0@my-project-common-0.iam.gserviceaccount.com\",\"client_id\": \"10180967717292066\",\"auth_uri\": \"https://accounts.google.com/o/oauth2/auth\",\"token_uri\": \"https://accounts.google.com/o/oauth2/token\",\"auth_provider_x509_cert_url\": \"https://www.googleapis.com/oauth2/v1/certs\",\"client_x509_cert_url\": \"https://www.googleapis.com/robot/v1/metadata/x509/my-email-kms-0%40my-project-common-0.iam.gserviceaccount.com\"}",
-    },
+    aws_kms=mongodbatlas.EncryptionAtRestAwsKmsArgs(
+        access_key_id="AKIAIOSFODNN7EXAMPLE",
+        customer_master_key_id="030gce02-586d-48d2-a966-05ea954fde0g",
+        enabled=True,
+        region="US_EAST_1",
+        secret_access_key="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+    ),
+    azure_key_vault=mongodbatlas.EncryptionAtRestAzureKeyVaultArgs(
+        azure_environment="AZURE",
+        client_id="g54f9e2-89e3-40fd-8188-EXAMPLEID",
+        enabled=True,
+        key_identifier="https://EXAMPLEKeyVault.vault.azure.net/keys/EXAMPLEKey/d891821e3d364e9eb88fbd3d11807b86",
+        key_vault_name="EXAMPLEKeyVault",
+        resource_group_name="ExampleRGName",
+        secret="EXAMPLESECRET",
+        subscription_id="0ec944e3-g725-44f9-a147-EXAMPLEID",
+        tenant_id="e8e4b6ba-ff32-4c88-a9af-EXAMPLEID",
+    ),
+    google_cloud_kms=mongodbatlas.EncryptionAtRestGoogleCloudKmsArgs(
+        enabled=True,
+        key_version_resource_id="projects/my-project-common-0/locations/us-east4/keyRings/my-key-ring-0/cryptoKeys/my-key-0/cryptoKeyVersions/1",
+        service_account_key="{\"type\": \"service_account\",\"project_id\": \"my-project-common-0\",\"private_key_id\": \"e120598ea4f88249469fcdd75a9a785c1bb3\",\"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEuwIBA(truncated)SfecnS0mT94D9\\n-----END PRIVATE KEY-----\\n\",\"client_email\": \"my-email-kms-0@my-project-common-0.iam.gserviceaccount.com\",\"client_id\": \"10180967717292066\",\"auth_uri\": \"https://accounts.google.com/o/oauth2/auth\",\"token_uri\": \"https://accounts.google.com/o/oauth2/token\",\"auth_provider_x509_cert_url\": \"https://www.googleapis.com/oauth2/v1/certs\",\"client_x509_cert_url\": \"https://www.googleapis.com/robot/v1/metadata/x509/my-email-kms-0%40my-project-common-0.iam.gserviceaccount.com\"}",
+    ),
     project_id="<PROJECT-ID>")
 ```
 
@@ -208,7 +208,7 @@ const test = new mongodbatlas.EncryptionAtRest("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.EncryptionAtRest">EncryptionAtRest</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>aws_kms=None<span class="p">, </span>azure_key_vault=None<span class="p">, </span>google_cloud_kms=None<span class="p">, </span>project_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.EncryptionAtRest">EncryptionAtRest</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aws_kms</span><span class="p">:</span> <span class="nx">Optional[EncryptionAtRestAwsKmsArgs]</span> = None<span class="p">, </span><span class="nx">azure_key_vault</span><span class="p">:</span> <span class="nx">Optional[EncryptionAtRestAzureKeyVaultArgs]</span> = None<span class="p">, </span><span class="nx">google_cloud_kms</span><span class="p">:</span> <span class="nx">Optional[EncryptionAtRestGoogleCloudKmsArgs]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -550,7 +550,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 <a href="#aws_kms_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>kms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionatrestawskms">Dict[Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms]</a></span>
+        <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies AWS KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
 {{% /md %}}</dd>
@@ -561,7 +561,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 <a href="#azure_key_vault_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionatrestazurekeyvault">Dict[Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault]</a></span>
+        <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Azure Key Vault configuration details and whether Encryption at Rest is enabled for an Atlas project.
 {{% /md %}}</dd>
@@ -572,7 +572,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 <a href="#google_cloud_kms_python" style="color: inherit; text-decoration: inherit;">google_<wbr>cloud_<wbr>kms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Dict[Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms]</a></span>
+        <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies GCP KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
 {{% /md %}}</dd>
@@ -675,7 +675,8 @@ Get an existing EncryptionAtRest resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>aws_kms=None<span class="p">, </span>azure_key_vault=None<span class="p">, </span>google_cloud_kms=None<span class="p">, </span>project_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aws_kms</span><span class="p">:</span> <span class="nx">Optional[EncryptionAtRestAwsKmsArgs]</span> = None<span class="p">, </span><span class="nx">azure_key_vault</span><span class="p">:</span> <span class="nx">Optional[EncryptionAtRestAzureKeyVaultArgs]</span> = None<span class="p">, </span><span class="nx">google_cloud_kms</span><span class="p">:</span> <span class="nx">Optional[EncryptionAtRestGoogleCloudKmsArgs]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EncryptionAtRest</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -683,7 +684,7 @@ Get an existing EncryptionAtRest resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.EncryptionAtRest.html">EncryptionAtRest</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas..EncryptionAtRestState.html">EncryptionAtRestState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.EncryptionAtRest.html">EncryptionAtRest</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas..EncryptionAtRestState.html">EncryptionAtRestState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -948,7 +949,7 @@ The following state arguments are supported:
 <a href="#state_aws_kms_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>kms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionatrestawskms">Dict[Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms]</a></span>
+        <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies AWS KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
 {{% /md %}}</dd>
@@ -959,7 +960,7 @@ The following state arguments are supported:
 <a href="#state_azure_key_vault_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionatrestazurekeyvault">Dict[Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault]</a></span>
+        <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Azure Key Vault configuration details and whether Encryption at Rest is enabled for an Atlas project.
 {{% /md %}}</dd>
@@ -970,7 +971,7 @@ The following state arguments are supported:
 <a href="#state_google_cloud_kms_python" style="color: inherit; text-decoration: inherit;">google_<wbr>cloud_<wbr>kms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Dict[Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms]</a></span>
+        <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies GCP KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
 {{% /md %}}</dd>
@@ -1898,6 +1899,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mongodbatlas).</dd>
+	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
 </dl>
 
