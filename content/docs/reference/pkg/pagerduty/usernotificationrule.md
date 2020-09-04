@@ -94,7 +94,92 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := pagerduty.NewUser(ctx, "example", &pagerduty.UserArgs{
+			Email: pulumi.String("125.greenholt.earline@graham.name"),
+		})
+		if err != nil {
+			return err
+		}
+		email, err := pagerduty.NewUserContactMethod(ctx, "email", &pagerduty.UserContactMethodArgs{
+			UserId:  example.ID(),
+			Type:    pulumi.String("email_contact_method"),
+			Address: pulumi.String("foo@bar.com"),
+			Label:   pulumi.String("Work"),
+		})
+		if err != nil {
+			return err
+		}
+		phone, err := pagerduty.NewUserContactMethod(ctx, "phone", &pagerduty.UserContactMethodArgs{
+			UserId:      example.ID(),
+			Type:        pulumi.String("phone_contact_method"),
+			CountryCode: pulumi.Int(1),
+			Address:     pulumi.String("2025550199"),
+			Label:       pulumi.String("Work"),
+		})
+		if err != nil {
+			return err
+		}
+		sms, err := pagerduty.NewUserContactMethod(ctx, "sms", &pagerduty.UserContactMethodArgs{
+			UserId:      example.ID(),
+			Type:        pulumi.String("sms_contact_method"),
+			CountryCode: pulumi.Int(1),
+			Address:     pulumi.String("2025550199"),
+			Label:       pulumi.String("Work"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewUserNotificationRule(ctx, "highUrgencyPhone", &pagerduty.UserNotificationRuleArgs{
+			UserId:              example.ID(),
+			StartDelayInMinutes: pulumi.Int(1),
+			Urgency:             pulumi.String("high"),
+			ContactMethod: &pagerduty.UserNotificationRuleContactMethodArgs{
+				Type: pulumi.String("phone_contact_method"),
+				Id:   phone.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewUserNotificationRule(ctx, "lowUrgencyEmail", &pagerduty.UserNotificationRuleArgs{
+			UserId:              example.ID(),
+			StartDelayInMinutes: pulumi.Int(1),
+			Urgency:             pulumi.String("low"),
+			ContactMethod: &pagerduty.UserNotificationRuleContactMethodArgs{
+				Type: pulumi.String("email_contact_method"),
+				Id:   email.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewUserNotificationRule(ctx, "lowUrgencySms", &pagerduty.UserNotificationRuleArgs{
+			UserId:              example.ID(),
+			StartDelayInMinutes: pulumi.Int(10),
+			Urgency:             pulumi.String("low"),
+			ContactMethod: &pagerduty.UserNotificationRuleContactMethodArgs{
+				Type: pulumi.String("sms_contact_method"),
+				Id:   sms.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -111,39 +196,39 @@ email = pagerduty.UserContactMethod("email",
 phone = pagerduty.UserContactMethod("phone",
     user_id=example.id,
     type="phone_contact_method",
-    country_code="+1",
+    country_code=1,
     address="2025550199",
     label="Work")
 sms = pagerduty.UserContactMethod("sms",
     user_id=example.id,
     type="sms_contact_method",
-    country_code="+1",
+    country_code=1,
     address="2025550199",
     label="Work")
 high_urgency_phone = pagerduty.UserNotificationRule("highUrgencyPhone",
     user_id=example.id,
     start_delay_in_minutes=1,
     urgency="high",
-    contact_method={
-        "type": "phone_contact_method",
-        "id": phone.id,
-    })
+    contact_method=pagerduty.UserNotificationRuleContactMethodArgs(
+        type="phone_contact_method",
+        id=phone.id,
+    ))
 low_urgency_email = pagerduty.UserNotificationRule("lowUrgencyEmail",
     user_id=example.id,
     start_delay_in_minutes=1,
     urgency="low",
-    contact_method={
-        "type": "email_contact_method",
-        "id": email.id,
-    })
+    contact_method=pagerduty.UserNotificationRuleContactMethodArgs(
+        type="email_contact_method",
+        id=email.id,
+    ))
 low_urgency_sms = pagerduty.UserNotificationRule("lowUrgencySms",
     user_id=example.id,
     start_delay_in_minutes=10,
     urgency="low",
-    contact_method={
-        "type": "sms_contact_method",
-        "id": sms.id,
-    })
+    contact_method=pagerduty.UserNotificationRuleContactMethodArgs(
+        type="sms_contact_method",
+        id=sms.id,
+    ))
 ```
 
 {{% /example %}}
@@ -218,7 +303,7 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.UserNotificationRule">UserNotificationRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>contact_method=None<span class="p">, </span>start_delay_in_minutes=None<span class="p">, </span>urgency=None<span class="p">, </span>user_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.UserNotificationRule">UserNotificationRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">contact_method</span><span class="p">:</span> <span class="nx">Optional[UserNotificationRuleContactMethodArgs]</span> = None<span class="p">, </span><span class="nx">start_delay_in_minutes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">urgency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -549,7 +634,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
 <a href="#contact_method_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernotificationrulecontactmethod">Dict[User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method]</a></span>
+        <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd>
@@ -685,7 +770,8 @@ Get an existing UserNotificationRule resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>contact_method=None<span class="p">, </span>start_delay_in_minutes=None<span class="p">, </span>urgency=None<span class="p">, </span>user_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">contact_method</span><span class="p">:</span> <span class="nx">Optional[UserNotificationRuleContactMethodArgs]</span> = None<span class="p">, </span><span class="nx">start_delay_in_minutes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">urgency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> UserNotificationRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -693,7 +779,7 @@ Get an existing UserNotificationRule resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.UserNotificationRule.html">UserNotificationRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty..UserNotificationRuleState.html">UserNotificationRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.UserNotificationRule.html">UserNotificationRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty..UserNotificationRuleState.html">UserNotificationRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -958,7 +1044,7 @@ The following state arguments are supported:
 <a href="#state_contact_method_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernotificationrulecontactmethod">Dict[User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method]</a></span>
+        <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd>

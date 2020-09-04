@@ -46,12 +46,12 @@ class MyStack : Stack
                 new Pagerduty.Inputs.EscalationPolicyRuleArgs
                 {
                     EscalationDelayInMinutes = 10,
-                    Target = 
+                    Targets = 
                     {
-                        
+                        new Pagerduty.Inputs.EscalationPolicyRuleTargetArgs
                         {
-                            { "id", exampleUser.Id },
-                            { "type", "user" },
+                            Id = exampleUser.Id,
+                            Type = "user",
                         },
                     },
                 },
@@ -69,7 +69,56 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleTeam, err := pagerduty.NewTeam(ctx, "exampleTeam", &pagerduty.TeamArgs{
+			Description: pulumi.String("All engineering"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleUser, err := pagerduty.NewUser(ctx, "exampleUser", &pagerduty.UserArgs{
+			Email: pulumi.String("125.greenholt.earline@graham.name"),
+			Teams: pulumi.StringArray{
+				exampleTeam.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewEscalationPolicy(ctx, "exampleEscalationPolicy", &pagerduty.EscalationPolicyArgs{
+			NumLoops: pulumi.Int(2),
+			Rules: pagerduty.EscalationPolicyRuleArray{
+				&pagerduty.EscalationPolicyRuleArgs{
+					EscalationDelayInMinutes: pulumi.Int(10),
+					Targets: pagerduty.EscalationPolicyRuleTargetArray{
+						&pagerduty.EscalationPolicyRuleTargetArgs{
+							Id:   exampleUser.ID(),
+							Type: pulumi.String("user"),
+						},
+					},
+				},
+			},
+			Teams: pulumi.StringArray{
+				exampleTeam.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -83,13 +132,13 @@ example_user = pagerduty.User("exampleUser",
     teams=[example_team.id])
 example_escalation_policy = pagerduty.EscalationPolicy("exampleEscalationPolicy",
     num_loops=2,
-    rules=[{
-        "escalationDelayInMinutes": 10,
-        "target": [{
-            "id": example_user.id,
-            "type": "user",
-        }],
-    }],
+    rules=[pagerduty.EscalationPolicyRuleArgs(
+        escalation_delay_in_minutes=10,
+        targets=[pagerduty.EscalationPolicyRuleTargetArgs(
+            id=example_user.id,
+            type="user",
+        )],
+    )],
     teams=[example_team.id])
 ```
 
@@ -135,7 +184,7 @@ const exampleEscalationPolicy = new pagerduty.EscalationPolicy("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.EscalationPolicy">EscalationPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>num_loops=None<span class="p">, </span>rules=None<span class="p">, </span>teams=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.EscalationPolicy">EscalationPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">num_loops</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[EscalationPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">teams</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -496,7 +545,7 @@ The EscalationPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#escalationpolicyrule">List[Escalation<wbr>Policy<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#escalationpolicyrule">List[Escalation<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Escalation rule block. Escalation rules documented below.
 {{% /md %}}</dd>
@@ -642,7 +691,8 @@ Get an existing EscalationPolicy resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>num_loops=None<span class="p">, </span>rules=None<span class="p">, </span>teams=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">num_loops</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[EscalationPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">teams</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> EscalationPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -650,7 +700,7 @@ Get an existing EscalationPolicy resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.EscalationPolicy.html">EscalationPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty..EscalationPolicyState.html">EscalationPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.EscalationPolicy.html">EscalationPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty..EscalationPolicyState.html">EscalationPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -977,7 +1027,7 @@ The following state arguments are supported:
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#escalationpolicyrule">List[Escalation<wbr>Policy<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#escalationpolicyrule">List[Escalation<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Escalation rule block. Escalation rules documented below.
 {{% /md %}}</dd>
@@ -1145,8 +1195,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="escalationdelayinminutes_python">
-<a href="#escalationdelayinminutes_python" style="color: inherit; text-decoration: inherit;">escalation<wbr>Delay<wbr>In<wbr>Minutes</a>
+        <span id="escalation_delay_in_minutes_python">
+<a href="#escalation_delay_in_minutes_python" style="color: inherit; text-decoration: inherit;">escalation_<wbr>delay_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1160,7 +1210,7 @@ The following state arguments are supported:
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#escalationpolicyruletarget">List[Escalation<wbr>Policy<wbr>Rule<wbr>Target]</a></span>
+        <span class="property-type"><a href="#escalationpolicyruletarget">List[Escalation<wbr>Policy<wbr>Rule<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

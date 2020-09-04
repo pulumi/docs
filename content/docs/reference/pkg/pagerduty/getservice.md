@@ -48,7 +48,41 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleService, err := pagerduty.LookupService(ctx, &pagerduty.LookupServiceArgs{
+			Name: "My Service",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		datadog, err := pagerduty.GetVendor(ctx, &pagerduty.GetVendorArgs{
+			Name: "Datadog",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewServiceIntegration(ctx, "exampleServiceIntegration", &pagerduty.ServiceIntegrationArgs{
+			Vendor:  pulumi.String(datadog.Id),
+			Service: pulumi.String(exampleService.Id),
+			Type:    pulumi.String("generic_events_api_inbound_integration"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -101,7 +135,7 @@ const exampleServiceIntegration = new pagerduty.ServiceIntegration("exampleServi
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_service(</span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceResult</code></pre></div>
 {{% /choosable %}}
 
 

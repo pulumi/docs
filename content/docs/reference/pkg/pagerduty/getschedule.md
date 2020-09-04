@@ -38,12 +38,12 @@ class MyStack : Stack
                 new Pagerduty.Inputs.EscalationPolicyRuleArgs
                 {
                     EscalationDelayInMinutes = 10,
-                    Target = 
+                    Targets = 
                     {
-                        
+                        new Pagerduty.Inputs.EscalationPolicyRuleTargetArgs
                         {
-                            { "id", test.Apply(test => test.Id) },
-                            { "type", "schedule" },
+                            Id = test.Apply(test => test.Id),
+                            Type = "schedule",
                         },
                     },
                 },
@@ -57,7 +57,44 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		test, err := pagerduty.LookupSchedule(ctx, &pagerduty.LookupScheduleArgs{
+			Name: "Daily Engineering Rotation",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewEscalationPolicy(ctx, "foo", &pagerduty.EscalationPolicyArgs{
+			NumLoops: pulumi.Int(2),
+			Rules: pagerduty.EscalationPolicyRuleArray{
+				&pagerduty.EscalationPolicyRuleArgs{
+					EscalationDelayInMinutes: pulumi.Int(10),
+					Targets: pagerduty.EscalationPolicyRuleTargetArray{
+						&pagerduty.EscalationPolicyRuleTargetArgs{
+							Id:   pulumi.String(test.Id),
+							Type: pulumi.String("schedule"),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -68,13 +105,13 @@ import pulumi_pagerduty as pagerduty
 test = pagerduty.get_schedule(name="Daily Engineering Rotation")
 foo = pagerduty.EscalationPolicy("foo",
     num_loops=2,
-    rules=[{
-        "escalationDelayInMinutes": 10,
-        "target": [{
-            "id": test.id,
-            "type": "schedule",
-        }],
-    }])
+    rules=[pagerduty.EscalationPolicyRuleArgs(
+        escalation_delay_in_minutes=10,
+        targets=[pagerduty.EscalationPolicyRuleTargetArgs(
+            id=test.id,
+            type="schedule",
+        )],
+    )])
 ```
 
 {{% /example %}}
@@ -116,7 +153,7 @@ const foo = new pagerduty.EscalationPolicy("foo", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_schedule(</span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_schedule(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetScheduleResult</code></pre></div>
 {{% /choosable %}}
 
 
