@@ -172,9 +172,9 @@ Now that your `index.html` is in your bucket, modify the program to have the buc
 
 ```python
 bucket = s3.Bucket('my-bucket',
-    website={
-        'index_document': 'index.html',
-    })
+    website=s3.BucketWebsiteArgs(
+        index_document="index.html",
+    ))
 ```
 
 Next, your `index.html` object will need two changes: an ACL of public-read so that it can be accessed anonymously over the Internet, and a content type so that it is served as HTML:
