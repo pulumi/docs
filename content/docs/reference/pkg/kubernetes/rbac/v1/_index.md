@@ -28,7 +28,7 @@ Explore the resources and functions of the rbac/v1 module in the Kubernetes pack
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.4.3</dd>
+	<dd>2.5.1</dd>
 </dl>
 
 
@@ -42,7 +42,7 @@ Explore the resources and functions of the rbac/v1 module in the Kubernetes pack
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/rbac/v1/#" title="@pulumi/kubernetes/rbac/v1">@pulumi/kubernetes/rbac/v1</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/rbac.authorization.k8s.io/v1" title="pulumi_kubernetes/rbac.authorization.k8s.io/v1">pulumi_kubernetes/rbac.authorization.k8s.io/v1</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/rbac/v1" title="pulumi_kubernetes/rbac/v1">pulumi_kubernetes/rbac/v1</a></dd>
 
 </dl>
 

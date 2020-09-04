@@ -22,7 +22,7 @@ Explore the resources and functions of the scheduling/v1beta1 module in the Kube
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.4.3</dd>
+	<dd>2.5.1</dd>
 </dl>
 
 
@@ -36,7 +36,7 @@ Explore the resources and functions of the scheduling/v1beta1 module in the Kube
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/scheduling/v1beta1/#" title="@pulumi/kubernetes/scheduling/v1beta1">@pulumi/kubernetes/scheduling/v1beta1</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/scheduling.k8s.io/v1beta1" title="pulumi_kubernetes/scheduling.k8s.io/v1beta1">pulumi_kubernetes/scheduling.k8s.io/v1beta1</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/scheduling/v1beta1" title="pulumi_kubernetes/scheduling/v1beta1">pulumi_kubernetes/scheduling/v1beta1</a></dd>
 
 </dl>
 
