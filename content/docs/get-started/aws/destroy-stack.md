@@ -12,7 +12,7 @@ menu:
 aliases: ["/docs/quickstart/aws/destroy-stack/"]
 ---
 
-Now that we've seen how to deploy changes to our program, let's clean up and tear down the resources that are part of our stack.
+Now that you've seen how to deploy changes to our program, let's clean up and tear down the resources that are part of your stack.
 
 To destroy resources, run the following:
 
@@ -27,8 +27,12 @@ Previewing destroy (dev):
 
      Type                 Name            Plan
  -   pulumi:pulumi:Stack  quickstart-dev  delete
- -   ├─ aws:s3:Bucket     my-bucket       delete
- -   └─ aws:kms:Key       my-key          delete
+ -   ├─ aws:s3:BucketObject  index.html          delete
+ -   └─ aws:s3:Bucket        my-bucket           delete
+
+Outputs:
+  - bucketEndpoint: "http://my-bucket-b9c2eaa.s3-website-us-east-1.amazonaws.com"
+  - bucketName    : "my-bucket-b9c2eaa"
 
 Resources:
     - 3 to delete
@@ -38,19 +42,31 @@ Destroying (dev):
 
      Type                 Name            Status
  -   pulumi:pulumi:Stack  quickstart-dev  deleted
- -   ├─ aws:s3:Bucket     my-bucket       deleted
- -   └─ aws:kms:Key       my-key          deleted
+ -   ├─ aws:s3:BucketObject  index.html          deleted
+ -   └─ aws:s3:Bucket        my-bucket           deleted
+
+Outputs:
+  - bucketEndpoint: "http://my-bucket-b9c2eaa.s3-website-us-east-1.amazonaws.com"
+  - bucketName    : "my-bucket-b9c2eaa"
 
 Resources:
     - 3 deleted
 
-Duration: 26s
+Duration: 7s
 ```
 
-To delete the stack itself, run [`pulumi stack rm`]({{< relref
+> To delete the stack itself, run [`pulumi stack rm`]({{< relref
 "/docs/reference/cli/pulumi_stack_rm" >}}). Note that this removes the stack
 entirely from the Pulumi Service, along with all of its update history.
 
-Next, we'll look at some next steps.
+Congratulations! You've successfully provisioned some cloud resources using Pulumi. By completing this guide you have successfully:
+
+- Created a Pulumi new project.
+- Provisioned a new S3 bucket.
+- Added an `index.html` file to your bucket.
+- Served the `index.html` as a static website.
+- Destroyed the resources you've provisioned.
+
+On the next page, we have a collection of examples and tutorials that you can deploy as they are or use them as a foundation for your own applications and infrastructure projects.
 
 {{< get-started-stepper >}}

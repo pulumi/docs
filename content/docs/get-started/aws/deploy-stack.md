@@ -12,13 +12,13 @@ menu:
 aliases: ["/docs/quickstart/aws/deploy-stack/"]
 ---
 
-Let's go ahead and deploy the stack:
+Let's go ahead and deploy your stack:
 
 ```bash
 $ pulumi up
 ```
 
-This command instructs Pulumi to determine the resources needed to create the stack. First, a preview is shown of the changes that will be made:
+This command evaluates your program and determines the resource updates to make. First, a preview is shown that outlines the changes that will be made when you run the update:
 
 ```
 Previewing update (dev):
@@ -31,12 +31,12 @@ Resources:
     + 2 to create
 
 Do you want to perform this update?
-  yes
-> no
+> yes
+  no
   details
 ```
 
-Choosing `yes` will create resources in AWS.
+Once the preview has finished you are given three options to choose from. Choosing `details` will show you a rich diff of the changes to be made. Choosing `yes` will create your new S3 bucket in AWS.
 
 ```
 Do you want to perform this update? yes
@@ -55,8 +55,48 @@ Resources:
 Duration: 14s
 ```
 
-The name of the bucket that we exported is shown as a [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}).
+Remember the output you defined in the previous step? That [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}) can be seen in the `Outputs:` section of your update. You can access your outputs from the CLI by running the `pulumi stack output [property-name]` command. For example you can print the name of your bucket with the following command:
 
-Next, we'll make some modifications to the program.
+{{% choosable language javascript %}}
+
+```bash
+$ pulumi stack output bucketName
+```
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+```bash
+$ pulumi stack output bucketName
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```bash
+$ pulumi stack output bucket_name
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```bash
+$ pulumi stack output bucketName
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```bash
+$ pulumi stack output BucketName
+```
+
+{{% /choosable %}}
+
+Running that command will print out the name of your bucket. Now that your bucket has been provisioned, let's modify the bucket to host a static website.
 
 {{< get-started-stepper >}}
