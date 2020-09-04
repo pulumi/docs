@@ -64,8 +64,8 @@ class MyStack : Stack
         })));
         var image = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
         {
-            MostRecent = true,
             NameRegex = "^ubuntu_18.*64",
+            MostRecent = true,
             Owners = "system",
         }));
         var config = new Config();
@@ -77,39 +77,39 @@ class MyStack : Stack
         });
         var mainSwitch = new AliCloud.Vpc.Switch("mainSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/16",
             VpcId = mainNetwork.Id,
+            CidrBlock = "172.16.0.0/16",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var groupSecurityGroup = new AliCloud.Ecs.SecurityGroup("groupSecurityGroup", new AliCloud.Ecs.SecurityGroupArgs
         {
             VpcId = mainNetwork.Id,
         });
         var instanceInstance = new List<AliCloud.Ecs.Instance>();
-        for (var rangeIndex = 0; rangeIndex < 2; rangeIndex++)
+        for (var rangeIndex = 0; rangeIndex < "2"; rangeIndex++)
         {
             var range = new { Value = rangeIndex };
             instanceInstance.Add(new AliCloud.Ecs.Instance($"instanceInstance-{range.Value}", new AliCloud.Ecs.InstanceArgs
             {
-                AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
                 ImageId = image.Apply(image => image.Images[0].Id),
-                InstanceChargeType = "PostPaid",
-                InstanceName = name,
                 InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.InstanceTypes[0].Id),
-                InternetChargeType = "PayByTraffic",
-                InternetMaxBandwidthOut = 10,
+                InstanceName = name,
                 SecurityGroups = 
                 {
                     groupSecurityGroup.Id,
                 },
+                InternetChargeType = "PayByTraffic",
+                InternetMaxBandwidthOut = 10,
+                AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+                InstanceChargeType = "PostPaid",
                 SystemDiskCategory = "cloud_efficiency",
                 VswitchId = mainSwitch.Id,
             }));
         }
         var instanceLoadBalancer = new AliCloud.Slb.LoadBalancer("instanceLoadBalancer", new AliCloud.Slb.LoadBalancerArgs
         {
-            Specification = "slb.s2.small",
             VswitchId = mainSwitch.Id,
+            Specification = "slb.s2.small",
         });
         var defaultNetworkInterface = new List<AliCloud.Vpc.NetworkInterface>();
         for (var rangeIndex = 0; rangeIndex < number; rangeIndex++)
@@ -117,11 +117,11 @@ class MyStack : Stack
             var range = new { Value = rangeIndex };
             defaultNetworkInterface.Add(new AliCloud.Vpc.NetworkInterface($"defaultNetworkInterface-{range.Value}", new AliCloud.Vpc.NetworkInterfaceArgs
             {
+                VswitchId = mainSwitch.Id,
                 SecurityGroups = 
                 {
                     groupSecurityGroup.Id,
                 },
-                VswitchId = mainSwitch.Id,
             }));
         }
         var defaultNetworkInterfaceAttachment = new List<AliCloud.Vpc.NetworkInterfaceAttachment>();
@@ -141,37 +141,37 @@ class MyStack : Stack
             {
                 new AliCloud.Slb.Inputs.MasterSlaveServerGroupServerArgs
                 {
-                    Port = 100,
                     ServerId = instanceInstance[0].Id,
-                    ServerType = "Master",
+                    Port = 100,
                     Weight = 100,
+                    ServerType = "Master",
                 },
                 new AliCloud.Slb.Inputs.MasterSlaveServerGroupServerArgs
                 {
-                    Port = 100,
                     ServerId = instanceInstance[1].Id,
-                    ServerType = "Slave",
+                    Port = 100,
                     Weight = 100,
+                    ServerType = "Slave",
                 },
             },
         });
         var tcp = new AliCloud.Slb.Listener("tcp", new AliCloud.Slb.ListenerArgs
         {
-            Bandwidth = 10,
-            EstablishedTimeout = 600,
-            FrontendPort = 22,
-            HealthCheckConnectPort = 20,
-            HealthCheckHttpCode = "http_2xx",
-            HealthCheckInterval = 5,
-            HealthCheckTimeout = 8,
-            HealthCheckType = "tcp",
-            HealthCheckUri = "/console",
-            HealthyThreshold = 8,
             LoadBalancerId = instanceLoadBalancer.Id,
             MasterSlaveServerGroupId = groupMasterSlaveServerGroup.Id,
-            PersistenceTimeout = 3600,
+            FrontendPort = 22,
             Protocol = "tcp",
+            Bandwidth = 10,
+            HealthCheckType = "tcp",
+            PersistenceTimeout = 3600,
+            HealthyThreshold = 8,
             UnhealthyThreshold = 8,
+            HealthCheckTimeout = 8,
+            HealthCheckInterval = 5,
+            HealthCheckHttpCode = "http_2xx",
+            HealthCheckConnectPort = 20,
+            HealthCheckUri = "/console",
+            EstablishedTimeout = 600,
         });
     }
 
@@ -193,8 +193,8 @@ default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
     available_resource_creation="VSwitch")
 default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0].id,
     eni_amount=2)
-image = alicloud.ecs.get_images(most_recent=True,
-    name_regex="^ubuntu_18.*64",
+image = alicloud.ecs.get_images(name_regex="^ubuntu_18.*64",
+    most_recent=True,
     owners="system")
 config = pulumi.Config()
 name = config.get("name")
@@ -205,31 +205,31 @@ if number is None:
     number = "1"
 main_network = alicloud.vpc.Network("mainNetwork", cidr_block="172.16.0.0/16")
 main_switch = alicloud.vpc.Switch("mainSwitch",
-    availability_zone=default_zones.zones[0].id,
+    vpc_id=main_network.id,
     cidr_block="172.16.0.0/16",
-    vpc_id=main_network.id)
+    availability_zone=default_zones.zones[0].id)
 group_security_group = alicloud.ecs.SecurityGroup("groupSecurityGroup", vpc_id=main_network.id)
 instance_instance = []
 for range in [{"value": i} for i in range(0, 2)]:
     instance_instance.append(alicloud.ecs.Instance(f"instanceInstance-{range['value']}",
-        availability_zone=default_zones.zones[0].id,
         image_id=image.images[0].id,
-        instance_charge_type="PostPaid",
-        instance_name=name,
         instance_type=default_instance_types.instance_types[0].id,
+        instance_name=name,
+        security_groups=[group_security_group.id],
         internet_charge_type="PayByTraffic",
         internet_max_bandwidth_out=10,
-        security_groups=[group_security_group.id],
+        availability_zone=default_zones.zones[0].id,
+        instance_charge_type="PostPaid",
         system_disk_category="cloud_efficiency",
         vswitch_id=main_switch.id))
 instance_load_balancer = alicloud.slb.LoadBalancer("instanceLoadBalancer",
-    specification="slb.s2.small",
-    vswitch_id=main_switch.id)
+    vswitch_id=main_switch.id,
+    specification="slb.s2.small")
 default_network_interface = []
 for range in [{"value": i} for i in range(0, number)]:
     default_network_interface.append(alicloud.vpc.NetworkInterface(f"defaultNetworkInterface-{range['value']}",
-        security_groups=[group_security_group.id],
-        vswitch_id=main_switch.id))
+        vswitch_id=main_switch.id,
+        security_groups=[group_security_group.id]))
 default_network_interface_attachment = []
 for range in [{"value": i} for i in range(0, number)]:
     default_network_interface_attachment.append(alicloud.vpc.NetworkInterfaceAttachment(f"defaultNetworkInterfaceAttachment-{range['value']}",
@@ -239,34 +239,34 @@ group_master_slave_server_group = alicloud.slb.MasterSlaveServerGroup("groupMast
     load_balancer_id=instance_load_balancer.id,
     servers=[
         alicloud.slb.MasterSlaveServerGroupServerArgs(
-            port=100,
             server_id=instance_instance[0].id,
-            server_type="Master",
+            port=100,
             weight=100,
+            server_type="Master",
         ),
         alicloud.slb.MasterSlaveServerGroupServerArgs(
-            port=100,
             server_id=instance_instance[1].id,
-            server_type="Slave",
+            port=100,
             weight=100,
+            server_type="Slave",
         ),
     ])
 tcp = alicloud.slb.Listener("tcp",
-    bandwidth=10,
-    established_timeout=600,
-    frontend_port=22,
-    health_check_connect_port=20,
-    health_check_http_code="http_2xx",
-    health_check_interval=5,
-    health_check_timeout=8,
-    health_check_type="tcp",
-    health_check_uri="/console",
-    healthy_threshold=8,
     load_balancer_id=instance_load_balancer.id,
     master_slave_server_group_id=group_master_slave_server_group.id,
-    persistence_timeout=3600,
+    frontend_port=22,
     protocol="tcp",
-    unhealthy_threshold=8)
+    bandwidth=10,
+    health_check_type="tcp",
+    persistence_timeout=3600,
+    healthy_threshold=8,
+    unhealthy_threshold=8,
+    health_check_timeout=8,
+    health_check_interval=5,
+    health_check_http_code="http_2xx",
+    health_check_connect_port=20,
+    health_check_uri="/console",
+    established_timeout=600)
 ```
 
 {{% /example %}}
@@ -277,100 +277,95 @@ tcp = alicloud.slb.Listener("tcp",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
+const defaultZones = alicloud.getZones({
+    availableDiskCategory: "cloud_efficiency",
+    availableResourceCreation: "VSwitch",
+});
+const defaultInstanceTypes = defaultZones.then(defaultZones => alicloud.ecs.getInstanceTypes({
+    availabilityZone: defaultZones.zones[0].id,
+    eniAmount: 2,
+}));
+const image = alicloud.ecs.getImages({
+    nameRegex: "^ubuntu_18.*64",
+    mostRecent: true,
+    owners: "system",
+});
 const config = new pulumi.Config();
 const name = config.get("name") || "tf-testAccSlbMasterSlaveServerGroupVpc";
 const number = config.get("number") || "1";
-
-const defaultZones = pulumi.output(alicloud.getZones({
-    availableDiskCategory: "cloud_efficiency",
-    availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
-    availabilityZone: defaultZones.zones[0].id,
-    eniAmount: 2,
-}, { async: true }));
-const image = pulumi.output(alicloud.ecs.getImages({
-    mostRecent: true,
-    nameRegex: "^ubuntu_18.*64",
-    owners: "system",
-}, { async: true }));
-const mainNetwork = new alicloud.vpc.Network("main", {
-    cidrBlock: "172.16.0.0/16",
-});
-const mainSwitch = new alicloud.vpc.Switch("main", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/16",
+const mainNetwork = new alicloud.vpc.Network("mainNetwork", {cidrBlock: "172.16.0.0/16"});
+const mainSwitch = new alicloud.vpc.Switch("mainSwitch", {
     vpcId: mainNetwork.id,
+    cidrBlock: "172.16.0.0/16",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const groupSecurityGroup = new alicloud.ecs.SecurityGroup("group", {
-    vpcId: mainNetwork.id,
-});
-const instanceInstance: alicloud.ecs.Instance[] = [];
-for (let i = 0; i < 2; i++) {
-    instanceInstance.push(new alicloud.ecs.Instance(`instance-${i}`, {
-        availabilityZone: defaultZones.zones[0].id,
-        imageId: image.images[0].id,
-        instanceChargeType: "PostPaid",
+const groupSecurityGroup = new alicloud.ecs.SecurityGroup("groupSecurityGroup", {vpcId: mainNetwork.id});
+const instanceInstance: alicloud.ecs.Instance[];
+for (const range = {value: 0}; range.value < "2"; range.value++) {
+    instanceInstance.push(new alicloud.ecs.Instance(`instanceInstance-${range.value}`, {
+        imageId: image.then(image => image.images[0].id),
+        instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.instanceTypes[0].id),
         instanceName: name,
-        instanceType: defaultInstanceTypes.instanceTypes[0].id,
-        internetChargeType: "PayByTraffic",
-        internetMaxBandwidthOut: 10,
         securityGroups: [groupSecurityGroup.id],
+        internetChargeType: "PayByTraffic",
+        internetMaxBandwidthOut: "10",
+        availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+        instanceChargeType: "PostPaid",
         systemDiskCategory: "cloud_efficiency",
         vswitchId: mainSwitch.id,
     }));
 }
-const instanceLoadBalancer = new alicloud.slb.LoadBalancer("instance", {
-    specification: "slb.s2.small",
+const instanceLoadBalancer = new alicloud.slb.LoadBalancer("instanceLoadBalancer", {
     vswitchId: mainSwitch.id,
+    specification: "slb.s2.small",
 });
-const defaultNetworkInterface: alicloud.vpc.NetworkInterface[] = [];
-for (let i = 0; i < number; i++) {
-    defaultNetworkInterface.push(new alicloud.vpc.NetworkInterface(`default-${i}`, {
-        securityGroups: [groupSecurityGroup.id],
+const defaultNetworkInterface: alicloud.vpc.NetworkInterface[];
+for (const range = {value: 0}; range.value < number; range.value++) {
+    defaultNetworkInterface.push(new alicloud.vpc.NetworkInterface(`defaultNetworkInterface-${range.value}`, {
         vswitchId: mainSwitch.id,
+        securityGroups: [groupSecurityGroup.id],
     }));
 }
-const defaultNetworkInterfaceAttachment: alicloud.vpc.NetworkInterfaceAttachment[] = [];
-for (let i = 0; i < number; i++) {
-    defaultNetworkInterfaceAttachment.push(new alicloud.vpc.NetworkInterfaceAttachment(`default-${i}`, {
+const defaultNetworkInterfaceAttachment: alicloud.vpc.NetworkInterfaceAttachment[];
+for (const range = {value: 0}; range.value < number; range.value++) {
+    defaultNetworkInterfaceAttachment.push(new alicloud.vpc.NetworkInterfaceAttachment(`defaultNetworkInterfaceAttachment-${range.value}`, {
         instanceId: instanceInstance[0].id,
-        networkInterfaceId: pulumi.all(defaultNetworkInterface.map(v => v.id)).apply(id => id.map(v => v)[i]),
+        networkInterfaceId: defaultNetworkInterface.map(__item => __item.id)[range.index],
     }));
 }
-const groupMasterSlaveServerGroup = new alicloud.slb.MasterSlaveServerGroup("group", {
+const groupMasterSlaveServerGroup = new alicloud.slb.MasterSlaveServerGroup("groupMasterSlaveServerGroup", {
     loadBalancerId: instanceLoadBalancer.id,
     servers: [
         {
-            port: 100,
             serverId: instanceInstance[0].id,
-            serverType: "Master",
+            port: 100,
             weight: 100,
+            serverType: "Master",
         },
         {
-            port: 100,
             serverId: instanceInstance[1].id,
-            serverType: "Slave",
+            port: 100,
             weight: 100,
+            serverType: "Slave",
         },
     ],
 });
 const tcp = new alicloud.slb.Listener("tcp", {
-    bandwidth: 10,
-    establishedTimeout: 600,
-    frontendPort: 22,
-    healthCheckConnectPort: 20,
-    healthCheckHttpCode: "http_2xx",
-    healthCheckInterval: 5,
-    healthCheckTimeout: 8,
-    healthCheckType: "tcp",
-    healthCheckUri: "/console",
-    healthyThreshold: 8,
     loadBalancerId: instanceLoadBalancer.id,
     masterSlaveServerGroupId: groupMasterSlaveServerGroup.id,
-    persistenceTimeout: 3600,
+    frontendPort: "22",
     protocol: "tcp",
+    bandwidth: "10",
+    healthCheckType: "tcp",
+    persistenceTimeout: 3600,
+    healthyThreshold: 8,
     unhealthyThreshold: 8,
+    healthCheckTimeout: 8,
+    healthCheckInterval: 5,
+    healthCheckHttpCode: "http_2xx",
+    healthCheckConnectPort: 20,
+    healthCheckUri: "/console",
+    establishedTimeout: 600,
 });
 ```
 

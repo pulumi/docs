@@ -40,32 +40,32 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/24",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var defaultInstance = new AliCloud.KVStore.Instance("defaultInstance", new AliCloud.KVStore.InstanceArgs
         {
-            EngineVersion = "2.8",
             InstanceClass = "Memcache",
             InstanceName = name,
-            InstanceType = "memcache.master.small.default",
+            VswitchId = defaultSwitch.Id,
             PrivateIp = "172.16.0.10",
             SecurityIps = 
             {
                 "10.0.0.1",
             },
-            VswitchId = defaultSwitch.Id,
+            InstanceType = "memcache.master.small.default",
+            EngineVersion = "2.8",
         });
         var defaultBackupPolicy = new AliCloud.KVStore.BackupPolicy("defaultBackupPolicy", new AliCloud.KVStore.BackupPolicyArgs
         {
+            InstanceId = defaultInstance.Id,
             BackupPeriods = 
             {
                 "Tuesday",
                 "Wednesday",
             },
             BackupTime = "10:00Z-11:00Z",
-            InstanceId = defaultInstance.Id,
         });
     }
 
@@ -101,34 +101,34 @@ func main() {
 			return err
 		}
 		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			CidrBlock:        pulumi.String("172.16.0.0/24"),
 			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
 		})
 		if err != nil {
 			return err
 		}
 		defaultInstance, err := kvstore.NewInstance(ctx, "defaultInstance", &kvstore.InstanceArgs{
-			EngineVersion: pulumi.String("2.8"),
 			InstanceClass: pulumi.String("Memcache"),
 			InstanceName:  pulumi.String(name),
-			InstanceType:  pulumi.String("memcache.master.small.default"),
+			VswitchId:     defaultSwitch.ID(),
 			PrivateIp:     pulumi.String("172.16.0.10"),
 			SecurityIps: pulumi.StringArray{
 				pulumi.String("10.0.0.1"),
 			},
-			VswitchId: defaultSwitch.ID(),
+			InstanceType:  pulumi.String("memcache.master.small.default"),
+			EngineVersion: pulumi.String("2.8"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = kvstore.NewBackupPolicy(ctx, "defaultBackupPolicy", &kvstore.BackupPolicyArgs{
+			InstanceId: defaultInstance.ID(),
 			BackupPeriods: pulumi.StringArray{
 				pulumi.String("Tuesday"),
 				pulumi.String("Wednesday"),
 			},
 			BackupTime: pulumi.String("10:00Z-11:00Z"),
-			InstanceId: defaultInstance.ID(),
 		})
 		if err != nil {
 			return err
@@ -158,24 +158,24 @@ if name is None:
 default_zones = alicloud.get_zones(available_resource_creation=creation)
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0].id,
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 default_instance = alicloud.kvstore.Instance("defaultInstance",
-    engine_version="2.8",
     instance_class="Memcache",
     instance_name=name,
-    instance_type="memcache.master.small.default",
+    vswitch_id=default_switch.id,
     private_ip="172.16.0.10",
     security_ips=["10.0.0.1"],
-    vswitch_id=default_switch.id)
+    instance_type="memcache.master.small.default",
+    engine_version="2.8")
 default_backup_policy = alicloud.kvstore.BackupPolicy("defaultBackupPolicy",
+    instance_id=default_instance.id,
     backup_periods=[
         "Tuesday",
         "Wednesday",
     ],
-    backup_time="10:00Z-11:00Z",
-    instance_id=default_instance.id)
+    backup_time="10:00Z-11:00Z")
 ```
 
 {{% /example %}}
@@ -190,34 +190,31 @@ const config = new pulumi.Config();
 const creation = config.get("creation") || "KVStore";
 const multiAz = config.get("multiAz") || "false";
 const name = config.get("name") || "kvstorebackuppolicyvpc";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: creation,
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/16",
 });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/24",
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
+    cidrBlock: "172.16.0.0/24",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const defaultInstance = new alicloud.kvstore.Instance("default", {
-    engineVersion: "2.8",
+const defaultInstance = new alicloud.kvstore.Instance("defaultInstance", {
     instanceClass: "Memcache",
     instanceName: name,
-    instanceType: "memcache.master.small.default",
+    vswitchId: defaultSwitch.id,
     privateIp: "172.16.0.10",
     securityIps: ["10.0.0.1"],
-    vswitchId: defaultSwitch.id,
+    instanceType: "memcache.master.small.default",
+    engineVersion: "2.8",
 });
-const defaultBackupPolicy = new alicloud.kvstore.BackupPolicy("default", {
+const defaultBackupPolicy = new alicloud.kvstore.BackupPolicy("defaultBackupPolicy", {
+    instanceId: defaultInstance.id,
     backupPeriods: [
         "Tuesday",
         "Wednesday",
     ],
     backupTime: "10:00Z-11:00Z",
-    instanceId: defaultInstance.id,
 });
 ```
 

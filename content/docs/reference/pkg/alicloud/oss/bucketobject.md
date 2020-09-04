@@ -105,14 +105,14 @@ class MyStack : Stack
     {
         var example = new AliCloud.Oss.Bucket("example", new AliCloud.Oss.BucketArgs
         {
-            Acl = "public-read",
             Bucket = "your_bucket_name",
+            Acl = "public-read",
         });
         var object_content = new AliCloud.Oss.BucketObject("object-content", new AliCloud.Oss.BucketObjectArgs
         {
             Bucket = example.BucketName,
-            Content = "the content that you want to upload.",
             Key = "new_object_key",
+            Content = "the content that you want to upload.",
         });
     }
 
@@ -133,16 +133,16 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		example, err := oss.NewBucket(ctx, "example", &oss.BucketArgs{
-			Acl:    pulumi.String("public-read"),
 			Bucket: pulumi.String("your_bucket_name"),
+			Acl:    pulumi.String("public-read"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = oss.NewBucketObject(ctx, "object_content", &oss.BucketObjectArgs{
 			Bucket:  example.Bucket,
-			Content: pulumi.String("the content that you want to upload."),
 			Key:     pulumi.String("new_object_key"),
+			Content: pulumi.String("the content that you want to upload."),
 		})
 		if err != nil {
 			return err
@@ -160,12 +160,12 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 example = alicloud.oss.Bucket("example",
-    acl="public-read",
-    bucket="your_bucket_name")
+    bucket="your_bucket_name",
+    acl="public-read")
 object_content = alicloud.oss.BucketObject("object-content",
     bucket=example.bucket,
-    content="the content that you want to upload.",
-    key="new_object_key")
+    key="new_object_key",
+    content="the content that you want to upload.")
 ```
 
 {{% /example %}}
@@ -177,13 +177,13 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const example = new alicloud.oss.Bucket("example", {
-    acl: "public-read",
     bucket: "your_bucket_name",
+    acl: "public-read",
 });
 const object_content = new alicloud.oss.BucketObject("object-content", {
     bucket: example.bucket,
-    content: "the content that you want to upload.",
     key: "new_object_key",
+    content: "the content that you want to upload.",
 });
 ```
 

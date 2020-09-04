@@ -32,6 +32,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        // Create a cen Route map resource and use it.
         var defaultInstance = new AliCloud.Cen.Instance("defaultInstance", new AliCloud.Cen.InstanceArgs
         {
         });
@@ -48,36 +49,62 @@ class MyStack : Stack
             CidrBlock = "172.16.0.0/12",
         }, new CustomResourceOptions
         {
-            Provider = "alicloud.vpc00_region",
+            Provider = alicloud.Vpc00_region,
         });
         var vpc01 = new AliCloud.Vpc.Network("vpc01", new AliCloud.Vpc.NetworkArgs
         {
             CidrBlock = "172.16.0.0/12",
         }, new CustomResourceOptions
         {
-            Provider = "alicloud.vpc01_region",
+            Provider = alicloud.Vpc01_region,
         });
         var default00 = new AliCloud.Cen.InstanceAttachment("default00", new AliCloud.Cen.InstanceAttachmentArgs
         {
+            InstanceId = defaultInstance.Id,
             ChildInstanceId = vpc00.Id,
             ChildInstanceRegionId = "cn-hangzhou",
-            InstanceId = defaultInstance.Id,
         });
         var default01 = new AliCloud.Cen.InstanceAttachment("default01", new AliCloud.Cen.InstanceAttachmentArgs
         {
+            InstanceId = defaultInstance.Id,
             ChildInstanceId = vpc01.Id,
             ChildInstanceRegionId = "cn-shanghai",
-            InstanceId = defaultInstance.Id,
         });
         var defaultRouteMap = new AliCloud.Cen.RouteMap("defaultRouteMap", new AliCloud.Cen.RouteMapArgs
         {
-            AsPathMatchMode = "Include",
-            CenId = alicloud_cen_instance.Cen.Id,
             CenRegionId = "cn-hangzhou",
-            CidrMatchMode = "Include",
-            CommunityMatchMode = "Include",
-            CommunityOperateMode = "Additive",
+            CenId = alicloud_cen_instance.Cen.Id,
             Description = "test-desc",
+            Priority = 1,
+            TransmitDirection = "RegionIn",
+            MapResult = "Permit",
+            NextPriority = 1,
+            SourceRegionIds = 
+            {
+                "cn-hangzhou",
+            },
+            SourceInstanceIds = 
+            {
+                vpc00.Id,
+            },
+            SourceInstanceIdsReverseMatch = false,
+            DestinationInstanceIds = 
+            {
+                vpc01.Id,
+            },
+            DestinationInstanceIdsReverseMatch = false,
+            SourceRouteTableIds = 
+            {
+                vpc00.RouteTableId,
+            },
+            DestinationRouteTableIds = 
+            {
+                vpc01.RouteTableId,
+            },
+            SourceChildInstanceTypes = 
+            {
+                "VPC",
+            },
             DestinationChildInstanceTypes = 
             {
                 "VPC",
@@ -86,25 +113,22 @@ class MyStack : Stack
             {
                 vpc01.CidrBlock,
             },
-            DestinationInstanceIds = 
+            CidrMatchMode = "Include",
+            RouteTypes = 
             {
-                vpc01.Id,
+                "System",
             },
-            DestinationInstanceIdsReverseMatch = false,
-            DestinationRouteTableIds = 
-            {
-                vpc01.RouteTableId,
-            },
-            MapResult = "Permit",
             MatchAsns = 
             {
                 "65501",
             },
+            AsPathMatchMode = "Include",
             MatchCommunitySets = 
             {
                 "65501:1",
             },
-            NextPriority = 1,
+            CommunityMatchMode = "Include",
+            CommunityOperateMode = "Additive",
             OperateCommunitySets = 
             {
                 "65501:1",
@@ -114,35 +138,12 @@ class MyStack : Stack
             {
                 "65501",
             },
-            Priority = 1,
-            RouteTypes = 
-            {
-                "System",
-            },
-            SourceChildInstanceTypes = 
-            {
-                "VPC",
-            },
-            SourceInstanceIds = 
-            {
-                vpc00.Id,
-            },
-            SourceInstanceIdsReverseMatch = false,
-            SourceRegionIds = 
-            {
-                "cn-hangzhou",
-            },
-            SourceRouteTableIds = 
-            {
-                vpc00.RouteTableId,
-            },
-            TransmitDirection = "RegionIn",
         }, new CustomResourceOptions
         {
             DependsOn = 
             {
-                "alicloud_cen_instance_attachment.default00",
-                "alicloud_cen_instance_attachment.default01",
+                default00,
+                default01,
             },
         });
     }
@@ -183,61 +184,79 @@ func main() {
 		}
 		vpc00, err := vpc.NewNetwork(ctx, "vpc00", &vpc.NetworkArgs{
 			CidrBlock: pulumi.String("172.16.0.0/12"),
-		}, pulumi.Provider("alicloud.vpc00_region"))
+		}, pulumi.Provider(alicloud.Vpc00_region))
 		if err != nil {
 			return err
 		}
 		vpc01, err := vpc.NewNetwork(ctx, "vpc01", &vpc.NetworkArgs{
 			CidrBlock: pulumi.String("172.16.0.0/12"),
-		}, pulumi.Provider("alicloud.vpc01_region"))
+		}, pulumi.Provider(alicloud.Vpc01_region))
 		if err != nil {
 			return err
 		}
-		_, err = cen.NewInstanceAttachment(ctx, "default00", &cen.InstanceAttachmentArgs{
+		default00, err := cen.NewInstanceAttachment(ctx, "default00", &cen.InstanceAttachmentArgs{
+			InstanceId:            defaultInstance.ID(),
 			ChildInstanceId:       vpc00.ID(),
 			ChildInstanceRegionId: pulumi.String("cn-hangzhou"),
-			InstanceId:            defaultInstance.ID(),
 		})
 		if err != nil {
 			return err
 		}
-		_, err = cen.NewInstanceAttachment(ctx, "default01", &cen.InstanceAttachmentArgs{
+		default01, err := cen.NewInstanceAttachment(ctx, "default01", &cen.InstanceAttachmentArgs{
+			InstanceId:            defaultInstance.ID(),
 			ChildInstanceId:       vpc01.ID(),
 			ChildInstanceRegionId: pulumi.String("cn-shanghai"),
-			InstanceId:            defaultInstance.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = cen.NewRouteMap(ctx, "defaultRouteMap", &cen.RouteMapArgs{
-			AsPathMatchMode:      pulumi.String("Include"),
-			CenId:                pulumi.Any(alicloud_cen_instance.Cen.Id),
-			CenRegionId:          pulumi.String("cn-hangzhou"),
-			CidrMatchMode:        pulumi.String("Include"),
-			CommunityMatchMode:   pulumi.String("Include"),
-			CommunityOperateMode: pulumi.String("Additive"),
-			Description:          pulumi.String("test-desc"),
+			CenRegionId:       pulumi.String("cn-hangzhou"),
+			CenId:             pulumi.Any(alicloud_cen_instance.Cen.Id),
+			Description:       pulumi.String("test-desc"),
+			Priority:          pulumi.Int(1),
+			TransmitDirection: pulumi.String("RegionIn"),
+			MapResult:         pulumi.String("Permit"),
+			NextPriority:      pulumi.Int(1),
+			SourceRegionIds: pulumi.StringArray{
+				pulumi.String("cn-hangzhou"),
+			},
+			SourceInstanceIds: pulumi.StringArray{
+				vpc00.ID(),
+			},
+			SourceInstanceIdsReverseMatch: pulumi.Bool(false),
+			DestinationInstanceIds: pulumi.StringArray{
+				vpc01.ID(),
+			},
+			DestinationInstanceIdsReverseMatch: pulumi.Bool(false),
+			SourceRouteTableIds: pulumi.StringArray{
+				vpc00.RouteTableId,
+			},
+			DestinationRouteTableIds: pulumi.StringArray{
+				vpc01.RouteTableId,
+			},
+			SourceChildInstanceTypes: pulumi.StringArray{
+				pulumi.String("VPC"),
+			},
 			DestinationChildInstanceTypes: pulumi.StringArray{
 				pulumi.String("VPC"),
 			},
 			DestinationCidrBlocks: pulumi.StringArray{
 				vpc01.CidrBlock,
 			},
-			DestinationInstanceIds: pulumi.StringArray{
-				vpc01.ID(),
+			CidrMatchMode: pulumi.String("Include"),
+			RouteTypes: pulumi.StringArray{
+				pulumi.String("System"),
 			},
-			DestinationInstanceIdsReverseMatch: pulumi.Bool(false),
-			DestinationRouteTableIds: pulumi.StringArray{
-				vpc01.RouteTableId,
-			},
-			MapResult: pulumi.String("Permit"),
 			MatchAsns: pulumi.StringArray{
 				pulumi.String("65501"),
 			},
+			AsPathMatchMode: pulumi.String("Include"),
 			MatchCommunitySets: pulumi.StringArray{
 				pulumi.String("65501:1"),
 			},
-			NextPriority: pulumi.Int(1),
+			CommunityMatchMode:   pulumi.String("Include"),
+			CommunityOperateMode: pulumi.String("Additive"),
 			OperateCommunitySets: pulumi.StringArray{
 				pulumi.String("65501:1"),
 			},
@@ -245,27 +264,9 @@ func main() {
 			PrependAsPaths: pulumi.StringArray{
 				pulumi.String("65501"),
 			},
-			Priority: pulumi.Int(1),
-			RouteTypes: pulumi.StringArray{
-				pulumi.String("System"),
-			},
-			SourceChildInstanceTypes: pulumi.StringArray{
-				pulumi.String("VPC"),
-			},
-			SourceInstanceIds: pulumi.StringArray{
-				vpc00.ID(),
-			},
-			SourceInstanceIdsReverseMatch: pulumi.Bool(false),
-			SourceRegionIds: pulumi.StringArray{
-				pulumi.String("cn-hangzhou"),
-			},
-			SourceRouteTableIds: pulumi.StringArray{
-				vpc00.RouteTableId,
-			},
-			TransmitDirection: pulumi.String("RegionIn"),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"alicloud_cen_instance_attachment.default00",
-			"alicloud_cen_instance_attachment.default01",
+			default00,
+			default01,
 		}))
 		if err != nil {
 			return err
@@ -283,52 +284,53 @@ import pulumi
 import pulumi_alicloud as alicloud
 import pulumi_pulumi as pulumi
 
+# Create a cen Route map resource and use it.
 default_instance = alicloud.cen.Instance("defaultInstance")
 vpc00_region = pulumi.providers.Alicloud("vpc00Region", region="cn-hangzhou")
 vpc01_region = pulumi.providers.Alicloud("vpc01Region", region="cn-shanghai")
 vpc00 = alicloud.vpc.Network("vpc00", cidr_block="172.16.0.0/12",
-opts=ResourceOptions(provider="alicloud.vpc00_region"))
+opts=ResourceOptions(provider=alicloud["vpc00_region"]))
 vpc01 = alicloud.vpc.Network("vpc01", cidr_block="172.16.0.0/12",
-opts=ResourceOptions(provider="alicloud.vpc01_region"))
+opts=ResourceOptions(provider=alicloud["vpc01_region"]))
 default00 = alicloud.cen.InstanceAttachment("default00",
+    instance_id=default_instance.id,
     child_instance_id=vpc00.id,
-    child_instance_region_id="cn-hangzhou",
-    instance_id=default_instance.id)
+    child_instance_region_id="cn-hangzhou")
 default01 = alicloud.cen.InstanceAttachment("default01",
+    instance_id=default_instance.id,
     child_instance_id=vpc01.id,
-    child_instance_region_id="cn-shanghai",
-    instance_id=default_instance.id)
+    child_instance_region_id="cn-shanghai")
 default_route_map = alicloud.cen.RouteMap("defaultRouteMap",
-    as_path_match_mode="Include",
-    cen_id=alicloud_cen_instance["cen"]["id"],
     cen_region_id="cn-hangzhou",
-    cidr_match_mode="Include",
-    community_match_mode="Include",
-    community_operate_mode="Additive",
+    cen_id=alicloud_cen_instance["cen"]["id"],
     description="test-desc",
-    destination_child_instance_types=["VPC"],
-    destination_cidr_blocks=[vpc01.cidr_block],
+    priority=1,
+    transmit_direction="RegionIn",
+    map_result="Permit",
+    next_priority=1,
+    source_region_ids=["cn-hangzhou"],
+    source_instance_ids=[vpc00.id],
+    source_instance_ids_reverse_match=False,
     destination_instance_ids=[vpc01.id],
     destination_instance_ids_reverse_match=False,
+    source_route_table_ids=[vpc00.route_table_id],
     destination_route_table_ids=[vpc01.route_table_id],
-    map_result="Permit",
+    source_child_instance_types=["VPC"],
+    destination_child_instance_types=["VPC"],
+    destination_cidr_blocks=[vpc01.cidr_block],
+    cidr_match_mode="Include",
+    route_types=["System"],
     match_asns=["65501"],
+    as_path_match_mode="Include",
     match_community_sets=["65501:1"],
-    next_priority=1,
+    community_match_mode="Include",
+    community_operate_mode="Additive",
     operate_community_sets=["65501:1"],
     preference=20,
     prepend_as_paths=["65501"],
-    priority=1,
-    route_types=["System"],
-    source_child_instance_types=["VPC"],
-    source_instance_ids=[vpc00.id],
-    source_instance_ids_reverse_match=False,
-    source_region_ids=["cn-hangzhou"],
-    source_route_table_ids=[vpc00.route_table_id],
-    transmit_direction="RegionIn",
     opts=ResourceOptions(depends_on=[
-            "alicloud_cen_instance_attachment.default00",
-            "alicloud_cen_instance_attachment.default01",
+            default00,
+            default01,
         ]))
 ```
 
@@ -340,58 +342,60 @@ default_route_map = alicloud.cen.RouteMap("defaultRouteMap",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultInstance = new alicloud.cen.Instance("default", {});
-const vpc00Region = new alicloud.Provider("vpc00_region", {
-    region: "cn-hangzhou",
+// Create a cen Route map resource and use it.
+const defaultInstance = new alicloud.cen.Instance("defaultInstance", {});
+const vpc00Region = new alicloud.Provider("vpc00Region", {region: "cn-hangzhou"});
+const vpc01Region = new alicloud.Provider("vpc01Region", {region: "cn-shanghai"});
+const vpc00 = new alicloud.vpc.Network("vpc00", {cidrBlock: "172.16.0.0/12"}, {
+    provider: alicloud.vpc00_region,
 });
-const vpc01Region = new alicloud.Provider("vpc01_region", {
-    region: "cn-shanghai",
+const vpc01 = new alicloud.vpc.Network("vpc01", {cidrBlock: "172.16.0.0/12"}, {
+    provider: alicloud.vpc01_region,
 });
-const vpc00 = new alicloud.vpc.Network("vpc00", {
-    cidrBlock: "172.16.0.0/12",
-}, { provider: vpc00Region });
-const vpc01 = new alicloud.vpc.Network("vpc01", {
-    cidrBlock: "172.16.0.0/12",
-}, { provider: vpc01Region });
 const default00 = new alicloud.cen.InstanceAttachment("default00", {
+    instanceId: defaultInstance.id,
     childInstanceId: vpc00.id,
     childInstanceRegionId: "cn-hangzhou",
-    instanceId: defaultInstance.id,
 });
 const default01 = new alicloud.cen.InstanceAttachment("default01", {
+    instanceId: defaultInstance.id,
     childInstanceId: vpc01.id,
     childInstanceRegionId: "cn-shanghai",
-    instanceId: defaultInstance.id,
 });
-const defaultRouteMap = new alicloud.cen.RouteMap("default", {
-    asPathMatchMode: "Include",
-    cenId: alicloud_cen_instance_cen.id,
+const defaultRouteMap = new alicloud.cen.RouteMap("defaultRouteMap", {
     cenRegionId: "cn-hangzhou",
-    cidrMatchMode: "Include",
-    communityMatchMode: "Include",
-    communityOperateMode: "Additive",
+    cenId: alicloud_cen_instance.cen.id,
     description: "test-desc",
+    priority: "1",
+    transmitDirection: "RegionIn",
+    mapResult: "Permit",
+    nextPriority: "1",
+    sourceRegionIds: ["cn-hangzhou"],
+    sourceInstanceIds: [vpc00.id],
+    sourceInstanceIdsReverseMatch: "false",
+    destinationInstanceIds: [vpc01.id],
+    destinationInstanceIdsReverseMatch: "false",
+    sourceRouteTableIds: [vpc00.routeTableId],
+    destinationRouteTableIds: [vpc01.routeTableId],
+    sourceChildInstanceTypes: ["VPC"],
     destinationChildInstanceTypes: ["VPC"],
     destinationCidrBlocks: [vpc01.cidrBlock],
-    destinationInstanceIds: [vpc01.id],
-    destinationInstanceIdsReverseMatch: false,
-    destinationRouteTableIds: [vpc01.routeTableId],
-    mapResult: "Permit",
-    matchAsns: ["65501"],
-    matchCommunitySets: ["65501:1"],
-    nextPriority: 1,
-    operateCommunitySets: ["65501:1"],
-    preference: 20,
-    prependAsPaths: ["65501"],
-    priority: 1,
+    cidrMatchMode: "Include",
     routeTypes: ["System"],
-    sourceChildInstanceTypes: ["VPC"],
-    sourceInstanceIds: [vpc00.id],
-    sourceInstanceIdsReverseMatch: false,
-    sourceRegionIds: ["cn-hangzhou"],
-    sourceRouteTableIds: [vpc00.routeTableId],
-    transmitDirection: "RegionIn",
-}, { dependsOn: [default00, default01] });
+    matchAsns: ["65501"],
+    asPathMatchMode: "Include",
+    matchCommunitySets: ["65501:1"],
+    communityMatchMode: "Include",
+    communityOperateMode: "Additive",
+    operateCommunitySets: ["65501:1"],
+    preference: "20",
+    prependAsPaths: ["65501"],
+}, {
+    dependsOn: [
+        default00,
+        default01,
+    ],
+});
 ```
 
 {{% /example %}}

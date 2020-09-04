@@ -37,22 +37,22 @@ class MyStack : Stack
         });
         var cenAccount = new AliCloud.Provider("cenAccount", new AliCloud.ProviderArgs
         {
-            AccessKey = "xxxxxx",
             Region = "cn-hangzhou",
+            AccessKey = "xxxxxx",
             SecretKey = "xxxxxx",
         });
         var cen = new AliCloud.Cen.Instance("cen", new AliCloud.Cen.InstanceArgs
         {
         }, new CustomResourceOptions
         {
-            Provider = "alicloud.cen_account",
+            Provider = alicloud.Cen_account,
         });
         var ccn = new AliCloud.CloudConnect.Network("ccn", new AliCloud.CloudConnect.NetworkArgs
         {
             IsDefault = true,
         }, new CustomResourceOptions
         {
-            Provider = "alicloud.ccn_account",
+            Provider = alicloud.Ccn_account,
         });
         var @default = new AliCloud.CloudConnect.NetworkGrant("default", new AliCloud.CloudConnect.NetworkGrantArgs
         {
@@ -63,8 +63,8 @@ class MyStack : Stack
         {
             DependsOn = 
             {
-                "alicloud_cen_instance.cen",
-                "alicloud_cloud_connect_network.ccn",
+                ccn,
+                cen,
             },
         });
     }
@@ -92,20 +92,20 @@ func main() {
 			return err
 		}
 		_, err = providers.Newalicloud(ctx, "cenAccount", &providers.alicloudArgs{
-			AccessKey: pulumi.String("xxxxxx"),
 			Region:    pulumi.String("cn-hangzhou"),
+			AccessKey: pulumi.String("xxxxxx"),
 			SecretKey: pulumi.String("xxxxxx"),
 		})
 		if err != nil {
 			return err
 		}
-		cen, err := cen.NewInstance(ctx, "cen", nil, pulumi.Provider("alicloud.cen_account"))
+		cen, err := cen.NewInstance(ctx, "cen", nil, pulumi.Provider(alicloud.Cen_account))
 		if err != nil {
 			return err
 		}
 		ccn, err := cloudconnect.NewNetwork(ctx, "ccn", &cloudconnect.NetworkArgs{
 			IsDefault: pulumi.Bool(true),
-		}, pulumi.Provider("alicloud.ccn_account"))
+		}, pulumi.Provider(alicloud.Ccn_account))
 		if err != nil {
 			return err
 		}
@@ -114,8 +114,8 @@ func main() {
 			CenId:  cen.ID(),
 			CenUid: pulumi.String("xxxxxx"),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"alicloud_cen_instance.cen",
-			"alicloud_cloud_connect_network.ccn",
+			ccn,
+			cen,
 		}))
 		if err != nil {
 			return err
@@ -135,19 +135,19 @@ import pulumi_pulumi as pulumi
 
 ccn_account = pulumi.providers.Alicloud("ccnAccount")
 cen_account = pulumi.providers.Alicloud("cenAccount",
-    access_key="xxxxxx",
     region="cn-hangzhou",
+    access_key="xxxxxx",
     secret_key="xxxxxx")
-cen = alicloud.cen.Instance("cen", opts=ResourceOptions(provider="alicloud.cen_account"))
+cen = alicloud.cen.Instance("cen", opts=ResourceOptions(provider=alicloud["cen_account"]))
 ccn = alicloud.cloudconnect.Network("ccn", is_default=True,
-opts=ResourceOptions(provider="alicloud.ccn_account"))
+opts=ResourceOptions(provider=alicloud["ccn_account"]))
 default = alicloud.cloudconnect.NetworkGrant("default",
     ccn_id=ccn.id,
     cen_id=cen.id,
     cen_uid="xxxxxx",
     opts=ResourceOptions(depends_on=[
-            "alicloud_cen_instance.cen",
-            "alicloud_cloud_connect_network.ccn",
+            ccn,
+            cen,
         ]))
 ```
 
@@ -159,21 +159,28 @@ default = alicloud.cloudconnect.NetworkGrant("default",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const ccnAccount = new alicloud.Provider("ccn_account", {});
-const cenAccount = new alicloud.Provider("cen_account", {
-    accessKey: "xxxxxx",
+const ccnAccount = new alicloud.Provider("ccnAccount", {});
+const cenAccount = new alicloud.Provider("cenAccount", {
     region: "cn-hangzhou",
+    accessKey: "xxxxxx",
     secretKey: "xxxxxx",
 });
-const cen = new alicloud.cen.Instance("cen", {}, { provider: cenAccount });
-const ccn = new alicloud.cloudconnect.Network("ccn", {
-    isDefault: true,
-}, { provider: ccnAccount });
-const defaultNetworkGrant = new alicloud.cloudconnect.NetworkGrant("default", {
+const cen = new alicloud.cen.Instance("cen", {}, {
+    provider: alicloud.cen_account,
+});
+const ccn = new alicloud.cloudconnect.Network("ccn", {isDefault: "true"}, {
+    provider: alicloud.ccn_account,
+});
+const _default = new alicloud.cloudconnect.NetworkGrant("default", {
     ccnId: ccn.id,
     cenId: cen.id,
     cenUid: "xxxxxx",
-}, { dependsOn: [cen, ccn] });
+}, {
+    dependsOn: [
+        ccn,
+        cen,
+    ],
+});
 ```
 
 {{% /example %}}

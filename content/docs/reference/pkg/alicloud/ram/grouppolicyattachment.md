@@ -34,7 +34,6 @@ class MyStack : Stack
         });
         var policy = new AliCloud.Ram.Policy("policy", new AliCloud.Ram.PolicyArgs
         {
-            Description = "this is a policy test",
             Document = @"    {
       ""Statement"": [
         {
@@ -51,15 +50,15 @@ class MyStack : Stack
       ],
         ""Version"": ""1""
     }
-  
 ",
+            Description = "this is a policy test",
             Force = true,
         });
         var attach = new AliCloud.Ram.GroupPolicyAttachment("attach", new AliCloud.Ram.GroupPolicyAttachmentArgs
         {
-            GroupName = @group.Name,
             PolicyName = policy.Name,
             PolicyType = policy.Type,
+            GroupName = @group.Name,
         });
     }
 
@@ -89,17 +88,17 @@ func main() {
 			return err
 		}
 		policy, err := ram.NewPolicy(ctx, "policy", &ram.PolicyArgs{
+			Document:    pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "    {\n", "      \"Statement\": [\n", "        {\n", "          \"Action\": [\n", "            \"oss:ListObjects\",\n", "            \"oss:GetObject\"\n", "          ],\n", "          \"Effect\": \"Allow\",\n", "          \"Resource\": [\n", "            \"acs:oss:*:*:mybucket\",\n", "            \"acs:oss:*:*:mybucket/*\"\n", "          ]\n", "        }\n", "      ],\n", "        \"Version\": \"1\"\n", "    }\n")),
 			Description: pulumi.String("this is a policy test"),
-			Document:    pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "    {\n", "      \"Statement\": [\n", "        {\n", "          \"Action\": [\n", "            \"oss:ListObjects\",\n", "            \"oss:GetObject\"\n", "          ],\n", "          \"Effect\": \"Allow\",\n", "          \"Resource\": [\n", "            \"acs:oss:*:*:mybucket\",\n", "            \"acs:oss:*:*:mybucket/*\"\n", "          ]\n", "        }\n", "      ],\n", "        \"Version\": \"1\"\n", "    }\n", "  \n")),
 			Force:       pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = ram.NewGroupPolicyAttachment(ctx, "attach", &ram.GroupPolicyAttachmentArgs{
-			GroupName:  group.Name,
 			PolicyName: policy.Name,
 			PolicyType: policy.Type,
+			GroupName:  group.Name,
 		})
 		if err != nil {
 			return err
@@ -121,7 +120,6 @@ group = alicloud.ram.Group("group",
     comments="this is a group comments.",
     force=True)
 policy = alicloud.ram.Policy("policy",
-    description="this is a policy test",
     document="""    {
       "Statement": [
         {
@@ -138,13 +136,13 @@ policy = alicloud.ram.Policy("policy",
       ],
         "Version": "1"
     }
-  
 """,
+    description="this is a policy test",
     force=True)
 attach = alicloud.ram.GroupPolicyAttachment("attach",
-    group_name=group.name,
     policy_name=policy.name,
-    policy_type=policy.type)
+    policy_type=policy.type,
+    group_name=group.name)
 ```
 
 {{% /example %}}
@@ -161,7 +159,6 @@ const group = new alicloud.ram.Group("group", {
     force: true,
 });
 const policy = new alicloud.ram.Policy("policy", {
-    description: "this is a policy test",
     document: `    {
       "Statement": [
         {
@@ -178,13 +175,14 @@ const policy = new alicloud.ram.Policy("policy", {
       ],
         "Version": "1"
     }
-  `,
+`,
+    description: "this is a policy test",
     force: true,
 });
 const attach = new alicloud.ram.GroupPolicyAttachment("attach", {
-    groupName: group.name,
     policyName: policy.name,
     policyType: policy.type,
+    groupName: group.name,
 });
 ```
 

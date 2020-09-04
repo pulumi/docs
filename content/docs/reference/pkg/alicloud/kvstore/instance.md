@@ -39,22 +39,22 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/24",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var defaultInstance = new AliCloud.KVStore.Instance("defaultInstance", new AliCloud.KVStore.InstanceArgs
         {
-            EngineVersion = "4.0",
             InstanceClass = "redis.master.small.default",
             InstanceName = name,
-            InstanceType = "Redis",
+            VswitchId = defaultSwitch.Id,
             PrivateIp = "172.16.0.10",
             SecurityIps = 
             {
                 "10.0.0.1",
             },
-            VswitchId = defaultSwitch.Id,
+            InstanceType = "Redis",
+            EngineVersion = "4.0",
         });
     }
 
@@ -90,23 +90,23 @@ func main() {
 			return err
 		}
 		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			CidrBlock:        pulumi.String("172.16.0.0/24"),
 			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = kvstore.NewInstance(ctx, "defaultInstance", &kvstore.InstanceArgs{
-			EngineVersion: pulumi.String("4.0"),
 			InstanceClass: pulumi.String("redis.master.small.default"),
 			InstanceName:  pulumi.String(name),
-			InstanceType:  pulumi.String("Redis"),
+			VswitchId:     defaultSwitch.ID(),
 			PrivateIp:     pulumi.String("172.16.0.10"),
 			SecurityIps: pulumi.StringArray{
 				pulumi.String("10.0.0.1"),
 			},
-			VswitchId: defaultSwitch.ID(),
+			InstanceType:  pulumi.String("Redis"),
+			EngineVersion: pulumi.String("4.0"),
 		})
 		if err != nil {
 			return err
@@ -133,17 +133,17 @@ if name is None:
 default_zones = alicloud.get_zones(available_resource_creation=creation)
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0].id,
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 default_instance = alicloud.kvstore.Instance("defaultInstance",
-    engine_version="4.0",
     instance_class="redis.master.small.default",
     instance_name=name,
-    instance_type="Redis",
+    vswitch_id=default_switch.id,
     private_ip="172.16.0.10",
     security_ips=["10.0.0.1"],
-    vswitch_id=default_switch.id)
+    instance_type="Redis",
+    engine_version="4.0")
 ```
 
 {{% /example %}}
@@ -157,26 +157,23 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const creation = config.get("creation") || "KVStore";
 const name = config.get("name") || "kvstoreinstancevpc";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: creation,
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/16",
 });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/24",
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
+    cidrBlock: "172.16.0.0/24",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const defaultInstance = new alicloud.kvstore.Instance("default", {
-    engineVersion: "4.0",
+const defaultInstance = new alicloud.kvstore.Instance("defaultInstance", {
     instanceClass: "redis.master.small.default",
     instanceName: name,
-    instanceType: "Redis",
+    vswitchId: defaultSwitch.id,
     privateIp: "172.16.0.10",
     securityIps: ["10.0.0.1"],
-    vswitchId: defaultSwitch.id,
+    instanceType: "Redis",
+    engineVersion: "4.0",
 });
 ```
 

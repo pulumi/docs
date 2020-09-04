@@ -37,13 +37,13 @@ class MyStack : Stack
         var app = new AliCloud.CS.Application("app", new AliCloud.CS.ApplicationArgs
         {
             ClusterName = "my-first-swarm",
+            Version = "1.2",
+            Template = File.ReadAllText("wordpress.yml"),
+            LatestImage = true,
             Environment = 
             {
                 { "EXTERNAL_URL", "123.123.123.123:8080" },
             },
-            LatestImage = true,
-            Template = File.ReadAllText("wordpress.yml"),
-            Version = "1.2",
         });
     }
 
@@ -63,12 +63,12 @@ import pulumi_alicloud as alicloud
 
 app = alicloud.cs.Application("app",
     cluster_name="my-first-swarm",
+    version="1.2",
+    template=(lambda path: open(path).read())("wordpress.yml"),
+    latest_image=True,
     environment={
         "EXTERNAL_URL": "123.123.123.123:8080",
-    },
-    latest_image=True,
-    template=(lambda path: open(path).read())("wordpress.yml"),
-    version="1.2")
+    })
 ```
 
 {{% /example %}}
@@ -78,16 +78,16 @@ app = alicloud.cs.Application("app",
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
-import * as fs from "fs";
+import * from "fs";
 
 const app = new alicloud.cs.Application("app", {
     clusterName: "my-first-swarm",
+    version: "1.2",
+    template: fs.readFileSync("wordpress.yml"),
+    latestImage: true,
     environment: {
         EXTERNAL_URL: "123.123.123.123:8080",
     },
-    latestImage: true,
-    template: fs.readFileSync("wordpress.yml", "utf-8"),
-    version: "1.2",
 });
 ```
 

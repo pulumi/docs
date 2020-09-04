@@ -32,21 +32,21 @@ class MyStack : Stack
     {
         var instance = new AliCloud.ElasticSearch.Instance("instance", new AliCloud.ElasticSearch.InstanceArgs
         {
-            InstanceChargeType = "PostPaid",
             DataNodeAmount = 2,
-            DataNodeSpec = "elasticsearch.sn2ne.large",
             DataNodeDiskSize = 20,
             DataNodeDiskType = "cloud_ssd",
-            VswitchId = "some vswitch id",
-            Password = "Your password",
-            Version = "5.5.3_with_X-Pack",
+            DataNodeSpec = "elasticsearch.sn2ne.large",
             Description = "description",
-            ZoneCount = 2,
+            InstanceChargeType = "PostPaid",
+            Password = "Your password",
             Tags = 
             {
                 { "key1", "value1" },
                 { "key2", "value2" },
             },
+            Version = "5.5.3_with_X-Pack",
+            VswitchId = "some vswitch id",
+            ZoneCount = 2,
         });
     }
 
@@ -67,20 +67,20 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := elasticsearch.NewInstance(ctx, "instance", &elasticsearch.InstanceArgs{
-			InstanceChargeType: pulumi.String("PostPaid"),
 			DataNodeAmount:     pulumi.Int(2),
-			DataNodeSpec:       pulumi.String("elasticsearch.sn2ne.large"),
 			DataNodeDiskSize:   pulumi.Int(20),
 			DataNodeDiskType:   pulumi.String("cloud_ssd"),
-			VswitchId:          pulumi.String("some vswitch id"),
-			Password:           pulumi.String("Your password"),
-			Version:            pulumi.String("5.5.3_with_X-Pack"),
+			DataNodeSpec:       pulumi.String("elasticsearch.sn2ne.large"),
 			Description:        pulumi.String("description"),
-			ZoneCount:          pulumi.Int(2),
+			InstanceChargeType: pulumi.String("PostPaid"),
+			Password:           pulumi.String("Your password"),
 			Tags: pulumi.StringMap{
 				"key1": pulumi.String("value1"),
 				"key2": pulumi.String("value2"),
 			},
+			Version:   pulumi.String("5.5.3_with_X-Pack"),
+			VswitchId: pulumi.String("some vswitch id"),
+			ZoneCount: pulumi.Int(2),
 		})
 		if err != nil {
 			return err
@@ -98,20 +98,20 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 instance = alicloud.elasticsearch.Instance("instance",
-    instance_charge_type="PostPaid",
     data_node_amount=2,
-    data_node_spec="elasticsearch.sn2ne.large",
     data_node_disk_size=20,
     data_node_disk_type="cloud_ssd",
-    vswitch_id="some vswitch id",
-    password="Your password",
-    version="5.5.3_with_X-Pack",
+    data_node_spec="elasticsearch.sn2ne.large",
     description="description",
-    zone_count=2,
+    instance_charge_type="PostPaid",
+    password="Your password",
     tags={
         "key1": "value1",
         "key2": "value2",
-    })
+    },
+    version="5.5.3_with_X-Pack",
+    vswitch_id="some vswitch id",
+    zone_count=2)
 ```
 
 {{% /example %}}
@@ -123,20 +123,20 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const instance = new alicloud.elasticsearch.Instance("instance", {
-    instanceChargeType: "PostPaid",
-    dataNodeAmount: "2",
-    dataNodeSpec: "elasticsearch.sn2ne.large",
-    dataNodeDiskSize: "20",
+    dataNodeAmount: 2,
+    dataNodeDiskSize: 20,
     dataNodeDiskType: "cloud_ssd",
-    vswitchId: "some vswitch id",
-    password: "Your password",
-    version: "5.5.3_with_X-Pack",
+    dataNodeSpec: "elasticsearch.sn2ne.large",
     description: "description",
-    zoneCount: "2",
+    instanceChargeType: "PostPaid",
+    password: "Your password",
     tags: {
         key1: "value1",
         key2: "value2",
     },
+    version: "5.5.3_with_X-Pack",
+    vswitchId: "some vswitch id",
+    zoneCount: 2,
 });
 ```
 

@@ -34,8 +34,8 @@ class MyStack : Stack
         });
         var defaultNetworkAcl = new AliCloud.Vpc.NetworkAcl("defaultNetworkAcl", new AliCloud.Vpc.NetworkAclArgs
         {
-            Description = "network_acl",
             VpcId = defaultNetwork.Id,
+            Description = "network_acl",
         });
     }
 
@@ -62,8 +62,8 @@ func main() {
 			return err
 		}
 		_, err = vpc.NewNetworkAcl(ctx, "defaultNetworkAcl", &vpc.NetworkAclArgs{
-			Description: pulumi.String("network_acl"),
 			VpcId:       defaultNetwork.ID(),
+			Description: pulumi.String("network_acl"),
 		})
 		if err != nil {
 			return err
@@ -82,8 +82,8 @@ import pulumi_alicloud as alicloud
 
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/12")
 default_network_acl = alicloud.vpc.NetworkAcl("defaultNetworkAcl",
-    description="network_acl",
-    vpc_id=default_network.id)
+    vpc_id=default_network.id,
+    description="network_acl")
 ```
 
 {{% /example %}}
@@ -94,12 +94,10 @@ default_network_acl = alicloud.vpc.NetworkAcl("defaultNetworkAcl",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/12",
-});
-const defaultNetworkAcl = new alicloud.vpc.NetworkAcl("default", {
-    description: "network_acl",
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/12"});
+const defaultNetworkAcl = new alicloud.vpc.NetworkAcl("defaultNetworkAcl", {
     vpcId: defaultNetwork.id,
+    description: "network_acl",
 });
 ```
 

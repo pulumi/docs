@@ -71,9 +71,9 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/24",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var defaultLoadBalancer = new AliCloud.Slb.LoadBalancer("defaultLoadBalancer", new AliCloud.Slb.LoadBalancerArgs
         {
@@ -89,21 +89,21 @@ class MyStack : Stack
             var range = new { Value = rangeIndex };
             defaultListener.Add(new AliCloud.Slb.Listener($"defaultListener-{range.Value}", new AliCloud.Slb.ListenerArgs
             {
-                BackendPort = 22,
-                Bandwidth = 10,
-                FrontendPort = 22,
-                HealthCheckType = "tcp",
                 LoadBalancerId = 
                 {
                     defaultLoadBalancer,
                 }.Select(__item => __item.Id).ToList()[range.Value],
+                BackendPort = 22,
+                FrontendPort = 22,
                 Protocol = "tcp",
+                Bandwidth = 10,
+                HealthCheckType = "tcp",
             }));
         }
         var defaultScalingGroup = new AliCloud.Ess.ScalingGroup("defaultScalingGroup", new AliCloud.Ess.ScalingGroupArgs
         {
-            MaxSize = 2,
             MinSize = 2,
+            MaxSize = 2,
             ScalingGroupName = name,
             VswitchIds = 
             {
@@ -122,8 +122,8 @@ class MyStack : Stack
                     {
                         new AliCloud.Ess.Inputs.ScalingGroupVServerGroupsVserverGroupVserverAttributeArgs
                         {
-                            Port = 100,
                             VserverGroupId = defaultServerGroup.Id,
+                            Port = 100,
                             Weight = 60,
                         },
                     },
@@ -154,23 +154,23 @@ default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
     available_resource_creation="VSwitch")
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0].id,
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 default_load_balancer = alicloud.slb.LoadBalancer("defaultLoadBalancer", vswitch_id=default_switch.id)
 default_server_group = alicloud.slb.ServerGroup("defaultServerGroup", load_balancer_id=default_load_balancer.id)
 default_listener = []
 for range in [{"value": i} for i in range(0, 2)]:
     default_listener.append(alicloud.slb.Listener(f"defaultListener-{range['value']}",
-        backend_port=22,
-        bandwidth=10,
-        frontend_port=22,
-        health_check_type="tcp",
         load_balancer_id=[__item.id for __item in [default_load_balancer]][range["value"]],
-        protocol="tcp"))
+        backend_port=22,
+        frontend_port=22,
+        protocol="tcp",
+        bandwidth=10,
+        health_check_type="tcp"))
 default_scaling_group = alicloud.ess.ScalingGroup("defaultScalingGroup",
-    max_size=2,
     min_size=2,
+    max_size=2,
     scaling_group_name=name,
     vswitch_ids=[default_switch.id])
 default_scaling_group_v_server_groups = alicloud.ess.ScalingGroupVServerGroups("defaultScalingGroupVServerGroups",
@@ -178,8 +178,8 @@ default_scaling_group_v_server_groups = alicloud.ess.ScalingGroupVServerGroups("
     vserver_groups=[alicloud.ess.ScalingGroupVServerGroupsVserverGroupArgs(
         loadbalancer_id=default_load_balancer.id,
         vserver_attributes=[alicloud.ess.ScalingGroupVServerGroupsVserverGroupVserverAttributeArgs(
-            port=100,
             vserver_group_id=default_server_group.id,
+            port=100,
             weight=60,
         )],
     )])
@@ -195,50 +195,43 @@ import * as alicloud from "@pulumi/alicloud";
 
 const config = new pulumi.Config();
 const name = config.get("name") || "testAccEssVserverGroupsAttachment";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableDiskCategory: "cloud_efficiency",
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/16",
 });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/24",
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
+    cidrBlock: "172.16.0.0/24",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const defaultLoadBalancer = new alicloud.slb.LoadBalancer("default", {
-    vswitchId: defaultSwitch.id,
-});
-const defaultServerGroup = new alicloud.slb.ServerGroup("default", {
-    loadBalancerId: defaultLoadBalancer.id,
-});
-const defaultListener: alicloud.slb.Listener[] = [];
-for (let i = 0; i < 2; i++) {
-    defaultListener.push(new alicloud.slb.Listener(`default-${i}`, {
-        backendPort: 22,
-        bandwidth: 10,
-        frontendPort: 22,
-        healthCheckType: "tcp",
-        loadBalancerId: defaultLoadBalancer.id.apply(id => id[i]),
+const defaultLoadBalancer = new alicloud.slb.LoadBalancer("defaultLoadBalancer", {vswitchId: defaultSwitch.id});
+const defaultServerGroup = new alicloud.slb.ServerGroup("defaultServerGroup", {loadBalancerId: defaultLoadBalancer.id});
+const defaultListener: alicloud.slb.Listener[];
+for (const range = {value: 0}; range.value < 2; range.value++) {
+    defaultListener.push(new alicloud.slb.Listener(`defaultListener-${range.value}`, {
+        loadBalancerId: [defaultLoadBalancer].map(__item => __item.id)[range.value],
+        backendPort: "22",
+        frontendPort: "22",
         protocol: "tcp",
+        bandwidth: "10",
+        healthCheckType: "tcp",
     }));
 }
-const defaultScalingGroup = new alicloud.ess.ScalingGroup("default", {
-    maxSize: 2,
-    minSize: 2,
+const defaultScalingGroup = new alicloud.ess.ScalingGroup("defaultScalingGroup", {
+    minSize: "2",
+    maxSize: "2",
     scalingGroupName: name,
     vswitchIds: [defaultSwitch.id],
 });
-const defaultScalingGroupVServerGroups = new alicloud.ess.ScalingGroupVServerGroups("default", {
+const defaultScalingGroupVServerGroups = new alicloud.ess.ScalingGroupVServerGroups("defaultScalingGroupVServerGroups", {
     scalingGroupId: defaultScalingGroup.id,
     vserverGroups: [{
         loadbalancerId: defaultLoadBalancer.id,
         vserverAttributes: [{
-            port: 100,
             vserverGroupId: defaultServerGroup.id,
-            weight: 60,
+            port: "100",
+            weight: "60",
         }],
     }],
 });

@@ -26,9 +26,30 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sampleDs = Output.Create(AliCloud.Slb.GetListeners.InvokeAsync(new AliCloud.Slb.GetListenersArgs
+        var @default = new AliCloud.Slb.LoadBalancer("default", new AliCloud.Slb.LoadBalancerArgs
         {
-            LoadBalancerId = alicloud_slb.Sample_slb.Id,
+        });
+        var tcp = new AliCloud.Slb.Listener("tcp", new AliCloud.Slb.ListenerArgs
+        {
+            LoadBalancerId = @default.Id,
+            BackendPort = 22,
+            FrontendPort = 22,
+            Protocol = "tcp",
+            Bandwidth = 10,
+            HealthCheckType = "tcp",
+            PersistenceTimeout = 3600,
+            HealthyThreshold = 8,
+            UnhealthyThreshold = 8,
+            HealthCheckTimeout = 8,
+            HealthCheckInterval = 5,
+            HealthCheckHttpCode = "http_2xx",
+            HealthCheckConnectPort = 20,
+            HealthCheckUri = "/console",
+            EstablishedTimeout = 600,
+        });
+        var sampleDs = @default.Id.Apply(id => AliCloud.Slb.GetListeners.InvokeAsync(new AliCloud.Slb.GetListenersArgs
+        {
+            LoadBalancerId = id,
         }));
         this.FirstSlbListenerProtocol = sampleDs.Apply(sampleDs => sampleDs.SlbListeners[0].Protocol);
     }
@@ -51,13 +72,33 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		sampleDs, err := slb.GetListeners(ctx, &slb.GetListenersArgs{
-			LoadBalancerId: alicloud_slb.Sample_slb.Id,
-		}, nil)
+		_, err := slb.NewLoadBalancer(ctx, "_default", nil)
 		if err != nil {
 			return err
 		}
-		ctx.Export("firstSlbListenerProtocol", sampleDs.SlbListeners[0].Protocol)
+		_, err = slb.NewListener(ctx, "tcp", &slb.ListenerArgs{
+			LoadBalancerId:         _default.ID(),
+			BackendPort:            pulumi.Int(22),
+			FrontendPort:           pulumi.Int(22),
+			Protocol:               pulumi.String("tcp"),
+			Bandwidth:              pulumi.Int(10),
+			HealthCheckType:        pulumi.String("tcp"),
+			PersistenceTimeout:     pulumi.Int(3600),
+			HealthyThreshold:       pulumi.Int(8),
+			UnhealthyThreshold:     pulumi.Int(8),
+			HealthCheckTimeout:     pulumi.Int(8),
+			HealthCheckInterval:    pulumi.Int(5),
+			HealthCheckHttpCode:    pulumi.String("http_2xx"),
+			HealthCheckConnectPort: pulumi.Int(20),
+			HealthCheckUri:         pulumi.String("/console"),
+			EstablishedTimeout:     pulumi.Int(600),
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstSlbListenerProtocol", sampleDs.ApplyT(func(sampleDs slb.GetListenersResult) (string, error) {
+			return sampleDs.SlbListeners[0].Protocol, nil
+		}).(pulumi.StringOutput))
 		return nil
 	})
 }
@@ -70,7 +111,24 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
-sample_ds = alicloud.slb.get_listeners(load_balancer_id=alicloud_slb["sample_slb"]["id"])
+default = alicloud.slb.LoadBalancer("default")
+tcp = alicloud.slb.Listener("tcp",
+    load_balancer_id=default.id,
+    backend_port=22,
+    frontend_port=22,
+    protocol="tcp",
+    bandwidth=10,
+    health_check_type="tcp",
+    persistence_timeout=3600,
+    healthy_threshold=8,
+    unhealthy_threshold=8,
+    health_check_timeout=8,
+    health_check_interval=5,
+    health_check_http_code="http_2xx",
+    health_check_connect_port=20,
+    health_check_uri="/console",
+    established_timeout=600)
+sample_ds = default.id.apply(lambda id: alicloud.slb.get_listeners(load_balancer_id=id))
 pulumi.export("firstSlbListenerProtocol", sample_ds.slb_listeners[0].protocol)
 ```
 
@@ -82,10 +140,27 @@ pulumi.export("firstSlbListenerProtocol", sample_ds.slb_listeners[0].protocol)
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const sampleDs = alicloud_slb_sample_slb.id.apply(id => alicloud.slb.getListeners({
+const _default = new alicloud.slb.LoadBalancer("default", {});
+const tcp = new alicloud.slb.Listener("tcp", {
+    loadBalancerId: _default.id,
+    backendPort: "22",
+    frontendPort: "22",
+    protocol: "tcp",
+    bandwidth: "10",
+    healthCheckType: "tcp",
+    persistenceTimeout: 3600,
+    healthyThreshold: 8,
+    unhealthyThreshold: 8,
+    healthCheckTimeout: 8,
+    healthCheckInterval: 5,
+    healthCheckHttpCode: "http_2xx",
+    healthCheckConnectPort: 20,
+    healthCheckUri: "/console",
+    establishedTimeout: 600,
+});
+const sampleDs = _default.id.apply(id => alicloud.slb.getListeners({
     loadBalancerId: id,
-}, { async: true }));
-
+}));
 export const firstSlbListenerProtocol = sampleDs.slbListeners[0].protocol;
 ```
 

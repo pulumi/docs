@@ -38,14 +38,14 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/21",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/21",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var defaultNatGateway = new AliCloud.Vpc.NatGateway("defaultNatGateway", new AliCloud.Vpc.NatGatewayArgs
         {
-            Specification = "Small",
             VpcId = defaultNetwork.Id,
+            Specification = "Small",
         });
         var defaultEip = new AliCloud.Ecs.Eip("defaultEip", new AliCloud.Ecs.EipArgs
         {
@@ -57,12 +57,12 @@ class MyStack : Stack
         });
         var defaultForwardEntry = new AliCloud.Vpc.ForwardEntry("defaultForwardEntry", new AliCloud.Vpc.ForwardEntryArgs
         {
+            ForwardTableId = defaultNatGateway.ForwardTableIds,
             ExternalIp = defaultEip.IpAddress,
             ExternalPort = "80",
-            ForwardTableId = defaultNatGateway.ForwardTableIds,
+            IpProtocol = "tcp",
             InternalIp = "172.16.0.3",
             InternalPort = "8080",
-            IpProtocol = "tcp",
         });
     }
 
@@ -98,16 +98,16 @@ func main() {
 			return err
 		}
 		_, err = vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			CidrBlock:        pulumi.String("172.16.0.0/21"),
 			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/21"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
 		})
 		if err != nil {
 			return err
 		}
 		defaultNatGateway, err := vpc.NewNatGateway(ctx, "defaultNatGateway", &vpc.NatGatewayArgs{
-			Specification: pulumi.String("Small"),
 			VpcId:         defaultNetwork.ID(),
+			Specification: pulumi.String("Small"),
 		})
 		if err != nil {
 			return err
@@ -124,12 +124,12 @@ func main() {
 			return err
 		}
 		_, err = vpc.NewForwardEntry(ctx, "defaultForwardEntry", &vpc.ForwardEntryArgs{
+			ForwardTableId: defaultNatGateway.ForwardTableIds,
 			ExternalIp:     defaultEip.IpAddress,
 			ExternalPort:   pulumi.String("80"),
-			ForwardTableId: defaultNatGateway.ForwardTableIds,
+			IpProtocol:     pulumi.String("tcp"),
 			InternalIp:     pulumi.String("172.16.0.3"),
 			InternalPort:   pulumi.String("8080"),
-			IpProtocol:     pulumi.String("tcp"),
 		})
 		if err != nil {
 			return err
@@ -153,23 +153,23 @@ if name is None:
 default_zones = alicloud.get_zones(available_resource_creation="VSwitch")
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/12")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0].id,
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/21",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 default_nat_gateway = alicloud.vpc.NatGateway("defaultNatGateway",
-    specification="Small",
-    vpc_id=default_network.id)
+    vpc_id=default_network.id,
+    specification="Small")
 default_eip = alicloud.ecs.Eip("defaultEip")
 default_eip_association = alicloud.ecs.EipAssociation("defaultEipAssociation",
     allocation_id=default_eip.id,
     instance_id=default_nat_gateway.id)
 default_forward_entry = alicloud.vpc.ForwardEntry("defaultForwardEntry",
+    forward_table_id=default_nat_gateway.forward_table_ids,
     external_ip=default_eip.ip_address,
     external_port="80",
-    forward_table_id=default_nat_gateway.forward_table_ids,
+    ip_protocol="tcp",
     internal_ip="172.16.0.3",
-    internal_port="8080",
-    ip_protocol="tcp")
+    internal_port="8080")
 ```
 
 {{% /example %}}
@@ -182,34 +182,31 @@ import * as alicloud from "@pulumi/alicloud";
 
 const config = new pulumi.Config();
 const name = config.get("name") || "forward-entry-example-name";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/12",
 });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/12"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
+    vpcId: defaultNetwork.id,
     cidrBlock: "172.16.0.0/21",
-    vpcId: defaultNetwork.id,
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const defaultNatGateway = new alicloud.vpc.NatGateway("default", {
+const defaultNatGateway = new alicloud.vpc.NatGateway("defaultNatGateway", {
+    vpcId: defaultNetwork.id,
     specification: "Small",
-    vpcId: defaultNetwork.id,
 });
-const defaultEip = new alicloud.ecs.Eip("default", {});
-const defaultEipAssociation = new alicloud.ecs.EipAssociation("default", {
+const defaultEip = new alicloud.ecs.Eip("defaultEip", {});
+const defaultEipAssociation = new alicloud.ecs.EipAssociation("defaultEipAssociation", {
     allocationId: defaultEip.id,
     instanceId: defaultNatGateway.id,
 });
-const defaultForwardEntry = new alicloud.vpc.ForwardEntry("default", {
+const defaultForwardEntry = new alicloud.vpc.ForwardEntry("defaultForwardEntry", {
+    forwardTableId: defaultNatGateway.forwardTableIds,
     externalIp: defaultEip.ipAddress,
     externalPort: "80",
-    forwardTableId: defaultNatGateway.forwardTableIds,
+    ipProtocol: "tcp",
     internalIp: "172.16.0.3",
     internalPort: "8080",
-    ipProtocol: "tcp",
 });
 ```
 

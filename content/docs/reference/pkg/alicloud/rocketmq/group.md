@@ -112,11 +112,8 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "onsInstanceName";
 const groupId = config.get("groupId") || "GID-onsGroupDatasourceName";
-
-const defaultInstance = new alicloud.rocketmq.Instance("default", {
-    remark: "default_ons_instance_remark",
-});
-const defaultGroup = new alicloud.rocketmq.Group("default", {
+const defaultInstance = new alicloud.rocketmq.Instance("defaultInstance", {remark: "default_ons_instance_remark"});
+const defaultGroup = new alicloud.rocketmq.Group("defaultGroup", {
     groupId: groupId,
     instanceId: defaultInstance.id,
     remark: "dafault_ons_group_remark",

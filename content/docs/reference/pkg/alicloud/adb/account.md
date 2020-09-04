@@ -41,27 +41,27 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/24",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var cluster = new AliCloud.Adb.Cluster("cluster", new AliCloud.Adb.ClusterArgs
         {
-            DbClusterCategory = "Cluster",
             DbClusterVersion = "3.0",
+            DbClusterCategory = "Cluster",
             DbNodeClass = "C8",
             DbNodeCount = 2,
             DbNodeStorage = 200,
-            Description = name,
             PayType = "PostPaid",
             VswitchId = defaultSwitch.Id,
+            Description = name,
         });
         var account = new AliCloud.Adb.Account("account", new AliCloud.Adb.AccountArgs
         {
-            AccountDescription = name,
+            DbClusterId = cluster.Id,
             AccountName = "tftestnormal",
             AccountPassword = "Test12345",
-            DbClusterId = cluster.Id,
+            AccountDescription = name,
         });
     }
 
@@ -97,31 +97,31 @@ func main() {
 			return err
 		}
 		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			CidrBlock:        pulumi.String("172.16.0.0/24"),
 			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
 		})
 		if err != nil {
 			return err
 		}
 		cluster, err := adb.NewCluster(ctx, "cluster", &adb.ClusterArgs{
-			DbClusterCategory: pulumi.String("Cluster"),
 			DbClusterVersion:  pulumi.String("3.0"),
+			DbClusterCategory: pulumi.String("Cluster"),
 			DbNodeClass:       pulumi.String("C8"),
 			DbNodeCount:       pulumi.Int(2),
 			DbNodeStorage:     pulumi.Int(200),
-			Description:       pulumi.String(name),
 			PayType:           pulumi.String("PostPaid"),
 			VswitchId:         defaultSwitch.ID(),
+			Description:       pulumi.String(name),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = adb.NewAccount(ctx, "account", &adb.AccountArgs{
-			AccountDescription: pulumi.String(name),
+			DbClusterId:        cluster.ID(),
 			AccountName:        pulumi.String("tftestnormal"),
 			AccountPassword:    pulumi.String("Test12345"),
-			DbClusterId:        cluster.ID(),
+			AccountDescription: pulumi.String(name),
 		})
 		if err != nil {
 			return err
@@ -148,23 +148,23 @@ if name is None:
 default_zones = alicloud.get_zones(available_resource_creation=creation)
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0].id,
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 cluster = alicloud.adb.Cluster("cluster",
-    db_cluster_category="Cluster",
     db_cluster_version="3.0",
+    db_cluster_category="Cluster",
     db_node_class="C8",
     db_node_count=2,
     db_node_storage=200,
-    description=name,
     pay_type="PostPaid",
-    vswitch_id=default_switch.id)
+    vswitch_id=default_switch.id,
+    description=name)
 account = alicloud.adb.Account("account",
-    account_description=name,
+    db_cluster_id=cluster.id,
     account_name="tftestnormal",
     account_password="Test12345",
-    db_cluster_id=cluster.id)
+    account_description=name)
 ```
 
 {{% /example %}}
@@ -178,33 +178,30 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const creation = config.get("creation") || "ADB";
 const name = config.get("name") || "adbaccountmysql";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: creation,
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/16",
 });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/24",
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
+    cidrBlock: "172.16.0.0/24",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
 const cluster = new alicloud.adb.Cluster("cluster", {
-    dbClusterCategory: "Cluster",
     dbClusterVersion: "3.0",
+    dbClusterCategory: "Cluster",
     dbNodeClass: "C8",
     dbNodeCount: 2,
     dbNodeStorage: 200,
-    description: name,
     payType: "PostPaid",
     vswitchId: defaultSwitch.id,
+    description: name,
 });
 const account = new alicloud.adb.Account("account", {
-    accountDescription: name,
+    dbClusterId: cluster.id,
     accountName: "tftestnormal",
     accountPassword: "Test12345",
-    dbClusterId: cluster.id,
+    accountDescription: name,
 });
 ```
 

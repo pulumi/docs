@@ -2,7 +2,7 @@
 ---
 title: "BastionHostInstance"
 title_tag: "Resource BastionHostInstance | Module yundun | Package AliCloud"
-meta_desc: "Explore the BastionHostInstance resource of the yundun module, including examples, input properties, output properties, lookup functions, and supporting types. Cloud Bastionhost instance resource (&#34;Yundun_bastionhost&#34; is the short term of this product)."
+meta_desc: "Explore the BastionHostInstance resource of the yundun module, including examples, input properties, output properties, lookup functions, and supporting types. Cloud Bastionhost instance resource (&#34;Yundun_bastionhost&#34; is the short term of this product). "
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the BastionHostInstance resource of the yundun module, inclu
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Cloud Bastionhost instance resource ("Yundun_bastionhost" is the short term of this product).
+For information about Resource Manager Resource Directory and how to use it, see [What is Bastionhost](https://www.alibabacloud.com/help/en/doc-detail/52922.htm).
 
 > **NOTE:** The endpoint of bssopenapi used only support "business.aliyuncs.com" at present.
 
@@ -24,15 +25,70 @@ Cloud Bastionhost instance resource ("Yundun_bastionhost" is the short term of t
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new AliCloud.Yundun.BastionHostInstance("default", new AliCloud.Yundun.BastionHostInstanceArgs
+        {
+            Description = "Terraform-test",
+            LicenseCode = "bhah_ent_50_asset",
+            Period = 1,
+            SecurityGroupIds = "sg-test",
+            VswitchId = "v-testVswitch",
+        });
+    }
+
+}
+```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yundun.NewBastionHostInstance(ctx, "_default", &yundun.BastionHostInstanceArgs{
+			Description:      pulumi.String("Terraform-test"),
+			LicenseCode:      pulumi.String("bhah_ent_50_asset"),
+			Period:           pulumi.Int(1),
+			SecurityGroupIds: "sg-test",
+			VswitchId:        pulumi.String("v-testVswitch"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.yundun.BastionHostInstance("default",
+    description="Terraform-test",
+    license_code="bhah_ent_50_asset",
+    period=1,
+    security_group_ids="sg-test",
+    vswitch_id="v-testVswitch")
+```
+
 {{% /example %}}
 
 {{% example typescript %}}
@@ -43,8 +99,8 @@ import * as alicloud from "@pulumi/alicloud";
 
 const defaultBastionHostInstance = new alicloud.yundun.BastionHostInstance("default", {
     description: "Terraform-test",
+    licenseCode: "bhah_ent_50_asset",
     period: 1,
-    planCode: "alpha.professional",
     securityGroupIds: "sg-test",
     vswitchId: "v-testVswitch",
 });
@@ -255,7 +311,8 @@ The BastionHostInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The package type of Cloud Bastionhost instance. You can query more supported types through the [DescribePricingModule](https://help.aliyun.com/document_detail/96469.html).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -265,7 +322,7 @@ The BastionHostInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}security group IDs configured to bastionhost
+    <dd>{{% md %}}security group IDs configured to Bastionhost.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -276,7 +333,7 @@ The BastionHostInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}vSwtich ID configured to bastionhost
+    <dd>{{% md %}}VSwitch ID configured to Bastionhost.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -338,7 +395,8 @@ The BastionHostInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The package type of Cloud Bastionhost instance. You can query more supported types through the [DescribePricingModule](https://help.aliyun.com/document_detail/96469.html).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -348,7 +406,7 @@ The BastionHostInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}security group IDs configured to bastionhost
+    <dd>{{% md %}}security group IDs configured to Bastionhost.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -359,7 +417,7 @@ The BastionHostInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}vSwtich ID configured to bastionhost
+    <dd>{{% md %}}VSwitch ID configured to Bastionhost.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -421,7 +479,8 @@ The BastionHostInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The package type of Cloud Bastionhost instance. You can query more supported types through the [DescribePricingModule](https://help.aliyun.com/document_detail/96469.html).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -431,7 +490,7 @@ The BastionHostInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}security group IDs configured to bastionhost
+    <dd>{{% md %}}security group IDs configured to Bastionhost.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -442,7 +501,7 @@ The BastionHostInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}vSwtich ID configured to bastionhost
+    <dd>{{% md %}}VSwitch ID configured to Bastionhost.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -504,7 +563,8 @@ The BastionHostInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The package type of Cloud Bastionhost instance. You can query more supported types through the [DescribePricingModule](https://help.aliyun.com/document_detail/96469.html).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -514,7 +574,7 @@ The BastionHostInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}security group IDs configured to bastionhost
+    <dd>{{% md %}}security group IDs configured to Bastionhost.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -525,7 +585,7 @@ The BastionHostInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}vSwtich ID configured to bastionhost
+    <dd>{{% md %}}VSwitch ID configured to Bastionhost.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -793,7 +853,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The package type of Cloud Bastionhost instance. You can query more supported types through the [DescribePricingModule](https://help.aliyun.com/document_detail/96469.html).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -825,7 +886,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}security group IDs configured to bastionhost
+    <dd>{{% md %}}security group IDs configured to Bastionhost.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -847,7 +908,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}vSwtich ID configured to bastionhost
+    <dd>{{% md %}}VSwitch ID configured to Bastionhost.
 {{% /md %}}</dd>
 
 </dl>
@@ -876,7 +937,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The package type of Cloud Bastionhost instance. You can query more supported types through the [DescribePricingModule](https://help.aliyun.com/document_detail/96469.html).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -908,7 +970,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}security group IDs configured to bastionhost
+    <dd>{{% md %}}security group IDs configured to Bastionhost.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -930,7 +992,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}vSwtich ID configured to bastionhost
+    <dd>{{% md %}}VSwitch ID configured to Bastionhost.
 {{% /md %}}</dd>
 
 </dl>
@@ -959,7 +1021,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The package type of Cloud Bastionhost instance. You can query more supported types through the [DescribePricingModule](https://help.aliyun.com/document_detail/96469.html).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -991,7 +1054,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}security group IDs configured to bastionhost
+    <dd>{{% md %}}security group IDs configured to Bastionhost.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1013,7 +1076,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}vSwtich ID configured to bastionhost
+    <dd>{{% md %}}VSwitch ID configured to Bastionhost.
 {{% /md %}}</dd>
 
 </dl>
@@ -1042,7 +1105,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The package type of Cloud Bastionhost instance. You can query more supported types through the [DescribePricingModule](https://help.aliyun.com/document_detail/96469.html).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1074,7 +1138,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}security group IDs configured to bastionhost
+    <dd>{{% md %}}security group IDs configured to Bastionhost.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1096,7 +1160,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}vSwtich ID configured to bastionhost
+    <dd>{{% md %}}VSwitch ID configured to Bastionhost.
 {{% /md %}}</dd>
 
 </dl>

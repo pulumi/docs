@@ -43,8 +43,8 @@ class MyStack : Stack
         })));
         var images = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
         {
-            MostRecent = true,
             NameRegex = "^ubuntu_18.*64",
+            MostRecent = true,
             Owners = "system",
         }));
         var config = new Config();
@@ -55,9 +55,9 @@ class MyStack : Stack
         });
         var vswitch = new AliCloud.Vpc.Switch("vswitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = @default.Apply(@default => @default.Zones[0].Id),
-            CidrBlock = "10.1.1.0/24",
             VpcId = vpc.Id,
+            CidrBlock = "10.1.1.0/24",
+            AvailabilityZone = @default.Apply(@default => @default.Zones[0].Id),
         });
         var @group = new AliCloud.Ecs.SecurityGroup("group", new AliCloud.Ecs.SecurityGroupArgs
         {
@@ -70,19 +70,19 @@ class MyStack : Stack
             var range = new { Value = rangeIndex };
             instance.Add(new AliCloud.Ecs.Instance($"instance-{range.Value}", new AliCloud.Ecs.InstanceArgs
             {
-                ImageId = images.Apply(images => images.Images[0].Id),
-                InstanceChargeType = "PostPaid",
                 InstanceName = $"{name}-{range.Value + 1}",
+                ImageId = images.Apply(images => images.Images[0].Id),
                 InstanceType = type.Apply(type => type.InstanceTypes[0].Id),
-                InternetChargeType = "PayByTraffic",
-                InternetMaxBandwidthOut = 5,
-                Password = "Test12345",
                 SecurityGroups = 
                 {
                     @group.Id,
                 },
-                SystemDiskCategory = "cloud_ssd",
                 VswitchId = vswitch.Id,
+                InternetChargeType = "PayByTraffic",
+                InternetMaxBandwidthOut = 5,
+                Password = "Test12345",
+                InstanceChargeType = "PostPaid",
+                SystemDiskCategory = "cloud_ssd",
             }));
         }
         var pair = new AliCloud.Ecs.KeyPair("pair", new AliCloud.Ecs.KeyPairArgs
@@ -91,8 +91,8 @@ class MyStack : Stack
         });
         var attachment = new AliCloud.Ecs.KeyPairAttachment("attachment", new AliCloud.Ecs.KeyPairAttachmentArgs
         {
-            InstanceIds = instance.Select(__item => __item.Id).ToList(),
             KeyName = pair.Id,
+            InstanceIds = instance.Select(__item => __item.Id).ToList(),
         });
     }
 
@@ -136,12 +136,12 @@ func main() {
 		if err != nil {
 			return err
 		}
-		opt5 := true
-		opt6 := "^ubuntu_18.*64"
+		opt5 := "^ubuntu_18.*64"
+		opt6 := true
 		opt7 := "system"
 		images, err := ecs.GetImages(ctx, &ecs.GetImagesArgs{
-			MostRecent: &opt5,
-			NameRegex:  &opt6,
+			NameRegex:  &opt5,
+			MostRecent: &opt6,
 			Owners:     &opt7,
 		}, nil)
 		if err != nil {
@@ -154,9 +154,9 @@ func main() {
 			return err
 		}
 		vswitch, err := vpc.NewSwitch(ctx, "vswitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(_default.Zones[0].Id),
-			CidrBlock:        pulumi.String("10.1.1.0/24"),
 			VpcId:            vpc.ID(),
+			CidrBlock:        pulumi.String("10.1.1.0/24"),
+			AvailabilityZone: pulumi.String(_default.Zones[0].Id),
 		})
 		if err != nil {
 			return err
@@ -171,18 +171,18 @@ func main() {
 		var instance []*ecs.Instance
 		for key0, val0 := range 2 {
 			__res, err := ecs.NewInstance(ctx, fmt.Sprintf("instance-%v", key0), &ecs.InstanceArgs{
-				ImageId:                 pulumi.String(images.Images[0].Id),
-				InstanceChargeType:      pulumi.String("PostPaid"),
-				InstanceName:            pulumi.String(fmt.Sprintf("%v%v%v", name, "-", val0+1)),
-				InstanceType:            pulumi.String(_type.InstanceTypes[0].Id),
-				InternetChargeType:      pulumi.String("PayByTraffic"),
-				InternetMaxBandwidthOut: pulumi.Int(5),
-				Password:                pulumi.String("Test12345"),
+				InstanceName: pulumi.String(fmt.Sprintf("%v%v%v", name, "-", val0+1)),
+				ImageId:      pulumi.String(images.Images[0].Id),
+				InstanceType: pulumi.String(_type.InstanceTypes[0].Id),
 				SecurityGroups: pulumi.StringArray{
 					group.ID(),
 				},
-				SystemDiskCategory: pulumi.String("cloud_ssd"),
-				VswitchId:          vswitch.ID(),
+				VswitchId:               vswitch.ID(),
+				InternetChargeType:      pulumi.String("PayByTraffic"),
+				InternetMaxBandwidthOut: pulumi.Int(5),
+				Password:                pulumi.String("Test12345"),
+				InstanceChargeType:      pulumi.String("PostPaid"),
+				SystemDiskCategory:      pulumi.String("cloud_ssd"),
 			})
 			if err != nil {
 				return err
@@ -200,8 +200,8 @@ func main() {
 			splat0 = append(splat0, val0.ID())
 		}
 		_, err = ecs.NewKeyPairAttachment(ctx, "attachment", &ecs.KeyPairAttachmentArgs{
-			InstanceIds: toPulumiStringArray(splat0),
 			KeyName:     pair.ID(),
+			InstanceIds: toPulumiStringArray(splat0),
 		})
 		if err != nil {
 			return err
@@ -230,8 +230,8 @@ default = alicloud.get_zones(available_disk_category="cloud_ssd",
 type = alicloud.ecs.get_instance_types(availability_zone=default.zones[0].id,
     cpu_core_count=1,
     memory_size=2)
-images = alicloud.ecs.get_images(most_recent=True,
-    name_regex="^ubuntu_18.*64",
+images = alicloud.ecs.get_images(name_regex="^ubuntu_18.*64",
+    most_recent=True,
     owners="system")
 config = pulumi.Config()
 name = config.get("name")
@@ -239,29 +239,29 @@ if name is None:
     name = "keyPairAttachmentName"
 vpc = alicloud.vpc.Network("vpc", cidr_block="10.1.0.0/21")
 vswitch = alicloud.vpc.Switch("vswitch",
-    availability_zone=default.zones[0].id,
+    vpc_id=vpc.id,
     cidr_block="10.1.1.0/24",
-    vpc_id=vpc.id)
+    availability_zone=default.zones[0].id)
 group = alicloud.ecs.SecurityGroup("group",
     description="New security group",
     vpc_id=vpc.id)
 instance = []
 for range in [{"value": i} for i in range(0, 2)]:
     instance.append(alicloud.ecs.Instance(f"instance-{range['value']}",
-        image_id=images.images[0].id,
-        instance_charge_type="PostPaid",
         instance_name=f"{name}-{range['value'] + 1}",
+        image_id=images.images[0].id,
         instance_type=type.instance_types[0].id,
+        security_groups=[group.id],
+        vswitch_id=vswitch.id,
         internet_charge_type="PayByTraffic",
         internet_max_bandwidth_out=5,
         password="Test12345",
-        security_groups=[group.id],
-        system_disk_category="cloud_ssd",
-        vswitch_id=vswitch.id))
+        instance_charge_type="PostPaid",
+        system_disk_category="cloud_ssd"))
 pair = alicloud.ecs.KeyPair("pair", key_name=name)
 attachment = alicloud.ecs.KeyPairAttachment("attachment",
-    instance_ids=[__item.id for __item in instance],
-    key_name=pair.id)
+    key_name=pair.id,
+    instance_ids=[__item.id for __item in instance])
 ```
 
 {{% /example %}}
@@ -272,56 +272,51 @@ attachment = alicloud.ecs.KeyPairAttachment("attachment",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const config = new pulumi.Config();
-const name = config.get("name") || "keyPairAttachmentName";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const default = alicloud.getZones({
     availableDiskCategory: "cloud_ssd",
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const type = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
-    availabilityZone: defaultZones.zones[0].id,
+});
+const type = _default.then(_default => alicloud.ecs.getInstanceTypes({
+    availabilityZone: _default.zones[0].id,
     cpuCoreCount: 1,
     memorySize: 2,
-}, { async: true }));
-const images = pulumi.output(alicloud.ecs.getImages({
-    mostRecent: true,
+}));
+const images = alicloud.ecs.getImages({
     nameRegex: "^ubuntu_18.*64",
+    mostRecent: true,
     owners: "system",
-}, { async: true }));
-const vpc = new alicloud.vpc.Network("vpc", {
-    cidrBlock: "10.1.0.0/21",
 });
+const config = new pulumi.Config();
+const name = config.get("name") || "keyPairAttachmentName";
+const vpc = new alicloud.vpc.Network("vpc", {cidrBlock: "10.1.0.0/21"});
 const vswitch = new alicloud.vpc.Switch("vswitch", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "10.1.1.0/24",
     vpcId: vpc.id,
+    cidrBlock: "10.1.1.0/24",
+    availabilityZone: _default.then(_default => _default.zones[0].id),
 });
 const group = new alicloud.ecs.SecurityGroup("group", {
     description: "New security group",
     vpcId: vpc.id,
 });
-const instance: alicloud.ecs.Instance[] = [];
-for (let i = 0; i < 2; i++) {
-    instance.push(new alicloud.ecs.Instance(`instance-${i}`, {
-        imageId: images.images[0].id,
-        instanceChargeType: "PostPaid",
-        instanceName: `${name}-${(i + 1)}`,
-        instanceType: type.instanceTypes[0].id,
+const instance: alicloud.ecs.Instance[];
+for (const range = {value: 0}; range.value < 2; range.value++) {
+    instance.push(new alicloud.ecs.Instance(`instance-${range.value}`, {
+        instanceName: `${name}-${range.value + 1}`,
+        imageId: images.then(images => images.images[0].id),
+        instanceType: type.then(type => type.instanceTypes[0].id),
+        securityGroups: [group.id],
+        vswitchId: vswitch.id,
         internetChargeType: "PayByTraffic",
         internetMaxBandwidthOut: 5,
         password: "Test12345",
-        securityGroups: [group.id],
+        instanceChargeType: "PostPaid",
         systemDiskCategory: "cloud_ssd",
-        vswitchId: vswitch.id,
     }));
 }
-const pair = new alicloud.ecs.KeyPair("pair", {
-    keyName: name,
-});
+const pair = new alicloud.ecs.KeyPair("pair", {keyName: name});
 const attachment = new alicloud.ecs.KeyPairAttachment("attachment", {
-    instanceIds: instance.map(v => v.id),
     keyName: pair.id,
+    instanceIds: instance.map(__item => __item.id),
 });
 ```
 

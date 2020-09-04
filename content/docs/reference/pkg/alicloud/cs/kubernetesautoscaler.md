@@ -37,18 +37,18 @@ class MyStack : Stack
         var @default = new AliCloud.CS.KubernetesAutoscaler("default", new AliCloud.CS.KubernetesAutoscalerArgs
         {
             ClusterId = @var.Cluster_id,
-            CoolDownDuration = @var.Cool_down_duration,
-            DeferScaleInDuration = @var.Defer_scale_in_duration,
             Nodepools = 
             {
                 new AliCloud.CS.Inputs.KubernetesAutoscalerNodepoolArgs
                 {
                     Id = "scaling_group_id",
-                    Labels = "a=b",
                     Taints = "c=d:NoSchedule",
+                    Labels = "a=b",
                 },
             },
             Utilization = @var.Utilization,
+            CoolDownDuration = @var.Cool_down_duration,
+            DeferScaleInDuration = @var.Defer_scale_in_duration,
         });
     }
 
@@ -69,17 +69,17 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := cs.NewKubernetesAutoscaler(ctx, "_default", &cs.KubernetesAutoscalerArgs{
-			ClusterId:            pulumi.Any(_var.Cluster_id),
-			CoolDownDuration:     pulumi.Any(_var.Cool_down_duration),
-			DeferScaleInDuration: pulumi.Any(_var.Defer_scale_in_duration),
+			ClusterId: pulumi.Any(_var.Cluster_id),
 			Nodepools: cs.KubernetesAutoscalerNodepoolArray{
 				&cs.KubernetesAutoscalerNodepoolArgs{
 					Id:     pulumi.String("scaling_group_id"),
-					Labels: pulumi.String("a=b"),
 					Taints: pulumi.String("c=d:NoSchedule"),
+					Labels: pulumi.String("a=b"),
 				},
 			},
-			Utilization: pulumi.Any(_var.Utilization),
+			Utilization:          pulumi.Any(_var.Utilization),
+			CoolDownDuration:     pulumi.Any(_var.Cool_down_duration),
+			DeferScaleInDuration: pulumi.Any(_var.Defer_scale_in_duration),
 		})
 		if err != nil {
 			return err
@@ -98,14 +98,14 @@ import pulumi_alicloud as alicloud
 
 default = alicloud.cs.KubernetesAutoscaler("default",
     cluster_id=var["cluster_id"],
-    cool_down_duration=var["cool_down_duration"],
-    defer_scale_in_duration=var["defer_scale_in_duration"],
     nodepools=[alicloud.cs.KubernetesAutoscalerNodepoolArgs(
         id="scaling_group_id",
-        labels="a=b",
         taints="c=d:NoSchedule",
+        labels="a=b",
     )],
-    utilization=var["utilization"])
+    utilization=var["utilization"],
+    cool_down_duration=var["cool_down_duration"],
+    defer_scale_in_duration=var["defer_scale_in_duration"])
 ```
 
 {{% /example %}}
@@ -116,16 +116,16 @@ default = alicloud.cs.KubernetesAutoscaler("default",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("default", {
-    clusterId: var_cluster_id,
-    coolDownDuration: var_cool_down_duration,
-    deferScaleInDuration: var_defer_scale_in_duration,
+const _default = new alicloud.cs.KubernetesAutoscaler("default", {
+    clusterId: _var.cluster_id,
     nodepools: [{
         id: "scaling_group_id",
-        labels: "a=b",
         taints: "c=d:NoSchedule",
+        labels: "a=b",
     }],
-    utilization: var_utilization,
+    utilization: _var.utilization,
+    coolDownDuration: _var.cool_down_duration,
+    deferScaleInDuration: _var.defer_scale_in_duration,
 });
 ```
 

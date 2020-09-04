@@ -48,9 +48,9 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/21",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/21",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var defaultNetworkAclAttachment = new AliCloud.Vpc.NetworkAclAttachment("defaultNetworkAclAttachment", new AliCloud.Vpc.NetworkAclAttachmentArgs
         {
@@ -66,33 +66,33 @@ class MyStack : Stack
         });
         var defaultNetworkAclEntries = new AliCloud.Vpc.NetworkAclEntries("defaultNetworkAclEntries", new AliCloud.Vpc.NetworkAclEntriesArgs
         {
-            Egresses = 
-            {
-                new AliCloud.Vpc.Inputs.NetworkAclEntriesEgressArgs
-                {
-                    Description = name,
-                    DestinationCidrIp = "0.0.0.0/32",
-                    EntryType = "custom",
-                    Name = name,
-                    Policy = "accept",
-                    Port = "-1/-1",
-                    Protocol = "all",
-                },
-            },
+            NetworkAclId = defaultNetworkAcl.Id,
             Ingresses = 
             {
                 new AliCloud.Vpc.Inputs.NetworkAclEntriesIngressArgs
                 {
-                    Description = name,
-                    EntryType = "custom",
-                    Name = name,
-                    Policy = "accept",
-                    Port = "-1/-1",
                     Protocol = "all",
+                    Port = "-1/-1",
                     SourceCidrIp = "0.0.0.0/32",
+                    Name = name,
+                    EntryType = "custom",
+                    Policy = "accept",
+                    Description = name,
                 },
             },
-            NetworkAclId = defaultNetworkAcl.Id,
+            Egresses = 
+            {
+                new AliCloud.Vpc.Inputs.NetworkAclEntriesEgressArgs
+                {
+                    Protocol = "all",
+                    Port = "-1/-1",
+                    DestinationCidrIp = "0.0.0.0/32",
+                    Name = name,
+                    EntryType = "custom",
+                    Policy = "accept",
+                    Description = name,
+                },
+            },
         });
     }
 
@@ -133,9 +133,9 @@ func main() {
 			return err
 		}
 		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			CidrBlock:        pulumi.String("172.16.0.0/21"),
 			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/21"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
 		})
 		if err != nil {
 			return err
@@ -153,29 +153,29 @@ func main() {
 			return err
 		}
 		_, err = vpc.NewNetworkAclEntries(ctx, "defaultNetworkAclEntries", &vpc.NetworkAclEntriesArgs{
-			Egresses: vpc.NetworkAclEntriesEgressArray{
-				&vpc.NetworkAclEntriesEgressArgs{
-					Description:       pulumi.String(name),
-					DestinationCidrIp: pulumi.String("0.0.0.0/32"),
-					EntryType:         pulumi.String("custom"),
-					Name:              pulumi.String(name),
-					Policy:            pulumi.String("accept"),
-					Port:              pulumi.String("-1/-1"),
-					Protocol:          pulumi.String("all"),
-				},
-			},
+			NetworkAclId: defaultNetworkAcl.ID(),
 			Ingresses: vpc.NetworkAclEntriesIngressArray{
 				&vpc.NetworkAclEntriesIngressArgs{
-					Description:  pulumi.String(name),
-					EntryType:    pulumi.String("custom"),
-					Name:         pulumi.String(name),
-					Policy:       pulumi.String("accept"),
-					Port:         pulumi.String("-1/-1"),
 					Protocol:     pulumi.String("all"),
+					Port:         pulumi.String("-1/-1"),
 					SourceCidrIp: pulumi.String("0.0.0.0/32"),
+					Name:         pulumi.String(name),
+					EntryType:    pulumi.String("custom"),
+					Policy:       pulumi.String("accept"),
+					Description:  pulumi.String(name),
 				},
 			},
-			NetworkAclId: defaultNetworkAcl.ID(),
+			Egresses: vpc.NetworkAclEntriesEgressArray{
+				&vpc.NetworkAclEntriesEgressArgs{
+					Protocol:          pulumi.String("all"),
+					Port:              pulumi.String("-1/-1"),
+					DestinationCidrIp: pulumi.String("0.0.0.0/32"),
+					Name:              pulumi.String(name),
+					EntryType:         pulumi.String("custom"),
+					Policy:            pulumi.String("accept"),
+					Description:       pulumi.String(name),
+				},
+			},
 		})
 		if err != nil {
 			return err
@@ -200,9 +200,9 @@ default_zones = alicloud.get_zones(available_resource_creation="VSwitch")
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/12")
 default_network_acl = alicloud.vpc.NetworkAcl("defaultNetworkAcl", vpc_id=default_network.id)
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0].id,
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/21",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 default_network_acl_attachment = alicloud.vpc.NetworkAclAttachment("defaultNetworkAclAttachment",
     network_acl_id=default_network_acl.id,
     resources=[alicloud.vpc.NetworkAclAttachmentResourceArgs(
@@ -210,25 +210,25 @@ default_network_acl_attachment = alicloud.vpc.NetworkAclAttachment("defaultNetwo
         resource_type="VSwitch",
     )])
 default_network_acl_entries = alicloud.vpc.NetworkAclEntries("defaultNetworkAclEntries",
-    egresses=[alicloud.vpc.NetworkAclEntriesEgressArgs(
-        description=name,
-        destination_cidr_ip="0.0.0.0/32",
-        entry_type="custom",
-        name=name,
-        policy="accept",
-        port="-1/-1",
-        protocol="all",
-    )],
+    network_acl_id=default_network_acl.id,
     ingresses=[alicloud.vpc.NetworkAclEntriesIngressArgs(
-        description=name,
-        entry_type="custom",
-        name=name,
-        policy="accept",
-        port="-1/-1",
         protocol="all",
+        port="-1/-1",
         source_cidr_ip="0.0.0.0/32",
+        name=name,
+        entry_type="custom",
+        policy="accept",
+        description=name,
     )],
-    network_acl_id=default_network_acl.id)
+    egresses=[alicloud.vpc.NetworkAclEntriesEgressArgs(
+        protocol="all",
+        port="-1/-1",
+        destination_cidr_ip="0.0.0.0/32",
+        name=name,
+        entry_type="custom",
+        policy="accept",
+        description=name,
+    )])
 ```
 
 {{% /example %}}
@@ -241,48 +241,43 @@ import * as alicloud from "@pulumi/alicloud";
 
 const config = new pulumi.Config();
 const name = config.get("name") || "NetworkAclEntries";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/12",
 });
-const defaultNetworkAcl = new alicloud.vpc.NetworkAcl("default", {
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/12"});
+const defaultNetworkAcl = new alicloud.vpc.NetworkAcl("defaultNetworkAcl", {vpcId: defaultNetwork.id});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
-});
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
     cidrBlock: "172.16.0.0/21",
-    vpcId: defaultNetwork.id,
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const defaultNetworkAclAttachment = new alicloud.vpc.NetworkAclAttachment("default", {
+const defaultNetworkAclAttachment = new alicloud.vpc.NetworkAclAttachment("defaultNetworkAclAttachment", {
     networkAclId: defaultNetworkAcl.id,
     resources: [{
         resourceId: defaultSwitch.id,
         resourceType: "VSwitch",
     }],
 });
-const defaultNetworkAclEntries = new alicloud.vpc.NetworkAclEntries("default", {
-    egresses: [{
-        description: name,
-        destinationCidrIp: "0.0.0.0/32",
-        entryType: "custom",
-        name: name,
-        policy: "accept",
-        port: "-1/-1",
-        protocol: "all",
-    }],
-    ingresses: [{
-        description: name,
-        entryType: "custom",
-        name: name,
-        policy: "accept",
-        port: "-1/-1",
-        protocol: "all",
-        sourceCidrIp: "0.0.0.0/32",
-    }],
+const defaultNetworkAclEntries = new alicloud.vpc.NetworkAclEntries("defaultNetworkAclEntries", {
     networkAclId: defaultNetworkAcl.id,
+    ingresses: [{
+        protocol: "all",
+        port: "-1/-1",
+        sourceCidrIp: "0.0.0.0/32",
+        name: name,
+        entryType: "custom",
+        policy: "accept",
+        description: name,
+    }],
+    egresses: [{
+        protocol: "all",
+        port: "-1/-1",
+        destinationCidrIp: "0.0.0.0/32",
+        name: name,
+        entryType: "custom",
+        policy: "accept",
+        description: name,
+    }],
 });
 ```
 

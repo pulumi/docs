@@ -45,14 +45,14 @@ class MyStack : Stack
             CidrBlock = "192.168.0.0/16",
         }, new CustomResourceOptions
         {
-            Provider = "alicloud.fra",
+            Provider = alicloud.Fra,
         });
         var vpc2 = new AliCloud.Vpc.Network("vpc2", new AliCloud.Vpc.NetworkArgs
         {
             CidrBlock = "172.16.0.0/12",
         }, new CustomResourceOptions
         {
-            Provider = "alicloud.sh",
+            Provider = alicloud.Sh,
         });
         var cen = new AliCloud.Cen.Instance("cen", new AliCloud.Cen.InstanceArgs
         {
@@ -69,37 +69,37 @@ class MyStack : Stack
         });
         var bwpAttach = new AliCloud.Cen.BandwidthPackageAttachment("bwpAttach", new AliCloud.Cen.BandwidthPackageAttachmentArgs
         {
-            BandwidthPackageId = bwp.Id,
             InstanceId = cen.Id,
+            BandwidthPackageId = bwp.Id,
         });
         var vpcAttach1 = new AliCloud.Cen.InstanceAttachment("vpcAttach1", new AliCloud.Cen.InstanceAttachmentArgs
         {
+            InstanceId = cen.Id,
             ChildInstanceId = vpc1.Id,
             ChildInstanceRegionId = "eu-central-1",
-            InstanceId = cen.Id,
         });
         var vpcAttach2 = new AliCloud.Cen.InstanceAttachment("vpcAttach2", new AliCloud.Cen.InstanceAttachmentArgs
         {
+            InstanceId = cen.Id,
             ChildInstanceId = vpc2.Id,
             ChildInstanceRegionId = "cn-shanghai",
-            InstanceId = cen.Id,
         });
         var foo = new AliCloud.Cen.BandwidthLimit("foo", new AliCloud.Cen.BandwidthLimitArgs
         {
-            BandwidthLimit = 4,
             InstanceId = cen.Id,
             RegionIds = 
             {
                 "eu-central-1",
                 "cn-shanghai",
             },
+            BandwidthLimit = 4,
         }, new CustomResourceOptions
         {
             DependsOn = 
             {
-                "alicloud_cen_bandwidth_package_attachment.bwp_attach",
-                "alicloud_cen_instance_attachment.vpc_attach_1",
-                "alicloud_cen_instance_attachment.vpc_attach_2",
+                bwpAttach,
+                vpcAttach1,
+                vpcAttach2,
             },
         });
     }
@@ -136,13 +136,13 @@ func main() {
 		}
 		vpc1, err := vpc.NewNetwork(ctx, "vpc1", &vpc.NetworkArgs{
 			CidrBlock: pulumi.String("192.168.0.0/16"),
-		}, pulumi.Provider("alicloud.fra"))
+		}, pulumi.Provider(alicloud.Fra))
 		if err != nil {
 			return err
 		}
 		vpc2, err := vpc.NewNetwork(ctx, "vpc2", &vpc.NetworkArgs{
 			CidrBlock: pulumi.String("172.16.0.0/12"),
-		}, pulumi.Provider("alicloud.sh"))
+		}, pulumi.Provider(alicloud.Sh))
 		if err != nil {
 			return err
 		}
@@ -162,40 +162,40 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = cen.NewBandwidthPackageAttachment(ctx, "bwpAttach", &cen.BandwidthPackageAttachmentArgs{
-			BandwidthPackageId: bwp.ID(),
+		bwpAttach, err := cen.NewBandwidthPackageAttachment(ctx, "bwpAttach", &cen.BandwidthPackageAttachmentArgs{
 			InstanceId:         cen.ID(),
+			BandwidthPackageId: bwp.ID(),
 		})
 		if err != nil {
 			return err
 		}
-		_, err = cen.NewInstanceAttachment(ctx, "vpcAttach1", &cen.InstanceAttachmentArgs{
+		vpcAttach1, err := cen.NewInstanceAttachment(ctx, "vpcAttach1", &cen.InstanceAttachmentArgs{
+			InstanceId:            cen.ID(),
 			ChildInstanceId:       vpc1.ID(),
 			ChildInstanceRegionId: pulumi.String("eu-central-1"),
-			InstanceId:            cen.ID(),
 		})
 		if err != nil {
 			return err
 		}
-		_, err = cen.NewInstanceAttachment(ctx, "vpcAttach2", &cen.InstanceAttachmentArgs{
+		vpcAttach2, err := cen.NewInstanceAttachment(ctx, "vpcAttach2", &cen.InstanceAttachmentArgs{
+			InstanceId:            cen.ID(),
 			ChildInstanceId:       vpc2.ID(),
 			ChildInstanceRegionId: pulumi.String("cn-shanghai"),
-			InstanceId:            cen.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = cen.NewBandwidthLimit(ctx, "foo", &cen.BandwidthLimitArgs{
-			BandwidthLimit: pulumi.Int(4),
-			InstanceId:     cen.ID(),
+			InstanceId: cen.ID(),
 			RegionIds: pulumi.StringArray{
 				pulumi.String("eu-central-1"),
 				pulumi.String("cn-shanghai"),
 			},
+			BandwidthLimit: pulumi.Int(4),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"alicloud_cen_bandwidth_package_attachment.bwp_attach",
-			"alicloud_cen_instance_attachment.vpc_attach_1",
-			"alicloud_cen_instance_attachment.vpc_attach_2",
+			bwpAttach,
+			vpcAttach1,
+			vpcAttach2,
 		}))
 		if err != nil {
 			return err
@@ -220,9 +220,9 @@ if name is None:
 fra = pulumi.providers.Alicloud("fra", region="eu-central-1")
 sh = pulumi.providers.Alicloud("sh", region="cn-shanghai")
 vpc1 = alicloud.vpc.Network("vpc1", cidr_block="192.168.0.0/16",
-opts=ResourceOptions(provider="alicloud.fra"))
+opts=ResourceOptions(provider=alicloud["fra"]))
 vpc2 = alicloud.vpc.Network("vpc2", cidr_block="172.16.0.0/12",
-opts=ResourceOptions(provider="alicloud.sh"))
+opts=ResourceOptions(provider=alicloud["sh"]))
 cen = alicloud.cen.Instance("cen", description="tf-testAccCenBandwidthLimitConfigDescription")
 bwp = alicloud.cen.BandwidthPackage("bwp",
     bandwidth=5,
@@ -231,27 +231,27 @@ bwp = alicloud.cen.BandwidthPackage("bwp",
         "China",
     ])
 bwp_attach = alicloud.cen.BandwidthPackageAttachment("bwpAttach",
-    bandwidth_package_id=bwp.id,
-    instance_id=cen.id)
+    instance_id=cen.id,
+    bandwidth_package_id=bwp.id)
 vpc_attach1 = alicloud.cen.InstanceAttachment("vpcAttach1",
+    instance_id=cen.id,
     child_instance_id=vpc1.id,
-    child_instance_region_id="eu-central-1",
-    instance_id=cen.id)
+    child_instance_region_id="eu-central-1")
 vpc_attach2 = alicloud.cen.InstanceAttachment("vpcAttach2",
+    instance_id=cen.id,
     child_instance_id=vpc2.id,
-    child_instance_region_id="cn-shanghai",
-    instance_id=cen.id)
+    child_instance_region_id="cn-shanghai")
 foo = alicloud.cen.BandwidthLimit("foo",
-    bandwidth_limit=4,
     instance_id=cen.id,
     region_ids=[
         "eu-central-1",
         "cn-shanghai",
     ],
+    bandwidth_limit=4,
     opts=ResourceOptions(depends_on=[
-            "alicloud_cen_bandwidth_package_attachment.bwp_attach",
-            "alicloud_cen_instance_attachment.vpc_attach_1",
-            "alicloud_cen_instance_attachment.vpc_attach_2",
+            bwp_attach,
+            vpc_attach1,
+            vpc_attach2,
         ]))
 ```
 
@@ -265,22 +265,15 @@ import * as alicloud from "@pulumi/alicloud";
 
 const config = new pulumi.Config();
 const name = config.get("name") || "tf-testAccCenBandwidthLimitConfig";
-
-const fra = new alicloud.Provider("fra", {
-    region: "eu-central-1",
+const fra = new alicloud.Provider("fra", {region: "eu-central-1"});
+const sh = new alicloud.Provider("sh", {region: "cn-shanghai"});
+const vpc1 = new alicloud.vpc.Network("vpc1", {cidrBlock: "192.168.0.0/16"}, {
+    provider: alicloud.fra,
 });
-const sh = new alicloud.Provider("sh", {
-    region: "cn-shanghai",
+const vpc2 = new alicloud.vpc.Network("vpc2", {cidrBlock: "172.16.0.0/12"}, {
+    provider: alicloud.sh,
 });
-const vpc1 = new alicloud.vpc.Network("vpc1", {
-    cidrBlock: "192.168.0.0/16",
-}, { provider: fra });
-const vpc2 = new alicloud.vpc.Network("vpc2", {
-    cidrBlock: "172.16.0.0/12",
-}, { provider: sh });
-const cen = new alicloud.cen.Instance("cen", {
-    description: "tf-testAccCenBandwidthLimitConfigDescription",
-});
+const cen = new alicloud.cen.Instance("cen", {description: "tf-testAccCenBandwidthLimitConfigDescription"});
 const bwp = new alicloud.cen.BandwidthPackage("bwp", {
     bandwidth: 5,
     geographicRegionIds: [
@@ -288,28 +281,34 @@ const bwp = new alicloud.cen.BandwidthPackage("bwp", {
         "China",
     ],
 });
-const bwpAttach = new alicloud.cen.BandwidthPackageAttachment("bwp_attach", {
-    bandwidthPackageId: bwp.id,
+const bwpAttach = new alicloud.cen.BandwidthPackageAttachment("bwpAttach", {
     instanceId: cen.id,
+    bandwidthPackageId: bwp.id,
 });
-const vpcAttach1 = new alicloud.cen.InstanceAttachment("vpc_attach_1", {
+const vpcAttach1 = new alicloud.cen.InstanceAttachment("vpcAttach1", {
+    instanceId: cen.id,
     childInstanceId: vpc1.id,
     childInstanceRegionId: "eu-central-1",
-    instanceId: cen.id,
 });
-const vpcAttach2 = new alicloud.cen.InstanceAttachment("vpc_attach_2", {
+const vpcAttach2 = new alicloud.cen.InstanceAttachment("vpcAttach2", {
+    instanceId: cen.id,
     childInstanceId: vpc2.id,
     childInstanceRegionId: "cn-shanghai",
-    instanceId: cen.id,
 });
 const foo = new alicloud.cen.BandwidthLimit("foo", {
-    bandwidthLimit: 4,
     instanceId: cen.id,
     regionIds: [
         "eu-central-1",
         "cn-shanghai",
     ],
-}, { dependsOn: [bwpAttach, vpcAttach1, vpcAttach2] });
+    bandwidthLimit: 4,
+}, {
+    dependsOn: [
+        bwpAttach,
+        vpcAttach1,
+        vpcAttach2,
+    ],
+});
 ```
 
 {{% /example %}}

@@ -23,7 +23,7 @@ Explore the resources and functions of the sag module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.15.0</dd>
+	<dd>2.16.0</dd>
 </dl>
 
 

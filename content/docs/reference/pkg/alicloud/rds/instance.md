@@ -41,20 +41,20 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/24",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var defaultInstance = new AliCloud.Rds.Instance("defaultInstance", new AliCloud.Rds.InstanceArgs
         {
             Engine = "MySQL",
             EngineVersion = "5.6",
+            InstanceType = "rds.mysql.s2.large",
+            InstanceStorage = 30,
             InstanceChargeType = "Postpaid",
             InstanceName = name,
-            InstanceStorage = 30,
-            InstanceType = "rds.mysql.s2.large",
-            MonitoringPeriod = 60,
             VswitchId = defaultSwitch.Id,
+            MonitoringPeriod = 60,
         });
     }
 
@@ -90,9 +90,9 @@ func main() {
 			return err
 		}
 		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			CidrBlock:        pulumi.String("172.16.0.0/24"),
 			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
 		})
 		if err != nil {
 			return err
@@ -100,12 +100,12 @@ func main() {
 		_, err = rds.NewInstance(ctx, "defaultInstance", &rds.InstanceArgs{
 			Engine:             pulumi.String("MySQL"),
 			EngineVersion:      pulumi.String("5.6"),
+			InstanceType:       pulumi.String("rds.mysql.s2.large"),
+			InstanceStorage:    pulumi.Int(30),
 			InstanceChargeType: pulumi.String("Postpaid"),
 			InstanceName:       pulumi.String(name),
-			InstanceStorage:    pulumi.Int(30),
-			InstanceType:       pulumi.String("rds.mysql.s2.large"),
-			MonitoringPeriod:   pulumi.Int(60),
 			VswitchId:          defaultSwitch.ID(),
+			MonitoringPeriod:   pulumi.Int(60),
 		})
 		if err != nil {
 			return err
@@ -132,18 +132,18 @@ if creation is None:
 default_zones = alicloud.get_zones(available_resource_creation=creation)
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0].id,
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 default_instance = alicloud.rds.Instance("defaultInstance",
     engine="MySQL",
     engine_version="5.6",
+    instance_type="rds.mysql.s2.large",
+    instance_storage=30,
     instance_charge_type="Postpaid",
     instance_name=name,
-    instance_storage=30,
-    instance_type="rds.mysql.s2.large",
-    monitoring_period=60,
-    vswitch_id=default_switch.id)
+    vswitch_id=default_switch.id,
+    monitoring_period=60)
 ```
 
 {{% /example %}}
@@ -157,27 +157,24 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "dbInstanceconfig";
 const creation = config.get("creation") || "Rds";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: creation,
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/16",
 });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/24",
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
+    cidrBlock: "172.16.0.0/24",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const defaultInstance = new alicloud.rds.Instance("default", {
+const defaultInstance = new alicloud.rds.Instance("defaultInstance", {
     engine: "MySQL",
     engineVersion: "5.6",
+    instanceType: "rds.mysql.s2.large",
+    instanceStorage: "30",
     instanceChargeType: "Postpaid",
     instanceName: name,
-    instanceStorage: 30,
-    instanceType: "rds.mysql.s2.large",
-    monitoringPeriod: 60,
     vswitchId: defaultSwitch.id,
+    monitoringPeriod: "60",
 });
 ```
 

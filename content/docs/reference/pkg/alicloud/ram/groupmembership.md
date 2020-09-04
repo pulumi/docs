@@ -34,19 +34,19 @@ class MyStack : Stack
         });
         var user = new AliCloud.Ram.User("user", new AliCloud.Ram.UserArgs
         {
-            Comments = "yoyoyo",
             DisplayName = "user_display_name",
-            Email = "hello.uuu@aaa.com",
-            Force = true,
             Mobile = "86-18688888888",
+            Email = "hello.uuu@aaa.com",
+            Comments = "yoyoyo",
+            Force = true,
         });
         var user1 = new AliCloud.Ram.User("user1", new AliCloud.Ram.UserArgs
         {
-            Comments = "yoyoyo",
             DisplayName = "user_display_name1",
-            Email = "hello.uuu@aaa.com",
-            Force = true,
             Mobile = "86-18688888889",
+            Email = "hello.uuu@aaa.com",
+            Comments = "yoyoyo",
+            Force = true,
         });
         var membership = new AliCloud.Ram.GroupMembership("membership", new AliCloud.Ram.GroupMembershipArgs
         {
@@ -83,21 +83,21 @@ func main() {
 			return err
 		}
 		user, err := ram.NewUser(ctx, "user", &ram.UserArgs{
-			Comments:    pulumi.String("yoyoyo"),
 			DisplayName: pulumi.String("user_display_name"),
-			Email:       pulumi.String("hello.uuu@aaa.com"),
-			Force:       pulumi.Bool(true),
 			Mobile:      pulumi.String("86-18688888888"),
+			Email:       pulumi.String("hello.uuu@aaa.com"),
+			Comments:    pulumi.String("yoyoyo"),
+			Force:       pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
 		}
 		user1, err := ram.NewUser(ctx, "user1", &ram.UserArgs{
-			Comments:    pulumi.String("yoyoyo"),
 			DisplayName: pulumi.String("user_display_name1"),
-			Email:       pulumi.String("hello.uuu@aaa.com"),
-			Force:       pulumi.Bool(true),
 			Mobile:      pulumi.String("86-18688888889"),
+			Email:       pulumi.String("hello.uuu@aaa.com"),
+			Comments:    pulumi.String("yoyoyo"),
+			Force:       pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -129,17 +129,17 @@ group = alicloud.ram.Group("group",
     comments="this is a group comments.",
     force=True)
 user = alicloud.ram.User("user",
-    comments="yoyoyo",
     display_name="user_display_name",
+    mobile="86-18688888888",
     email="hello.uuu@aaa.com",
-    force=True,
-    mobile="86-18688888888")
-user1 = alicloud.ram.User("user1",
     comments="yoyoyo",
+    force=True)
+user1 = alicloud.ram.User("user1",
     display_name="user_display_name1",
+    mobile="86-18688888889",
     email="hello.uuu@aaa.com",
-    force=True,
-    mobile="86-18688888889")
+    comments="yoyoyo",
+    force=True)
 membership = alicloud.ram.GroupMembership("membership",
     group_name=group.name,
     user_names=[
@@ -162,18 +162,18 @@ const group = new alicloud.ram.Group("group", {
     force: true,
 });
 const user = new alicloud.ram.User("user", {
-    comments: "yoyoyo",
     displayName: "user_display_name",
-    email: "hello.uuu@aaa.com",
-    force: true,
     mobile: "86-18688888888",
+    email: "hello.uuu@aaa.com",
+    comments: "yoyoyo",
+    force: true,
 });
 const user1 = new alicloud.ram.User("user1", {
-    comments: "yoyoyo",
     displayName: "user_display_name1",
-    email: "hello.uuu@aaa.com",
-    force: true,
     mobile: "86-18688888889",
+    email: "hello.uuu@aaa.com",
+    comments: "yoyoyo",
+    force: true,
 });
 const membership = new alicloud.ram.GroupMembership("membership", {
     groupName: group.name,

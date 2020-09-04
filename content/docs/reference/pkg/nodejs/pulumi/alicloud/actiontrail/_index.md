@@ -3,7 +3,7 @@ title: "Module actiontrail"
 title_tag: "Module actiontrail | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "actiontrail"
 meta_desc: "Explore members of the actiontrail module in the @pulumi/alicloud package."
-git_sha: "b7b59fa875693ba8460f61295cc547d3028192d6"
+git_sha: "c2484ffe8d16b32fc9b862da2b63e69be7ee81af"
 block_external_search_index: true
 ---
 
@@ -18,6 +18,7 @@ block_external_search_index: true
 <h3>Resources</h3>
 <ul class="api">
     <li><a href="#Trail"><span class="symbol resource"></span>Trail</a></li>
+    <li><a href="#TrailDeprecated"><span class="symbol resource"></span>TrailDeprecated</a></li>
 </ul>
 
 <h3>Functions</h3>
@@ -28,6 +29,7 @@ block_external_search_index: true
     <li><a href="#getSaslUsers"><span class="symbol function"></span>getSaslUsers</a></li>
     <li><a href="#getTopics"><span class="symbol function"></span>getTopics</a></li>
     <li><a href="#getTrails"><span class="symbol function"></span>getTrails</a></li>
+    <li><a href="#getTrailsDeprecated"><span class="symbol function"></span>getTrailsDeprecated</a></li>
 </ul>
 
 <h3>Others</h3>
@@ -43,24 +45,28 @@ block_external_search_index: true
     <li><a href="#GetTopicsArgs"><span class="symbol api"></span>GetTopicsArgs</a></li>
     <li><a href="#GetTopicsResult"><span class="symbol api"></span>GetTopicsResult</a></li>
     <li><a href="#GetTrailsArgs"><span class="symbol api"></span>GetTrailsArgs</a></li>
+    <li><a href="#GetTrailsDeprecatedArgs"><span class="symbol api"></span>GetTrailsDeprecatedArgs</a></li>
+    <li><a href="#GetTrailsDeprecatedResult"><span class="symbol api"></span>GetTrailsDeprecatedResult</a></li>
     <li><a href="#GetTrailsResult"><span class="symbol api"></span>GetTrailsResult</a></li>
     <li><a href="#TrailArgs"><span class="symbol api"></span>TrailArgs</a></li>
+    <li><a href="#TrailDeprecatedArgs"><span class="symbol api"></span>TrailDeprecatedArgs</a></li>
+    <li><a href="#TrailDeprecatedState"><span class="symbol api"></span>TrailDeprecatedState</a></li>
     <li><a href="#TrailState"><span class="symbol api"></span>TrailState</a></li>
 </ul>
 
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Trail" data-link-title="Trail">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L28">
         Resource <strong>Trail</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Trail</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 
-Provides a new resource to manage [Action Trail](https://www.alibabacloud.com/help/doc-detail/28804.htm).
+Provides a ActionTrail Trail resource. For information about alicloud actiontrail trail and how to use it, see [What is Resource Alicloud ActionTrail Trail](https://www.alibabacloud.com/help/doc-detail/28804.htm).
 
-> **NOTE:** Available in 1.35.0+
+> **NOTE:** Available in 1.95.0+
 
 #### Example Usage
 
@@ -68,21 +74,22 @@ Provides a new resource to manage [Action Trail](https://www.alibabacloud.com/he
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-// Create a new action trail.
-const foo = new alicloud.actiontrail.Trail("foo", {
-    eventRw: "Write-test",
-    ossBucketName: alicloud_oss_bucket_bucket.id,
-    ossKeyPrefix: "at-product-account-audit-B",
-    roleName: alicloud_ram_role_policy_attachment_attach.roleName,
+// Create a new actiontrail trail.
+const defaultTrail = new alicloud.actiontrail.Trail("default", {
+    eventRw: "All",
+    ossBucketName: "bucket_name",
+    roleName: "aliyunserviceroleforactiontrail",
+    trailName: "action-trail",
+    trailRegion: "cn-hangzhou",
 });
 ```
 
 <h4 class="pdoc-member-header" id="Trail-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L102"> <b>constructor</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Trail(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#TrailArgs'>TrailArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Trail(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#TrailArgs'>TrailArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 
 Create a Trail resource with the given unique name, arguments, and options.
@@ -92,7 +99,7 @@ Create a Trail resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Trail-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L38">method <b>get</b></a>
 </h4>
 
 
@@ -103,14 +110,14 @@ Get an existing Trail resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Trail-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L28">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Trail-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L49">method <b>isInstance</b></a>
 </h4>
 
 
@@ -121,15 +128,15 @@ Returns true if the given object is an instance of Trail.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Trail-eventRw">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L58">property <b>eventRw</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L59">property <b>eventRw</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventRw: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Indicates whether the event is a read or a write event. Valid values: Read, Write, and All. Default value: Write.
+Indicates whether the event is a read or a write event. Valid values: `Read`, `Write`, and `All`. Default to `Write`.
 
 <h4 class="pdoc-member-header" id="Trail-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L28">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -137,24 +144,41 @@ Indicates whether the event is a read or a write event. Valid values: Read, Writ
 id is the provider-assigned unique ID for this managed resource.  It is set during
 deployments and may be missing (undefined) during planning phases.
 
-<h4 class="pdoc-member-header" id="Trail-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L62">property <b>name</b></a>
+<h4 class="pdoc-member-header" id="Trail-isOrganizationTrail">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L60">property <b>isOrganizationTrail</b></a>
 </h4>
 
+<pre class="highlight"><code><span class='kd'>public </span>isOrganizationTrail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="Trail-mnsTopicArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L64">property <b>mnsTopicArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>mnsTopicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The ARN of the Message Service (MNS) topic to which ActionTrail sends messages. If the ARN is specified, a message is generated and delivered to the MNS topic whenever an event is delivered to OSS.
+
+<h4 class="pdoc-member-header" id="Trail-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L70">property <b>name</b></a>
+</h4>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.
+</div>
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The name of the trail to be created, which must be unique for an account.
+Field `name` has been deprecated from version 1.95.0. Use `trailName` instead.
 
 <h4 class="pdoc-member-header" id="Trail-ossBucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L66">property <b>ossBucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L74">property <b>ossBucketName</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ossBucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ossBucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The OSS bucket to which the trail delivers logs. Ensure that this is an existing OSS bucket.
 
 <h4 class="pdoc-member-header" id="Trail-ossKeyPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L70">property <b>ossKeyPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L78">property <b>ossKeyPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ossKeyPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -162,7 +186,7 @@ The OSS bucket to which the trail delivers logs. Ensure that this is an existing
 The prefix of the specified OSS bucket name. This parameter can be left empty.
 
 <h4 class="pdoc-member-header" id="Trail-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L74">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L82">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -170,7 +194,7 @@ The prefix of the specified OSS bucket name. This parameter can be left empty.
 The RAM role in ActionTrail permitted by the user.
 
 <h4 class="pdoc-member-header" id="Trail-slsProjectArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L78">property <b>slsProjectArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L86">property <b>slsProjectArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slsProjectArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -178,15 +202,197 @@ The RAM role in ActionTrail permitted by the user.
 The unique ARN of the Log Service project.
 
 <h4 class="pdoc-member-header" id="Trail-slsWriteRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L82">property <b>slsWriteRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L90">property <b>slsWriteRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slsWriteRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The unique ARN of the Log Service role.
 
+<h4 class="pdoc-member-header" id="Trail-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L94">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The status of ActionTrail Trail. After creation, tracking is turned on by default, and you can set the status value to `Disable` to turn off tracking. Valid values: `Enable`, `Disable`. Default to `Enable`.
+
+<h4 class="pdoc-member-header" id="Trail-trailName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L98">property <b>trailName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>trailName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the trail to be created, which must be unique for an account.
+
+<h4 class="pdoc-member-header" id="Trail-trailRegion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L102">property <b>trailRegion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>trailRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The regions to which the trail is applied. Valid values: `cn-beijing`, `cn-hangzhou`, and `All`. Default to `All`.
+
 <h4 class="pdoc-member-header" id="Trail-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L28">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-module-header" id="TrailDeprecated" data-link-title="TrailDeprecated">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L10">
+        Resource <strong>TrailDeprecated</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Resource renamed to `Trail`
+</div>
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>TrailDeprecated</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+<h4 class="pdoc-member-header" id="TrailDeprecated-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L73"> <b>constructor</b></a>
+</h4>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Resource renamed to `Trail`
+</div>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Resource renamed to `Trail`
+</div>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> TrailDeprecated(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#TrailDeprecatedArgs'>TrailDeprecatedArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+<h4 class="pdoc-member-header" id="TrailDeprecated-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L20">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#TrailDeprecatedState'>TrailDeprecatedState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TrailDeprecated'>TrailDeprecated</a></code></pre>
+
+
+Get an existing TrailDeprecated resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="TrailDeprecated-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L10">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="TrailDeprecated-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L32">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TrailDeprecated</code></pre>
+
+
+Returns true if the given object is an instance of TrailDeprecated.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="TrailDeprecated-eventRw">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L42">property <b>eventRw</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>eventRw: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Indicates whether the event is a read or a write event. Valid values: Read, Write, and All. Default value: Write.
+
+<h4 class="pdoc-member-header" id="TrailDeprecated-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L10">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="TrailDeprecated-isOrganizationTrail">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L43">property <b>isOrganizationTrail</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>isOrganizationTrail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="TrailDeprecated-mnsTopicArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L44">property <b>mnsTopicArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>mnsTopicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="TrailDeprecated-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L50">property <b>name</b></a>
+</h4>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.
+</div>
+<pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the trail to be created, which must be unique for an account.
+
+<h4 class="pdoc-member-header" id="TrailDeprecated-ossBucketName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L54">property <b>ossBucketName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>ossBucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The OSS bucket to which the trail delivers logs. Ensure that this is an existing OSS bucket.
+
+<h4 class="pdoc-member-header" id="TrailDeprecated-ossKeyPrefix">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L58">property <b>ossKeyPrefix</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>ossKeyPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The prefix of the specified OSS bucket name. This parameter can be left empty.
+
+<h4 class="pdoc-member-header" id="TrailDeprecated-roleName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L62">property <b>roleName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>roleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The RAM role in ActionTrail permitted by the user.
+
+<h4 class="pdoc-member-header" id="TrailDeprecated-slsProjectArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L66">property <b>slsProjectArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>slsProjectArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The unique ARN of the Log Service project.
+
+<h4 class="pdoc-member-header" id="TrailDeprecated-slsWriteRoleArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L70">property <b>slsWriteRoleArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>slsWriteRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The unique ARN of the Log Service role.
+
+<h4 class="pdoc-member-header" id="TrailDeprecated-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L71">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="TrailDeprecated-trailName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L72">property <b>trailName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>trailName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="TrailDeprecated-trailRegion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L73">property <b>trailRegion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>trailRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="TrailDeprecated-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L10">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -197,7 +403,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getConsumerGroups" data-link-title="getConsumerGroups">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getConsumerGroups.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getConsumerGroups.ts#L29">
         Function <strong>getConsumerGroups</strong>
     </a>
 </h3>
@@ -226,7 +432,7 @@ export const firstGroupName = consumerGroupsDs.consumerIds[0];
 ```
 
 <h3 class="pdoc-module-header" id="getInstances" data-link-title="getInstances">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getInstances.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getInstances.ts#L50">
         Function <strong>getInstances</strong>
     </a>
 </h3>
@@ -276,7 +482,7 @@ export const firstInstanceName = instancesDs.instances[0].name;
 ```
 
 <h3 class="pdoc-module-header" id="getSaslAcls" data-link-title="getSaslAcls">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslAcls.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslAcls.ts#L31">
         Function <strong>getSaslAcls</strong>
     </a>
 </h3>
@@ -307,7 +513,7 @@ export const firstSaslAclUsername = saslAclsDs.acls[0].username;
 ```
 
 <h3 class="pdoc-module-header" id="getSaslUsers" data-link-title="getSaslUsers">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslUsers.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslUsers.ts#L29">
         Function <strong>getSaslUsers</strong>
     </a>
 </h3>
@@ -336,7 +542,7 @@ export const firstSaslUsername = saslUsersDs.users[0].username;
 ```
 
 <h3 class="pdoc-module-header" id="getTopics" data-link-title="getTopics">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTopics.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTopics.ts#L29">
         Function <strong>getTopics</strong>
     </a>
 </h3>
@@ -365,7 +571,7 @@ export const firstTopicName = topicsDs.topics[0].topic;
 ```
 
 <h3 class="pdoc-module-header" id="getTrails" data-link-title="getTrails">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTrails.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrails.ts#L26">
         Function <strong>getTrails</strong>
     </a>
 </h3>
@@ -374,7 +580,9 @@ export const firstTopicName = topicsDs.topics[0].topic;
 <pre class="highlight"><code><span class='kd'></span>getTrails(args?: <a href='#GetTrailsArgs'>GetTrailsArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetTrailsResult'>GetTrailsResult</a>&gt;</code></pre>
 
 
-This data source provides a list of action trail of the current Alibaba Cloud user.
+This data source provides a list of ActionTrail Trails in an Alibaba Cloud account according to the specified filters.
+
+> **NOTE:** Available in 1.95.0+
 
 #### Example Usage
 
@@ -382,17 +590,29 @@ This data source provides a list of action trail of the current Alibaba Cloud us
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const trails = pulumi.output(alicloud.actiontrail.getTrails({
+const default = alicloud.actiontrail.getTrails({
     nameRegex: "tf-testacc-actiontrail",
-}, { async: true }));
-
-export const firstTrailName = trails.actiontrails[0].name;
+});
+export const trailName = _default.then(_default => _default.trails[0].id);
 ```
+
+<h3 class="pdoc-module-header" id="getTrailsDeprecated" data-link-title="getTrailsDeprecated">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrailsDeprecated.ts#L10">
+        Function <strong>getTrailsDeprecated</strong>
+    </a>
+</h3>
+
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+DataSource has been renamed to `getTrails`
+</div>
+<pre class="highlight"><code><span class='kd'></span>getTrailsDeprecated(args?: <a href='#GetTrailsDeprecatedArgs'>GetTrailsDeprecatedArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetTrailsDeprecatedResult'>GetTrailsDeprecatedResult</a>&gt;</code></pre>
 
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetConsumerGroupsArgs" data-link-title="GetConsumerGroupsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getConsumerGroups.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getConsumerGroups.ts#L47">
         interface <strong>GetConsumerGroupsArgs</strong>
     </a>
 </h3>
@@ -402,7 +622,7 @@ export const firstTrailName = trails.actiontrails[0].name;
 A collection of arguments for invoking getConsumerGroups.
 
 <h4 class="pdoc-member-header" id="GetConsumerGroupsArgs-consumerIdRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getConsumerGroups.ts#L51">property <b>consumerIdRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getConsumerGroups.ts#L51">property <b>consumerIdRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerIdRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -410,7 +630,7 @@ A collection of arguments for invoking getConsumerGroups.
 A regex string to filter results by the consumer group id.
 
 <h4 class="pdoc-member-header" id="GetConsumerGroupsArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getConsumerGroups.ts#L55">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getConsumerGroups.ts#L55">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -418,12 +638,12 @@ A regex string to filter results by the consumer group id.
 ID of the ALIKAFKA Instance that owns the consumer groups.
 
 <h4 class="pdoc-member-header" id="GetConsumerGroupsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getConsumerGroups.ts#L56">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getConsumerGroups.ts#L56">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetConsumerGroupsResult" data-link-title="GetConsumerGroupsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getConsumerGroups.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getConsumerGroups.ts#L62">
         interface <strong>GetConsumerGroupsResult</strong>
     </a>
 </h3>
@@ -433,12 +653,12 @@ ID of the ALIKAFKA Instance that owns the consumer groups.
 A collection of values returned by getConsumerGroups.
 
 <h4 class="pdoc-member-header" id="GetConsumerGroupsResult-consumerIdRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getConsumerGroups.ts#L63">property <b>consumerIdRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getConsumerGroups.ts#L63">property <b>consumerIdRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerIdRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetConsumerGroupsResult-consumerIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getConsumerGroups.ts#L67">property <b>consumerIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getConsumerGroups.ts#L67">property <b>consumerIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -446,7 +666,7 @@ A collection of values returned by getConsumerGroups.
 A list of consumer group ids.
 
 <h4 class="pdoc-member-header" id="GetConsumerGroupsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getConsumerGroups.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getConsumerGroups.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -454,17 +674,17 @@ A list of consumer group ids.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetConsumerGroupsResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getConsumerGroups.ts#L72">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getConsumerGroups.ts#L72">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetConsumerGroupsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getConsumerGroups.ts#L73">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getConsumerGroups.ts#L73">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetInstancesArgs" data-link-title="GetInstancesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getInstances.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getInstances.ts#L69">
         interface <strong>GetInstancesArgs</strong>
     </a>
 </h3>
@@ -474,7 +694,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getInstances.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getInstances.ts#L73">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getInstances.ts#L73">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -482,7 +702,7 @@ A collection of arguments for invoking getInstances.
 A list of instance IDs to filter results.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getInstances.ts#L77">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getInstances.ts#L77">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -490,12 +710,12 @@ A list of instance IDs to filter results.
 A regex string to filter results by the instance name.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getInstances.ts#L78">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getInstances.ts#L78">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetInstancesResult" data-link-title="GetInstancesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getInstances.ts#L84">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getInstances.ts#L84">
         interface <strong>GetInstancesResult</strong>
     </a>
 </h3>
@@ -505,7 +725,7 @@ A regex string to filter results by the instance name.
 A collection of values returned by getInstances.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getInstances.ts#L88">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getInstances.ts#L88">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -513,7 +733,7 @@ A collection of values returned by getInstances.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getInstances.ts#L92">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getInstances.ts#L92">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -521,7 +741,7 @@ The provider-assigned unique ID for this managed resource.
 A list of instance IDs.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getInstances.ts#L96">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getInstances.ts#L96">property <b>instances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstancesInstance'>GetInstancesInstance</a>[];</code></pre>
@@ -529,12 +749,12 @@ A list of instance IDs.
 A list of instances. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getInstances.ts#L97">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getInstances.ts#L97">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getInstances.ts#L101">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getInstances.ts#L101">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -542,12 +762,12 @@ A list of instances. Each element contains the following attributes:
 A list of instance names.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getInstances.ts#L102">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getInstances.ts#L102">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetSaslAclsArgs" data-link-title="GetSaslAclsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslAcls.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslAcls.ts#L51">
         interface <strong>GetSaslAclsArgs</strong>
     </a>
 </h3>
@@ -557,7 +777,7 @@ A list of instance names.
 A collection of arguments for invoking getSaslAcls.
 
 <h4 class="pdoc-member-header" id="GetSaslAclsArgs-aclResourceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslAcls.ts#L55">property <b>aclResourceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslAcls.ts#L55">property <b>aclResourceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclResourceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -565,7 +785,7 @@ A collection of arguments for invoking getSaslAcls.
 Get results for the specified resource name.
 
 <h4 class="pdoc-member-header" id="GetSaslAclsArgs-aclResourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslAcls.ts#L59">property <b>aclResourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslAcls.ts#L59">property <b>aclResourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclResourceType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -573,7 +793,7 @@ Get results for the specified resource name.
 Get results for the specified resource type.
 
 <h4 class="pdoc-member-header" id="GetSaslAclsArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslAcls.ts#L63">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslAcls.ts#L63">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -581,12 +801,12 @@ Get results for the specified resource type.
 ID of the ALIKAFKA Instance that owns the sasl acls.
 
 <h4 class="pdoc-member-header" id="GetSaslAclsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslAcls.ts#L64">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslAcls.ts#L64">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSaslAclsArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslAcls.ts#L68">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslAcls.ts#L68">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -594,7 +814,7 @@ ID of the ALIKAFKA Instance that owns the sasl acls.
 Get results for the specified username.
 
 <h3 class="pdoc-module-header" id="GetSaslAclsResult" data-link-title="GetSaslAclsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslAcls.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslAcls.ts#L74">
         interface <strong>GetSaslAclsResult</strong>
     </a>
 </h3>
@@ -604,7 +824,7 @@ Get results for the specified username.
 A collection of values returned by getSaslAcls.
 
 <h4 class="pdoc-member-header" id="GetSaslAclsResult-aclResourceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslAcls.ts#L78">property <b>aclResourceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslAcls.ts#L78">property <b>aclResourceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclResourceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -612,7 +832,7 @@ A collection of values returned by getSaslAcls.
 The resource name of the sasl acl.
 
 <h4 class="pdoc-member-header" id="GetSaslAclsResult-aclResourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslAcls.ts#L82">property <b>aclResourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslAcls.ts#L82">property <b>aclResourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclResourceType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -620,7 +840,7 @@ The resource name of the sasl acl.
 The resource type of the sasl acl.
 
 <h4 class="pdoc-member-header" id="GetSaslAclsResult-acls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslAcls.ts#L86">property <b>acls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslAcls.ts#L86">property <b>acls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acls: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetSaslAclsAcl'>GetSaslAclsAcl</a>[];</code></pre>
@@ -628,7 +848,7 @@ The resource type of the sasl acl.
 A list of sasl acls. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetSaslAclsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslAcls.ts#L90">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslAcls.ts#L90">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -636,17 +856,17 @@ A list of sasl acls. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSaslAclsResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslAcls.ts#L91">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslAcls.ts#L91">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSaslAclsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslAcls.ts#L92">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslAcls.ts#L92">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSaslAclsResult-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslAcls.ts#L96">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslAcls.ts#L96">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -654,7 +874,7 @@ The provider-assigned unique ID for this managed resource.
 The username of the sasl acl.
 
 <h3 class="pdoc-module-header" id="GetSaslUsersArgs" data-link-title="GetSaslUsersArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslUsers.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslUsers.ts#L47">
         interface <strong>GetSaslUsersArgs</strong>
     </a>
 </h3>
@@ -664,7 +884,7 @@ The username of the sasl acl.
 A collection of arguments for invoking getSaslUsers.
 
 <h4 class="pdoc-member-header" id="GetSaslUsersArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslUsers.ts#L51">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslUsers.ts#L51">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -672,7 +892,7 @@ A collection of arguments for invoking getSaslUsers.
 ID of the ALIKAFKA Instance that owns the sasl users.
 
 <h4 class="pdoc-member-header" id="GetSaslUsersArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslUsers.ts#L55">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslUsers.ts#L55">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -680,12 +900,12 @@ ID of the ALIKAFKA Instance that owns the sasl users.
 A regex string to filter results by the username.
 
 <h4 class="pdoc-member-header" id="GetSaslUsersArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslUsers.ts#L56">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslUsers.ts#L56">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetSaslUsersResult" data-link-title="GetSaslUsersResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslUsers.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslUsers.ts#L62">
         interface <strong>GetSaslUsersResult</strong>
     </a>
 </h3>
@@ -695,7 +915,7 @@ A regex string to filter results by the username.
 A collection of values returned by getSaslUsers.
 
 <h4 class="pdoc-member-header" id="GetSaslUsersResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslUsers.ts#L66">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslUsers.ts#L66">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -703,17 +923,17 @@ A collection of values returned by getSaslUsers.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSaslUsersResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslUsers.ts#L67">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslUsers.ts#L67">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSaslUsersResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslUsers.ts#L68">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslUsers.ts#L68">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSaslUsersResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslUsers.ts#L72">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslUsers.ts#L72">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -721,12 +941,12 @@ The provider-assigned unique ID for this managed resource.
 A list of sasl usernames.
 
 <h4 class="pdoc-member-header" id="GetSaslUsersResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslUsers.ts#L73">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslUsers.ts#L73">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSaslUsersResult-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getSaslUsers.ts#L77">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getSaslUsers.ts#L77">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetSaslUsersUser'>GetSaslUsersUser</a>[];</code></pre>
@@ -734,7 +954,7 @@ A list of sasl usernames.
 A list of sasl users. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="GetTopicsArgs" data-link-title="GetTopicsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTopics.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTopics.ts#L47">
         interface <strong>GetTopicsArgs</strong>
     </a>
 </h3>
@@ -744,12 +964,12 @@ A list of sasl users. Each element contains the following attributes:
 A collection of arguments for invoking getTopics.
 
 <h4 class="pdoc-member-header" id="GetTopicsArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTopics.ts#L48">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTopics.ts#L48">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTopicsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTopics.ts#L52">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTopics.ts#L52">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -757,12 +977,12 @@ A collection of arguments for invoking getTopics.
 A regex string to filter results by the topic name.
 
 <h4 class="pdoc-member-header" id="GetTopicsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTopics.ts#L53">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTopics.ts#L53">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetTopicsResult" data-link-title="GetTopicsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTopics.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTopics.ts#L59">
         interface <strong>GetTopicsResult</strong>
     </a>
 </h3>
@@ -772,7 +992,7 @@ A regex string to filter results by the topic name.
 A collection of values returned by getTopics.
 
 <h4 class="pdoc-member-header" id="GetTopicsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTopics.ts#L63">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTopics.ts#L63">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -780,17 +1000,17 @@ A collection of values returned by getTopics.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetTopicsResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTopics.ts#L64">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTopics.ts#L64">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTopicsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTopics.ts#L65">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTopics.ts#L65">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTopicsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTopics.ts#L69">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTopics.ts#L69">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -798,12 +1018,12 @@ The provider-assigned unique ID for this managed resource.
 A list of topic names.
 
 <h4 class="pdoc-member-header" id="GetTopicsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTopics.ts#L70">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTopics.ts#L70">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTopicsResult-topics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTopics.ts#L74">property <b>topics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTopics.ts#L74">property <b>topics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topics: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetTopicsTopic'>GetTopicsTopic</a>[];</code></pre>
@@ -811,7 +1031,7 @@ A list of topic names.
 A list of topics. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="GetTrailsArgs" data-link-title="GetTrailsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTrails.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrails.ts#L47">
         interface <strong>GetTrailsArgs</strong>
     </a>
 </h3>
@@ -820,21 +1040,151 @@ A list of topics. Each element contains the following attributes:
 
 A collection of arguments for invoking getTrails.
 
+<h4 class="pdoc-member-header" id="GetTrailsArgs-ids">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrails.ts#L51">property <b>ids</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
+
+A list of ActionTrail Trail IDs. It is the same as trail name.
+
+<h4 class="pdoc-member-header" id="GetTrailsArgs-includeShadowTrails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrails.ts#L55">property <b>includeShadowTrails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>includeShadowTrails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
+
+Whether to show shadow tracking. Default to `false`.
+
 <h4 class="pdoc-member-header" id="GetTrailsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTrails.ts#L47">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrails.ts#L59">property <b>nameRegex</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+A regex string to filter results by trail name.
+
+<h4 class="pdoc-member-header" id="GetTrailsArgs-outputFile">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrails.ts#L60">property <b>outputFile</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetTrailsArgs-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrails.ts#L64">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Filter the results by status of the ActionTrail Trail. Valid values: `Disable`, `Enable`, `Fresh`.
+
+<h3 class="pdoc-module-header" id="GetTrailsDeprecatedArgs" data-link-title="GetTrailsDeprecatedArgs">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrailsDeprecated.ts#L32">
+        interface <strong>GetTrailsDeprecatedArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetTrailsDeprecatedArgs</span></code></pre>
+
+A collection of arguments for invoking getTrailsDeprecated.
+
+<h4 class="pdoc-member-header" id="GetTrailsDeprecatedArgs-ids">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrailsDeprecated.ts#L33">property <b>ids</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
+<h4 class="pdoc-member-header" id="GetTrailsDeprecatedArgs-includeShadowTrails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrailsDeprecated.ts#L34">property <b>includeShadowTrails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>includeShadowTrails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetTrailsDeprecatedArgs-nameRegex">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrailsDeprecated.ts#L38">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
 A regex string to filter results action trail name.
 
-<h4 class="pdoc-member-header" id="GetTrailsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTrails.ts#L48">property <b>outputFile</b></a>
+<h4 class="pdoc-member-header" id="GetTrailsDeprecatedArgs-outputFile">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrailsDeprecated.ts#L39">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetTrailsDeprecatedArgs-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrailsDeprecated.ts#L40">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h3 class="pdoc-module-header" id="GetTrailsDeprecatedResult" data-link-title="GetTrailsDeprecatedResult">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrailsDeprecated.ts#L46">
+        interface <strong>GetTrailsDeprecatedResult</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetTrailsDeprecatedResult</span></code></pre>
+
+A collection of values returned by getTrailsDeprecated.
+
+<h4 class="pdoc-member-header" id="GetTrailsDeprecatedResult-actiontrails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrailsDeprecated.ts#L52">property <b>actiontrails</b></a>
+</h4>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;actiontrails&#39; has been deprecated from version 1.95.0. Use &#39;trails&#39; instead.
+</div>
+<pre class="highlight"><code><span class='kd'></span>actiontrails: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetTrailsDeprecatedActiontrail'>GetTrailsDeprecatedActiontrail</a>[];</code></pre>
+
+A list of actiontrails. Each element contains the following attributes:
+
+<h4 class="pdoc-member-header" id="GetTrailsDeprecatedResult-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrailsDeprecated.ts#L56">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The provider-assigned unique ID for this managed resource.
+
+<h4 class="pdoc-member-header" id="GetTrailsDeprecatedResult-ids">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrailsDeprecated.ts#L57">property <b>ids</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
+<h4 class="pdoc-member-header" id="GetTrailsDeprecatedResult-includeShadowTrails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrailsDeprecated.ts#L58">property <b>includeShadowTrails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>includeShadowTrails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetTrailsDeprecatedResult-nameRegex">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrailsDeprecated.ts#L59">property <b>nameRegex</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetTrailsDeprecatedResult-names">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrailsDeprecated.ts#L63">property <b>names</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
+
+A list of trail names.
+
+<h4 class="pdoc-member-header" id="GetTrailsDeprecatedResult-outputFile">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrailsDeprecated.ts#L64">property <b>outputFile</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetTrailsDeprecatedResult-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrailsDeprecated.ts#L65">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetTrailsDeprecatedResult-trails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrailsDeprecated.ts#L66">property <b>trails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>trails: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetTrailsDeprecatedTrail'>GetTrailsDeprecatedTrail</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetTrailsResult" data-link-title="GetTrailsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTrails.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrails.ts#L70">
         interface <strong>GetTrailsResult</strong>
     </a>
 </h3>
@@ -844,28 +1194,45 @@ A regex string to filter results action trail name.
 A collection of values returned by getTrails.
 
 <h4 class="pdoc-member-header" id="GetTrailsResult-actiontrails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTrails.ts#L58">property <b>actiontrails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrails.ts#L76">property <b>actiontrails</b></a>
 </h4>
 
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;actiontrails&#39; has been deprecated from version 1.95.0. Use &#39;trails&#39; instead.
+</div>
 <pre class="highlight"><code><span class='kd'></span>actiontrails: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetTrailsActiontrail'>GetTrailsActiontrail</a>[];</code></pre>
 
-A list of actiontrails. Each element contains the following attributes:
+Field `actiontrails` has been deprecated from version 1.95.0. Use `trails` instead."
 
 <h4 class="pdoc-member-header" id="GetTrailsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTrails.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrails.ts#L80">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
 The provider-assigned unique ID for this managed resource.
 
+<h4 class="pdoc-member-header" id="GetTrailsResult-ids">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrails.ts#L84">property <b>ids</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
+
+A list of ActionTrail Trail ids. It is the same as trail name.
+
+<h4 class="pdoc-member-header" id="GetTrailsResult-includeShadowTrails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrails.ts#L85">property <b>includeShadowTrails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>includeShadowTrails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTrailsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTrails.ts#L63">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrails.ts#L86">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTrailsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTrails.ts#L67">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrails.ts#L90">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -873,12 +1240,28 @@ The provider-assigned unique ID for this managed resource.
 A list of trail names.
 
 <h4 class="pdoc-member-header" id="GetTrailsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/getTrails.ts#L68">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrails.ts#L91">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetTrailsResult-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrails.ts#L95">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The status of the ActionTrail Trail.
+
+<h4 class="pdoc-member-header" id="GetTrailsResult-trails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/getTrails.ts#L99">property <b>trails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>trails: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetTrailsTrail'>GetTrailsTrail</a>[];</code></pre>
+
+A list of ActionTrail Trails. Each element contains the following attributes:
+
 <h3 class="pdoc-module-header" id="TrailArgs" data-link-title="TrailArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L210">
         interface <strong>TrailArgs</strong>
     </a>
 </h3>
@@ -888,31 +1271,48 @@ A list of trail names.
 The set of arguments for constructing a Trail resource.
 
 <h4 class="pdoc-member-header" id="TrailArgs-eventRw">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L171">property <b>eventRw</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L214">property <b>eventRw</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventRw?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Indicates whether the event is a read or a write event. Valid values: Read, Write, and All. Default value: Write.
+Indicates whether the event is a read or a write event. Valid values: `Read`, `Write`, and `All`. Default to `Write`.
+
+<h4 class="pdoc-member-header" id="TrailArgs-isOrganizationTrail">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L215">property <b>isOrganizationTrail</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>isOrganizationTrail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="TrailArgs-mnsTopicArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L219">property <b>mnsTopicArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>mnsTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ARN of the Message Service (MNS) topic to which ActionTrail sends messages. If the ARN is specified, a message is generated and delivered to the MNS topic whenever an event is delivered to OSS.
 
 <h4 class="pdoc-member-header" id="TrailArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L175">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L225">property <b>name</b></a>
 </h4>
 
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.
+</div>
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The name of the trail to be created, which must be unique for an account.
+Field `name` has been deprecated from version 1.95.0. Use `trailName` instead.
 
 <h4 class="pdoc-member-header" id="TrailArgs-ossBucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L179">property <b>ossBucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L229">property <b>ossBucketName</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ossBucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ossBucketName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The OSS bucket to which the trail delivers logs. Ensure that this is an existing OSS bucket.
 
 <h4 class="pdoc-member-header" id="TrailArgs-ossKeyPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L183">property <b>ossKeyPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L233">property <b>ossKeyPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ossKeyPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -920,15 +1320,15 @@ The OSS bucket to which the trail delivers logs. Ensure that this is an existing
 The prefix of the specified OSS bucket name. This parameter can be left empty.
 
 <h4 class="pdoc-member-header" id="TrailArgs-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L187">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L237">property <b>roleName</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The RAM role in ActionTrail permitted by the user.
 
 <h4 class="pdoc-member-header" id="TrailArgs-slsProjectArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L191">property <b>slsProjectArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L241">property <b>slsProjectArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slsProjectArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -936,15 +1336,229 @@ The RAM role in ActionTrail permitted by the user.
 The unique ARN of the Log Service project.
 
 <h4 class="pdoc-member-header" id="TrailArgs-slsWriteRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L195">property <b>slsWriteRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L245">property <b>slsWriteRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slsWriteRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The unique ARN of the Log Service role.
 
+<h4 class="pdoc-member-header" id="TrailArgs-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L249">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The status of ActionTrail Trail. After creation, tracking is turned on by default, and you can set the status value to `Disable` to turn off tracking. Valid values: `Enable`, `Disable`. Default to `Enable`.
+
+<h4 class="pdoc-member-header" id="TrailArgs-trailName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L253">property <b>trailName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>trailName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the trail to be created, which must be unique for an account.
+
+<h4 class="pdoc-member-header" id="TrailArgs-trailRegion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L257">property <b>trailRegion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>trailRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The regions to which the trail is applied. Valid values: `cn-beijing`, `cn-hangzhou`, and `All`. Default to `All`.
+
+<h3 class="pdoc-module-header" id="TrailDeprecatedArgs" data-link-title="TrailDeprecatedArgs">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L172">
+        interface <strong>TrailDeprecatedArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TrailDeprecatedArgs</span></code></pre>
+
+The set of arguments for constructing a TrailDeprecated resource.
+
+<h4 class="pdoc-member-header" id="TrailDeprecatedArgs-eventRw">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L176">property <b>eventRw</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>eventRw?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Indicates whether the event is a read or a write event. Valid values: Read, Write, and All. Default value: Write.
+
+<h4 class="pdoc-member-header" id="TrailDeprecatedArgs-isOrganizationTrail">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L177">property <b>isOrganizationTrail</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>isOrganizationTrail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="TrailDeprecatedArgs-mnsTopicArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L178">property <b>mnsTopicArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>mnsTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="TrailDeprecatedArgs-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L184">property <b>name</b></a>
+</h4>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.
+</div>
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the trail to be created, which must be unique for an account.
+
+<h4 class="pdoc-member-header" id="TrailDeprecatedArgs-ossBucketName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L188">property <b>ossBucketName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ossBucketName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The OSS bucket to which the trail delivers logs. Ensure that this is an existing OSS bucket.
+
+<h4 class="pdoc-member-header" id="TrailDeprecatedArgs-ossKeyPrefix">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L192">property <b>ossKeyPrefix</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ossKeyPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The prefix of the specified OSS bucket name. This parameter can be left empty.
+
+<h4 class="pdoc-member-header" id="TrailDeprecatedArgs-roleName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L196">property <b>roleName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>roleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The RAM role in ActionTrail permitted by the user.
+
+<h4 class="pdoc-member-header" id="TrailDeprecatedArgs-slsProjectArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L200">property <b>slsProjectArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>slsProjectArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The unique ARN of the Log Service project.
+
+<h4 class="pdoc-member-header" id="TrailDeprecatedArgs-slsWriteRoleArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L204">property <b>slsWriteRoleArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>slsWriteRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The unique ARN of the Log Service role.
+
+<h4 class="pdoc-member-header" id="TrailDeprecatedArgs-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L205">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="TrailDeprecatedArgs-trailName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L206">property <b>trailName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>trailName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="TrailDeprecatedArgs-trailRegion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L207">property <b>trailRegion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>trailRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="TrailDeprecatedState" data-link-title="TrailDeprecatedState">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L131">
+        interface <strong>TrailDeprecatedState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TrailDeprecatedState</span></code></pre>
+
+Input properties used for looking up and filtering TrailDeprecated resources.
+
+<h4 class="pdoc-member-header" id="TrailDeprecatedState-eventRw">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L135">property <b>eventRw</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>eventRw?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Indicates whether the event is a read or a write event. Valid values: Read, Write, and All. Default value: Write.
+
+<h4 class="pdoc-member-header" id="TrailDeprecatedState-isOrganizationTrail">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L136">property <b>isOrganizationTrail</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>isOrganizationTrail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="TrailDeprecatedState-mnsTopicArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L137">property <b>mnsTopicArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>mnsTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="TrailDeprecatedState-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L143">property <b>name</b></a>
+</h4>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.
+</div>
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the trail to be created, which must be unique for an account.
+
+<h4 class="pdoc-member-header" id="TrailDeprecatedState-ossBucketName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L147">property <b>ossBucketName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ossBucketName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The OSS bucket to which the trail delivers logs. Ensure that this is an existing OSS bucket.
+
+<h4 class="pdoc-member-header" id="TrailDeprecatedState-ossKeyPrefix">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L151">property <b>ossKeyPrefix</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ossKeyPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The prefix of the specified OSS bucket name. This parameter can be left empty.
+
+<h4 class="pdoc-member-header" id="TrailDeprecatedState-roleName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L155">property <b>roleName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>roleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The RAM role in ActionTrail permitted by the user.
+
+<h4 class="pdoc-member-header" id="TrailDeprecatedState-slsProjectArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L159">property <b>slsProjectArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>slsProjectArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The unique ARN of the Log Service project.
+
+<h4 class="pdoc-member-header" id="TrailDeprecatedState-slsWriteRoleArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L163">property <b>slsWriteRoleArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>slsWriteRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The unique ARN of the Log Service role.
+
+<h4 class="pdoc-member-header" id="TrailDeprecatedState-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L164">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="TrailDeprecatedState-trailName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L165">property <b>trailName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>trailName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="TrailDeprecatedState-trailRegion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trailDeprecated.ts#L166">property <b>trailRegion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>trailRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TrailState" data-link-title="TrailState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L133">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L157">
         interface <strong>TrailState</strong>
     </a>
 </h3>
@@ -954,23 +1568,40 @@ The unique ARN of the Log Service role.
 Input properties used for looking up and filtering Trail resources.
 
 <h4 class="pdoc-member-header" id="TrailState-eventRw">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L137">property <b>eventRw</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L161">property <b>eventRw</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventRw?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Indicates whether the event is a read or a write event. Valid values: Read, Write, and All. Default value: Write.
+Indicates whether the event is a read or a write event. Valid values: `Read`, `Write`, and `All`. Default to `Write`.
 
-<h4 class="pdoc-member-header" id="TrailState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L141">property <b>name</b></a>
+<h4 class="pdoc-member-header" id="TrailState-isOrganizationTrail">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L162">property <b>isOrganizationTrail</b></a>
 </h4>
 
+<pre class="highlight"><code><span class='kd'></span>isOrganizationTrail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="TrailState-mnsTopicArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L166">property <b>mnsTopicArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>mnsTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ARN of the Message Service (MNS) topic to which ActionTrail sends messages. If the ARN is specified, a message is generated and delivered to the MNS topic whenever an event is delivered to OSS.
+
+<h4 class="pdoc-member-header" id="TrailState-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L172">property <b>name</b></a>
+</h4>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.
+</div>
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The name of the trail to be created, which must be unique for an account.
+Field `name` has been deprecated from version 1.95.0. Use `trailName` instead.
 
 <h4 class="pdoc-member-header" id="TrailState-ossBucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L145">property <b>ossBucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L176">property <b>ossBucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ossBucketName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -978,7 +1609,7 @@ The name of the trail to be created, which must be unique for an account.
 The OSS bucket to which the trail delivers logs. Ensure that this is an existing OSS bucket.
 
 <h4 class="pdoc-member-header" id="TrailState-ossKeyPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L149">property <b>ossKeyPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L180">property <b>ossKeyPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ossKeyPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -986,7 +1617,7 @@ The OSS bucket to which the trail delivers logs. Ensure that this is an existing
 The prefix of the specified OSS bucket name. This parameter can be left empty.
 
 <h4 class="pdoc-member-header" id="TrailState-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L153">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L184">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -994,7 +1625,7 @@ The prefix of the specified OSS bucket name. This parameter can be left empty.
 The RAM role in ActionTrail permitted by the user.
 
 <h4 class="pdoc-member-header" id="TrailState-slsProjectArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L157">property <b>slsProjectArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L188">property <b>slsProjectArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slsProjectArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1002,10 +1633,34 @@ The RAM role in ActionTrail permitted by the user.
 The unique ARN of the Log Service project.
 
 <h4 class="pdoc-member-header" id="TrailState-slsWriteRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/actiontrail/trail.ts#L161">property <b>slsWriteRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L192">property <b>slsWriteRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slsWriteRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The unique ARN of the Log Service role.
+
+<h4 class="pdoc-member-header" id="TrailState-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L196">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The status of ActionTrail Trail. After creation, tracking is turned on by default, and you can set the status value to `Disable` to turn off tracking. Valid values: `Enable`, `Disable`. Default to `Enable`.
+
+<h4 class="pdoc-member-header" id="TrailState-trailName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L200">property <b>trailName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>trailName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the trail to be created, which must be unique for an account.
+
+<h4 class="pdoc-member-header" id="TrailState-trailRegion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/actiontrail/trail.ts#L204">property <b>trailRegion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>trailRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The regions to which the trail is applied. Valid values: `cn-beijing`, `cn-hangzhou`, and `All`. Default to `All`.
 

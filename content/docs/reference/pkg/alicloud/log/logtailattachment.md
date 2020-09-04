@@ -38,26 +38,31 @@ class MyStack : Stack
         });
         var testStore = new AliCloud.Log.Store("testStore", new AliCloud.Log.StoreArgs
         {
-            AppendMeta = true,
-            AutoSplit = true,
-            MaxSplitShardCount = 60,
             Project = testProject.Name,
             RetentionPeriod = 3650,
             ShardCount = 3,
+            AutoSplit = true,
+            MaxSplitShardCount = 60,
+            AppendMeta = true,
         });
         var testMachineGroup = new AliCloud.Log.MachineGroup("testMachineGroup", new AliCloud.Log.MachineGroupArgs
         {
+            Project = testProject.Name,
+            Topic = "terraform",
             IdentifyLists = 
             {
                 "10.0.0.1",
                 "10.0.0.3",
                 "10.0.0.2",
             },
-            Project = testProject.Name,
-            Topic = "terraform",
         });
         var testLogTailConfig = new AliCloud.Log.LogTailConfig("testLogTailConfig", new AliCloud.Log.LogTailConfigArgs
         {
+            Project = testProject.Name,
+            Logstore = testStore.Name,
+            InputType = "file",
+            LogSample = "test",
+            OutputType = "LogService",
             InputDetail = @"  	{
 		""logPath"": ""/logPath"",
 		""filePattern"": ""access.log"",
@@ -70,17 +75,12 @@ class MyStack : Stack
 	}
 	
 ",
-            InputType = "file",
-            LogSample = "test",
-            Logstore = testStore.Name,
-            OutputType = "LogService",
-            Project = testProject.Name,
         });
         var testLogTailAttachment = new AliCloud.Log.LogTailAttachment("testLogTailAttachment", new AliCloud.Log.LogTailAttachmentArgs
         {
+            Project = testProject.Name,
             LogtailConfigName = testLogTailConfig.Name,
             MachineGroupName = testMachineGroup.Name,
-            Project = testProject.Name,
         });
     }
 
@@ -109,43 +109,43 @@ func main() {
 			return err
 		}
 		testStore, err := log.NewStore(ctx, "testStore", &log.StoreArgs{
-			AppendMeta:         pulumi.Bool(true),
-			AutoSplit:          pulumi.Bool(true),
-			MaxSplitShardCount: pulumi.Int(60),
 			Project:            testProject.Name,
 			RetentionPeriod:    pulumi.Int(3650),
 			ShardCount:         pulumi.Int(3),
+			AutoSplit:          pulumi.Bool(true),
+			MaxSplitShardCount: pulumi.Int(60),
+			AppendMeta:         pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
 		}
 		testMachineGroup, err := log.NewMachineGroup(ctx, "testMachineGroup", &log.MachineGroupArgs{
+			Project: testProject.Name,
+			Topic:   pulumi.String("terraform"),
 			IdentifyLists: pulumi.StringArray{
 				pulumi.String("10.0.0.1"),
 				pulumi.String("10.0.0.3"),
 				pulumi.String("10.0.0.2"),
 			},
-			Project: testProject.Name,
-			Topic:   pulumi.String("terraform"),
 		})
 		if err != nil {
 			return err
 		}
 		testLogTailConfig, err := log.NewLogTailConfig(ctx, "testLogTailConfig", &log.LogTailConfigArgs{
-			InputDetail: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "  	{\n", "		\"logPath\": \"/logPath\",\n", "		\"filePattern\": \"access.log\",\n", "		\"logType\": \"json_log\",\n", "		\"topicFormat\": \"default\",\n", "		\"discardUnmatch\": false,\n", "		\"enableRawLog\": true,\n", "		\"fileEncoding\": \"gbk\",\n", "		\"maxDepth\": 10\n", "	}\n", "	\n")),
+			Project:    testProject.Name,
+			Logstore:   testStore.Name,
 			InputType:  pulumi.String("file"),
 			LogSample:  pulumi.String("test"),
-			Logstore:   testStore.Name,
 			OutputType: pulumi.String("LogService"),
-			Project:    testProject.Name,
+			InputDetail: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "  	{\n", "		\"logPath\": \"/logPath\",\n", "		\"filePattern\": \"access.log\",\n", "		\"logType\": \"json_log\",\n", "		\"topicFormat\": \"default\",\n", "		\"discardUnmatch\": false,\n", "		\"enableRawLog\": true,\n", "		\"fileEncoding\": \"gbk\",\n", "		\"maxDepth\": 10\n", "	}\n", "	\n")),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = log.NewLogTailAttachment(ctx, "testLogTailAttachment", &log.LogTailAttachmentArgs{
+			Project:           testProject.Name,
 			LogtailConfigName: testLogTailConfig.Name,
 			MachineGroupName:  testMachineGroup.Name,
-			Project:           testProject.Name,
 		})
 		if err != nil {
 			return err
@@ -164,21 +164,26 @@ import pulumi_alicloud as alicloud
 
 test_project = alicloud.log.Project("testProject", description="create by terraform")
 test_store = alicloud.log.Store("testStore",
-    append_meta=True,
-    auto_split=True,
-    max_split_shard_count=60,
     project=test_project.name,
     retention_period=3650,
-    shard_count=3)
+    shard_count=3,
+    auto_split=True,
+    max_split_shard_count=60,
+    append_meta=True)
 test_machine_group = alicloud.log.MachineGroup("testMachineGroup",
+    project=test_project.name,
+    topic="terraform",
     identify_lists=[
         "10.0.0.1",
         "10.0.0.3",
         "10.0.0.2",
-    ],
-    project=test_project.name,
-    topic="terraform")
+    ])
 test_log_tail_config = alicloud.log.LogTailConfig("testLogTailConfig",
+    project=test_project.name,
+    logstore=test_store.name,
+    input_type="file",
+    log_sample="test",
+    output_type="LogService",
     input_detail="""  	{
 		"logPath": "/logPath",
 		"filePattern": "access.log",
@@ -190,16 +195,11 @@ test_log_tail_config = alicloud.log.LogTailConfig("testLogTailConfig",
 		"maxDepth": 10
 	}
 	
-""",
-    input_type="file",
-    log_sample="test",
-    logstore=test_store.name,
-    output_type="LogService",
-    project=test_project.name)
+""")
 test_log_tail_attachment = alicloud.log.LogTailAttachment("testLogTailAttachment",
+    project=test_project.name,
     logtail_config_name=test_log_tail_config.name,
-    machine_group_name=test_machine_group.name,
-    project=test_project.name)
+    machine_group_name=test_machine_group.name)
 ```
 
 {{% /example %}}
@@ -210,27 +210,30 @@ test_log_tail_attachment = alicloud.log.LogTailAttachment("testLogTailAttachment
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const testProject = new alicloud.log.Project("test", {
-    description: "create by terraform",
-});
-const testStore = new alicloud.log.Store("test", {
-    appendMeta: true,
-    autoSplit: true,
-    maxSplitShardCount: 60,
+const testProject = new alicloud.log.Project("testProject", {description: "create by terraform"});
+const testStore = new alicloud.log.Store("testStore", {
     project: testProject.name,
     retentionPeriod: 3650,
     shardCount: 3,
+    autoSplit: true,
+    maxSplitShardCount: 60,
+    appendMeta: true,
 });
-const testMachineGroup = new alicloud.log.MachineGroup("test", {
+const testMachineGroup = new alicloud.log.MachineGroup("testMachineGroup", {
+    project: testProject.name,
+    topic: "terraform",
     identifyLists: [
         "10.0.0.1",
         "10.0.0.3",
         "10.0.0.2",
     ],
-    project: testProject.name,
-    topic: "terraform",
 });
-const testLogTailConfig = new alicloud.log.LogTailConfig("test", {
+const testLogTailConfig = new alicloud.log.LogTailConfig("testLogTailConfig", {
+    project: testProject.name,
+    logstore: testStore.name,
+    inputType: "file",
+    logSample: "test",
+    outputType: "LogService",
     inputDetail: `  	{
 		"logPath": "/logPath",
 		"filePattern": "access.log",
@@ -241,17 +244,13 @@ const testLogTailConfig = new alicloud.log.LogTailConfig("test", {
 		"fileEncoding": "gbk",
 		"maxDepth": 10
 	}
-	`,
-    inputType: "file",
-    logSample: "test",
-    logstore: testStore.name,
-    outputType: "LogService",
-    project: testProject.name,
+	
+`,
 });
-const testLogTailAttachment = new alicloud.log.LogTailAttachment("test", {
+const testLogTailAttachment = new alicloud.log.LogTailAttachment("testLogTailAttachment", {
+    project: testProject.name,
     logtailConfigName: testLogTailConfig.name,
     machineGroupName: testMachineGroup.name,
-    project: testProject.name,
 });
 ```
 

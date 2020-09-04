@@ -33,21 +33,22 @@ class MyStack : Stack
         // Create a new Domain config.
         var domain = new AliCloud.Cdn.DomainNew("domain", new AliCloud.Cdn.DomainNewArgs
         {
-            CdnType = "web",
             DomainName = "tf-testacc%d.xiaozhu.com",
+            CdnType = "web",
             Scope = "overseas",
             Sources = new AliCloud.Cdn.Inputs.DomainNewSourcesArgs
             {
                 Content = "1.1.1.1",
-                Port = 80,
-                Priority = 20,
                 Type = "ipaddr",
+                Priority = 20,
+                Port = 80,
                 Weight = 15,
             },
         });
         var config = new AliCloud.Cdn.DomainConfig("config", new AliCloud.Cdn.DomainConfigArgs
         {
             DomainName = domain.DomainName,
+            FunctionName = "ip_allow_list_set",
             FunctionArgs = 
             {
                 new AliCloud.Cdn.Inputs.DomainConfigFunctionArgArgs
@@ -56,7 +57,6 @@ class MyStack : Stack
                     ArgValue = "110.110.110.110",
                 },
             },
-            FunctionName = "ip_allow_list_set",
         });
     }
 
@@ -79,14 +79,14 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		domain, err := cdn.NewDomainNew(ctx, "domain", &cdn.DomainNewArgs{
-			CdnType:    pulumi.String("web"),
 			DomainName: pulumi.String(fmt.Sprintf("%v%v%v", "tf-testacc", "%", "d.xiaozhu.com")),
+			CdnType:    pulumi.String("web"),
 			Scope:      pulumi.String("overseas"),
 			Sources: &cdn.DomainNewSourcesArgs{
 				Content:  pulumi.String("1.1.1.1"),
-				Port:     pulumi.Int(80),
-				Priority: pulumi.Int(20),
 				Type:     pulumi.String("ipaddr"),
+				Priority: pulumi.Int(20),
+				Port:     pulumi.Int(80),
 				Weight:   pulumi.Int(15),
 			},
 		})
@@ -94,14 +94,14 @@ func main() {
 			return err
 		}
 		_, err = cdn.NewDomainConfig(ctx, "config", &cdn.DomainConfigArgs{
-			DomainName: domain.DomainName,
+			DomainName:   domain.DomainName,
+			FunctionName: pulumi.String("ip_allow_list_set"),
 			FunctionArgs: cdn.DomainConfigFunctionArgArray{
 				&cdn.DomainConfigFunctionArgArgs{
 					ArgName:  pulumi.String("ip_list"),
 					ArgValue: pulumi.String("110.110.110.110"),
 				},
 			},
-			FunctionName: pulumi.String("ip_allow_list_set"),
 		})
 		if err != nil {
 			return err
@@ -120,23 +120,23 @@ import pulumi_alicloud as alicloud
 
 # Create a new Domain config.
 domain = alicloud.cdn.DomainNew("domain",
-    cdn_type="web",
     domain_name="tf-testacc%d.xiaozhu.com",
+    cdn_type="web",
     scope="overseas",
     sources=alicloud.cdn.DomainNewSourcesArgs(
         content="1.1.1.1",
-        port=80,
-        priority=20,
         type="ipaddr",
+        priority=20,
+        port=80,
         weight=15,
     ))
 config = alicloud.cdn.DomainConfig("config",
     domain_name=domain.domain_name,
+    function_name="ip_allow_list_set",
     function_args=[alicloud.cdn.DomainConfigFunctionArgArgs(
         arg_name="ip_list",
         arg_value="110.110.110.110",
-    )],
-    function_name="ip_allow_list_set")
+    )])
 ```
 
 {{% /example %}}
@@ -149,24 +149,24 @@ import * as alicloud from "@pulumi/alicloud";
 
 // Create a new Domain config.
 const domain = new alicloud.cdn.DomainNew("domain", {
+    domainName: `tf-testacc%d.xiaozhu.com`,
     cdnType: "web",
-    domainName: "tf-testacc%d.xiaozhu.com",
     scope: "overseas",
     sources: {
         content: "1.1.1.1",
-        port: 80,
-        priority: 20,
         type: "ipaddr",
-        weight: 15,
+        priority: "20",
+        port: 80,
+        weight: "15",
     },
 });
 const config = new alicloud.cdn.DomainConfig("config", {
     domainName: domain.domainName,
+    functionName: "ip_allow_list_set",
     functionArgs: [{
         argName: "ip_list",
         argValue: "110.110.110.110",
     }],
-    functionName: "ip_allow_list_set",
 });
 ```
 

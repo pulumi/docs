@@ -32,6 +32,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        // Create a cen Private Zone resource and use it.
         var defaultInstance = new AliCloud.Cen.Instance("defaultInstance", new AliCloud.Cen.InstanceArgs
         {
         });
@@ -41,15 +42,15 @@ class MyStack : Stack
         });
         var defaultInstanceAttachment = new AliCloud.Cen.InstanceAttachment("defaultInstanceAttachment", new AliCloud.Cen.InstanceAttachmentArgs
         {
+            InstanceId = defaultInstance.Id,
             ChildInstanceId = defaultNetwork.Id,
             ChildInstanceRegionId = "cn-hangzhou",
-            InstanceId = defaultInstance.Id,
         }, new CustomResourceOptions
         {
             DependsOn = 
             {
-                "alicloud_cen_instance.default",
-                "alicloud_vpc.default",
+                defaultInstance,
+                defaultNetwork,
             },
         });
         var defaultPrivateZone = new AliCloud.Cen.PrivateZone("defaultPrivateZone", new AliCloud.Cen.PrivateZoneArgs
@@ -62,7 +63,7 @@ class MyStack : Stack
         {
             DependsOn = 
             {
-                "alicloud_cen_instance_attachment.default",
+                defaultInstanceAttachment,
             },
         });
     }
@@ -94,13 +95,13 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = cen.NewInstanceAttachment(ctx, "defaultInstanceAttachment", &cen.InstanceAttachmentArgs{
+		defaultInstanceAttachment, err := cen.NewInstanceAttachment(ctx, "defaultInstanceAttachment", &cen.InstanceAttachmentArgs{
+			InstanceId:            defaultInstance.ID(),
 			ChildInstanceId:       defaultNetwork.ID(),
 			ChildInstanceRegionId: pulumi.String("cn-hangzhou"),
-			InstanceId:            defaultInstance.ID(),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"alicloud_cen_instance.default",
-			"alicloud_vpc.default",
+			defaultInstance,
+			defaultNetwork,
 		}))
 		if err != nil {
 			return err
@@ -111,7 +112,7 @@ func main() {
 			HostRegionId:   pulumi.String("cn-hangzhou"),
 			HostVpcId:      defaultNetwork.ID(),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"alicloud_cen_instance_attachment.default",
+			defaultInstanceAttachment,
 		}))
 		if err != nil {
 			return err
@@ -128,22 +129,23 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
+# Create a cen Private Zone resource and use it.
 default_instance = alicloud.cen.Instance("defaultInstance")
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/12")
 default_instance_attachment = alicloud.cen.InstanceAttachment("defaultInstanceAttachment",
+    instance_id=default_instance.id,
     child_instance_id=default_network.id,
     child_instance_region_id="cn-hangzhou",
-    instance_id=default_instance.id,
     opts=ResourceOptions(depends_on=[
-            "alicloud_cen_instance.default",
-            "alicloud_vpc.default",
+            default_instance,
+            default_network,
         ]))
 default_private_zone = alicloud.cen.PrivateZone("defaultPrivateZone",
     access_region_id="cn-hangzhou",
     cen_id=default_instance.id,
     host_region_id="cn-hangzhou",
     host_vpc_id=default_network.id,
-    opts=ResourceOptions(depends_on=["alicloud_cen_instance_attachment.default"]))
+    opts=ResourceOptions(depends_on=[default_instance_attachment]))
 ```
 
 {{% /example %}}
@@ -154,21 +156,27 @@ default_private_zone = alicloud.cen.PrivateZone("defaultPrivateZone",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultInstance = new alicloud.cen.Instance("default", {});
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/12",
-});
-const defaultInstanceAttachment = new alicloud.cen.InstanceAttachment("default", {
+// Create a cen Private Zone resource and use it.
+const defaultInstance = new alicloud.cen.Instance("defaultInstance", {});
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/12"});
+const defaultInstanceAttachment = new alicloud.cen.InstanceAttachment("defaultInstanceAttachment", {
+    instanceId: defaultInstance.id,
     childInstanceId: defaultNetwork.id,
     childInstanceRegionId: "cn-hangzhou",
-    instanceId: defaultInstance.id,
-}, { dependsOn: [defaultInstance, defaultNetwork] });
-const defaultPrivateZone = new alicloud.cen.PrivateZone("default", {
+}, {
+    dependsOn: [
+        defaultInstance,
+        defaultNetwork,
+    ],
+});
+const defaultPrivateZone = new alicloud.cen.PrivateZone("defaultPrivateZone", {
     accessRegionId: "cn-hangzhou",
     cenId: defaultInstance.id,
     hostRegionId: "cn-hangzhou",
     hostVpcId: defaultNetwork.id,
-}, { dependsOn: [defaultInstanceAttachment] });
+}, {
+    dependsOn: [defaultInstanceAttachment],
+});
 ```
 
 {{% /example %}}
