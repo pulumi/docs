@@ -1215,7 +1215,7 @@ is `Vnet2Vnet`).
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1226,7 +1226,7 @@ is `Vnet2Vnet`).
 <a href="#traffic_selector_policy_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>selector_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgatewayconnectiontrafficselectorpolicy">Dict[Get<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getgatewayconnectiontrafficselectorpolicy">Get<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1615,8 +1615,8 @@ or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span id="dhgroup_python">
-<a href="#dhgroup_python" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
+        <span id="dh_group_python">
+<a href="#dh_group_python" style="color: inherit; text-decoration: inherit;">dh_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1628,8 +1628,8 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
 
     <dt class="property-required"
             title="Required">
-        <span id="ikeencryption_python">
-<a href="#ikeencryption_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
+        <span id="ike_encryption_python">
+<a href="#ike_encryption_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1640,8 +1640,8 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
 
     <dt class="property-required"
             title="Required">
-        <span id="ikeintegrity_python">
-<a href="#ikeintegrity_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
+        <span id="ike_integrity_python">
+<a href="#ike_integrity_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>integrity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1652,8 +1652,8 @@ options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
 
     <dt class="property-required"
             title="Required">
-        <span id="ipsecencryption_python">
-<a href="#ipsecencryption_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
+        <span id="ipsec_encryption_python">
+<a href="#ipsec_encryption_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1664,8 +1664,8 @@ options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192
 
     <dt class="property-required"
             title="Required">
-        <span id="ipsecintegrity_python">
-<a href="#ipsecintegrity_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
+        <span id="ipsec_integrity_python">
+<a href="#ipsec_integrity_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>integrity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1676,8 +1676,8 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
 
     <dt class="property-required"
             title="Required">
-        <span id="pfsgroup_python">
-<a href="#pfsgroup_python" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
+        <span id="pfs_group_python">
+<a href="#pfs_group_python" style="color: inherit; text-decoration: inherit;">pfs_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1689,8 +1689,8 @@ or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span id="sadatasize_python">
-<a href="#sadatasize_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Datasize</a>
+        <span id="sa_datasize_python">
+<a href="#sa_datasize_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>datasize</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1701,8 +1701,8 @@ or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span id="salifetime_python">
-<a href="#salifetime_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Lifetime</a>
+        <span id="sa_lifetime_python">
+<a href="#sa_lifetime_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1825,8 +1825,8 @@ or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span id="localaddresscidrs_python">
-<a href="#localaddresscidrs_python" style="color: inherit; text-decoration: inherit;">local<wbr>Address<wbr>Cidrs</a>
+        <span id="local_address_cidrs_python">
+<a href="#local_address_cidrs_python" style="color: inherit; text-decoration: inherit;">local_<wbr>address_<wbr>cidrs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1836,8 +1836,8 @@ or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span id="remoteaddresscidrs_python">
-<a href="#remoteaddresscidrs_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Cidrs</a>
+        <span id="remote_address_cidrs_python">
+<a href="#remote_address_cidrs_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>cidrs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

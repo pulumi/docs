@@ -1254,7 +1254,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
@@ -1524,8 +1524,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="consistencylevel_python">
-<a href="#consistencylevel_python" style="color: inherit; text-decoration: inherit;">consistency<wbr>Level</a>
+        <span id="consistency_level_python">
+<a href="#consistency_level_python" style="color: inherit; text-decoration: inherit;">consistency_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1535,8 +1535,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxintervalinseconds_python">
-<a href="#maxintervalinseconds_python" style="color: inherit; text-decoration: inherit;">max<wbr>Interval<wbr>In<wbr>Seconds</a>
+        <span id="max_interval_in_seconds_python">
+<a href="#max_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1546,8 +1546,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxstalenessprefix_python">
-<a href="#maxstalenessprefix_python" style="color: inherit; text-decoration: inherit;">max<wbr>Staleness<wbr>Prefix</a>
+        <span id="max_staleness_prefix_python">
+<a href="#max_staleness_prefix_python" style="color: inherit; text-decoration: inherit;">max_<wbr>staleness_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1699,8 +1699,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="failoverpriority_python">
-<a href="#failoverpriority_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Priority</a>
+        <span id="failover_priority_python">
+<a href="#failover_priority_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>priority</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

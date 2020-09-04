@@ -268,70 +268,70 @@ example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", locati
 example_action_group = azure.monitoring.ActionGroup("exampleActionGroup",
     resource_group_name=example_resource_group.name,
     short_name="p0action",
-    arm_role_receivers=[{
-        "name": "armroleaction",
-        "roleId": "de139f84-1756-47ae-9be6-808fbbe84772",
-        "useCommonAlertSchema": True,
-    }],
-    automation_runbook_receivers=[{
-        "name": "action_name_1",
-        "automationAccountId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-runbooks/providers/microsoft.automation/automationaccounts/aaa001",
-        "runbook_name": "my runbook",
-        "webhookResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-runbooks/providers/microsoft.automation/automationaccounts/aaa001/webhooks/webhook_alert",
-        "isGlobalRunbook": True,
-        "service_uri": "https://s13events.azure-automation.net/webhooks?token=randomtoken",
-        "useCommonAlertSchema": True,
-    }],
-    azure_app_push_receivers=[{
-        "name": "pushtoadmin",
-        "email_address": "admin@contoso.com",
-    }],
-    azure_function_receivers=[{
-        "name": "funcaction",
-        "functionAppResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-funcapp/providers/Microsoft.Web/sites/funcapp",
-        "functionName": "myfunc",
-        "httpTriggerUrl": "https://example.com/trigger",
-        "useCommonAlertSchema": True,
-    }],
+    arm_role_receivers=[azure.monitoring.ActionGroupArmRoleReceiverArgs(
+        name="armroleaction",
+        role_id="de139f84-1756-47ae-9be6-808fbbe84772",
+        use_common_alert_schema=True,
+    )],
+    automation_runbook_receivers=[azure.monitoring.ActionGroupAutomationRunbookReceiverArgs(
+        name="action_name_1",
+        automation_account_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-runbooks/providers/microsoft.automation/automationaccounts/aaa001",
+        runbook_name="my runbook",
+        webhook_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-runbooks/providers/microsoft.automation/automationaccounts/aaa001/webhooks/webhook_alert",
+        is_global_runbook=True,
+        service_uri="https://s13events.azure-automation.net/webhooks?token=randomtoken",
+        use_common_alert_schema=True,
+    )],
+    azure_app_push_receivers=[azure.monitoring.ActionGroupAzureAppPushReceiverArgs(
+        name="pushtoadmin",
+        email_address="admin@contoso.com",
+    )],
+    azure_function_receivers=[azure.monitoring.ActionGroupAzureFunctionReceiverArgs(
+        name="funcaction",
+        function_app_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-funcapp/providers/Microsoft.Web/sites/funcapp",
+        function_name="myfunc",
+        http_trigger_url="https://example.com/trigger",
+        use_common_alert_schema=True,
+    )],
     email_receivers=[
-        {
-            "name": "sendtoadmin",
-            "email_address": "admin@contoso.com",
-        },
-        {
-            "name": "sendtodevops",
-            "email_address": "devops@contoso.com",
-            "useCommonAlertSchema": True,
-        },
+        azure.monitoring.ActionGroupEmailReceiverArgs(
+            name="sendtoadmin",
+            email_address="admin@contoso.com",
+        ),
+        azure.monitoring.ActionGroupEmailReceiverArgs(
+            name="sendtodevops",
+            email_address="devops@contoso.com",
+            use_common_alert_schema=True,
+        ),
     ],
-    itsm_receivers=[{
-        "name": "createorupdateticket",
-        "workspace_id": "6eee3a18-aac3-40e4-b98e-1f309f329816",
-        "connectionId": "53de6956-42b4-41ba-be3c-b154cdf17b13",
-        "ticketConfiguration": "{}",
-        "region": "southcentralus",
-    }],
-    logic_app_receivers=[{
-        "name": "logicappaction",
-        "resource_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-logicapp/providers/Microsoft.Logic/workflows/logicapp",
-        "callbackUrl": "https://logicapptriggerurl/...",
-        "useCommonAlertSchema": True,
-    }],
-    sms_receivers=[{
-        "name": "oncallmsg",
-        "countryCode": "1",
-        "phoneNumber": "1231231234",
-    }],
-    voice_receivers=[{
-        "name": "remotesupport",
-        "countryCode": "86",
-        "phoneNumber": "13888888888",
-    }],
-    webhook_receivers=[{
-        "name": "callmyapiaswell",
-        "service_uri": "http://example.com/alert",
-        "useCommonAlertSchema": True,
-    }])
+    itsm_receivers=[azure.monitoring.ActionGroupItsmReceiverArgs(
+        name="createorupdateticket",
+        workspace_id="6eee3a18-aac3-40e4-b98e-1f309f329816",
+        connection_id="53de6956-42b4-41ba-be3c-b154cdf17b13",
+        ticket_configuration="{}",
+        region="southcentralus",
+    )],
+    logic_app_receivers=[azure.monitoring.ActionGroupLogicAppReceiverArgs(
+        name="logicappaction",
+        resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-logicapp/providers/Microsoft.Logic/workflows/logicapp",
+        callback_url="https://logicapptriggerurl/...",
+        use_common_alert_schema=True,
+    )],
+    sms_receivers=[azure.monitoring.ActionGroupSmsReceiverArgs(
+        name="oncallmsg",
+        country_code="1",
+        phone_number="1231231234",
+    )],
+    voice_receivers=[azure.monitoring.ActionGroupVoiceReceiverArgs(
+        name="remotesupport",
+        country_code="86",
+        phone_number="13888888888",
+    )],
+    webhook_receivers=[azure.monitoring.ActionGroupWebhookReceiverArgs(
+        name="callmyapiaswell",
+        service_uri="http://example.com/alert",
+        use_common_alert_schema=True,
+    )])
 ```
 
 {{% /example %}}
@@ -427,7 +427,7 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.ActionGroup">ActionGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arm_role_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupArmRoleReceiver]]</span> = None<span class="p">, </span><span class="nx">automation_runbook_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupAutomationRunbookReceiver]]</span> = None<span class="p">, </span><span class="nx">azure_app_push_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupAzureAppPushReceiver]]</span> = None<span class="p">, </span><span class="nx">azure_function_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupAzureFunctionReceiver]]</span> = None<span class="p">, </span><span class="nx">email_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupEmailReceiver]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">itsm_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupItsmReceiver]]</span> = None<span class="p">, </span><span class="nx">logic_app_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupLogicAppReceiver]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupSmsReceiver]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">voice_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupVoiceReceiver]]</span> = None<span class="p">, </span><span class="nx">webhook_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupWebhookReceiver]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.ActionGroup">ActionGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arm_role_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupArmRoleReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">automation_runbook_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupAutomationRunbookReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_app_push_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupAzureAppPushReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_function_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupAzureFunctionReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">email_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupEmailReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">itsm_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupItsmReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">logic_app_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupLogicAppReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupSmsReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">voice_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupVoiceReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">webhook_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupWebhookReceiverArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1143,7 +1143,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#arm_role_receivers_python" style="color: inherit; text-decoration: inherit;">arm_<wbr>role_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouparmrolereceiver">List[Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongrouparmrolereceiver">List[Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1154,7 +1154,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#automation_runbook_receivers_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>runbook_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">List[Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">List[Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1165,7 +1165,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azure_app_push_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app_<wbr>push_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazureapppushreceiver">List[Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongroupazureapppushreceiver">List[Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1176,7 +1176,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azure_function_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>function_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">List[Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">List[Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1187,7 +1187,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#email_receivers_python" style="color: inherit; text-decoration: inherit;">email_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupemailreceiver">List[Action<wbr>Group<wbr>Email<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongroupemailreceiver">List[Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1209,7 +1209,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#itsm_receivers_python" style="color: inherit; text-decoration: inherit;">itsm_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupitsmreceiver">List[Action<wbr>Group<wbr>Itsm<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongroupitsmreceiver">List[Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1220,7 +1220,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#logic_app_receivers_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouplogicappreceiver">List[Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongrouplogicappreceiver">List[Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1242,7 +1242,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sms_receivers_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsmsreceiver">List[Action<wbr>Group<wbr>Sms<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongroupsmsreceiver">List[Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1253,7 +1253,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1264,7 +1264,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#voice_receivers_python" style="color: inherit; text-decoration: inherit;">voice_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupvoicereceiver">List[Action<wbr>Group<wbr>Voice<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongroupvoicereceiver">List[Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1275,7 +1275,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#webhook_receivers_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiver">List[Action<wbr>Group<wbr>Webhook<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongroupwebhookreceiver">List[Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1379,7 +1379,7 @@ Get an existing ActionGroup resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arm_role_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupArmRoleReceiver]]</span> = None<span class="p">, </span><span class="nx">automation_runbook_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupAutomationRunbookReceiver]]</span> = None<span class="p">, </span><span class="nx">azure_app_push_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupAzureAppPushReceiver]]</span> = None<span class="p">, </span><span class="nx">azure_function_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupAzureFunctionReceiver]]</span> = None<span class="p">, </span><span class="nx">email_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupEmailReceiver]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">itsm_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupItsmReceiver]]</span> = None<span class="p">, </span><span class="nx">logic_app_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupLogicAppReceiver]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupSmsReceiver]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">voice_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupVoiceReceiver]]</span> = None<span class="p">, </span><span class="nx">webhook_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupWebhookReceiver]]</span> = None<span class="p">) -&gt;</span> ActionGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arm_role_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupArmRoleReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">automation_runbook_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupAutomationRunbookReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_app_push_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupAzureAppPushReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_function_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupAzureFunctionReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">email_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupEmailReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">itsm_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupItsmReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">logic_app_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupLogicAppReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupSmsReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">voice_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupVoiceReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">webhook_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupWebhookReceiverArgs]]</span> = None<span class="p">) -&gt;</span> ActionGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2015,7 +2015,7 @@ The following state arguments are supported:
 <a href="#state_arm_role_receivers_python" style="color: inherit; text-decoration: inherit;">arm_<wbr>role_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouparmrolereceiver">List[Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongrouparmrolereceiver">List[Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -2026,7 +2026,7 @@ The following state arguments are supported:
 <a href="#state_automation_runbook_receivers_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>runbook_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">List[Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">List[Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -2037,7 +2037,7 @@ The following state arguments are supported:
 <a href="#state_azure_app_push_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app_<wbr>push_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazureapppushreceiver">List[Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongroupazureapppushreceiver">List[Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -2048,7 +2048,7 @@ The following state arguments are supported:
 <a href="#state_azure_function_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>function_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">List[Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">List[Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -2059,7 +2059,7 @@ The following state arguments are supported:
 <a href="#state_email_receivers_python" style="color: inherit; text-decoration: inherit;">email_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupemailreceiver">List[Action<wbr>Group<wbr>Email<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongroupemailreceiver">List[Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -2081,7 +2081,7 @@ The following state arguments are supported:
 <a href="#state_itsm_receivers_python" style="color: inherit; text-decoration: inherit;">itsm_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupitsmreceiver">List[Action<wbr>Group<wbr>Itsm<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongroupitsmreceiver">List[Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -2092,7 +2092,7 @@ The following state arguments are supported:
 <a href="#state_logic_app_receivers_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouplogicappreceiver">List[Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongrouplogicappreceiver">List[Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -2136,7 +2136,7 @@ The following state arguments are supported:
 <a href="#state_sms_receivers_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsmsreceiver">List[Action<wbr>Group<wbr>Sms<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongroupsmsreceiver">List[Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -2147,7 +2147,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2158,7 +2158,7 @@ The following state arguments are supported:
 <a href="#state_voice_receivers_python" style="color: inherit; text-decoration: inherit;">voice_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupvoicereceiver">List[Action<wbr>Group<wbr>Voice<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongroupvoicereceiver">List[Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -2169,7 +2169,7 @@ The following state arguments are supported:
 <a href="#state_webhook_receivers_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiver">List[Action<wbr>Group<wbr>Webhook<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#actiongroupwebhookreceiver">List[Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -2340,8 +2340,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="roleid_python">
-<a href="#roleid_python" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
+        <span id="role_id_python">
+<a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2351,8 +2351,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2639,8 +2639,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="automationaccountid_python">
-<a href="#automationaccountid_python" style="color: inherit; text-decoration: inherit;">automation<wbr>Account<wbr>Id</a>
+        <span id="automation_account_id_python">
+<a href="#automation_account_id_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>account_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2650,8 +2650,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="isglobalrunbook_python">
-<a href="#isglobalrunbook_python" style="color: inherit; text-decoration: inherit;">is<wbr>Global<wbr>Runbook</a>
+        <span id="is_global_runbook_python">
+<a href="#is_global_runbook_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global_<wbr>runbook</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2694,8 +2694,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="webhookresourceid_python">
-<a href="#webhookresourceid_python" style="color: inherit; text-decoration: inherit;">webhook<wbr>Resource<wbr>Id</a>
+        <span id="webhook_resource_id_python">
+<a href="#webhook_resource_id_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2705,8 +2705,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3061,8 +3061,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="functionappresourceid_python">
-<a href="#functionappresourceid_python" style="color: inherit; text-decoration: inherit;">function<wbr>App<wbr>Resource<wbr>Id</a>
+        <span id="function_app_resource_id_python">
+<a href="#function_app_resource_id_python" style="color: inherit; text-decoration: inherit;">function_<wbr>app_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3072,8 +3072,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="functionname_python">
-<a href="#functionname_python" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
+        <span id="function_name_python">
+<a href="#function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3083,8 +3083,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="httptriggerurl_python">
-<a href="#httptriggerurl_python" style="color: inherit; text-decoration: inherit;">http<wbr>Trigger<wbr>Url</a>
+        <span id="http_trigger_url_python">
+<a href="#http_trigger_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>trigger_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3105,8 +3105,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3283,8 +3283,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3505,8 +3505,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="connectionid_python">
-<a href="#connectionid_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
+        <span id="connection_id_python">
+<a href="#connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3538,8 +3538,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="ticketconfiguration_python">
-<a href="#ticketconfiguration_python" style="color: inherit; text-decoration: inherit;">ticket<wbr>Configuration</a>
+        <span id="ticket_configuration_python">
+<a href="#ticket_configuration_python" style="color: inherit; text-decoration: inherit;">ticket_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3738,8 +3738,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="callbackurl_python">
-<a href="#callbackurl_python" style="color: inherit; text-decoration: inherit;">callback<wbr>Url</a>
+        <span id="callback_url_python">
+<a href="#callback_url_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3771,8 +3771,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3927,8 +3927,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="countrycode_python">
-<a href="#countrycode_python" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
+        <span id="country_code_python">
+<a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3949,8 +3949,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="phonenumber_python">
-<a href="#phonenumber_python" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
+        <span id="phone_number_python">
+<a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4105,8 +4105,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="countrycode_python">
-<a href="#countrycode_python" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
+        <span id="country_code_python">
+<a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4127,8 +4127,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="phonenumber_python">
-<a href="#phonenumber_python" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
+        <span id="phone_number_python">
+<a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4305,8 +4305,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

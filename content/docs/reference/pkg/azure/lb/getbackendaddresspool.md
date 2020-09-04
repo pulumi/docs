@@ -76,7 +76,7 @@ func main() {
 			return err
 		}
 		ctx.Export("backendAddressPoolId", exampleBackendAddressPool.Id)
-		var splat0 []string
+		var splat0 []interface{}
 		for _, val0 := range data.Azurerm_lb_backend_address_pool.Beap.Backend_ip_configurations {
 			splat0 = append(splat0, val0.Id)
 		}

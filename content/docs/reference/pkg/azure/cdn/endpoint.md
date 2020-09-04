@@ -118,10 +118,10 @@ example_endpoint = azure.cdn.Endpoint("exampleEndpoint",
     profile_name=example_profile.name,
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    origins=[{
-        "name": "example",
-        "host_name": "www.contoso.com",
-    }])
+    origins=[azure.cdn.EndpointOriginArgs(
+        name="example",
+        host_name="www.contoso.com",
+    )])
 ```
 
 {{% /example %}}
@@ -163,7 +163,7 @@ const exampleEndpoint = new azure.cdn.Endpoint("exampleEndpoint", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cdn/#pulumi_azure.cdn.Endpoint">Endpoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_types_to_compresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">delivery_rules</span><span class="p">:</span> <span class="nx">Optional[List[EndpointDeliveryRule]]</span> = None<span class="p">, </span><span class="nx">geo_filters</span><span class="p">:</span> <span class="nx">Optional[List[EndpointGeoFilter]]</span> = None<span class="p">, </span><span class="nx">global_delivery_rule</span><span class="p">:</span> <span class="nx">Optional[Dict[EndpointGlobalDeliveryRule]]</span> = None<span class="p">, </span><span class="nx">is_compression_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_http_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_https_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[List[EndpointOrigin]]</span> = None<span class="p">, </span><span class="nx">probe_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">querystring_caching_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cdn/#pulumi_azure.cdn.Endpoint">Endpoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_types_to_compresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">delivery_rules</span><span class="p">:</span> <span class="nx">Optional[List[EndpointDeliveryRuleArgs]]</span> = None<span class="p">, </span><span class="nx">geo_filters</span><span class="p">:</span> <span class="nx">Optional[List[EndpointGeoFilterArgs]]</span> = None<span class="p">, </span><span class="nx">global_delivery_rule</span><span class="p">:</span> <span class="nx">Optional[EndpointGlobalDeliveryRuleArgs]</span> = None<span class="p">, </span><span class="nx">is_compression_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_http_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_https_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[List[EndpointOriginArgs]]</span> = None<span class="p">, </span><span class="nx">probe_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">querystring_caching_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -956,7 +956,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointorigin">List[Endpoint<wbr>Origin]</a></span>
+        <span class="property-type"><a href="#endpointorigin">List[Endpoint<wbr>Origin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
 {{% /md %}}</dd>
@@ -1000,7 +1000,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#delivery_rules_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrule">List[Endpoint<wbr>Delivery<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrule">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
 {{% /md %}}</dd>
@@ -1011,7 +1011,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#geo_filters_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgeofilter">List[Endpoint<wbr>Geo<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#endpointgeofilter">List[Endpoint<wbr>Geo<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
 {{% /md %}}</dd>
@@ -1022,7 +1022,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#global_delivery_rule_python" style="color: inherit; text-decoration: inherit;">global_<wbr>delivery_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrule">Dict[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions that are valid for all resources regardless of any conditions. A `global_delivery_rule` block as defined below.
 {{% /md %}}</dd>
@@ -1143,7 +1143,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1291,7 +1291,7 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_types_to_compresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">delivery_rules</span><span class="p">:</span> <span class="nx">Optional[List[EndpointDeliveryRule]]</span> = None<span class="p">, </span><span class="nx">geo_filters</span><span class="p">:</span> <span class="nx">Optional[List[EndpointGeoFilter]]</span> = None<span class="p">, </span><span class="nx">global_delivery_rule</span><span class="p">:</span> <span class="nx">Optional[Dict[EndpointGlobalDeliveryRule]]</span> = None<span class="p">, </span><span class="nx">host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_compression_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_http_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_https_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[List[EndpointOrigin]]</span> = None<span class="p">, </span><span class="nx">probe_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">querystring_caching_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> Endpoint</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_types_to_compresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">delivery_rules</span><span class="p">:</span> <span class="nx">Optional[List[EndpointDeliveryRuleArgs]]</span> = None<span class="p">, </span><span class="nx">geo_filters</span><span class="p">:</span> <span class="nx">Optional[List[EndpointGeoFilterArgs]]</span> = None<span class="p">, </span><span class="nx">global_delivery_rule</span><span class="p">:</span> <span class="nx">Optional[EndpointGlobalDeliveryRuleArgs]</span> = None<span class="p">, </span><span class="nx">host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_compression_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_http_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_https_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[List[EndpointOriginArgs]]</span> = None<span class="p">, </span><span class="nx">probe_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">querystring_caching_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Endpoint</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2070,7 +2070,7 @@ The following state arguments are supported:
 <a href="#state_delivery_rules_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrule">List[Endpoint<wbr>Delivery<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrule">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
 {{% /md %}}</dd>
@@ -2081,7 +2081,7 @@ The following state arguments are supported:
 <a href="#state_geo_filters_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgeofilter">List[Endpoint<wbr>Geo<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#endpointgeofilter">List[Endpoint<wbr>Geo<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
 {{% /md %}}</dd>
@@ -2092,7 +2092,7 @@ The following state arguments are supported:
 <a href="#state_global_delivery_rule_python" style="color: inherit; text-decoration: inherit;">global_<wbr>delivery_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrule">Dict[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions that are valid for all resources regardless of any conditions. A `global_delivery_rule` block as defined below.
 {{% /md %}}</dd>
@@ -2202,7 +2202,7 @@ The following state arguments are supported:
 <a href="#state_origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointorigin">List[Endpoint<wbr>Origin]</a></span>
+        <span class="property-type"><a href="#endpointorigin">List[Endpoint<wbr>Origin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
 {{% /md %}}</dd>
@@ -2257,7 +2257,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -3066,220 +3066,220 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cacheexpirationaction_python">
-<a href="#cacheexpirationaction_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Expiration<wbr>Action</a>
+        <span id="cache_expiration_action_python">
+<a href="#cache_expiration_action_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>expiration_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecacheexpirationaction">Dict[Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecacheexpirationaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cachekeyquerystringaction_python">
-<a href="#cachekeyquerystringaction_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a>
+        <span id="cache_key_query_string_action_python">
+<a href="#cache_key_query_string_action_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>query_<wbr>string_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecachekeyquerystringaction">Dict[Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecachekeyquerystringaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cookiesconditions_python">
-<a href="#cookiesconditions_python" style="color: inherit; text-decoration: inherit;">cookies<wbr>Conditions</a>
+        <span id="cookies_conditions_python">
+<a href="#cookies_conditions_python" style="color: inherit; text-decoration: inherit;">cookies_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `cookies_condition` block as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="devicecondition_python">
-<a href="#devicecondition_python" style="color: inherit; text-decoration: inherit;">device<wbr>Condition</a>
+        <span id="device_condition_python">
+<a href="#device_condition_python" style="color: inherit; text-decoration: inherit;">device_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruledevicecondition">Dict[Endpoint<wbr>Delivery<wbr>Rule<wbr>Device<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruledevicecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Device<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `device_condition` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpversionconditions_python">
-<a href="#httpversionconditions_python" style="color: inherit; text-decoration: inherit;">http<wbr>Version<wbr>Conditions</a>
+        <span id="http_version_conditions_python">
+<a href="#http_version_conditions_python" style="color: inherit; text-decoration: inherit;">http_<wbr>version_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `http_version_condition` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="modifyrequestheaderactions_python">
-<a href="#modifyrequestheaderactions_python" style="color: inherit; text-decoration: inherit;">modify<wbr>Request<wbr>Header<wbr>Actions</a>
+        <span id="modify_request_header_actions_python">
+<a href="#modify_request_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>request_<wbr>header_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="modifyresponseheaderactions_python">
-<a href="#modifyresponseheaderactions_python" style="color: inherit; text-decoration: inherit;">modify<wbr>Response<wbr>Header<wbr>Actions</a>
+        <span id="modify_response_header_actions_python">
+<a href="#modify_response_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>response_<wbr>header_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="postargconditions_python">
-<a href="#postargconditions_python" style="color: inherit; text-decoration: inherit;">post<wbr>Arg<wbr>Conditions</a>
+        <span id="post_arg_conditions_python">
+<a href="#post_arg_conditions_python" style="color: inherit; text-decoration: inherit;">post_<wbr>arg_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `post_arg_condition` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="querystringconditions_python">
-<a href="#querystringconditions_python" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Conditions</a>
+        <span id="query_string_conditions_python">
+<a href="#query_string_conditions_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `query_string_condition` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="remoteaddressconditions_python">
-<a href="#remoteaddressconditions_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Conditions</a>
+        <span id="remote_address_conditions_python">
+<a href="#remote_address_conditions_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `remote_address_condition` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestbodyconditions_python">
-<a href="#requestbodyconditions_python" style="color: inherit; text-decoration: inherit;">request<wbr>Body<wbr>Conditions</a>
+        <span id="request_body_conditions_python">
+<a href="#request_body_conditions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>body_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `request_body_condition` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestheaderconditions_python">
-<a href="#requestheaderconditions_python" style="color: inherit; text-decoration: inherit;">request<wbr>Header<wbr>Conditions</a>
+        <span id="request_header_conditions_python">
+<a href="#request_header_conditions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>header_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `request_header_condition` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestmethodcondition_python">
-<a href="#requestmethodcondition_python" style="color: inherit; text-decoration: inherit;">request<wbr>Method<wbr>Condition</a>
+        <span id="request_method_condition_python">
+<a href="#request_method_condition_python" style="color: inherit; text-decoration: inherit;">request_<wbr>method_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestmethodcondition">Dict[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestmethodcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `request_method_condition` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestschemecondition_python">
-<a href="#requestschemecondition_python" style="color: inherit; text-decoration: inherit;">request<wbr>Scheme<wbr>Condition</a>
+        <span id="request_scheme_condition_python">
+<a href="#request_scheme_condition_python" style="color: inherit; text-decoration: inherit;">request_<wbr>scheme_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestschemecondition">Dict[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestschemecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `request_scheme_condition` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requesturiconditions_python">
-<a href="#requesturiconditions_python" style="color: inherit; text-decoration: inherit;">request<wbr>Uri<wbr>Conditions</a>
+        <span id="request_uri_conditions_python">
+<a href="#request_uri_conditions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>uri_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `request_uri_condition` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="urlfileextensionconditions_python">
-<a href="#urlfileextensionconditions_python" style="color: inherit; text-decoration: inherit;">url<wbr>File<wbr>Extension<wbr>Conditions</a>
+        <span id="url_file_extension_conditions_python">
+<a href="#url_file_extension_conditions_python" style="color: inherit; text-decoration: inherit;">url_<wbr>file_<wbr>extension_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_extension_condition` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="urlfilenameconditions_python">
-<a href="#urlfilenameconditions_python" style="color: inherit; text-decoration: inherit;">url<wbr>File<wbr>Name<wbr>Conditions</a>
+        <span id="url_file_name_conditions_python">
+<a href="#url_file_name_conditions_python" style="color: inherit; text-decoration: inherit;">url_<wbr>file_<wbr>name_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_name_condition` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="urlpathconditions_python">
-<a href="#urlpathconditions_python" style="color: inherit; text-decoration: inherit;">url<wbr>Path<wbr>Conditions</a>
+        <span id="url_path_conditions_python">
+<a href="#url_path_conditions_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `url_path_condition` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="urlredirectaction_python">
-<a href="#urlredirectaction_python" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect<wbr>Action</a>
+        <span id="url_redirect_action_python">
+<a href="#url_redirect_action_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlredirectaction">Dict[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlredirectaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="urlrewriteaction_python">
-<a href="#urlrewriteaction_python" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite<wbr>Action</a>
+        <span id="url_rewrite_action_python">
+<a href="#url_rewrite_action_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlrewriteaction">Dict[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlrewriteaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
 {{% /md %}}</dd>
@@ -3765,8 +3765,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3798,8 +3798,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3965,8 +3965,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3976,8 +3976,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4143,8 +4143,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4154,8 +4154,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4743,8 +4743,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4776,8 +4776,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4976,8 +4976,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4998,8 +4998,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5165,8 +5165,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5187,8 +5187,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5376,8 +5376,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5398,8 +5398,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5631,8 +5631,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5664,8 +5664,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5831,8 +5831,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5842,8 +5842,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6009,8 +6009,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6020,8 +6020,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6220,8 +6220,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6242,8 +6242,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6442,8 +6442,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6464,8 +6464,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6664,8 +6664,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6686,8 +6686,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6886,8 +6886,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6908,8 +6908,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7174,8 +7174,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="redirecttype_python">
-<a href="#redirecttype_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
+        <span id="redirect_type_python">
+<a href="#redirect_type_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7229,8 +7229,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="querystring_python">
-<a href="#querystring_python" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
+        <span id="query_string_python">
+<a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7396,8 +7396,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcepattern_python">
-<a href="#sourcepattern_python" style="color: inherit; text-decoration: inherit;">source<wbr>Pattern</a>
+        <span id="source_pattern_python">
+<a href="#source_pattern_python" style="color: inherit; text-decoration: inherit;">source_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7407,8 +7407,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preserveunmatchedpath_python">
-<a href="#preserveunmatchedpath_python" style="color: inherit; text-decoration: inherit;">preserve<wbr>Unmatched<wbr>Path</a>
+        <span id="preserve_unmatched_path_python">
+<a href="#preserve_unmatched_path_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>unmatched_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7574,8 +7574,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="countrycodes_python">
-<a href="#countrycodes_python" style="color: inherit; text-decoration: inherit;">country<wbr>Codes</a>
+        <span id="country_codes_python">
+<a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -7840,66 +7840,66 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cacheexpirationaction_python">
-<a href="#cacheexpirationaction_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Expiration<wbr>Action</a>
+        <span id="cache_expiration_action_python">
+<a href="#cache_expiration_action_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>expiration_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulecacheexpirationaction">Dict[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulecacheexpirationaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cachekeyquerystringaction_python">
-<a href="#cachekeyquerystringaction_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a>
+        <span id="cache_key_query_string_action_python">
+<a href="#cache_key_query_string_action_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>query_<wbr>string_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulecachekeyquerystringaction">Dict[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulecachekeyquerystringaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="modifyrequestheaderactions_python">
-<a href="#modifyrequestheaderactions_python" style="color: inherit; text-decoration: inherit;">modify<wbr>Request<wbr>Header<wbr>Actions</a>
+        <span id="modify_request_header_actions_python">
+<a href="#modify_request_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>request_<wbr>header_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">List[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">List[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="modifyresponseheaderactions_python">
-<a href="#modifyresponseheaderactions_python" style="color: inherit; text-decoration: inherit;">modify<wbr>Response<wbr>Header<wbr>Actions</a>
+        <span id="modify_response_header_actions_python">
+<a href="#modify_response_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>response_<wbr>header_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">List[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">List[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="urlredirectaction_python">
-<a href="#urlredirectaction_python" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect<wbr>Action</a>
+        <span id="url_redirect_action_python">
+<a href="#url_redirect_action_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryruleurlredirectaction">Dict[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryruleurlredirectaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="urlrewriteaction_python">
-<a href="#urlrewriteaction_python" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite<wbr>Action</a>
+        <span id="url_rewrite_action_python">
+<a href="#url_rewrite_action_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryruleurlrewriteaction">Dict[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryruleurlrewriteaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
 {{% /md %}}</dd>
@@ -8774,8 +8774,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="redirecttype_python">
-<a href="#redirecttype_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
+        <span id="redirect_type_python">
+<a href="#redirect_type_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8829,8 +8829,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="querystring_python">
-<a href="#querystring_python" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
+        <span id="query_string_python">
+<a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8996,8 +8996,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcepattern_python">
-<a href="#sourcepattern_python" style="color: inherit; text-decoration: inherit;">source<wbr>Pattern</a>
+        <span id="source_pattern_python">
+<a href="#source_pattern_python" style="color: inherit; text-decoration: inherit;">source_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9007,8 +9007,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preserveunmatchedpath_python">
-<a href="#preserveunmatchedpath_python" style="color: inherit; text-decoration: inherit;">preserve<wbr>Unmatched<wbr>Path</a>
+        <span id="preserve_unmatched_path_python">
+<a href="#preserve_unmatched_path_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>unmatched_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9218,8 +9218,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpport_python">
-<a href="#httpport_python" style="color: inherit; text-decoration: inherit;">http<wbr>Port</a>
+        <span id="http_port_python">
+<a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -9229,8 +9229,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpsport_python">
-<a href="#httpsport_python" style="color: inherit; text-decoration: inherit;">https<wbr>Port</a>
+        <span id="https_port_python">
+<a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

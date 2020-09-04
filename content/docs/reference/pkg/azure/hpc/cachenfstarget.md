@@ -25,7 +25,7 @@ Manages a NFS Target within a HPC Cache.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/hpc/#pulumi_azure.hpc.CacheNfsTarget">CacheNfsTarget</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_junctions</span><span class="p">:</span> <span class="nx">Optional[List[CacheNfsTargetNamespaceJunction]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">usage_model</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/hpc/#pulumi_azure.hpc.CacheNfsTarget">CacheNfsTarget</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_junctions</span><span class="p">:</span> <span class="nx">Optional[List[CacheNfsTargetNamespaceJunctionArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">usage_model</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -433,7 +433,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
 <a href="#namespace_junctions_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>junctions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachenfstargetnamespacejunction">List[Cache<wbr>Nfs<wbr>Target<wbr>Namespace<wbr>Junction]</a></span>
+        <span class="property-type"><a href="#cachenfstargetnamespacejunction">List[Cache<wbr>Nfs<wbr>Target<wbr>Namespace<wbr>Junction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to define multiple `namespace_junction`. Each `namespace_juntion` block supports fields documented below.
 {{% /md %}}</dd>
@@ -581,7 +581,7 @@ Get an existing CacheNfsTarget resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_junctions</span><span class="p">:</span> <span class="nx">Optional[List[CacheNfsTargetNamespaceJunction]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">usage_model</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CacheNfsTarget</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_junctions</span><span class="p">:</span> <span class="nx">Optional[List[CacheNfsTargetNamespaceJunctionArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">usage_model</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CacheNfsTarget</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -942,7 +942,7 @@ The following state arguments are supported:
 <a href="#state_namespace_junctions_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>junctions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachenfstargetnamespacejunction">List[Cache<wbr>Nfs<wbr>Target<wbr>Namespace<wbr>Junction]</a></span>
+        <span class="property-type"><a href="#cachenfstargetnamespacejunction">List[Cache<wbr>Nfs<wbr>Target<wbr>Namespace<wbr>Junction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to define multiple `namespace_junction`. Each `namespace_juntion` block supports fields documented below.
 {{% /md %}}</dd>
@@ -1146,8 +1146,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="nfsexport_python">
-<a href="#nfsexport_python" style="color: inherit; text-decoration: inherit;">nfs<wbr>Export</a>
+        <span id="nfs_export_python">
+<a href="#nfs_export_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>export</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1157,8 +1157,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetpath_python">
-<a href="#targetpath_python" style="color: inherit; text-decoration: inherit;">target<wbr>Path</a>
+        <span id="target_path_python">
+<a href="#target_path_python" style="color: inherit; text-decoration: inherit;">target_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

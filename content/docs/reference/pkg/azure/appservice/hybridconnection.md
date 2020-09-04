@@ -155,10 +155,10 @@ example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", locati
 example_plan = azure.appservice.Plan("examplePlan",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    sku={
-        "tier": "Standard",
-        "size": "S1",
-    })
+    sku=azure.appservice.PlanSkuArgs(
+        tier="Standard",
+        size="S1",
+    ))
 example_app_service = azure.appservice.AppService("exampleAppService",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,

@@ -89,12 +89,12 @@ import pulumi_azure as azure
 example = azure.network.RouteFilter("example",
     location="East US",
     resource_group_name="example",
-    rule={
-        "access": "Allow",
-        "communities": ["12076:52004"],
-        "name": "rule",
-        "ruleType": "Community",
-    })
+    rule=azure.network.RouteFilterRuleArgs(
+        access="Allow",
+        communities=["12076:52004"],
+        name="rule",
+        rule_type="Community",
+    ))
 ```
 
 {{% /example %}}
@@ -131,7 +131,7 @@ const example = new azure.network.RouteFilter("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.RouteFilter">RouteFilter</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule</span><span class="p">:</span> <span class="nx">Optional[Dict[RouteFilterRule]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.RouteFilter">RouteFilter</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule</span><span class="p">:</span> <span class="nx">Optional[RouteFilterRuleArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -528,7 +528,7 @@ The RouteFilter resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routefilterrule">Dict[Route<wbr>Filter<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#routefilterrule">Route<wbr>Filter<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rules` block as defined below.
 {{% /md %}}</dd>
@@ -539,7 +539,7 @@ The RouteFilter resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Route Filter.
 {{% /md %}}</dd>
@@ -643,7 +643,7 @@ Get an existing RouteFilter resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule</span><span class="p">:</span> <span class="nx">Optional[Dict[RouteFilterRule]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> RouteFilter</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule</span><span class="p">:</span> <span class="nx">Optional[RouteFilterRuleArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> RouteFilter</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -982,7 +982,7 @@ The following state arguments are supported:
 <a href="#state_rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routefilterrule">Dict[Route<wbr>Filter<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#routefilterrule">Route<wbr>Filter<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rules` block as defined below.
 {{% /md %}}</dd>
@@ -993,7 +993,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Route Filter.
 {{% /md %}}</dd>
@@ -1219,8 +1219,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="ruletype_python">
-<a href="#ruletype_python" style="color: inherit; text-decoration: inherit;">rule<wbr>Type</a>
+        <span id="rule_type_python">
+<a href="#rule_type_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

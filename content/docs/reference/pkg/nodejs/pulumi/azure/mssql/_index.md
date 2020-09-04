@@ -3,7 +3,7 @@ title: "Module mssql"
 title_tag: "Module mssql | Package @pulumi/azure | Node.js SDK"
 linktitle: "mssql"
 meta_desc: "Explore members of the mssql module in the @pulumi/azure package."
-git_sha: "91032c2a3b439090a2e0c91de8152754746653c8"
+git_sha: "87ec45403dcdc845364bf2cd86aa71620069a540"
 block_external_search_index: true
 ---
 
@@ -57,7 +57,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Database" data-link-title="Database">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L52">
         Resource <strong>Database</strong>
     </a>
 </h3>
@@ -107,7 +107,7 @@ const test = new azure.mssql.Database("test", {
 ```
 
 <h4 class="pdoc-member-header" id="Database-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L155"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L155"> <b>constructor</b></a>
 </h4>
 
 
@@ -121,7 +121,7 @@ Create a Database resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Database-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L62">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L62">method <b>get</b></a>
 </h4>
 
 
@@ -132,14 +132,14 @@ Get an existing Database resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Database-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L52">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L52">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Database-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L73">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L73">method <b>isInstance</b></a>
 </h4>
 
 
@@ -150,7 +150,7 @@ Returns true if the given object is an instance of Database.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Database-autoPauseDelayInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L83">property <b>autoPauseDelayInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L83">property <b>autoPauseDelayInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoPauseDelayInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -158,7 +158,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Time in minutes after which database is automatically paused. A value of `-1` means that automatic pause is disabled. This property is only settable for General Purpose Serverless databases.
 
 <h4 class="pdoc-member-header" id="Database-collation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L87">property <b>collation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L87">property <b>collation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>collation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -166,7 +166,7 @@ Time in minutes after which database is automatically paused. A value of `-1` me
 Specifies the collation of the database. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Database-createMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L91">property <b>createMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L91">property <b>createMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -174,7 +174,7 @@ Specifies the collation of the database. Changing this forces a new resource to 
 The create mode of the database. Possible values are `Copy`, `Default`, `OnlineSecondary`, `PointInTimeRestore`, `Restore`, `RestoreExternalBackup`, `RestoreExternalBackupSecondary`, `RestoreLongTermRetentionBackup` and `Secondary`.
 
 <h4 class="pdoc-member-header" id="Database-creationSourceDatabaseId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L95">property <b>creationSourceDatabaseId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L95">property <b>creationSourceDatabaseId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>creationSourceDatabaseId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -182,7 +182,7 @@ The create mode of the database. Possible values are `Copy`, `Default`, `OnlineS
 The id of the source database to be referred to create the new database. This should only be used for databases with `createMode` values that use another database as reference. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Database-elasticPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L99">property <b>elasticPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L99">property <b>elasticPoolId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>elasticPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -190,7 +190,7 @@ The id of the source database to be referred to create the new database. This sh
 Specifies the ID of the elastic pool containing this database.
 
 <h4 class="pdoc-member-header" id="Database-extendedAuditingPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L103">property <b>extendedAuditingPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L103">property <b>extendedAuditingPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>extendedAuditingPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatabaseExtendedAuditingPolicy'>DatabaseExtendedAuditingPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -198,7 +198,7 @@ Specifies the ID of the elastic pool containing this database.
 A `extendedAuditingPolicy` block as defined below.
 
 <h4 class="pdoc-member-header" id="Database-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -207,7 +207,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Database-licenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L107">property <b>licenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L107">property <b>licenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>licenseType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -215,7 +215,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the license type applied to this database. Possible values are `LicenseIncluded` and `BasePrice`.
 
 <h4 class="pdoc-member-header" id="Database-maxSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L111">property <b>maxSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L111">property <b>maxSizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxSizeGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -223,7 +223,7 @@ Specifies the license type applied to this database. Possible values are `Licens
 The max size of the database in gigabytes.
 
 <h4 class="pdoc-member-header" id="Database-minCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L115">property <b>minCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L115">property <b>minCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -231,7 +231,7 @@ The max size of the database in gigabytes.
 Minimal capacity that database will always have allocated, if not paused. This property is only settable for General Purpose Serverless databases.
 
 <h4 class="pdoc-member-header" id="Database-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L119">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L119">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -239,7 +239,7 @@ Minimal capacity that database will always have allocated, if not paused. This p
 The name of the Ms SQL Database. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Database-readReplicaCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L123">property <b>readReplicaCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L123">property <b>readReplicaCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>readReplicaCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -247,7 +247,7 @@ The name of the Ms SQL Database. Changing this forces a new resource to be creat
 The number of readonly secondary replicas associated with the database to which readonly application intent connections may be routed. This property is only settable for Hyperscale edition databases.
 
 <h4 class="pdoc-member-header" id="Database-readScale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L127">property <b>readScale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L127">property <b>readScale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>readScale: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -255,7 +255,7 @@ The number of readonly secondary replicas associated with the database to which 
 If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica. This property is only settable for Premium and Business Critical databases.
 
 <h4 class="pdoc-member-header" id="Database-restorePointInTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L131">property <b>restorePointInTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L131">property <b>restorePointInTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>restorePointInTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -263,7 +263,7 @@ If enabled, connections that have application intent set to readonly in their co
 Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database. This property is only settable for `createMode`= `PointInTimeRestore`  databases.
 
 <h4 class="pdoc-member-header" id="Database-sampleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L135">property <b>sampleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L135">property <b>sampleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sampleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -271,7 +271,7 @@ Specifies the point in time (ISO8601 format) of the source database that will be
 Specifies the name of the sample schema to apply when creating this database. Possible value is `AdventureWorksLT`.
 
 <h4 class="pdoc-member-header" id="Database-serverId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L139">property <b>serverId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L139">property <b>serverId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -279,7 +279,7 @@ Specifies the name of the sample schema to apply when creating this database. Po
 The id of the Ms SQL Server on which to create the database. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Database-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L143">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L143">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -287,7 +287,7 @@ The id of the Ms SQL Server on which to create the database. Changing this force
 Specifies the name of the sku used by the database. Only changing this from tier `Hyperscale` to another tier will force a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
 
 <h4 class="pdoc-member-header" id="Database-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L147">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L147">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -295,7 +295,7 @@ Specifies the name of the sku used by the database. Only changing this from tier
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Database-threatDetectionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L151">property <b>threatDetectionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L151">property <b>threatDetectionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>threatDetectionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatabaseThreatDetectionPolicy'>DatabaseThreatDetectionPolicy</a>&gt;;</code></pre>
@@ -303,7 +303,7 @@ A mapping of tags to assign to the resource.
 Threat detection policy configuration. The `threatDetectionPolicy` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="Database-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L52">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L52">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -312,7 +312,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Database-zoneRedundant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L155">property <b>zoneRedundant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L155">property <b>zoneRedundant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneRedundant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -320,7 +320,7 @@ deployments.
 Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones. This property is only settable for Premium and Business Critical databases.
 
 <h3 class="pdoc-module-header" id="DatabaseVulnerabilityAssessmentRuleBaseline" data-link-title="DatabaseVulnerabilityAssessmentRuleBaseline">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L78">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L78">
         Resource <strong>DatabaseVulnerabilityAssessmentRuleBaseline</strong>
     </a>
 </h3>
@@ -396,7 +396,7 @@ const exampleDatabaseVulnerabilityAssessmentRuleBaseline = new azure.mssql.Datab
 ```
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaseline-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L125"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L125"> <b>constructor</b></a>
 </h4>
 
 
@@ -410,7 +410,7 @@ Create a DatabaseVulnerabilityAssessmentRuleBaseline resource with the given uni
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaseline-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L88">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L88">method <b>get</b></a>
 </h4>
 
 
@@ -421,14 +421,14 @@ Get an existing DatabaseVulnerabilityAssessmentRuleBaseline resource's state wit
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaseline-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L78">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L78">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaseline-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L99">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L99">method <b>isInstance</b></a>
 </h4>
 
 
@@ -439,7 +439,7 @@ Returns true if the given object is an instance of DatabaseVulnerabilityAssessme
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaseline-baselineName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L109">property <b>baselineName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L109">property <b>baselineName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>baselineName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -447,7 +447,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the vulnerability assessment rule baseline. Valid options are `default` and `master`. `default` implies a baseline on a database level rule and `master` for server level rule. Defaults to `default`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaseline-baselineResults">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L113">property <b>baselineResults</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L113">property <b>baselineResults</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>baselineResults: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatabaseVulnerabilityAssessmentRuleBaselineBaselineResult'>DatabaseVulnerabilityAssessmentRuleBaselineBaselineResult</a>[]&gt;;</code></pre>
@@ -455,7 +455,7 @@ The name of the vulnerability assessment rule baseline. Valid options are `defau
 A `baselineResult` block as documented below. Multiple blocks can be defined.
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaseline-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L117">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L117">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -463,7 +463,7 @@ A `baselineResult` block as documented below. Multiple blocks can be defined.
 Specifies the name of the MS SQL Database. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaseline-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L78">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -472,7 +472,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaseline-ruleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L121">property <b>ruleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L121">property <b>ruleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ruleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -480,7 +480,7 @@ deployments and may be missing (undefined) during planning phases.
 The vulnerability assessment rule ID. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaseline-serverVulnerabilityAssessmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L125">property <b>serverVulnerabilityAssessmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L125">property <b>serverVulnerabilityAssessmentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverVulnerabilityAssessmentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -488,7 +488,7 @@ The vulnerability assessment rule ID. Changing this forces a new resource to be 
 The Vulnerability Assessment ID of the MS SQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaseline-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L78">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L78">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -497,7 +497,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ElasticPool" data-link-title="ElasticPool">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L45">
         Resource <strong>ElasticPool</strong>
     </a>
 </h3>
@@ -540,7 +540,7 @@ const exampleElasticPool = new azure.mssql.ElasticPool("exampleElasticPool", {
 ```
 
 <h4 class="pdoc-member-header" id="ElasticPool-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L116"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L116"> <b>constructor</b></a>
 </h4>
 
 
@@ -554,7 +554,7 @@ Create a ElasticPool resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ElasticPool-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L55">method <b>get</b></a>
 </h4>
 
 
@@ -565,14 +565,14 @@ Get an existing ElasticPool resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ElasticPool-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L45">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L45">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ElasticPool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L66">method <b>isInstance</b></a>
 </h4>
 
 
@@ -583,7 +583,7 @@ Returns true if the given object is an instance of ElasticPool.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ElasticPool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -592,7 +592,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ElasticPool-licenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L76">property <b>licenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L76">property <b>licenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>licenseType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -600,7 +600,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the license type applied to this database. Possible values are `LicenseIncluded` and `BasePrice`.
 
 <h4 class="pdoc-member-header" id="ElasticPool-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L80">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L80">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -608,7 +608,7 @@ Specifies the license type applied to this database. Possible values are `Licens
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ElasticPool-maxSizeBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L84">property <b>maxSizeBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L84">property <b>maxSizeBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxSizeBytes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -616,7 +616,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The max data size of the elastic pool in bytes. Conflicts with `maxSizeGb`.
 
 <h4 class="pdoc-member-header" id="ElasticPool-maxSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L88">property <b>maxSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L88">property <b>maxSizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxSizeGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -624,7 +624,7 @@ The max data size of the elastic pool in bytes. Conflicts with `maxSizeGb`.
 The max data size of the elastic pool in gigabytes. Conflicts with `maxSizeBytes`.
 
 <h4 class="pdoc-member-header" id="ElasticPool-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L92">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L92">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -632,7 +632,7 @@ The max data size of the elastic pool in gigabytes. Conflicts with `maxSizeBytes
 The name of the elastic pool. This needs to be globally unique. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ElasticPool-perDatabaseSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L96">property <b>perDatabaseSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L96">property <b>perDatabaseSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>perDatabaseSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ElasticPoolPerDatabaseSettings'>ElasticPoolPerDatabaseSettings</a>&gt;;</code></pre>
@@ -640,7 +640,7 @@ The name of the elastic pool. This needs to be globally unique. Changing this fo
 A `perDatabaseSettings` block as defined below.
 
 <h4 class="pdoc-member-header" id="ElasticPool-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L100">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L100">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -648,7 +648,7 @@ A `perDatabaseSettings` block as defined below.
 The name of the resource group in which to create the elastic pool. This must be the same as the resource group of the underlying SQL server.
 
 <h4 class="pdoc-member-header" id="ElasticPool-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L104">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L104">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -656,7 +656,7 @@ The name of the resource group in which to create the elastic pool. This must be
 The name of the SQL Server on which to create the elastic pool. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ElasticPool-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L108">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L108">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ElasticPoolSku'>ElasticPoolSku</a>&gt;;</code></pre>
@@ -664,7 +664,7 @@ The name of the SQL Server on which to create the elastic pool. Changing this fo
 A `sku` block as defined below.
 
 <h4 class="pdoc-member-header" id="ElasticPool-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L112">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L112">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -672,7 +672,7 @@ A `sku` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ElasticPool-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L45">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L45">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -681,7 +681,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ElasticPool-zoneRedundant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L116">property <b>zoneRedundant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L116">property <b>zoneRedundant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneRedundant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -689,7 +689,7 @@ deployments.
 Whether or not this elastic pool is zone redundant. `tier` needs to be `Premium` for `DTU` based  or `BusinessCritical` for `vCore` based `sku`. Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="Server" data-link-title="Server">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L50">
         Resource <strong>Server</strong>
     </a>
 </h3>
@@ -737,7 +737,7 @@ const exampleServer = new azure.mssql.Server("exampleServer", {
 ```
 
 <h4 class="pdoc-member-header" id="Server-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L129"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L129"> <b>constructor</b></a>
 </h4>
 
 
@@ -751,7 +751,7 @@ Create a Server resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Server-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L60">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L60">method <b>get</b></a>
 </h4>
 
 
@@ -762,14 +762,14 @@ Get an existing Server resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Server-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L50">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L50">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Server-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L71">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L71">method <b>isInstance</b></a>
 </h4>
 
 
@@ -780,7 +780,7 @@ Returns true if the given object is an instance of Server.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Server-administratorLogin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L81">property <b>administratorLogin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L81">property <b>administratorLogin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>administratorLogin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -788,7 +788,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The administrator login name for the new server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Server-administratorLoginPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L85">property <b>administratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L85">property <b>administratorLoginPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>administratorLoginPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -796,7 +796,7 @@ The administrator login name for the new server. Changing this forces a new reso
 The password associated with the `administratorLogin` user. Needs to comply with Azure's [Password Policy](https://msdn.microsoft.com/library/ms161959.aspx)
 
 <h4 class="pdoc-member-header" id="Server-azureadAdministrator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L89">property <b>azureadAdministrator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L89">property <b>azureadAdministrator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azureadAdministrator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServerAzureadAdministrator'>ServerAzureadAdministrator</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -804,7 +804,7 @@ The password associated with the `administratorLogin` user. Needs to comply with
 An `azureadAdministrator` block as defined below.
 
 <h4 class="pdoc-member-header" id="Server-connectionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L93">property <b>connectionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L93">property <b>connectionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -812,7 +812,7 @@ An `azureadAdministrator` block as defined below.
 The connection policy the server will use. Possible values are `Default`, `Proxy`, and `Redirect`. Defaults to `Default`.
 
 <h4 class="pdoc-member-header" id="Server-extendedAuditingPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L97">property <b>extendedAuditingPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L97">property <b>extendedAuditingPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>extendedAuditingPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServerExtendedAuditingPolicy'>ServerExtendedAuditingPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -820,7 +820,7 @@ The connection policy the server will use. Possible values are `Default`, `Proxy
 A `extendedAuditingPolicy` block as defined below.
 
 <h4 class="pdoc-member-header" id="Server-fullyQualifiedDomainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L101">property <b>fullyQualifiedDomainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L101">property <b>fullyQualifiedDomainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fullyQualifiedDomainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -828,7 +828,7 @@ A `extendedAuditingPolicy` block as defined below.
 The fully qualified domain name of the Azure SQL Server (e.g. myServerName.database.windows.net)
 
 <h4 class="pdoc-member-header" id="Server-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L50">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L50">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -837,7 +837,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Server-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L105">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L105">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServerIdentity'>ServerIdentity</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -845,7 +845,7 @@ deployments and may be missing (undefined) during planning phases.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="Server-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L109">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L109">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -853,7 +853,7 @@ An `identity` block as defined below.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Server-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L113">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L113">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -861,7 +861,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The name of the Microsoft SQL Server. This needs to be globally unique within Azure.
 
 <h4 class="pdoc-member-header" id="Server-publicNetworkAccessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L117">property <b>publicNetworkAccessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L117">property <b>publicNetworkAccessEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicNetworkAccessEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -869,7 +869,7 @@ The name of the Microsoft SQL Server. This needs to be globally unique within Az
 Whether or not public network access is allowed for this server. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="Server-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L121">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L121">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -877,7 +877,7 @@ Whether or not public network access is allowed for this server. Defaults to `tr
 The name of the resource group in which to create the Microsoft SQL Server.
 
 <h4 class="pdoc-member-header" id="Server-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L125">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L125">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -885,7 +885,7 @@ The name of the resource group in which to create the Microsoft SQL Server.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Server-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L50">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L50">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -894,7 +894,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Server-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L129">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L129">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -902,7 +902,7 @@ deployments.
 The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).
 
 <h3 class="pdoc-module-header" id="ServerSecurityAlertPolicy" data-link-title="ServerSecurityAlertPolicy">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L46">
         Resource <strong>ServerSecurityAlertPolicy</strong>
     </a>
 </h3>
@@ -948,7 +948,7 @@ const exampleServerSecurityAlertPolicy = new azure.mssql.ServerSecurityAlertPoli
 ```
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L109"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L109"> <b>constructor</b></a>
 </h4>
 
 
@@ -962,7 +962,7 @@ Create a ServerSecurityAlertPolicy resource with the given unique name, argument
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L56">method <b>get</b></a>
 </h4>
 
 
@@ -973,14 +973,14 @@ Get an existing ServerSecurityAlertPolicy resource's state with the given name, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L46">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L67">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L67">method <b>isInstance</b></a>
 </h4>
 
 
@@ -991,7 +991,7 @@ Returns true if the given object is an instance of ServerSecurityAlertPolicy.  T
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicy-disabledAlerts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L77">property <b>disabledAlerts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L77">property <b>disabledAlerts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disabledAlerts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -999,7 +999,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies an array of alerts that are disabled. Allowed values are: `Sql_Injection`, `Sql_Injection_Vulnerability`, `Access_Anomaly`, `Data_Exfiltration`, `Unsafe_Action`.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicy-emailAccountAdmins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L81">property <b>emailAccountAdmins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L81">property <b>emailAccountAdmins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>emailAccountAdmins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1007,7 +1007,7 @@ Specifies an array of alerts that are disabled. Allowed values are: `Sql_Injecti
 Boolean flag which specifies if the alert is sent to the account administrators or not. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicy-emailAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L85">property <b>emailAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L85">property <b>emailAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>emailAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1015,7 +1015,7 @@ Boolean flag which specifies if the alert is sent to the account administrators 
 Specifies an array of e-mail addresses to which the alert is sent.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1024,7 +1024,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicy-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L89">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L89">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1032,7 +1032,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the resource group that contains the MS SQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicy-retentionDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L93">property <b>retentionDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L93">property <b>retentionDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retentionDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1040,7 +1040,7 @@ The name of the resource group that contains the MS SQL Server. Changing this fo
 Specifies the number of days to keep in the Threat Detection audit logs. Defaults to `0`.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicy-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L97">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L97">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1048,7 +1048,7 @@ Specifies the number of days to keep in the Threat Detection audit logs. Default
 Specifies the name of the MS SQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicy-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L101">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L101">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1056,7 +1056,7 @@ Specifies the name of the MS SQL Server. Changing this forces a new resource to 
 Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database server. Allowed values are: `Disabled`, `Enabled`.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicy-storageAccountAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L105">property <b>storageAccountAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L105">property <b>storageAccountAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageAccountAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1064,7 +1064,7 @@ Specifies the state of the policy, whether it is enabled or disabled or a policy
 Specifies the identifier key of the Threat Detection audit storage account.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicy-storageEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L109">property <b>storageEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L109">property <b>storageEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1072,7 +1072,7 @@ Specifies the identifier key of the Threat Detection audit storage account.
 Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L46">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1081,7 +1081,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ServerVulnerabilityAssessment" data-link-title="ServerVulnerabilityAssessment">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L58">
         Resource <strong>ServerVulnerabilityAssessment</strong>
     </a>
 </h3>
@@ -1137,7 +1137,7 @@ const exampleServerVulnerabilityAssessment = new azure.mssql.ServerVulnerability
 ```
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L105"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L105"> <b>constructor</b></a>
 </h4>
 
 
@@ -1151,7 +1151,7 @@ Create a ServerVulnerabilityAssessment resource with the given unique name, argu
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L68">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L68">method <b>get</b></a>
 </h4>
 
 
@@ -1162,14 +1162,14 @@ Get an existing ServerVulnerabilityAssessment resource's state with the given na
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L58">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L58">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L79">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L79">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1180,7 +1180,7 @@ Returns true if the given object is an instance of ServerVulnerabilityAssessment
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L58">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L58">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1189,7 +1189,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessment-recurringScans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L89">property <b>recurringScans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L89">property <b>recurringScans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recurringScans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServerVulnerabilityAssessmentRecurringScans'>ServerVulnerabilityAssessmentRecurringScans</a>&gt;;</code></pre>
@@ -1197,7 +1197,7 @@ deployments and may be missing (undefined) during planning phases.
 The recurring scans settings. The `recurringScans` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessment-serverSecurityAlertPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L93">property <b>serverSecurityAlertPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L93">property <b>serverSecurityAlertPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverSecurityAlertPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1205,7 +1205,7 @@ The recurring scans settings. The `recurringScans` block supports fields documen
 The id of the security alert policy of the MS SQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessment-storageAccountAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L97">property <b>storageAccountAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L97">property <b>storageAccountAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageAccountAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1213,7 +1213,7 @@ The id of the security alert policy of the MS SQL Server. Changing this forces a
 Specifies the identifier key of the storage account for vulnerability assessment scan results. If `storageContainerSasKey` isn't specified, `storageAccountAccessKey` is required.
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessment-storageContainerPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L101">property <b>storageContainerPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L101">property <b>storageContainerPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageContainerPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1221,7 +1221,7 @@ Specifies the identifier key of the storage account for vulnerability assessment
 A blob storage container path to hold the scan results (e.g. https://myStorage.blob.core.windows.net/VaScans/).
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessment-storageContainerSasKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L105">property <b>storageContainerSasKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L105">property <b>storageContainerSasKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageContainerSasKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1229,7 +1229,7 @@ A blob storage container path to hold the scan results (e.g. https://myStorage.b
 A shared access signature (SAS Key) that has write access to the blob container specified in `storageContainerPath` parameter. If `storageAccountAccessKey` isn't specified, `storageContainerSasKey` is required.
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L58">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L58">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1238,7 +1238,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="VirtualMachine" data-link-title="VirtualMachine">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L40">
         Resource <strong>VirtualMachine</strong>
     </a>
 </h3>
@@ -1276,7 +1276,7 @@ const exampleMssql_virtualMachineVirtualMachine = new azure.mssql.VirtualMachine
 ```
 
 <h4 class="pdoc-member-header" id="VirtualMachine-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L107"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L107"> <b>constructor</b></a>
 </h4>
 
 
@@ -1290,7 +1290,7 @@ Create a VirtualMachine resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VirtualMachine-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -1301,14 +1301,14 @@ Get an existing VirtualMachine resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VirtualMachine-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VirtualMachine-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1319,7 +1319,7 @@ Returns true if the given object is an instance of VirtualMachine.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VirtualMachine-autoPatching">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L71">property <b>autoPatching</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L71">property <b>autoPatching</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoPatching: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineAutoPatching'>VirtualMachineAutoPatching</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1327,7 +1327,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 An `autoPatching` block as defined below.
 
 <h4 class="pdoc-member-header" id="VirtualMachine-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1336,7 +1336,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VirtualMachine-keyVaultCredential">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L75">property <b>keyVaultCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L75">property <b>keyVaultCredential</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyVaultCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineKeyVaultCredential'>VirtualMachineKeyVaultCredential</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1344,7 +1344,7 @@ deployments and may be missing (undefined) during planning phases.
 (Optional) An `keyVaultCredential` block as defined below.
 
 <h4 class="pdoc-member-header" id="VirtualMachine-rServicesEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L79">property <b>rServicesEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L79">property <b>rServicesEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rServicesEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1352,7 +1352,7 @@ deployments and may be missing (undefined) during planning phases.
 Should R Services be enabled?
 
 <h4 class="pdoc-member-header" id="VirtualMachine-sqlConnectivityPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L83">property <b>sqlConnectivityPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L83">property <b>sqlConnectivityPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sqlConnectivityPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1360,7 +1360,7 @@ Should R Services be enabled?
 The SQL Server port. Defaults to `1433`.
 
 <h4 class="pdoc-member-header" id="VirtualMachine-sqlConnectivityType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L87">property <b>sqlConnectivityType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L87">property <b>sqlConnectivityType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sqlConnectivityType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1368,7 +1368,7 @@ The SQL Server port. Defaults to `1433`.
 The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
 
 <h4 class="pdoc-member-header" id="VirtualMachine-sqlConnectivityUpdatePassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L91">property <b>sqlConnectivityUpdatePassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L91">property <b>sqlConnectivityUpdatePassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sqlConnectivityUpdatePassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1376,7 +1376,7 @@ The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
 The SQL Server sysadmin login password.
 
 <h4 class="pdoc-member-header" id="VirtualMachine-sqlConnectivityUpdateUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L95">property <b>sqlConnectivityUpdateUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L95">property <b>sqlConnectivityUpdateUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sqlConnectivityUpdateUsername: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1384,7 +1384,7 @@ The SQL Server sysadmin login password.
 The SQL Server sysadmin login to create.
 
 <h4 class="pdoc-member-header" id="VirtualMachine-sqlLicenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L99">property <b>sqlLicenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L99">property <b>sqlLicenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sqlLicenseType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1392,7 +1392,7 @@ The SQL Server sysadmin login to create.
 The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualMachine-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L103">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L103">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1400,7 +1400,7 @@ The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) a
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="VirtualMachine-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1409,7 +1409,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="VirtualMachine-virtualMachineId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L107">property <b>virtualMachineId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L107">property <b>virtualMachineId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>virtualMachineId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1419,7 +1419,7 @@ The ID of the Virtual Machine. Changing this forces a new resource to be created
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDatabase" data-link-title="getDatabase">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getDatabase.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getDatabase.ts#L25">
         Function <strong>getDatabase</strong>
     </a>
 </h3>
@@ -1444,7 +1444,7 @@ export const databaseId = example.then(example => example.id);
 ```
 
 <h3 class="pdoc-module-header" id="getElasticPool" data-link-title="getElasticPool">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getElasticPool.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getElasticPool.ts#L26">
         Function <strong>getElasticPool</strong>
     </a>
 </h3>
@@ -1472,7 +1472,7 @@ export const elasticpoolId = example.then(example => example.id);
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DatabaseArgs" data-link-title="DatabaseArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L309">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L309">
         interface <strong>DatabaseArgs</strong>
     </a>
 </h3>
@@ -1482,7 +1482,7 @@ export const elasticpoolId = example.then(example => example.id);
 The set of arguments for constructing a Database resource.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-autoPauseDelayInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L313">property <b>autoPauseDelayInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L313">property <b>autoPauseDelayInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoPauseDelayInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1490,7 +1490,7 @@ The set of arguments for constructing a Database resource.
 Time in minutes after which database is automatically paused. A value of `-1` means that automatic pause is disabled. This property is only settable for General Purpose Serverless databases.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-collation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L317">property <b>collation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L317">property <b>collation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1498,7 +1498,7 @@ Time in minutes after which database is automatically paused. A value of `-1` me
 Specifies the collation of the database. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-createMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L321">property <b>createMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L321">property <b>createMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1506,7 +1506,7 @@ Specifies the collation of the database. Changing this forces a new resource to 
 The create mode of the database. Possible values are `Copy`, `Default`, `OnlineSecondary`, `PointInTimeRestore`, `Restore`, `RestoreExternalBackup`, `RestoreExternalBackupSecondary`, `RestoreLongTermRetentionBackup` and `Secondary`.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-creationSourceDatabaseId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L325">property <b>creationSourceDatabaseId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L325">property <b>creationSourceDatabaseId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationSourceDatabaseId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1514,7 +1514,7 @@ The create mode of the database. Possible values are `Copy`, `Default`, `OnlineS
 The id of the source database to be referred to create the new database. This should only be used for databases with `createMode` values that use another database as reference. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-elasticPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L329">property <b>elasticPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L329">property <b>elasticPoolId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1522,7 +1522,7 @@ The id of the source database to be referred to create the new database. This sh
 Specifies the ID of the elastic pool containing this database.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-extendedAuditingPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L333">property <b>extendedAuditingPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L333">property <b>extendedAuditingPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedAuditingPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseExtendedAuditingPolicy'>DatabaseExtendedAuditingPolicy</a>&gt;;</code></pre>
@@ -1530,7 +1530,7 @@ Specifies the ID of the elastic pool containing this database.
 A `extendedAuditingPolicy` block as defined below.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-licenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L337">property <b>licenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L337">property <b>licenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1538,7 +1538,7 @@ A `extendedAuditingPolicy` block as defined below.
 Specifies the license type applied to this database. Possible values are `LicenseIncluded` and `BasePrice`.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-maxSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L341">property <b>maxSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L341">property <b>maxSizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSizeGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1546,7 +1546,7 @@ Specifies the license type applied to this database. Possible values are `Licens
 The max size of the database in gigabytes.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-minCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L345">property <b>minCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L345">property <b>minCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1554,7 +1554,7 @@ The max size of the database in gigabytes.
 Minimal capacity that database will always have allocated, if not paused. This property is only settable for General Purpose Serverless databases.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L349">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L349">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1562,7 +1562,7 @@ Minimal capacity that database will always have allocated, if not paused. This p
 The name of the Ms SQL Database. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-readReplicaCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L353">property <b>readReplicaCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L353">property <b>readReplicaCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readReplicaCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1570,7 +1570,7 @@ The name of the Ms SQL Database. Changing this forces a new resource to be creat
 The number of readonly secondary replicas associated with the database to which readonly application intent connections may be routed. This property is only settable for Hyperscale edition databases.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-readScale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L357">property <b>readScale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L357">property <b>readScale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1578,7 +1578,7 @@ The number of readonly secondary replicas associated with the database to which 
 If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica. This property is only settable for Premium and Business Critical databases.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-restorePointInTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L361">property <b>restorePointInTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L361">property <b>restorePointInTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restorePointInTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1586,7 +1586,7 @@ If enabled, connections that have application intent set to readonly in their co
 Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database. This property is only settable for `createMode`= `PointInTimeRestore`  databases.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-sampleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L365">property <b>sampleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L365">property <b>sampleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sampleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1594,7 +1594,7 @@ Specifies the point in time (ISO8601 format) of the source database that will be
 Specifies the name of the sample schema to apply when creating this database. Possible value is `AdventureWorksLT`.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-serverId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L369">property <b>serverId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L369">property <b>serverId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1602,7 +1602,7 @@ Specifies the name of the sample schema to apply when creating this database. Po
 The id of the Ms SQL Server on which to create the database. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L373">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L373">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1610,7 +1610,7 @@ The id of the Ms SQL Server on which to create the database. Changing this force
 Specifies the name of the sku used by the database. Only changing this from tier `Hyperscale` to another tier will force a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L377">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L377">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1618,7 +1618,7 @@ Specifies the name of the sku used by the database. Only changing this from tier
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-threatDetectionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L381">property <b>threatDetectionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L381">property <b>threatDetectionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threatDetectionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseThreatDetectionPolicy'>DatabaseThreatDetectionPolicy</a>&gt;;</code></pre>
@@ -1626,7 +1626,7 @@ A mapping of tags to assign to the resource.
 Threat detection policy configuration. The `threatDetectionPolicy` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-zoneRedundant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L385">property <b>zoneRedundant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L385">property <b>zoneRedundant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneRedundant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1634,7 +1634,7 @@ Threat detection policy configuration. The `threatDetectionPolicy` block support
 Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones. This property is only settable for Premium and Business Critical databases.
 
 <h3 class="pdoc-module-header" id="DatabaseState" data-link-title="DatabaseState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L227">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L227">
         interface <strong>DatabaseState</strong>
     </a>
 </h3>
@@ -1644,7 +1644,7 @@ Whether or not this database is zone redundant, which means the replicas of this
 Input properties used for looking up and filtering Database resources.
 
 <h4 class="pdoc-member-header" id="DatabaseState-autoPauseDelayInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L231">property <b>autoPauseDelayInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L231">property <b>autoPauseDelayInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoPauseDelayInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1652,7 +1652,7 @@ Input properties used for looking up and filtering Database resources.
 Time in minutes after which database is automatically paused. A value of `-1` means that automatic pause is disabled. This property is only settable for General Purpose Serverless databases.
 
 <h4 class="pdoc-member-header" id="DatabaseState-collation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L235">property <b>collation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L235">property <b>collation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1660,7 +1660,7 @@ Time in minutes after which database is automatically paused. A value of `-1` me
 Specifies the collation of the database. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseState-createMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L239">property <b>createMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L239">property <b>createMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1668,7 +1668,7 @@ Specifies the collation of the database. Changing this forces a new resource to 
 The create mode of the database. Possible values are `Copy`, `Default`, `OnlineSecondary`, `PointInTimeRestore`, `Restore`, `RestoreExternalBackup`, `RestoreExternalBackupSecondary`, `RestoreLongTermRetentionBackup` and `Secondary`.
 
 <h4 class="pdoc-member-header" id="DatabaseState-creationSourceDatabaseId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L243">property <b>creationSourceDatabaseId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L243">property <b>creationSourceDatabaseId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationSourceDatabaseId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1676,7 +1676,7 @@ The create mode of the database. Possible values are `Copy`, `Default`, `OnlineS
 The id of the source database to be referred to create the new database. This should only be used for databases with `createMode` values that use another database as reference. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseState-elasticPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L247">property <b>elasticPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L247">property <b>elasticPoolId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1684,7 +1684,7 @@ The id of the source database to be referred to create the new database. This sh
 Specifies the ID of the elastic pool containing this database.
 
 <h4 class="pdoc-member-header" id="DatabaseState-extendedAuditingPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L251">property <b>extendedAuditingPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L251">property <b>extendedAuditingPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedAuditingPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseExtendedAuditingPolicy'>DatabaseExtendedAuditingPolicy</a>&gt;;</code></pre>
@@ -1692,7 +1692,7 @@ Specifies the ID of the elastic pool containing this database.
 A `extendedAuditingPolicy` block as defined below.
 
 <h4 class="pdoc-member-header" id="DatabaseState-licenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L255">property <b>licenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L255">property <b>licenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1700,7 +1700,7 @@ A `extendedAuditingPolicy` block as defined below.
 Specifies the license type applied to this database. Possible values are `LicenseIncluded` and `BasePrice`.
 
 <h4 class="pdoc-member-header" id="DatabaseState-maxSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L259">property <b>maxSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L259">property <b>maxSizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSizeGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1708,7 +1708,7 @@ Specifies the license type applied to this database. Possible values are `Licens
 The max size of the database in gigabytes.
 
 <h4 class="pdoc-member-header" id="DatabaseState-minCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L263">property <b>minCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L263">property <b>minCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1716,7 +1716,7 @@ The max size of the database in gigabytes.
 Minimal capacity that database will always have allocated, if not paused. This property is only settable for General Purpose Serverless databases.
 
 <h4 class="pdoc-member-header" id="DatabaseState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L267">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L267">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1724,7 +1724,7 @@ Minimal capacity that database will always have allocated, if not paused. This p
 The name of the Ms SQL Database. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseState-readReplicaCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L271">property <b>readReplicaCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L271">property <b>readReplicaCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readReplicaCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1732,7 +1732,7 @@ The name of the Ms SQL Database. Changing this forces a new resource to be creat
 The number of readonly secondary replicas associated with the database to which readonly application intent connections may be routed. This property is only settable for Hyperscale edition databases.
 
 <h4 class="pdoc-member-header" id="DatabaseState-readScale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L275">property <b>readScale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L275">property <b>readScale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1740,7 +1740,7 @@ The number of readonly secondary replicas associated with the database to which 
 If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica. This property is only settable for Premium and Business Critical databases.
 
 <h4 class="pdoc-member-header" id="DatabaseState-restorePointInTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L279">property <b>restorePointInTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L279">property <b>restorePointInTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restorePointInTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1748,7 +1748,7 @@ If enabled, connections that have application intent set to readonly in their co
 Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database. This property is only settable for `createMode`= `PointInTimeRestore`  databases.
 
 <h4 class="pdoc-member-header" id="DatabaseState-sampleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L283">property <b>sampleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L283">property <b>sampleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sampleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1756,7 +1756,7 @@ Specifies the point in time (ISO8601 format) of the source database that will be
 Specifies the name of the sample schema to apply when creating this database. Possible value is `AdventureWorksLT`.
 
 <h4 class="pdoc-member-header" id="DatabaseState-serverId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L287">property <b>serverId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L287">property <b>serverId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1764,7 +1764,7 @@ Specifies the name of the sample schema to apply when creating this database. Po
 The id of the Ms SQL Server on which to create the database. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseState-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L291">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L291">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1772,7 +1772,7 @@ The id of the Ms SQL Server on which to create the database. Changing this force
 Specifies the name of the sku used by the database. Only changing this from tier `Hyperscale` to another tier will force a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
 
 <h4 class="pdoc-member-header" id="DatabaseState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L295">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L295">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1780,7 +1780,7 @@ Specifies the name of the sku used by the database. Only changing this from tier
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="DatabaseState-threatDetectionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L299">property <b>threatDetectionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L299">property <b>threatDetectionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threatDetectionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseThreatDetectionPolicy'>DatabaseThreatDetectionPolicy</a>&gt;;</code></pre>
@@ -1788,7 +1788,7 @@ A mapping of tags to assign to the resource.
 Threat detection policy configuration. The `threatDetectionPolicy` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="DatabaseState-zoneRedundant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/database.ts#L303">property <b>zoneRedundant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/database.ts#L303">property <b>zoneRedundant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneRedundant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1796,7 +1796,7 @@ Threat detection policy configuration. The `threatDetectionPolicy` block support
 Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones. This property is only settable for Premium and Business Critical databases.
 
 <h3 class="pdoc-module-header" id="DatabaseVulnerabilityAssessmentRuleBaselineArgs" data-link-title="DatabaseVulnerabilityAssessmentRuleBaselineArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L204">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L204">
         interface <strong>DatabaseVulnerabilityAssessmentRuleBaselineArgs</strong>
     </a>
 </h3>
@@ -1806,7 +1806,7 @@ Whether or not this database is zone redundant, which means the replicas of this
 The set of arguments for constructing a DatabaseVulnerabilityAssessmentRuleBaseline resource.
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaselineArgs-baselineName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L208">property <b>baselineName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L208">property <b>baselineName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baselineName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1814,7 +1814,7 @@ The set of arguments for constructing a DatabaseVulnerabilityAssessmentRuleBasel
 The name of the vulnerability assessment rule baseline. Valid options are `default` and `master`. `default` implies a baseline on a database level rule and `master` for server level rule. Defaults to `default`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaselineArgs-baselineResults">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L212">property <b>baselineResults</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L212">property <b>baselineResults</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baselineResults: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseVulnerabilityAssessmentRuleBaselineBaselineResult'>DatabaseVulnerabilityAssessmentRuleBaselineBaselineResult</a>&gt;[]&gt;;</code></pre>
@@ -1822,7 +1822,7 @@ The name of the vulnerability assessment rule baseline. Valid options are `defau
 A `baselineResult` block as documented below. Multiple blocks can be defined.
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaselineArgs-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L216">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L216">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1830,7 +1830,7 @@ A `baselineResult` block as documented below. Multiple blocks can be defined.
 Specifies the name of the MS SQL Database. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaselineArgs-ruleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L220">property <b>ruleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L220">property <b>ruleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1838,7 +1838,7 @@ Specifies the name of the MS SQL Database. Changing this forces a new resource t
 The vulnerability assessment rule ID. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaselineArgs-serverVulnerabilityAssessmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L224">property <b>serverVulnerabilityAssessmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L224">property <b>serverVulnerabilityAssessmentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverVulnerabilityAssessmentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1846,7 +1846,7 @@ The vulnerability assessment rule ID. Changing this forces a new resource to be 
 The Vulnerability Assessment ID of the MS SQL Server. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="DatabaseVulnerabilityAssessmentRuleBaselineState" data-link-title="DatabaseVulnerabilityAssessmentRuleBaselineState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L178">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L178">
         interface <strong>DatabaseVulnerabilityAssessmentRuleBaselineState</strong>
     </a>
 </h3>
@@ -1856,7 +1856,7 @@ The Vulnerability Assessment ID of the MS SQL Server. Changing this forces a new
 Input properties used for looking up and filtering DatabaseVulnerabilityAssessmentRuleBaseline resources.
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaselineState-baselineName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L182">property <b>baselineName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L182">property <b>baselineName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baselineName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1864,7 +1864,7 @@ Input properties used for looking up and filtering DatabaseVulnerabilityAssessme
 The name of the vulnerability assessment rule baseline. Valid options are `default` and `master`. `default` implies a baseline on a database level rule and `master` for server level rule. Defaults to `default`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaselineState-baselineResults">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L186">property <b>baselineResults</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L186">property <b>baselineResults</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baselineResults?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseVulnerabilityAssessmentRuleBaselineBaselineResult'>DatabaseVulnerabilityAssessmentRuleBaselineBaselineResult</a>&gt;[]&gt;;</code></pre>
@@ -1872,7 +1872,7 @@ The name of the vulnerability assessment rule baseline. Valid options are `defau
 A `baselineResult` block as documented below. Multiple blocks can be defined.
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaselineState-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L190">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L190">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1880,7 +1880,7 @@ A `baselineResult` block as documented below. Multiple blocks can be defined.
 Specifies the name of the MS SQL Database. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaselineState-ruleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L194">property <b>ruleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L194">property <b>ruleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1888,7 +1888,7 @@ Specifies the name of the MS SQL Database. Changing this forces a new resource t
 The vulnerability assessment rule ID. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseVulnerabilityAssessmentRuleBaselineState-serverVulnerabilityAssessmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L198">property <b>serverVulnerabilityAssessmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/databaseVulnerabilityAssessmentRuleBaseline.ts#L198">property <b>serverVulnerabilityAssessmentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverVulnerabilityAssessmentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1896,7 +1896,7 @@ The vulnerability assessment rule ID. Changing this forces a new resource to be 
 The Vulnerability Assessment ID of the MS SQL Server. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ElasticPoolArgs" data-link-title="ElasticPoolArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L231">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L231">
         interface <strong>ElasticPoolArgs</strong>
     </a>
 </h3>
@@ -1906,7 +1906,7 @@ The Vulnerability Assessment ID of the MS SQL Server. Changing this forces a new
 The set of arguments for constructing a ElasticPool resource.
 
 <h4 class="pdoc-member-header" id="ElasticPoolArgs-licenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L235">property <b>licenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L235">property <b>licenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1914,7 +1914,7 @@ The set of arguments for constructing a ElasticPool resource.
 Specifies the license type applied to this database. Possible values are `LicenseIncluded` and `BasePrice`.
 
 <h4 class="pdoc-member-header" id="ElasticPoolArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L239">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L239">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1922,7 +1922,7 @@ Specifies the license type applied to this database. Possible values are `Licens
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ElasticPoolArgs-maxSizeBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L243">property <b>maxSizeBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L243">property <b>maxSizeBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSizeBytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1930,7 +1930,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The max data size of the elastic pool in bytes. Conflicts with `maxSizeGb`.
 
 <h4 class="pdoc-member-header" id="ElasticPoolArgs-maxSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L247">property <b>maxSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L247">property <b>maxSizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSizeGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1938,7 +1938,7 @@ The max data size of the elastic pool in bytes. Conflicts with `maxSizeGb`.
 The max data size of the elastic pool in gigabytes. Conflicts with `maxSizeBytes`.
 
 <h4 class="pdoc-member-header" id="ElasticPoolArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L251">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L251">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1946,7 +1946,7 @@ The max data size of the elastic pool in gigabytes. Conflicts with `maxSizeBytes
 The name of the elastic pool. This needs to be globally unique. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ElasticPoolArgs-perDatabaseSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L255">property <b>perDatabaseSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L255">property <b>perDatabaseSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>perDatabaseSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ElasticPoolPerDatabaseSettings'>ElasticPoolPerDatabaseSettings</a>&gt;;</code></pre>
@@ -1954,7 +1954,7 @@ The name of the elastic pool. This needs to be globally unique. Changing this fo
 A `perDatabaseSettings` block as defined below.
 
 <h4 class="pdoc-member-header" id="ElasticPoolArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L259">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L259">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1962,7 +1962,7 @@ A `perDatabaseSettings` block as defined below.
 The name of the resource group in which to create the elastic pool. This must be the same as the resource group of the underlying SQL server.
 
 <h4 class="pdoc-member-header" id="ElasticPoolArgs-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L263">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L263">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1970,7 +1970,7 @@ The name of the resource group in which to create the elastic pool. This must be
 The name of the SQL Server on which to create the elastic pool. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ElasticPoolArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L267">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L267">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ElasticPoolSku'>ElasticPoolSku</a>&gt;;</code></pre>
@@ -1978,7 +1978,7 @@ The name of the SQL Server on which to create the elastic pool. Changing this fo
 A `sku` block as defined below.
 
 <h4 class="pdoc-member-header" id="ElasticPoolArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L271">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L271">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1986,7 +1986,7 @@ A `sku` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ElasticPoolArgs-zoneRedundant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L275">property <b>zoneRedundant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L275">property <b>zoneRedundant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneRedundant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1994,7 +1994,7 @@ A mapping of tags to assign to the resource.
 Whether or not this elastic pool is zone redundant. `tier` needs to be `Premium` for `DTU` based  or `BusinessCritical` for `vCore` based `sku`. Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="ElasticPoolState" data-link-title="ElasticPoolState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L181">
         interface <strong>ElasticPoolState</strong>
     </a>
 </h3>
@@ -2004,7 +2004,7 @@ Whether or not this elastic pool is zone redundant. `tier` needs to be `Premium`
 Input properties used for looking up and filtering ElasticPool resources.
 
 <h4 class="pdoc-member-header" id="ElasticPoolState-licenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L185">property <b>licenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L185">property <b>licenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2012,7 +2012,7 @@ Input properties used for looking up and filtering ElasticPool resources.
 Specifies the license type applied to this database. Possible values are `LicenseIncluded` and `BasePrice`.
 
 <h4 class="pdoc-member-header" id="ElasticPoolState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L189">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L189">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2020,7 +2020,7 @@ Specifies the license type applied to this database. Possible values are `Licens
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ElasticPoolState-maxSizeBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L193">property <b>maxSizeBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L193">property <b>maxSizeBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSizeBytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2028,7 +2028,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The max data size of the elastic pool in bytes. Conflicts with `maxSizeGb`.
 
 <h4 class="pdoc-member-header" id="ElasticPoolState-maxSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L197">property <b>maxSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L197">property <b>maxSizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSizeGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2036,7 +2036,7 @@ The max data size of the elastic pool in bytes. Conflicts with `maxSizeGb`.
 The max data size of the elastic pool in gigabytes. Conflicts with `maxSizeBytes`.
 
 <h4 class="pdoc-member-header" id="ElasticPoolState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L201">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L201">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2044,7 +2044,7 @@ The max data size of the elastic pool in gigabytes. Conflicts with `maxSizeBytes
 The name of the elastic pool. This needs to be globally unique. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ElasticPoolState-perDatabaseSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L205">property <b>perDatabaseSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L205">property <b>perDatabaseSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>perDatabaseSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ElasticPoolPerDatabaseSettings'>ElasticPoolPerDatabaseSettings</a>&gt;;</code></pre>
@@ -2052,7 +2052,7 @@ The name of the elastic pool. This needs to be globally unique. Changing this fo
 A `perDatabaseSettings` block as defined below.
 
 <h4 class="pdoc-member-header" id="ElasticPoolState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L209">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L209">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2060,7 +2060,7 @@ A `perDatabaseSettings` block as defined below.
 The name of the resource group in which to create the elastic pool. This must be the same as the resource group of the underlying SQL server.
 
 <h4 class="pdoc-member-header" id="ElasticPoolState-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L213">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L213">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2068,7 +2068,7 @@ The name of the resource group in which to create the elastic pool. This must be
 The name of the SQL Server on which to create the elastic pool. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ElasticPoolState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L217">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L217">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ElasticPoolSku'>ElasticPoolSku</a>&gt;;</code></pre>
@@ -2076,7 +2076,7 @@ The name of the SQL Server on which to create the elastic pool. Changing this fo
 A `sku` block as defined below.
 
 <h4 class="pdoc-member-header" id="ElasticPoolState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L221">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L221">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2084,7 +2084,7 @@ A `sku` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ElasticPoolState-zoneRedundant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/elasticPool.ts#L225">property <b>zoneRedundant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/elasticPool.ts#L225">property <b>zoneRedundant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneRedundant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2092,7 +2092,7 @@ A mapping of tags to assign to the resource.
 Whether or not this elastic pool is zone redundant. `tier` needs to be `Premium` for `DTU` based  or `BusinessCritical` for `vCore` based `sku`. Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="GetDatabaseArgs" data-link-title="GetDatabaseArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getDatabase.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getDatabase.ts#L42">
         interface <strong>GetDatabaseArgs</strong>
     </a>
 </h3>
@@ -2102,7 +2102,7 @@ Whether or not this elastic pool is zone redundant. `tier` needs to be `Premium`
 A collection of arguments for invoking getDatabase.
 
 <h4 class="pdoc-member-header" id="GetDatabaseArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getDatabase.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getDatabase.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2110,7 +2110,7 @@ A collection of arguments for invoking getDatabase.
 The name of the Ms SQL Database.
 
 <h4 class="pdoc-member-header" id="GetDatabaseArgs-serverId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getDatabase.ts#L50">property <b>serverId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getDatabase.ts#L50">property <b>serverId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2118,7 +2118,7 @@ The name of the Ms SQL Database.
 The id of the Ms SQL Server on which to create the database.
 
 <h3 class="pdoc-module-header" id="GetDatabaseResult" data-link-title="GetDatabaseResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getDatabase.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getDatabase.ts#L56">
         interface <strong>GetDatabaseResult</strong>
     </a>
 </h3>
@@ -2128,7 +2128,7 @@ The id of the Ms SQL Server on which to create the database.
 A collection of values returned by getDatabase.
 
 <h4 class="pdoc-member-header" id="GetDatabaseResult-collation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getDatabase.ts#L60">property <b>collation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getDatabase.ts#L60">property <b>collation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2136,7 +2136,7 @@ A collection of values returned by getDatabase.
 The collation of the database.
 
 <h4 class="pdoc-member-header" id="GetDatabaseResult-elasticPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getDatabase.ts#L64">property <b>elasticPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getDatabase.ts#L64">property <b>elasticPoolId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticPoolId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2144,7 +2144,7 @@ The collation of the database.
 The id of the elastic pool containing this database.
 
 <h4 class="pdoc-member-header" id="GetDatabaseResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getDatabase.ts#L68">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getDatabase.ts#L68">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2152,7 +2152,7 @@ The id of the elastic pool containing this database.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDatabaseResult-licenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getDatabase.ts#L72">property <b>licenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getDatabase.ts#L72">property <b>licenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2160,7 +2160,7 @@ The provider-assigned unique ID for this managed resource.
 The license type to apply for this database.
 
 <h4 class="pdoc-member-header" id="GetDatabaseResult-maxSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getDatabase.ts#L76">property <b>maxSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getDatabase.ts#L76">property <b>maxSizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSizeGb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2168,12 +2168,12 @@ The license type to apply for this database.
 The max size of the database in gigabytes.
 
 <h4 class="pdoc-member-header" id="GetDatabaseResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getDatabase.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getDatabase.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDatabaseResult-readReplicaCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getDatabase.ts#L81">property <b>readReplicaCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getDatabase.ts#L81">property <b>readReplicaCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readReplicaCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2181,7 +2181,7 @@ The max size of the database in gigabytes.
 The number of readonly secondary replicas associated with the database to which readonly application intent connections may be routed.
 
 <h4 class="pdoc-member-header" id="GetDatabaseResult-readScale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getDatabase.ts#L85">property <b>readScale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getDatabase.ts#L85">property <b>readScale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readScale: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2189,12 +2189,12 @@ The number of readonly secondary replicas associated with the database to which 
 If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica.
 
 <h4 class="pdoc-member-header" id="GetDatabaseResult-serverId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getDatabase.ts#L86">property <b>serverId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getDatabase.ts#L86">property <b>serverId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDatabaseResult-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getDatabase.ts#L90">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getDatabase.ts#L90">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2202,7 +2202,7 @@ If enabled, connections that have application intent set to readonly in their co
 The name of the sku of the database.
 
 <h4 class="pdoc-member-header" id="GetDatabaseResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getDatabase.ts#L94">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getDatabase.ts#L94">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2210,7 +2210,7 @@ The name of the sku of the database.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="GetDatabaseResult-zoneRedundant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getDatabase.ts#L98">property <b>zoneRedundant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getDatabase.ts#L98">property <b>zoneRedundant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneRedundant: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2218,7 +2218,7 @@ A mapping of tags to assign to the resource.
 Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
 
 <h3 class="pdoc-module-header" id="GetElasticPoolArgs" data-link-title="GetElasticPoolArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getElasticPool.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getElasticPool.ts#L44">
         interface <strong>GetElasticPoolArgs</strong>
     </a>
 </h3>
@@ -2228,7 +2228,7 @@ Whether or not this database is zone redundant, which means the replicas of this
 A collection of arguments for invoking getElasticPool.
 
 <h4 class="pdoc-member-header" id="GetElasticPoolArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getElasticPool.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getElasticPool.ts#L48">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2236,7 +2236,7 @@ A collection of arguments for invoking getElasticPool.
 The name of the elastic pool.
 
 <h4 class="pdoc-member-header" id="GetElasticPoolArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getElasticPool.ts#L52">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getElasticPool.ts#L52">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2244,7 +2244,7 @@ The name of the elastic pool.
 The name of the resource group which contains the elastic pool.
 
 <h4 class="pdoc-member-header" id="GetElasticPoolArgs-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getElasticPool.ts#L56">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getElasticPool.ts#L56">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2252,7 +2252,7 @@ The name of the resource group which contains the elastic pool.
 The name of the SQL Server which contains the elastic pool.
 
 <h3 class="pdoc-module-header" id="GetElasticPoolResult" data-link-title="GetElasticPoolResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getElasticPool.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getElasticPool.ts#L62">
         interface <strong>GetElasticPoolResult</strong>
     </a>
 </h3>
@@ -2262,7 +2262,7 @@ The name of the SQL Server which contains the elastic pool.
 A collection of values returned by getElasticPool.
 
 <h4 class="pdoc-member-header" id="GetElasticPoolResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getElasticPool.ts#L66">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getElasticPool.ts#L66">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2270,7 +2270,7 @@ A collection of values returned by getElasticPool.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetElasticPoolResult-licenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getElasticPool.ts#L70">property <b>licenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getElasticPool.ts#L70">property <b>licenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2278,7 +2278,7 @@ The provider-assigned unique ID for this managed resource.
 The license type to apply for this database.
 
 <h4 class="pdoc-member-header" id="GetElasticPoolResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getElasticPool.ts#L74">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getElasticPool.ts#L74">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2286,7 +2286,7 @@ The license type to apply for this database.
 Specifies the supported Azure location where the resource exists.
 
 <h4 class="pdoc-member-header" id="GetElasticPoolResult-maxSizeBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getElasticPool.ts#L78">property <b>maxSizeBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getElasticPool.ts#L78">property <b>maxSizeBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSizeBytes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2294,7 +2294,7 @@ Specifies the supported Azure location where the resource exists.
 The max data size of the elastic pool in bytes.
 
 <h4 class="pdoc-member-header" id="GetElasticPoolResult-maxSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getElasticPool.ts#L82">property <b>maxSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getElasticPool.ts#L82">property <b>maxSizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSizeGb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2302,12 +2302,12 @@ The max data size of the elastic pool in bytes.
 The max data size of the elastic pool in gigabytes.
 
 <h4 class="pdoc-member-header" id="GetElasticPoolResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getElasticPool.ts#L83">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getElasticPool.ts#L83">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetElasticPoolResult-perDbMaxCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getElasticPool.ts#L87">property <b>perDbMaxCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getElasticPool.ts#L87">property <b>perDbMaxCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>perDbMaxCapacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2315,7 +2315,7 @@ The max data size of the elastic pool in gigabytes.
 The maximum capacity any one database can consume.
 
 <h4 class="pdoc-member-header" id="GetElasticPoolResult-perDbMinCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getElasticPool.ts#L91">property <b>perDbMinCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getElasticPool.ts#L91">property <b>perDbMinCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>perDbMinCapacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2323,17 +2323,17 @@ The maximum capacity any one database can consume.
 The minimum capacity all databases are guaranteed.
 
 <h4 class="pdoc-member-header" id="GetElasticPoolResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getElasticPool.ts#L92">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getElasticPool.ts#L92">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetElasticPoolResult-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getElasticPool.ts#L93">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getElasticPool.ts#L93">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetElasticPoolResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getElasticPool.ts#L97">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getElasticPool.ts#L97">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2341,7 +2341,7 @@ The minimum capacity all databases are guaranteed.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="GetElasticPoolResult-zoneRedundant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/getElasticPool.ts#L101">property <b>zoneRedundant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/getElasticPool.ts#L101">property <b>zoneRedundant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneRedundant: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2349,7 +2349,7 @@ A mapping of tags to assign to the resource.
 Whether or not this elastic pool is zone redundant.
 
 <h3 class="pdoc-module-header" id="ServerArgs" data-link-title="ServerArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L256">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L256">
         interface <strong>ServerArgs</strong>
     </a>
 </h3>
@@ -2359,7 +2359,7 @@ Whether or not this elastic pool is zone redundant.
 The set of arguments for constructing a Server resource.
 
 <h4 class="pdoc-member-header" id="ServerArgs-administratorLogin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L260">property <b>administratorLogin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L260">property <b>administratorLogin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>administratorLogin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2367,7 +2367,7 @@ The set of arguments for constructing a Server resource.
 The administrator login name for the new server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerArgs-administratorLoginPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L264">property <b>administratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L264">property <b>administratorLoginPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>administratorLoginPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2375,7 +2375,7 @@ The administrator login name for the new server. Changing this forces a new reso
 The password associated with the `administratorLogin` user. Needs to comply with Azure's [Password Policy](https://msdn.microsoft.com/library/ms161959.aspx)
 
 <h4 class="pdoc-member-header" id="ServerArgs-azureadAdministrator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L268">property <b>azureadAdministrator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L268">property <b>azureadAdministrator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureadAdministrator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerAzureadAdministrator'>ServerAzureadAdministrator</a>&gt;;</code></pre>
@@ -2383,7 +2383,7 @@ The password associated with the `administratorLogin` user. Needs to comply with
 An `azureadAdministrator` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServerArgs-connectionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L272">property <b>connectionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L272">property <b>connectionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2391,7 +2391,7 @@ An `azureadAdministrator` block as defined below.
 The connection policy the server will use. Possible values are `Default`, `Proxy`, and `Redirect`. Defaults to `Default`.
 
 <h4 class="pdoc-member-header" id="ServerArgs-extendedAuditingPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L276">property <b>extendedAuditingPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L276">property <b>extendedAuditingPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedAuditingPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerExtendedAuditingPolicy'>ServerExtendedAuditingPolicy</a>&gt;;</code></pre>
@@ -2399,7 +2399,7 @@ The connection policy the server will use. Possible values are `Default`, `Proxy
 A `extendedAuditingPolicy` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServerArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L280">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L280">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerIdentity'>ServerIdentity</a>&gt;;</code></pre>
@@ -2407,7 +2407,7 @@ A `extendedAuditingPolicy` block as defined below.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServerArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L284">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L284">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2415,7 +2415,7 @@ An `identity` block as defined below.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L288">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L288">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2423,7 +2423,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The name of the Microsoft SQL Server. This needs to be globally unique within Azure.
 
 <h4 class="pdoc-member-header" id="ServerArgs-publicNetworkAccessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L292">property <b>publicNetworkAccessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L292">property <b>publicNetworkAccessEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicNetworkAccessEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2431,7 +2431,7 @@ The name of the Microsoft SQL Server. This needs to be globally unique within Az
 Whether or not public network access is allowed for this server. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ServerArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L296">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L296">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2439,7 +2439,7 @@ Whether or not public network access is allowed for this server. Defaults to `tr
 The name of the resource group in which to create the Microsoft SQL Server.
 
 <h4 class="pdoc-member-header" id="ServerArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L300">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L300">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2447,7 +2447,7 @@ The name of the resource group in which to create the Microsoft SQL Server.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ServerArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L304">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L304">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2455,7 +2455,7 @@ A mapping of tags to assign to the resource.
 The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).
 
 <h3 class="pdoc-module-header" id="ServerSecurityAlertPolicyArgs" data-link-title="ServerSecurityAlertPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L209">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L209">
         interface <strong>ServerSecurityAlertPolicyArgs</strong>
     </a>
 </h3>
@@ -2465,7 +2465,7 @@ The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 
 The set of arguments for constructing a ServerSecurityAlertPolicy resource.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicyArgs-disabledAlerts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L213">property <b>disabledAlerts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L213">property <b>disabledAlerts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabledAlerts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2473,7 +2473,7 @@ The set of arguments for constructing a ServerSecurityAlertPolicy resource.
 Specifies an array of alerts that are disabled. Allowed values are: `Sql_Injection`, `Sql_Injection_Vulnerability`, `Access_Anomaly`, `Data_Exfiltration`, `Unsafe_Action`.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicyArgs-emailAccountAdmins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L217">property <b>emailAccountAdmins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L217">property <b>emailAccountAdmins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailAccountAdmins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2481,7 +2481,7 @@ Specifies an array of alerts that are disabled. Allowed values are: `Sql_Injecti
 Boolean flag which specifies if the alert is sent to the account administrators or not. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicyArgs-emailAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L221">property <b>emailAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L221">property <b>emailAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2489,7 +2489,7 @@ Boolean flag which specifies if the alert is sent to the account administrators 
 Specifies an array of e-mail addresses to which the alert is sent.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicyArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L225">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L225">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2497,7 +2497,7 @@ Specifies an array of e-mail addresses to which the alert is sent.
 The name of the resource group that contains the MS SQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicyArgs-retentionDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L229">property <b>retentionDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L229">property <b>retentionDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2505,7 +2505,7 @@ The name of the resource group that contains the MS SQL Server. Changing this fo
 Specifies the number of days to keep in the Threat Detection audit logs. Defaults to `0`.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicyArgs-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L233">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L233">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2513,7 +2513,7 @@ Specifies the number of days to keep in the Threat Detection audit logs. Default
 Specifies the name of the MS SQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicyArgs-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L237">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L237">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2521,7 +2521,7 @@ Specifies the name of the MS SQL Server. Changing this forces a new resource to 
 Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database server. Allowed values are: `Disabled`, `Enabled`.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicyArgs-storageAccountAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L241">property <b>storageAccountAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L241">property <b>storageAccountAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2529,7 +2529,7 @@ Specifies the state of the policy, whether it is enabled or disabled or a policy
 Specifies the identifier key of the Threat Detection audit storage account.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicyArgs-storageEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L245">property <b>storageEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L245">property <b>storageEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2537,7 +2537,7 @@ Specifies the identifier key of the Threat Detection audit storage account.
 Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
 
 <h3 class="pdoc-module-header" id="ServerSecurityAlertPolicyState" data-link-title="ServerSecurityAlertPolicyState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L167">
         interface <strong>ServerSecurityAlertPolicyState</strong>
     </a>
 </h3>
@@ -2547,7 +2547,7 @@ Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.ne
 Input properties used for looking up and filtering ServerSecurityAlertPolicy resources.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicyState-disabledAlerts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L171">property <b>disabledAlerts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L171">property <b>disabledAlerts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabledAlerts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2555,7 +2555,7 @@ Input properties used for looking up and filtering ServerSecurityAlertPolicy res
 Specifies an array of alerts that are disabled. Allowed values are: `Sql_Injection`, `Sql_Injection_Vulnerability`, `Access_Anomaly`, `Data_Exfiltration`, `Unsafe_Action`.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicyState-emailAccountAdmins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L175">property <b>emailAccountAdmins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L175">property <b>emailAccountAdmins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailAccountAdmins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2563,7 +2563,7 @@ Specifies an array of alerts that are disabled. Allowed values are: `Sql_Injecti
 Boolean flag which specifies if the alert is sent to the account administrators or not. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicyState-emailAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L179">property <b>emailAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L179">property <b>emailAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2571,7 +2571,7 @@ Boolean flag which specifies if the alert is sent to the account administrators 
 Specifies an array of e-mail addresses to which the alert is sent.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicyState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L183">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L183">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2579,7 +2579,7 @@ Specifies an array of e-mail addresses to which the alert is sent.
 The name of the resource group that contains the MS SQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicyState-retentionDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L187">property <b>retentionDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L187">property <b>retentionDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2587,7 +2587,7 @@ The name of the resource group that contains the MS SQL Server. Changing this fo
 Specifies the number of days to keep in the Threat Detection audit logs. Defaults to `0`.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicyState-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L191">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L191">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2595,7 +2595,7 @@ Specifies the number of days to keep in the Threat Detection audit logs. Default
 Specifies the name of the MS SQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicyState-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L195">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L195">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2603,7 +2603,7 @@ Specifies the name of the MS SQL Server. Changing this forces a new resource to 
 Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database server. Allowed values are: `Disabled`, `Enabled`.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicyState-storageAccountAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L199">property <b>storageAccountAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L199">property <b>storageAccountAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2611,7 +2611,7 @@ Specifies the state of the policy, whether it is enabled or disabled or a policy
 Specifies the identifier key of the Threat Detection audit storage account.
 
 <h4 class="pdoc-member-header" id="ServerSecurityAlertPolicyState-storageEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L203">property <b>storageEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverSecurityAlertPolicy.ts#L203">property <b>storageEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2619,7 +2619,7 @@ Specifies the identifier key of the Threat Detection audit storage account.
 Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
 
 <h3 class="pdoc-module-header" id="ServerState" data-link-title="ServerState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L198">
         interface <strong>ServerState</strong>
     </a>
 </h3>
@@ -2629,7 +2629,7 @@ Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.ne
 Input properties used for looking up and filtering Server resources.
 
 <h4 class="pdoc-member-header" id="ServerState-administratorLogin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L202">property <b>administratorLogin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L202">property <b>administratorLogin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>administratorLogin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2637,7 +2637,7 @@ Input properties used for looking up and filtering Server resources.
 The administrator login name for the new server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerState-administratorLoginPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L206">property <b>administratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L206">property <b>administratorLoginPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>administratorLoginPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2645,7 +2645,7 @@ The administrator login name for the new server. Changing this forces a new reso
 The password associated with the `administratorLogin` user. Needs to comply with Azure's [Password Policy](https://msdn.microsoft.com/library/ms161959.aspx)
 
 <h4 class="pdoc-member-header" id="ServerState-azureadAdministrator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L210">property <b>azureadAdministrator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L210">property <b>azureadAdministrator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureadAdministrator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerAzureadAdministrator'>ServerAzureadAdministrator</a>&gt;;</code></pre>
@@ -2653,7 +2653,7 @@ The password associated with the `administratorLogin` user. Needs to comply with
 An `azureadAdministrator` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServerState-connectionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L214">property <b>connectionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L214">property <b>connectionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2661,7 +2661,7 @@ An `azureadAdministrator` block as defined below.
 The connection policy the server will use. Possible values are `Default`, `Proxy`, and `Redirect`. Defaults to `Default`.
 
 <h4 class="pdoc-member-header" id="ServerState-extendedAuditingPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L218">property <b>extendedAuditingPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L218">property <b>extendedAuditingPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedAuditingPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerExtendedAuditingPolicy'>ServerExtendedAuditingPolicy</a>&gt;;</code></pre>
@@ -2669,7 +2669,7 @@ The connection policy the server will use. Possible values are `Default`, `Proxy
 A `extendedAuditingPolicy` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServerState-fullyQualifiedDomainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L222">property <b>fullyQualifiedDomainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L222">property <b>fullyQualifiedDomainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fullyQualifiedDomainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2677,7 +2677,7 @@ A `extendedAuditingPolicy` block as defined below.
 The fully qualified domain name of the Azure SQL Server (e.g. myServerName.database.windows.net)
 
 <h4 class="pdoc-member-header" id="ServerState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L226">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L226">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerIdentity'>ServerIdentity</a>&gt;;</code></pre>
@@ -2685,7 +2685,7 @@ The fully qualified domain name of the Azure SQL Server (e.g. myServerName.datab
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServerState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L230">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L230">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2693,7 +2693,7 @@ An `identity` block as defined below.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L234">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L234">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2701,7 +2701,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The name of the Microsoft SQL Server. This needs to be globally unique within Azure.
 
 <h4 class="pdoc-member-header" id="ServerState-publicNetworkAccessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L238">property <b>publicNetworkAccessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L238">property <b>publicNetworkAccessEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicNetworkAccessEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2709,7 +2709,7 @@ The name of the Microsoft SQL Server. This needs to be globally unique within Az
 Whether or not public network access is allowed for this server. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ServerState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L242">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L242">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2717,7 +2717,7 @@ Whether or not public network access is allowed for this server. Defaults to `tr
 The name of the resource group in which to create the Microsoft SQL Server.
 
 <h4 class="pdoc-member-header" id="ServerState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L246">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L246">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2725,7 +2725,7 @@ The name of the resource group in which to create the Microsoft SQL Server.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ServerState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/server.ts#L250">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/server.ts#L250">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2733,7 +2733,7 @@ A mapping of tags to assign to the resource.
 The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).
 
 <h3 class="pdoc-module-header" id="ServerVulnerabilityAssessmentArgs" data-link-title="ServerVulnerabilityAssessmentArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L178">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L178">
         interface <strong>ServerVulnerabilityAssessmentArgs</strong>
     </a>
 </h3>
@@ -2743,7 +2743,7 @@ The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 
 The set of arguments for constructing a ServerVulnerabilityAssessment resource.
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessmentArgs-recurringScans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L182">property <b>recurringScans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L182">property <b>recurringScans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurringScans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerVulnerabilityAssessmentRecurringScans'>ServerVulnerabilityAssessmentRecurringScans</a>&gt;;</code></pre>
@@ -2751,7 +2751,7 @@ The set of arguments for constructing a ServerVulnerabilityAssessment resource.
 The recurring scans settings. The `recurringScans` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessmentArgs-serverSecurityAlertPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L186">property <b>serverSecurityAlertPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L186">property <b>serverSecurityAlertPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverSecurityAlertPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2759,7 +2759,7 @@ The recurring scans settings. The `recurringScans` block supports fields documen
 The id of the security alert policy of the MS SQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessmentArgs-storageAccountAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L190">property <b>storageAccountAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L190">property <b>storageAccountAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2767,7 +2767,7 @@ The id of the security alert policy of the MS SQL Server. Changing this forces a
 Specifies the identifier key of the storage account for vulnerability assessment scan results. If `storageContainerSasKey` isn't specified, `storageAccountAccessKey` is required.
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessmentArgs-storageContainerPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L194">property <b>storageContainerPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L194">property <b>storageContainerPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageContainerPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2775,7 +2775,7 @@ Specifies the identifier key of the storage account for vulnerability assessment
 A blob storage container path to hold the scan results (e.g. https://myStorage.blob.core.windows.net/VaScans/).
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessmentArgs-storageContainerSasKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L198">property <b>storageContainerSasKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L198">property <b>storageContainerSasKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageContainerSasKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2783,7 +2783,7 @@ A blob storage container path to hold the scan results (e.g. https://myStorage.b
 A shared access signature (SAS Key) that has write access to the blob container specified in `storageContainerPath` parameter. If `storageAccountAccessKey` isn't specified, `storageContainerSasKey` is required.
 
 <h3 class="pdoc-module-header" id="ServerVulnerabilityAssessmentState" data-link-title="ServerVulnerabilityAssessmentState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L152">
         interface <strong>ServerVulnerabilityAssessmentState</strong>
     </a>
 </h3>
@@ -2793,7 +2793,7 @@ A shared access signature (SAS Key) that has write access to the blob container 
 Input properties used for looking up and filtering ServerVulnerabilityAssessment resources.
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessmentState-recurringScans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L156">property <b>recurringScans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L156">property <b>recurringScans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurringScans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerVulnerabilityAssessmentRecurringScans'>ServerVulnerabilityAssessmentRecurringScans</a>&gt;;</code></pre>
@@ -2801,7 +2801,7 @@ Input properties used for looking up and filtering ServerVulnerabilityAssessment
 The recurring scans settings. The `recurringScans` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessmentState-serverSecurityAlertPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L160">property <b>serverSecurityAlertPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L160">property <b>serverSecurityAlertPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverSecurityAlertPolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2809,7 +2809,7 @@ The recurring scans settings. The `recurringScans` block supports fields documen
 The id of the security alert policy of the MS SQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessmentState-storageAccountAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L164">property <b>storageAccountAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L164">property <b>storageAccountAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2817,7 +2817,7 @@ The id of the security alert policy of the MS SQL Server. Changing this forces a
 Specifies the identifier key of the storage account for vulnerability assessment scan results. If `storageContainerSasKey` isn't specified, `storageAccountAccessKey` is required.
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessmentState-storageContainerPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L168">property <b>storageContainerPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L168">property <b>storageContainerPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageContainerPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2825,7 +2825,7 @@ Specifies the identifier key of the storage account for vulnerability assessment
 A blob storage container path to hold the scan results (e.g. https://myStorage.blob.core.windows.net/VaScans/).
 
 <h4 class="pdoc-member-header" id="ServerVulnerabilityAssessmentState-storageContainerSasKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L172">property <b>storageContainerSasKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/serverVulnerabilityAssessment.ts#L172">property <b>storageContainerSasKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageContainerSasKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2833,7 +2833,7 @@ A blob storage container path to hold the scan results (e.g. https://myStorage.b
 A shared access signature (SAS Key) that has write access to the blob container specified in `storageContainerPath` parameter. If `storageAccountAccessKey` isn't specified, `storageContainerSasKey` is required.
 
 <h3 class="pdoc-module-header" id="VirtualMachineArgs" data-link-title="VirtualMachineArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L210">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L210">
         interface <strong>VirtualMachineArgs</strong>
     </a>
 </h3>
@@ -2843,7 +2843,7 @@ A shared access signature (SAS Key) that has write access to the blob container 
 The set of arguments for constructing a VirtualMachine resource.
 
 <h4 class="pdoc-member-header" id="VirtualMachineArgs-autoPatching">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L214">property <b>autoPatching</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L214">property <b>autoPatching</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoPatching?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineAutoPatching'>VirtualMachineAutoPatching</a>&gt;;</code></pre>
@@ -2851,7 +2851,7 @@ The set of arguments for constructing a VirtualMachine resource.
 An `autoPatching` block as defined below.
 
 <h4 class="pdoc-member-header" id="VirtualMachineArgs-keyVaultCredential">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L218">property <b>keyVaultCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L218">property <b>keyVaultCredential</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineKeyVaultCredential'>VirtualMachineKeyVaultCredential</a>&gt;;</code></pre>
@@ -2859,7 +2859,7 @@ An `autoPatching` block as defined below.
 (Optional) An `keyVaultCredential` block as defined below.
 
 <h4 class="pdoc-member-header" id="VirtualMachineArgs-rServicesEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L222">property <b>rServicesEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L222">property <b>rServicesEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rServicesEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2867,7 +2867,7 @@ An `autoPatching` block as defined below.
 Should R Services be enabled?
 
 <h4 class="pdoc-member-header" id="VirtualMachineArgs-sqlConnectivityPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L226">property <b>sqlConnectivityPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L226">property <b>sqlConnectivityPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlConnectivityPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2875,7 +2875,7 @@ Should R Services be enabled?
 The SQL Server port. Defaults to `1433`.
 
 <h4 class="pdoc-member-header" id="VirtualMachineArgs-sqlConnectivityType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L230">property <b>sqlConnectivityType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L230">property <b>sqlConnectivityType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlConnectivityType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2883,7 +2883,7 @@ The SQL Server port. Defaults to `1433`.
 The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
 
 <h4 class="pdoc-member-header" id="VirtualMachineArgs-sqlConnectivityUpdatePassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L234">property <b>sqlConnectivityUpdatePassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L234">property <b>sqlConnectivityUpdatePassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlConnectivityUpdatePassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2891,7 +2891,7 @@ The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
 The SQL Server sysadmin login password.
 
 <h4 class="pdoc-member-header" id="VirtualMachineArgs-sqlConnectivityUpdateUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L238">property <b>sqlConnectivityUpdateUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L238">property <b>sqlConnectivityUpdateUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlConnectivityUpdateUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2899,7 +2899,7 @@ The SQL Server sysadmin login password.
 The SQL Server sysadmin login to create.
 
 <h4 class="pdoc-member-header" id="VirtualMachineArgs-sqlLicenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L242">property <b>sqlLicenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L242">property <b>sqlLicenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlLicenseType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2907,7 +2907,7 @@ The SQL Server sysadmin login to create.
 The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualMachineArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L246">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L246">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2915,7 +2915,7 @@ The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) a
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="VirtualMachineArgs-virtualMachineId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L250">property <b>virtualMachineId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L250">property <b>virtualMachineId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>virtualMachineId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2923,7 +2923,7 @@ A mapping of tags to assign to the resource.
 The ID of the Virtual Machine. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="VirtualMachineState" data-link-title="VirtualMachineState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L164">
         interface <strong>VirtualMachineState</strong>
     </a>
 </h3>
@@ -2933,7 +2933,7 @@ The ID of the Virtual Machine. Changing this forces a new resource to be created
 Input properties used for looking up and filtering VirtualMachine resources.
 
 <h4 class="pdoc-member-header" id="VirtualMachineState-autoPatching">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L168">property <b>autoPatching</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L168">property <b>autoPatching</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoPatching?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineAutoPatching'>VirtualMachineAutoPatching</a>&gt;;</code></pre>
@@ -2941,7 +2941,7 @@ Input properties used for looking up and filtering VirtualMachine resources.
 An `autoPatching` block as defined below.
 
 <h4 class="pdoc-member-header" id="VirtualMachineState-keyVaultCredential">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L172">property <b>keyVaultCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L172">property <b>keyVaultCredential</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineKeyVaultCredential'>VirtualMachineKeyVaultCredential</a>&gt;;</code></pre>
@@ -2949,7 +2949,7 @@ An `autoPatching` block as defined below.
 (Optional) An `keyVaultCredential` block as defined below.
 
 <h4 class="pdoc-member-header" id="VirtualMachineState-rServicesEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L176">property <b>rServicesEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L176">property <b>rServicesEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rServicesEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2957,7 +2957,7 @@ An `autoPatching` block as defined below.
 Should R Services be enabled?
 
 <h4 class="pdoc-member-header" id="VirtualMachineState-sqlConnectivityPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L180">property <b>sqlConnectivityPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L180">property <b>sqlConnectivityPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlConnectivityPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2965,7 +2965,7 @@ Should R Services be enabled?
 The SQL Server port. Defaults to `1433`.
 
 <h4 class="pdoc-member-header" id="VirtualMachineState-sqlConnectivityType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L184">property <b>sqlConnectivityType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L184">property <b>sqlConnectivityType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlConnectivityType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2973,7 +2973,7 @@ The SQL Server port. Defaults to `1433`.
 The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
 
 <h4 class="pdoc-member-header" id="VirtualMachineState-sqlConnectivityUpdatePassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L188">property <b>sqlConnectivityUpdatePassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L188">property <b>sqlConnectivityUpdatePassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlConnectivityUpdatePassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2981,7 +2981,7 @@ The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
 The SQL Server sysadmin login password.
 
 <h4 class="pdoc-member-header" id="VirtualMachineState-sqlConnectivityUpdateUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L192">property <b>sqlConnectivityUpdateUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L192">property <b>sqlConnectivityUpdateUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlConnectivityUpdateUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2989,7 +2989,7 @@ The SQL Server sysadmin login password.
 The SQL Server sysadmin login to create.
 
 <h4 class="pdoc-member-header" id="VirtualMachineState-sqlLicenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L196">property <b>sqlLicenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L196">property <b>sqlLicenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlLicenseType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2997,7 +2997,7 @@ The SQL Server sysadmin login to create.
 The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualMachineState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L200">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L200">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3005,7 +3005,7 @@ The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) a
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="VirtualMachineState-virtualMachineId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/mssql/virtualMachine.ts#L204">property <b>virtualMachineId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/mssql/virtualMachine.ts#L204">property <b>virtualMachineId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>virtualMachineId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

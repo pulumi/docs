@@ -97,8 +97,8 @@ func main() {
 			return err
 		}
 		exampleSqlServer, err := sql.NewSqlServer(ctx, "exampleSqlServer", &sql.SqlServerArgs{
-			ResourceGroupName:          pulumi.String(azurerm_resource_group.Example.Name),
-			Location:                   pulumi.String(azurerm_resource_group.Example.Location),
+			ResourceGroupName:          pulumi.Any(azurerm_resource_group.Example.Name),
+			Location:                   pulumi.Any(azurerm_resource_group.Example.Location),
 			Version:                    pulumi.String("12.0"),
 			AdministratorLogin:         pulumi.String("dbadmin"),
 			AdministratorLoginPassword: pulumi.String("example-password"),
@@ -107,8 +107,8 @@ func main() {
 			return err
 		}
 		exampleDatabase, err := sql.NewDatabase(ctx, "exampleDatabase", &sql.DatabaseArgs{
-			ResourceGroupName:             pulumi.String(azurerm_resource_group.Example.Name),
-			Location:                      pulumi.String(azurerm_resource_group.Example.Location),
+			ResourceGroupName:             pulumi.Any(azurerm_resource_group.Example.Name),
+			Location:                      pulumi.Any(azurerm_resource_group.Example.Location),
 			ServerName:                    exampleSqlServer.Name,
 			RequestedServiceObjectiveName: pulumi.String("S0"),
 			Collation:                     pulumi.String("SQL_LATIN1_GENERAL_CP1_CI_AS"),
@@ -119,8 +119,8 @@ func main() {
 			return err
 		}
 		_, err = streamanalytics.NewOutputMssql(ctx, "exampleOutputMssql", &streamanalytics.OutputMssqlArgs{
-			StreamAnalyticsJobName: pulumi.String(azurerm_stream_analytics_job.Example.Name),
-			ResourceGroupName:      pulumi.String(azurerm_stream_analytics_job.Example.Resource_group_name),
+			StreamAnalyticsJobName: pulumi.Any(azurerm_stream_analytics_job.Example.Name),
+			ResourceGroupName:      pulumi.Any(azurerm_stream_analytics_job.Example.Resource_group_name),
 			Server:                 exampleSqlServer.FullyQualifiedDomainName,
 			User:                   exampleSqlServer.AdministratorLogin,
 			Password:               exampleSqlServer.AdministratorLoginPassword,

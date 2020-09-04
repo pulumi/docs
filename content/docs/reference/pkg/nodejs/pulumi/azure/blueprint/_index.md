@@ -3,7 +3,7 @@ title: "Module blueprint"
 title_tag: "Module blueprint | Package @pulumi/azure | Node.js SDK"
 linktitle: "blueprint"
 meta_desc: "Explore members of the blueprint module in the @pulumi/azure package."
-git_sha: "91032c2a3b439090a2e0c91de8152754746653c8"
+git_sha: "87ec45403dcdc845364bf2cd86aa71620069a540"
 block_external_search_index: true
 ---
 
@@ -39,14 +39,88 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Assignment" data-link-title="Assignment">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L83">
         Resource <strong>Assignment</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Assignment</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Manages a Blueprint Assignment resource
+
+> **NOTE:** Azure Blueprints are in Preview and potentially subject to breaking change without notice.
+
+> **NOTE:** Azure Blueprint Assignments can only be applied to Subscriptions.  Assignments to Management Groups is not currently supported by the service or by this provider.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleSubscription = azure.core.getSubscription({});
+const exampleDefinition = exampleSubscription.then(exampleSubscription => azure.blueprint.getDefinition({
+    name: "exampleBlueprint",
+    scopeId: exampleSubscription.id,
+}));
+const examplePublishedVersion = Promise.all([exampleDefinition, exampleDefinition]).then(([exampleDefinition, exampleDefinition1]) => azure.blueprint.getPublishedVersion({
+    scopeId: exampleDefinition.scopeId,
+    blueprintName: exampleDefinition1.name,
+    version: "v1.0.0",
+}));
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {
+    location: "westeurope",
+    tags: {
+        Environment: "example",
+    },
+});
+const exampleUserAssignedIdentity = new azure.authorization.UserAssignedIdentity("exampleUserAssignedIdentity", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+});
+const operator = new azure.authorization.Assignment("operator", {
+    scope: exampleSubscription.then(exampleSubscription => exampleSubscription.id),
+    roleDefinitionName: "Blueprint Operator",
+    principalId: exampleUserAssignedIdentity.principalId,
+});
+const owner = new azure.authorization.Assignment("owner", {
+    scope: exampleSubscription.then(exampleSubscription => exampleSubscription.id),
+    roleDefinitionName: "Owner",
+    principalId: exampleUserAssignedIdentity.principalId,
+});
+const exampleAssignment = new azure.blueprint.Assignment("exampleAssignment", {
+    targetSubscriptionId: exampleSubscription.then(exampleSubscription => exampleSubscription.id),
+    versionId: examplePublishedVersion.then(examplePublishedVersion => examplePublishedVersion.id),
+    location: exampleResourceGroup.location,
+    lockMode: "AllResourcesDoNotDelete",
+    lockExcludePrincipals: [current.then(current => current.objectId)],
+    identity: {
+        type: "UserAssigned",
+        identityIds: [exampleUserAssignedIdentity.id],
+    },
+    resourceGroups: `    {
+      "ResourceGroup": {
+        "name": "exampleRG-bp"
+      }
+    }
+`,
+    parameterValues: `    {
+      "allowedlocationsforresourcegroups_listOfAllowedLocations": {
+        "value": ["westus", "westus2", "eastus", "centralus", "centraluseuap", "southcentralus", "northcentralus", "westcentralus", "eastus2", "eastus2euap", "brazilsouth", "brazilus", "northeurope", "westeurope", "eastasia", "southeastasia", "japanwest", "japaneast", "koreacentral", "koreasouth", "indiasouth", "indiawest", "indiacentral", "australiaeast", "australiasoutheast", "canadacentral", "canadaeast", "uknorth", "uksouth2", "uksouth", "ukwest", "francecentral", "francesouth", "australiacentral", "australiacentral2", "uaecentral", "uaenorth", "southafricanorth", "southafricawest", "switzerlandnorth", "switzerlandwest", "germanynorth", "germanywestcentral", "norwayeast", "norwaywest"]
+      }
+    }
+`,
+}, {
+    dependsOn: [
+        operator,
+        owner,
+    ],
+});
+```
+
 <h4 class="pdoc-member-header" id="Assignment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L159"> <b>constructor</b></a>
 </h4>
 
 
@@ -60,7 +134,7 @@ Create a Assignment resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Assignment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L93">method <b>get</b></a>
 </h4>
 
 
@@ -71,14 +145,14 @@ Get an existing Assignment resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Assignment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L83">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Assignment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L104">method <b>isInstance</b></a>
 </h4>
 
 
@@ -89,7 +163,7 @@ Returns true if the given object is an instance of Assignment.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Assignment-blueprintName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L40">property <b>blueprintName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L114">property <b>blueprintName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>blueprintName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -97,7 +171,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the blueprint assigned
 
 <h4 class="pdoc-member-header" id="Assignment-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L44">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L118">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -105,7 +179,7 @@ The name of the blueprint assigned
 The Description on the Blueprint
 
 <h4 class="pdoc-member-header" id="Assignment-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L48">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L122">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -113,7 +187,7 @@ The Description on the Blueprint
 The display name of the blueprint
 
 <h4 class="pdoc-member-header" id="Assignment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L83">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -122,12 +196,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Assignment-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L49">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L123">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AssignmentIdentity'>AssignmentIdentity</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Assignment-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L53">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L127">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -135,7 +209,7 @@ deployments and may be missing (undefined) during planning phases.
 The Azure location of the Assignment.
 
 <h4 class="pdoc-member-header" id="Assignment-lockExcludePrincipals">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L57">property <b>lockExcludePrincipals</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L131">property <b>lockExcludePrincipals</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lockExcludePrincipals: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -143,7 +217,7 @@ The Azure location of the Assignment.
 a list of up to 5 Principal IDs that are permitted to bypass the locks applied by the Blueprint.
 
 <h4 class="pdoc-member-header" id="Assignment-lockMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L61">property <b>lockMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L135">property <b>lockMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lockMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -151,7 +225,7 @@ a list of up to 5 Principal IDs that are permitted to bypass the locks applied b
 The locking mode of the Blueprint Assignment.  One of `None` (Default), `AllResourcesReadOnly`, or `AlResourcesDoNotDelete`.
 
 <h4 class="pdoc-member-header" id="Assignment-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L65">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L139">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -159,7 +233,7 @@ The locking mode of the Blueprint Assignment.  One of `None` (Default), `AllReso
 The name of the Blueprint Assignment
 
 <h4 class="pdoc-member-header" id="Assignment-parameterValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L69">property <b>parameterValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L143">property <b>parameterValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameterValues: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -167,7 +241,7 @@ The name of the Blueprint Assignment
 a JSON string to supply Blueprint Assignment parameter values.
 
 <h4 class="pdoc-member-header" id="Assignment-resourceGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L73">property <b>resourceGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L147">property <b>resourceGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -175,7 +249,7 @@ a JSON string to supply Blueprint Assignment parameter values.
 a JSON string to supply the Blueprint Resource Group information.
 
 <h4 class="pdoc-member-header" id="Assignment-targetSubscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L77">property <b>targetSubscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L151">property <b>targetSubscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetSubscriptionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -183,7 +257,7 @@ a JSON string to supply the Blueprint Resource Group information.
 The Subscription ID the Blueprint Published Version is to be applied to.
 
 <h4 class="pdoc-member-header" id="Assignment-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L81">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L155">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -191,7 +265,7 @@ The Subscription ID the Blueprint Published Version is to be applied to.
 The Identity type for the Managed Service Identity. Currently only `UserAssigned` is supported.
 
 <h4 class="pdoc-member-header" id="Assignment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L83">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -200,7 +274,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Assignment-versionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L85">property <b>versionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L159">property <b>versionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -210,7 +284,7 @@ The ID of the Published Version of the blueprint to be assigned.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDefinition" data-link-title="getDefinition">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getDefinition.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getDefinition.ts#L30">
         Function <strong>getDefinition</strong>
     </a>
 </h3>
@@ -240,7 +314,7 @@ const example = root.then(root => azure.blueprint.getDefinition({
 ```
 
 <h3 class="pdoc-module-header" id="getPublishedVersion" data-link-title="getPublishedVersion">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getPublishedVersion.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getPublishedVersion.ts#L28">
         Function <strong>getPublishedVersion</strong>
     </a>
 </h3>
@@ -270,7 +344,7 @@ const test = current.then(current => azure.blueprint.getPublishedVersion({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AssignmentArgs" data-link-title="AssignmentArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L203">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L277">
         interface <strong>AssignmentArgs</strong>
     </a>
 </h3>
@@ -280,12 +354,12 @@ const test = current.then(current => azure.blueprint.getPublishedVersion({
 The set of arguments for constructing a Assignment resource.
 
 <h4 class="pdoc-member-header" id="AssignmentArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L204">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L278">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AssignmentIdentity'>AssignmentIdentity</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AssignmentArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L208">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L282">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -293,7 +367,7 @@ The set of arguments for constructing a Assignment resource.
 The Azure location of the Assignment.
 
 <h4 class="pdoc-member-header" id="AssignmentArgs-lockExcludePrincipals">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L212">property <b>lockExcludePrincipals</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L286">property <b>lockExcludePrincipals</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lockExcludePrincipals?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -301,7 +375,7 @@ The Azure location of the Assignment.
 a list of up to 5 Principal IDs that are permitted to bypass the locks applied by the Blueprint.
 
 <h4 class="pdoc-member-header" id="AssignmentArgs-lockMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L216">property <b>lockMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L290">property <b>lockMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lockMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -309,7 +383,7 @@ a list of up to 5 Principal IDs that are permitted to bypass the locks applied b
 The locking mode of the Blueprint Assignment.  One of `None` (Default), `AllResourcesReadOnly`, or `AlResourcesDoNotDelete`.
 
 <h4 class="pdoc-member-header" id="AssignmentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L220">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L294">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -317,7 +391,7 @@ The locking mode of the Blueprint Assignment.  One of `None` (Default), `AllReso
 The name of the Blueprint Assignment
 
 <h4 class="pdoc-member-header" id="AssignmentArgs-parameterValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L224">property <b>parameterValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L298">property <b>parameterValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameterValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -325,7 +399,7 @@ The name of the Blueprint Assignment
 a JSON string to supply Blueprint Assignment parameter values.
 
 <h4 class="pdoc-member-header" id="AssignmentArgs-resourceGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L228">property <b>resourceGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L302">property <b>resourceGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -333,7 +407,7 @@ a JSON string to supply Blueprint Assignment parameter values.
 a JSON string to supply the Blueprint Resource Group information.
 
 <h4 class="pdoc-member-header" id="AssignmentArgs-targetSubscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L232">property <b>targetSubscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L306">property <b>targetSubscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetSubscriptionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -341,7 +415,7 @@ a JSON string to supply the Blueprint Resource Group information.
 The Subscription ID the Blueprint Published Version is to be applied to.
 
 <h4 class="pdoc-member-header" id="AssignmentArgs-versionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L236">property <b>versionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L310">property <b>versionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -349,7 +423,7 @@ The Subscription ID the Blueprint Published Version is to be applied to.
 The ID of the Published Version of the blueprint to be assigned.
 
 <h3 class="pdoc-module-header" id="AssignmentState" data-link-title="AssignmentState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L222">
         interface <strong>AssignmentState</strong>
     </a>
 </h3>
@@ -359,7 +433,7 @@ The ID of the Published Version of the blueprint to be assigned.
 Input properties used for looking up and filtering Assignment resources.
 
 <h4 class="pdoc-member-header" id="AssignmentState-blueprintName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L152">property <b>blueprintName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L226">property <b>blueprintName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blueprintName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -367,7 +441,7 @@ Input properties used for looking up and filtering Assignment resources.
 The name of the blueprint assigned
 
 <h4 class="pdoc-member-header" id="AssignmentState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L156">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L230">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -375,7 +449,7 @@ The name of the blueprint assigned
 The Description on the Blueprint
 
 <h4 class="pdoc-member-header" id="AssignmentState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L160">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L234">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -383,12 +457,12 @@ The Description on the Blueprint
 The display name of the blueprint
 
 <h4 class="pdoc-member-header" id="AssignmentState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L161">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L235">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AssignmentIdentity'>AssignmentIdentity</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AssignmentState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L165">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L239">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -396,7 +470,7 @@ The display name of the blueprint
 The Azure location of the Assignment.
 
 <h4 class="pdoc-member-header" id="AssignmentState-lockExcludePrincipals">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L169">property <b>lockExcludePrincipals</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L243">property <b>lockExcludePrincipals</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lockExcludePrincipals?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -404,7 +478,7 @@ The Azure location of the Assignment.
 a list of up to 5 Principal IDs that are permitted to bypass the locks applied by the Blueprint.
 
 <h4 class="pdoc-member-header" id="AssignmentState-lockMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L173">property <b>lockMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L247">property <b>lockMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lockMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -412,7 +486,7 @@ a list of up to 5 Principal IDs that are permitted to bypass the locks applied b
 The locking mode of the Blueprint Assignment.  One of `None` (Default), `AllResourcesReadOnly`, or `AlResourcesDoNotDelete`.
 
 <h4 class="pdoc-member-header" id="AssignmentState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L177">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L251">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -420,7 +494,7 @@ The locking mode of the Blueprint Assignment.  One of `None` (Default), `AllReso
 The name of the Blueprint Assignment
 
 <h4 class="pdoc-member-header" id="AssignmentState-parameterValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L181">property <b>parameterValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L255">property <b>parameterValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameterValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -428,7 +502,7 @@ The name of the Blueprint Assignment
 a JSON string to supply Blueprint Assignment parameter values.
 
 <h4 class="pdoc-member-header" id="AssignmentState-resourceGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L185">property <b>resourceGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L259">property <b>resourceGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -436,7 +510,7 @@ a JSON string to supply Blueprint Assignment parameter values.
 a JSON string to supply the Blueprint Resource Group information.
 
 <h4 class="pdoc-member-header" id="AssignmentState-targetSubscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L189">property <b>targetSubscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L263">property <b>targetSubscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetSubscriptionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -444,7 +518,7 @@ a JSON string to supply the Blueprint Resource Group information.
 The Subscription ID the Blueprint Published Version is to be applied to.
 
 <h4 class="pdoc-member-header" id="AssignmentState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L193">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L267">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -452,7 +526,7 @@ The Subscription ID the Blueprint Published Version is to be applied to.
 The Identity type for the Managed Service Identity. Currently only `UserAssigned` is supported.
 
 <h4 class="pdoc-member-header" id="AssignmentState-versionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/assignment.ts#L197">property <b>versionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/assignment.ts#L271">property <b>versionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -460,7 +534,7 @@ The Identity type for the Managed Service Identity. Currently only `UserAssigned
 The ID of the Published Version of the blueprint to be assigned.
 
 <h3 class="pdoc-module-header" id="GetDefinitionArgs" data-link-title="GetDefinitionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getDefinition.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getDefinition.ts#L47">
         interface <strong>GetDefinitionArgs</strong>
     </a>
 </h3>
@@ -470,7 +544,7 @@ The ID of the Published Version of the blueprint to be assigned.
 A collection of arguments for invoking getDefinition.
 
 <h4 class="pdoc-member-header" id="GetDefinitionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getDefinition.ts#L51">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getDefinition.ts#L51">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -478,7 +552,7 @@ A collection of arguments for invoking getDefinition.
 The name of the Blueprint.
 
 <h4 class="pdoc-member-header" id="GetDefinitionArgs-scopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getDefinition.ts#L55">property <b>scopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getDefinition.ts#L55">property <b>scopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -486,7 +560,7 @@ The name of the Blueprint.
 The ID of the Subscription or Management Group, as the scope at which the blueprint definition is stored.
 
 <h3 class="pdoc-module-header" id="GetDefinitionResult" data-link-title="GetDefinitionResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getDefinition.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getDefinition.ts#L61">
         interface <strong>GetDefinitionResult</strong>
     </a>
 </h3>
@@ -496,7 +570,7 @@ The ID of the Subscription or Management Group, as the scope at which the bluepr
 A collection of values returned by getDefinition.
 
 <h4 class="pdoc-member-header" id="GetDefinitionResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getDefinition.ts#L65">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getDefinition.ts#L65">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -504,7 +578,7 @@ A collection of values returned by getDefinition.
 The description of the Blueprint Definition.
 
 <h4 class="pdoc-member-header" id="GetDefinitionResult-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getDefinition.ts#L69">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getDefinition.ts#L69">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -512,7 +586,7 @@ The description of the Blueprint Definition.
 The display name of the Blueprint Definition.
 
 <h4 class="pdoc-member-header" id="GetDefinitionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getDefinition.ts#L73">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getDefinition.ts#L73">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -520,7 +594,7 @@ The display name of the Blueprint Definition.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDefinitionResult-lastModified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getDefinition.ts#L77">property <b>lastModified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getDefinition.ts#L77">property <b>lastModified</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastModified: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -528,17 +602,17 @@ The provider-assigned unique ID for this managed resource.
 The timestamp of when this last modification was saved to the Blueprint Definition.
 
 <h4 class="pdoc-member-header" id="GetDefinitionResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getDefinition.ts#L78">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getDefinition.ts#L78">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDefinitionResult-scopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getDefinition.ts#L79">property <b>scopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getDefinition.ts#L79">property <b>scopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDefinitionResult-targetScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getDefinition.ts#L83">property <b>targetScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getDefinition.ts#L83">property <b>targetScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetScope: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -546,7 +620,7 @@ The timestamp of when this last modification was saved to the Blueprint Definiti
 The target scope.
 
 <h4 class="pdoc-member-header" id="GetDefinitionResult-timeCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getDefinition.ts#L87">property <b>timeCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getDefinition.ts#L87">property <b>timeCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeCreated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -554,7 +628,7 @@ The target scope.
 The timestamp of when this Blueprint Definition was created.
 
 <h4 class="pdoc-member-header" id="GetDefinitionResult-versions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getDefinition.ts#L91">property <b>versions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getDefinition.ts#L91">property <b>versions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -562,7 +636,7 @@ The timestamp of when this Blueprint Definition was created.
 A list of versions published for this Blueprint Definition.
 
 <h3 class="pdoc-module-header" id="GetPublishedVersionArgs" data-link-title="GetPublishedVersionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getPublishedVersion.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getPublishedVersion.ts#L46">
         interface <strong>GetPublishedVersionArgs</strong>
     </a>
 </h3>
@@ -572,7 +646,7 @@ A list of versions published for this Blueprint Definition.
 A collection of arguments for invoking getPublishedVersion.
 
 <h4 class="pdoc-member-header" id="GetPublishedVersionArgs-blueprintName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getPublishedVersion.ts#L50">property <b>blueprintName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getPublishedVersion.ts#L50">property <b>blueprintName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blueprintName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -580,7 +654,7 @@ A collection of arguments for invoking getPublishedVersion.
 The name of the Blueprint Definition
 
 <h4 class="pdoc-member-header" id="GetPublishedVersionArgs-scopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getPublishedVersion.ts#L54">property <b>scopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getPublishedVersion.ts#L54">property <b>scopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -588,7 +662,7 @@ The name of the Blueprint Definition
 The ID of the Management Group / Subscription where this Blueprint Definition is stored.
 
 <h4 class="pdoc-member-header" id="GetPublishedVersionArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getPublishedVersion.ts#L58">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getPublishedVersion.ts#L58">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -596,7 +670,7 @@ The ID of the Management Group / Subscription where this Blueprint Definition is
 The Version name of the Published Version of the Blueprint Definition
 
 <h3 class="pdoc-module-header" id="GetPublishedVersionResult" data-link-title="GetPublishedVersionResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getPublishedVersion.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getPublishedVersion.ts#L64">
         interface <strong>GetPublishedVersionResult</strong>
     </a>
 </h3>
@@ -606,12 +680,12 @@ The Version name of the Published Version of the Blueprint Definition
 A collection of values returned by getPublishedVersion.
 
 <h4 class="pdoc-member-header" id="GetPublishedVersionResult-blueprintName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getPublishedVersion.ts#L65">property <b>blueprintName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getPublishedVersion.ts#L65">property <b>blueprintName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blueprintName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPublishedVersionResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getPublishedVersion.ts#L69">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getPublishedVersion.ts#L69">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -619,7 +693,7 @@ A collection of values returned by getPublishedVersion.
 The description of the Blueprint Published Version
 
 <h4 class="pdoc-member-header" id="GetPublishedVersionResult-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getPublishedVersion.ts#L73">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getPublishedVersion.ts#L73">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -627,7 +701,7 @@ The description of the Blueprint Published Version
 The display name of the Blueprint Published Version
 
 <h4 class="pdoc-member-header" id="GetPublishedVersionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getPublishedVersion.ts#L77">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getPublishedVersion.ts#L77">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -635,17 +709,17 @@ The display name of the Blueprint Published Version
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPublishedVersionResult-lastModified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getPublishedVersion.ts#L78">property <b>lastModified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getPublishedVersion.ts#L78">property <b>lastModified</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastModified: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPublishedVersionResult-scopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getPublishedVersion.ts#L79">property <b>scopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getPublishedVersion.ts#L79">property <b>scopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPublishedVersionResult-targetScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getPublishedVersion.ts#L83">property <b>targetScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getPublishedVersion.ts#L83">property <b>targetScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetScope: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -653,12 +727,12 @@ The provider-assigned unique ID for this managed resource.
 The target scope
 
 <h4 class="pdoc-member-header" id="GetPublishedVersionResult-timeCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getPublishedVersion.ts#L84">property <b>timeCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getPublishedVersion.ts#L84">property <b>timeCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeCreated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPublishedVersionResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getPublishedVersion.ts#L88">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getPublishedVersion.ts#L88">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -666,7 +740,7 @@ The target scope
 The type of the Blueprint
 
 <h4 class="pdoc-member-header" id="GetPublishedVersionResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/blueprint/getPublishedVersion.ts#L89">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/blueprint/getPublishedVersion.ts#L89">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

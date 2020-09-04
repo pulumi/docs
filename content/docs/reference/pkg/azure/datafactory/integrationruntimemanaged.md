@@ -141,7 +141,7 @@ const exampleIntegrationRuntimeManaged = new azure.datafactory.IntegrationRuntim
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datafactory/#pulumi_azure.datafactory.IntegrationRuntimeManaged">IntegrationRuntimeManaged</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">catalog_info</span><span class="p">:</span> <span class="nx">Optional[Dict[IntegrationRuntimeManagedCatalogInfo]]</span> = None<span class="p">, </span><span class="nx">custom_setup_script</span><span class="p">:</span> <span class="nx">Optional[Dict[IntegrationRuntimeManagedCustomSetupScript]]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_parallel_executions_per_node</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">number_of_nodes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vnet_integration</span><span class="p">:</span> <span class="nx">Optional[Dict[IntegrationRuntimeManagedVnetIntegration]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datafactory/#pulumi_azure.datafactory.IntegrationRuntimeManaged">IntegrationRuntimeManaged</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">catalog_info</span><span class="p">:</span> <span class="nx">Optional[IntegrationRuntimeManagedCatalogInfoArgs]</span> = None<span class="p">, </span><span class="nx">custom_setup_script</span><span class="p">:</span> <span class="nx">Optional[IntegrationRuntimeManagedCustomSetupScriptArgs]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_parallel_executions_per_node</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">number_of_nodes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vnet_integration</span><span class="p">:</span> <span class="nx">Optional[IntegrationRuntimeManagedVnetIntegrationArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -799,7 +799,7 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 <a href="#catalog_info_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimemanagedcataloginfo">Dict[Integration<wbr>Runtime<wbr>Managed<wbr>Catalog<wbr>Info]</a></span>
+        <span class="property-type"><a href="#integrationruntimemanagedcataloginfo">Integration<wbr>Runtime<wbr>Managed<wbr>Catalog<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `catalog_info` block as defined below.
 {{% /md %}}</dd>
@@ -810,7 +810,7 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 <a href="#custom_setup_script_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>script</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimemanagedcustomsetupscript">Dict[Integration<wbr>Runtime<wbr>Managed<wbr>Custom<wbr>Setup<wbr>Script]</a></span>
+        <span class="property-type"><a href="#integrationruntimemanagedcustomsetupscript">Integration<wbr>Runtime<wbr>Managed<wbr>Custom<wbr>Setup<wbr>Script<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_setup_script` block as defined below.
 {{% /md %}}</dd>
@@ -897,7 +897,7 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 <a href="#vnet_integration_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>integration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimemanagedvnetintegration">Dict[Integration<wbr>Runtime<wbr>Managed<wbr>Vnet<wbr>Integration]</a></span>
+        <span class="property-type"><a href="#integrationruntimemanagedvnetintegration">Integration<wbr>Runtime<wbr>Managed<wbr>Vnet<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vnet_integration` block as defined below.
 {{% /md %}}</dd>
@@ -1001,7 +1001,7 @@ Get an existing IntegrationRuntimeManaged resource's state with the given name, 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">catalog_info</span><span class="p">:</span> <span class="nx">Optional[Dict[IntegrationRuntimeManagedCatalogInfo]]</span> = None<span class="p">, </span><span class="nx">custom_setup_script</span><span class="p">:</span> <span class="nx">Optional[Dict[IntegrationRuntimeManagedCustomSetupScript]]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_parallel_executions_per_node</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">number_of_nodes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vnet_integration</span><span class="p">:</span> <span class="nx">Optional[Dict[IntegrationRuntimeManagedVnetIntegration]]</span> = None<span class="p">) -&gt;</span> IntegrationRuntimeManaged</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">catalog_info</span><span class="p">:</span> <span class="nx">Optional[IntegrationRuntimeManagedCatalogInfoArgs]</span> = None<span class="p">, </span><span class="nx">custom_setup_script</span><span class="p">:</span> <span class="nx">Optional[IntegrationRuntimeManagedCustomSetupScriptArgs]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_parallel_executions_per_node</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">number_of_nodes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vnet_integration</span><span class="p">:</span> <span class="nx">Optional[IntegrationRuntimeManagedVnetIntegrationArgs]</span> = None<span class="p">) -&gt;</span> IntegrationRuntimeManaged</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1568,7 +1568,7 @@ The following state arguments are supported:
 <a href="#state_catalog_info_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimemanagedcataloginfo">Dict[Integration<wbr>Runtime<wbr>Managed<wbr>Catalog<wbr>Info]</a></span>
+        <span class="property-type"><a href="#integrationruntimemanagedcataloginfo">Integration<wbr>Runtime<wbr>Managed<wbr>Catalog<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `catalog_info` block as defined below.
 {{% /md %}}</dd>
@@ -1579,7 +1579,7 @@ The following state arguments are supported:
 <a href="#state_custom_setup_script_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>script</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimemanagedcustomsetupscript">Dict[Integration<wbr>Runtime<wbr>Managed<wbr>Custom<wbr>Setup<wbr>Script]</a></span>
+        <span class="property-type"><a href="#integrationruntimemanagedcustomsetupscript">Integration<wbr>Runtime<wbr>Managed<wbr>Custom<wbr>Setup<wbr>Script<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_setup_script` block as defined below.
 {{% /md %}}</dd>
@@ -1699,7 +1699,7 @@ The following state arguments are supported:
 <a href="#state_vnet_integration_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>integration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimemanagedvnetintegration">Dict[Integration<wbr>Runtime<wbr>Managed<wbr>Vnet<wbr>Integration]</a></span>
+        <span class="property-type"><a href="#integrationruntimemanagedvnetintegration">Integration<wbr>Runtime<wbr>Managed<wbr>Vnet<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vnet_integration` block as defined below.
 {{% /md %}}</dd>
@@ -1892,17 +1892,6 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="administratorpassword_python">
-<a href="#administratorpassword_python" style="color: inherit; text-decoration: inherit;">administrator<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Administrator login password for the SQL Server.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="administrator_login_python">
 <a href="#administrator_login_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login</a>
 </span> 
@@ -1914,8 +1903,19 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="serverendpoint_python">
-<a href="#serverendpoint_python" style="color: inherit; text-decoration: inherit;">server<wbr>Endpoint</a>
+        <span id="administrator_password_python">
+<a href="#administrator_password_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Administrator login password for the SQL Server.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="server_endpoint_python">
+<a href="#server_endpoint_python" style="color: inherit; text-decoration: inherit;">server_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2048,8 +2048,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="blobcontaineruri_python">
-<a href="#blobcontaineruri_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Container<wbr>Uri</a>
+        <span id="blob_container_uri_python">
+<a href="#blob_container_uri_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>container_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2059,8 +2059,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="sastoken_python">
-<a href="#sastoken_python" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
+        <span id="sas_token_python">
+<a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2182,8 +2182,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="subnetname_python">
-<a href="#subnetname_python" style="color: inherit; text-decoration: inherit;">subnet<wbr>Name</a>
+        <span id="subnet_name_python">
+<a href="#subnet_name_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2193,8 +2193,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="vnetid_python">
-<a href="#vnetid_python" style="color: inherit; text-decoration: inherit;">vnet<wbr>Id</a>
+        <span id="vnet_id_python">
+<a href="#vnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -131,31 +131,31 @@ example_subnet = azure.network.Subnet("exampleSubnet",
 example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    ip_configurations=[{
-        "name": "internal",
-        "subnet_id": example_subnet.id,
-        "privateIpAddressAllocation": "Dynamic",
-    }])
+    ip_configurations=[azure.network.NetworkInterfaceIpConfigurationArgs(
+        name="internal",
+        subnet_id=example_subnet.id,
+        private_ip_address_allocation="Dynamic",
+    )])
 example_linux_virtual_machine = azure.compute.LinuxVirtualMachine("exampleLinuxVirtualMachine",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
     size="Standard_F2",
     admin_username="adminuser",
     network_interface_ids=[example_network_interface.id],
-    admin_ssh_keys=[{
-        "username": "adminuser",
-        "publicKey": (lambda path: open(path).read())("~/.ssh/id_rsa.pub"),
-    }],
-    os_disk={
-        "caching": "ReadWrite",
-        "storage_account_type": "Standard_LRS",
-    },
-    source_image_reference={
-        "publisher": "Canonical",
-        "offer": "UbuntuServer",
-        "sku": "16.04-LTS",
-        "version": "latest",
-    })
+    admin_ssh_keys=[azure.compute.LinuxVirtualMachineAdminSshKeyArgs(
+        username="adminuser",
+        public_key=(lambda path: open(path).read())("~/.ssh/id_rsa.pub"),
+    )],
+    os_disk=azure.compute.LinuxVirtualMachineOsDiskArgs(
+        caching="ReadWrite",
+        storage_account_type="Standard_LRS",
+    ),
+    source_image_reference=azure.compute.LinuxVirtualMachineSourceImageReferenceArgs(
+        publisher="Canonical",
+        offer="UbuntuServer",
+        sku="16.04-LTS",
+        version="latest",
+    ))
 example_configuration = azure.maintenance.Configuration("exampleConfiguration",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,

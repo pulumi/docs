@@ -87,7 +87,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
-			Location: pulumi.String(_var.Resource_group_location),
+			Location: pulumi.Any(_var.Resource_group_location),
 		})
 		if err != nil {
 			return err
@@ -112,7 +112,7 @@ func main() {
 			},
 			GeoLocations: cosmosdb.AccountGeoLocationArray{
 				&cosmosdb.AccountGeoLocationArgs{
-					Location:         pulumi.String(_var.Failover_location),
+					Location:         pulumi.Any(_var.Failover_location),
 					FailoverPriority: pulumi.Int(1),
 				},
 				&cosmosdb.AccountGeoLocationArgs{
@@ -150,21 +150,21 @@ db = azure.cosmosdb.Account("db",
     offer_type="Standard",
     kind="GlobalDocumentDB",
     enable_automatic_failover=True,
-    consistency_policy={
-        "consistencyLevel": "BoundedStaleness",
-        "maxIntervalInSeconds": 10,
-        "maxStalenessPrefix": 200,
-    },
+    consistency_policy=azure.cosmosdb.AccountConsistencyPolicyArgs(
+        consistency_level="BoundedStaleness",
+        max_interval_in_seconds=10,
+        max_staleness_prefix=200,
+    ),
     geo_locations=[
-        {
-            "location": var["failover_location"],
-            "failoverPriority": 1,
-        },
-        {
-            "prefix": ri.result.apply(lambda result: f"tfex-cosmos-db-{result}-customid"),
-            "location": rg.location,
-            "failoverPriority": 0,
-        },
+        azure.cosmosdb.AccountGeoLocationArgs(
+            location=var["failover_location"],
+            failover_priority=1,
+        ),
+        azure.cosmosdb.AccountGeoLocationArgs(
+            prefix=ri.result.apply(lambda result: f"tfex-cosmos-db-{result}-customid"),
+            location=rg.location,
+            failover_priority=0,
+        ),
     ])
 ```
 
@@ -221,7 +221,7 @@ const db = new azure.cosmosdb.Account("db", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#pulumi_azure.cosmosdb.Account">Account</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[List[AccountCapability]]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[AccountConsistencyPolicy]]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">geo_locations</span><span class="p">:</span> <span class="nx">Optional[List[AccountGeoLocation]]</span> = None<span class="p">, </span><span class="nx">ip_range_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[List[AccountVirtualNetworkRule]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#pulumi_azure.cosmosdb.Account">Account</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[List[AccountCapabilityArgs]]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[AccountConsistencyPolicyArgs]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">geo_locations</span><span class="p">:</span> <span class="nx">Optional[List[AccountGeoLocationArgs]]</span> = None<span class="p">, </span><span class="nx">ip_range_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[List[AccountVirtualNetworkRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -915,7 +915,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#consistency_policy_python" style="color: inherit; text-decoration: inherit;">consistency_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountconsistencypolicy">Dict[Account<wbr>Consistency<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
 {{% /md %}}</dd>
@@ -926,7 +926,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#geo_locations_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountgeolocation">List[Account<wbr>Geo<wbr>Location]</a></span>
+        <span class="property-type"><a href="#accountgeolocation">List[Account<wbr>Geo<wbr>Location<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location.
 {{% /md %}}</dd>
@@ -959,7 +959,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcapability">List[Account<wbr>Capability]</a></span>
+        <span class="property-type"><a href="#accountcapability">List[Account<wbr>Capability<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, and `mongoEnableDocLevelTTL`.
 {{% /md %}}</dd>
@@ -1058,7 +1058,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1069,7 +1069,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountvirtualnetworkrule">List[Account<wbr>Virtual<wbr>Network<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#accountvirtualnetworkrule">List[Account<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `virtual_network_rules` resource, used to define which subnets are allowed to access this CosmosDB account.
 {{% /md %}}</dd>
@@ -1525,7 +1525,7 @@ Get an existing Account resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[List[AccountCapability]]</span> = None<span class="p">, </span><span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[AccountConsistencyPolicy]]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geo_locations</span><span class="p">:</span> <span class="nx">Optional[List[AccountGeoLocation]]</span> = None<span class="p">, </span><span class="nx">ip_range_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_readonly_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_endpoints</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_readonly_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[List[AccountVirtualNetworkRule]]</span> = None<span class="p">, </span><span class="nx">write_endpoints</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> Account</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[List[AccountCapabilityArgs]]</span> = None<span class="p">, </span><span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[AccountConsistencyPolicyArgs]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geo_locations</span><span class="p">:</span> <span class="nx">Optional[List[AccountGeoLocationArgs]]</span> = None<span class="p">, </span><span class="nx">ip_range_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_readonly_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_endpoints</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_readonly_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[List[AccountVirtualNetworkRuleArgs]]</span> = None<span class="p">, </span><span class="nx">write_endpoints</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> Account</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2425,7 +2425,7 @@ The following state arguments are supported:
 <a href="#state_capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcapability">List[Account<wbr>Capability]</a></span>
+        <span class="property-type"><a href="#accountcapability">List[Account<wbr>Capability<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, and `mongoEnableDocLevelTTL`.
 {{% /md %}}</dd>
@@ -2447,7 +2447,7 @@ The following state arguments are supported:
 <a href="#state_consistency_policy_python" style="color: inherit; text-decoration: inherit;">consistency_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountconsistencypolicy">Dict[Account<wbr>Consistency<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
 {{% /md %}}</dd>
@@ -2502,7 +2502,7 @@ The following state arguments are supported:
 <a href="#state_geo_locations_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountgeolocation">List[Account<wbr>Geo<wbr>Location]</a></span>
+        <span class="property-type"><a href="#accountgeolocation">List[Account<wbr>Geo<wbr>Location<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location.
 {{% /md %}}</dd>
@@ -2645,7 +2645,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2656,7 +2656,7 @@ The following state arguments are supported:
 <a href="#state_virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountvirtualnetworkrule">List[Account<wbr>Virtual<wbr>Network<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#accountvirtualnetworkrule">List[Account<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `virtual_network_rules` resource, used to define which subnets are allowed to access this CosmosDB account.
 {{% /md %}}</dd>
@@ -2917,8 +2917,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="consistencylevel_python">
-<a href="#consistencylevel_python" style="color: inherit; text-decoration: inherit;">consistency<wbr>Level</a>
+        <span id="consistency_level_python">
+<a href="#consistency_level_python" style="color: inherit; text-decoration: inherit;">consistency_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2928,8 +2928,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxintervalinseconds_python">
-<a href="#maxintervalinseconds_python" style="color: inherit; text-decoration: inherit;">max<wbr>Interval<wbr>In<wbr>Seconds</a>
+        <span id="max_interval_in_seconds_python">
+<a href="#max_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2939,8 +2939,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxstalenessprefix_python">
-<a href="#maxstalenessprefix_python" style="color: inherit; text-decoration: inherit;">max<wbr>Staleness<wbr>Prefix</a>
+        <span id="max_staleness_prefix_python">
+<a href="#max_staleness_prefix_python" style="color: inherit; text-decoration: inherit;">max_<wbr>staleness_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3128,8 +3128,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="failoverpriority_python">
-<a href="#failoverpriority_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Priority</a>
+        <span id="failover_priority_python">
+<a href="#failover_priority_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>priority</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

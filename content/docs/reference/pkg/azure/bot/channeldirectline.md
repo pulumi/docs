@@ -23,7 +23,7 @@ Manages a Directline integration for a Bot Channel
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/bot/#pulumi_azure.bot.ChannelDirectLine">ChannelDirectLine</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bot_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sites</span><span class="p">:</span> <span class="nx">Optional[List[ChannelDirectLineSite]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/bot/#pulumi_azure.bot.ChannelDirectLine">ChannelDirectLine</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bot_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sites</span><span class="p">:</span> <span class="nx">Optional[List[ChannelDirectLineSiteArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -203,7 +203,8 @@ The ChannelDirectLine resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Bot Resource this channel will be associated with. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -213,7 +214,8 @@ The ChannelDirectLine resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group in which to create the Bot Channel. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -223,7 +225,8 @@ The ChannelDirectLine resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#channeldirectlinesite">List&lt;Channel<wbr>Direct<wbr>Line<wbr>Site<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A site represents a client application that you want to connect to your bot. Multiple `site` blocks may be defined as below
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -233,7 +236,8 @@ The ChannelDirectLine resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -250,7 +254,8 @@ The ChannelDirectLine resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Bot Resource this channel will be associated with. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -260,7 +265,8 @@ The ChannelDirectLine resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group in which to create the Bot Channel. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -270,7 +276,8 @@ The ChannelDirectLine resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#channeldirectlinesite">[]Channel<wbr>Direct<wbr>Line<wbr>Site</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A site represents a client application that you want to connect to your bot. Multiple `site` blocks may be defined as below
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -280,7 +287,8 @@ The ChannelDirectLine resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -297,7 +305,8 @@ The ChannelDirectLine resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Bot Resource this channel will be associated with. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -307,7 +316,8 @@ The ChannelDirectLine resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group in which to create the Bot Channel. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -317,7 +327,8 @@ The ChannelDirectLine resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#channeldirectlinesite">Channel<wbr>Direct<wbr>Line<wbr>Site[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A site represents a client application that you want to connect to your bot. Multiple `site` blocks may be defined as below
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -327,7 +338,8 @@ The ChannelDirectLine resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -344,7 +356,8 @@ The ChannelDirectLine resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Bot Resource this channel will be associated with. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -354,7 +367,8 @@ The ChannelDirectLine resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group in which to create the Bot Channel. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -362,9 +376,10 @@ The ChannelDirectLine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sites_python" style="color: inherit; text-decoration: inherit;">sites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channeldirectlinesite">List[Channel<wbr>Direct<wbr>Line<wbr>Site]</a></span>
+        <span class="property-type"><a href="#channeldirectlinesite">List[Channel<wbr>Direct<wbr>Line<wbr>Site<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A site represents a client application that you want to connect to your bot. Multiple `site` blocks may be defined as below
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -374,7 +389,8 @@ The ChannelDirectLine resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -475,7 +491,7 @@ Get an existing ChannelDirectLine resource's state with the given name, ID, and 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bot_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sites</span><span class="p">:</span> <span class="nx">Optional[List[ChannelDirectLineSite]]</span> = None<span class="p">) -&gt;</span> ChannelDirectLine</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bot_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sites</span><span class="p">:</span> <span class="nx">Optional[List[ChannelDirectLineSiteArgs]]</span> = None<span class="p">) -&gt;</span> ChannelDirectLine</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -597,7 +613,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Bot Resource this channel will be associated with. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -607,7 +624,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -617,7 +635,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group in which to create the Bot Channel. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -627,7 +646,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#channeldirectlinesite">List&lt;Channel<wbr>Direct<wbr>Line<wbr>Site<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A site represents a client application that you want to connect to your bot. Multiple `site` blocks may be defined as below
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -644,7 +664,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Bot Resource this channel will be associated with. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -654,7 +675,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -664,7 +686,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group in which to create the Bot Channel. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -674,7 +697,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#channeldirectlinesite">[]Channel<wbr>Direct<wbr>Line<wbr>Site</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A site represents a client application that you want to connect to your bot. Multiple `site` blocks may be defined as below
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -691,7 +715,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Bot Resource this channel will be associated with. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -701,7 +726,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -711,7 +737,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group in which to create the Bot Channel. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -721,7 +748,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#channeldirectlinesite">Channel<wbr>Direct<wbr>Line<wbr>Site[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A site represents a client application that you want to connect to your bot. Multiple `site` blocks may be defined as below
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -738,7 +766,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Bot Resource this channel will be associated with. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -748,7 +777,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -758,7 +788,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group in which to create the Bot Channel. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -766,9 +797,10 @@ The following state arguments are supported:
 <a href="#state_sites_python" style="color: inherit; text-decoration: inherit;">sites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channeldirectlinesite">List[Channel<wbr>Direct<wbr>Line<wbr>Site]</a></span>
+        <span class="property-type"><a href="#channeldirectlinesite">List[Channel<wbr>Direct<wbr>Line<wbr>Site<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A site represents a client application that you want to connect to your bot. Multiple `site` blocks may be defined as below
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -811,7 +843,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the site
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -821,7 +854,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables/Disables this site. Enabled by default
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -831,7 +865,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables additional security measures for this site, see [Enhanced Directline Authentication Features](https://blog.botframework.com/2018/09/25/enhanced-direct-line-authentication-features). Disabled by default.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -841,7 +876,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Id for the site
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -851,7 +887,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Primary key for accessing this site
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -861,7 +898,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Secondary key for accessing this site
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -871,7 +909,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This field is required when `is_secure_site_enabled` is enabled. Determines which origins can establish a Directline conversation for this site.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -881,7 +920,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables v1 of the Directline protocol for this site. Enabled by default
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -891,7 +931,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables v3 of the Directline protocol for this site. Enabled by default
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -908,7 +949,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the site
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -918,7 +960,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables/Disables this site. Enabled by default
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -928,7 +971,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables additional security measures for this site, see [Enhanced Directline Authentication Features](https://blog.botframework.com/2018/09/25/enhanced-direct-line-authentication-features). Disabled by default.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -938,7 +982,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Id for the site
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -948,7 +993,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Primary key for accessing this site
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -958,7 +1004,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Secondary key for accessing this site
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -968,7 +1015,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This field is required when `is_secure_site_enabled` is enabled. Determines which origins can establish a Directline conversation for this site.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -978,7 +1026,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables v1 of the Directline protocol for this site. Enabled by default
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -988,7 +1037,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables v3 of the Directline protocol for this site. Enabled by default
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1005,7 +1055,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the site
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1015,7 +1066,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables/Disables this site. Enabled by default
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1025,7 +1077,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables additional security measures for this site, see [Enhanced Directline Authentication Features](https://blog.botframework.com/2018/09/25/enhanced-direct-line-authentication-features). Disabled by default.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1035,7 +1088,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Id for the site
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1045,7 +1099,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Primary key for accessing this site
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1055,7 +1110,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Secondary key for accessing this site
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1065,7 +1121,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This field is required when `is_secure_site_enabled` is enabled. Determines which origins can establish a Directline conversation for this site.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1075,7 +1132,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables v1 of the Directline protocol for this site. Enabled by default
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1085,7 +1143,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables v3 of the Directline protocol for this site. Enabled by default
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1102,7 +1161,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the site
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1112,17 +1172,19 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables/Disables this site. Enabled by default
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enhancedauthenticationenabled_python">
-<a href="#enhancedauthenticationenabled_python" style="color: inherit; text-decoration: inherit;">enhanced<wbr>Authentication<wbr>Enabled</a>
+        <span id="enhanced_authentication_enabled_python">
+<a href="#enhanced_authentication_enabled_python" style="color: inherit; text-decoration: inherit;">enhanced_<wbr>authentication_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables additional security measures for this site, see [Enhanced Directline Authentication Features](https://blog.botframework.com/2018/09/25/enhanced-direct-line-authentication-features). Disabled by default.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1132,7 +1194,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Id for the site
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1142,7 +1205,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Primary key for accessing this site
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1152,37 +1216,41 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Secondary key for accessing this site
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustedorigins_python">
-<a href="#trustedorigins_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Origins</a>
+        <span id="trusted_origins_python">
+<a href="#trusted_origins_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This field is required when `is_secure_site_enabled` is enabled. Determines which origins can establish a Directline conversation for this site.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="v1allowed_python">
-<a href="#v1allowed_python" style="color: inherit; text-decoration: inherit;">v1Allowed</a>
+        <span id="v1_allowed_python">
+<a href="#v1_allowed_python" style="color: inherit; text-decoration: inherit;">v1_<wbr>allowed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables v1 of the Directline protocol for this site. Enabled by default
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="v3allowed_python">
-<a href="#v3allowed_python" style="color: inherit; text-decoration: inherit;">v3Allowed</a>
+        <span id="v3_allowed_python">
+<a href="#v3_allowed_python" style="color: inherit; text-decoration: inherit;">v3_<wbr>allowed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables v3 of the Directline protocol for this site. Enabled by default
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

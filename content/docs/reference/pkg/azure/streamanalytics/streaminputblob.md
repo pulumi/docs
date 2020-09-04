@@ -97,8 +97,8 @@ func main() {
 			return err
 		}
 		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
-			ResourceGroupName:      pulumi.String(azurerm_resource_group.Example.Name),
-			Location:               pulumi.String(azurerm_resource_group.Example.Location),
+			ResourceGroupName:      pulumi.Any(azurerm_resource_group.Example.Name),
+			Location:               pulumi.Any(azurerm_resource_group.Example.Location),
 			AccountTier:            pulumi.String("Standard"),
 			AccountReplicationType: pulumi.String("LRS"),
 		})
@@ -161,10 +161,10 @@ example_stream_input_blob = azure.streamanalytics.StreamInputBlob("exampleStream
     path_pattern="some-random-pattern",
     date_format="yyyy/MM/dd",
     time_format="HH",
-    serialization={
-        "type": "Json",
-        "encoding": "UTF8",
-    })
+    serialization=azure.streamanalytics.StreamInputBlobSerializationArgs(
+        type="Json",
+        encoding="UTF8",
+    ))
 ```
 
 {{% /example %}}
@@ -222,7 +222,7 @@ const exampleStreamInputBlob = new azure.streamanalytics.StreamInputBlob("exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/streamanalytics/#pulumi_azure.streamanalytics.StreamInputBlob">StreamInputBlob</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">date_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serialization</span><span class="p">:</span> <span class="nx">Optional[Dict[StreamInputBlobSerialization]]</span> = None<span class="p">, </span><span class="nx">storage_account_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_analytics_job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/streamanalytics/#pulumi_azure.streamanalytics.StreamInputBlob">StreamInputBlob</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">date_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serialization</span><span class="p">:</span> <span class="nx">Optional[StreamInputBlobSerializationArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_analytics_job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -784,7 +784,7 @@ The StreamInputBlob resource accepts the following [input]({{< relref "/docs/int
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streaminputblobserialization">Dict[Stream<wbr>Input<wbr>Blob<wbr>Serialization]</a></span>
+        <span class="property-type"><a href="#streaminputblobserialization">Stream<wbr>Input<wbr>Blob<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `serialization` block as defined below.
 {{% /md %}}</dd>
@@ -954,7 +954,7 @@ Get an existing StreamInputBlob resource's state with the given name, ID, and op
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">date_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serialization</span><span class="p">:</span> <span class="nx">Optional[Dict[StreamInputBlobSerialization]]</span> = None<span class="p">, </span><span class="nx">storage_account_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_analytics_job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> StreamInputBlob</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">date_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serialization</span><span class="p">:</span> <span class="nx">Optional[StreamInputBlobSerializationArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_analytics_job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> StreamInputBlob</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1469,7 +1469,7 @@ The following state arguments are supported:
 <a href="#state_serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streaminputblobserialization">Dict[Stream<wbr>Input<wbr>Blob<wbr>Serialization]</a></span>
+        <span class="property-type"><a href="#streaminputblobserialization">Stream<wbr>Input<wbr>Blob<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `serialization` block as defined below.
 {{% /md %}}</dd>
@@ -1706,8 +1706,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fielddelimiter_python">
-<a href="#fielddelimiter_python" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
+        <span id="field_delimiter_python">
+<a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

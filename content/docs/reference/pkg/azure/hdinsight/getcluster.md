@@ -411,7 +411,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimal supported tls version.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -569,7 +570,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimal supported tls version.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -727,7 +729,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimal supported tls version.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -753,7 +756,7 @@ The following output properties are available:
 <a href="#component_versions_python" style="color: inherit; text-decoration: inherit;">component_<wbr>versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of versions of software used on this HDInsights Cluster.
 {{% /md %}}</dd>
@@ -861,7 +864,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the HDInsight Cluster.
 {{% /md %}}</dd>
@@ -885,7 +888,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimal supported tls version.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

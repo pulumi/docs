@@ -163,10 +163,10 @@ main_resource_group = azure.core.ResourceGroup("mainResourceGroup", location="We
 main_action_group = azure.monitoring.ActionGroup("mainActionGroup",
     resource_group_name=main_resource_group.name,
     short_name="p0action",
-    webhook_receivers=[{
-        "name": "callmyapi",
-        "service_uri": "http://example.com/alert",
-    }])
+    webhook_receivers=[azure.monitoring.ActionGroupWebhookReceiverArgs(
+        name="callmyapi",
+        service_uri="http://example.com/alert",
+    )])
 to_monitor = azure.storage.Account("toMonitor",
     resource_group_name=main_resource_group.name,
     location=main_resource_group.location,
@@ -176,17 +176,17 @@ main_activity_log_alert = azure.monitoring.ActivityLogAlert("mainActivityLogAler
     resource_group_name=main_resource_group.name,
     scopes=[main_resource_group.id],
     description="This alert will monitor a specific storage account updates.",
-    criteria={
-        "resource_id": to_monitor.id,
-        "operationName": "Microsoft.Storage/storageAccounts/write",
-        "category": "Recommendation",
-    },
-    actions=[{
-        "action_group_id": main_action_group.id,
-        "webhookProperties": {
+    criteria=azure.monitoring.ActivityLogAlertCriteriaArgs(
+        resource_id=to_monitor.id,
+        operation_name="Microsoft.Storage/storageAccounts/write",
+        category="Recommendation",
+    ),
+    actions=[azure.monitoring.ActivityLogAlertActionArgs(
+        action_group_id=main_action_group.id,
+        webhook_properties={
             "from": "source",
         },
-    }])
+    )])
 ```
 
 {{% /example %}}
@@ -244,7 +244,7 @@ const mainActivityLogAlert = new azure.monitoring.ActivityLogAlert("mainActivity
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.ActivityLogAlert">ActivityLogAlert</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[ActivityLogAlertAction]]</span> = None<span class="p">, </span><span class="nx">criteria</span><span class="p">:</span> <span class="nx">Optional[Dict[ActivityLogAlertCriteria]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.ActivityLogAlert">ActivityLogAlert</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[ActivityLogAlertActionArgs]]</span> = None<span class="p">, </span><span class="nx">criteria</span><span class="p">:</span> <span class="nx">Optional[ActivityLogAlertCriteriaArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -707,7 +707,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertcriteria">Dict[Activity<wbr>Log<wbr>Alert<wbr>Criteria]</a></span>
+        <span class="property-type"><a href="#activitylogalertcriteria">Activity<wbr>Log<wbr>Alert<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `criteria` block as defined below.
 {{% /md %}}</dd>
@@ -740,7 +740,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertaction">List[Activity<wbr>Log<wbr>Alert<wbr>Action]</a></span>
+        <span class="property-type"><a href="#activitylogalertaction">List[Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `action` blocks as defined below.
 {{% /md %}}</dd>
@@ -784,7 +784,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -888,7 +888,7 @@ Get an existing ActivityLogAlert resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[ActivityLogAlertAction]]</span> = None<span class="p">, </span><span class="nx">criteria</span><span class="p">:</span> <span class="nx">Optional[Dict[ActivityLogAlertCriteria]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> ActivityLogAlert</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[ActivityLogAlertActionArgs]]</span> = None<span class="p">, </span><span class="nx">criteria</span><span class="p">:</span> <span class="nx">Optional[ActivityLogAlertCriteriaArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> ActivityLogAlert</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1293,7 +1293,7 @@ The following state arguments are supported:
 <a href="#state_actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertaction">List[Activity<wbr>Log<wbr>Alert<wbr>Action]</a></span>
+        <span class="property-type"><a href="#activitylogalertaction">List[Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `action` blocks as defined below.
 {{% /md %}}</dd>
@@ -1304,7 +1304,7 @@ The following state arguments are supported:
 <a href="#state_criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertcriteria">Dict[Activity<wbr>Log<wbr>Alert<wbr>Criteria]</a></span>
+        <span class="property-type"><a href="#activitylogalertcriteria">Activity<wbr>Log<wbr>Alert<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `criteria` block as defined below.
 {{% /md %}}</dd>
@@ -1370,7 +1370,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1508,11 +1508,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="webhookproperties_python">
-<a href="#webhookproperties_python" style="color: inherit; text-decoration: inherit;">webhook<wbr>Properties</a>
+        <span id="webhook_properties_python">
+<a href="#webhook_properties_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The map of custom string properties to include with the post operation. These data are appended to the webhook payload.
 {{% /md %}}</dd>
@@ -2027,8 +2027,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="operationname_python">
-<a href="#operationname_python" style="color: inherit; text-decoration: inherit;">operation<wbr>Name</a>
+        <span id="operation_name_python">
+<a href="#operation_name_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2038,8 +2038,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recommendationcategory_python">
-<a href="#recommendationcategory_python" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Category</a>
+        <span id="recommendation_category_python">
+<a href="#recommendation_category_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>category</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2049,8 +2049,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recommendationimpact_python">
-<a href="#recommendationimpact_python" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Impact</a>
+        <span id="recommendation_impact_python">
+<a href="#recommendation_impact_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>impact</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2060,8 +2060,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recommendationtype_python">
-<a href="#recommendationtype_python" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Type</a>
+        <span id="recommendation_type_python">
+<a href="#recommendation_type_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2071,35 +2071,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcegroup_python">
-<a href="#resourcegroup_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
+        <span id="resource_group_python">
+<a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of resource group monitored by the activity log alert.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourceprovider_python">
-<a href="#resourceprovider_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Provider</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the resource provider monitored by the activity log alert.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcetype_python">
-<a href="#resourcetype_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The resource type monitored by the activity log alert.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2115,6 +2093,28 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="resource_provider_python">
+<a href="#resource_provider_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>provider</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource provider monitored by the activity log alert.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_type_python">
+<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The resource type monitored by the activity log alert.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
@@ -2126,8 +2126,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="substatus_python">
-<a href="#substatus_python" style="color: inherit; text-decoration: inherit;">sub<wbr>Status</a>
+        <span id="sub_status_python">
+<a href="#sub_status_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

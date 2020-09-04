@@ -23,7 +23,7 @@ Manages a backend within an API Management Service.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.Backend">Backend</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[Dict[BackendCredentials]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy</span><span class="p">:</span> <span class="nx">Optional[Dict[BackendProxy]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_fabric_cluster</span><span class="p">:</span> <span class="nx">Optional[Dict[BackendServiceFabricCluster]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls</span><span class="p">:</span> <span class="nx">Optional[Dict[BackendTls]]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.Backend">Backend</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[BackendCredentialsArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy</span><span class="p">:</span> <span class="nx">Optional[BackendProxyArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_fabric_cluster</span><span class="p">:</span> <span class="nx">Optional[BackendServiceFabricClusterArgs]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls</span><span class="p">:</span> <span class="nx">Optional[BackendTlsArgs]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -662,7 +662,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendcredentials">Dict[Backend<wbr>Credentials]</a></span>
+        <span class="property-type"><a href="#backendcredentials">Backend<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `credentials` block as documented below.
 {{% /md %}}</dd>
@@ -695,7 +695,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#proxy_python" style="color: inherit; text-decoration: inherit;">proxy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendproxy">Dict[Backend<wbr>Proxy]</a></span>
+        <span class="property-type"><a href="#backendproxy">Backend<wbr>Proxy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `proxy` block as documented below.
 {{% /md %}}</dd>
@@ -717,7 +717,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_fabric_cluster_python" style="color: inherit; text-decoration: inherit;">service_<wbr>fabric_<wbr>cluster</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabriccluster">Dict[Backend<wbr>Service<wbr>Fabric<wbr>Cluster]</a></span>
+        <span class="property-type"><a href="#backendservicefabriccluster">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `service_fabric_cluster` block as documented below.
 {{% /md %}}</dd>
@@ -739,7 +739,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendtls">Dict[Backend<wbr>Tls]</a></span>
+        <span class="property-type"><a href="#backendtls">Backend<wbr>Tls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `tls` block as documented below.
 {{% /md %}}</dd>
@@ -843,7 +843,7 @@ Get an existing Backend resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[Dict[BackendCredentials]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy</span><span class="p">:</span> <span class="nx">Optional[Dict[BackendProxy]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_fabric_cluster</span><span class="p">:</span> <span class="nx">Optional[Dict[BackendServiceFabricCluster]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls</span><span class="p">:</span> <span class="nx">Optional[Dict[BackendTls]]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Backend</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[BackendCredentialsArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy</span><span class="p">:</span> <span class="nx">Optional[BackendProxyArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_fabric_cluster</span><span class="p">:</span> <span class="nx">Optional[BackendServiceFabricClusterArgs]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls</span><span class="p">:</span> <span class="nx">Optional[BackendTlsArgs]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Backend</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1391,7 +1391,7 @@ The following state arguments are supported:
 <a href="#state_credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendcredentials">Dict[Backend<wbr>Credentials]</a></span>
+        <span class="property-type"><a href="#backendcredentials">Backend<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `credentials` block as documented below.
 {{% /md %}}</dd>
@@ -1435,7 +1435,7 @@ The following state arguments are supported:
 <a href="#state_proxy_python" style="color: inherit; text-decoration: inherit;">proxy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendproxy">Dict[Backend<wbr>Proxy]</a></span>
+        <span class="property-type"><a href="#backendproxy">Backend<wbr>Proxy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `proxy` block as documented below.
 {{% /md %}}</dd>
@@ -1468,7 +1468,7 @@ The following state arguments are supported:
 <a href="#state_service_fabric_cluster_python" style="color: inherit; text-decoration: inherit;">service_<wbr>fabric_<wbr>cluster</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabriccluster">Dict[Backend<wbr>Service<wbr>Fabric<wbr>Cluster]</a></span>
+        <span class="property-type"><a href="#backendservicefabriccluster">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `service_fabric_cluster` block as documented below.
 {{% /md %}}</dd>
@@ -1490,7 +1490,7 @@ The following state arguments are supported:
 <a href="#state_tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendtls">Dict[Backend<wbr>Tls]</a></span>
+        <span class="property-type"><a href="#backendtls">Backend<wbr>Tls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `tls` block as documented below.
 {{% /md %}}</dd>
@@ -1698,7 +1698,7 @@ The following state arguments are supported:
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendcredentialsauthorization">Dict[Backend<wbr>Credentials<wbr>Authorization]</a></span>
+        <span class="property-type"><a href="#backendcredentialsauthorization">Backend<wbr>Credentials<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `authorization` block as defined below.
 {{% /md %}}</dd>
@@ -1720,7 +1720,7 @@ The following state arguments are supported:
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of header parameters to pass to the backend host. The keys are the header names and the values are a comma separated string of header values. This is converted to a list before being passed to the API.
 {{% /md %}}</dd>
@@ -1731,7 +1731,7 @@ The following state arguments are supported:
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of query parameters to pass to the backend host. The keys are the query names and the values are a comma separated string of query values. This is converted to a list before being passed to the API.
 {{% /md %}}</dd>
@@ -2261,8 +2261,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="clientcertificatethumbprint_python">
-<a href="#clientcertificatethumbprint_python" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Thumbprint</a>
+        <span id="client_certificate_thumbprint_python">
+<a href="#client_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>thumbprint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2272,8 +2272,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="managementendpoints_python">
-<a href="#managementendpoints_python" style="color: inherit; text-decoration: inherit;">management<wbr>Endpoints</a>
+        <span id="management_endpoints_python">
+<a href="#management_endpoints_python" style="color: inherit; text-decoration: inherit;">management_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2283,8 +2283,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxpartitionresolutionretries_python">
-<a href="#maxpartitionresolutionretries_python" style="color: inherit; text-decoration: inherit;">max<wbr>Partition<wbr>Resolution<wbr>Retries</a>
+        <span id="max_partition_resolution_retries_python">
+<a href="#max_partition_resolution_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>partition_<wbr>resolution_<wbr>retries</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2294,8 +2294,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servercertificatethumbprints_python">
-<a href="#servercertificatethumbprints_python" style="color: inherit; text-decoration: inherit;">server<wbr>Certificate<wbr>Thumbprints</a>
+        <span id="server_certificate_thumbprints_python">
+<a href="#server_certificate_thumbprints_python" style="color: inherit; text-decoration: inherit;">server_<wbr>certificate_<wbr>thumbprints</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2305,11 +2305,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serverx509names_python">
-<a href="#serverx509names_python" style="color: inherit; text-decoration: inherit;">server<wbr>X509Names</a>
+        <span id="server_x509_names_python">
+<a href="#server_x509_names_python" style="color: inherit; text-decoration: inherit;">server_<wbr>x509_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterserverx509name">List[Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Server<wbr>X509Name]</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterserverx509name">List[Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Server<wbr>X509Name<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_x509_name` blocks as documented below.
 {{% /md %}}</dd>
@@ -2428,8 +2428,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="issuercertificatethumbprint_python">
-<a href="#issuercertificatethumbprint_python" style="color: inherit; text-decoration: inherit;">issuer<wbr>Certificate<wbr>Thumbprint</a>
+        <span id="issuer_certificate_thumbprint_python">
+<a href="#issuer_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>certificate_<wbr>thumbprint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2562,8 +2562,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validatecertificatechain_python">
-<a href="#validatecertificatechain_python" style="color: inherit; text-decoration: inherit;">validate<wbr>Certificate<wbr>Chain</a>
+        <span id="validate_certificate_chain_python">
+<a href="#validate_certificate_chain_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>certificate_<wbr>chain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2573,8 +2573,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validatecertificatename_python">
-<a href="#validatecertificatename_python" style="color: inherit; text-decoration: inherit;">validate<wbr>Certificate<wbr>Name</a>
+        <span id="validate_certificate_name_python">
+<a href="#validate_certificate_name_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>certificate_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

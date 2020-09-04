@@ -746,7 +746,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 ---
@@ -949,8 +949,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="autogrow_python">
-<a href="#autogrow_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Grow</a>
+        <span id="auto_grow_python">
+<a href="#auto_grow_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>grow</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -971,8 +971,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="georedundantbackup_python">
-<a href="#georedundantbackup_python" style="color: inherit; text-decoration: inherit;">geo<wbr>Redundant<wbr>Backup</a>
+        <span id="geo_redundant_backup_python">
+<a href="#geo_redundant_backup_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>redundant_<wbr>backup</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

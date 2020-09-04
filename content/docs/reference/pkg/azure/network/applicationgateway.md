@@ -311,47 +311,47 @@ redirect_configuration_name = example_virtual_network.name.apply(lambda name: f"
 network = azure.network.ApplicationGateway("network",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
-    sku={
-        "name": "Standard_Small",
-        "tier": "Standard",
-        "capacity": 2,
-    },
-    gateway_ip_configurations=[{
-        "name": "my-gateway-ip-configuration",
-        "subnet_id": frontend.id,
-    }],
-    frontend_ports=[{
-        "name": frontend_port_name,
-        "port": 80,
-    }],
-    frontend_ip_configurations=[{
-        "name": frontend_ip_configuration_name,
-        "public_ip_address_id": example_public_ip.id,
-    }],
-    backend_address_pools=[{
-        "name": backend_address_pool_name,
-    }],
-    backend_http_settings=[{
-        "name": http_setting_name,
-        "cookieBasedAffinity": "Disabled",
-        "path": "/path1/",
-        "port": 80,
-        "protocol": "Http",
-        "requestTimeout": 60,
-    }],
-    http_listeners=[{
-        "name": listener_name,
-        "frontend_ip_configuration_name": frontend_ip_configuration_name,
-        "frontendPortName": frontend_port_name,
-        "protocol": "Http",
-    }],
-    request_routing_rules=[{
-        "name": request_routing_rule_name,
-        "ruleType": "Basic",
-        "httpListenerName": listener_name,
-        "backendAddressPoolName": backend_address_pool_name,
-        "backendHttpSettingsName": http_setting_name,
-    }])
+    sku=azure.network.ApplicationGatewaySkuArgs(
+        name="Standard_Small",
+        tier="Standard",
+        capacity=2,
+    ),
+    gateway_ip_configurations=[azure.network.ApplicationGatewayGatewayIpConfigurationArgs(
+        name="my-gateway-ip-configuration",
+        subnet_id=frontend.id,
+    )],
+    frontend_ports=[azure.network.ApplicationGatewayFrontendPortArgs(
+        name=frontend_port_name,
+        port=80,
+    )],
+    frontend_ip_configurations=[azure.network.ApplicationGatewayFrontendIpConfigurationArgs(
+        name=frontend_ip_configuration_name,
+        public_ip_address_id=example_public_ip.id,
+    )],
+    backend_address_pools=[azure.network.ApplicationGatewayBackendAddressPoolArgs(
+        name=backend_address_pool_name,
+    )],
+    backend_http_settings=[azure.network.ApplicationGatewayBackendHttpSettingArgs(
+        name=http_setting_name,
+        cookie_based_affinity="Disabled",
+        path="/path1/",
+        port=80,
+        protocol="Http",
+        request_timeout=60,
+    )],
+    http_listeners=[azure.network.ApplicationGatewayHttpListenerArgs(
+        name=listener_name,
+        frontend_ip_configuration_name=frontend_ip_configuration_name,
+        frontend_port_name=frontend_port_name,
+        protocol="Http",
+    )],
+    request_routing_rules=[azure.network.ApplicationGatewayRequestRoutingRuleArgs(
+        name=request_routing_rule_name,
+        rule_type="Basic",
+        http_listener_name=listener_name,
+        backend_address_pool_name=backend_address_pool_name,
+        backend_http_settings_name=http_setting_name,
+    )])
 ```
 
 {{% /example %}}
@@ -451,7 +451,7 @@ const network = new azure.network.ApplicationGateway("network", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.ApplicationGateway">ApplicationGateway</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authentication_certificates</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayAuthenticationCertificate]]</span> = None<span class="p">, </span><span class="nx">autoscale_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[ApplicationGatewayAutoscaleConfiguration]]</span> = None<span class="p">, </span><span class="nx">backend_address_pools</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayBackendAddressPool]]</span> = None<span class="p">, </span><span class="nx">backend_http_settings</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayBackendHttpSetting]]</span> = None<span class="p">, </span><span class="nx">custom_error_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayCustomErrorConfiguration]]</span> = None<span class="p">, </span><span class="nx">enable_http2</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">firewall_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayFrontendIpConfiguration]]</span> = None<span class="p">, </span><span class="nx">frontend_ports</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayFrontendPort]]</span> = None<span class="p">, </span><span class="nx">gateway_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayGatewayIpConfiguration]]</span> = None<span class="p">, </span><span class="nx">http_listeners</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayHttpListener]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ApplicationGatewayIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">probes</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayProbe]]</span> = None<span class="p">, </span><span class="nx">redirect_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayRedirectConfiguration]]</span> = None<span class="p">, </span><span class="nx">request_routing_rules</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayRequestRoutingRule]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rewrite_rule_sets</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayRewriteRuleSet]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[ApplicationGatewaySku]]</span> = None<span class="p">, </span><span class="nx">ssl_certificates</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewaySslCertificate]]</span> = None<span class="p">, </span><span class="nx">ssl_policies</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewaySslPolicy]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_root_certificates</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayTrustedRootCertificate]]</span> = None<span class="p">, </span><span class="nx">url_path_maps</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayUrlPathMap]]</span> = None<span class="p">, </span><span class="nx">waf_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[ApplicationGatewayWafConfiguration]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.ApplicationGateway">ApplicationGateway</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authentication_certificates</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayAuthenticationCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">autoscale_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewayAutoscaleConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">backend_address_pools</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayBackendAddressPoolArgs]]</span> = None<span class="p">, </span><span class="nx">backend_http_settings</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayBackendHttpSettingArgs]]</span> = None<span class="p">, </span><span class="nx">custom_error_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayCustomErrorConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">enable_http2</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">firewall_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayFrontendIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">frontend_ports</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayFrontendPortArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayGatewayIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">http_listeners</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayHttpListenerArgs]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewayIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">probes</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayProbeArgs]]</span> = None<span class="p">, </span><span class="nx">redirect_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayRedirectConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">request_routing_rules</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayRequestRoutingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rewrite_rule_sets</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayRewriteRuleSetArgs]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewaySkuArgs]</span> = None<span class="p">, </span><span class="nx">ssl_certificates</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewaySslCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">ssl_policies</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewaySslPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_root_certificates</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayTrustedRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">url_path_maps</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayUrlPathMapArgs]]</span> = None<span class="p">, </span><span class="nx">waf_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewayWafConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1541,7 +1541,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#backend_address_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendaddresspool">List[Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendaddresspool">List[Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `backend_address_pool` blocks as defined below.
 {{% /md %}}</dd>
@@ -1552,7 +1552,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#backend_http_settings_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>http_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsetting">List[Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsetting">List[Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `backend_http_settings` blocks as defined below.
 {{% /md %}}</dd>
@@ -1563,7 +1563,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#frontend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendipconfiguration">List[Application<wbr>Gateway<wbr>Frontend<wbr>Ip<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendipconfiguration">List[Application<wbr>Gateway<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `frontend_ip_configuration` blocks as defined below.
 {{% /md %}}</dd>
@@ -1574,7 +1574,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#frontend_ports_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendport">List[Application<wbr>Gateway<wbr>Frontend<wbr>Port]</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendport">List[Application<wbr>Gateway<wbr>Frontend<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `frontend_port` blocks as defined below.
 {{% /md %}}</dd>
@@ -1585,7 +1585,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#gateway_ip_configurations_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaygatewayipconfiguration">List[Application<wbr>Gateway<wbr>Gateway<wbr>Ip<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#applicationgatewaygatewayipconfiguration">List[Application<wbr>Gateway<wbr>Gateway<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `gateway_ip_configuration` blocks as defined below.
 {{% /md %}}</dd>
@@ -1596,7 +1596,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#http_listeners_python" style="color: inherit; text-decoration: inherit;">http_<wbr>listeners</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayhttplistener">List[Application<wbr>Gateway<wbr>Http<wbr>Listener]</a></span>
+        <span class="property-type"><a href="#applicationgatewayhttplistener">List[Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `http_listener` blocks as defined below.
 {{% /md %}}</dd>
@@ -1607,7 +1607,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#request_routing_rules_python" style="color: inherit; text-decoration: inherit;">request_<wbr>routing_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrequestroutingrule">List[Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrequestroutingrule">List[Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `request_routing_rule` blocks as defined below.
 {{% /md %}}</dd>
@@ -1629,7 +1629,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysku">Dict[Application<wbr>Gateway<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#applicationgatewaysku">Application<wbr>Gateway<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd>
@@ -1640,7 +1640,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#authentication_certificates_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayauthenticationcertificate">List[Application<wbr>Gateway<wbr>Authentication<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#applicationgatewayauthenticationcertificate">List[Application<wbr>Gateway<wbr>Authentication<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `authentication_certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -1651,7 +1651,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#autoscale_configuration_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayautoscaleconfiguration">Dict[Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#applicationgatewayautoscaleconfiguration">Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `autoscale_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -1662,7 +1662,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#custom_error_configurations_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaycustomerrorconfiguration">List[Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#applicationgatewaycustomerrorconfiguration">List[Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_error_configuration` blocks as defined below.
 {{% /md %}}</dd>
@@ -1695,7 +1695,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayidentity">Dict[Application<wbr>Gateway<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#applicationgatewayidentity">Application<wbr>Gateway<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
 {{% /md %}}</dd>
@@ -1728,7 +1728,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#probes_python" style="color: inherit; text-decoration: inherit;">probes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprobe">List[Application<wbr>Gateway<wbr>Probe]</a></span>
+        <span class="property-type"><a href="#applicationgatewayprobe">List[Application<wbr>Gateway<wbr>Probe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `probe` blocks as defined below.
 {{% /md %}}</dd>
@@ -1739,7 +1739,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#redirect_configurations_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayredirectconfiguration">List[Application<wbr>Gateway<wbr>Redirect<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#applicationgatewayredirectconfiguration">List[Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `redirect_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -1750,7 +1750,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#rewrite_rule_sets_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>rule_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriteruleset">List[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriteruleset">List[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rewrite_rule_set` blocks as defined below. Only valid for v2 SKUs.
 {{% /md %}}</dd>
@@ -1761,7 +1761,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#ssl_certificates_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslcertificate">List[Application<wbr>Gateway<wbr>Ssl<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslcertificate">List[Application<wbr>Gateway<wbr>Ssl<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ssl_certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -1772,7 +1772,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#ssl_policies_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslpolicy">List[Application<wbr>Gateway<wbr>Ssl<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslpolicy">List[Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}a `ssl policy` block as defined below.
 {{% /md %}}</dd>
@@ -1783,7 +1783,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1794,7 +1794,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#trusted_root_certificates_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>root_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificate">List[Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificate">List[Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `trusted_root_certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -1805,7 +1805,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#url_path_maps_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path_<wbr>maps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlpathmap">List[Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map]</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlpathmap">List[Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `url_path_map` blocks as defined below.
 {{% /md %}}</dd>
@@ -1816,7 +1816,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#waf_configuration_python" style="color: inherit; text-decoration: inherit;">waf_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfiguration">Dict[Application<wbr>Gateway<wbr>Waf<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfiguration">Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `waf_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -1931,7 +1931,7 @@ Get an existing ApplicationGateway resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authentication_certificates</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayAuthenticationCertificate]]</span> = None<span class="p">, </span><span class="nx">autoscale_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[ApplicationGatewayAutoscaleConfiguration]]</span> = None<span class="p">, </span><span class="nx">backend_address_pools</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayBackendAddressPool]]</span> = None<span class="p">, </span><span class="nx">backend_http_settings</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayBackendHttpSetting]]</span> = None<span class="p">, </span><span class="nx">custom_error_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayCustomErrorConfiguration]]</span> = None<span class="p">, </span><span class="nx">enable_http2</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">firewall_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayFrontendIpConfiguration]]</span> = None<span class="p">, </span><span class="nx">frontend_ports</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayFrontendPort]]</span> = None<span class="p">, </span><span class="nx">gateway_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayGatewayIpConfiguration]]</span> = None<span class="p">, </span><span class="nx">http_listeners</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayHttpListener]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ApplicationGatewayIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">probes</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayProbe]]</span> = None<span class="p">, </span><span class="nx">redirect_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayRedirectConfiguration]]</span> = None<span class="p">, </span><span class="nx">request_routing_rules</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayRequestRoutingRule]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rewrite_rule_sets</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayRewriteRuleSet]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[ApplicationGatewaySku]]</span> = None<span class="p">, </span><span class="nx">ssl_certificates</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewaySslCertificate]]</span> = None<span class="p">, </span><span class="nx">ssl_policies</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewaySslPolicy]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_root_certificates</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayTrustedRootCertificate]]</span> = None<span class="p">, </span><span class="nx">url_path_maps</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayUrlPathMap]]</span> = None<span class="p">, </span><span class="nx">waf_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[ApplicationGatewayWafConfiguration]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> ApplicationGateway</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authentication_certificates</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayAuthenticationCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">autoscale_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewayAutoscaleConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">backend_address_pools</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayBackendAddressPoolArgs]]</span> = None<span class="p">, </span><span class="nx">backend_http_settings</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayBackendHttpSettingArgs]]</span> = None<span class="p">, </span><span class="nx">custom_error_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayCustomErrorConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">enable_http2</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">firewall_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayFrontendIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">frontend_ports</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayFrontendPortArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayGatewayIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">http_listeners</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayHttpListenerArgs]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewayIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">probes</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayProbeArgs]]</span> = None<span class="p">, </span><span class="nx">redirect_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayRedirectConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">request_routing_rules</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayRequestRoutingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rewrite_rule_sets</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayRewriteRuleSetArgs]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewaySkuArgs]</span> = None<span class="p">, </span><span class="nx">ssl_certificates</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewaySslCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">ssl_policies</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewaySslPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_root_certificates</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayTrustedRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">url_path_maps</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationGatewayUrlPathMapArgs]]</span> = None<span class="p">, </span><span class="nx">waf_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationGatewayWafConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> ApplicationGateway</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2963,7 +2963,7 @@ The following state arguments are supported:
 <a href="#state_authentication_certificates_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayauthenticationcertificate">List[Application<wbr>Gateway<wbr>Authentication<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#applicationgatewayauthenticationcertificate">List[Application<wbr>Gateway<wbr>Authentication<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `authentication_certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -2974,7 +2974,7 @@ The following state arguments are supported:
 <a href="#state_autoscale_configuration_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayautoscaleconfiguration">Dict[Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#applicationgatewayautoscaleconfiguration">Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `autoscale_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -2985,7 +2985,7 @@ The following state arguments are supported:
 <a href="#state_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendaddresspool">List[Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendaddresspool">List[Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `backend_address_pool` blocks as defined below.
 {{% /md %}}</dd>
@@ -2996,7 +2996,7 @@ The following state arguments are supported:
 <a href="#state_backend_http_settings_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>http_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsetting">List[Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsetting">List[Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `backend_http_settings` blocks as defined below.
 {{% /md %}}</dd>
@@ -3007,7 +3007,7 @@ The following state arguments are supported:
 <a href="#state_custom_error_configurations_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaycustomerrorconfiguration">List[Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#applicationgatewaycustomerrorconfiguration">List[Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_error_configuration` blocks as defined below.
 {{% /md %}}</dd>
@@ -3040,7 +3040,7 @@ The following state arguments are supported:
 <a href="#state_frontend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendipconfiguration">List[Application<wbr>Gateway<wbr>Frontend<wbr>Ip<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendipconfiguration">List[Application<wbr>Gateway<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `frontend_ip_configuration` blocks as defined below.
 {{% /md %}}</dd>
@@ -3051,7 +3051,7 @@ The following state arguments are supported:
 <a href="#state_frontend_ports_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendport">List[Application<wbr>Gateway<wbr>Frontend<wbr>Port]</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendport">List[Application<wbr>Gateway<wbr>Frontend<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `frontend_port` blocks as defined below.
 {{% /md %}}</dd>
@@ -3062,7 +3062,7 @@ The following state arguments are supported:
 <a href="#state_gateway_ip_configurations_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaygatewayipconfiguration">List[Application<wbr>Gateway<wbr>Gateway<wbr>Ip<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#applicationgatewaygatewayipconfiguration">List[Application<wbr>Gateway<wbr>Gateway<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `gateway_ip_configuration` blocks as defined below.
 {{% /md %}}</dd>
@@ -3073,7 +3073,7 @@ The following state arguments are supported:
 <a href="#state_http_listeners_python" style="color: inherit; text-decoration: inherit;">http_<wbr>listeners</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayhttplistener">List[Application<wbr>Gateway<wbr>Http<wbr>Listener]</a></span>
+        <span class="property-type"><a href="#applicationgatewayhttplistener">List[Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `http_listener` blocks as defined below.
 {{% /md %}}</dd>
@@ -3084,7 +3084,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayidentity">Dict[Application<wbr>Gateway<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#applicationgatewayidentity">Application<wbr>Gateway<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
 {{% /md %}}</dd>
@@ -3117,7 +3117,7 @@ The following state arguments are supported:
 <a href="#state_probes_python" style="color: inherit; text-decoration: inherit;">probes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprobe">List[Application<wbr>Gateway<wbr>Probe]</a></span>
+        <span class="property-type"><a href="#applicationgatewayprobe">List[Application<wbr>Gateway<wbr>Probe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `probe` blocks as defined below.
 {{% /md %}}</dd>
@@ -3128,7 +3128,7 @@ The following state arguments are supported:
 <a href="#state_redirect_configurations_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayredirectconfiguration">List[Application<wbr>Gateway<wbr>Redirect<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#applicationgatewayredirectconfiguration">List[Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `redirect_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -3139,7 +3139,7 @@ The following state arguments are supported:
 <a href="#state_request_routing_rules_python" style="color: inherit; text-decoration: inherit;">request_<wbr>routing_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrequestroutingrule">List[Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrequestroutingrule">List[Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `request_routing_rule` blocks as defined below.
 {{% /md %}}</dd>
@@ -3161,7 +3161,7 @@ The following state arguments are supported:
 <a href="#state_rewrite_rule_sets_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>rule_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriteruleset">List[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriteruleset">List[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rewrite_rule_set` blocks as defined below. Only valid for v2 SKUs.
 {{% /md %}}</dd>
@@ -3172,7 +3172,7 @@ The following state arguments are supported:
 <a href="#state_sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysku">Dict[Application<wbr>Gateway<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#applicationgatewaysku">Application<wbr>Gateway<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd>
@@ -3183,7 +3183,7 @@ The following state arguments are supported:
 <a href="#state_ssl_certificates_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslcertificate">List[Application<wbr>Gateway<wbr>Ssl<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslcertificate">List[Application<wbr>Gateway<wbr>Ssl<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ssl_certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -3194,7 +3194,7 @@ The following state arguments are supported:
 <a href="#state_ssl_policies_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslpolicy">List[Application<wbr>Gateway<wbr>Ssl<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslpolicy">List[Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}a `ssl policy` block as defined below.
 {{% /md %}}</dd>
@@ -3205,7 +3205,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -3216,7 +3216,7 @@ The following state arguments are supported:
 <a href="#state_trusted_root_certificates_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>root_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificate">List[Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificate">List[Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `trusted_root_certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -3227,7 +3227,7 @@ The following state arguments are supported:
 <a href="#state_url_path_maps_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path_<wbr>maps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlpathmap">List[Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map]</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlpathmap">List[Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `url_path_map` blocks as defined below.
 {{% /md %}}</dd>
@@ -3238,7 +3238,7 @@ The following state arguments are supported:
 <a href="#state_waf_configuration_python" style="color: inherit; text-decoration: inherit;">waf_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfiguration">Dict[Application<wbr>Gateway<wbr>Waf<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfiguration">Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `waf_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -3565,8 +3565,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxcapacity_python">
-<a href="#maxcapacity_python" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity</a>
+        <span id="max_capacity_python">
+<a href="#max_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3787,8 +3787,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipaddresses_python">
-<a href="#ipaddresses_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
+        <span id="ip_addresses_python">
+<a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4339,8 +4339,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="cookiebasedaffinity_python">
-<a href="#cookiebasedaffinity_python" style="color: inherit; text-decoration: inherit;">cookie<wbr>Based<wbr>Affinity</a>
+        <span id="cookie_based_affinity_python">
+<a href="#cookie_based_affinity_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>based_<wbr>affinity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4383,8 +4383,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="affinitycookiename_python">
-<a href="#affinitycookiename_python" style="color: inherit; text-decoration: inherit;">affinity<wbr>Cookie<wbr>Name</a>
+        <span id="affinity_cookie_name_python">
+<a href="#affinity_cookie_name_python" style="color: inherit; text-decoration: inherit;">affinity_<wbr>cookie_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4398,18 +4398,18 @@ The following state arguments are supported:
 <a href="#authentication_certificates_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingauthenticationcertificate">List[Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Authentication<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingauthenticationcertificate">List[Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Authentication<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `authentication_certificate` blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectiondraining_python">
-<a href="#connectiondraining_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Draining</a>
+        <span id="connection_draining_python">
+<a href="#connection_draining_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>draining</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingconnectiondraining">Dict[Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Connection<wbr>Draining]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingconnectiondraining">Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Connection<wbr>Draining<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `connection_draining` block as defined below.
 {{% /md %}}</dd>
@@ -4449,24 +4449,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pickhostnamefrombackendaddress_python">
-<a href="#pickhostnamefrombackendaddress_python" style="color: inherit; text-decoration: inherit;">pick<wbr>Host<wbr>Name<wbr>From<wbr>Backend<wbr>Address</a>
+        <span id="pick_host_name_from_backend_address_python">
+<a href="#pick_host_name_from_backend_address_python" style="color: inherit; text-decoration: inherit;">pick_<wbr>host_<wbr>name_<wbr>from_<wbr>backend_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether host header should be picked from the host name of the backend server. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="probename_python">
-<a href="#probename_python" style="color: inherit; text-decoration: inherit;">probe<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The name of an associated HTTP Probe.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4482,8 +4471,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requesttimeout_python">
-<a href="#requesttimeout_python" style="color: inherit; text-decoration: inherit;">request<wbr>Timeout</a>
+        <span id="probe_name_python">
+<a href="#probe_name_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of an associated HTTP Probe.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="request_timeout_python">
+<a href="#request_timeout_python" style="color: inherit; text-decoration: inherit;">request_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4493,8 +4493,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustedrootcertificatenames_python">
-<a href="#trustedrootcertificatenames_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Root<wbr>Certificate<wbr>Names</a>
+        <span id="trusted_root_certificate_names_python">
+<a href="#trusted_root_certificate_names_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>root_<wbr>certificate_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4750,8 +4750,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="draintimeoutsec_python">
-<a href="#draintimeoutsec_python" style="color: inherit; text-decoration: inherit;">drain<wbr>Timeout<wbr>Sec</a>
+        <span id="drain_timeout_sec_python">
+<a href="#drain_timeout_sec_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>timeout_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4917,8 +4917,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="customerrorpageurl_python">
-<a href="#customerrorpageurl_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Error<wbr>Page<wbr>Url</a>
+        <span id="custom_error_page_url_python">
+<a href="#custom_error_page_url_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>page_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4928,8 +4928,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="statuscode_python">
-<a href="#statuscode_python" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
+        <span id="status_code_python">
+<a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5216,17 +5216,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateipaddressallocation_python">
-<a href="#privateipaddressallocation_python" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address<wbr>Allocation</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The Allocation Method for the Private IP Address. Possible values are `Dynamic` and `Static`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span> 
@@ -5234,6 +5223,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Private IP Address to use for the Application Gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_ip_address_allocation_python">
+<a href="#private_ip_address_allocation_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address_<wbr>allocation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Allocation Method for the Private IP Address. Possible values are `Dynamic` and `Static`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6124,17 +6124,6 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="frontendportname_python">
-<a href="#frontendportname_python" style="color: inherit; text-decoration: inherit;">frontend<wbr>Port<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The Name of the Frontend Port use for this HTTP Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="frontend_ip_configuration_name_python">
 <a href="#frontend_ip_configuration_name_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configuration_<wbr>name</a>
 </span> 
@@ -6142,6 +6131,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Frontend IP Configuration used for this HTTP Listener.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="frontend_port_name_python">
+<a href="#frontend_port_name_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Name of the Frontend Port use for this HTTP Listener.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6172,7 +6172,7 @@ The following state arguments are supported:
 <a href="#custom_error_configurations_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayhttplistenercustomerrorconfiguration">List[Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Custom<wbr>Error<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#applicationgatewayhttplistenercustomerrorconfiguration">List[Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Custom<wbr>Error<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_error_configuration` blocks as defined below.
 {{% /md %}}</dd>
@@ -6190,17 +6190,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="frontendportid_python">
-<a href="#frontendportid_python" style="color: inherit; text-decoration: inherit;">frontend<wbr>Port<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the associated Frontend Port.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="frontend_ip_configuration_id_python">
 <a href="#frontend_ip_configuration_id_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configuration_<wbr>id</a>
 </span> 
@@ -6208,6 +6197,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the associated Frontend Configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frontend_port_id_python">
+<a href="#frontend_port_id_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated Frontend Port.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6245,8 +6245,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requiresni_python">
-<a href="#requiresni_python" style="color: inherit; text-decoration: inherit;">require<wbr>Sni</a>
+        <span id="require_sni_python">
+<a href="#require_sni_python" style="color: inherit; text-decoration: inherit;">require_<wbr>sni</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6256,8 +6256,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslcertificateid_python">
-<a href="#sslcertificateid_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Certificate<wbr>Id</a>
+        <span id="ssl_certificate_id_python">
+<a href="#ssl_certificate_id_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificate_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6267,8 +6267,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslcertificatename_python">
-<a href="#sslcertificatename_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Certificate<wbr>Name</a>
+        <span id="ssl_certificate_name_python">
+<a href="#ssl_certificate_name_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificate_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6423,8 +6423,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="customerrorpageurl_python">
-<a href="#customerrorpageurl_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Error<wbr>Page<wbr>Url</a>
+        <span id="custom_error_page_url_python">
+<a href="#custom_error_page_url_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>page_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6434,8 +6434,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="statuscode_python">
-<a href="#statuscode_python" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
+        <span id="status_code_python">
+<a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6568,8 +6568,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="identityids_python">
-<a href="#identityids_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
+        <span id="identity_ids_python">
+<a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6734,6 +6734,17 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether the host header should be picked from the backend http settings. Defaults to `false`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -6860,6 +6871,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the host header should be picked from the backend http settings. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
 {{% /md %}}</dd>
 
 </dl>
@@ -6990,6 +7012,17 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether the host header should be picked from the backend http settings. Defaults to `false`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -7054,8 +7087,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="unhealthythreshold_python">
-<a href="#unhealthythreshold_python" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Threshold</a>
+        <span id="unhealthy_threshold_python">
+<a href="#unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7091,15 +7124,15 @@ The following state arguments are supported:
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprobematch">Dict[Application<wbr>Gateway<wbr>Probe<wbr>Match]</a></span>
+        <span class="property-type"><a href="#applicationgatewayprobematch">Application<wbr>Gateway<wbr>Probe<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `match` block as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minimumservers_python">
-<a href="#minimumservers_python" style="color: inherit; text-decoration: inherit;">minimum<wbr>Servers</a>
+        <span id="minimum_servers_python">
+<a href="#minimum_servers_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7109,13 +7142,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pickhostnamefrombackendhttpsettings_python">
-<a href="#pickhostnamefrombackendhttpsettings_python" style="color: inherit; text-decoration: inherit;">pick<wbr>Host<wbr>Name<wbr>From<wbr>Backend<wbr>Http<wbr>Settings</a>
+        <span id="pick_host_name_from_backend_http_settings_python">
+<a href="#pick_host_name_from_backend_http_settings_python" style="color: inherit; text-decoration: inherit;">pick_<wbr>host_<wbr>name_<wbr>from_<wbr>backend_<wbr>http_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the host header should be picked from the backend http settings. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
 {{% /md %}}</dd>
 
 </dl>
@@ -7243,8 +7287,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="statuscodes_python">
-<a href="#statuscodes_python" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
+        <span id="status_codes_python">
+<a href="#status_codes_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -7572,8 +7616,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="redirecttype_python">
-<a href="#redirecttype_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
+        <span id="redirect_type_python">
+<a href="#redirect_type_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7594,8 +7638,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includepath_python">
-<a href="#includepath_python" style="color: inherit; text-decoration: inherit;">include<wbr>Path</a>
+        <span id="include_path_python">
+<a href="#include_path_python" style="color: inherit; text-decoration: inherit;">include_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7605,8 +7649,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includequerystring_python">
-<a href="#includequerystring_python" style="color: inherit; text-decoration: inherit;">include<wbr>Query<wbr>String</a>
+        <span id="include_query_string_python">
+<a href="#include_query_string_python" style="color: inherit; text-decoration: inherit;">include_<wbr>query_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7616,8 +7660,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetlistenerid_python">
-<a href="#targetlistenerid_python" style="color: inherit; text-decoration: inherit;">target<wbr>Listener<wbr>Id</a>
+        <span id="target_listener_id_python">
+<a href="#target_listener_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>listener_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7626,8 +7670,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetlistenername_python">
-<a href="#targetlistenername_python" style="color: inherit; text-decoration: inherit;">target<wbr>Listener<wbr>Name</a>
+        <span id="target_listener_name_python">
+<a href="#target_listener_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>listener_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7637,8 +7681,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targeturl_python">
-<a href="#targeturl_python" style="color: inherit; text-decoration: inherit;">target<wbr>Url</a>
+        <span id="target_url_python">
+<a href="#target_url_python" style="color: inherit; text-decoration: inherit;">target_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8189,8 +8233,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="httplistenername_python">
-<a href="#httplistenername_python" style="color: inherit; text-decoration: inherit;">http<wbr>Listener<wbr>Name</a>
+        <span id="http_listener_name_python">
+<a href="#http_listener_name_python" style="color: inherit; text-decoration: inherit;">http_<wbr>listener_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8211,46 +8255,13 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="ruletype_python">
-<a href="#ruletype_python" style="color: inherit; text-decoration: inherit;">rule<wbr>Type</a>
+        <span id="rule_type_python">
+<a href="#rule_type_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Type of Routing that should be used for this Rule. Possible values are `Basic` and `PathBasedRouting`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="backendaddresspoolname_python">
-<a href="#backendaddresspoolname_python" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pool<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The Name of the Backend Address Pool which should be used for this Routing Rule. Cannot be set if `redirect_configuration_name` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="backendhttpsettingsid_python">
-<a href="#backendhttpsettingsid_python" style="color: inherit; text-decoration: inherit;">backend<wbr>Http<wbr>Settings<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the associated Backend HTTP Settings Configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="backendhttpsettingsname_python">
-<a href="#backendhttpsettingsname_python" style="color: inherit; text-decoration: inherit;">backend<wbr>Http<wbr>Settings<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The Name of the Backend HTTP Settings Collection which should be used for this Routing Rule. Cannot be set if `redirect_configuration_name` is set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8266,8 +8277,41 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httplistenerid_python">
-<a href="#httplistenerid_python" style="color: inherit; text-decoration: inherit;">http<wbr>Listener<wbr>Id</a>
+        <span id="backend_address_pool_name_python">
+<a href="#backend_address_pool_name_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pool_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Name of the Backend Address Pool which should be used for this Routing Rule. Cannot be set if `redirect_configuration_name` is set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backend_http_settings_id_python">
+<a href="#backend_http_settings_id_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>http_<wbr>settings_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated Backend HTTP Settings Configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backend_http_settings_name_python">
+<a href="#backend_http_settings_name_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>http_<wbr>settings_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Name of the Backend HTTP Settings Collection which should be used for this Routing Rule. Cannot be set if `redirect_configuration_name` is set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_listener_id_python">
+<a href="#http_listener_id_python" style="color: inherit; text-decoration: inherit;">http_<wbr>listener_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8288,8 +8332,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redirectconfigurationid_python">
-<a href="#redirectconfigurationid_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Configuration<wbr>Id</a>
+        <span id="redirect_configuration_id_python">
+<a href="#redirect_configuration_id_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>configuration_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8299,8 +8343,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redirectconfigurationname_python">
-<a href="#redirectconfigurationname_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Configuration<wbr>Name</a>
+        <span id="redirect_configuration_name_python">
+<a href="#redirect_configuration_name_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>configuration_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8310,8 +8354,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rewriterulesetid_python">
-<a href="#rewriterulesetid_python" style="color: inherit; text-decoration: inherit;">rewrite<wbr>Rule<wbr>Set<wbr>Id</a>
+        <span id="rewrite_rule_set_id_python">
+<a href="#rewrite_rule_set_id_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>rule_<wbr>set_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8321,8 +8365,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rewriterulesetname_python">
-<a href="#rewriterulesetname_python" style="color: inherit; text-decoration: inherit;">rewrite<wbr>Rule<wbr>Set<wbr>Name</a>
+        <span id="rewrite_rule_set_name_python">
+<a href="#rewrite_rule_set_name_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>rule_<wbr>set_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8332,8 +8376,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="urlpathmapid_python">
-<a href="#urlpathmapid_python" style="color: inherit; text-decoration: inherit;">url<wbr>Path<wbr>Map<wbr>Id</a>
+        <span id="url_path_map_id_python">
+<a href="#url_path_map_id_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path_<wbr>map_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8343,8 +8387,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="urlpathmapname_python">
-<a href="#urlpathmapname_python" style="color: inherit; text-decoration: inherit;">url<wbr>Path<wbr>Map<wbr>Name</a>
+        <span id="url_path_map_name_python">
+<a href="#url_path_map_name_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path_<wbr>map_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8521,11 +8565,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rewriterules_python">
-<a href="#rewriterules_python" style="color: inherit; text-decoration: inherit;">rewrite<wbr>Rules</a>
+        <span id="rewrite_rules_python">
+<a href="#rewrite_rules_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterule">List[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterule">List[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rewrite_rule` blocks as defined above.
 {{% /md %}}</dd>
@@ -8754,8 +8798,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="rulesequence_python">
-<a href="#rulesequence_python" style="color: inherit; text-decoration: inherit;">rule<wbr>Sequence</a>
+        <span id="rule_sequence_python">
+<a href="#rule_sequence_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>sequence</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8769,29 +8813,29 @@ The following state arguments are supported:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulecondition">List[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulecondition">List[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `condition` blocks as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestheaderconfigurations_python">
-<a href="#requestheaderconfigurations_python" style="color: inherit; text-decoration: inherit;">request<wbr>Header<wbr>Configurations</a>
+        <span id="request_header_configurations_python">
+<a href="#request_header_configurations_python" style="color: inherit; text-decoration: inherit;">request_<wbr>header_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulerequestheaderconfiguration">List[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Request<wbr>Header<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulerequestheaderconfiguration">List[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Request<wbr>Header<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `request_header_configuration` blocks as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responseheaderconfigurations_python">
-<a href="#responseheaderconfigurations_python" style="color: inherit; text-decoration: inherit;">response<wbr>Header<wbr>Configurations</a>
+        <span id="response_header_configurations_python">
+<a href="#response_header_configurations_python" style="color: inherit; text-decoration: inherit;">response_<wbr>header_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleresponseheaderconfiguration">List[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Header<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleresponseheaderconfiguration">List[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Header<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `response_header_configuration` blocks as defined above.
 {{% /md %}}</dd>
@@ -8998,8 +9042,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ignorecase_python">
-<a href="#ignorecase_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Case</a>
+        <span id="ignore_case_python">
+<a href="#ignore_case_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>case</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9132,8 +9176,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="headername_python">
-<a href="#headername_python" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9143,8 +9187,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="headervalue_python">
-<a href="#headervalue_python" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+        <span id="header_value_python">
+<a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9266,8 +9310,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="headername_python">
-<a href="#headername_python" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9277,8 +9321,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="headervalue_python">
-<a href="#headervalue_python" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+        <span id="header_value_python">
+<a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9765,8 +9809,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publiccertdata_python">
-<a href="#publiccertdata_python" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
+        <span id="public_cert_data_python">
+<a href="#public_cert_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>cert_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9990,8 +10034,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ciphersuites_python">
-<a href="#ciphersuites_python" style="color: inherit; text-decoration: inherit;">cipher<wbr>Suites</a>
+        <span id="cipher_suites_python">
+<a href="#cipher_suites_python" style="color: inherit; text-decoration: inherit;">cipher_<wbr>suites</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -10001,8 +10045,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disabledprotocols_python">
-<a href="#disabledprotocols_python" style="color: inherit; text-decoration: inherit;">disabled<wbr>Protocols</a>
+        <span id="disabled_protocols_python">
+<a href="#disabled_protocols_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -10012,8 +10056,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minprotocolversion_python">
-<a href="#minprotocolversion_python" style="color: inherit; text-decoration: inherit;">min<wbr>Protocol<wbr>Version</a>
+        <span id="min_protocol_version_python">
+<a href="#min_protocol_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>protocol_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10023,8 +10067,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="policyname_python">
-<a href="#policyname_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
+        <span id="policy_name_python">
+<a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10641,19 +10685,19 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-required"
             title="Required">
-        <span id="pathrules_python">
-<a href="#pathrules_python" style="color: inherit; text-decoration: inherit;">path<wbr>Rules</a>
+        <span id="path_rules_python">
+<a href="#path_rules_python" style="color: inherit; text-decoration: inherit;">path_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlpathmappathrule">List[Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Path<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlpathmappathrule">List[Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Path<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `path_rule` blocks as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultbackendaddresspoolid_python">
-<a href="#defaultbackendaddresspoolid_python" style="color: inherit; text-decoration: inherit;">default<wbr>Backend<wbr>Address<wbr>Pool<wbr>Id</a>
+        <span id="default_backend_address_pool_id_python">
+<a href="#default_backend_address_pool_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>backend_<wbr>address_<wbr>pool_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10663,8 +10707,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultbackendaddresspoolname_python">
-<a href="#defaultbackendaddresspoolname_python" style="color: inherit; text-decoration: inherit;">default<wbr>Backend<wbr>Address<wbr>Pool<wbr>Name</a>
+        <span id="default_backend_address_pool_name_python">
+<a href="#default_backend_address_pool_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>backend_<wbr>address_<wbr>pool_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10674,8 +10718,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultbackendhttpsettingsid_python">
-<a href="#defaultbackendhttpsettingsid_python" style="color: inherit; text-decoration: inherit;">default<wbr>Backend<wbr>Http<wbr>Settings<wbr>Id</a>
+        <span id="default_backend_http_settings_id_python">
+<a href="#default_backend_http_settings_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>backend_<wbr>http_<wbr>settings_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10685,8 +10729,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultbackendhttpsettingsname_python">
-<a href="#defaultbackendhttpsettingsname_python" style="color: inherit; text-decoration: inherit;">default<wbr>Backend<wbr>Http<wbr>Settings<wbr>Name</a>
+        <span id="default_backend_http_settings_name_python">
+<a href="#default_backend_http_settings_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>backend_<wbr>http_<wbr>settings_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10696,8 +10740,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultredirectconfigurationid_python">
-<a href="#defaultredirectconfigurationid_python" style="color: inherit; text-decoration: inherit;">default<wbr>Redirect<wbr>Configuration<wbr>Id</a>
+        <span id="default_redirect_configuration_id_python">
+<a href="#default_redirect_configuration_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>redirect_<wbr>configuration_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10707,8 +10751,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultredirectconfigurationname_python">
-<a href="#defaultredirectconfigurationname_python" style="color: inherit; text-decoration: inherit;">default<wbr>Redirect<wbr>Configuration<wbr>Name</a>
+        <span id="default_redirect_configuration_name_python">
+<a href="#default_redirect_configuration_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>redirect_<wbr>configuration_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10718,8 +10762,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultrewriterulesetid_python">
-<a href="#defaultrewriterulesetid_python" style="color: inherit; text-decoration: inherit;">default<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Id</a>
+        <span id="default_rewrite_rule_set_id_python">
+<a href="#default_rewrite_rule_set_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>rewrite_<wbr>rule_<wbr>set_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10728,8 +10772,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultrewriterulesetname_python">
-<a href="#defaultrewriterulesetname_python" style="color: inherit; text-decoration: inherit;">default<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Name</a>
+        <span id="default_rewrite_rule_set_name_python">
+<a href="#default_rewrite_rule_set_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>rewrite_<wbr>rule_<wbr>set_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11181,8 +11225,19 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backendaddresspoolname_python">
-<a href="#backendaddresspoolname_python" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pool<wbr>Name</a>
+        <span id="backend_address_pool_id_python">
+<a href="#backend_address_pool_id_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pool_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated Backend Address Pool.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backend_address_pool_name_python">
+<a href="#backend_address_pool_name_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pool_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11192,8 +11247,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backendhttpsettingsid_python">
-<a href="#backendhttpsettingsid_python" style="color: inherit; text-decoration: inherit;">backend<wbr>Http<wbr>Settings<wbr>Id</a>
+        <span id="backend_http_settings_id_python">
+<a href="#backend_http_settings_id_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>http_<wbr>settings_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11203,24 +11258,13 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backendhttpsettingsname_python">
-<a href="#backendhttpsettingsname_python" style="color: inherit; text-decoration: inherit;">backend<wbr>Http<wbr>Settings<wbr>Name</a>
+        <span id="backend_http_settings_name_python">
+<a href="#backend_http_settings_name_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>http_<wbr>settings_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Backend HTTP Settings Collection to use for this Path Rule. Cannot be set if `redirect_configuration_name` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="backend_address_pool_id_python">
-<a href="#backend_address_pool_id_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pool_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the associated Backend Address Pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11236,8 +11280,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redirectconfigurationid_python">
-<a href="#redirectconfigurationid_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Configuration<wbr>Id</a>
+        <span id="redirect_configuration_id_python">
+<a href="#redirect_configuration_id_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>configuration_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11247,8 +11291,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redirectconfigurationname_python">
-<a href="#redirectconfigurationname_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Configuration<wbr>Name</a>
+        <span id="redirect_configuration_name_python">
+<a href="#redirect_configuration_name_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>configuration_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11258,8 +11302,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rewriterulesetid_python">
-<a href="#rewriterulesetid_python" style="color: inherit; text-decoration: inherit;">rewrite<wbr>Rule<wbr>Set<wbr>Id</a>
+        <span id="rewrite_rule_set_id_python">
+<a href="#rewrite_rule_set_id_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>rule_<wbr>set_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11269,8 +11313,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rewriterulesetname_python">
-<a href="#rewriterulesetname_python" style="color: inherit; text-decoration: inherit;">rewrite<wbr>Rule<wbr>Set<wbr>Name</a>
+        <span id="rewrite_rule_set_name_python">
+<a href="#rewrite_rule_set_name_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>rule_<wbr>set_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11634,8 +11678,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-required"
             title="Required">
-        <span id="firewallmode_python">
-<a href="#firewallmode_python" style="color: inherit; text-decoration: inherit;">firewall<wbr>Mode</a>
+        <span id="firewall_mode_python">
+<a href="#firewall_mode_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11645,8 +11689,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-required"
             title="Required">
-        <span id="rulesetversion_python">
-<a href="#rulesetversion_python" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Version</a>
+        <span id="rule_set_version_python">
+<a href="#rule_set_version_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11656,11 +11700,11 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disabledrulegroups_python">
-<a href="#disabledrulegroups_python" style="color: inherit; text-decoration: inherit;">disabled<wbr>Rule<wbr>Groups</a>
+        <span id="disabled_rule_groups_python">
+<a href="#disabled_rule_groups_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>rule_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfigurationdisabledrulegroup">List[Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Disabled<wbr>Rule<wbr>Group]</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfigurationdisabledrulegroup">List[Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Disabled<wbr>Rule<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}one or more `disabled_rule_group` blocks as defined below.
 {{% /md %}}</dd>
@@ -11671,15 +11715,15 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfigurationexclusion">List[Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Exclusion]</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfigurationexclusion">List[Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Exclusion<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}one or more `exclusion` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fileuploadlimitmb_python">
-<a href="#fileuploadlimitmb_python" style="color: inherit; text-decoration: inherit;">file<wbr>Upload<wbr>Limit<wbr>Mb</a>
+        <span id="file_upload_limit_mb_python">
+<a href="#file_upload_limit_mb_python" style="color: inherit; text-decoration: inherit;">file_<wbr>upload_<wbr>limit_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -11689,8 +11733,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxrequestbodysizekb_python">
-<a href="#maxrequestbodysizekb_python" style="color: inherit; text-decoration: inherit;">max<wbr>Request<wbr>Body<wbr>Size<wbr>Kb</a>
+        <span id="max_request_body_size_kb_python">
+<a href="#max_request_body_size_kb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>request_<wbr>body_<wbr>size_<wbr>kb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -11700,8 +11744,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestbodycheck_python">
-<a href="#requestbodycheck_python" style="color: inherit; text-decoration: inherit;">request<wbr>Body<wbr>Check</a>
+        <span id="request_body_check_python">
+<a href="#request_body_check_python" style="color: inherit; text-decoration: inherit;">request_<wbr>body_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -11711,8 +11755,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rulesettype_python">
-<a href="#rulesettype_python" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Type</a>
+        <span id="rule_set_type_python">
+<a href="#rule_set_type_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11834,8 +11878,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-required"
             title="Required">
-        <span id="rulegroupname_python">
-<a href="#rulegroupname_python" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Name</a>
+        <span id="rule_group_name_python">
+<a href="#rule_group_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11849,7 +11893,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}A list of rules which should be disabled in that group. Disables all rules in the specified group if `rules` is not specified.
 {{% /md %}}</dd>
@@ -12001,8 +12045,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvariable_python">
-<a href="#matchvariable_python" style="color: inherit; text-decoration: inherit;">match<wbr>Variable</a>
+        <span id="match_variable_python">
+<a href="#match_variable_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variable</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12023,8 +12067,8 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span id="selectormatchoperator_python">
-<a href="#selectormatchoperator_python" style="color: inherit; text-decoration: inherit;">selector<wbr>Match<wbr>Operator</a>
+        <span id="selector_match_operator_python">
+<a href="#selector_match_operator_python" style="color: inherit; text-decoration: inherit;">selector_<wbr>match_<wbr>operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

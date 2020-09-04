@@ -239,17 +239,17 @@ example_virtual_network_gateway = azure.network.VirtualNetworkGateway("exampleVi
     active_active=False,
     enable_bgp=False,
     sku="Basic",
-    ip_configurations=[{
-        "name": "vnetGatewayConfig",
-        "public_ip_address_id": example_public_ip.id,
-        "privateIpAddressAllocation": "Dynamic",
-        "subnet_id": example_subnet.id,
-    }],
-    vpn_client_configuration={
-        "address_spaces": ["10.2.0.0/24"],
-        "rootCertificates": [{
-            "name": "DigiCert-Federated-ID-Root-CA",
-            "publicCertData": """MIIDuzCCAqOgAwIBAgIQCHTZWCM+IlfFIRXIvyKSrjANBgkqhkiG9w0BAQsFADBn
+    ip_configurations=[azure.network.VirtualNetworkGatewayIpConfigurationArgs(
+        name="vnetGatewayConfig",
+        public_ip_address_id=example_public_ip.id,
+        private_ip_address_allocation="Dynamic",
+        subnet_id=example_subnet.id,
+    )],
+    vpn_client_configuration=azure.network.VirtualNetworkGatewayVpnClientConfigurationArgs(
+        address_spaces=["10.2.0.0/24"],
+        root_certificates=[azure.network.VirtualNetworkGatewayVpnClientConfigurationRootCertificateArgs(
+            name="DigiCert-Federated-ID-Root-CA",
+            public_cert_data="""MIIDuzCCAqOgAwIBAgIQCHTZWCM+IlfFIRXIvyKSrjANBgkqhkiG9w0BAQsFADBn
 MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
 d3cuZGlnaWNlcnQuY29tMSYwJAYDVQQDEx1EaWdpQ2VydCBGZWRlcmF0ZWQgSUQg
 Um9vdCBDQTAeFw0xMzAxMTUxMjAwMDBaFw0zMzAxMTUxMjAwMDBaMGcxCzAJBgNV
@@ -270,12 +270,12 @@ uGLOhRJOFprPdoDIUBB+tmCl3oDcBy3vnUeOEioz8zAkprcb3GHwHAK+vHmmfgcn
 WsfMLH4JCLa/tRYL+Rw/N3ybCkDp00s0WUZ+AoDywSl0Q/ZEnNY0MsFiw6LyIdbq
 M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
 """,
-        }],
-        "revokedCertificates": [{
-            "name": "Verizon-Global-Root-CA",
-            "thumbprint": "912198EEF23DCAC40939312FEE97DD560BAE49B1",
-        }],
-    })
+        )],
+        revoked_certificates=[azure.network.VirtualNetworkGatewayVpnClientConfigurationRevokedCertificateArgs(
+            name="Verizon-Global-Root-CA",
+            thumbprint="912198EEF23DCAC40939312FEE97DD560BAE49B1",
+        )],
+    ))
 ```
 
 {{% /example %}}
@@ -364,7 +364,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VirtualNetworkGateway">VirtualNetworkGateway</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualNetworkGatewayBgpSettings]]</span> = None<span class="p">, </span><span class="nx">default_local_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_configurations</span><span class="p">:</span> <span class="nx">Optional[List[VirtualNetworkGatewayIpConfiguration]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_client_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualNetworkGatewayVpnClientConfiguration]]</span> = None<span class="p">, </span><span class="nx">vpn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VirtualNetworkGateway">VirtualNetworkGateway</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayBgpSettingsArgs]</span> = None<span class="p">, </span><span class="nx">default_local_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_configurations</span><span class="p">:</span> <span class="nx">Optional[List[VirtualNetworkGatewayIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_client_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayVpnClientConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">vpn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1091,7 +1091,7 @@ options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">List[Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">List[Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or two `ip_configuration` blocks documented below.
 An active-standby gateway requires exactly one `ip_configuration` block whereas
@@ -1160,7 +1160,7 @@ Defaults to `false`.
 <a href="#bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Dict[Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1231,7 +1231,7 @@ located. Changing the location/region forces a new resource to be created.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1242,7 +1242,7 @@ located. Changing the location/region forces a new resource to be created.
 <a href="#vpn_client_configuration_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Dict[Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_configuration` block which
 is documented below. In this block the Virtual Network Gateway can be configured
@@ -1360,7 +1360,7 @@ Get an existing VirtualNetworkGateway resource's state with the given name, ID, 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualNetworkGatewayBgpSettings]]</span> = None<span class="p">, </span><span class="nx">default_local_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_configurations</span><span class="p">:</span> <span class="nx">Optional[List[VirtualNetworkGatewayIpConfiguration]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_client_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualNetworkGatewayVpnClientConfiguration]]</span> = None<span class="p">, </span><span class="nx">vpn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VirtualNetworkGateway</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayBgpSettingsArgs]</span> = None<span class="p">, </span><span class="nx">default_local_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_configurations</span><span class="p">:</span> <span class="nx">Optional[List[VirtualNetworkGatewayIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_client_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayVpnClientConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">vpn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VirtualNetworkGateway</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2043,7 +2043,7 @@ Defaults to `false`.
 <a href="#state_bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Dict[Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2091,7 +2091,7 @@ for this Virtual Network Gateway. Defaults to `false`.
 <a href="#state_ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">List[Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">List[Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or two `ip_configuration` blocks documented below.
 An active-standby gateway requires exactly one `ip_configuration` block whereas
@@ -2157,7 +2157,7 @@ sku is only supported by an `ExpressRoute` gateway.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2180,7 +2180,7 @@ sku is only supported by an `ExpressRoute` gateway.
 <a href="#state_vpn_client_configuration_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Dict[Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_configuration` block which
 is documented below. In this block the Virtual Network Gateway can be configured
@@ -2377,8 +2377,8 @@ the Virtual Network Gateway. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="peerweight_python">
-<a href="#peerweight_python" style="color: inherit; text-decoration: inherit;">peer<wbr>Weight</a>
+        <span id="peer_weight_python">
+<a href="#peer_weight_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>weight</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2389,8 +2389,8 @@ through BGP peering. Valid values can be between `0` and `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="peeringaddress_python">
-<a href="#peeringaddress_python" style="color: inherit; text-decoration: inherit;">peering<wbr>Address</a>
+        <span id="peering_address_python">
+<a href="#peering_address_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2636,8 +2636,8 @@ network can contain at most a single Virtual Network Gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateipaddressallocation_python">
-<a href="#privateipaddressallocation_python" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address<wbr>Allocation</a>
+        <span id="private_ip_address_allocation_python">
+<a href="#private_ip_address_allocation_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address_<wbr>allocation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2936,8 +2936,8 @@ in CIDR notation.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="radiusserveraddress_python">
-<a href="#radiusserveraddress_python" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Address</a>
+        <span id="radius_server_address_python">
+<a href="#radius_server_address_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2948,8 +2948,8 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
 
     <dt class="property-optional"
             title="Optional">
-        <span id="radiusserversecret_python">
-<a href="#radiusserversecret_python" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Secret</a>
+        <span id="radius_server_secret_python">
+<a href="#radius_server_secret_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2960,11 +2960,11 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
 
     <dt class="property-optional"
             title="Optional">
-        <span id="revokedcertificates_python">
-<a href="#revokedcertificates_python" style="color: inherit; text-decoration: inherit;">revoked<wbr>Certificates</a>
+        <span id="revoked_certificates_python">
+<a href="#revoked_certificates_python" style="color: inherit; text-decoration: inherit;">revoked_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrevokedcertificate">List[Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrevokedcertificate">List[Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `revoked_certificate` blocks which
 are defined below.
@@ -2973,11 +2973,11 @@ This setting is incompatible with the use of `radius_server_address` and `radius
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rootcertificates_python">
-<a href="#rootcertificates_python" style="color: inherit; text-decoration: inherit;">root<wbr>Certificates</a>
+        <span id="root_certificates_python">
+<a href="#root_certificates_python" style="color: inherit; text-decoration: inherit;">root_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrootcertificate">List[Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrootcertificate">List[Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `root_certificate` blocks which are
 defined below. These root certificates are used to sign the client certificate
@@ -2987,8 +2987,8 @@ This setting is incompatible with the use of `radius_server_address` and `radius
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vpnclientprotocols_python">
-<a href="#vpnclientprotocols_python" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Protocols</a>
+        <span id="vpn_client_protocols_python">
+<a href="#vpn_client_protocols_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3255,8 +3255,8 @@ revoked.
 
     <dt class="property-required"
             title="Required">
-        <span id="publiccertdata_python">
-<a href="#publiccertdata_python" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
+        <span id="public_cert_data_python">
+<a href="#public_cert_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>cert_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

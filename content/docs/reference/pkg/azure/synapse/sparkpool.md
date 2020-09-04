@@ -160,7 +160,7 @@ example_account = azure.storage.Account("exampleAccount",
     account_tier="Standard",
     account_replication_type="LRS",
     account_kind="StorageV2",
-    is_hns_enabled="true")
+    is_hns_enabled=True)
 example_data_lake_gen2_filesystem = azure.storage.DataLakeGen2Filesystem("exampleDataLakeGen2Filesystem", storage_account_id=example_account.id)
 example_workspace = azure.synapse.Workspace("exampleWorkspace",
     resource_group_name=example_resource_group.name,
@@ -172,13 +172,13 @@ example_spark_pool = azure.synapse.SparkPool("exampleSparkPool",
     synapse_workspace_id=example_workspace.id,
     node_size_family="MemoryOptimized",
     node_size="Small",
-    auto_scale={
-        "maxNodeCount": 50,
-        "minNodeCount": 3,
-    },
-    auto_pause={
-        "delayInMinutes": 15,
-    },
+    auto_scale=azure.synapse.SparkPoolAutoScaleArgs(
+        max_node_count=50,
+        min_node_count=3,
+    ),
+    auto_pause=azure.synapse.SparkPoolAutoPauseArgs(
+        delay_in_minutes=15,
+    ),
     tags={
         "ENV": "Production",
     })
@@ -240,7 +240,7 @@ const exampleSparkPool = new azure.synapse.SparkPool("exampleSparkPool", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/synapse/#pulumi_azure.synapse.SparkPool">SparkPool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_pause</span><span class="p">:</span> <span class="nx">Optional[Dict[SparkPoolAutoPause]]</span> = None<span class="p">, </span><span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[Dict[SparkPoolAutoScale]]</span> = None<span class="p">, </span><span class="nx">library_requirement</span><span class="p">:</span> <span class="nx">Optional[Dict[SparkPoolLibraryRequirement]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_size_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spark_events_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spark_log_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spark_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">synapse_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/synapse/#pulumi_azure.synapse.SparkPool">SparkPool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_pause</span><span class="p">:</span> <span class="nx">Optional[SparkPoolAutoPauseArgs]</span> = None<span class="p">, </span><span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[SparkPoolAutoScaleArgs]</span> = None<span class="p">, </span><span class="nx">library_requirement</span><span class="p">:</span> <span class="nx">Optional[SparkPoolLibraryRequirementArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_size_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spark_events_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spark_log_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spark_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">synapse_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -868,7 +868,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#auto_pause_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>pause</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkpoolautopause">Dict[Spark<wbr>Pool<wbr>Auto<wbr>Pause]</a></span>
+        <span class="property-type"><a href="#sparkpoolautopause">Spark<wbr>Pool<wbr>Auto<wbr>Pause<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_pause` block as defined below.
 {{% /md %}}</dd>
@@ -879,7 +879,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkpoolautoscale">Dict[Spark<wbr>Pool<wbr>Auto<wbr>Scale]</a></span>
+        <span class="property-type"><a href="#sparkpoolautoscale">Spark<wbr>Pool<wbr>Auto<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
 {{% /md %}}</dd>
@@ -890,7 +890,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#library_requirement_python" style="color: inherit; text-decoration: inherit;">library_<wbr>requirement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkpoollibraryrequirement">Dict[Spark<wbr>Pool<wbr>Library<wbr>Requirement]</a></span>
+        <span class="property-type"><a href="#sparkpoollibraryrequirement">Spark<wbr>Pool<wbr>Library<wbr>Requirement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `library_requirement` block as defined below.
 {{% /md %}}</dd>
@@ -956,7 +956,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Spark Pool.
 {{% /md %}}</dd>
@@ -1060,7 +1060,7 @@ Get an existing SparkPool resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_pause</span><span class="p">:</span> <span class="nx">Optional[Dict[SparkPoolAutoPause]]</span> = None<span class="p">, </span><span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[Dict[SparkPoolAutoScale]]</span> = None<span class="p">, </span><span class="nx">library_requirement</span><span class="p">:</span> <span class="nx">Optional[Dict[SparkPoolLibraryRequirement]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_size_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spark_events_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spark_log_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spark_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">synapse_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> SparkPool</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_pause</span><span class="p">:</span> <span class="nx">Optional[SparkPoolAutoPauseArgs]</span> = None<span class="p">, </span><span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[SparkPoolAutoScaleArgs]</span> = None<span class="p">, </span><span class="nx">library_requirement</span><span class="p">:</span> <span class="nx">Optional[SparkPoolLibraryRequirementArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_size_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spark_events_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spark_log_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spark_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">synapse_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> SparkPool</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1597,7 +1597,7 @@ The following state arguments are supported:
 <a href="#state_auto_pause_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>pause</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkpoolautopause">Dict[Spark<wbr>Pool<wbr>Auto<wbr>Pause]</a></span>
+        <span class="property-type"><a href="#sparkpoolautopause">Spark<wbr>Pool<wbr>Auto<wbr>Pause<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_pause` block as defined below.
 {{% /md %}}</dd>
@@ -1608,7 +1608,7 @@ The following state arguments are supported:
 <a href="#state_auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkpoolautoscale">Dict[Spark<wbr>Pool<wbr>Auto<wbr>Scale]</a></span>
+        <span class="property-type"><a href="#sparkpoolautoscale">Spark<wbr>Pool<wbr>Auto<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
 {{% /md %}}</dd>
@@ -1619,7 +1619,7 @@ The following state arguments are supported:
 <a href="#state_library_requirement_python" style="color: inherit; text-decoration: inherit;">library_<wbr>requirement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkpoollibraryrequirement">Dict[Spark<wbr>Pool<wbr>Library<wbr>Requirement]</a></span>
+        <span class="property-type"><a href="#sparkpoollibraryrequirement">Spark<wbr>Pool<wbr>Library<wbr>Requirement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `library_requirement` block as defined below.
 {{% /md %}}</dd>
@@ -1718,7 +1718,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Spark Pool.
 {{% /md %}}</dd>
@@ -1812,8 +1812,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="delayinminutes_python">
-<a href="#delayinminutes_python" style="color: inherit; text-decoration: inherit;">delay<wbr>In<wbr>Minutes</a>
+        <span id="delay_in_minutes_python">
+<a href="#delay_in_minutes_python" style="color: inherit; text-decoration: inherit;">delay_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1935,8 +1935,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxnodecount_python">
-<a href="#maxnodecount_python" style="color: inherit; text-decoration: inherit;">max<wbr>Node<wbr>Count</a>
+        <span id="max_node_count_python">
+<a href="#max_node_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1946,8 +1946,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="minnodecount_python">
-<a href="#minnodecount_python" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Count</a>
+        <span id="min_node_count_python">
+<a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

@@ -157,7 +157,7 @@ func main() {
 			Location:          rg.Location,
 			ClusterName:       cluster.Name,
 			DatabaseName:      database.Name,
-			EventhubId:        pulumi.String(azurerm_eventhub.Evenhub.Id),
+			EventhubId:        pulumi.Any(azurerm_eventhub.Evenhub.Id),
 			ConsumerGroup:     consumerGroup.Name,
 			TableName:         pulumi.String("my-table"),
 			MappingRuleName:   pulumi.String("my-table-mapping"),
@@ -182,10 +182,10 @@ rg = azure.core.ResourceGroup("rg", location="East US")
 cluster = azure.kusto.Cluster("cluster",
     location=rg.location,
     resource_group_name=rg.name,
-    sku={
-        "name": "Standard_D13_v2",
-        "capacity": 2,
-    })
+    sku=azure.kusto.ClusterSkuArgs(
+        name="Standard_D13_v2",
+        capacity=2,
+    ))
 database = azure.kusto.Database("database",
     resource_group_name=rg.name,
     location=rg.location,
