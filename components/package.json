@@ -22,6 +22,8 @@
     "@stencil/core": "^1.8.8",
     "@stencil/redux": "^0.1.2",
     "@stencil/sass": "^1.1.1",
+    "@types/uuid": "^8.0.0",
+    "moment": "^2.27.0",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",

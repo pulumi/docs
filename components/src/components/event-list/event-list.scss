@@ -1,3 +1,29 @@
 :host {
   display: block;
 }
+
+pulumi-event-list-item {
+  width: 420px;
+}
+
+.event-list-filter {
+  li {
+    cursor: pointer;
+
+    &.active {
+      i, p {
+        color: #52A6DA;
+      }
+
+      p {
+        font-weight: bold;
+      }
+    }
+
+    &:hover {
+      i, p {
+        color: #52A6DA;
+      }
+    }
+  }
+}

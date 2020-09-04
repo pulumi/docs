@@ -23,6 +23,18 @@ interface ClassNamesOptions {
     [key: string]: boolean;
 }
 
+// shuffleArray randomly sorts an array.
+export function shuffleArray<T>(array: T[]): T[] {
+    for (let i = array.length - 1; i > 0; i--) {
+        const z = Math.floor(Math.random() * (i + 1));
+        const temp = array[i];
+        array[i] = array[z];
+        array[z] = temp;
+    }
+
+    return array;
+}
+
 // chunkArray splits up an array into chunks.
 export function chunkArray<T>(array: T[], amount: number): T[][] {
     const result: T[][] = [[]];

@@ -2,7 +2,7 @@
     <header class="header-hero-dark py-0 pt-16 px-4">
         <div class="container mx-auto text-white md:flex justify-around items-center">
             <div class="md:w-1/2">
-                <h1 class="text-white text-center">Webinars</h1>
+                <h1 class="text-white text-center">Content Library</h1>
             </div>
             <div class="md:w-1/2 md:ml-8">
                 <div class="text-center">
@@ -29,13 +29,17 @@
 
     {{ $eventListEvents := slice }}
     {{ range $listed_events }}
-        {{ $eventListEvents = $eventListEvents | append (.Params | jsonify)}}
+        {{ if ne .Params.title "Upcoming Events" }}
+            {{ $eventListEvents = $eventListEvents | append (.Params | jsonify)}}
+        {{ end }}
     {{ end }}
 
-    <pulumi-event-list
-        webinars="[{{ delimit $eventListWebinars "," }}]"
-        events="[{{ delimit $eventListEvents "," }}]"
-    ></pulumi-event-list>
+    <div class="pulumi-event-list-container">
+        <pulumi-event-list
+            webinars="[{{ delimit $eventListWebinars "," }}]"
+            events="[{{ delimit $eventListEvents "," }}]"
+        ></pulumi-event-list>
+    </div>
 
     {{ partial "social.html" . }}
 

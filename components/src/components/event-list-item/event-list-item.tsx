@@ -1,5 +1,5 @@
 import { Component, h, Prop } from "@stencil/core";
-import { classNames } from "../../util/util";
+import moment from "moment";
 import { PulumiEvent } from "../../util/types/events";
 
 @Component({
@@ -21,40 +21,48 @@ export class EventListItem {
       startDate,
     } = this.event;
 
-    const containerClassOptions = {};
-    containerClassOptions[this.class] = this.class !== "";
-    const containerClass = classNames("w-full m-0 p-2", containerClassOptions);
+    const displayDate = moment(startDate).format("MMM D, YYYY");
+
+    console.log(archetype === "webinar" && external, this.event.registrationUrl);
 
     const eventLinkProps = {
-      href: archetype === "webinar" && external ? `/webinars/${registrationUrl}` : registrationUrl,
+      href: archetype === "webinar" && !external ? `/webinars/${registrationUrl}` : registrationUrl,
       rel: external ? "noopener noreferrer" : undefined,
       target: external ? "_blank" : undefined,
     };
 
+    const key = new Date().getTime();
+
     return [
-      <li class={containerClass}>
+      <li key={key} class="w-full m-0 p-2 event-list-item">
         <article class="rounded shadow-md bg-white border border-gray-200 mb-10 flex flex-col mx-auto">
-          <div class="w-full">
+          <div class="w-full event-list-item-image">
             <a {...eventLinkProps}>
-              <img class="w-full" src={imageSrc} />
+              <img src={imageSrc} />
             </a>
           </div>
-          <div class="w-full p-3 ml-3">
-            <a {...eventLinkProps}>
-              { title }
-              { external ? <i class="text-sm ml-2 fas fa-external-link-alt"></i> : null }
-            </a>
-            <p class="mb-5">
-              { description }
-            </p>
-            <p class="my-0 text-lg">
-                <i class="fas fa-calendar mr-2"></i>
-                <span>{ startDate }</span>
-            </p>
-            <p class="my-0 text-lg">
-                <i class="fas fa-clock mr-2"></i>
-                1 hour
-            </p>
+          <div class="w-full p-3 pl-6 event-list-item-info">
+            <div class="event-title">
+              <a {...eventLinkProps} class="text-bold text-xl">
+                { title }
+                { external ? <i class="text-sm ml-2 fas fa-external-link-alt"></i> : null }
+              </a>
+            </div>
+            <div class="event-description">
+              <p class="m-0 pt-5">
+                { description }
+              </p>
+            </div>
+            <div class="event-details">
+              <span class="my-0 py-1 px-2 text-lg rounded-full bg-orange-500 inline-block text-white mr-3">
+                  <i class="fas fa-calendar mr-2"></i>
+                  { displayDate }
+              </span>
+              <span class="my-0 py-1 px-2 text-lg rounded-full bg-green-500 inline-block text-white">
+                  <i class="fas fa-clock mr-2"></i>
+                  1 hour
+              </span>
+            </div>
           </div>
         </article>
       </li>,
