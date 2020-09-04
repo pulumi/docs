@@ -47,31 +47,48 @@ security for most users.
 However, if you would prefer to manage this yourself, you can do so by opting
 into the filesystem or cloud storage backend.
 
-### Self-managed backend
+### Self-managed backends
 
-To use the [filesystem or local](#filesystem-or-local) option,
-run `pulumi login --local` so Pulumi stores your _checkpoint_ files locally
-on your machine. The default directory for these JSON files is
-`~/.pulumi`.
+To use the [filesystem or local](#filesystem-or-local) option, run `pulumi login --local`
+to have Pulumi store your _checkpoint_ files locally on your machine. The default
+directory for these JSON files is `~/.pulumi`.
 
-To use the [cloud storage or remote](#cloud-storage-or-remote) option, run
-`pulumi login --cloud-url <your-cloud-storage-url>` so Pulumi stores
-your _checkpoint_ files at your specified URL
-for your cloud storage object, also in a `.pulumi` directory. For
-example,
-`https://s3.console.aws.amazon.com/s3/buckets/<my-pulumi-state-bucket>/.pulumi`
-where `<my-pulumi-state-bucket>` is the name
-of your S3 bucket.
+To use the [cloud storage or remote](#cloud-storage-or-remote) option, run `pulumi login
+--cloud-url <your-cloud-storage-url>` to have Pulumi store your checkpoint files using a
+supported cloud provider like AWS, Azure, or Google Cloud Platform. Checkpoint files are
+also stored in `.pulumi` directory. For example, if you were using the Amazon S3
+self-managed backend, your checkpoint files would be stored at
+`s3://<my-pulumi-state-bucket>/.pulumi` where `<my-pulumi-state-bucket>` represents the
+name of your S3 bucket.
 
-Visit the following links for details on cloud provider
-CLI and storage setup:
+The following links offer additional details for setting up your provider-specific
+command-line tools and storage accounts.
 
-- **AWS S3.** _See [AWS Setup]({{< relref "/docs/intro/cloud-providers/aws/setup" >}})
-and [Working with Amazon S3 buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html). See [AWS Session](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/) for configuring credentials for this backend._
-- **Azure Blob.** _See [Azure Setup]({{< relref "/docs/intro/cloud-providers/azure/setup" >}})
-and Microsoft's [Storage Blobs Quickstart](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-cli). This backend requires setting the environment variables `AZURE_STORAGE_ACCOUNT` and either `AZURE_STORAGE_KEY` or `AZURE_STORAGE_SAS_TOKEN`._
-- **Google Cloud Storage.** _See [GCP Setup]({{< relref "/docs/intro/cloud-providers/gcp/setup" >}})
-and [Google's Cloud Storage Quickstarts](https://cloud.google.com/storage/docs/quickstarts). See [Application Default Credentials](https://cloud.google.com/docs/authentication/production) for configuring credentials for this backend._
+{{< chooser cloud "aws,azure,gcp" / >}}
+
+{{< choosable cloud aws >}}
+<p></p>
+
+For **Amazon S3**, see [AWS Setup]({{< relref "/docs/intro/cloud-providers/aws/setup" >}})
+and [Working with Amazon S3 buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html). Also see [AWS Session](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/) for configuring credentials for this backend.
+
+{{< /choosable >}}
+
+{{< choosable cloud azure >}}
+<p></p>
+
+For **Azure Blob Storage**, see [Azure Setup]({{< relref "/docs/intro/cloud-providers/azure/setup" >}})
+and Microsoft's [Storage Blobs Quickstart](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-cli). This backend requires setting the environment variables `AZURE_STORAGE_ACCOUNT` and either `AZURE_STORAGE_KEY` or `AZURE_STORAGE_SAS_TOKEN`.
+
+{{< /choosable >}}
+
+{{< choosable cloud gcp >}}
+<p></p>
+
+For **Google Cloud Storage**, see [GCP Setup]({{< relref "/docs/intro/cloud-providers/gcp/setup" >}})
+and [Google's Cloud Storage Quickstarts](https://cloud.google.com/storage/docs/quickstarts). See [Application Default Credentials](https://cloud.google.com/docs/authentication/production) for configuring credentials for this backend.
+
+{{< /choosable >}}
 
 ### Pulumi Service backend features
 
@@ -105,24 +122,7 @@ The `pulumi login` <a href="{{< relref "/docs/reference/cli/pulumi_login" >}}"
 target="_blank">CLI command</a> lets you log in to a backend. By default,
 you will be prompted to log in anytime you try to do something that requires stacks or state.
 
-### Backend info check
-
-To quickly check your backend login info, run `pulumi whoami` with the `v` or verbose flag.
-
-```bash
-$ pulumi whoami -v
-```
-
-See [pulumi whoami]({{< relref "/docs/reference/cli/pulumi_whoami" >}}) for more details.
-
-#### Example response
-
-```
-User: <your-username>
-Backend URL: https://app.pulumi.com/<your-username>
-```
-
-### To the Pulumi Service backend
+### With the Pulumi Service backend
 
 The Pulumi Service backend login process involves using access tokens.
 
@@ -133,10 +133,10 @@ $ pulumi login
 The prompt looks like the following:
 
 ```
-Manage your Pulumi stacks by logging in.  Run `pulumi
-login --help` for alternative login options.  Enter your access token from
-https://app.pulumi.com/account/tokens or hit <ENTER> to log in using your
-browser            :
+Manage your Pulumi stacks by logging in.
+Run `pulumi login --help` for alternative login options.
+Enter your access token from https://app.pulumi.com/account/tokens
+    or hit <ENTER> to log in using your browser:
 ```
 
 If you hit `<ENTER>` as instructed, a web browser _should_ pop up, and will
@@ -166,7 +166,7 @@ $ pulumi login https://pulumi.acmecorp.com
 Everything else works the same, except that Pulumi will target your private
 service instead of `app.pulumi.com`.
 
-### To a self-managed backend
+### With a self-managed backend
 
 The filesystem or cloud storage backend allows you to store state locally on
 your machine, or remotely with your cloud storage provider. For self-managed backends,
@@ -207,11 +207,11 @@ file://~`.
 #### Cloud storage or remote
 
 To use a remote backend instead with your preferred cloud storage provider,
-simply pass the `--cloud-url` or `-c` flag and your storage bucket or blob URL
+simply pass the `--cloud-url` (or `-c`) flag and your storage bucket or blob URL
 when logging in:
 
 ```sh
-$ pulumi login --cloud-url s3://my-pulumi-state-bucket
+$ pulumi login --cloud-url s3://<my-pulumi-state-bucket>
 ```
 
 You should see `Logged into <my-machine> as <my-user>
@@ -221,23 +221,31 @@ configured machine and user names respectively.
 In the previous example, we passed an AWS S3 bucket URL, but you can also use
 Google Cloud or Azure Blob storage.
 
-##### Amazon S3
+{{< chooser cloud "aws,azure,gcp" / >}}
+
+{{< choosable cloud aws >}}
 
 ```
-pulumi login --cloud-url s3://my-pulumi-state-bucket
+pulumi login --cloud-url s3://<my-pulumi-state-bucket>
 ```
 
-##### Google Cloud Storage
+{{< /choosable >}}
+
+{{< choosable cloud azure >}}
 
 ```
-pulumi login --cloud-url gs://my-pulumi-state-bucket
+pulumi login --cloud-url azblob://<my-pulumi-state-bucket>
 ```
 
-##### Azure Blob Storage
+{{< /choosable >}}
+
+{{< choosable cloud gcp >}}
 
 ```
-pulumi login --cloud-url azblob://my-pulumi-state-bucket
+pulumi login --cloud-url gs://<my-pulumi-state-bucket>
 ```
+
+{{< /choosable >}}
 
 This stores all stack checkpoints as JSON files to the `.pulumi` directory of
 your specified cloud URL.
@@ -247,7 +255,7 @@ provider's documentation. See [Self-managed backend](#self-managed-backend)
 for quick links to Amazon, Google, and Microsoft Azure's storage service quickstarts.
 
 You may omit `--cloud-url` or `-c` when logging in to a remote backend and just
-use `pulumi login s3://my-pulumi-state-bucket`.
+use `pulumi login s3://<my-pulumi-state-bucket>`.
 
 The precise JSON format these checkpoint files use is not documented, but is
 defined in the [APIType source code](
@@ -272,7 +280,24 @@ your stack. If you want to collaborate with another person, you'll need to
 share this passphrase with them as well. All of these overhead tasks will have
 to be managed separately when you opt into the local or remote state backend.
 
-### Going back to the Pulumi Service backend
+### Checking your backend info
+
+To quickly check your backend login info, run `pulumi whoami` with the `--verbose` (or `-v`) flag.
+
+```bash
+$ pulumi whoami -v
+```
+
+See [pulumi whoami]({{< relref "/docs/reference/cli/pulumi_whoami" >}}) for more details.
+
+#### Example response
+
+```
+User: <your-username>
+Backend URL: https://app.pulumi.com/<your-username>
+```
+
+### Adopting the Pulumi Service backend
 
 If you are currently using a self-managed backend, but would now prefer to
 simplify things, just run `pulumi logout` and then `pulumi login`, and you’ll be back to
@@ -287,12 +312,15 @@ endpoint:
 ```sh
 # switch to the stack we want to export
 $ pulumi stack select my-app-production
+
 # export the stack's checkpoint to a local file
 $ pulumi stack export --show-secrets --file my-app-production.checkpoint.json
 $ pulumi logout
 $ pulumi login
+
 # create a new stack with the same name on pulumi.com
 $ pulumi stack init my-app-production
+
 # import the new existing checkpoint into pulumi.com
 $ pulumi stack import --file my-app-production.checkpoint.json
 ```
@@ -302,27 +330,30 @@ backend, but the stack will continue using the same secrets provider.  You can s
 [change the secrets provider]({{< relref "docs/intro/concepts/config#changing-the-secrets-provider-for-a-stack" >}})
 for your stack if needed.
 
-### Secrets Encryption
+## Backends and secrets
 
-When a secret value is provided via secret configuration---either by passing
-`--secret` to `pulumi config set`, or by creating one inside your program via
-`pulumi.secret` (JavaScript) or `Output.secret` (Python)---the value is
-encrypted with a key managed by the backend you are connected to.  When using
-the local or remote backend, this key is derived from a passphrase you set when
-creating your stack. When using the Pulumi Service backend, it is handled by
-a key managed by the service.
+When a secret value is provided via [secret configuration]({{ relref
+"/docs/intro/concepts/config" }})---either by passing `--secret` to `pulumi config set` or
+by creating one inside your program via `pulumi.secret` (JavaScript) or `Output.secret`
+(Python)---the value is encrypted with a key managed by the backend you are connected to.
+When using the local or remote backend, this key is derived from a passphrase you set when
+creating your stack. When using the Pulumi Service backend, it is handled by a key managed
+by the service.
 
 For new stacks managed with the Pulumi Service backend, you may choose to use the
-passphrase-based key instead. Pass `--secrets-provider passphrase` when you
-create the stack---either via `pulumi new` or `pulumi stack init`. You will be
-prompted to choose a passphrase which will be required for future operations
-like `update`, `preview`, and `destroy`.
+passphrase-based key instead. Pass `--secrets-provider passphrase` when you create the
+stack---either via [`pulumi new`]({{ relref "/docs/reference/cli/pulumi_stack_init" }}) or
+[`pulumi stack init`]({{ relref "/docs/reference/cli/pulumi_stack_init" }}). You will be
+prompted to choose a passphrase which will be required for future operations like
+`update`, `preview`, and `destroy`.
 
-When using the filesystem or cloud storage backend, you must use the
-passphrase-based secrets provider.
+When using the filesystem or cloud storage backend, you must use the passphrase-based
+secrets provider.
+
+See [Configuration and Secrets]({{ relref "/docs/intro/concepts/config" }}) for more details.
 
 ## Logging out
 
-To delete stored credentials on your machine and log out from your current
-backend, run `pulumi logout`. See [pulumi logout]({{< relref "/docs/reference/cli/pulumi_logout" >}})
+To delete stored credentials on your machine and log out from your current backend, run
+`pulumi logout`. See [pulumi logout]({{< relref "/docs/reference/cli/pulumi_logout" >}})
 for more details.
