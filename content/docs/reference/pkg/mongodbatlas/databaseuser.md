@@ -117,21 +117,21 @@ import pulumi_mongodbatlas as mongodbatlas
 
 test = mongodbatlas.DatabaseUser("test",
     auth_database_name="admin",
-    labels=[{
-        "key": "My Key",
-        "value": "My Value",
-    }],
+    labels=[mongodbatlas.DatabaseUserLabelArgs(
+        key="My Key",
+        value="My Value",
+    )],
     password="test-acc-password",
     project_id="<PROJECT-ID>",
     roles=[
-        {
-            "database_name": "dbforApp",
-            "role_name": "readWrite",
-        },
-        {
-            "database_name": "admin",
-            "role_name": "readAnyDatabase",
-        },
+        mongodbatlas.DatabaseUserRoleArgs(
+            database_name="dbforApp",
+            role_name="readWrite",
+        ),
+        mongodbatlas.DatabaseUserRoleArgs(
+            database_name="admin",
+            role_name="readAnyDatabase",
+        ),
     ],
     username="test-acc-username")
 ```
@@ -180,7 +180,7 @@ const test = new mongodbatlas.DatabaseUser("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.DatabaseUser">DatabaseUser</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth_database_name=None<span class="p">, </span>database_name=None<span class="p">, </span>labels=None<span class="p">, </span>password=None<span class="p">, </span>project_id=None<span class="p">, </span>roles=None<span class="p">, </span>username=None<span class="p">, </span>x509_type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.DatabaseUser">DatabaseUser</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[DatabaseUserLabelArgs]]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[List[DatabaseUserRoleArgs]]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">x509_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -684,7 +684,7 @@ The DatabaseUser resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseuserlabel">List[Database<wbr>User<wbr>Label]</a></span>
+        <span class="property-type"><a href="#databaseuserlabel">List[Database<wbr>User<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -705,7 +705,7 @@ The DatabaseUser resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseuserrole">List[Database<wbr>User<wbr>Role]</a></span>
+        <span class="property-type"><a href="#databaseuserrole">List[Database<wbr>User<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
 {{% /md %}}</dd>
@@ -819,7 +819,8 @@ Get an existing DatabaseUser resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auth_database_name=None<span class="p">, </span>database_name=None<span class="p">, </span>labels=None<span class="p">, </span>password=None<span class="p">, </span>project_id=None<span class="p">, </span>roles=None<span class="p">, </span>username=None<span class="p">, </span>x509_type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[DatabaseUserLabelArgs]]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[List[DatabaseUserRoleArgs]]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">x509_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DatabaseUser</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -827,7 +828,7 @@ Get an existing DatabaseUser resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.DatabaseUser.html">DatabaseUser</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas..DatabaseUserState.html">DatabaseUserState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.DatabaseUser.html">DatabaseUser</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas..DatabaseUserState.html">DatabaseUserState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1243,7 +1244,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseuserlabel">List[Database<wbr>User<wbr>Label]</a></span>
+        <span class="property-type"><a href="#databaseuserlabel">List[Database<wbr>User<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1275,7 +1276,7 @@ The following state arguments are supported:
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseuserrole">List[Database<wbr>User<wbr>Role]</a></span>
+        <span class="property-type"><a href="#databaseuserrole">List[Database<wbr>User<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
 {{% /md %}}</dd>
@@ -1591,8 +1592,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="collectionname_python">
-<a href="#collectionname_python" style="color: inherit; text-decoration: inherit;">collection<wbr>Name</a>
+        <span id="collection_name_python">
+<a href="#collection_name_python" style="color: inherit; text-decoration: inherit;">collection_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

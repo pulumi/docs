@@ -486,29 +486,29 @@ cluster_test = mongodbatlas.Cluster("cluster-test",
     provider_instance_size_name="M10",
     provider_name="AWS",
     provider_volume_type="STANDARD",
-    replication_specs=[{
-        "num_shards": 1,
-        "regionsConfigs": [
-            {
-                "electableNodes": 3,
-                "priority": 7,
-                "readOnlyNodes": 0,
-                "region_name": "US_EAST_1",
-            },
-            {
-                "electableNodes": 2,
-                "priority": 6,
-                "readOnlyNodes": 0,
-                "region_name": "US_EAST_2",
-            },
-            {
-                "electableNodes": 2,
-                "priority": 5,
-                "readOnlyNodes": 2,
-                "region_name": "US_WEST_1",
-            },
+    replication_specs=[mongodbatlas.ClusterReplicationSpecArgs(
+        num_shards=1,
+        regions_configs=[
+            mongodbatlas.ClusterReplicationSpecRegionsConfigArgs(
+                electable_nodes=3,
+                priority=7,
+                read_only_nodes=0,
+                region_name="US_EAST_1",
+            ),
+            mongodbatlas.ClusterReplicationSpecRegionsConfigArgs(
+                electable_nodes=2,
+                priority=6,
+                read_only_nodes=0,
+                region_name="US_EAST_2",
+            ),
+            mongodbatlas.ClusterReplicationSpecRegionsConfigArgs(
+                electable_nodes=2,
+                priority=5,
+                read_only_nodes=2,
+                region_name="US_WEST_1",
+            ),
         ],
-    }])
+    )])
 ```
 
 {{% /example %}}
@@ -694,26 +694,26 @@ cluster_test = mongodbatlas.Cluster("cluster-test",
     provider_name="AWS",
     provider_volume_type="STANDARD",
     replication_specs=[
-        {
-            "num_shards": 2,
-            "regionsConfigs": [{
-                "electableNodes": 3,
-                "priority": 7,
-                "readOnlyNodes": 0,
-                "region_name": "US_EAST_1",
-            }],
-            "zoneName": "Zone 1",
-        },
-        {
-            "num_shards": 2,
-            "regionsConfigs": [{
-                "electableNodes": 3,
-                "priority": 7,
-                "readOnlyNodes": 0,
-                "region_name": "EU_CENTRAL_1",
-            }],
-            "zoneName": "Zone 2",
-        },
+        mongodbatlas.ClusterReplicationSpecArgs(
+            num_shards=2,
+            regions_configs=[mongodbatlas.ClusterReplicationSpecRegionsConfigArgs(
+                electable_nodes=3,
+                priority=7,
+                read_only_nodes=0,
+                region_name="US_EAST_1",
+            )],
+            zone_name="Zone 1",
+        ),
+        mongodbatlas.ClusterReplicationSpecArgs(
+            num_shards=2,
+            regions_configs=[mongodbatlas.ClusterReplicationSpecRegionsConfigArgs(
+                electable_nodes=3,
+                priority=7,
+                read_only_nodes=0,
+                region_name="EU_CENTRAL_1",
+            )],
+            zone_name="Zone 2",
+        ),
     ])
 ```
 
@@ -828,9 +828,9 @@ import pulumi
 import pulumi_mongodbatlas as mongodbatlas
 
 cluster_test = mongodbatlas.Cluster("cluster-test",
-    auto_scaling_disk_gb_enabled="false",
+    auto_scaling_disk_gb_enabled=False,
     backing_provider_name="AWS",
-    disk_size_gb="2",
+    disk_size_gb=2,
     mongo_db_major_version="4.2",
     project_id="<YOUR-PROJECT-ID>",
     provider_instance_size_name="M2",
@@ -873,7 +873,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>advanced_configuration=None<span class="p">, </span>auto_scaling_compute_enabled=None<span class="p">, </span>auto_scaling_compute_scale_down_enabled=None<span class="p">, </span>auto_scaling_disk_gb_enabled=None<span class="p">, </span>backing_provider_name=None<span class="p">, </span>backup_enabled=None<span class="p">, </span>bi_connector=None<span class="p">, </span>cluster_type=None<span class="p">, </span>disk_size_gb=None<span class="p">, </span>encryption_at_rest_provider=None<span class="p">, </span>labels=None<span class="p">, </span>mongo_db_major_version=None<span class="p">, </span>name=None<span class="p">, </span>num_shards=None<span class="p">, </span>pit_enabled=None<span class="p">, </span>project_id=None<span class="p">, </span>provider_auto_scaling_compute_max_instance_size=None<span class="p">, </span>provider_auto_scaling_compute_min_instance_size=None<span class="p">, </span>provider_backup_enabled=None<span class="p">, </span>provider_disk_iops=None<span class="p">, </span>provider_disk_type_name=None<span class="p">, </span>provider_encrypt_ebs_volume=None<span class="p">, </span>provider_instance_size_name=None<span class="p">, </span>provider_name=None<span class="p">, </span>provider_region_name=None<span class="p">, </span>provider_volume_type=None<span class="p">, </span>replication_factor=None<span class="p">, </span>replication_specs=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">advanced_configuration</span><span class="p">:</span> <span class="nx">Optional[ClusterAdvancedConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">auto_scaling_compute_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_scaling_compute_scale_down_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_scaling_disk_gb_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backing_provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bi_connector</span><span class="p">:</span> <span class="nx">Optional[ClusterBiConnectorArgs]</span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">encryption_at_rest_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[ClusterLabelArgs]]</span> = None<span class="p">, </span><span class="nx">mongo_db_major_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">num_shards</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">pit_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_auto_scaling_compute_max_instance_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_auto_scaling_compute_min_instance_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_backup_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">provider_disk_iops</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">provider_disk_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_encrypt_ebs_volume</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">provider_instance_size_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_region_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication_factor</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">replication_specs</span><span class="p">:</span> <span class="nx">Optional[List[ClusterReplicationSpecArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2072,7 +2072,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 <a href="#advanced_configuration_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteradvancedconfiguration">Dict[Cluster<wbr>Advanced<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#clusteradvancedconfiguration">Cluster<wbr>Advanced<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2146,7 +2146,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 <a href="#bi_connector_python" style="color: inherit; text-decoration: inherit;">bi_<wbr>connector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbiconnector">Dict[Cluster<wbr>Bi<wbr>Connector]</a></span>
+        <span class="property-type"><a href="#clusterbiconnector">Cluster<wbr>Bi<wbr>Connector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd>
@@ -2194,7 +2194,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlabel">List[Cluster<wbr>Label]</a></span>
+        <span class="property-type"><a href="#clusterlabel">List[Cluster<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array containing key-value pairs that tag and categorize the cluster. Each key and value has a maximum length of 255 characters. You cannot set the key `Infrastructure Tool`, it is used for internal purposes to track aggregate usage.
 {{% /md %}}</dd>
@@ -2349,7 +2349,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 <a href="#replication_specs_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreplicationspec">List[Cluster<wbr>Replication<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#clusterreplicationspec">List[Cluster<wbr>Replication<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for cluster regions.  See Replication Spec below for more details.
 {{% /md %}}</dd>
@@ -2821,7 +2821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconnectionstrings">Dict[Cluster<wbr>Connection<wbr>Strings]</a></span>
+        <span class="property-type"><a href="#clusterconnectionstrings">Cluster<wbr>Connection<wbr>Strings</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
 {{% /md %}}</dd>
@@ -2960,7 +2960,8 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>advanced_configuration=None<span class="p">, </span>auto_scaling_compute_enabled=None<span class="p">, </span>auto_scaling_compute_scale_down_enabled=None<span class="p">, </span>auto_scaling_disk_gb_enabled=None<span class="p">, </span>backing_provider_name=None<span class="p">, </span>backup_enabled=None<span class="p">, </span>bi_connector=None<span class="p">, </span>cluster_id=None<span class="p">, </span>cluster_type=None<span class="p">, </span>connection_strings=None<span class="p">, </span>container_id=None<span class="p">, </span>disk_size_gb=None<span class="p">, </span>encryption_at_rest_provider=None<span class="p">, </span>labels=None<span class="p">, </span>mongo_db_major_version=None<span class="p">, </span>mongo_db_version=None<span class="p">, </span>mongo_uri=None<span class="p">, </span>mongo_uri_updated=None<span class="p">, </span>mongo_uri_with_options=None<span class="p">, </span>name=None<span class="p">, </span>num_shards=None<span class="p">, </span>paused=None<span class="p">, </span>pit_enabled=None<span class="p">, </span>project_id=None<span class="p">, </span>provider_auto_scaling_compute_max_instance_size=None<span class="p">, </span>provider_auto_scaling_compute_min_instance_size=None<span class="p">, </span>provider_backup_enabled=None<span class="p">, </span>provider_disk_iops=None<span class="p">, </span>provider_disk_type_name=None<span class="p">, </span>provider_encrypt_ebs_volume=None<span class="p">, </span>provider_instance_size_name=None<span class="p">, </span>provider_name=None<span class="p">, </span>provider_region_name=None<span class="p">, </span>provider_volume_type=None<span class="p">, </span>replication_factor=None<span class="p">, </span>replication_specs=None<span class="p">, </span>snapshot_backup_policies=None<span class="p">, </span>srv_address=None<span class="p">, </span>state_name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">advanced_configuration</span><span class="p">:</span> <span class="nx">Optional[ClusterAdvancedConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">auto_scaling_compute_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_scaling_compute_scale_down_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_scaling_disk_gb_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backing_provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bi_connector</span><span class="p">:</span> <span class="nx">Optional[ClusterBiConnectorArgs]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[ClusterConnectionStringsArgs]</span> = None<span class="p">, </span><span class="nx">container_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">encryption_at_rest_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[ClusterLabelArgs]]</span> = None<span class="p">, </span><span class="nx">mongo_db_major_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mongo_db_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mongo_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mongo_uri_updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mongo_uri_with_options</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">num_shards</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">paused</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">pit_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_auto_scaling_compute_max_instance_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_auto_scaling_compute_min_instance_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_backup_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">provider_disk_iops</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">provider_disk_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_encrypt_ebs_volume</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">provider_instance_size_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_region_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication_factor</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">replication_specs</span><span class="p">:</span> <span class="nx">Optional[List[ClusterReplicationSpecArgs]]</span> = None<span class="p">, </span><span class="nx">snapshot_backup_policies</span><span class="p">:</span> <span class="nx">Optional[List[ClusterSnapshotBackupPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">srv_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2968,7 +2969,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas..ClusterState.html">ClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas..ClusterState.html">ClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4448,7 +4449,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 <a href="#state_advanced_configuration_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteradvancedconfiguration">Dict[Cluster<wbr>Advanced<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#clusteradvancedconfiguration">Cluster<wbr>Advanced<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4522,7 +4523,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 <a href="#state_bi_connector_python" style="color: inherit; text-decoration: inherit;">bi_<wbr>connector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbiconnector">Dict[Cluster<wbr>Bi<wbr>Connector]</a></span>
+        <span class="property-type"><a href="#clusterbiconnector">Cluster<wbr>Bi<wbr>Connector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd>
@@ -4555,7 +4556,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 <a href="#state_connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconnectionstrings">Dict[Cluster<wbr>Connection<wbr>Strings]</a></span>
+        <span class="property-type"><a href="#clusterconnectionstrings">Cluster<wbr>Connection<wbr>Strings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
 {{% /md %}}</dd>
@@ -4603,7 +4604,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlabel">List[Cluster<wbr>Label]</a></span>
+        <span class="property-type"><a href="#clusterlabel">List[Cluster<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array containing key-value pairs that tag and categorize the cluster. Each key and value has a maximum length of 255 characters. You cannot set the key `Infrastructure Tool`, it is used for internal purposes to track aggregate usage.
 {{% /md %}}</dd>
@@ -4847,7 +4848,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 <a href="#state_replication_specs_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreplicationspec">List[Cluster<wbr>Replication<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#clusterreplicationspec">List[Cluster<wbr>Replication<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for cluster regions.  See Replication Spec below for more details.
 {{% /md %}}</dd>
@@ -4858,7 +4859,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 <a href="#state_snapshot_backup_policies_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>backup_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersnapshotbackuppolicy">List[Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#clustersnapshotbackuppolicy">List[Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}current snapshot schedule and retention settings for the cluster.
 {{% /md %}}</dd>
@@ -5178,8 +5179,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="failindexkeytoolong_python">
-<a href="#failindexkeytoolong_python" style="color: inherit; text-decoration: inherit;">fail<wbr>Index<wbr>Key<wbr>Too<wbr>Long</a>
+        <span id="fail_index_key_too_long_python">
+<a href="#fail_index_key_too_long_python" style="color: inherit; text-decoration: inherit;">fail_<wbr>index_<wbr>key_<wbr>too_<wbr>long</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5189,8 +5190,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="javascriptenabled_python">
-<a href="#javascriptenabled_python" style="color: inherit; text-decoration: inherit;">javascript<wbr>Enabled</a>
+        <span id="javascript_enabled_python">
+<a href="#javascript_enabled_python" style="color: inherit; text-decoration: inherit;">javascript_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5200,8 +5201,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minimumenabledtlsprotocol_python">
-<a href="#minimumenabledtlsprotocol_python" style="color: inherit; text-decoration: inherit;">minimum<wbr>Enabled<wbr>Tls<wbr>Protocol</a>
+        <span id="minimum_enabled_tls_protocol_python">
+<a href="#minimum_enabled_tls_protocol_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>enabled_<wbr>tls_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5211,8 +5212,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="notablescan_python">
-<a href="#notablescan_python" style="color: inherit; text-decoration: inherit;">no<wbr>Table<wbr>Scan</a>
+        <span id="no_table_scan_python">
+<a href="#no_table_scan_python" style="color: inherit; text-decoration: inherit;">no_<wbr>table_<wbr>scan</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5222,8 +5223,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oplogsizemb_python">
-<a href="#oplogsizemb_python" style="color: inherit; text-decoration: inherit;">oplog<wbr>Size<wbr>Mb</a>
+        <span id="oplog_size_mb_python">
+<a href="#oplog_size_mb_python" style="color: inherit; text-decoration: inherit;">oplog_<wbr>size_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5233,8 +5234,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="samplerefreshintervalbiconnector_python">
-<a href="#samplerefreshintervalbiconnector_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Refresh<wbr>Interval<wbr>Bi<wbr>Connector</a>
+        <span id="sample_refresh_interval_bi_connector_python">
+<a href="#sample_refresh_interval_bi_connector_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>refresh_<wbr>interval_<wbr>bi_<wbr>connector</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5244,8 +5245,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="samplesizebiconnector_python">
-<a href="#samplesizebiconnector_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Size<wbr>Bi<wbr>Connector</a>
+        <span id="sample_size_bi_connector_python">
+<a href="#sample_size_bi_connector_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>size_<wbr>bi_<wbr>connector</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5627,21 +5628,21 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="awsprivatelink_python">
-<a href="#awsprivatelink_python" style="color: inherit; text-decoration: inherit;">aws<wbr>Private<wbr>Link</a>
+        <span id="aws_private_link_python">
+<a href="#aws_private_link_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>private_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="awsprivatelinksrv_python">
-<a href="#awsprivatelinksrv_python" style="color: inherit; text-decoration: inherit;">aws<wbr>Private<wbr>Link<wbr>Srv</a>
+        <span id="aws_private_link_srv_python">
+<a href="#aws_private_link_srv_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>private_<wbr>link_<wbr>srv</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5657,8 +5658,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privatesrv_python">
-<a href="#privatesrv_python" style="color: inherit; text-decoration: inherit;">private<wbr>Srv</a>
+        <span id="private_srv_python">
+<a href="#private_srv_python" style="color: inherit; text-decoration: inherit;">private_<wbr>srv</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5677,8 +5678,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="standardsrv_python">
-<a href="#standardsrv_python" style="color: inherit; text-decoration: inherit;">standard<wbr>Srv</a>
+        <span id="standard_srv_python">
+<a href="#standard_srv_python" style="color: inherit; text-decoration: inherit;">standard_<wbr>srv</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6021,19 +6022,19 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="regionsconfigs_python">
-<a href="#regionsconfigs_python" style="color: inherit; text-decoration: inherit;">regions<wbr>Configs</a>
+        <span id="regions_configs_python">
+<a href="#regions_configs_python" style="color: inherit; text-decoration: inherit;">regions_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreplicationspecregionsconfig">List[Cluster<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterreplicationspecregionsconfig">List[Cluster<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Physical location of the region. Each regionsConfig document describes the region’s priority in elections and the number and type of MongoDB nodes Atlas deploys to the region. You must order each regionsConfigs document by regionsConfig.priority, descending. See Region Config below for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="zonename_python">
-<a href="#zonename_python" style="color: inherit; text-decoration: inherit;">zone<wbr>Name</a>
+        <span id="zone_name_python">
+<a href="#zone_name_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6272,8 +6273,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="analyticsnodes_python">
-<a href="#analyticsnodes_python" style="color: inherit; text-decoration: inherit;">analytics<wbr>Nodes</a>
+        <span id="analytics_nodes_python">
+<a href="#analytics_nodes_python" style="color: inherit; text-decoration: inherit;">analytics_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6283,8 +6284,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="electablenodes_python">
-<a href="#electablenodes_python" style="color: inherit; text-decoration: inherit;">electable<wbr>Nodes</a>
+        <span id="electable_nodes_python">
+<a href="#electable_nodes_python" style="color: inherit; text-decoration: inherit;">electable_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6311,8 +6312,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="readonlynodes_python">
-<a href="#readonlynodes_python" style="color: inherit; text-decoration: inherit;">read<wbr>Only<wbr>Nodes</a>
+        <span id="read_only_nodes_python">
+<a href="#read_only_nodes_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6657,7 +6658,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersnapshotbackuppolicypolicy">List[Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#clustersnapshotbackuppolicypolicy">List[Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6823,11 +6824,11 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="policyitems_python">
-<a href="#policyitems_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Items</a>
+        <span id="policy_items_python">
+<a href="#policy_items_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersnapshotbackuppolicypolicypolicyitem">List[Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item]</a></span>
+        <span class="property-type"><a href="#clustersnapshotbackuppolicypolicypolicyitem">List[Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7032,8 +7033,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="frequencyinterval_python">
-<a href="#frequencyinterval_python" style="color: inherit; text-decoration: inherit;">frequency<wbr>Interval</a>
+        <span id="frequency_interval_python">
+<a href="#frequency_interval_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7042,8 +7043,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="frequencytype_python">
-<a href="#frequencytype_python" style="color: inherit; text-decoration: inherit;">frequency<wbr>Type</a>
+        <span id="frequency_type_python">
+<a href="#frequency_type_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7063,8 +7064,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionunit_python">
-<a href="#retentionunit_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Unit</a>
+        <span id="retention_unit_python">
+<a href="#retention_unit_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7073,8 +7074,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionvalue_python">
-<a href="#retentionvalue_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Value</a>
+        <span id="retention_value_python">
+<a href="#retention_value_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

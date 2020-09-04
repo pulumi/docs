@@ -3,7 +3,7 @@ title: "Module types/output"
 title_tag: "Module types/output | Package @pulumi/mongodbatlas | Node.js SDK"
 linktitle: "output"
 meta_desc: "Explore members of the output module in the @pulumi/mongodbatlas package."
-git_sha: "acfff6b279f7f37dea66fcfff61b180b1c326db7"
+git_sha: "a5e70462ed4b069fc066820d47d409b7ec0facce"
 block_external_search_index: true
 ---
 
@@ -96,14 +96,14 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="AlertConfigurationMatcher" data-link-title="AlertConfigurationMatcher">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L8">
         interface <strong>AlertConfigurationMatcher</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>AlertConfigurationMatcher</span></code></pre>
 <h4 class="pdoc-member-header" id="AlertConfigurationMatcher-fieldName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L25">property <b>fieldName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L25">property <b>fieldName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fieldName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -124,7 +124,7 @@ Sharded cluster alerts support these fields:
 - `SHARD_NAME`
 
 <h4 class="pdoc-member-header" id="AlertConfigurationMatcher-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L32">property <b>operator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L32">property <b>operator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operator?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -135,7 +135,7 @@ Accepted values are:
 - `LESS_THAN`
 
 <h4 class="pdoc-member-header" id="AlertConfigurationMatcher-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L41">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L41">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -148,14 +148,14 @@ Value to test with the specified operator. If `fieldName` is set to TYPE_NAME, y
 - `MONGOS`
 
 <h3 class="pdoc-module-header" id="AlertConfigurationMetricThreshold" data-link-title="AlertConfigurationMetricThreshold">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L44">
         interface <strong>AlertConfigurationMetricThreshold</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>AlertConfigurationMetricThreshold</span></code></pre>
 <h4 class="pdoc-member-header" id="AlertConfigurationMetricThreshold-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L48">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L48">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -163,7 +163,7 @@ Value to test with the specified operator. If `fieldName` is set to TYPE_NAME, y
 Name of the metric to check.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationMetricThreshold-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L52">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L52">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -171,7 +171,7 @@ Name of the metric to check.
 This must be set to AVERAGE. Atlas computes the current metric value as an average.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationMetricThreshold-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L59">property <b>operator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L59">property <b>operator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operator?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -182,7 +182,7 @@ Accepted values are:
 - `LESS_THAN`
 
 <h4 class="pdoc-member-header" id="AlertConfigurationMetricThreshold-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L63">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L63">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -190,7 +190,7 @@ Accepted values are:
 Threshold value outside of which an alert will be triggered.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationMetricThreshold-units">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L84">property <b>units</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L84">property <b>units</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>units?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -215,14 +215,14 @@ Accepted values are:
 - `DAYS`
 
 <h3 class="pdoc-module-header" id="AlertConfigurationNotification" data-link-title="AlertConfigurationNotification">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L87">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L87">
         interface <strong>AlertConfigurationNotification</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>AlertConfigurationNotification</span></code></pre>
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-apiToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L91">property <b>apiToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L91">property <b>apiToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiToken?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -230,7 +230,7 @@ Accepted values are:
 Slack API token. Required for the SLACK notifications type. If the token later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-channelName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L95">property <b>channelName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L95">property <b>channelName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>channelName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -238,7 +238,7 @@ Slack API token. Required for the SLACK notifications type. If the token later b
 Slack channel name. Required for the SLACK notifications type.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-datadogApiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L99">property <b>datadogApiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L99">property <b>datadogApiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datadogApiKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -246,7 +246,7 @@ Slack channel name. Required for the SLACK notifications type.
 Datadog API Key. Found in the Datadog dashboard. Required for the DATADOG notifications type.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-datadogRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L103">property <b>datadogRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L103">property <b>datadogRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datadogRegion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -254,7 +254,7 @@ Datadog API Key. Found in the Datadog dashboard. Required for the DATADOG notifi
 Region that indicates which API URL to use. Accepted regions are: `US`, `EU`. The default Datadog region is US.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-delayMin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L107">property <b>delayMin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L107">property <b>delayMin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>delayMin?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -262,7 +262,7 @@ Region that indicates which API URL to use. Accepted regions are: `US`, `EU`. Th
 Number of minutes to wait after an alert condition is detected before sending out the first notification.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-emailAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L111">property <b>emailAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L111">property <b>emailAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailAddress?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -270,7 +270,7 @@ Number of minutes to wait after an alert condition is detected before sending ou
 Email address to which alert notifications are sent. Required for the EMAIL notifications type.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-emailEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L115">property <b>emailEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L115">property <b>emailEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -278,7 +278,7 @@ Email address to which alert notifications are sent. Required for the EMAIL noti
 Flag indicating if email notifications should be sent. Configurable for `ORG`, `GROUP`, and `USER` notifications types.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-flowName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L119">property <b>flowName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L119">property <b>flowName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flowName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -286,7 +286,7 @@ Flag indicating if email notifications should be sent. Configurable for `ORG`, `
 Flowdock flow name in lower-case letters. Required for the `FLOWDOCK` notifications type
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-flowdockApiToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L123">property <b>flowdockApiToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L123">property <b>flowdockApiToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flowdockApiToken?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -294,7 +294,7 @@ Flowdock flow name in lower-case letters. Required for the `FLOWDOCK` notificati
 The Flowdock personal API token. Required for the `FLOWDOCK` notifications type. If the token later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-intervalMin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L127">property <b>intervalMin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L127">property <b>intervalMin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>intervalMin?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -302,7 +302,7 @@ The Flowdock personal API token. Required for the `FLOWDOCK` notifications type.
 Number of minutes to wait between successive notifications for unacknowledged alerts that are not resolved. The minimum value is 5.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-mobileNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L131">property <b>mobileNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L131">property <b>mobileNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mobileNumber?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -310,7 +310,7 @@ Number of minutes to wait between successive notifications for unacknowledged al
 Mobile number to which alert notifications are sent. Required for the SMS notifications type.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-opsGenieApiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L135">property <b>opsGenieApiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L135">property <b>opsGenieApiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>opsGenieApiKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -318,7 +318,7 @@ Mobile number to which alert notifications are sent. Required for the SMS notifi
 Opsgenie API Key. Required for the `OPS_GENIE` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-opsGenieRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L139">property <b>opsGenieRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L139">property <b>opsGenieRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>opsGenieRegion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -326,7 +326,7 @@ Opsgenie API Key. Required for the `OPS_GENIE` notifications type. If the key la
 Region that indicates which API URL to use. Accepted regions are: `US` ,`EU`. The default Opsgenie region is US.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-orgName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L143">property <b>orgName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L143">property <b>orgName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orgName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -334,12 +334,12 @@ Region that indicates which API URL to use. Accepted regions are: `US` ,`EU`. Th
 Flowdock organization name in lower-case letters. This is the name that appears after www.flowdock.com/app/ in the URL string. Required for the FLOWDOCK notifications type.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L144">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L144">property <b>roles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roles?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-serviceKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L148">property <b>serviceKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L148">property <b>serviceKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -347,7 +347,7 @@ Flowdock organization name in lower-case letters. This is the name that appears 
 PagerDuty service key. Required for the PAGER_DUTY notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-smsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L152">property <b>smsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L152">property <b>smsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>smsEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -355,7 +355,7 @@ PagerDuty service key. Required for the PAGER_DUTY notifications type. If the ke
 Flag indicating if text message notifications should be sent. Configurable for `ORG`, `GROUP`, and `USER` notifications types.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L156">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L156">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -363,7 +363,7 @@ Flag indicating if text message notifications should be sent. Configurable for `
 Unique identifier of a team.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-typeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L174">property <b>typeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L164">property <b>typeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>typeName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -373,19 +373,9 @@ Accepted values are:
 - `DATADOG`
 - `EMAIL`
 - `FLOWDOCK`
-- `GROUP` (Project)
-- `OPS_GENIE`
-- `ORG`
-- `PAGER_DUTY`
-- `SLACK`
-- `SMS`
-- `TEAM`
-- `USER`
-- `VICTOR_OPS`
-- `WEBHOOK`
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L178">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L168">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -393,7 +383,7 @@ Accepted values are:
 Name of the Atlas user to which to send notifications. Only a user in the project that owns the alert configuration is allowed here. Required for the `USER` notifications type.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-victorOpsApiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L182">property <b>victorOpsApiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L172">property <b>victorOpsApiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>victorOpsApiKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -401,7 +391,7 @@ Name of the Atlas user to which to send notifications. Only a user in the projec
 VictorOps API key. Required for the `VICTOR_OPS` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
 
 <h4 class="pdoc-member-header" id="AlertConfigurationNotification-victorOpsRoutingKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L186">property <b>victorOpsRoutingKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L176">property <b>victorOpsRoutingKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>victorOpsRoutingKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -409,93 +399,93 @@ VictorOps API key. Required for the `VICTOR_OPS` notifications type. If the key 
 VictorOps routing key. Optional for the `VICTOR_OPS` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
 
 <h3 class="pdoc-module-header" id="CloudProviderSnapshotBackupPolicyPolicy" data-link-title="CloudProviderSnapshotBackupPolicyPolicy">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L189">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L179">
         interface <strong>CloudProviderSnapshotBackupPolicyPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CloudProviderSnapshotBackupPolicyPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="CloudProviderSnapshotBackupPolicyPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L190">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L180">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="CloudProviderSnapshotBackupPolicyPolicy-policyItems">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L191">property <b>policyItems</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L181">property <b>policyItems</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyItems: <a href='#CloudProviderSnapshotBackupPolicyPolicyPolicyItem'>CloudProviderSnapshotBackupPolicyPolicyPolicyItem</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="CloudProviderSnapshotBackupPolicyPolicyPolicyItem" data-link-title="CloudProviderSnapshotBackupPolicyPolicyPolicyItem">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L194">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L184">
         interface <strong>CloudProviderSnapshotBackupPolicyPolicyPolicyItem</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CloudProviderSnapshotBackupPolicyPolicyPolicyItem</span></code></pre>
 <h4 class="pdoc-member-header" id="CloudProviderSnapshotBackupPolicyPolicyPolicyItem-frequencyInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L195">property <b>frequencyInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L185">property <b>frequencyInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequencyInterval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="CloudProviderSnapshotBackupPolicyPolicyPolicyItem-frequencyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L196">property <b>frequencyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L186">property <b>frequencyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequencyType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="CloudProviderSnapshotBackupPolicyPolicyPolicyItem-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L197">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L187">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="CloudProviderSnapshotBackupPolicyPolicyPolicyItem-retentionUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L198">property <b>retentionUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L188">property <b>retentionUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionUnit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="CloudProviderSnapshotBackupPolicyPolicyPolicyItem-retentionValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L199">property <b>retentionValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L189">property <b>retentionValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudProviderSnapshotRestoreJobDeliveryType" data-link-title="CloudProviderSnapshotRestoreJobDeliveryType">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L202">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L192">
         interface <strong>CloudProviderSnapshotRestoreJobDeliveryType</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CloudProviderSnapshotRestoreJobDeliveryType</span></code></pre>
 <h4 class="pdoc-member-header" id="CloudProviderSnapshotRestoreJobDeliveryType-automated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L203">property <b>automated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L193">property <b>automated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automated?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="CloudProviderSnapshotRestoreJobDeliveryType-download">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L204">property <b>download</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L194">property <b>download</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>download?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="CloudProviderSnapshotRestoreJobDeliveryType-oplogInc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L205">property <b>oplogInc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L195">property <b>oplogInc</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oplogInc?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="CloudProviderSnapshotRestoreJobDeliveryType-oplogTs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L206">property <b>oplogTs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L196">property <b>oplogTs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oplogTs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="CloudProviderSnapshotRestoreJobDeliveryType-pointInTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L207">property <b>pointInTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L197">property <b>pointInTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pointInTime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="CloudProviderSnapshotRestoreJobDeliveryType-pointInTimeUtcSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L208">property <b>pointInTimeUtcSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L198">property <b>pointInTimeUtcSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pointInTimeUtcSeconds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="CloudProviderSnapshotRestoreJobDeliveryType-targetClusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L212">property <b>targetClusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L202">property <b>targetClusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetClusterName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -503,19 +493,19 @@ VictorOps routing key. Optional for the `VICTOR_OPS` notifications type. If the 
 Name of the target Atlas cluster to which the restore job restores the snapshot. Only required if deliveryType is automated.
 
 <h4 class="pdoc-member-header" id="CloudProviderSnapshotRestoreJobDeliveryType-targetProjectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L213">property <b>targetProjectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L203">property <b>targetProjectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetProjectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ClusterAdvancedConfiguration" data-link-title="ClusterAdvancedConfiguration">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L216">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L206">
         interface <strong>ClusterAdvancedConfiguration</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClusterAdvancedConfiguration</span></code></pre>
 <h4 class="pdoc-member-header" id="ClusterAdvancedConfiguration-failIndexKeyTooLong">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L220">property <b>failIndexKeyTooLong</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L210">property <b>failIndexKeyTooLong</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>failIndexKeyTooLong: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -523,7 +513,7 @@ Name of the target Atlas cluster to which the restore job restores the snapshot.
 When true, documents can only be updated or inserted if, for all indexed fields on the target collection, the corresponding index entries do not exceed 1024 bytes. When false, mongod writes documents that exceed the limit but does not index them.
 
 <h4 class="pdoc-member-header" id="ClusterAdvancedConfiguration-javascriptEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L224">property <b>javascriptEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L214">property <b>javascriptEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>javascriptEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -531,7 +521,7 @@ When true, documents can only be updated or inserted if, for all indexed fields 
 When true, the cluster allows execution of operations that perform server-side executions of JavaScript. When false, the cluster disables execution of those operations.
 
 <h4 class="pdoc-member-header" id="ClusterAdvancedConfiguration-minimumEnabledTlsProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L228">property <b>minimumEnabledTlsProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L218">property <b>minimumEnabledTlsProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minimumEnabledTlsProtocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -539,7 +529,7 @@ When true, the cluster allows execution of operations that perform server-side e
 Sets the minimum Transport Layer Security (TLS) version the cluster accepts for incoming connections.Valid values are:
 
 <h4 class="pdoc-member-header" id="ClusterAdvancedConfiguration-noTableScan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L232">property <b>noTableScan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L222">property <b>noTableScan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noTableScan: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -547,7 +537,7 @@ Sets the minimum Transport Layer Security (TLS) version the cluster accepts for 
 When true, the cluster disables the execution of any query that requires a collection scan to return results. When false, the cluster allows the execution of those operations.
 
 <h4 class="pdoc-member-header" id="ClusterAdvancedConfiguration-oplogSizeMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L236">property <b>oplogSizeMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L226">property <b>oplogSizeMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oplogSizeMb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -555,7 +545,7 @@ When true, the cluster disables the execution of any query that requires a colle
 The custom oplog size of the cluster. Without a value that indicates that the cluster uses the default oplog size calculated by Atlas.
 
 <h4 class="pdoc-member-header" id="ClusterAdvancedConfiguration-sampleRefreshIntervalBiConnector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L240">property <b>sampleRefreshIntervalBiConnector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L230">property <b>sampleRefreshIntervalBiConnector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sampleRefreshIntervalBiConnector: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -563,7 +553,7 @@ The custom oplog size of the cluster. Without a value that indicates that the cl
 Interval in seconds at which the mongosqld process re-samples data to create its relational schema. The default value is 300. The specified value must be a positive integer. Available only for Atlas deployments in which BI Connector for Atlas is enabled.
 
 <h4 class="pdoc-member-header" id="ClusterAdvancedConfiguration-sampleSizeBiConnector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L244">property <b>sampleSizeBiConnector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L234">property <b>sampleSizeBiConnector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sampleSizeBiConnector: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -571,14 +561,14 @@ Interval in seconds at which the mongosqld process re-samples data to create its
 Number of documents per database to sample when gathering schema information. Defaults to 100. Available only for Atlas deployments in which BI Connector for Atlas is enabled.
 
 <h3 class="pdoc-module-header" id="ClusterBiConnector" data-link-title="ClusterBiConnector">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L247">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L237">
         interface <strong>ClusterBiConnector</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClusterBiConnector</span></code></pre>
 <h4 class="pdoc-member-header" id="ClusterBiConnector-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L254">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L244">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -589,7 +579,7 @@ Specifies whether or not BI Connector for Atlas is enabled on the cluster.l
 - Set to `false` to disable BI Connector for Atlas.
 
 <h4 class="pdoc-member-header" id="ClusterBiConnector-readPreference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L258">property <b>readPreference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L248">property <b>readPreference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readPreference: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -597,51 +587,51 @@ Specifies whether or not BI Connector for Atlas is enabled on the cluster.l
 Specifies the read preference to be used by BI Connector for Atlas on the cluster. Each BI Connector for Atlas read preference contains a distinct combination of [readPreference](https://docs.mongodb.com/manual/core/read-preference/) and [readPreferenceTags](https://docs.mongodb.com/manual/core/read-preference/#tag-sets) options. For details on BI Connector for Atlas read preferences, refer to the [BI Connector Read Preferences Table](https://docs.atlas.mongodb.com/tutorial/create-global-writes-cluster/#bic-read-preferences).
 
 <h3 class="pdoc-module-header" id="ClusterConnectionStrings" data-link-title="ClusterConnectionStrings">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L261">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L251">
         interface <strong>ClusterConnectionStrings</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClusterConnectionStrings</span></code></pre>
 <h4 class="pdoc-member-header" id="ClusterConnectionStrings-awsPrivateLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L262">property <b>awsPrivateLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L252">property <b>awsPrivateLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsPrivateLink: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="ClusterConnectionStrings-awsPrivateLinkSrv">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L263">property <b>awsPrivateLinkSrv</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L253">property <b>awsPrivateLinkSrv</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsPrivateLinkSrv: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="ClusterConnectionStrings-private">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L264">property <b>private</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L254">property <b>private</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>private: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterConnectionStrings-privateSrv">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L265">property <b>privateSrv</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L255">property <b>privateSrv</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateSrv: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterConnectionStrings-standard">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L266">property <b>standard</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L256">property <b>standard</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>standard: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterConnectionStrings-standardSrv">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L267">property <b>standardSrv</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L257">property <b>standardSrv</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>standardSrv: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ClusterLabel" data-link-title="ClusterLabel">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L270">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L260">
         interface <strong>ClusterLabel</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClusterLabel</span></code></pre>
 <h4 class="pdoc-member-header" id="ClusterLabel-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L274">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L264">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -649,7 +639,7 @@ Specifies the read preference to be used by BI Connector for Atlas on the cluste
 The key that you want to write.
 
 <h4 class="pdoc-member-header" id="ClusterLabel-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L278">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L268">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -657,14 +647,14 @@ The key that you want to write.
 The value that you want to write.
 
 <h3 class="pdoc-module-header" id="ClusterReplicationSpec" data-link-title="ClusterReplicationSpec">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L281">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L271">
         interface <strong>ClusterReplicationSpec</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClusterReplicationSpec</span></code></pre>
 <h4 class="pdoc-member-header" id="ClusterReplicationSpec-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L285">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L275">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -672,7 +662,7 @@ The value that you want to write.
 Unique identifer of the replication document for a zone in a Global Cluster.
 
 <h4 class="pdoc-member-header" id="ClusterReplicationSpec-numShards">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L289">property <b>numShards</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L279">property <b>numShards</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numShards: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -680,7 +670,7 @@ Unique identifer of the replication document for a zone in a Global Cluster.
 Number of shards to deploy in the specified zone, minimum 1.
 
 <h4 class="pdoc-member-header" id="ClusterReplicationSpec-regionsConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L293">property <b>regionsConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L283">property <b>regionsConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regionsConfigs: <a href='#ClusterReplicationSpecRegionsConfig'>ClusterReplicationSpecRegionsConfig</a>[];</code></pre>
@@ -688,7 +678,7 @@ Number of shards to deploy in the specified zone, minimum 1.
 Physical location of the region. Each regionsConfig document describes the region’s priority in elections and the number and type of MongoDB nodes Atlas deploys to the region. You must order each regionsConfigs document by regionsConfig.priority, descending. See Region Config below for more details.
 
 <h4 class="pdoc-member-header" id="ClusterReplicationSpec-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L297">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L287">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -696,14 +686,14 @@ Physical location of the region. Each regionsConfig document describes the regio
 Name for the zone in a Global Cluster.
 
 <h3 class="pdoc-module-header" id="ClusterReplicationSpecRegionsConfig" data-link-title="ClusterReplicationSpecRegionsConfig">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L300">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L290">
         interface <strong>ClusterReplicationSpecRegionsConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClusterReplicationSpecRegionsConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ClusterReplicationSpecRegionsConfig-analyticsNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L304">property <b>analyticsNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L294">property <b>analyticsNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>analyticsNodes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -711,7 +701,7 @@ Name for the zone in a Global Cluster.
 The number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary. If you do not specify this option, no analytics nodes are deployed to the region.
 
 <h4 class="pdoc-member-header" id="ClusterReplicationSpecRegionsConfig-electableNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L311">property <b>electableNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L301">property <b>electableNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>electableNodes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -722,7 +712,7 @@ Number of electable nodes for Atlas to deploy to the region. Electable nodes can
 * You cannot create electable nodes in a region if `priority` is 0.
 
 <h4 class="pdoc-member-header" id="ClusterReplicationSpecRegionsConfig-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L318">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L308">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -733,7 +723,7 @@ Election priority of the region. For regions with only read-only nodes, set this
 * Example: If you have three regions, their priorities would be 7, 6, and 5 respectively. If you added two more regions for supporting electable nodes, the priorities of those regions would be 4 and 3 respectively.
 
 <h4 class="pdoc-member-header" id="ClusterReplicationSpecRegionsConfig-readOnlyNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L322">property <b>readOnlyNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L312">property <b>readOnlyNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readOnlyNodes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -741,7 +731,7 @@ Election priority of the region. For regions with only read-only nodes, set this
 Number of read-only nodes for Atlas to deploy to the region. Read-only nodes can never become the primary, but can facilitate local-reads. Specify 0 if you do not want any read-only nodes in the region.
 
 <h4 class="pdoc-member-header" id="ClusterReplicationSpecRegionsConfig-regionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L326">property <b>regionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L316">property <b>regionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -749,14 +739,14 @@ Number of read-only nodes for Atlas to deploy to the region. Read-only nodes can
 Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 
 <h3 class="pdoc-module-header" id="ClusterSnapshotBackupPolicy" data-link-title="ClusterSnapshotBackupPolicy">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L329">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L319">
         interface <strong>ClusterSnapshotBackupPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClusterSnapshotBackupPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshotBackupPolicy-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L333">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L323">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -764,49 +754,49 @@ Physical location of your MongoDB cluster. The region you choose can affect netw
 The cluster ID.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotBackupPolicy-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L334">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L324">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshotBackupPolicy-nextSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L335">property <b>nextSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L325">property <b>nextSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nextSnapshot: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshotBackupPolicy-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L336">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L326">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies: <a href='#ClusterSnapshotBackupPolicyPolicy'>ClusterSnapshotBackupPolicyPolicy</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshotBackupPolicy-referenceHourOfDay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L337">property <b>referenceHourOfDay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L327">property <b>referenceHourOfDay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>referenceHourOfDay: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshotBackupPolicy-referenceMinuteOfHour">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L338">property <b>referenceMinuteOfHour</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L328">property <b>referenceMinuteOfHour</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>referenceMinuteOfHour: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshotBackupPolicy-restoreWindowDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L339">property <b>restoreWindowDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L329">property <b>restoreWindowDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restoreWindowDays: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshotBackupPolicy-updateSnapshots">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L340">property <b>updateSnapshots</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L330">property <b>updateSnapshots</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateSnapshots: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ClusterSnapshotBackupPolicyPolicy" data-link-title="ClusterSnapshotBackupPolicyPolicy">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L343">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L333">
         interface <strong>ClusterSnapshotBackupPolicyPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClusterSnapshotBackupPolicyPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshotBackupPolicyPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L347">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L337">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -814,29 +804,29 @@ The cluster ID.
 Unique identifer of the replication document for a zone in a Global Cluster.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotBackupPolicyPolicy-policyItems">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L348">property <b>policyItems</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L338">property <b>policyItems</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyItems: <a href='#ClusterSnapshotBackupPolicyPolicyPolicyItem'>ClusterSnapshotBackupPolicyPolicyPolicyItem</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="ClusterSnapshotBackupPolicyPolicyPolicyItem" data-link-title="ClusterSnapshotBackupPolicyPolicyPolicyItem">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L351">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L341">
         interface <strong>ClusterSnapshotBackupPolicyPolicyPolicyItem</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClusterSnapshotBackupPolicyPolicyPolicyItem</span></code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshotBackupPolicyPolicyPolicyItem-frequencyInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L352">property <b>frequencyInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L342">property <b>frequencyInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequencyInterval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshotBackupPolicyPolicyPolicyItem-frequencyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L353">property <b>frequencyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L343">property <b>frequencyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequencyType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshotBackupPolicyPolicyPolicyItem-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L357">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L347">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -844,24 +834,24 @@ Unique identifer of the replication document for a zone in a Global Cluster.
 Unique identifer of the replication document for a zone in a Global Cluster.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotBackupPolicyPolicyPolicyItem-retentionUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L358">property <b>retentionUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L348">property <b>retentionUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionUnit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshotBackupPolicyPolicyPolicyItem-retentionValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L359">property <b>retentionValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L349">property <b>retentionValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="CustomDbRoleAction" data-link-title="CustomDbRoleAction">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L362">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L352">
         interface <strong>CustomDbRoleAction</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CustomDbRoleAction</span></code></pre>
 <h4 class="pdoc-member-header" id="CustomDbRoleAction-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L367">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L357">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -870,7 +860,7 @@ Name of the privilege action. For a complete list of actions available in the At
 > **Note**: The privilege actions available to the Custom Roles API resource represent a subset of the privilege actions available in the Atlas Custom Roles UI.
 
 <h4 class="pdoc-member-header" id="CustomDbRoleAction-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L371">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L361">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources: <a href='#CustomDbRoleActionResource'>CustomDbRoleActionResource</a>[];</code></pre>
@@ -878,24 +868,24 @@ Name of the privilege action. For a complete list of actions available in the At
 Contains information on where the action is granted. Each object in the array either indicates a database and collection on which the action is granted, or indicates that the action is granted on the cluster resource.
 
 <h3 class="pdoc-module-header" id="CustomDbRoleActionResource" data-link-title="CustomDbRoleActionResource">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L374">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L364">
         interface <strong>CustomDbRoleActionResource</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CustomDbRoleActionResource</span></code></pre>
 <h4 class="pdoc-member-header" id="CustomDbRoleActionResource-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L375">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L365">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cluster?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="CustomDbRoleActionResource-collectionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L376">property <b>collectionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L366">property <b>collectionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collectionName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="CustomDbRoleActionResource-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L380">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L370">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -903,14 +893,14 @@ Contains information on where the action is granted. Each object in the array ei
 Database on which the inherited role is granted.
 
 <h3 class="pdoc-module-header" id="CustomDbRoleInheritedRole" data-link-title="CustomDbRoleInheritedRole">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L383">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L373">
         interface <strong>CustomDbRoleInheritedRole</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CustomDbRoleInheritedRole</span></code></pre>
 <h4 class="pdoc-member-header" id="CustomDbRoleInheritedRole-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L387">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L377">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -918,7 +908,7 @@ Database on which the inherited role is granted.
 Database on which the inherited role is granted.
 
 <h4 class="pdoc-member-header" id="CustomDbRoleInheritedRole-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L391">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L381">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -926,14 +916,14 @@ Database on which the inherited role is granted.
 Name of the inherited role. This can either be another custom role or a built-in role.
 
 <h3 class="pdoc-module-header" id="DatabaseUserLabel" data-link-title="DatabaseUserLabel">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L394">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L384">
         interface <strong>DatabaseUserLabel</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DatabaseUserLabel</span></code></pre>
 <h4 class="pdoc-member-header" id="DatabaseUserLabel-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L398">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L388">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -941,7 +931,7 @@ Name of the inherited role. This can either be another custom role or a built-in
 The key that you want to write.
 
 <h4 class="pdoc-member-header" id="DatabaseUserLabel-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L402">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L392">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -949,14 +939,14 @@ The key that you want to write.
 The value that you want to write.
 
 <h3 class="pdoc-module-header" id="DatabaseUserRole" data-link-title="DatabaseUserRole">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L405">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L395">
         interface <strong>DatabaseUserRole</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DatabaseUserRole</span></code></pre>
 <h4 class="pdoc-member-header" id="DatabaseUserRole-collectionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L409">property <b>collectionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L399">property <b>collectionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collectionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -964,7 +954,7 @@ The value that you want to write.
 Collection for which the role applies. You can specify a collection for the `read` and `readWrite` roles. If you do not specify a collection for `read` and `readWrite`, the role applies to all collections in the database (excluding some collections in the `system`. database).
 
 <h4 class="pdoc-member-header" id="DatabaseUserRole-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L413">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L403">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -972,7 +962,7 @@ Collection for which the role applies. You can specify a collection for the `rea
 Database on which the user has the specified role. A role on the `admin` database can include privileges that apply to the other databases.
 
 <h4 class="pdoc-member-header" id="DatabaseUserRole-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L417">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L407">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -980,14 +970,14 @@ Database on which the user has the specified role. A role on the `admin` databas
 Name of the role to grant. See [Create a Database User](https://docs.atlas.mongodb.com/reference/api/database-users-create-a-user/) `roles.roleName` for valid values and restrictions.
 
 <h3 class="pdoc-module-header" id="EncryptionAtRestAwsKms" data-link-title="EncryptionAtRestAwsKms">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L420">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L410">
         interface <strong>EncryptionAtRestAwsKms</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>EncryptionAtRestAwsKms</span></code></pre>
 <h4 class="pdoc-member-header" id="EncryptionAtRestAwsKms-accessKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L424">property <b>accessKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L414">property <b>accessKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -995,7 +985,7 @@ Name of the role to grant. See [Create a Database User](https://docs.atlas.mongo
 The IAM access key ID with permissions to access the customer master key specified by customerMasterKeyID.
 
 <h4 class="pdoc-member-header" id="EncryptionAtRestAwsKms-customerMasterKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L428">property <b>customerMasterKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L418">property <b>customerMasterKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customerMasterKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1003,7 +993,7 @@ The IAM access key ID with permissions to access the customer master key specifi
 The AWS customer master key used to encrypt and decrypt the MongoDB master keys.
 
 <h4 class="pdoc-member-header" id="EncryptionAtRestAwsKms-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L432">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L422">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1011,7 +1001,7 @@ The AWS customer master key used to encrypt and decrypt the MongoDB master keys.
 Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
 
 <h4 class="pdoc-member-header" id="EncryptionAtRestAwsKms-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L436">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L426">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1019,7 +1009,7 @@ Specifies whether Encryption at Rest is enabled for an Atlas project. To disable
 The AWS region in which the AWS customer master key exists: CA_CENTRAL_1, US_EAST_1, US_EAST_2, US_WEST_1, US_WEST_2, SA_EAST_1
 
 <h4 class="pdoc-member-header" id="EncryptionAtRestAwsKms-secretAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L440">property <b>secretAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L430">property <b>secretAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretAccessKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1027,14 +1017,14 @@ The AWS region in which the AWS customer master key exists: CA_CENTRAL_1, US_EAS
 The IAM secret access key with permissions to access the customer master key specified by customerMasterKeyID.
 
 <h3 class="pdoc-module-header" id="EncryptionAtRestAzureKeyVault" data-link-title="EncryptionAtRestAzureKeyVault">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L443">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L433">
         interface <strong>EncryptionAtRestAzureKeyVault</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>EncryptionAtRestAzureKeyVault</span></code></pre>
 <h4 class="pdoc-member-header" id="EncryptionAtRestAzureKeyVault-azureEnvironment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L447">property <b>azureEnvironment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L437">property <b>azureEnvironment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureEnvironment: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1042,7 +1032,7 @@ The IAM secret access key with permissions to access the customer master key spe
 The Azure environment where the Azure account credentials reside. Valid values are the following: AZURE, AZURE_CHINA, AZURE_GERMANY
 
 <h4 class="pdoc-member-header" id="EncryptionAtRestAzureKeyVault-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L451">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L441">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1050,7 +1040,7 @@ The Azure environment where the Azure account credentials reside. Valid values a
 The client ID, also known as the application ID, for an Azure application associated with the Azure AD tenant.
 
 <h4 class="pdoc-member-header" id="EncryptionAtRestAzureKeyVault-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L455">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L445">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1058,7 +1048,7 @@ The client ID, also known as the application ID, for an Azure application associ
 Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
 
 <h4 class="pdoc-member-header" id="EncryptionAtRestAzureKeyVault-keyIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L459">property <b>keyIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L449">property <b>keyIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyIdentifier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1066,7 +1056,7 @@ Specifies whether Encryption at Rest is enabled for an Atlas project. To disable
 The unique identifier of a key in an Azure Key Vault.
 
 <h4 class="pdoc-member-header" id="EncryptionAtRestAzureKeyVault-keyVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L463">property <b>keyVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L453">property <b>keyVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1074,7 +1064,7 @@ The unique identifier of a key in an Azure Key Vault.
 The name of an Azure Key Vault containing your key.
 
 <h4 class="pdoc-member-header" id="EncryptionAtRestAzureKeyVault-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L467">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L457">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1082,7 +1072,7 @@ The name of an Azure Key Vault containing your key.
 The name of the Azure Resource group that contains an Azure Key Vault.
 
 <h4 class="pdoc-member-header" id="EncryptionAtRestAzureKeyVault-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L471">property <b>secret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L461">property <b>secret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1090,7 +1080,7 @@ The name of the Azure Resource group that contains an Azure Key Vault.
 The secret associated with the Azure Key Vault specified by azureKeyVault.tenantID.
 
 <h4 class="pdoc-member-header" id="EncryptionAtRestAzureKeyVault-subscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L475">property <b>subscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L465">property <b>subscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1098,7 +1088,7 @@ The secret associated with the Azure Key Vault specified by azureKeyVault.tenant
 The unique identifier associated with an Azure subscription.
 
 <h4 class="pdoc-member-header" id="EncryptionAtRestAzureKeyVault-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L479">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L469">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1106,14 +1096,14 @@ The unique identifier associated with an Azure subscription.
 The unique identifier for an Azure AD tenant within an Azure subscription.
 
 <h3 class="pdoc-module-header" id="EncryptionAtRestGoogleCloudKms" data-link-title="EncryptionAtRestGoogleCloudKms">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L482">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L472">
         interface <strong>EncryptionAtRestGoogleCloudKms</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>EncryptionAtRestGoogleCloudKms</span></code></pre>
 <h4 class="pdoc-member-header" id="EncryptionAtRestGoogleCloudKms-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L486">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L476">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1121,7 +1111,7 @@ The unique identifier for an Azure AD tenant within an Azure subscription.
 Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
 
 <h4 class="pdoc-member-header" id="EncryptionAtRestGoogleCloudKms-keyVersionResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L490">property <b>keyVersionResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L480">property <b>keyVersionResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVersionResourceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1129,7 +1119,7 @@ Specifies whether Encryption at Rest is enabled for an Atlas project. To disable
 The Key Version Resource ID from your GCP account.
 
 <h4 class="pdoc-member-header" id="EncryptionAtRestGoogleCloudKms-serviceAccountKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L494">property <b>serviceAccountKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L484">property <b>serviceAccountKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1137,46 +1127,46 @@ The Key Version Resource ID from your GCP account.
 String-formatted JSON object containing GCP KMS credentials from your GCP account.
 
 <h3 class="pdoc-module-header" id="Get509AuthenticationDatabaseUserCertificate" data-link-title="Get509AuthenticationDatabaseUserCertificate">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L497">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L487">
         interface <strong>Get509AuthenticationDatabaseUserCertificate</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Get509AuthenticationDatabaseUserCertificate</span></code></pre>
 <h4 class="pdoc-member-header" id="Get509AuthenticationDatabaseUserCertificate-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L498">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L488">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="Get509AuthenticationDatabaseUserCertificate-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L499">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L489">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="Get509AuthenticationDatabaseUserCertificate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L500">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L490">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="Get509AuthenticationDatabaseUserCertificate-notAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L501">property <b>notAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L491">property <b>notAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notAfter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="Get509AuthenticationDatabaseUserCertificate-subject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L502">property <b>subject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L492">property <b>subject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subject: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetAlertConfigurationMatcher" data-link-title="GetAlertConfigurationMatcher">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L505">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L495">
         interface <strong>GetAlertConfigurationMatcher</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetAlertConfigurationMatcher</span></code></pre>
 <h4 class="pdoc-member-header" id="GetAlertConfigurationMatcher-fieldName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L522">property <b>fieldName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L512">property <b>fieldName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fieldName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1197,7 +1187,7 @@ Sharded cluster alerts support these fields:
 - `SHARD_NAME`
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationMatcher-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L529">property <b>operator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L519">property <b>operator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1208,7 +1198,7 @@ Accepted values are:
 - `LESS_THAN`
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationMatcher-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L538">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L528">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1221,14 +1211,14 @@ Value to test with the specified operator. If `fieldName` is set to TYPE_NAME, y
 - `MONGOS`
 
 <h3 class="pdoc-module-header" id="GetAlertConfigurationMetricThreshold" data-link-title="GetAlertConfigurationMetricThreshold">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L541">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L531">
         interface <strong>GetAlertConfigurationMetricThreshold</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetAlertConfigurationMetricThreshold</span></code></pre>
 <h4 class="pdoc-member-header" id="GetAlertConfigurationMetricThreshold-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L545">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L535">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1236,7 +1226,7 @@ Value to test with the specified operator. If `fieldName` is set to TYPE_NAME, y
 Name of the metric to check.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationMetricThreshold-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L549">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L539">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1244,7 +1234,7 @@ Name of the metric to check.
 This must be set to AVERAGE. Atlas computes the current metric value as an average.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationMetricThreshold-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L556">property <b>operator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L546">property <b>operator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1255,7 +1245,7 @@ Accepted values are:
 - `LESS_THAN`
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationMetricThreshold-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L560">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L550">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1263,7 +1253,7 @@ Accepted values are:
 Threshold value outside of which an alert will be triggered.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationMetricThreshold-units">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L581">property <b>units</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L571">property <b>units</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>units: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1288,14 +1278,14 @@ Accepted values are:
 - `DAYS`
 
 <h3 class="pdoc-module-header" id="GetAlertConfigurationNotification" data-link-title="GetAlertConfigurationNotification">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L584">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L574">
         interface <strong>GetAlertConfigurationNotification</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetAlertConfigurationNotification</span></code></pre>
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-apiToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L588">property <b>apiToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L578">property <b>apiToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiToken: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1303,7 +1293,7 @@ Accepted values are:
 Slack API token. Required for the SLACK notifications type. If the token later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-channelName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L592">property <b>channelName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L582">property <b>channelName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>channelName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1311,7 +1301,7 @@ Slack API token. Required for the SLACK notifications type. If the token later b
 Slack channel name. Required for the SLACK notifications type.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-datadogApiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L596">property <b>datadogApiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L586">property <b>datadogApiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datadogApiKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1319,7 +1309,7 @@ Slack channel name. Required for the SLACK notifications type.
 Datadog API Key. Found in the Datadog dashboard. Required for the DATADOG notifications type.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-datadogRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L600">property <b>datadogRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L590">property <b>datadogRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datadogRegion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1327,7 +1317,7 @@ Datadog API Key. Found in the Datadog dashboard. Required for the DATADOG notifi
 Region that indicates which API URL to use. Accepted regions are: `US`, `EU`. The default Datadog region is US.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-delayMin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L604">property <b>delayMin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L594">property <b>delayMin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>delayMin: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1335,7 +1325,7 @@ Region that indicates which API URL to use. Accepted regions are: `US`, `EU`. Th
 Number of minutes to wait after an alert condition is detected before sending out the first notification.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-emailAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L608">property <b>emailAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L598">property <b>emailAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1343,7 +1333,7 @@ Number of minutes to wait after an alert condition is detected before sending ou
 Email address to which alert notifications are sent. Required for the EMAIL notifications type.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-emailEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L612">property <b>emailEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L602">property <b>emailEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1351,7 +1341,7 @@ Email address to which alert notifications are sent. Required for the EMAIL noti
 Flag indicating if email notifications should be sent. Configurable for `ORG`, `GROUP`, and `USER` notifications types.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-flowName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L616">property <b>flowName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L606">property <b>flowName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flowName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1359,7 +1349,7 @@ Flag indicating if email notifications should be sent. Configurable for `ORG`, `
 Flowdock flow name in lower-case letters. Required for the `FLOWDOCK` notifications type
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-flowdockApiToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L620">property <b>flowdockApiToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L610">property <b>flowdockApiToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flowdockApiToken: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1367,7 +1357,7 @@ Flowdock flow name in lower-case letters. Required for the `FLOWDOCK` notificati
 The Flowdock personal API token. Required for the `FLOWDOCK` notifications type. If the token later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-intervalMin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L624">property <b>intervalMin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L614">property <b>intervalMin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>intervalMin: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1375,7 +1365,7 @@ The Flowdock personal API token. Required for the `FLOWDOCK` notifications type.
 Number of minutes to wait between successive notifications for unacknowledged alerts that are not resolved. The minimum value is 5.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-mobileNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L628">property <b>mobileNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L618">property <b>mobileNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mobileNumber: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1383,7 +1373,7 @@ Number of minutes to wait between successive notifications for unacknowledged al
 Mobile number to which alert notifications are sent. Required for the SMS notifications type.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-opsGenieApiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L632">property <b>opsGenieApiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L622">property <b>opsGenieApiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>opsGenieApiKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1391,7 +1381,7 @@ Mobile number to which alert notifications are sent. Required for the SMS notifi
 Opsgenie API Key. Required for the `OPS_GENIE` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-opsGenieRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L636">property <b>opsGenieRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L626">property <b>opsGenieRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>opsGenieRegion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1399,7 +1389,7 @@ Opsgenie API Key. Required for the `OPS_GENIE` notifications type. If the key la
 Region that indicates which API URL to use. Accepted regions are: `US` ,`EU`. The default Opsgenie region is US.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-orgName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L640">property <b>orgName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L630">property <b>orgName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orgName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1407,7 +1397,7 @@ Region that indicates which API URL to use. Accepted regions are: `US` ,`EU`. Th
 Flowdock organization name in lower-case letters. This is the name that appears after www.flowdock.com/app/ in the URL string. Required for the FLOWDOCK notifications type.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-serviceKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L644">property <b>serviceKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L634">property <b>serviceKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1415,7 +1405,7 @@ Flowdock organization name in lower-case letters. This is the name that appears 
 PagerDuty service key. Required for the PAGER_DUTY notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-smsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L648">property <b>smsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L638">property <b>smsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>smsEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1423,7 +1413,7 @@ PagerDuty service key. Required for the PAGER_DUTY notifications type. If the ke
 Flag indicating if text message notifications should be sent. Configurable for `ORG`, `GROUP`, and `USER` notifications types.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L652">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L642">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1431,7 +1421,7 @@ Flag indicating if text message notifications should be sent. Configurable for `
 Unique identifier of a team.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-typeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L670">property <b>typeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L660">property <b>typeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>typeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1453,7 +1443,7 @@ Accepted values are:
 - `WEBHOOK`
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L674">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L664">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1461,7 +1451,7 @@ Accepted values are:
 Name of the Atlas user to which to send notifications. Only a user in the project that owns the alert configuration is allowed here. Required for the `USER` notifications type.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-victorOpsApiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L678">property <b>victorOpsApiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L668">property <b>victorOpsApiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>victorOpsApiKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1469,7 +1459,7 @@ Name of the Atlas user to which to send notifications. Only a user in the projec
 VictorOps API key. Required for the `VICTOR_OPS` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
 
 <h4 class="pdoc-member-header" id="GetAlertConfigurationNotification-victorOpsRoutingKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L682">property <b>victorOpsRoutingKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L672">property <b>victorOpsRoutingKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>victorOpsRoutingKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1477,63 +1467,63 @@ VictorOps API key. Required for the `VICTOR_OPS` notifications type. If the key 
 VictorOps routing key. Optional for the `VICTOR_OPS` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
 
 <h3 class="pdoc-module-header" id="GetCloudProviderSnapshotBackupPolicyPolicy" data-link-title="GetCloudProviderSnapshotBackupPolicyPolicy">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L685">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L675">
         interface <strong>GetCloudProviderSnapshotBackupPolicyPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCloudProviderSnapshotBackupPolicyPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotBackupPolicyPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L686">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L676">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotBackupPolicyPolicy-policyItems">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L687">property <b>policyItems</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L677">property <b>policyItems</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyItems: <a href='#GetCloudProviderSnapshotBackupPolicyPolicyPolicyItem'>GetCloudProviderSnapshotBackupPolicyPolicyPolicyItem</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetCloudProviderSnapshotBackupPolicyPolicyPolicyItem" data-link-title="GetCloudProviderSnapshotBackupPolicyPolicyPolicyItem">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L690">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L680">
         interface <strong>GetCloudProviderSnapshotBackupPolicyPolicyPolicyItem</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCloudProviderSnapshotBackupPolicyPolicyPolicyItem</span></code></pre>
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotBackupPolicyPolicyPolicyItem-frequencyInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L691">property <b>frequencyInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L681">property <b>frequencyInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequencyInterval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotBackupPolicyPolicyPolicyItem-frequencyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L692">property <b>frequencyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L682">property <b>frequencyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequencyType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotBackupPolicyPolicyPolicyItem-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L693">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L683">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotBackupPolicyPolicyPolicyItem-retentionUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L694">property <b>retentionUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L684">property <b>retentionUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionUnit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotBackupPolicyPolicyPolicyItem-retentionValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L695">property <b>retentionValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L685">property <b>retentionValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetCloudProviderSnapshotRestoreJobsResult" data-link-title="GetCloudProviderSnapshotRestoreJobsResult">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L698">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L688">
         interface <strong>GetCloudProviderSnapshotRestoreJobsResult</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCloudProviderSnapshotRestoreJobsResult</span></code></pre>
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotRestoreJobsResult-cancelled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L702">property <b>cancelled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L692">property <b>cancelled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cancelled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1541,7 +1531,7 @@ VictorOps routing key. Optional for the `VICTOR_OPS` notifications type. If the 
 Indicates whether the restore job was canceled.
 
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotRestoreJobsResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L706">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L696">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1549,7 +1539,7 @@ Indicates whether the restore job was canceled.
 UTC ISO 8601 formatted point in time when Atlas created the restore job.
 
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotRestoreJobsResult-deliveryType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L710">property <b>deliveryType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L700">property <b>deliveryType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1557,7 +1547,7 @@ UTC ISO 8601 formatted point in time when Atlas created the restore job.
 Type of restore job to create. Possible values are: automated and download.
 
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotRestoreJobsResult-deliveryUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L714">property <b>deliveryUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L704">property <b>deliveryUrls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryUrls: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1565,7 +1555,7 @@ Type of restore job to create. Possible values are: automated and download.
 One or more URLs for the compressed snapshot files for manual download. Only visible if deliveryType is download.
 
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotRestoreJobsResult-expired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L718">property <b>expired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L708">property <b>expired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expired: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1573,7 +1563,7 @@ One or more URLs for the compressed snapshot files for manual download. Only vis
 Indicates whether the restore job expired.
 
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotRestoreJobsResult-expiresAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L722">property <b>expiresAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L712">property <b>expiresAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiresAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1581,7 +1571,7 @@ Indicates whether the restore job expired.
 UTC ISO 8601 formatted point in time when the restore job expires.
 
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotRestoreJobsResult-finishedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L726">property <b>finishedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L716">property <b>finishedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>finishedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1589,7 +1579,7 @@ UTC ISO 8601 formatted point in time when the restore job expires.
 UTC ISO 8601 formatted point in time when the restore job completed.
 
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotRestoreJobsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L730">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L720">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1597,22 +1587,22 @@ UTC ISO 8601 formatted point in time when the restore job completed.
 The unique identifier of the restore job.
 
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotRestoreJobsResult-oplogInc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L731">property <b>oplogInc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L721">property <b>oplogInc</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oplogInc: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotRestoreJobsResult-oplogTs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L732">property <b>oplogTs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L722">property <b>oplogTs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oplogTs: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotRestoreJobsResult-pointInTimeUtcSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L733">property <b>pointInTimeUtcSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L723">property <b>pointInTimeUtcSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pointInTimeUtcSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotRestoreJobsResult-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L737">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L727">property <b>snapshotId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1620,7 +1610,7 @@ The unique identifier of the restore job.
 Unique identifier of the source snapshot ID of the restore job.
 
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotRestoreJobsResult-targetClusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L741">property <b>targetClusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L731">property <b>targetClusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetClusterName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1628,12 +1618,12 @@ Unique identifier of the source snapshot ID of the restore job.
 Name of the target Atlas cluster to which the restore job restores the snapshot. Only visible if deliveryType is automated.
 
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotRestoreJobsResult-targetProjectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L742">property <b>targetProjectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L732">property <b>targetProjectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetProjectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotRestoreJobsResult-timestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L746">property <b>timestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L736">property <b>timestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestamp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1641,14 +1631,14 @@ Name of the target Atlas cluster to which the restore job restores the snapshot.
 Timestamp in ISO 8601 date and time format in UTC when the snapshot associated to snapshotId was taken.
 
 <h3 class="pdoc-module-header" id="GetCloudProviderSnapshotsResult" data-link-title="GetCloudProviderSnapshotsResult">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L749">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L739">
         interface <strong>GetCloudProviderSnapshotsResult</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCloudProviderSnapshotsResult</span></code></pre>
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotsResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L753">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L743">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1656,7 +1646,7 @@ Timestamp in ISO 8601 date and time format in UTC when the snapshot associated t
 UTC ISO 8601 formatted point in time when Atlas took the snapshot.
 
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotsResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L757">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L747">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1664,7 +1654,7 @@ UTC ISO 8601 formatted point in time when Atlas took the snapshot.
 UDescription of the snapshot. Only present for on-demand snapshots.
 
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotsResult-expiresAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L761">property <b>expiresAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L751">property <b>expiresAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiresAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1672,7 +1662,7 @@ UDescription of the snapshot. Only present for on-demand snapshots.
 UTC ISO 8601 formatted point in time when Atlas will delete the snapshot.
 
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L765">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L755">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1680,7 +1670,7 @@ UTC ISO 8601 formatted point in time when Atlas will delete the snapshot.
 Unique identifier of the snapshot.
 
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotsResult-masterKeyUuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L769">property <b>masterKeyUuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L759">property <b>masterKeyUuid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterKeyUuid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1688,7 +1678,7 @@ Unique identifier of the snapshot.
 Unique ID of the AWS KMS Customer Master Key used to encrypt the snapshot. Only visible for clusters using Encryption at Rest via Customer KMS.
 
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotsResult-mongodVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L773">property <b>mongodVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L763">property <b>mongodVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mongodVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1696,7 +1686,7 @@ Unique ID of the AWS KMS Customer Master Key used to encrypt the snapshot. Only 
 Version of the MongoDB server.
 
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotsResult-snapshotType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L777">property <b>snapshotType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L767">property <b>snapshotType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1704,7 +1694,7 @@ Version of the MongoDB server.
 Specified the type of snapshot. Valid values are onDemand and scheduled.
 
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotsResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L781">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L771">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1712,7 +1702,7 @@ Specified the type of snapshot. Valid values are onDemand and scheduled.
 Current status of the snapshot. One of the following values: queued, inProgress, completed, failed.
 
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotsResult-storageSizeBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L785">property <b>storageSizeBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L775">property <b>storageSizeBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageSizeBytes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1720,7 +1710,7 @@ Current status of the snapshot. One of the following values: queued, inProgress,
 Specifies the size of the snapshot in bytes.
 
 <h4 class="pdoc-member-header" id="GetCloudProviderSnapshotsResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L789">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L779">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1728,14 +1718,14 @@ Specifies the size of the snapshot in bytes.
 Specifies the type of cluster: replicaSet or shardedCluster.
 
 <h3 class="pdoc-module-header" id="GetClusterBiConnector" data-link-title="GetClusterBiConnector">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L792">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L782">
         interface <strong>GetClusterBiConnector</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClusterBiConnector</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClusterBiConnector-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L796">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L786">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1743,7 +1733,7 @@ Specifies the type of cluster: replicaSet or shardedCluster.
 Indicates whether or not BI Connector for Atlas is enabled on the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterBiConnector-readPreference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L800">property <b>readPreference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L790">property <b>readPreference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readPreference: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1751,51 +1741,51 @@ Indicates whether or not BI Connector for Atlas is enabled on the cluster.
 Indicates the read preference to be used by BI Connector for Atlas on the cluster. Each BI Connector for Atlas read preference contains a distinct combination of [readPreference](https://docs.mongodb.com/manual/core/read-preference/) and [readPreferenceTags](https://docs.mongodb.com/manual/core/read-preference/#tag-sets) options. For details on BI Connector for Atlas read preferences, refer to the [BI Connector Read Preferences Table](https://docs.atlas.mongodb.com/tutorial/create-global-writes-cluster/#bic-read-preferences).
 
 <h3 class="pdoc-module-header" id="GetClusterConnectionStrings" data-link-title="GetClusterConnectionStrings">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L803">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L793">
         interface <strong>GetClusterConnectionStrings</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClusterConnectionStrings</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClusterConnectionStrings-awsPrivateLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L804">property <b>awsPrivateLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L794">property <b>awsPrivateLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsPrivateLink: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterConnectionStrings-awsPrivateLinkSrv">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L805">property <b>awsPrivateLinkSrv</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L795">property <b>awsPrivateLinkSrv</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsPrivateLinkSrv: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterConnectionStrings-private">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L806">property <b>private</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L796">property <b>private</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>private: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterConnectionStrings-privateSrv">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L807">property <b>privateSrv</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L797">property <b>privateSrv</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateSrv: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterConnectionStrings-standard">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L808">property <b>standard</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L798">property <b>standard</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>standard: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterConnectionStrings-standardSrv">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L809">property <b>standardSrv</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L799">property <b>standardSrv</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>standardSrv: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetClusterLabel" data-link-title="GetClusterLabel">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L812">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L802">
         interface <strong>GetClusterLabel</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClusterLabel</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClusterLabel-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L816">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L806">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1803,7 +1793,7 @@ Indicates the read preference to be used by BI Connector for Atlas on the cluste
 The key that was set.
 
 <h4 class="pdoc-member-header" id="GetClusterLabel-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L820">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L810">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1811,14 +1801,14 @@ The key that was set.
 The value that represents the key.
 
 <h3 class="pdoc-module-header" id="GetClusterReplicationSpec" data-link-title="GetClusterReplicationSpec">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L823">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L813">
         interface <strong>GetClusterReplicationSpec</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClusterReplicationSpec</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClusterReplicationSpec-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L827">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L817">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1826,7 +1816,7 @@ The value that represents the key.
 Unique identifer of the replication document for a zone in a Global Cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterReplicationSpec-numShards">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L831">property <b>numShards</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L821">property <b>numShards</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numShards: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1834,7 +1824,7 @@ Unique identifer of the replication document for a zone in a Global Cluster.
 Number of shards to deploy in the specified zone.
 
 <h4 class="pdoc-member-header" id="GetClusterReplicationSpec-regionsConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L835">property <b>regionsConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L825">property <b>regionsConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regionsConfigs: <a href='#GetClusterReplicationSpecRegionsConfig'>GetClusterReplicationSpecRegionsConfig</a>[];</code></pre>
@@ -1842,7 +1832,7 @@ Number of shards to deploy in the specified zone.
 Describes the physical location of the region. Each regionsConfig document describes the region’s priority in elections and the number and type of MongoDB nodes Atlas deploys to the region. You must order each regionsConfigs document by regionsConfig.priority, descending. See Region Config below for more details.
 
 <h4 class="pdoc-member-header" id="GetClusterReplicationSpec-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L839">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L829">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1850,14 +1840,14 @@ Describes the physical location of the region. Each regionsConfig document descr
 Indicates the n ame for the zone in a Global Cluster.
 
 <h3 class="pdoc-module-header" id="GetClusterReplicationSpecRegionsConfig" data-link-title="GetClusterReplicationSpecRegionsConfig">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L842">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L832">
         interface <strong>GetClusterReplicationSpecRegionsConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClusterReplicationSpecRegionsConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClusterReplicationSpecRegionsConfig-analyticsNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L846">property <b>analyticsNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L836">property <b>analyticsNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>analyticsNodes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1865,7 +1855,7 @@ Indicates the n ame for the zone in a Global Cluster.
 Indicates the number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary.
 
 <h4 class="pdoc-member-header" id="GetClusterReplicationSpecRegionsConfig-electableNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L850">property <b>electableNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L840">property <b>electableNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>electableNodes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1873,7 +1863,7 @@ Indicates the number of analytics nodes for Atlas to deploy to the region. Analy
 Number of electable nodes for Atlas to deploy to the region.
 
 <h4 class="pdoc-member-header" id="GetClusterReplicationSpecRegionsConfig-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L854">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L844">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1881,7 +1871,7 @@ Number of electable nodes for Atlas to deploy to the region.
 Election priority of the region. For regions with only read-only nodes, set this value to 0.
 
 <h4 class="pdoc-member-header" id="GetClusterReplicationSpecRegionsConfig-readOnlyNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L858">property <b>readOnlyNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L848">property <b>readOnlyNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readOnlyNodes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1889,7 +1879,7 @@ Election priority of the region. For regions with only read-only nodes, set this
 Number of read-only nodes for Atlas to deploy to the region. Read-only nodes can never become the primary, but can facilitate local-reads. Specify 0 if you do not want any read-only nodes in the region.
 
 <h4 class="pdoc-member-header" id="GetClusterReplicationSpecRegionsConfig-regionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L862">property <b>regionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L852">property <b>regionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1897,61 +1887,61 @@ Number of read-only nodes for Atlas to deploy to the region. Read-only nodes can
 Name for the region specified.
 
 <h3 class="pdoc-module-header" id="GetClusterSnapshotBackupPolicy" data-link-title="GetClusterSnapshotBackupPolicy">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L865">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L855">
         interface <strong>GetClusterSnapshotBackupPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClusterSnapshotBackupPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClusterSnapshotBackupPolicy-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L866">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L856">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterSnapshotBackupPolicy-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L867">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L857">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterSnapshotBackupPolicy-nextSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L868">property <b>nextSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L858">property <b>nextSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nextSnapshot: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterSnapshotBackupPolicy-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L869">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L859">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies: <a href='#GetClusterSnapshotBackupPolicyPolicy'>GetClusterSnapshotBackupPolicyPolicy</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterSnapshotBackupPolicy-referenceHourOfDay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L870">property <b>referenceHourOfDay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L860">property <b>referenceHourOfDay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>referenceHourOfDay: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterSnapshotBackupPolicy-referenceMinuteOfHour">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L871">property <b>referenceMinuteOfHour</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L861">property <b>referenceMinuteOfHour</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>referenceMinuteOfHour: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterSnapshotBackupPolicy-restoreWindowDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L872">property <b>restoreWindowDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L862">property <b>restoreWindowDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restoreWindowDays: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterSnapshotBackupPolicy-updateSnapshots">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L873">property <b>updateSnapshots</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L863">property <b>updateSnapshots</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateSnapshots: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetClusterSnapshotBackupPolicyPolicy" data-link-title="GetClusterSnapshotBackupPolicyPolicy">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L876">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L866">
         interface <strong>GetClusterSnapshotBackupPolicyPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClusterSnapshotBackupPolicyPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClusterSnapshotBackupPolicyPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L880">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L870">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1959,29 +1949,29 @@ Name for the region specified.
 Unique identifer of the replication document for a zone in a Global Cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotBackupPolicyPolicy-policyItems">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L881">property <b>policyItems</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L871">property <b>policyItems</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyItems: <a href='#GetClusterSnapshotBackupPolicyPolicyPolicyItem'>GetClusterSnapshotBackupPolicyPolicyPolicyItem</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetClusterSnapshotBackupPolicyPolicyPolicyItem" data-link-title="GetClusterSnapshotBackupPolicyPolicyPolicyItem">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L884">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L874">
         interface <strong>GetClusterSnapshotBackupPolicyPolicyPolicyItem</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClusterSnapshotBackupPolicyPolicyPolicyItem</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClusterSnapshotBackupPolicyPolicyPolicyItem-frequencyInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L885">property <b>frequencyInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L875">property <b>frequencyInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequencyInterval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterSnapshotBackupPolicyPolicyPolicyItem-frequencyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L886">property <b>frequencyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L876">property <b>frequencyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequencyType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterSnapshotBackupPolicyPolicyPolicyItem-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L890">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L880">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1989,24 +1979,24 @@ Unique identifer of the replication document for a zone in a Global Cluster.
 Unique identifer of the replication document for a zone in a Global Cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotBackupPolicyPolicyPolicyItem-retentionUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L891">property <b>retentionUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L881">property <b>retentionUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionUnit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterSnapshotBackupPolicyPolicyPolicyItem-retentionValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L892">property <b>retentionValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L882">property <b>retentionValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetClustersResult" data-link-title="GetClustersResult">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L895">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L885">
         interface <strong>GetClustersResult</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClustersResult</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResult-autoScalingComputeEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L899">property <b>autoScalingComputeEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L889">property <b>autoScalingComputeEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoScalingComputeEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2014,7 +2004,7 @@ Unique identifer of the replication document for a zone in a Global Cluster.
 (Optional) Specifies whether cluster tier auto-scaling is enabled. The default is false.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-autoScalingComputeScaleDownEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L903">property <b>autoScalingComputeScaleDownEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L893">property <b>autoScalingComputeScaleDownEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoScalingComputeScaleDownEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2022,7 +2012,7 @@ Unique identifer of the replication document for a zone in a Global Cluster.
 (Optional) Set to `true` to enable the cluster tier to scale down.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-autoScalingDiskGbEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L907">property <b>autoScalingDiskGbEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L897">property <b>autoScalingDiskGbEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoScalingDiskGbEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2030,7 +2020,7 @@ Unique identifer of the replication document for a zone in a Global Cluster.
 Indicates whether disk auto-scaling is enabled.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-backingProviderName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L911">property <b>backingProviderName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L901">property <b>backingProviderName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backingProviderName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2038,7 +2028,7 @@ Indicates whether disk auto-scaling is enabled.
 Indicates Cloud service provider on which the server for a multi-tenant cluster is provisioned.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-backupEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L915">property <b>backupEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L905">property <b>backupEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2046,7 +2036,7 @@ Indicates Cloud service provider on which the server for a multi-tenant cluster 
 Legacy Option, Indicates whether Atlas continuous backups are enabled for the cluster.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-biConnector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L919">property <b>biConnector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L909">property <b>biConnector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>biConnector: <a href='#GetClustersResultBiConnector'>GetClustersResultBiConnector</a>;</code></pre>
@@ -2054,7 +2044,7 @@ Legacy Option, Indicates whether Atlas continuous backups are enabled for the cl
 Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L923">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L913">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2062,7 +2052,7 @@ Indicates BI Connector for Atlas configuration on this cluster. BI Connector for
 Indicates the type of the cluster that you want to modify. You cannot convert a sharded cluster deployment to a replica set deployment.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L933">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L923">property <b>connectionStrings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionStrings: <a href='#GetClustersResultConnectionStrings'>GetClustersResultConnectionStrings</a>;</code></pre>
@@ -2076,7 +2066,7 @@ Set of connection strings that your applications use to connect to this cluster.
 - `connection_strings.private_srv` -  [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-containerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L937">property <b>containerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L927">property <b>containerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2084,7 +2074,7 @@ Set of connection strings that your applications use to connect to this cluster.
 The Network Peering Container ID.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-diskSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L941">property <b>diskSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L931">property <b>diskSizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskSizeGb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2092,7 +2082,7 @@ The Network Peering Container ID.
 Indicates the size in gigabytes of the server’s root volume (AWS/GCP Only).
 
 <h4 class="pdoc-member-header" id="GetClustersResult-encryptionAtRestProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L945">property <b>encryptionAtRestProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L935">property <b>encryptionAtRestProvider</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptionAtRestProvider: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2100,12 +2090,12 @@ Indicates the size in gigabytes of the server’s root volume (AWS/GCP Only).
 Indicates whether Encryption at Rest is enabled or disabled.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L946">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L936">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels: <a href='#GetClustersResultLabel'>GetClustersResultLabel</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResult-mongoDbMajorVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L950">property <b>mongoDbMajorVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L940">property <b>mongoDbMajorVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mongoDbMajorVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2113,7 +2103,7 @@ Indicates whether Encryption at Rest is enabled or disabled.
 Indicates the version of the cluster to deploy.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-mongoDbVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L954">property <b>mongoDbVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L944">property <b>mongoDbVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mongoDbVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2121,7 +2111,7 @@ Indicates the version of the cluster to deploy.
 Version of MongoDB the cluster runs, in `major-version`.`minor-version` format.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-mongoUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L958">property <b>mongoUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L948">property <b>mongoUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mongoUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2129,7 +2119,7 @@ Version of MongoDB the cluster runs, in `major-version`.`minor-version` format.
 Base connection string for the cluster. Atlas only displays this field after the cluster is operational, not while it builds the cluster.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-mongoUriUpdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L962">property <b>mongoUriUpdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L952">property <b>mongoUriUpdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mongoUriUpdated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2137,7 +2127,7 @@ Base connection string for the cluster. Atlas only displays this field after the
 Lists when the connection string was last updated. The connection string changes, for example, if you change a replica set to a sharded cluster.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-mongoUriWithOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L966">property <b>mongoUriWithOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L956">property <b>mongoUriWithOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mongoUriWithOptions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2145,7 +2135,7 @@ Lists when the connection string was last updated. The connection string changes
 Describes connection string for connecting to the Atlas cluster. Includes the replicaSet, ssl, and authSource query parameters in the connection string with values appropriate for the cluster.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L970">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L960">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2153,7 +2143,7 @@ Describes connection string for connecting to the Atlas cluster. Includes the re
 The name of the current plugin
 
 <h4 class="pdoc-member-header" id="GetClustersResult-numShards">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L974">property <b>numShards</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L964">property <b>numShards</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numShards: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2161,7 +2151,7 @@ The name of the current plugin
 Number of shards to deploy in the specified zone.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-paused">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L978">property <b>paused</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L968">property <b>paused</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>paused: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2169,7 +2159,7 @@ Number of shards to deploy in the specified zone.
 Flag that indicates whether the cluster is paused or not.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-pitEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L982">property <b>pitEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L972">property <b>pitEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pitEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2177,7 +2167,7 @@ Flag that indicates whether the cluster is paused or not.
 Flag that indicates if the cluster uses Continuous Cloud Backup.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-providerAutoScalingComputeMaxInstanceSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L986">property <b>providerAutoScalingComputeMaxInstanceSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L976">property <b>providerAutoScalingComputeMaxInstanceSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerAutoScalingComputeMaxInstanceSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2185,7 +2175,7 @@ Flag that indicates if the cluster uses Continuous Cloud Backup.
 (Optional) Maximum instance size to which your cluster can automatically scale.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-providerAutoScalingComputeMinInstanceSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L990">property <b>providerAutoScalingComputeMinInstanceSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L980">property <b>providerAutoScalingComputeMinInstanceSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerAutoScalingComputeMinInstanceSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2193,7 +2183,7 @@ Flag that indicates if the cluster uses Continuous Cloud Backup.
 (Optional) Minimum instance size to which your cluster can automatically scale.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-providerBackupEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L994">property <b>providerBackupEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L984">property <b>providerBackupEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerBackupEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2201,7 +2191,7 @@ Flag that indicates if the cluster uses Continuous Cloud Backup.
 Flag indicating if the cluster uses Cloud Backup Snapshots for backups.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-providerDiskIops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L998">property <b>providerDiskIops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L988">property <b>providerDiskIops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerDiskIops: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2209,7 +2199,7 @@ Flag indicating if the cluster uses Cloud Backup Snapshots for backups.
 Indicates the maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected providerSettings.instanceSizeName and diskSizeGB.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-providerDiskTypeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1002">property <b>providerDiskTypeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L992">property <b>providerDiskTypeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerDiskTypeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2217,7 +2207,7 @@ Indicates the maximum input/output operations per second (IOPS) the system can p
 Describes Azure disk type of the server’s root volume (Azure Only).
 
 <h4 class="pdoc-member-header" id="GetClustersResult-providerEncryptEbsVolume">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1006">property <b>providerEncryptEbsVolume</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L996">property <b>providerEncryptEbsVolume</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerEncryptEbsVolume: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2225,7 +2215,7 @@ Describes Azure disk type of the server’s root volume (Azure Only).
 Indicates whether the Amazon EBS encryption is enabled. This feature encrypts the server’s root volume for both data at rest within the volume and data moving between the volume and the instance.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-providerInstanceSizeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1010">property <b>providerInstanceSizeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1000">property <b>providerInstanceSizeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerInstanceSizeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2233,7 +2223,7 @@ Indicates whether the Amazon EBS encryption is enabled. This feature encrypts th
 Atlas provides different instance sizes, each with a default storage capacity and RAM size.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-providerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1014">property <b>providerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1004">property <b>providerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2241,7 +2231,7 @@ Atlas provides different instance sizes, each with a default storage capacity an
 Indicates the cloud service provider on which the servers are provisioned.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-providerRegionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1018">property <b>providerRegionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1008">property <b>providerRegionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerRegionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2249,7 +2239,7 @@ Indicates the cloud service provider on which the servers are provisioned.
 Indicates Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases. Requires the Atlas Region name, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 
 <h4 class="pdoc-member-header" id="GetClustersResult-providerVolumeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1022">property <b>providerVolumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1012">property <b>providerVolumeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerVolumeType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2257,7 +2247,7 @@ Indicates Physical location of your MongoDB cluster. The region you choose can a
 Indicates the type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-replicationFactor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1026">property <b>replicationFactor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1016">property <b>replicationFactor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationFactor: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2265,7 +2255,7 @@ Indicates the type of the volume. The possible values are: `STANDARD` and `PROVI
 Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-replicationSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1030">property <b>replicationSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1020">property <b>replicationSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationSpecs: <a href='#GetClustersResultReplicationSpec'>GetClustersResultReplicationSpec</a>[];</code></pre>
@@ -2273,7 +2263,7 @@ Number of replica set members. Each member keeps a copy of your databases, provi
 Configuration for cluster regions.  See Replication Spec below for more details.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-snapshotBackupPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1034">property <b>snapshotBackupPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1024">property <b>snapshotBackupPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotBackupPolicies: <a href='#GetClustersResultSnapshotBackupPolicy'>GetClustersResultSnapshotBackupPolicy</a>[];</code></pre>
@@ -2281,7 +2271,7 @@ Configuration for cluster regions.  See Replication Spec below for more details.
 current snapshot schedule and retention settings for the cluster.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-srvAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1038">property <b>srvAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1028">property <b>srvAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>srvAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2289,7 +2279,7 @@ current snapshot schedule and retention settings for the cluster.
 Connection string for connecting to the Atlas cluster. The +srv modifier forces the connection to use TLS/SSL. See the mongoURI for additional options.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-stateName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1048">property <b>stateName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1038">property <b>stateName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stateName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2303,14 +2293,14 @@ Indicates the current state of the cluster. The possible states are:
 - REPAIRING
 
 <h3 class="pdoc-module-header" id="GetClustersResultBiConnector" data-link-title="GetClustersResultBiConnector">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1051">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1041">
         interface <strong>GetClustersResultBiConnector</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClustersResultBiConnector</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultBiConnector-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1055">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1045">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2318,7 +2308,7 @@ Indicates the current state of the cluster. The possible states are:
 Indicates whether or not BI Connector for Atlas is enabled on the cluster.
 
 <h4 class="pdoc-member-header" id="GetClustersResultBiConnector-readPreference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1059">property <b>readPreference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1049">property <b>readPreference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readPreference: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2326,51 +2316,51 @@ Indicates whether or not BI Connector for Atlas is enabled on the cluster.
 Indicates the read preference to be used by BI Connector for Atlas on the cluster. Each BI Connector for Atlas read preference contains a distinct combination of [readPreference](https://docs.mongodb.com/manual/core/read-preference/) and [readPreferenceTags](https://docs.mongodb.com/manual/core/read-preference/#tag-sets) options. For details on BI Connector for Atlas read preferences, refer to the [BI Connector Read Preferences Table](https://docs.atlas.mongodb.com/tutorial/create-global-writes-cluster/#bic-read-preferences).
 
 <h3 class="pdoc-module-header" id="GetClustersResultConnectionStrings" data-link-title="GetClustersResultConnectionStrings">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1062">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1052">
         interface <strong>GetClustersResultConnectionStrings</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClustersResultConnectionStrings</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultConnectionStrings-awsPrivateLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1063">property <b>awsPrivateLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1053">property <b>awsPrivateLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsPrivateLink: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultConnectionStrings-awsPrivateLinkSrv">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1064">property <b>awsPrivateLinkSrv</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1054">property <b>awsPrivateLinkSrv</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsPrivateLinkSrv: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultConnectionStrings-private">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1065">property <b>private</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1055">property <b>private</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>private: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultConnectionStrings-privateSrv">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1066">property <b>privateSrv</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1056">property <b>privateSrv</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateSrv: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultConnectionStrings-standard">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1067">property <b>standard</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1057">property <b>standard</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>standard: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultConnectionStrings-standardSrv">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1068">property <b>standardSrv</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1058">property <b>standardSrv</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>standardSrv: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetClustersResultLabel" data-link-title="GetClustersResultLabel">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1071">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1061">
         interface <strong>GetClustersResultLabel</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClustersResultLabel</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultLabel-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1075">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1065">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2378,7 +2368,7 @@ Indicates the read preference to be used by BI Connector for Atlas on the cluste
 The key that was set.
 
 <h4 class="pdoc-member-header" id="GetClustersResultLabel-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1079">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1069">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2386,14 +2376,14 @@ The key that was set.
 The value that represents the key.
 
 <h3 class="pdoc-module-header" id="GetClustersResultReplicationSpec" data-link-title="GetClustersResultReplicationSpec">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1082">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1072">
         interface <strong>GetClustersResultReplicationSpec</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClustersResultReplicationSpec</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultReplicationSpec-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1086">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1076">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2401,7 +2391,7 @@ The value that represents the key.
 Unique identifer of the replication document for a zone in a Global Cluster.
 
 <h4 class="pdoc-member-header" id="GetClustersResultReplicationSpec-numShards">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1090">property <b>numShards</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1080">property <b>numShards</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numShards: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2409,7 +2399,7 @@ Unique identifer of the replication document for a zone in a Global Cluster.
 Number of shards to deploy in the specified zone.
 
 <h4 class="pdoc-member-header" id="GetClustersResultReplicationSpec-regionsConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1094">property <b>regionsConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1084">property <b>regionsConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regionsConfigs: <a href='#GetClustersResultReplicationSpecRegionsConfig'>GetClustersResultReplicationSpecRegionsConfig</a>[];</code></pre>
@@ -2417,7 +2407,7 @@ Number of shards to deploy in the specified zone.
 Describes the physical location of the region. Each regionsConfig document describes the region’s priority in elections and the number and type of MongoDB nodes Atlas deploys to the region. You must order each regionsConfigs document by regionsConfig.priority, descending. See Region Config below for more details.
 
 <h4 class="pdoc-member-header" id="GetClustersResultReplicationSpec-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1098">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1088">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2425,14 +2415,14 @@ Describes the physical location of the region. Each regionsConfig document descr
 Indicates the n ame for the zone in a Global Cluster.
 
 <h3 class="pdoc-module-header" id="GetClustersResultReplicationSpecRegionsConfig" data-link-title="GetClustersResultReplicationSpecRegionsConfig">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1101">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1091">
         interface <strong>GetClustersResultReplicationSpecRegionsConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClustersResultReplicationSpecRegionsConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultReplicationSpecRegionsConfig-analyticsNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1105">property <b>analyticsNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1095">property <b>analyticsNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>analyticsNodes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2440,7 +2430,7 @@ Indicates the n ame for the zone in a Global Cluster.
 Indicates the number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary.
 
 <h4 class="pdoc-member-header" id="GetClustersResultReplicationSpecRegionsConfig-electableNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1109">property <b>electableNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1099">property <b>electableNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>electableNodes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2448,7 +2438,7 @@ Indicates the number of analytics nodes for Atlas to deploy to the region. Analy
 Number of electable nodes for Atlas to deploy to the region.
 
 <h4 class="pdoc-member-header" id="GetClustersResultReplicationSpecRegionsConfig-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1113">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1103">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2456,7 +2446,7 @@ Number of electable nodes for Atlas to deploy to the region.
 Election priority of the region. For regions with only read-only nodes, set this value to 0.
 
 <h4 class="pdoc-member-header" id="GetClustersResultReplicationSpecRegionsConfig-readOnlyNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1117">property <b>readOnlyNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1107">property <b>readOnlyNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readOnlyNodes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2464,7 +2454,7 @@ Election priority of the region. For regions with only read-only nodes, set this
 Number of read-only nodes for Atlas to deploy to the region. Read-only nodes can never become the primary, but can facilitate local-reads. Specify 0 if you do not want any read-only nodes in the region.
 
 <h4 class="pdoc-member-header" id="GetClustersResultReplicationSpecRegionsConfig-regionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1121">property <b>regionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1111">property <b>regionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2472,61 +2462,61 @@ Number of read-only nodes for Atlas to deploy to the region. Read-only nodes can
 Name for the region specified.
 
 <h3 class="pdoc-module-header" id="GetClustersResultSnapshotBackupPolicy" data-link-title="GetClustersResultSnapshotBackupPolicy">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1124">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1114">
         interface <strong>GetClustersResultSnapshotBackupPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClustersResultSnapshotBackupPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultSnapshotBackupPolicy-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1125">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1115">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultSnapshotBackupPolicy-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1126">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1116">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultSnapshotBackupPolicy-nextSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1127">property <b>nextSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1117">property <b>nextSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nextSnapshot: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultSnapshotBackupPolicy-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1128">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1118">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies: <a href='#GetClustersResultSnapshotBackupPolicyPolicy'>GetClustersResultSnapshotBackupPolicyPolicy</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultSnapshotBackupPolicy-referenceHourOfDay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1129">property <b>referenceHourOfDay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1119">property <b>referenceHourOfDay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>referenceHourOfDay: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultSnapshotBackupPolicy-referenceMinuteOfHour">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1130">property <b>referenceMinuteOfHour</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1120">property <b>referenceMinuteOfHour</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>referenceMinuteOfHour: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultSnapshotBackupPolicy-restoreWindowDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1131">property <b>restoreWindowDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1121">property <b>restoreWindowDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restoreWindowDays: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultSnapshotBackupPolicy-updateSnapshots">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1132">property <b>updateSnapshots</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1122">property <b>updateSnapshots</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateSnapshots: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetClustersResultSnapshotBackupPolicyPolicy" data-link-title="GetClustersResultSnapshotBackupPolicyPolicy">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1135">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1125">
         interface <strong>GetClustersResultSnapshotBackupPolicyPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClustersResultSnapshotBackupPolicyPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultSnapshotBackupPolicyPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1139">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1129">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2534,29 +2524,29 @@ Name for the region specified.
 Unique identifer of the replication document for a zone in a Global Cluster.
 
 <h4 class="pdoc-member-header" id="GetClustersResultSnapshotBackupPolicyPolicy-policyItems">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1140">property <b>policyItems</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1130">property <b>policyItems</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyItems: <a href='#GetClustersResultSnapshotBackupPolicyPolicyPolicyItem'>GetClustersResultSnapshotBackupPolicyPolicyPolicyItem</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetClustersResultSnapshotBackupPolicyPolicyPolicyItem" data-link-title="GetClustersResultSnapshotBackupPolicyPolicyPolicyItem">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1143">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1133">
         interface <strong>GetClustersResultSnapshotBackupPolicyPolicyPolicyItem</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClustersResultSnapshotBackupPolicyPolicyPolicyItem</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultSnapshotBackupPolicyPolicyPolicyItem-frequencyInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1144">property <b>frequencyInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1134">property <b>frequencyInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequencyInterval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultSnapshotBackupPolicyPolicyPolicyItem-frequencyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1145">property <b>frequencyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1135">property <b>frequencyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequencyType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultSnapshotBackupPolicyPolicyPolicyItem-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1149">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1139">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2564,24 +2554,24 @@ Unique identifer of the replication document for a zone in a Global Cluster.
 Unique identifer of the replication document for a zone in a Global Cluster.
 
 <h4 class="pdoc-member-header" id="GetClustersResultSnapshotBackupPolicyPolicyPolicyItem-retentionUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1150">property <b>retentionUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1140">property <b>retentionUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionUnit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResultSnapshotBackupPolicyPolicyPolicyItem-retentionValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1151">property <b>retentionValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1141">property <b>retentionValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetCustomDbRoleAction" data-link-title="GetCustomDbRoleAction">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1154">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1144">
         interface <strong>GetCustomDbRoleAction</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCustomDbRoleAction</span></code></pre>
 <h4 class="pdoc-member-header" id="GetCustomDbRoleAction-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1158">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1148">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2589,7 +2579,7 @@ Unique identifer of the replication document for a zone in a Global Cluster.
 (Required) Name of the privilege action. For a complete list of actions available in the Atlas API, see Custom Role Actions.
 
 <h4 class="pdoc-member-header" id="GetCustomDbRoleAction-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1162">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1152">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources: <a href='#GetCustomDbRoleActionResource'>GetCustomDbRoleActionResource</a>[];</code></pre>
@@ -2597,41 +2587,41 @@ Unique identifer of the replication document for a zone in a Global Cluster.
 (Required) Contains information on where the action is granted. Each object in the array either indicates a database and collection on which the action is granted, or indicates that the action is granted on the cluster resource.
 
 <h3 class="pdoc-module-header" id="GetCustomDbRoleActionResource" data-link-title="GetCustomDbRoleActionResource">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1165">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1155">
         interface <strong>GetCustomDbRoleActionResource</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCustomDbRoleActionResource</span></code></pre>
 <h4 class="pdoc-member-header" id="GetCustomDbRoleActionResource-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1166">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1156">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cluster: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCustomDbRoleActionResource-collectionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1167">property <b>collectionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1157">property <b>collectionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collectionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCustomDbRoleActionResource-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1168">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1158">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetCustomDbRoleInheritedRole" data-link-title="GetCustomDbRoleInheritedRole">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1171">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1161">
         interface <strong>GetCustomDbRoleInheritedRole</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCustomDbRoleInheritedRole</span></code></pre>
 <h4 class="pdoc-member-header" id="GetCustomDbRoleInheritedRole-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1172">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1162">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCustomDbRoleInheritedRole-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1176">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1166">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2639,36 +2629,36 @@ Unique identifer of the replication document for a zone in a Global Cluster.
 Name of the custom role.
 
 <h3 class="pdoc-module-header" id="GetCustomDbRolesResult" data-link-title="GetCustomDbRolesResult">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1179">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1169">
         interface <strong>GetCustomDbRolesResult</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCustomDbRolesResult</span></code></pre>
 <h4 class="pdoc-member-header" id="GetCustomDbRolesResult-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1180">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1170">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actions: <a href='#GetCustomDbRolesResultAction'>GetCustomDbRolesResultAction</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetCustomDbRolesResult-inheritedRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1181">property <b>inheritedRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1171">property <b>inheritedRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inheritedRoles: <a href='#GetCustomDbRolesResultInheritedRole'>GetCustomDbRolesResultInheritedRole</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetCustomDbRolesResult-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1182">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1172">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetCustomDbRolesResultAction" data-link-title="GetCustomDbRolesResultAction">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1185">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1175">
         interface <strong>GetCustomDbRolesResultAction</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCustomDbRolesResultAction</span></code></pre>
 <h4 class="pdoc-member-header" id="GetCustomDbRolesResultAction-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1189">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1179">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2676,7 +2666,7 @@ Name of the custom role.
 (Required) Name of the privilege action. For a complete list of actions available in the Atlas API, see Custom Role Actions.
 
 <h4 class="pdoc-member-header" id="GetCustomDbRolesResultAction-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1193">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1183">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources: <a href='#GetCustomDbRolesResultActionResource'>GetCustomDbRolesResultActionResource</a>[];</code></pre>
@@ -2684,53 +2674,53 @@ Name of the custom role.
 (Required) Contains information on where the action is granted. Each object in the array either indicates a database and collection on which the action is granted, or indicates that the action is granted on the cluster resource.
 
 <h3 class="pdoc-module-header" id="GetCustomDbRolesResultActionResource" data-link-title="GetCustomDbRolesResultActionResource">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1196">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1186">
         interface <strong>GetCustomDbRolesResultActionResource</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCustomDbRolesResultActionResource</span></code></pre>
 <h4 class="pdoc-member-header" id="GetCustomDbRolesResultActionResource-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1197">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1187">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cluster: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCustomDbRolesResultActionResource-collectionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1198">property <b>collectionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1188">property <b>collectionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collectionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCustomDbRolesResultActionResource-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1199">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1189">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetCustomDbRolesResultInheritedRole" data-link-title="GetCustomDbRolesResultInheritedRole">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1202">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1192">
         interface <strong>GetCustomDbRolesResultInheritedRole</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCustomDbRolesResultInheritedRole</span></code></pre>
 <h4 class="pdoc-member-header" id="GetCustomDbRolesResultInheritedRole-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1203">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1193">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCustomDbRolesResultInheritedRole-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1204">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1194">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDatabaseUserLabel" data-link-title="GetDatabaseUserLabel">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1207">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1197">
         interface <strong>GetDatabaseUserLabel</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetDatabaseUserLabel</span></code></pre>
 <h4 class="pdoc-member-header" id="GetDatabaseUserLabel-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1211">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1201">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2738,7 +2728,7 @@ Name of the custom role.
 The key that you want to write.
 
 <h4 class="pdoc-member-header" id="GetDatabaseUserLabel-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1215">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1205">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2746,14 +2736,14 @@ The key that you want to write.
 The value that you want to write.
 
 <h3 class="pdoc-module-header" id="GetDatabaseUserRole" data-link-title="GetDatabaseUserRole">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1218">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1208">
         interface <strong>GetDatabaseUserRole</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetDatabaseUserRole</span></code></pre>
 <h4 class="pdoc-member-header" id="GetDatabaseUserRole-collectionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1222">property <b>collectionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1212">property <b>collectionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collectionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2761,7 +2751,7 @@ The value that you want to write.
 Collection for which the role applies. You can specify a collection for the `read` and `readWrite` roles. If you do not specify a collection for `read` and `readWrite`, the role applies to all collections in the database (excluding some collections in the `system`. database).
 
 <h4 class="pdoc-member-header" id="GetDatabaseUserRole-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1226">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1216">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2769,19 +2759,19 @@ Collection for which the role applies. You can specify a collection for the `rea
 Database on which the user has the specified role. A role on the `admin` database can include privileges that apply to the other databases.
 
 <h4 class="pdoc-member-header" id="GetDatabaseUserRole-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1227">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1217">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDatabaseUsersResult" data-link-title="GetDatabaseUsersResult">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1230">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1220">
         interface <strong>GetDatabaseUsersResult</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetDatabaseUsersResult</span></code></pre>
 <h4 class="pdoc-member-header" id="GetDatabaseUsersResult-authDatabaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1234">property <b>authDatabaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1224">property <b>authDatabaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authDatabaseName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2789,12 +2779,12 @@ Database on which the user has the specified role. A role on the `admin` databas
 The user’s authentication database. A user must provide both a username and authentication database to log into MongoDB. In Atlas deployments of MongoDB, the authentication database is always the admin database.
 
 <h4 class="pdoc-member-header" id="GetDatabaseUsersResult-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1235">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1225">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels: <a href='#GetDatabaseUsersResultLabel'>GetDatabaseUsersResultLabel</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDatabaseUsersResult-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1239">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1229">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2802,7 +2792,7 @@ The user’s authentication database. A user must provide both a username and au
 The unique ID for the project to get all database users.
 
 <h4 class="pdoc-member-header" id="GetDatabaseUsersResult-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1243">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1233">property <b>roles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roles: <a href='#GetDatabaseUsersResultRole'>GetDatabaseUsersResultRole</a>[];</code></pre>
@@ -2810,7 +2800,7 @@ The unique ID for the project to get all database users.
 List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
 
 <h4 class="pdoc-member-header" id="GetDatabaseUsersResult-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1247">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1237">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2818,7 +2808,7 @@ List of user’s roles and the databases / collections on which the roles apply.
 Username for authenticating to MongoDB.
 
 <h4 class="pdoc-member-header" id="GetDatabaseUsersResult-x509Type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1251">property <b>x509Type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1241">property <b>x509Type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>x509Type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2826,14 +2816,14 @@ Username for authenticating to MongoDB.
 X.509 method by which the provided username is authenticated.
 
 <h3 class="pdoc-module-header" id="GetDatabaseUsersResultLabel" data-link-title="GetDatabaseUsersResultLabel">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1254">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1244">
         interface <strong>GetDatabaseUsersResultLabel</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetDatabaseUsersResultLabel</span></code></pre>
 <h4 class="pdoc-member-header" id="GetDatabaseUsersResultLabel-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1258">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1248">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2841,7 +2831,7 @@ X.509 method by which the provided username is authenticated.
 The key that you want to write.
 
 <h4 class="pdoc-member-header" id="GetDatabaseUsersResultLabel-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1262">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1252">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2849,14 +2839,14 @@ The key that you want to write.
 The value that you want to write.
 
 <h3 class="pdoc-module-header" id="GetDatabaseUsersResultRole" data-link-title="GetDatabaseUsersResultRole">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1265">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1255">
         interface <strong>GetDatabaseUsersResultRole</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetDatabaseUsersResultRole</span></code></pre>
 <h4 class="pdoc-member-header" id="GetDatabaseUsersResultRole-collectionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1269">property <b>collectionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1259">property <b>collectionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collectionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2864,7 +2854,7 @@ The value that you want to write.
 Collection for which the role applies. You can specify a collection for the `read` and `readWrite` roles. If you do not specify a collection for `read` and `readWrite`, the role applies to all collections in the database (excluding some collections in the `system`. database).
 
 <h4 class="pdoc-member-header" id="GetDatabaseUsersResultRole-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1273">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1263">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2872,19 +2862,19 @@ Collection for which the role applies. You can specify a collection for the `rea
 Database on which the user has the specified role. A role on the `admin` database can include privileges that apply to the other databases.
 
 <h4 class="pdoc-member-header" id="GetDatabaseUsersResultRole-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1274">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1264">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetGlobalClusterConfigManagedNamespace" data-link-title="GetGlobalClusterConfigManagedNamespace">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1277">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1267">
         interface <strong>GetGlobalClusterConfigManagedNamespace</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetGlobalClusterConfigManagedNamespace</span></code></pre>
 <h4 class="pdoc-member-header" id="GetGlobalClusterConfigManagedNamespace-collection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1281">property <b>collection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1271">property <b>collection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collection: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2892,7 +2882,7 @@ Database on which the user has the specified role. A role on the `admin` databas
 (Required) The name of the collection associated with the managed namespace.
 
 <h4 class="pdoc-member-header" id="GetGlobalClusterConfigManagedNamespace-customShardKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1285">property <b>customShardKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1275">property <b>customShardKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customShardKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2900,7 +2890,7 @@ Database on which the user has the specified role. A role on the `admin` databas
 (Required)	The custom shard key for the collection. Global Clusters require a compound shard key consisting of a location field and a user-selected second key, the custom shard key.
 
 <h4 class="pdoc-member-header" id="GetGlobalClusterConfigManagedNamespace-db">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1289">property <b>db</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1279">property <b>db</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>db: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2908,14 +2898,14 @@ Database on which the user has the specified role. A role on the `admin` databas
 (Required) The name of the database containing the collection.
 
 <h3 class="pdoc-module-header" id="GetNetworkContainersResult" data-link-title="GetNetworkContainersResult">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1292">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1282">
         interface <strong>GetNetworkContainersResult</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetNetworkContainersResult</span></code></pre>
 <h4 class="pdoc-member-header" id="GetNetworkContainersResult-atlasCidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1296">property <b>atlasCidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1286">property <b>atlasCidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>atlasCidrBlock: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2923,7 +2913,7 @@ Database on which the user has the specified role. A role on the `admin` databas
 CIDR block that Atlas uses for your clusters. Atlas uses the specified CIDR block for all other Network Peering connections created in the project. The Atlas CIDR block must be at least a /24 and at most a /21 in one of the following [private networks](https://tools.ietf.org/html/rfc1918.html#section-3).
 
 <h4 class="pdoc-member-header" id="GetNetworkContainersResult-azureSubscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1300">property <b>azureSubscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1290">property <b>azureSubscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureSubscriptionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2931,7 +2921,7 @@ CIDR block that Atlas uses for your clusters. Atlas uses the specified CIDR bloc
 Unique identifer of the Azure subscription in which the VNet resides.
 
 <h4 class="pdoc-member-header" id="GetNetworkContainersResult-gcpProjectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1304">property <b>gcpProjectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1294">property <b>gcpProjectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gcpProjectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2939,7 +2929,7 @@ Unique identifer of the Azure subscription in which the VNet resides.
 Unique identifier of the GCP project in which the Network Peering connection resides.
 
 <h4 class="pdoc-member-header" id="GetNetworkContainersResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1308">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1298">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2947,7 +2937,7 @@ Unique identifier of the GCP project in which the Network Peering connection res
 The Network Peering Container ID.
 
 <h4 class="pdoc-member-header" id="GetNetworkContainersResult-networkName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1312">property <b>networkName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1302">property <b>networkName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2955,7 +2945,7 @@ The Network Peering Container ID.
 Name of the Network Peering connection in the Atlas project.
 
 <h4 class="pdoc-member-header" id="GetNetworkContainersResult-providerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1316">property <b>providerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1306">property <b>providerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2963,7 +2953,7 @@ Name of the Network Peering connection in the Atlas project.
 Cloud provider for this Network peering container. Accepted values are AWS, GCP, and Azure.
 
 <h4 class="pdoc-member-header" id="GetNetworkContainersResult-provisioned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1320">property <b>provisioned</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1310">property <b>provisioned</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>provisioned: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2971,7 +2961,7 @@ Cloud provider for this Network peering container. Accepted values are AWS, GCP,
 Indicates whether the project has Network Peering connections deployed in the container.
 
 <h4 class="pdoc-member-header" id="GetNetworkContainersResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1324">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1314">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2979,7 +2969,7 @@ Indicates whether the project has Network Peering connections deployed in the co
 The Atlas Azure region name for where this container exists.
 
 <h4 class="pdoc-member-header" id="GetNetworkContainersResult-regionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1328">property <b>regionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1318">property <b>regionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2987,7 +2977,7 @@ The Atlas Azure region name for where this container exists.
 The Atlas AWS region name for where this container exists.
 
 <h4 class="pdoc-member-header" id="GetNetworkContainersResult-vnetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1332">property <b>vnetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1322">property <b>vnetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vnetName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2995,7 +2985,7 @@ The Atlas AWS region name for where this container exists.
 The name of the Azure VNet. This value is null until you provision an Azure VNet in the container.
 
 <h4 class="pdoc-member-header" id="GetNetworkContainersResult-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1336">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1326">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3003,14 +2993,14 @@ The name of the Azure VNet. This value is null until you provision an Azure VNet
 Unique identifier of the project’s VPC.
 
 <h3 class="pdoc-module-header" id="GetNetworkPeeringsResult" data-link-title="GetNetworkPeeringsResult">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1339">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1329">
         interface <strong>GetNetworkPeeringsResult</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetNetworkPeeringsResult</span></code></pre>
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-accepterRegionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1343">property <b>accepterRegionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1333">property <b>accepterRegionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accepterRegionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3018,7 +3008,7 @@ Unique identifier of the project’s VPC.
 Specifies the region where the peer VPC resides. For complete lists of supported regions, see [Amazon Web Services](https://docs.atlas.mongodb.com/reference/amazon-aws/).
 
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-atlasCidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1347">property <b>atlasCidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1337">property <b>atlasCidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>atlasCidrBlock: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3026,7 +3016,7 @@ Specifies the region where the peer VPC resides. For complete lists of supported
 Unique identifier for an Azure AD directory.
 
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-awsAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1351">property <b>awsAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1341">property <b>awsAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3034,7 +3024,7 @@ Unique identifier for an Azure AD directory.
 Account ID of the owner of the peer VPC.
 
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-azureDirectoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1355">property <b>azureDirectoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1345">property <b>azureDirectoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureDirectoryId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3042,7 +3032,7 @@ Account ID of the owner of the peer VPC.
 Unique identifier for an Azure AD directory.
 
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-azureSubscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1359">property <b>azureSubscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1349">property <b>azureSubscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureSubscriptionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3050,7 +3040,7 @@ Unique identifier for an Azure AD directory.
 Unique identifer of the Azure subscription in which the VNet resides.
 
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-connectionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1363">property <b>connectionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1353">property <b>connectionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3058,12 +3048,12 @@ Unique identifer of the Azure subscription in which the VNet resides.
 Unique identifier for the peering connection.
 
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-containerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1364">property <b>containerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1354">property <b>containerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-errorMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1368">property <b>errorMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1358">property <b>errorMessage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>errorMessage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3071,7 +3061,7 @@ Unique identifier for the peering connection.
 When `"status" : "FAILED"`, Atlas provides a description of the error.
 
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-errorState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1372">property <b>errorState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1362">property <b>errorState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>errorState: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3079,7 +3069,7 @@ When `"status" : "FAILED"`, Atlas provides a description of the error.
 Description of the Atlas error when `status` is `Failed`, Otherwise, Atlas returns `null`.
 
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-errorStateName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1376">property <b>errorStateName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1366">property <b>errorStateName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>errorStateName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3087,7 +3077,7 @@ Description of the Atlas error when `status` is `Failed`, Otherwise, Atlas retur
 Error state, if any. The VPC peering connection error state value can be one of the following: `REJECTED`, `EXPIRED`, `INVALID_ARGUMENT`.
 
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-gcpProjectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1380">property <b>gcpProjectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1370">property <b>gcpProjectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gcpProjectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3095,7 +3085,7 @@ Error state, if any. The VPC peering connection error state value can be one of 
 GCP project ID of the owner of the network peer.
 
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-networkName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1384">property <b>networkName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1374">property <b>networkName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3103,7 +3093,7 @@ GCP project ID of the owner of the network peer.
 Name of the network peer to which Atlas connects.
 
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-peeringId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1388">property <b>peeringId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1378">property <b>peeringId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peeringId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3111,7 +3101,7 @@ Name of the network peer to which Atlas connects.
 Atlas assigned unique ID for the peering connection.
 
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-providerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1392">property <b>providerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1382">property <b>providerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3119,7 +3109,7 @@ Atlas assigned unique ID for the peering connection.
 Cloud provider for this VPC peering connection. If omitted, Atlas sets this parameter to AWS. (Possible Values `AWS`, `AZURE`, `GCP`).
 
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1396">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1386">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3127,7 +3117,7 @@ Cloud provider for this VPC peering connection. If omitted, Atlas sets this para
 Name of your Azure resource group.
 
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-routeTableCidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1400">property <b>routeTableCidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1390">property <b>routeTableCidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeTableCidrBlock: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3135,7 +3125,7 @@ Name of your Azure resource group.
 Peer VPC CIDR block or subnet.
 
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1404">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1394">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3143,7 +3133,7 @@ Peer VPC CIDR block or subnet.
 Status of the Atlas network peering connection: `ADDING_PEER`, `AVAILABLE`, `FAILED`, `DELETING`, `WAITING_FOR_USER`.
 
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-statusName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1408">property <b>statusName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1398">property <b>statusName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statusName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3151,7 +3141,7 @@ Status of the Atlas network peering connection: `ADDING_PEER`, `AVAILABLE`, `FAI
 The VPC peering connection status value can be one of the following: `INITIATING`, `PENDING_ACCEPTANCE`, `FAILED`, `FINALIZING`, `AVAILABLE`, `TERMINATING`.
 
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-vnetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1412">property <b>vnetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1402">property <b>vnetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vnetName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3159,7 +3149,7 @@ The VPC peering connection status value can be one of the following: `INITIATING
 Name of your Azure VNet.
 
 <h4 class="pdoc-member-header" id="GetNetworkPeeringsResult-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1416">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1406">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3167,24 +3157,24 @@ Name of your Azure VNet.
 Unique identifier of the peer VPC.
 
 <h3 class="pdoc-module-header" id="GetProjectsResult" data-link-title="GetProjectsResult">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1424">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1414">
         interface <strong>GetProjectsResult</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetProjectsResult</span></code></pre>
 <h4 class="pdoc-member-header" id="GetProjectsResult-clusterCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1425">property <b>clusterCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1415">property <b>clusterCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProjectsResult-created">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1426">property <b>created</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1416">property <b>created</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>created: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProjectsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1430">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1420">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3192,7 +3182,7 @@ Unique identifier of the peer VPC.
 Autogenerated Unique ID for this data source.
 
 <h4 class="pdoc-member-header" id="GetProjectsResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1434">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1424">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3200,7 +3190,7 @@ Autogenerated Unique ID for this data source.
 The name of the project you want to create. (Cannot be changed via this Provider after creation.)
 
 <h4 class="pdoc-member-header" id="GetProjectsResult-orgId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1449">property <b>orgId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1439">property <b>orgId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orgId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3219,53 +3209,53 @@ The following are valid roles:
 * `GROUP_CLUSTER_MANAGER`
 
 <h4 class="pdoc-member-header" id="GetProjectsResult-teams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1450">property <b>teams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1440">property <b>teams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teams: <a href='#GetProjectsResultTeam'>GetProjectsResultTeam</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetProjectsResultTeam" data-link-title="GetProjectsResultTeam">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1453">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1443">
         interface <strong>GetProjectsResultTeam</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetProjectsResultTeam</span></code></pre>
 <h4 class="pdoc-member-header" id="GetProjectsResultTeam-roleNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1454">property <b>roleNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1444">property <b>roleNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleNames: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetProjectsResultTeam-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1455">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1445">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetProjectTeam" data-link-title="GetProjectTeam">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1419">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1409">
         interface <strong>GetProjectTeam</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetProjectTeam</span></code></pre>
 <h4 class="pdoc-member-header" id="GetProjectTeam-roleNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1420">property <b>roleNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1410">property <b>roleNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleNames: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetProjectTeam-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1421">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1411">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GlobalClusterConfigCustomZoneMapping" data-link-title="GlobalClusterConfigCustomZoneMapping">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1458">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1448">
         interface <strong>GlobalClusterConfigCustomZoneMapping</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GlobalClusterConfigCustomZoneMapping</span></code></pre>
 <h4 class="pdoc-member-header" id="GlobalClusterConfigCustomZoneMapping-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1462">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1452">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3273,7 +3263,7 @@ The following are valid roles:
 The ISO location code to which you want to map a zone in your Global Cluster. You can find a list of all supported location codes [here](https://cloud.mongodb.com/static/atlas/country_iso_codes.txt).
 
 <h4 class="pdoc-member-header" id="GlobalClusterConfigCustomZoneMapping-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1466">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1456">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3281,14 +3271,14 @@ The ISO location code to which you want to map a zone in your Global Cluster. Yo
 The name of the zone in your Global Cluster that you want to map to location.
 
 <h3 class="pdoc-module-header" id="GlobalClusterConfigManagedNamespace" data-link-title="GlobalClusterConfigManagedNamespace">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1469">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1459">
         interface <strong>GlobalClusterConfigManagedNamespace</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GlobalClusterConfigManagedNamespace</span></code></pre>
 <h4 class="pdoc-member-header" id="GlobalClusterConfigManagedNamespace-collection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1473">property <b>collection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1463">property <b>collection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collection: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3296,7 +3286,7 @@ The name of the zone in your Global Cluster that you want to map to location.
 The name of the collection associated with the managed namespace.
 
 <h4 class="pdoc-member-header" id="GlobalClusterConfigManagedNamespace-customShardKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1477">property <b>customShardKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1467">property <b>customShardKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customShardKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3304,7 +3294,7 @@ The name of the collection associated with the managed namespace.
 The custom shard key for the collection. Global Clusters require a compound shard key consisting of a location field and a user-selected second key, the custom shard key.
 
 <h4 class="pdoc-member-header" id="GlobalClusterConfigManagedNamespace-db">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1481">property <b>db</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1471">property <b>db</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>db: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3312,14 +3302,14 @@ The custom shard key for the collection. Global Clusters require a compound shar
 The name of the database containing the collection.
 
 <h3 class="pdoc-module-header" id="ProjectTeam" data-link-title="ProjectTeam">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1484">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1474">
         interface <strong>ProjectTeam</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ProjectTeam</span></code></pre>
 <h4 class="pdoc-member-header" id="ProjectTeam-roleNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1495">property <b>roleNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1485">property <b>roleNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleNames: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3334,7 +3324,7 @@ The following are valid roles:
 * `GROUP_CLUSTER_MANAGER`
 
 <h4 class="pdoc-member-header" id="ProjectTeam-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1499">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1489">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3342,34 +3332,34 @@ The following are valid roles:
 The unique identifier of the team you want to associate with the project. The team and project must share the same parent organization.
 
 <h3 class="pdoc-module-header" id="X509AuthenticationDatabaseUserCertificate" data-link-title="X509AuthenticationDatabaseUserCertificate">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1502">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1492">
         interface <strong>X509AuthenticationDatabaseUserCertificate</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>X509AuthenticationDatabaseUserCertificate</span></code></pre>
 <h4 class="pdoc-member-header" id="X509AuthenticationDatabaseUserCertificate-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1503">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1493">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="X509AuthenticationDatabaseUserCertificate-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1504">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1494">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="X509AuthenticationDatabaseUserCertificate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1505">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1495">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="X509AuthenticationDatabaseUserCertificate-notAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1506">property <b>notAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1496">property <b>notAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notAfter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="X509AuthenticationDatabaseUserCertificate-subject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/types/output.ts#L1507">property <b>subject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mongodbatlas/blob/a5e70462ed4b069fc066820d47d409b7ec0facce/sdk/nodejs/types/output.ts#L1497">property <b>subject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subject: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

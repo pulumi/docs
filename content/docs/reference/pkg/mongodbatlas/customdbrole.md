@@ -142,27 +142,27 @@ import pulumi_mongodbatlas as mongodbatlas
 
 test_role = mongodbatlas.CustomDbRole("testRole",
     actions=[
-        {
-            "action": "UPDATE",
-            "resources": [{
-                "collectionName": "",
-                "database_name": "anyDatabase",
-            }],
-        },
-        {
-            "action": "INSERT",
-            "resources": [{
-                "collectionName": "",
-                "database_name": "anyDatabase",
-            }],
-        },
-        {
-            "action": "REMOVE",
-            "resources": [{
-                "collectionName": "",
-                "database_name": "anyDatabase",
-            }],
-        },
+        mongodbatlas.CustomDbRoleActionArgs(
+            action="UPDATE",
+            resources=[mongodbatlas.CustomDbRoleActionResourceArgs(
+                collection_name="",
+                database_name="anyDatabase",
+            )],
+        ),
+        mongodbatlas.CustomDbRoleActionArgs(
+            action="INSERT",
+            resources=[mongodbatlas.CustomDbRoleActionResourceArgs(
+                collection_name="",
+                database_name="anyDatabase",
+            )],
+        ),
+        mongodbatlas.CustomDbRoleActionArgs(
+            action="REMOVE",
+            resources=[mongodbatlas.CustomDbRoleActionResourceArgs(
+                collection_name="",
+                database_name="anyDatabase",
+            )],
+        ),
     ],
     project_id="<PROJECT-ID>",
     role_name="myCustomRole")
@@ -404,50 +404,50 @@ import pulumi
 import pulumi_mongodbatlas as mongodbatlas
 
 inherited_role_one = mongodbatlas.CustomDbRole("inheritedRoleOne",
-    actions=[{
-        "action": "INSERT",
-        "resources": [{
-            "collectionName": "",
-            "database_name": "anyDatabase",
-        }],
-    }],
+    actions=[mongodbatlas.CustomDbRoleActionArgs(
+        action="INSERT",
+        resources=[mongodbatlas.CustomDbRoleActionResourceArgs(
+            collection_name="",
+            database_name="anyDatabase",
+        )],
+    )],
     project_id="<PROJECT-ID>",
     role_name="insertRole")
 inherited_role_two = mongodbatlas.CustomDbRole("inheritedRoleTwo",
-    actions=[{
-        "action": "SERVER_STATUS",
-        "resources": [{
-            "cluster": True,
-        }],
-    }],
+    actions=[mongodbatlas.CustomDbRoleActionArgs(
+        action="SERVER_STATUS",
+        resources=[mongodbatlas.CustomDbRoleActionResourceArgs(
+            cluster=True,
+        )],
+    )],
     project_id=inherited_role_one.project_id,
     role_name="statusServerRole")
 test_role = mongodbatlas.CustomDbRole("testRole",
     actions=[
-        {
-            "action": "UPDATE",
-            "resources": [{
-                "collectionName": "",
-                "database_name": "anyDatabase",
-            }],
-        },
-        {
-            "action": "REMOVE",
-            "resources": [{
-                "collectionName": "",
-                "database_name": "anyDatabase",
-            }],
-        },
+        mongodbatlas.CustomDbRoleActionArgs(
+            action="UPDATE",
+            resources=[mongodbatlas.CustomDbRoleActionResourceArgs(
+                collection_name="",
+                database_name="anyDatabase",
+            )],
+        ),
+        mongodbatlas.CustomDbRoleActionArgs(
+            action="REMOVE",
+            resources=[mongodbatlas.CustomDbRoleActionResourceArgs(
+                collection_name="",
+                database_name="anyDatabase",
+            )],
+        ),
     ],
     inherited_roles=[
-        {
-            "database_name": "admin",
-            "role_name": inherited_role_one.role_name,
-        },
-        {
-            "database_name": "admin",
-            "role_name": inherited_role_two.role_name,
-        },
+        mongodbatlas.CustomDbRoleInheritedRoleArgs(
+            database_name="admin",
+            role_name=inherited_role_one.role_name,
+        ),
+        mongodbatlas.CustomDbRoleInheritedRoleArgs(
+            database_name="admin",
+            role_name=inherited_role_two.role_name,
+        ),
     ],
     project_id=inherited_role_one.project_id,
     role_name="myCustomRole")
@@ -528,7 +528,7 @@ const testRole = new mongodbatlas.CustomDbRole("test_role", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.CustomDbRole">CustomDbRole</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>actions=None<span class="p">, </span>inherited_roles=None<span class="p">, </span>project_id=None<span class="p">, </span>role_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.CustomDbRole">CustomDbRole</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[CustomDbRoleActionArgs]]</span> = None<span class="p">, </span><span class="nx">inherited_roles</span><span class="p">:</span> <span class="nx">Optional[List[CustomDbRoleInheritedRoleArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -853,7 +853,7 @@ The CustomDbRole resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdbroleaction">List[Custom<wbr>Db<wbr>Role<wbr>Action]</a></span>
+        <span class="property-type"><a href="#customdbroleaction">List[Custom<wbr>Db<wbr>Role<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -885,7 +885,7 @@ The CustomDbRole resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#inherited_roles_python" style="color: inherit; text-decoration: inherit;">inherited_<wbr>roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdbroleinheritedrole">List[Custom<wbr>Db<wbr>Role<wbr>Inherited<wbr>Role]</a></span>
+        <span class="property-type"><a href="#customdbroleinheritedrole">List[Custom<wbr>Db<wbr>Role<wbr>Inherited<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -987,7 +987,8 @@ Get an existing CustomDbRole resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>actions=None<span class="p">, </span>inherited_roles=None<span class="p">, </span>project_id=None<span class="p">, </span>role_name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[CustomDbRoleActionArgs]]</span> = None<span class="p">, </span><span class="nx">inherited_roles</span><span class="p">:</span> <span class="nx">Optional[List[CustomDbRoleInheritedRoleArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CustomDbRole</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -995,7 +996,7 @@ Get an existing CustomDbRole resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.CustomDbRole.html">CustomDbRole</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas..CustomDbRoleState.html">CustomDbRoleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.CustomDbRole.html">CustomDbRole</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas..CustomDbRoleState.html">CustomDbRoleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1254,7 +1255,7 @@ The following state arguments are supported:
 <a href="#state_actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdbroleaction">List[Custom<wbr>Db<wbr>Role<wbr>Action]</a></span>
+        <span class="property-type"><a href="#customdbroleaction">List[Custom<wbr>Db<wbr>Role<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1264,7 +1265,7 @@ The following state arguments are supported:
 <a href="#state_inherited_roles_python" style="color: inherit; text-decoration: inherit;">inherited_<wbr>roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdbroleinheritedrole">List[Custom<wbr>Db<wbr>Role<wbr>Inherited<wbr>Role]</a></span>
+        <span class="property-type"><a href="#customdbroleinheritedrole">List[Custom<wbr>Db<wbr>Role<wbr>Inherited<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1431,7 +1432,7 @@ The following state arguments are supported:
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdbroleactionresource">List[Custom<wbr>Db<wbr>Role<wbr>Action<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#customdbroleactionresource">List[Custom<wbr>Db<wbr>Role<wbr>Action<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains information on where the action is granted. Each object in the array either indicates a database and collection on which the action is granted, or indicates that the action is granted on the cluster resource.
 {{% /md %}}</dd>
@@ -1587,8 +1588,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="collectionname_python">
-<a href="#collectionname_python" style="color: inherit; text-decoration: inherit;">collection<wbr>Name</a>
+        <span id="collection_name_python">
+<a href="#collection_name_python" style="color: inherit; text-decoration: inherit;">collection_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
