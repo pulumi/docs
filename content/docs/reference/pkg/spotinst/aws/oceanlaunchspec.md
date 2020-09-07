@@ -18,11 +18,233 @@ Provides a custom Spotinst Ocean AWS Launch Spec resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using SpotInst = Pulumi.SpotInst;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new SpotInst.Aws.OceanLaunchSpec("example", new SpotInst.Aws.OceanLaunchSpecArgs
+        {
+            AutoscaleHeadrooms = 
+            {
+                new SpotInst.Aws.Inputs.OceanLaunchSpecAutoscaleHeadroomArgs
+                {
+                    CpuPerUnit = 1000,
+                    GpuPerUnit = 0,
+                    MemoryPerUnit = 2048,
+                    NumOfUnits = 5,
+                },
+            },
+            BlockDeviceMappings = 
+            {
+                new SpotInst.Aws.Inputs.OceanLaunchSpecBlockDeviceMappingArgs
+                {
+                    DeviceName = "/dev/xvda1",
+                    Ebs = new SpotInst.Aws.Inputs.OceanLaunchSpecBlockDeviceMappingEbsArgs
+                    {
+                        DeleteOnTermination = true,
+                        DynamicVolumeSize = new SpotInst.Aws.Inputs.OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSizeArgs
+                        {
+                            BaseSize = 50,
+                            Resource = "CPU",
+                            SizePerResourceUnit = 20,
+                        },
+                        Encrypted = false,
+                        VolumeSize = 50,
+                        VolumeType = "gp2",
+                    },
+                },
+            },
+            ElasticIpPools = 
+            {
+                new SpotInst.Aws.Inputs.OceanLaunchSpecElasticIpPoolArgs
+                {
+                    TagSelector = new SpotInst.Aws.Inputs.OceanLaunchSpecElasticIpPoolTagSelectorArgs
+                    {
+                        TagKey = "key",
+                        TagValue = "value",
+                    },
+                },
+            },
+            IamInstanceProfile = "iam-profile",
+            ImageId = "ami-123456",
+            InstanceTypes = 
+            {
+                "m3.large",
+                "m3.xlarge",
+                "m3.2xlarge",
+                "m4.large",
+                "m4.xlarge",
+                "m4.4xlarge",
+                "m4.2xlarge",
+                "m4.10xlarge",
+                "m4.16xlarge",
+                "m5.large",
+                "m5.xlarge",
+                "m5.2xlarge",
+                "m5.4xlarge",
+                "m5.12xlarge",
+                "m5.24xlarge",
+            },
+            Labels = 
+            {
+                new SpotInst.Aws.Inputs.OceanLaunchSpecLabelArgs
+                {
+                    Key = "fakeKey",
+                    Value = "fakeValue",
+                },
+            },
+            OceanId = "o-123456",
+            ResourceLimits = 
+            {
+                new SpotInst.Aws.Inputs.OceanLaunchSpecResourceLimitArgs
+                {
+                    MaxInstanceCount = 4,
+                },
+            },
+            RootVolumeSize = 30,
+            SecurityGroups = 
+            {
+                "sg-987654321",
+            },
+            SubnetIds = 
+            {
+                "subnet-1234",
+            },
+            Tags = 
+            {
+                new SpotInst.Aws.Inputs.OceanLaunchSpecTagArgs
+                {
+                    Key = "Env",
+                    Value = "production",
+                },
+            },
+            Taints = 
+            {
+                new SpotInst.Aws.Inputs.OceanLaunchSpecTaintArgs
+                {
+                    Effect = "NoExecute",
+                    Key = "taint key updated",
+                    Value = "taint value updated",
+                },
+            },
+            UserData = "echo hello world",
+        });
+    }
+
+}
+```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aws.NewOceanLaunchSpec(ctx, "example", &aws.OceanLaunchSpecArgs{
+			AutoscaleHeadrooms: aws.OceanLaunchSpecAutoscaleHeadroomArray{
+				&aws.OceanLaunchSpecAutoscaleHeadroomArgs{
+					CpuPerUnit:    pulumi.Int(1000),
+					GpuPerUnit:    pulumi.Int(0),
+					MemoryPerUnit: pulumi.Int(2048),
+					NumOfUnits:    pulumi.Int(5),
+				},
+			},
+			BlockDeviceMappings: aws.OceanLaunchSpecBlockDeviceMappingArray{
+				&aws.OceanLaunchSpecBlockDeviceMappingArgs{
+					DeviceName: pulumi.String("/dev/xvda1"),
+					Ebs: &aws.OceanLaunchSpecBlockDeviceMappingEbsArgs{
+						DeleteOnTermination: pulumi.Bool(true),
+						DynamicVolumeSize: &aws.OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSizeArgs{
+							BaseSize:            pulumi.Int(50),
+							Resource:            pulumi.String("CPU"),
+							SizePerResourceUnit: pulumi.Int(20),
+						},
+						Encrypted:  pulumi.Bool(false),
+						VolumeSize: pulumi.Int(50),
+						VolumeType: pulumi.String("gp2"),
+					},
+				},
+			},
+			ElasticIpPools: aws.OceanLaunchSpecElasticIpPoolArray{
+				&aws.OceanLaunchSpecElasticIpPoolArgs{
+					TagSelector: &aws.OceanLaunchSpecElasticIpPoolTagSelectorArgs{
+						TagKey:   pulumi.String("key"),
+						TagValue: pulumi.String("value"),
+					},
+				},
+			},
+			IamInstanceProfile: pulumi.String("iam-profile"),
+			ImageId:            pulumi.String("ami-123456"),
+			InstanceTypes: pulumi.StringArray{
+				pulumi.String("m3.large"),
+				pulumi.String("m3.xlarge"),
+				pulumi.String("m3.2xlarge"),
+				pulumi.String("m4.large"),
+				pulumi.String("m4.xlarge"),
+				pulumi.String("m4.4xlarge"),
+				pulumi.String("m4.2xlarge"),
+				pulumi.String("m4.10xlarge"),
+				pulumi.String("m4.16xlarge"),
+				pulumi.String("m5.large"),
+				pulumi.String("m5.xlarge"),
+				pulumi.String("m5.2xlarge"),
+				pulumi.String("m5.4xlarge"),
+				pulumi.String("m5.12xlarge"),
+				pulumi.String("m5.24xlarge"),
+			},
+			Labels: aws.OceanLaunchSpecLabelArray{
+				&aws.OceanLaunchSpecLabelArgs{
+					Key:   pulumi.String("fakeKey"),
+					Value: pulumi.String("fakeValue"),
+				},
+			},
+			OceanId: pulumi.String("o-123456"),
+			ResourceLimits: aws.OceanLaunchSpecResourceLimitArray{
+				&aws.OceanLaunchSpecResourceLimitArgs{
+					MaxInstanceCount: pulumi.Int(4),
+				},
+			},
+			RootVolumeSize: pulumi.Int(30),
+			SecurityGroups: pulumi.StringArray{
+				pulumi.String("sg-987654321"),
+			},
+			SubnetIds: pulumi.StringArray{
+				pulumi.String("subnet-1234"),
+			},
+			Tags: aws.OceanLaunchSpecTagArray{
+				&aws.OceanLaunchSpecTagArgs{
+					Key:   pulumi.String("Env"),
+					Value: pulumi.String("production"),
+				},
+			},
+			Taints: aws.OceanLaunchSpecTaintArray{
+				&aws.OceanLaunchSpecTaintArgs{
+					Effect: pulumi.String("NoExecute"),
+					Key:    pulumi.String("taint key updated"),
+					Value:  pulumi.String("taint value updated"),
+				},
+			},
+			UserData: pulumi.String("echo hello world"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -31,35 +253,35 @@ import pulumi
 import pulumi_spotinst as spotinst
 
 example = spotinst.aws.OceanLaunchSpec("example",
-    autoscale_headrooms=[{
-        "cpuPerUnit": 1000,
-        "gpuPerUnit": 0,
-        "memoryPerUnit": 2048,
-        "numOfUnits": 5,
-    }],
-    block_device_mappings=[{
-        "deviceName": "/dev/xvda1",
-        "ebs": {
-            "deleteOnTermination": "true",
-            "dynamicVolumeSize": {
-                "baseSize": 50,
-                "resource": "CPU",
-                "sizePerResourceUnit": 20,
-            },
-            "encrypted": "false",
-            "volumeSize": 50,
-            "volumeType": "gp2",
-        },
-    }],
-    elastic_ip_pools=[{
-        "tagSelector": {
-            "tagKey": "key",
-            "tagValue": "value",
-        },
-    }],
+    autoscale_headrooms=[spotinst.aws.OceanLaunchSpecAutoscaleHeadroomArgs(
+        cpu_per_unit=1000,
+        gpu_per_unit=0,
+        memory_per_unit=2048,
+        num_of_units=5,
+    )],
+    block_device_mappings=[spotinst.aws.OceanLaunchSpecBlockDeviceMappingArgs(
+        device_name="/dev/xvda1",
+        ebs=spotinst.aws.OceanLaunchSpecBlockDeviceMappingEbsArgs(
+            delete_on_termination=True,
+            dynamic_volume_size=spotinst.aws.OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSizeArgs(
+                base_size=50,
+                resource="CPU",
+                size_per_resource_unit=20,
+            ),
+            encrypted=False,
+            volume_size=50,
+            volume_type="gp2",
+        ),
+    )],
+    elastic_ip_pools=[spotinst.aws.OceanLaunchSpecElasticIpPoolArgs(
+        tag_selector=spotinst.aws.OceanLaunchSpecElasticIpPoolTagSelectorArgs(
+            tag_key="key",
+            tag_value="value",
+        ),
+    )],
     iam_instance_profile="iam-profile",
     image_id="ami-123456",
-    intance_types=[
+    instance_types=[
         "m3.large",
         "m3.xlarge",
         "m3.2xlarge",
@@ -76,26 +298,26 @@ example = spotinst.aws.OceanLaunchSpec("example",
         "m5.12xlarge",
         "m5.24xlarge",
     ],
-    labels=[{
-        "key": "fakeKey",
-        "value": "fakeValue",
-    }],
+    labels=[spotinst.aws.OceanLaunchSpecLabelArgs(
+        key="fakeKey",
+        value="fakeValue",
+    )],
     ocean_id="o-123456",
-    resource_limits=[{
-        "maxInstanceCount": 4,
-    }],
+    resource_limits=[spotinst.aws.OceanLaunchSpecResourceLimitArgs(
+        max_instance_count=4,
+    )],
     root_volume_size=30,
     security_groups=["sg-987654321"],
     subnet_ids=["subnet-1234"],
-    tags=[{
-        "key": "Env",
-        "value": "production",
-    }],
-    taints=[{
-        "effect": "NoExecute",
-        "key": "taint key updated",
-        "value": "taint value updated",
-    }],
+    tags=[spotinst.aws.OceanLaunchSpecTagArgs(
+        key="Env",
+        value="production",
+    )],
+    taints=[spotinst.aws.OceanLaunchSpecTaintArgs(
+        effect="NoExecute",
+        key="taint key updated",
+        value="taint value updated",
+    )],
     user_data="echo hello world")
 ```
 
@@ -136,7 +358,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
     }],
     iamInstanceProfile: "iam-profile",
     imageId: "ami-123456",
-    intanceTypes: [
+    instanceTypes: [
         "m3.large",
         "m3.xlarge",
         "m3.2xlarge",
@@ -191,7 +413,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.OceanLaunchSpec">OceanLaunchSpec</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscale_headrooms</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecAutoscaleHeadroom]]</span> = None<span class="p">, </span><span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecBlockDeviceMapping]]</span> = None<span class="p">, </span><span class="nx">elastic_ip_pools</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecElasticIpPool]]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecLabel]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_limits</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecResourceLimit]]</span> = None<span class="p">, </span><span class="nx">root_volume_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecTag]]</span> = None<span class="p">, </span><span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecTaint]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.OceanLaunchSpec">OceanLaunchSpec</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscale_headrooms</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecAutoscaleHeadroomArgs]]</span> = None<span class="p">, </span><span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecBlockDeviceMappingArgs]]</span> = None<span class="p">, </span><span class="nx">elastic_ip_pools</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecElasticIpPoolArgs]]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecLabelArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_limits</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecResourceLimitArgs]]</span> = None<span class="p">, </span><span class="nx">root_volume_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecTagArgs]]</span> = None<span class="p">, </span><span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecTaintArgs]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -437,7 +659,8 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of instance types allowed to be provisioned for pods pending under the specified launch specification. The list overrides the list defined for the Ocean cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -618,7 +841,8 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of instance types allowed to be provisioned for pods pending under the specified launch specification. The list overrides the list defined for the Ocean cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -799,7 +1023,8 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of instance types allowed to be provisioned for pods pending under the specified launch specification. The list overrides the list defined for the Ocean cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -923,7 +1148,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 <a href="#autoscale_headrooms_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>headrooms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List[Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List[Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
 {{% /md %}}</dd>
@@ -934,7 +1159,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 <a href="#block_device_mappings_python" style="color: inherit; text-decoration: inherit;">block_<wbr>device_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecblockdevicemapping">List[Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemapping">List[Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 {{% /md %}}</dd>
@@ -945,7 +1170,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 <a href="#elastic_ip_pools_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>ip_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecelasticippool">List[Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspecelasticippool">List[Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Assign an Elastic IP to the instances spun by the launch spec. Can be null.
 {{% /md %}}</dd>
@@ -980,7 +1205,8 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of instance types allowed to be provisioned for pods pending under the specified launch specification. The list overrides the list defined for the Ocean cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -988,7 +1214,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspeclabel">List[Ocean<wbr>Launch<wbr>Spec<wbr>Label]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspeclabel">List[Ocean<wbr>Launch<wbr>Spec<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
@@ -1010,7 +1236,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 <a href="#resource_limits_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>limits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecresourcelimit">List[Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limit]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspecresourcelimit">List[Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1053,7 +1279,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectag">List[Ocean<wbr>Launch<wbr>Spec<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">List[Ocean<wbr>Launch<wbr>Spec<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1064,7 +1290,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectaint">List[Ocean<wbr>Launch<wbr>Spec<wbr>Taint]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspectaint">List[Ocean<wbr>Launch<wbr>Spec<wbr>Taint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
@@ -1179,7 +1405,7 @@ Get an existing OceanLaunchSpec resource's state with the given name, ID, and op
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscale_headrooms</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecAutoscaleHeadroom]]</span> = None<span class="p">, </span><span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecBlockDeviceMapping]]</span> = None<span class="p">, </span><span class="nx">elastic_ip_pools</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecElasticIpPool]]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecLabel]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_limits</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecResourceLimit]]</span> = None<span class="p">, </span><span class="nx">root_volume_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecTag]]</span> = None<span class="p">, </span><span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecTaint]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> OceanLaunchSpec</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscale_headrooms</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecAutoscaleHeadroomArgs]]</span> = None<span class="p">, </span><span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecBlockDeviceMappingArgs]]</span> = None<span class="p">, </span><span class="nx">elastic_ip_pools</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecElasticIpPoolArgs]]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecLabelArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_limits</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecResourceLimitArgs]]</span> = None<span class="p">, </span><span class="nx">root_volume_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecTagArgs]]</span> = None<span class="p">, </span><span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecTaintArgs]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> OceanLaunchSpec</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1356,7 +1582,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of instance types allowed to be provisioned for pods pending under the specified launch specification. The list overrides the list defined for the Ocean cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1537,7 +1764,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of instance types allowed to be provisioned for pods pending under the specified launch specification. The list overrides the list defined for the Ocean cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1718,7 +1946,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of instance types allowed to be provisioned for pods pending under the specified launch specification. The list overrides the list defined for the Ocean cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1842,7 +2071,7 @@ The following state arguments are supported:
 <a href="#state_autoscale_headrooms_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>headrooms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List[Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List[Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
 {{% /md %}}</dd>
@@ -1853,7 +2082,7 @@ The following state arguments are supported:
 <a href="#state_block_device_mappings_python" style="color: inherit; text-decoration: inherit;">block_<wbr>device_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecblockdevicemapping">List[Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemapping">List[Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 {{% /md %}}</dd>
@@ -1864,7 +2093,7 @@ The following state arguments are supported:
 <a href="#state_elastic_ip_pools_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>ip_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecelasticippool">List[Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspecelasticippool">List[Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Assign an Elastic IP to the instances spun by the launch spec. Can be null.
 {{% /md %}}</dd>
@@ -1899,7 +2128,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of instance types allowed to be provisioned for pods pending under the specified launch specification. The list overrides the list defined for the Ocean cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1907,7 +2137,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspeclabel">List[Ocean<wbr>Launch<wbr>Spec<wbr>Label]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspeclabel">List[Ocean<wbr>Launch<wbr>Spec<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
@@ -1940,7 +2170,7 @@ The following state arguments are supported:
 <a href="#state_resource_limits_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>limits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecresourcelimit">List[Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limit]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspecresourcelimit">List[Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1983,7 +2213,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectag">List[Ocean<wbr>Launch<wbr>Spec<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">List[Ocean<wbr>Launch<wbr>Spec<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1994,7 +2224,7 @@ The following state arguments are supported:
 <a href="#state_taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectaint">List[Ocean<wbr>Launch<wbr>Spec<wbr>Taint]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspectaint">List[Ocean<wbr>Launch<wbr>Spec<wbr>Taint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
@@ -2198,8 +2428,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="numofunits_python">
-<a href="#numofunits_python" style="color: inherit; text-decoration: inherit;">num<wbr>Of<wbr>Units</a>
+        <span id="num_of_units_python">
+<a href="#num_of_units_python" style="color: inherit; text-decoration: inherit;">num_<wbr>of_<wbr>units</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2209,8 +2439,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cpuperunit_python">
-<a href="#cpuperunit_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Per<wbr>Unit</a>
+        <span id="cpu_per_unit_python">
+<a href="#cpu_per_unit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2220,8 +2450,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gpuperunit_python">
-<a href="#gpuperunit_python" style="color: inherit; text-decoration: inherit;">gpu<wbr>Per<wbr>Unit</a>
+        <span id="gpu_per_unit_python">
+<a href="#gpu_per_unit_python" style="color: inherit; text-decoration: inherit;">gpu_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2231,8 +2461,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="memoryperunit_python">
-<a href="#memoryperunit_python" style="color: inherit; text-decoration: inherit;">memory<wbr>Per<wbr>Unit</a>
+        <span id="memory_per_unit_python">
+<a href="#memory_per_unit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2417,8 +2647,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="devicename_python">
-<a href="#devicename_python" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
+        <span id="device_name_python">
+<a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2432,15 +2662,15 @@ The following state arguments are supported:
 <a href="#ebs_python" style="color: inherit; text-decoration: inherit;">ebs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecblockdevicemappingebs">Dict[Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemappingebs">Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object. Set Elastic Block Store properties .
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodevice_python">
-<a href="#nodevice_python" style="color: inherit; text-decoration: inherit;">no<wbr>Device</a>
+        <span id="no_device_python">
+<a href="#no_device_python" style="color: inherit; text-decoration: inherit;">no_<wbr>device</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2450,8 +2680,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualname_python">
-<a href="#virtualname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
+        <span id="virtual_name_python">
+<a href="#virtual_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2770,8 +3000,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deleteontermination_python">
-<a href="#deleteontermination_python" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+        <span id="delete_on_termination_python">
+<a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2781,11 +3011,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dynamicvolumesize_python">
-<a href="#dynamicvolumesize_python" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Volume<wbr>Size</a>
+        <span id="dynamic_volume_size_python">
+<a href="#dynamic_volume_size_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecblockdevicemappingebsdynamicvolumesize">Dict[Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Dynamic<wbr>Volume<wbr>Size]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemappingebsdynamicvolumesize">Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Dynamic<wbr>Volume<wbr>Size<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object. Set dynamic volume size properties. When using this object, you cannot use volumeSize. You must use one or the other.
 {{% /md %}}</dd>
@@ -2814,8 +3044,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kmskeyid_python">
-<a href="#kmskeyid_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+        <span id="kms_key_id_python">
+<a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2825,8 +3055,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="snapshotid_python">
-<a href="#snapshotid_python" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
+        <span id="snapshot_id_python">
+<a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2836,8 +3066,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumesize_python">
-<a href="#volumesize_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
+        <span id="volume_size_python">
+<a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2847,8 +3077,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumetype_python">
-<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3003,8 +3233,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="basesize_python">
-<a href="#basesize_python" style="color: inherit; text-decoration: inherit;">base<wbr>Size</a>
+        <span id="base_size_python">
+<a href="#base_size_python" style="color: inherit; text-decoration: inherit;">base_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3025,8 +3255,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="sizeperresourceunit_python">
-<a href="#sizeperresourceunit_python" style="color: inherit; text-decoration: inherit;">size<wbr>Per<wbr>Resource<wbr>Unit</a>
+        <span id="size_per_resource_unit_python">
+<a href="#size_per_resource_unit_python" style="color: inherit; text-decoration: inherit;">size_<wbr>per_<wbr>resource_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3115,11 +3345,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tagselector_python">
-<a href="#tagselector_python" style="color: inherit; text-decoration: inherit;">tag<wbr>Selector</a>
+        <span id="tag_selector_python">
+<a href="#tag_selector_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>selector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecelasticippooltagselector">Dict[Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool<wbr>Tag<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspecelasticippooltagselector">Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool<wbr>Tag<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key-value object, which defines an Elastic IP from the customer pool. Can be null.
 {{% /md %}}</dd>
@@ -3238,8 +3468,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="tagkey_python">
-<a href="#tagkey_python" style="color: inherit; text-decoration: inherit;">tag<wbr>Key</a>
+        <span id="tag_key_python">
+<a href="#tag_key_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3249,8 +3479,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tagvalue_python">
-<a href="#tagvalue_python" style="color: inherit; text-decoration: inherit;">tag<wbr>Value</a>
+        <span id="tag_value_python">
+<a href="#tag_value_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3473,8 +3703,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxinstancecount_python">
-<a href="#maxinstancecount_python" style="color: inherit; text-decoration: inherit;">max<wbr>Instance<wbr>Count</a>
+        <span id="max_instance_count_python">
+<a href="#max_instance_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

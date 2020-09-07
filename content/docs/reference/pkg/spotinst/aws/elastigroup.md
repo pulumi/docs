@@ -22,7 +22,7 @@ meta_desc: "Explore the Elastigroup resource of the aws module, including exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.Elastigroup">Elastigroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupEbsBlockDevice]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">elastic_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">elastic_load_balancers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupEphemeralBlockDevice]]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_unhealthy_duration_before_replacement</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preferred_spots</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_weights</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupInstanceTypesWeight]]</span> = None<span class="p">, </span><span class="nx">integration_beanstalk</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationBeanstalk]]</span> = None<span class="p">, </span><span class="nx">integration_codedeploy</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationCodedeploy]]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationDockerSwarm]]</span> = None<span class="p">, </span><span class="nx">integration_ecs</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationEcs]]</span> = None<span class="p">, </span><span class="nx">integration_gitlab</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationGitlab]]</span> = None<span class="p">, </span><span class="nx">integration_kubernetes</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationKubernetes]]</span> = None<span class="p">, </span><span class="nx">integration_mesosphere</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationMesosphere]]</span> = None<span class="p">, </span><span class="nx">integration_multai_runtime</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationMultaiRuntime]]</span> = None<span class="p">, </span><span class="nx">integration_nomad</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationNomad]]</span> = None<span class="p">, </span><span class="nx">integration_rancher</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationRancher]]</span> = None<span class="p">, </span><span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationRoute53]]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifetime_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">multai_target_sets</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupMultaiTargetSet]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupNetworkInterface]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupRevertToSpot]]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingDownPolicy]]</span> = None<span class="p">, </span><span class="nx">scaling_strategies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingStrategy]]</span> = None<span class="p">, </span><span class="nx">scaling_target_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingTargetPolicy]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingUpPolicy]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScheduledTask]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signals</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupSignal]]</span> = None<span class="p">, </span><span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">stateful_deallocation</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupStatefulDeallocation]]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupTag]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupUpdatePolicy]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.Elastigroup">Elastigroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">elastic_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">elastic_load_balancers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_unhealthy_duration_before_replacement</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preferred_spots</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_weights</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupInstanceTypesWeightArgs]]</span> = None<span class="p">, </span><span class="nx">integration_beanstalk</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationBeanstalkArgs]</span> = None<span class="p">, </span><span class="nx">integration_codedeploy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationCodedeployArgs]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">, </span><span class="nx">integration_ecs</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationEcsArgs]</span> = None<span class="p">, </span><span class="nx">integration_gitlab</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGitlabArgs]</span> = None<span class="p">, </span><span class="nx">integration_kubernetes</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationKubernetesArgs]</span> = None<span class="p">, </span><span class="nx">integration_mesosphere</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMesosphereArgs]</span> = None<span class="p">, </span><span class="nx">integration_multai_runtime</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMultaiRuntimeArgs]</span> = None<span class="p">, </span><span class="nx">integration_nomad</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationNomadArgs]</span> = None<span class="p">, </span><span class="nx">integration_rancher</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRancherArgs]</span> = None<span class="p">, </span><span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRoute53Args]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifetime_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">multai_target_sets</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupMultaiTargetSetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ElastigroupRevertToSpotArgs]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_strategies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_target_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingTargetPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signals</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupSignalArgs]]</span> = None<span class="p">, </span><span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">stateful_deallocation</span><span class="p">:</span> <span class="nx">Optional[ElastigroupStatefulDeallocationArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2604,7 +2604,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupebsblockdevice">List[Elastigroup<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#elastigroupebsblockdevice">List[Elastigroup<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2657,7 +2657,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupephemeralblockdevice">List[Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#elastigroupephemeralblockdevice">List[Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2733,7 +2733,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#instance_types_weights_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>weights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupinstancetypesweight">List[Elastigroup<wbr>Instance<wbr>Types<wbr>Weight]</a></span>
+        <span class="property-type"><a href="#elastigroupinstancetypesweight">List[Elastigroup<wbr>Instance<wbr>Types<wbr>Weight<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of weights per instance type for weighted groups. Each object in the list should have the following attributes:
 {{% /md %}}</dd>
@@ -2744,7 +2744,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integration_beanstalk_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>beanstalk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationbeanstalk">Dict[Elastigroup<wbr>Integration<wbr>Beanstalk]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationbeanstalk">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2754,7 +2754,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integration_codedeploy_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>codedeploy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationcodedeploy">Dict[Elastigroup<wbr>Integration<wbr>Codedeploy]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationcodedeploy">Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2764,7 +2764,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integration_docker_swarm_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>docker_<wbr>swarm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Dict[Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2774,7 +2774,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integration_ecs_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>ecs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationecs">Dict[Elastigroup<wbr>Integration<wbr>Ecs]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationecs">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2784,7 +2784,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integration_gitlab_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>gitlab</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationgitlab">Dict[Elastigroup<wbr>Integration<wbr>Gitlab]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationgitlab">Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2794,7 +2794,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integration_kubernetes_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>kubernetes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Dict[Elastigroup<wbr>Integration<wbr>Kubernetes]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2804,7 +2804,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integration_mesosphere_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>mesosphere</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationmesosphere">Dict[Elastigroup<wbr>Integration<wbr>Mesosphere]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationmesosphere">Elastigroup<wbr>Integration<wbr>Mesosphere<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2814,7 +2814,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integration_multai_runtime_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>multai_<wbr>runtime</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Dict[Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2824,7 +2824,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integration_nomad_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>nomad</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationnomad">Dict[Elastigroup<wbr>Integration<wbr>Nomad]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationnomad">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2834,7 +2834,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integration_rancher_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>rancher</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationrancher">Dict[Elastigroup<wbr>Integration<wbr>Rancher]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationrancher">Elastigroup<wbr>Integration<wbr>Rancher<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2844,7 +2844,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integration_route53_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>route53</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationroute53">Dict[Elastigroup<wbr>Integration<wbr>Route53]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationroute53">Elastigroup<wbr>Integration<wbr>Route53Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2897,7 +2897,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#multai_target_sets_python" style="color: inherit; text-decoration: inherit;">multai_<wbr>target_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmultaitargetset">List[Elastigroup<wbr>Multai<wbr>Target<wbr>Set]</a></span>
+        <span class="property-type"><a href="#elastigroupmultaitargetset">List[Elastigroup<wbr>Multai<wbr>Target<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2918,7 +2918,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetworkinterface">List[Elastigroup<wbr>Network<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#elastigroupnetworkinterface">List[Elastigroup<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3014,7 +3014,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#revert_to_spot_python" style="color: inherit; text-decoration: inherit;">revert_<wbr>to_<wbr>spot</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupreverttospot">Dict[Elastigroup<wbr>Revert<wbr>To<wbr>Spot]</a></span>
+        <span class="property-type"><a href="#elastigroupreverttospot">Elastigroup<wbr>Revert<wbr>To<wbr>Spot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hold settings for strategy correction – replacing On-Demand for Spot instances. Supported Values: `"never"`, `"always"`, `"timeWindow"`
 {{% /md %}}</dd>
@@ -3025,7 +3025,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#scaling_down_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>down_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicy">List[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicy">List[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3035,7 +3035,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#scaling_strategies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>strategies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingstrategy">List[Elastigroup<wbr>Scaling<wbr>Strategy]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingstrategy">List[Elastigroup<wbr>Scaling<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set termination policy.
 {{% /md %}}</dd>
@@ -3046,7 +3046,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#scaling_target_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>target_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingtargetpolicy">List[Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingtargetpolicy">List[Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3056,7 +3056,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#scaling_up_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>up_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicy">List[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicy">List[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3066,7 +3066,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#scheduled_tasks_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>tasks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscheduledtask">List[Elastigroup<wbr>Scheduled<wbr>Task]</a></span>
+        <span class="property-type"><a href="#elastigroupscheduledtask">List[Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3087,7 +3087,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#signals_python" style="color: inherit; text-decoration: inherit;">signals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupsignal">List[Elastigroup<wbr>Signal]</a></span>
+        <span class="property-type"><a href="#elastigroupsignal">List[Elastigroup<wbr>Signal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3108,7 +3108,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#stateful_deallocation_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>deallocation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupstatefuldeallocation">Dict[Elastigroup<wbr>Stateful<wbr>Deallocation]</a></span>
+        <span class="property-type"><a href="#elastigroupstatefuldeallocation">Elastigroup<wbr>Stateful<wbr>Deallocation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3130,7 +3130,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouptag">List[Elastigroup<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#elastigrouptag">List[Elastigroup<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -3151,7 +3151,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#update_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicy">Dict[Elastigroup<wbr>Update<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3298,7 +3298,7 @@ Get an existing Elastigroup resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupEbsBlockDevice]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">elastic_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">elastic_load_balancers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupEphemeralBlockDevice]]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_unhealthy_duration_before_replacement</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preferred_spots</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_weights</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupInstanceTypesWeight]]</span> = None<span class="p">, </span><span class="nx">integration_beanstalk</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationBeanstalk]]</span> = None<span class="p">, </span><span class="nx">integration_codedeploy</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationCodedeploy]]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationDockerSwarm]]</span> = None<span class="p">, </span><span class="nx">integration_ecs</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationEcs]]</span> = None<span class="p">, </span><span class="nx">integration_gitlab</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationGitlab]]</span> = None<span class="p">, </span><span class="nx">integration_kubernetes</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationKubernetes]]</span> = None<span class="p">, </span><span class="nx">integration_mesosphere</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationMesosphere]]</span> = None<span class="p">, </span><span class="nx">integration_multai_runtime</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationMultaiRuntime]]</span> = None<span class="p">, </span><span class="nx">integration_nomad</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationNomad]]</span> = None<span class="p">, </span><span class="nx">integration_rancher</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationRancher]]</span> = None<span class="p">, </span><span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationRoute53]]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifetime_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">multai_target_sets</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupMultaiTargetSet]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupNetworkInterface]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupRevertToSpot]]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingDownPolicy]]</span> = None<span class="p">, </span><span class="nx">scaling_strategies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingStrategy]]</span> = None<span class="p">, </span><span class="nx">scaling_target_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingTargetPolicy]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingUpPolicy]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScheduledTask]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signals</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupSignal]]</span> = None<span class="p">, </span><span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">stateful_deallocation</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupStatefulDeallocation]]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupTag]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupUpdatePolicy]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> Elastigroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">elastic_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">elastic_load_balancers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_unhealthy_duration_before_replacement</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preferred_spots</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_weights</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupInstanceTypesWeightArgs]]</span> = None<span class="p">, </span><span class="nx">integration_beanstalk</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationBeanstalkArgs]</span> = None<span class="p">, </span><span class="nx">integration_codedeploy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationCodedeployArgs]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">, </span><span class="nx">integration_ecs</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationEcsArgs]</span> = None<span class="p">, </span><span class="nx">integration_gitlab</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGitlabArgs]</span> = None<span class="p">, </span><span class="nx">integration_kubernetes</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationKubernetesArgs]</span> = None<span class="p">, </span><span class="nx">integration_mesosphere</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMesosphereArgs]</span> = None<span class="p">, </span><span class="nx">integration_multai_runtime</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMultaiRuntimeArgs]</span> = None<span class="p">, </span><span class="nx">integration_nomad</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationNomadArgs]</span> = None<span class="p">, </span><span class="nx">integration_rancher</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRancherArgs]</span> = None<span class="p">, </span><span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRoute53Args]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifetime_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">multai_target_sets</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupMultaiTargetSetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ElastigroupRevertToSpotArgs]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_strategies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_target_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingTargetPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signals</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupSignalArgs]]</span> = None<span class="p">, </span><span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">stateful_deallocation</span><span class="p">:</span> <span class="nx">Optional[ElastigroupStatefulDeallocationArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> Elastigroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5755,7 +5755,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupebsblockdevice">List[Elastigroup<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#elastigroupebsblockdevice">List[Elastigroup<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5808,7 +5808,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupephemeralblockdevice">List[Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#elastigroupephemeralblockdevice">List[Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5917,7 +5917,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_instance_types_weights_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>weights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupinstancetypesweight">List[Elastigroup<wbr>Instance<wbr>Types<wbr>Weight]</a></span>
+        <span class="property-type"><a href="#elastigroupinstancetypesweight">List[Elastigroup<wbr>Instance<wbr>Types<wbr>Weight<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of weights per instance type for weighted groups. Each object in the list should have the following attributes:
 {{% /md %}}</dd>
@@ -5928,7 +5928,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integration_beanstalk_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>beanstalk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationbeanstalk">Dict[Elastigroup<wbr>Integration<wbr>Beanstalk]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationbeanstalk">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5938,7 +5938,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integration_codedeploy_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>codedeploy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationcodedeploy">Dict[Elastigroup<wbr>Integration<wbr>Codedeploy]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationcodedeploy">Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5948,7 +5948,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integration_docker_swarm_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>docker_<wbr>swarm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Dict[Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5958,7 +5958,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integration_ecs_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>ecs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationecs">Dict[Elastigroup<wbr>Integration<wbr>Ecs]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationecs">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5968,7 +5968,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integration_gitlab_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>gitlab</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationgitlab">Dict[Elastigroup<wbr>Integration<wbr>Gitlab]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationgitlab">Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5978,7 +5978,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integration_kubernetes_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>kubernetes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Dict[Elastigroup<wbr>Integration<wbr>Kubernetes]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5988,7 +5988,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integration_mesosphere_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>mesosphere</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationmesosphere">Dict[Elastigroup<wbr>Integration<wbr>Mesosphere]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationmesosphere">Elastigroup<wbr>Integration<wbr>Mesosphere<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5998,7 +5998,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integration_multai_runtime_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>multai_<wbr>runtime</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Dict[Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6008,7 +6008,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integration_nomad_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>nomad</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationnomad">Dict[Elastigroup<wbr>Integration<wbr>Nomad]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationnomad">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6018,7 +6018,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integration_rancher_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>rancher</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationrancher">Dict[Elastigroup<wbr>Integration<wbr>Rancher]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationrancher">Elastigroup<wbr>Integration<wbr>Rancher<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6028,7 +6028,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integration_route53_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>route53</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationroute53">Dict[Elastigroup<wbr>Integration<wbr>Route53]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationroute53">Elastigroup<wbr>Integration<wbr>Route53Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6081,7 +6081,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_multai_target_sets_python" style="color: inherit; text-decoration: inherit;">multai_<wbr>target_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmultaitargetset">List[Elastigroup<wbr>Multai<wbr>Target<wbr>Set]</a></span>
+        <span class="property-type"><a href="#elastigroupmultaitargetset">List[Elastigroup<wbr>Multai<wbr>Target<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6102,7 +6102,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetworkinterface">List[Elastigroup<wbr>Network<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#elastigroupnetworkinterface">List[Elastigroup<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6221,7 +6221,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_revert_to_spot_python" style="color: inherit; text-decoration: inherit;">revert_<wbr>to_<wbr>spot</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupreverttospot">Dict[Elastigroup<wbr>Revert<wbr>To<wbr>Spot]</a></span>
+        <span class="property-type"><a href="#elastigroupreverttospot">Elastigroup<wbr>Revert<wbr>To<wbr>Spot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hold settings for strategy correction – replacing On-Demand for Spot instances. Supported Values: `"never"`, `"always"`, `"timeWindow"`
 {{% /md %}}</dd>
@@ -6232,7 +6232,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_scaling_down_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>down_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicy">List[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicy">List[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6242,7 +6242,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_scaling_strategies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>strategies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingstrategy">List[Elastigroup<wbr>Scaling<wbr>Strategy]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingstrategy">List[Elastigroup<wbr>Scaling<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set termination policy.
 {{% /md %}}</dd>
@@ -6253,7 +6253,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_scaling_target_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>target_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingtargetpolicy">List[Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingtargetpolicy">List[Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6263,7 +6263,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_scaling_up_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>up_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicy">List[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicy">List[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6273,7 +6273,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_scheduled_tasks_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>tasks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscheduledtask">List[Elastigroup<wbr>Scheduled<wbr>Task]</a></span>
+        <span class="property-type"><a href="#elastigroupscheduledtask">List[Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6305,7 +6305,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_signals_python" style="color: inherit; text-decoration: inherit;">signals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupsignal">List[Elastigroup<wbr>Signal]</a></span>
+        <span class="property-type"><a href="#elastigroupsignal">List[Elastigroup<wbr>Signal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6326,7 +6326,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_stateful_deallocation_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>deallocation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupstatefuldeallocation">Dict[Elastigroup<wbr>Stateful<wbr>Deallocation]</a></span>
+        <span class="property-type"><a href="#elastigroupstatefuldeallocation">Elastigroup<wbr>Stateful<wbr>Deallocation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6348,7 +6348,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouptag">List[Elastigroup<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#elastigrouptag">List[Elastigroup<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -6369,7 +6369,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#state_update_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicy">Dict[Elastigroup<wbr>Update<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6713,8 +6713,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="devicename_python">
-<a href="#devicename_python" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
+        <span id="device_name_python">
+<a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6723,8 +6723,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deleteontermination_python">
-<a href="#deleteontermination_python" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+        <span id="delete_on_termination_python">
+<a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6753,8 +6753,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kmskeyid_python">
-<a href="#kmskeyid_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+        <span id="kms_key_id_python">
+<a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6763,8 +6763,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="snapshotid_python">
-<a href="#snapshotid_python" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
+        <span id="snapshot_id_python">
+<a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6773,8 +6773,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumesize_python">
-<a href="#volumesize_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
+        <span id="volume_size_python">
+<a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6783,8 +6783,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumetype_python">
-<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6899,8 +6899,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="devicename_python">
-<a href="#devicename_python" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
+        <span id="device_name_python">
+<a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6909,8 +6909,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualname_python">
-<a href="#virtualname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
+        <span id="virtual_name_python">
+<a href="#virtual_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7031,8 +7031,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="instancetype_python">
-<a href="#instancetype_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+        <span id="instance_type_python">
+<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7193,14 +7193,14 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#deployment_preferences_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>preferences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationbeanstalkdeploymentpreferences">Dict[Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationbeanstalkdeploymentpreferences">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="environmentid_python">
-<a href="#environmentid_python" style="color: inherit; text-decoration: inherit;">environment<wbr>Id</a>
+        <span id="environment_id_python">
+<a href="#environment_id_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7213,7 +7213,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#managed_actions_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationbeanstalkmanagedactions">Dict[Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationbeanstalkmanagedactions">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7385,8 +7385,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="automaticroll_python">
-<a href="#automaticroll_python" style="color: inherit; text-decoration: inherit;">automatic<wbr>Roll</a>
+        <span id="automatic_roll_python">
+<a href="#automatic_roll_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>roll</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7395,8 +7395,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="batchsizepercentage_python">
-<a href="#batchsizepercentage_python" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>Percentage</a>
+        <span id="batch_size_percentage_python">
+<a href="#batch_size_percentage_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7419,7 +7419,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#strategy_python" style="color: inherit; text-decoration: inherit;">strategy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationbeanstalkdeploymentpreferencesstrategy">Dict[Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationbeanstalkdeploymentpreferencesstrategy">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7541,8 +7541,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="shoulddraininstances_python">
-<a href="#shoulddraininstances_python" style="color: inherit; text-decoration: inherit;">should<wbr>Drain<wbr>Instances</a>
+        <span id="should_drain_instances_python">
+<a href="#should_drain_instances_python" style="color: inherit; text-decoration: inherit;">should_<wbr>drain_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7627,11 +7627,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="platformupdate_python">
-<a href="#platformupdate_python" style="color: inherit; text-decoration: inherit;">platform<wbr>Update</a>
+        <span id="platform_update_python">
+<a href="#platform_update_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>update</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationbeanstalkmanagedactionsplatformupdate">Dict[Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationbeanstalkmanagedactionsplatformupdate">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7776,8 +7776,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="performat_python">
-<a href="#performat_python" style="color: inherit; text-decoration: inherit;">perform<wbr>At</a>
+        <span id="perform_at_python">
+<a href="#perform_at_python" style="color: inherit; text-decoration: inherit;">perform_<wbr>at</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7787,8 +7787,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timewindow_python">
-<a href="#timewindow_python" style="color: inherit; text-decoration: inherit;">time<wbr>Window</a>
+        <span id="time_window_python">
+<a href="#time_window_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7797,8 +7797,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="updatelevel_python">
-<a href="#updatelevel_python" style="color: inherit; text-decoration: inherit;">update<wbr>Level</a>
+        <span id="update_level_python">
+<a href="#update_level_python" style="color: inherit; text-decoration: inherit;">update_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7943,8 +7943,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="cleanuponfailure_python">
-<a href="#cleanuponfailure_python" style="color: inherit; text-decoration: inherit;">cleanup<wbr>On<wbr>Failure</a>
+        <span id="cleanup_on_failure_python">
+<a href="#cleanup_on_failure_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>on_<wbr>failure</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7953,18 +7953,18 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="deploymentgroups_python">
-<a href="#deploymentgroups_python" style="color: inherit; text-decoration: inherit;">deployment<wbr>Groups</a>
+        <span id="deployment_groups_python">
+<a href="#deployment_groups_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationcodedeploydeploymentgroup">List[Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Deployment<wbr>Group]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationcodedeploydeploymentgroup">List[Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Deployment<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="terminateinstanceonfailure_python">
-<a href="#terminateinstanceonfailure_python" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instance<wbr>On<wbr>Failure</a>
+        <span id="terminate_instance_on_failure_python">
+<a href="#terminate_instance_on_failure_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instance_<wbr>on_<wbr>failure</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8079,8 +8079,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="applicationname_python">
-<a href="#applicationname_python" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
+        <span id="application_name_python">
+<a href="#application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8089,8 +8089,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="deploymentgroupname_python">
-<a href="#deploymentgroupname_python" style="color: inherit; text-decoration: inherit;">deployment<wbr>Group<wbr>Name</a>
+        <span id="deployment_group_name_python">
+<a href="#deployment_group_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>group_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8325,8 +8325,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="masterhost_python">
-<a href="#masterhost_python" style="color: inherit; text-decoration: inherit;">master<wbr>Host</a>
+        <span id="master_host_python">
+<a href="#master_host_python" style="color: inherit; text-decoration: inherit;">master_<wbr>host</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8335,8 +8335,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="masterport_python">
-<a href="#masterport_python" style="color: inherit; text-decoration: inherit;">master<wbr>Port</a>
+        <span id="master_port_python">
+<a href="#master_port_python" style="color: inherit; text-decoration: inherit;">master_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8345,8 +8345,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscalecooldown_python">
-<a href="#autoscalecooldown_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Cooldown</a>
+        <span id="autoscale_cooldown_python">
+<a href="#autoscale_cooldown_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>cooldown</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8355,28 +8355,28 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscaledown_python">
-<a href="#autoscaledown_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Down</a>
+        <span id="autoscale_down_python">
+<a href="#autoscale_down_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>down</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationdockerswarmautoscaledown">Dict[Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Down]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationdockerswarmautoscaledown">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscaleheadroom_python">
-<a href="#autoscaleheadroom_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Headroom</a>
+        <span id="autoscale_headroom_python">
+<a href="#autoscale_headroom_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>headroom</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationdockerswarmautoscaleheadroom">Dict[Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Headroom]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationdockerswarmautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscaleisenabled_python">
-<a href="#autoscaleisenabled_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Is<wbr>Enabled</a>
+        <span id="autoscale_is_enabled_python">
+<a href="#autoscale_is_enabled_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>is_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8461,8 +8461,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="evaluationperiods_python">
-<a href="#evaluationperiods_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
+        <span id="evaluation_periods_python">
+<a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8607,8 +8607,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cpuperunit_python">
-<a href="#cpuperunit_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Per<wbr>Unit</a>
+        <span id="cpu_per_unit_python">
+<a href="#cpu_per_unit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8617,8 +8617,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="memoryperunit_python">
-<a href="#memoryperunit_python" style="color: inherit; text-decoration: inherit;">memory<wbr>Per<wbr>Unit</a>
+        <span id="memory_per_unit_python">
+<a href="#memory_per_unit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8627,8 +8627,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numofunits_python">
-<a href="#numofunits_python" style="color: inherit; text-decoration: inherit;">num<wbr>Of<wbr>Units</a>
+        <span id="num_of_units_python">
+<a href="#num_of_units_python" style="color: inherit; text-decoration: inherit;">num_<wbr>of_<wbr>units</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8933,18 +8933,18 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscaleattributes_python">
-<a href="#autoscaleattributes_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Attributes</a>
+        <span id="autoscale_attributes_python">
+<a href="#autoscale_attributes_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationecsautoscaleattribute">List[Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Attribute]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationecsautoscaleattribute">List[Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscalecooldown_python">
-<a href="#autoscalecooldown_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Cooldown</a>
+        <span id="autoscale_cooldown_python">
+<a href="#autoscale_cooldown_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>cooldown</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8953,38 +8953,28 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscaledown_python">
-<a href="#autoscaledown_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Down</a>
+        <span id="autoscale_down_python">
+<a href="#autoscale_down_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>down</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationecsautoscaledown">Dict[Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Down]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationecsautoscaledown">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscaleheadroom_python">
-<a href="#autoscaleheadroom_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Headroom</a>
+        <span id="autoscale_headroom_python">
+<a href="#autoscale_headroom_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>headroom</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationecsautoscaleheadroom">Dict[Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Headroom]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationecsautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscaleisautoconfig_python">
-<a href="#autoscaleisautoconfig_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Is<wbr>Auto<wbr>Config</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="autoscaleisenabled_python">
-<a href="#autoscaleisenabled_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Is<wbr>Enabled</a>
+        <span id="autoscale_is_auto_config_python">
+<a href="#autoscale_is_auto_config_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>is_<wbr>auto_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8993,8 +8983,18 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscalescaledownnonservicetasks_python">
-<a href="#autoscalescaledownnonservicetasks_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Scale<wbr>Down<wbr>Non<wbr>Service<wbr>Tasks</a>
+        <span id="autoscale_is_enabled_python">
+<a href="#autoscale_is_enabled_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>is_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoscale_scale_down_non_service_tasks_python">
+<a href="#autoscale_scale_down_non_service_tasks_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>scale_<wbr>down_<wbr>non_<wbr>service_<wbr>tasks</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9235,8 +9235,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="evaluationperiods_python">
-<a href="#evaluationperiods_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
+        <span id="evaluation_periods_python">
+<a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -9245,8 +9245,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxscaledownpercentage_python">
-<a href="#maxscaledownpercentage_python" style="color: inherit; text-decoration: inherit;">max<wbr>Scale<wbr>Down<wbr>Percentage</a>
+        <span id="max_scale_down_percentage_python">
+<a href="#max_scale_down_percentage_python" style="color: inherit; text-decoration: inherit;">max_<wbr>scale_<wbr>down_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -9391,8 +9391,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cpuperunit_python">
-<a href="#cpuperunit_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Per<wbr>Unit</a>
+        <span id="cpu_per_unit_python">
+<a href="#cpu_per_unit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -9401,8 +9401,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="memoryperunit_python">
-<a href="#memoryperunit_python" style="color: inherit; text-decoration: inherit;">memory<wbr>Per<wbr>Unit</a>
+        <span id="memory_per_unit_python">
+<a href="#memory_per_unit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -9411,8 +9411,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numofunits_python">
-<a href="#numofunits_python" style="color: inherit; text-decoration: inherit;">num<wbr>Of<wbr>Units</a>
+        <span id="num_of_units_python">
+<a href="#num_of_units_python" style="color: inherit; text-decoration: inherit;">num_<wbr>of_<wbr>units</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -9501,7 +9501,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#runner_python" style="color: inherit; text-decoration: inherit;">runner</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationgitlabrunner">Dict[Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Runner]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationgitlabrunner">Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Runner<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9583,8 +9583,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isenabled_python">
-<a href="#isenabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+        <span id="is_enabled_python">
+<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9939,8 +9939,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="apiserver_python">
-<a href="#apiserver_python" style="color: inherit; text-decoration: inherit;">api<wbr>Server</a>
+        <span id="api_server_python">
+<a href="#api_server_python" style="color: inherit; text-decoration: inherit;">api_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9949,8 +9949,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscalecooldown_python">
-<a href="#autoscalecooldown_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Cooldown</a>
+        <span id="autoscale_cooldown_python">
+<a href="#autoscale_cooldown_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>cooldown</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -9959,38 +9959,28 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscaledown_python">
-<a href="#autoscaledown_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Down</a>
+        <span id="autoscale_down_python">
+<a href="#autoscale_down_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>down</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscaledown">Dict[Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Down]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscaledown">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscaleheadroom_python">
-<a href="#autoscaleheadroom_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Headroom</a>
+        <span id="autoscale_headroom_python">
+<a href="#autoscale_headroom_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>headroom</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscaleheadroom">Dict[Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Headroom]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscaleisautoconfig_python">
-<a href="#autoscaleisautoconfig_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Is<wbr>Auto<wbr>Config</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="autoscaleisenabled_python">
-<a href="#autoscaleisenabled_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Is<wbr>Enabled</a>
+        <span id="autoscale_is_auto_config_python">
+<a href="#autoscale_is_auto_config_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>is_<wbr>auto_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9999,18 +9989,28 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscalelabels_python">
-<a href="#autoscalelabels_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Labels</a>
+        <span id="autoscale_is_enabled_python">
+<a href="#autoscale_is_enabled_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>is_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscalelabel">List[Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Label]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clusteridentifier_python">
-<a href="#clusteridentifier_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Identifier</a>
+        <span id="autoscale_labels_python">
+<a href="#autoscale_labels_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscalelabel">List[Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Label<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cluster_identifier_python">
+<a href="#cluster_identifier_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10019,8 +10019,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="integrationmode_python">
-<a href="#integrationmode_python" style="color: inherit; text-decoration: inherit;">integration<wbr>Mode</a>
+        <span id="integration_mode_python">
+<a href="#integration_mode_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10115,8 +10115,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="evaluationperiods_python">
-<a href="#evaluationperiods_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
+        <span id="evaluation_periods_python">
+<a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -10261,8 +10261,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cpuperunit_python">
-<a href="#cpuperunit_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Per<wbr>Unit</a>
+        <span id="cpu_per_unit_python">
+<a href="#cpu_per_unit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -10271,8 +10271,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="memoryperunit_python">
-<a href="#memoryperunit_python" style="color: inherit; text-decoration: inherit;">memory<wbr>Per<wbr>Unit</a>
+        <span id="memory_per_unit_python">
+<a href="#memory_per_unit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -10281,8 +10281,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numofunits_python">
-<a href="#numofunits_python" style="color: inherit; text-decoration: inherit;">num<wbr>Of<wbr>Units</a>
+        <span id="num_of_units_python">
+<a href="#num_of_units_python" style="color: inherit; text-decoration: inherit;">num_<wbr>of_<wbr>units</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -10493,8 +10493,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="apiserver_python">
-<a href="#apiserver_python" style="color: inherit; text-decoration: inherit;">api<wbr>Server</a>
+        <span id="api_server_python">
+<a href="#api_server_python" style="color: inherit; text-decoration: inherit;">api_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10875,8 +10875,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="masterhost_python">
-<a href="#masterhost_python" style="color: inherit; text-decoration: inherit;">master<wbr>Host</a>
+        <span id="master_host_python">
+<a href="#master_host_python" style="color: inherit; text-decoration: inherit;">master_<wbr>host</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10885,8 +10885,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="masterport_python">
-<a href="#masterport_python" style="color: inherit; text-decoration: inherit;">master<wbr>Port</a>
+        <span id="master_port_python">
+<a href="#master_port_python" style="color: inherit; text-decoration: inherit;">master_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -10895,8 +10895,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="acltoken_python">
-<a href="#acltoken_python" style="color: inherit; text-decoration: inherit;">acl<wbr>Token</a>
+        <span id="acl_token_python">
+<a href="#acl_token_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10905,18 +10905,18 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscaleconstraints_python">
-<a href="#autoscaleconstraints_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Constraints</a>
+        <span id="autoscale_constraints_python">
+<a href="#autoscale_constraints_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationnomadautoscaleconstraint">List[Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Constraint]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationnomadautoscaleconstraint">List[Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscalecooldown_python">
-<a href="#autoscalecooldown_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Cooldown</a>
+        <span id="autoscale_cooldown_python">
+<a href="#autoscale_cooldown_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>cooldown</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -10925,28 +10925,28 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscaledown_python">
-<a href="#autoscaledown_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Down</a>
+        <span id="autoscale_down_python">
+<a href="#autoscale_down_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>down</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationnomadautoscaledown">Dict[Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Down]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationnomadautoscaledown">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscaleheadroom_python">
-<a href="#autoscaleheadroom_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Headroom</a>
+        <span id="autoscale_headroom_python">
+<a href="#autoscale_headroom_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>headroom</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationnomadautoscaleheadroom">Dict[Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Headroom]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationnomadautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscaleisenabled_python">
-<a href="#autoscaleisenabled_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Is<wbr>Enabled</a>
+        <span id="autoscale_is_enabled_python">
+<a href="#autoscale_is_enabled_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>is_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -11157,8 +11157,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="evaluationperiods_python">
-<a href="#evaluationperiods_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
+        <span id="evaluation_periods_python">
+<a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -11303,8 +11303,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cpuperunit_python">
-<a href="#cpuperunit_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Per<wbr>Unit</a>
+        <span id="cpu_per_unit_python">
+<a href="#cpu_per_unit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -11313,8 +11313,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="memoryperunit_python">
-<a href="#memoryperunit_python" style="color: inherit; text-decoration: inherit;">memory<wbr>Per<wbr>Unit</a>
+        <span id="memory_per_unit_python">
+<a href="#memory_per_unit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -11323,8 +11323,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numofunits_python">
-<a href="#numofunits_python" style="color: inherit; text-decoration: inherit;">num<wbr>Of<wbr>Units</a>
+        <span id="num_of_units_python">
+<a href="#num_of_units_python" style="color: inherit; text-decoration: inherit;">num_<wbr>of_<wbr>units</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -11499,8 +11499,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="accesskey_python">
-<a href="#accesskey_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+        <span id="access_key_python">
+<a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11509,8 +11509,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="masterhost_python">
-<a href="#masterhost_python" style="color: inherit; text-decoration: inherit;">master<wbr>Host</a>
+        <span id="master_host_python">
+<a href="#master_host_python" style="color: inherit; text-decoration: inherit;">master_<wbr>host</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11519,8 +11519,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="secretkey_python">
-<a href="#secretkey_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+        <span id="secret_key_python">
+<a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11619,7 +11619,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationroute53domain">List[Elastigroup<wbr>Integration<wbr>Route53Domain]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationroute53domain">List[Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11791,8 +11791,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="hostedzoneid_python">
-<a href="#hostedzoneid_python" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
+        <span id="hosted_zone_id_python">
+<a href="#hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11801,18 +11801,18 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="recordsets_python">
-<a href="#recordsets_python" style="color: inherit; text-decoration: inherit;">record<wbr>Sets</a>
+        <span id="record_sets_python">
+<a href="#record_sets_python" style="color: inherit; text-decoration: inherit;">record_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationroute53domainrecordset">List[Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationroute53domainrecordset">List[Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recordsettype_python">
-<a href="#recordsettype_python" style="color: inherit; text-decoration: inherit;">record<wbr>Set<wbr>Type</a>
+        <span id="record_set_type_python">
+<a href="#record_set_type_python" style="color: inherit; text-decoration: inherit;">record_<wbr>set_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11821,8 +11821,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="spotinstacctid_python">
-<a href="#spotinstacctid_python" style="color: inherit; text-decoration: inherit;">spotinst<wbr>Acct<wbr>Id</a>
+        <span id="spotinst_acct_id_python">
+<a href="#spotinst_acct_id_python" style="color: inherit; text-decoration: inherit;">spotinst_<wbr>acct_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11981,8 +11981,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepublicdns_python">
-<a href="#usepublicdns_python" style="color: inherit; text-decoration: inherit;">use<wbr>Public<wbr>Dns</a>
+        <span id="use_public_dns_python">
+<a href="#use_public_dns_python" style="color: inherit; text-decoration: inherit;">use_<wbr>public_<wbr>dns</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -11991,8 +11991,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepublicip_python">
-<a href="#usepublicip_python" style="color: inherit; text-decoration: inherit;">use<wbr>Public<wbr>Ip</a>
+        <span id="use_public_ip_python">
+<a href="#use_public_ip_python" style="color: inherit; text-decoration: inherit;">use_<wbr>public_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -12416,8 +12416,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="deviceindex_python">
-<a href="#deviceindex_python" style="color: inherit; text-decoration: inherit;">device<wbr>Index</a>
+        <span id="device_index_python">
+<a href="#device_index_python" style="color: inherit; text-decoration: inherit;">device_<wbr>index</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12426,8 +12426,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="associateipv6address_python">
-<a href="#associateipv6address_python" style="color: inherit; text-decoration: inherit;">associate<wbr>Ipv6Address</a>
+        <span id="associate_ipv6_address_python">
+<a href="#associate_ipv6_address_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>ipv6_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -12446,8 +12446,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deleteontermination_python">
-<a href="#deleteontermination_python" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+        <span id="delete_on_termination_python">
+<a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -12467,8 +12467,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networkinterfaceid_python">
-<a href="#networkinterfaceid_python" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Id</a>
+        <span id="network_interface_id_python">
+<a href="#network_interface_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12477,8 +12477,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateipaddress_python">
-<a href="#privateipaddress_python" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
+        <span id="private_ip_address_python">
+<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12487,8 +12487,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secondaryprivateipaddresscount_python">
-<a href="#secondaryprivateipaddresscount_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Private<wbr>Ip<wbr>Address<wbr>Count</a>
+        <span id="secondary_private_ip_address_count_python">
+<a href="#secondary_private_ip_address_count_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>private_<wbr>ip_<wbr>address_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12609,8 +12609,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="performat_python">
-<a href="#performat_python" style="color: inherit; text-decoration: inherit;">perform<wbr>At</a>
+        <span id="perform_at_python">
+<a href="#perform_at_python" style="color: inherit; text-decoration: inherit;">perform_<wbr>at</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12620,8 +12620,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timewindows_python">
-<a href="#timewindows_python" style="color: inherit; text-decoration: inherit;">time<wbr>Windows</a>
+        <span id="time_windows_python">
+<a href="#time_windows_python" style="color: inherit; text-decoration: inherit;">time_<wbr>windows</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -13277,8 +13277,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13297,8 +13297,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="policyname_python">
-<a href="#policyname_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
+        <span id="policy_name_python">
+<a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13327,8 +13327,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actiontype_python">
-<a href="#actiontype_python" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
+        <span id="action_type_python">
+<a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13361,14 +13361,14 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">List[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">List[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="evaluationperiods_python">
-<a href="#evaluationperiods_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
+        <span id="evaluation_periods_python">
+<a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -13377,8 +13377,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isenabled_python">
-<a href="#isenabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+        <span id="is_enabled_python">
+<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -13387,8 +13387,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxtargetcapacity_python">
-<a href="#maxtargetcapacity_python" style="color: inherit; text-decoration: inherit;">max<wbr>Target<wbr>Capacity</a>
+        <span id="max_target_capacity_python">
+<a href="#max_target_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13407,8 +13407,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mintargetcapacity_python">
-<a href="#mintargetcapacity_python" style="color: inherit; text-decoration: inherit;">min<wbr>Target<wbr>Capacity</a>
+        <span id="min_target_capacity_python">
+<a href="#min_target_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13719,8 +13719,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="terminateatendofbillinghour_python">
-<a href="#terminateatendofbillinghour_python" style="color: inherit; text-decoration: inherit;">terminate<wbr>At<wbr>End<wbr>Of<wbr>Billing<wbr>Hour</a>
+        <span id="terminate_at_end_of_billing_hour_python">
+<a href="#terminate_at_end_of_billing_hour_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>at_<wbr>end_<wbr>of_<wbr>billing_<wbr>hour</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -13730,8 +13730,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="terminationpolicy_python">
-<a href="#terminationpolicy_python" style="color: inherit; text-decoration: inherit;">termination<wbr>Policy</a>
+        <span id="termination_policy_python">
+<a href="#termination_policy_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14117,8 +14117,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14137,8 +14137,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="policyname_python">
-<a href="#policyname_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
+        <span id="policy_name_python">
+<a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14181,14 +14181,14 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingtargetpolicydimension">List[Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Dimension]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingtargetpolicydimension">List[Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxcapacityperscale_python">
-<a href="#maxcapacityperscale_python" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity<wbr>Per<wbr>Scale</a>
+        <span id="max_capacity_per_scale_python">
+<a href="#max_capacity_per_scale_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity_<wbr>per_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14197,8 +14197,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="predictivemode_python">
-<a href="#predictivemode_python" style="color: inherit; text-decoration: inherit;">predictive<wbr>Mode</a>
+        <span id="predictive_mode_python">
+<a href="#predictive_mode_python" style="color: inherit; text-decoration: inherit;">predictive_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15003,8 +15003,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15023,8 +15023,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="policyname_python">
-<a href="#policyname_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
+        <span id="policy_name_python">
+<a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15053,8 +15053,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actiontype_python">
-<a href="#actiontype_python" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
+        <span id="action_type_python">
+<a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15087,14 +15087,14 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicydimension">List[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension]</a></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicydimension">List[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="evaluationperiods_python">
-<a href="#evaluationperiods_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
+        <span id="evaluation_periods_python">
+<a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -15103,8 +15103,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isenabled_python">
-<a href="#isenabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+        <span id="is_enabled_python">
+<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -15113,8 +15113,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxtargetcapacity_python">
-<a href="#maxtargetcapacity_python" style="color: inherit; text-decoration: inherit;">max<wbr>Target<wbr>Capacity</a>
+        <span id="max_target_capacity_python">
+<a href="#max_target_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15133,8 +15133,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mintargetcapacity_python">
-<a href="#mintargetcapacity_python" style="color: inherit; text-decoration: inherit;">min<wbr>Target<wbr>Capacity</a>
+        <span id="min_target_capacity_python">
+<a href="#min_target_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15829,8 +15829,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="tasktype_python">
-<a href="#tasktype_python" style="color: inherit; text-decoration: inherit;">task<wbr>Type</a>
+        <span id="task_type_python">
+<a href="#task_type_python" style="color: inherit; text-decoration: inherit;">task_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15849,8 +15849,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="adjustmentpercentage_python">
-<a href="#adjustmentpercentage_python" style="color: inherit; text-decoration: inherit;">adjustment<wbr>Percentage</a>
+        <span id="adjustment_percentage_python">
+<a href="#adjustment_percentage_python" style="color: inherit; text-decoration: inherit;">adjustment_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15859,8 +15859,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="batchsizepercentage_python">
-<a href="#batchsizepercentage_python" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>Percentage</a>
+        <span id="batch_size_percentage_python">
+<a href="#batch_size_percentage_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15869,8 +15869,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cronexpression_python">
-<a href="#cronexpression_python" style="color: inherit; text-decoration: inherit;">cron<wbr>Expression</a>
+        <span id="cron_expression_python">
+<a href="#cron_expression_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>expression</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15899,8 +15899,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isenabled_python">
-<a href="#isenabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+        <span id="is_enabled_python">
+<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -15909,8 +15909,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxcapacity_python">
-<a href="#maxcapacity_python" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity</a>
+        <span id="max_capacity_python">
+<a href="#max_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15919,8 +15919,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mincapacity_python">
-<a href="#mincapacity_python" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
+        <span id="min_capacity_python">
+<a href="#min_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15929,8 +15929,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scalemaxcapacity_python">
-<a href="#scalemaxcapacity_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Max<wbr>Capacity</a>
+        <span id="scale_max_capacity_python">
+<a href="#scale_max_capacity_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>max_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15939,8 +15939,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scalemincapacity_python">
-<a href="#scalemincapacity_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Min<wbr>Capacity</a>
+        <span id="scale_min_capacity_python">
+<a href="#scale_min_capacity_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>min_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15949,8 +15949,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scaletargetcapacity_python">
-<a href="#scaletargetcapacity_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Target<wbr>Capacity</a>
+        <span id="scale_target_capacity_python">
+<a href="#scale_target_capacity_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15959,8 +15959,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="starttime_python">
-<a href="#starttime_python" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15969,8 +15969,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetcapacity_python">
-<a href="#targetcapacity_python" style="color: inherit; text-decoration: inherit;">target<wbr>Capacity</a>
+        <span id="target_capacity_python">
+<a href="#target_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16275,8 +16275,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="shoulddeleteimages_python">
-<a href="#shoulddeleteimages_python" style="color: inherit; text-decoration: inherit;">should<wbr>Delete<wbr>Images</a>
+        <span id="should_delete_images_python">
+<a href="#should_delete_images_python" style="color: inherit; text-decoration: inherit;">should_<wbr>delete_<wbr>images</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -16285,8 +16285,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="shoulddeletenetworkinterfaces_python">
-<a href="#shoulddeletenetworkinterfaces_python" style="color: inherit; text-decoration: inherit;">should<wbr>Delete<wbr>Network<wbr>Interfaces</a>
+        <span id="should_delete_network_interfaces_python">
+<a href="#should_delete_network_interfaces_python" style="color: inherit; text-decoration: inherit;">should_<wbr>delete_<wbr>network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -16295,8 +16295,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="shoulddeletesnapshots_python">
-<a href="#shoulddeletesnapshots_python" style="color: inherit; text-decoration: inherit;">should<wbr>Delete<wbr>Snapshots</a>
+        <span id="should_delete_snapshots_python">
+<a href="#should_delete_snapshots_python" style="color: inherit; text-decoration: inherit;">should_<wbr>delete_<wbr>snapshots</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -16305,8 +16305,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="shoulddeletevolumes_python">
-<a href="#shoulddeletevolumes_python" style="color: inherit; text-decoration: inherit;">should<wbr>Delete<wbr>Volumes</a>
+        <span id="should_delete_volumes_python">
+<a href="#should_delete_volumes_python" style="color: inherit; text-decoration: inherit;">should_<wbr>delete_<wbr>volumes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -16607,8 +16607,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="shouldresumestateful_python">
-<a href="#shouldresumestateful_python" style="color: inherit; text-decoration: inherit;">should<wbr>Resume<wbr>Stateful</a>
+        <span id="should_resume_stateful_python">
+<a href="#should_resume_stateful_python" style="color: inherit; text-decoration: inherit;">should_<wbr>resume_<wbr>stateful</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -16617,8 +16617,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="shouldroll_python">
-<a href="#shouldroll_python" style="color: inherit; text-decoration: inherit;">should<wbr>Roll</a>
+        <span id="should_roll_python">
+<a href="#should_roll_python" style="color: inherit; text-decoration: inherit;">should_<wbr>roll</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -16627,8 +16627,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoapplytags_python">
-<a href="#autoapplytags_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Apply<wbr>Tags</a>
+        <span id="auto_apply_tags_python">
+<a href="#auto_apply_tags_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>apply_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -16637,11 +16637,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rollconfig_python">
-<a href="#rollconfig_python" style="color: inherit; text-decoration: inherit;">roll<wbr>Config</a>
+        <span id="roll_config_python">
+<a href="#roll_config_python" style="color: inherit; text-decoration: inherit;">roll_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">Dict[Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config]</a></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -16876,8 +16876,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="batchsizepercentage_python">
-<a href="#batchsizepercentage_python" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>Percentage</a>
+        <span id="batch_size_percentage_python">
+<a href="#batch_size_percentage_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -16911,14 +16911,14 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#strategy_python" style="color: inherit; text-decoration: inherit;">strategy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfigstrategy">Dict[Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy]</a></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfigstrategy">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="waitforrollpercentage_python">
-<a href="#waitforrollpercentage_python" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Roll<wbr>Percentage</a>
+        <span id="wait_for_roll_percentage_python">
+<a href="#wait_for_roll_percentage_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>roll_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -16927,8 +16927,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="waitforrolltimeout_python">
-<a href="#waitforrolltimeout_python" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Roll<wbr>Timeout</a>
+        <span id="wait_for_roll_timeout_python">
+<a href="#wait_for_roll_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>roll_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -17113,8 +17113,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="batchminhealthypercentage_python">
-<a href="#batchminhealthypercentage_python" style="color: inherit; text-decoration: inherit;">batch<wbr>Min<wbr>Healthy<wbr>Percentage</a>
+        <span id="batch_min_healthy_percentage_python">
+<a href="#batch_min_healthy_percentage_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>min_<wbr>healthy_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -17123,18 +17123,18 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onfailure_python">
-<a href="#onfailure_python" style="color: inherit; text-decoration: inherit;">on<wbr>Failure</a>
+        <span id="on_failure_python">
+<a href="#on_failure_python" style="color: inherit; text-decoration: inherit;">on_<wbr>failure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfigstrategyonfailure">Dict[Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy<wbr>On<wbr>Failure]</a></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfigstrategyonfailure">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy<wbr>On<wbr>Failure<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="shoulddraininstances_python">
-<a href="#shoulddraininstances_python" style="color: inherit; text-decoration: inherit;">should<wbr>Drain<wbr>Instances</a>
+        <span id="should_drain_instances_python">
+<a href="#should_drain_instances_python" style="color: inherit; text-decoration: inherit;">should_<wbr>drain_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -17342,8 +17342,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-required"
             title="Required">
-        <span id="actiontype_python">
-<a href="#actiontype_python" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
+        <span id="action_type_python">
+<a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17352,8 +17352,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="batchnum_python">
-<a href="#batchnum_python" style="color: inherit; text-decoration: inherit;">batch<wbr>Num</a>
+        <span id="batch_num_python">
+<a href="#batch_num_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>num</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -17373,8 +17373,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="shoulddecrementtargetcapacity_python">
-<a href="#shoulddecrementtargetcapacity_python" style="color: inherit; text-decoration: inherit;">should<wbr>Decrement<wbr>Target<wbr>Capacity</a>
+        <span id="should_decrement_target_capacity_python">
+<a href="#should_decrement_target_capacity_python" style="color: inherit; text-decoration: inherit;">should_<wbr>decrement_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -17383,8 +17383,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="shouldhandleallbatches_python">
-<a href="#shouldhandleallbatches_python" style="color: inherit; text-decoration: inherit;">should<wbr>Handle<wbr>All<wbr>Batches</a>
+        <span id="should_handle_all_batches_python">
+<a href="#should_handle_all_batches_python" style="color: inherit; text-decoration: inherit;">should_<wbr>handle_<wbr>all_<wbr>batches</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

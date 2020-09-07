@@ -124,23 +124,23 @@ import pulumi
 import pulumi_spotinst as spotinst
 
 example = spotinst.ecs.OceanLaunchSpec("example",
-    attributes=[{
-        "key": "fakeKey",
-        "value": "fakeValue",
-    }],
-    autoscale_headrooms=[{
-        "cpuPerUnit": 1000,
-        "memoryPerUnit": 2048,
-        "numOfUnits": 5,
-    }],
+    attributes=[spotinst.ecs.OceanLaunchSpecAttributeArgs(
+        key="fakeKey",
+        value="fakeValue",
+    )],
+    autoscale_headrooms=[spotinst.ecs.OceanLaunchSpecAutoscaleHeadroomArgs(
+        cpu_per_unit=1000,
+        memory_per_unit=2048,
+        num_of_units=5,
+    )],
     iam_instance_profile="iam-profile",
     image_id="ami-123456",
     ocean_id="o-123456",
     security_group_ids=["awseb-12345"],
-    tags=[{
-        "key": "Env",
-        "value": "production",
-    }],
+    tags=[spotinst.ecs.OceanLaunchSpecTagArgs(
+        key="Env",
+        value="production",
+    )],
     user_data="echo hello world")
 ```
 
@@ -188,7 +188,7 @@ const example = new spotinst.ecs.OceanLaunchSpec("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/ecs/#pulumi_spotinst.ecs.OceanLaunchSpec">OceanLaunchSpec</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecAttribute]]</span> = None<span class="p">, </span><span class="nx">autoscale_headrooms</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecAutoscaleHeadroom]]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecTag]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/ecs/#pulumi_spotinst.ecs.OceanLaunchSpec">OceanLaunchSpec</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecAttributeArgs]]</span> = None<span class="p">, </span><span class="nx">autoscale_headrooms</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecAutoscaleHeadroomArgs]]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecTagArgs]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -695,7 +695,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecattribute">List[Ocean<wbr>Launch<wbr>Spec<wbr>Attribute]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspecattribute">List[Ocean<wbr>Launch<wbr>Spec<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
@@ -706,7 +706,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 <a href="#autoscale_headrooms_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>headrooms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List[Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List[Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
 {{% /md %}}</dd>
@@ -761,7 +761,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectag">List[Ocean<wbr>Launch<wbr>Spec<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">List[Ocean<wbr>Launch<wbr>Spec<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -876,7 +876,7 @@ Get an existing OceanLaunchSpec resource's state with the given name, ID, and op
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecAttribute]]</span> = None<span class="p">, </span><span class="nx">autoscale_headrooms</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecAutoscaleHeadroom]]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecTag]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> OceanLaunchSpec</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecAttributeArgs]]</span> = None<span class="p">, </span><span class="nx">autoscale_headrooms</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecAutoscaleHeadroomArgs]]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecTagArgs]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> OceanLaunchSpec</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1314,7 +1314,7 @@ The following state arguments are supported:
 <a href="#state_attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecattribute">List[Ocean<wbr>Launch<wbr>Spec<wbr>Attribute]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspecattribute">List[Ocean<wbr>Launch<wbr>Spec<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
@@ -1325,7 +1325,7 @@ The following state arguments are supported:
 <a href="#state_autoscale_headrooms_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>headrooms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List[Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List[Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
 {{% /md %}}</dd>
@@ -1391,7 +1391,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectag">List[Ocean<wbr>Launch<wbr>Spec<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">List[Ocean<wbr>Launch<wbr>Spec<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1696,8 +1696,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="numofunits_python">
-<a href="#numofunits_python" style="color: inherit; text-decoration: inherit;">num<wbr>Of<wbr>Units</a>
+        <span id="num_of_units_python">
+<a href="#num_of_units_python" style="color: inherit; text-decoration: inherit;">num_<wbr>of_<wbr>units</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1707,8 +1707,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cpuperunit_python">
-<a href="#cpuperunit_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Per<wbr>Unit</a>
+        <span id="cpu_per_unit_python">
+<a href="#cpu_per_unit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1718,8 +1718,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="memoryperunit_python">
-<a href="#memoryperunit_python" style="color: inherit; text-decoration: inherit;">memory<wbr>Per<wbr>Unit</a>
+        <span id="memory_per_unit_python">
+<a href="#memory_per_unit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

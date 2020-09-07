@@ -90,15 +90,15 @@ import pulumi
 import pulumi_spotinst as spotinst
 
 http_check = spotinst.HealthCheck("httpCheck",
-    check={
-        "endpoint": "http://endpoint.com",
-        "healthy": 1,
-        "interval": 10,
-        "port": 1337,
-        "protocol": "http",
-        "timeout": 10,
-        "unhealthy": 1,
-    },
+    check=spotinst.HealthCheckCheckArgs(
+        endpoint="http://endpoint.com",
+        healthy=1,
+        interval=10,
+        port=1337,
+        protocol="http",
+        timeout=10,
+        unhealthy=1,
+    ),
     proxy_address="http://proxy.com",
     proxy_port=80,
     resource_id="sig-123")
@@ -142,7 +142,7 @@ const httpCheck = new spotinst.HealthCheck("http_check", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/#pulumi_spotinst.HealthCheck">HealthCheck</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">check</span><span class="p">:</span> <span class="nx">Optional[Dict[HealthCheckCheck]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/#pulumi_spotinst.HealthCheck">HealthCheck</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckCheckArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -521,7 +521,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#check_python" style="color: inherit; text-decoration: inherit;">check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckcheck">Dict[Health<wbr>Check<wbr>Check]</a></span>
+        <span class="property-type"><a href="#healthcheckcheck">Health<wbr>Check<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the check to execute.
 {{% /md %}}</dd>
@@ -646,7 +646,7 @@ Get an existing HealthCheck resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">check</span><span class="p">:</span> <span class="nx">Optional[Dict[HealthCheckCheck]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> HealthCheck</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckCheckArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> HealthCheck</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -946,7 +946,7 @@ The following state arguments are supported:
 <a href="#state_check_python" style="color: inherit; text-decoration: inherit;">check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckcheck">Dict[Health<wbr>Check<wbr>Check]</a></span>
+        <span class="property-type"><a href="#healthcheckcheck">Health<wbr>Check<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the check to execute.
 {{% /md %}}</dd>
@@ -1395,8 +1395,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endpoint_python">
-<a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">end<wbr>Point</a>
+        <span id="end_point_python">
+<a href="#end_point_python" style="color: inherit; text-decoration: inherit;">end_<wbr>point</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1416,8 +1416,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeout_python">
-<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">time<wbr>Out</a>
+        <span id="time_out_python">
+<a href="#time_out_python" style="color: inherit; text-decoration: inherit;">time_<wbr>out</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

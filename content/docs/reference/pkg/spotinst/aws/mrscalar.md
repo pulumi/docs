@@ -559,36 +559,36 @@ terraform__mr_scaler_01 = spotinst.aws.MrScalar("terraform-MrScaler-01",
     additional_primary_security_groups=["sg-456321"],
     additional_replica_security_groups=["sg-123654"],
     applications=[
-        {
-            "name": "Ganglia",
-            "version": "1.0",
-        },
-        {
-            "name": "Hadoop",
-        },
-        {
-            "args": [
+        spotinst.aws.MrScalarApplicationArgs(
+            name="Ganglia",
+            version="1.0",
+        ),
+        spotinst.aws.MrScalarApplicationArgs(
+            name="Hadoop",
+        ),
+        spotinst.aws.MrScalarApplicationArgs(
+            args=[
                 "fake",
                 "args",
             ],
-            "name": "Pig",
-        },
+            name="Pig",
+        ),
     ],
     availability_zones=["us-west-2a:subnet-123456"],
-    bootstrap_actions_files=[{
-        "bucket": "terraform-emr-test",
-        "key": "bootstrap-actions.json",
-    }],
-    configurations_files=[{
-        "bucket": "example-bucket",
-        "key": "configurations.json",
-    }],
+    bootstrap_actions_files=[spotinst.aws.MrScalarBootstrapActionsFileArgs(
+        bucket="terraform-emr-test",
+        key="bootstrap-actions.json",
+    )],
+    configurations_files=[spotinst.aws.MrScalarConfigurationsFileArgs(
+        bucket="example-bucket",
+        key="configurations.json",
+    )],
     core_desired_capacity=1,
-    core_ebs_block_devices=[{
-        "sizeInGb": 40,
-        "volumeType": "gp2",
-        "volumesPerInstance": 2,
-    }],
+    core_ebs_block_devices=[spotinst.aws.MrScalarCoreEbsBlockDeviceArgs(
+        size_in_gb=40,
+        volume_type="gp2",
+        volumes_per_instance=2,
+    )],
     core_ebs_optimized=False,
     core_instance_types=[
         "c3.xlarge",
@@ -602,32 +602,32 @@ terraform__mr_scaler_01 = spotinst.aws.MrScalar("terraform-MrScaler-01",
     description="Testing MrScaler creation via Terraform",
     ec2_key_name="test-key",
     instance_weights=[
-        {
-            "instanceType": "t2.small",
-            "weightedCapacity": 10,
-        },
-        {
-            "instanceType": "t2.medium",
-            "weightedCapacity": 90,
-        },
+        spotinst.aws.MrScalarInstanceWeightArgs(
+            instance_type="t2.small",
+            weighted_capacity=10,
+        ),
+        spotinst.aws.MrScalarInstanceWeightArgs(
+            instance_type="t2.medium",
+            weighted_capacity=90,
+        ),
     ],
     job_flow_role="EMR_EC2_ExampleRole",
     keep_job_flow_alive=True,
     log_uri="s3://example-logs",
     managed_primary_security_group="sg-123456",
     managed_replica_security_group="sg-987654",
-    master_ebs_block_devices=[{
-        "sizeInGb": 30,
-        "volumeType": "gp2",
-        "volumesPerInstance": 1,
-    }],
+    master_ebs_block_devices=[spotinst.aws.MrScalarMasterEbsBlockDeviceArgs(
+        size_in_gb=30,
+        volume_type="gp2",
+        volumes_per_instance=1,
+    )],
     master_ebs_optimized=True,
     master_instance_types=["c3.xlarge"],
     master_lifecycle="SPOT",
-    provisioning_timeout={
-        "timeout": 15,
-        "timeoutAction": "terminate",
-    },
+    provisioning_timeout=spotinst.aws.MrScalarProvisioningTimeoutArgs(
+        timeout=15,
+        timeout_action="terminate",
+    ),
     region="us-west-2",
     release_label="emr-5.17.0",
     repo_upgrade_on_boot="NONE",
@@ -635,21 +635,21 @@ terraform__mr_scaler_01 = spotinst.aws.MrScalar("terraform-MrScaler-01",
     security_config="example-config",
     service_access_security_group="access-example",
     service_role="example-role",
-    steps_files=[{
-        "bucket": "example-bucket",
-        "key": "steps.json",
-    }],
+    steps_files=[spotinst.aws.MrScalarStepsFileArgs(
+        bucket="example-bucket",
+        key="steps.json",
+    )],
     strategy="new",
-    tags=[{
-        "key": "Creator",
-        "value": "Terraform",
-    }],
+    tags=[spotinst.aws.MrScalarTagArgs(
+        key="Creator",
+        value="Terraform",
+    )],
     task_desired_capacity=1,
-    task_ebs_block_devices=[{
-        "sizeInGb": 40,
-        "volumeType": "gp2",
-        "volumesPerInstance": 2,
-    }],
+    task_ebs_block_devices=[spotinst.aws.MrScalarTaskEbsBlockDeviceArgs(
+        size_in_gb=40,
+        volume_type="gp2",
+        volumes_per_instance=2,
+    )],
     task_ebs_optimized=False,
     task_instance_types=[
         "c3.xlarge",
@@ -1030,11 +1030,11 @@ terraform__mr_scaler_01 = spotinst.aws.MrScalar("terraform-MrScaler-01",
     availability_zones=["us-west-2a:subnet-12345678"],
     cluster_id="j-123456789",
     core_desired_capacity=1,
-    core_ebs_block_devices=[{
-        "sizeInGb": 40,
-        "volumeType": "gp2",
-        "volumesPerInstance": 2,
-    }],
+    core_ebs_block_devices=[spotinst.aws.MrScalarCoreEbsBlockDeviceArgs(
+        size_in_gb=40,
+        volume_type="gp2",
+        volumes_per_instance=2,
+    )],
     core_ebs_optimized=False,
     core_instance_types=[
         "c3.xlarge",
@@ -1046,26 +1046,26 @@ terraform__mr_scaler_01 = spotinst.aws.MrScalar("terraform-MrScaler-01",
     core_unit="instance",
     description="Testing MrScaler creation via Terraform",
     expose_cluster_id=True,
-    master_ebs_block_devices=[{
-        "sizeInGb": 30,
-        "volumeType": "gp2",
-        "volumesPerInstance": 1,
-    }],
+    master_ebs_block_devices=[spotinst.aws.MrScalarMasterEbsBlockDeviceArgs(
+        size_in_gb=30,
+        volume_type="gp2",
+        volumes_per_instance=1,
+    )],
     master_ebs_optimized=True,
     master_instance_types=["c3.xlarge"],
     master_lifecycle="SPOT",
     region="us-west-2",
     strategy="clone",
-    tags=[{
-        "key": "Creator",
-        "value": "Terraform",
-    }],
+    tags=[spotinst.aws.MrScalarTagArgs(
+        key="Creator",
+        value="Terraform",
+    )],
     task_desired_capacity=1,
-    task_ebs_block_devices=[{
-        "sizeInGb": 40,
-        "volumeType": "gp2",
-        "volumesPerInstance": 2,
-    }],
+    task_ebs_block_devices=[spotinst.aws.MrScalarTaskEbsBlockDeviceArgs(
+        size_in_gb=40,
+        volume_type="gp2",
+        volumes_per_instance=2,
+    )],
     task_ebs_optimized=False,
     task_instance_types=[
         "c3.xlarge",
@@ -1074,28 +1074,28 @@ terraform__mr_scaler_01 = spotinst.aws.MrScalar("terraform-MrScaler-01",
     task_lifecycle="SPOT",
     task_max_size=30,
     task_min_size=0,
-    task_scaling_down_policies=[{
-        "actionType": "",
-        "adjustment": "1",
-        "cooldown": 60,
-        "dimensions": {
+    task_scaling_down_policies=[spotinst.aws.MrScalarTaskScalingDownPolicyArgs(
+        action_type="",
+        adjustment="1",
+        cooldown=60,
+        dimensions={
             "name": "name-1",
             "value": "value-1",
         },
-        "evaluationPeriods": 10,
-        "maxTargetCapacity": 1,
-        "maximum": 10,
-        "metricName": "CPUUtilization",
-        "minimum": 0,
-        "namespace": "AWS/EC2",
-        "operator": "gt",
-        "period": 60,
-        "policyName": "policy-name",
-        "statistic": "average",
-        "target": 5,
-        "threshold": 10,
-        "unit": "",
-    }],
+        evaluation_periods=10,
+        max_target_capacity="1",
+        maximum="10",
+        metric_name="CPUUtilization",
+        minimum="0",
+        namespace="AWS/EC2",
+        operator="gt",
+        period=60,
+        policy_name="policy-name",
+        statistic="average",
+        target="5",
+        threshold=10,
+        unit="",
+    )],
     task_unit="instance")
 pulumi.export("mrscaler-name", terraform__mr_scaler_01.name)
 pulumi.export("mrscaler-created-cluster-id", terraform__mr_scaler_01.output_cluster_id)
@@ -1290,11 +1290,11 @@ example_scaler_2 = spotinst.aws.MrScalar("example-scaler-2",
     region="us-west-2",
     strategy="wrap",
     task_desired_capacity=2,
-    task_ebs_block_devices=[{
-        "sizeInGb": 20,
-        "volumeType": "gp2",
-        "volumesPerInstance": 1,
-    }],
+    task_ebs_block_devices=[spotinst.aws.MrScalarTaskEbsBlockDeviceArgs(
+        size_in_gb=20,
+        volume_type="gp2",
+        volumes_per_instance=1,
+    )],
     task_instance_types=[
         "c3.xlarge",
         "c4.xlarge",
@@ -1350,7 +1350,7 @@ const example_scaler_2 = new spotinst.aws.MrScalar("example-scaler-2", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.MrScalar">MrScalar</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">additional_primary_security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">additional_replica_security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarApplication]]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">bootstrap_actions_files</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarBootstrapActionsFile]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations_files</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarConfigurationsFile]]</span> = None<span class="p">, </span><span class="nx">core_desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">core_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarCoreEbsBlockDevice]]</span> = None<span class="p">, </span><span class="nx">core_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">core_instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">core_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">core_min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">core_scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarCoreScalingDownPolicy]]</span> = None<span class="p">, </span><span class="nx">core_scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarCoreScalingUpPolicy]]</span> = None<span class="p">, </span><span class="nx">core_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ec2_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expose_cluster_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_weights</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarInstanceWeight]]</span> = None<span class="p">, </span><span class="nx">job_flow_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">keep_job_flow_alive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_primary_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_replica_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarMasterEbsBlockDevice]]</span> = None<span class="p">, </span><span class="nx">master_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">master_instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">master_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_timeout</span><span class="p">:</span> <span class="nx">Optional[Dict[MrScalarProvisioningTimeout]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repo_upgrade_on_boot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retries</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarScheduledTask]]</span> = None<span class="p">, </span><span class="nx">security_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_access_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">steps_files</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarStepsFile]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTag]]</span> = None<span class="p">, </span><span class="nx">task_desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">task_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTaskEbsBlockDevice]]</span> = None<span class="p">, </span><span class="nx">task_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">task_instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">task_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">task_max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">task_min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">task_scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTaskScalingDownPolicy]]</span> = None<span class="p">, </span><span class="nx">task_scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTaskScalingUpPolicy]]</span> = None<span class="p">, </span><span class="nx">task_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTerminationPolicy]]</span> = None<span class="p">, </span><span class="nx">termination_protected</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.MrScalar">MrScalar</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">additional_primary_security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">additional_replica_security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarApplicationArgs]]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">bootstrap_actions_files</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarBootstrapActionsFileArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations_files</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarConfigurationsFileArgs]]</span> = None<span class="p">, </span><span class="nx">core_desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">core_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarCoreEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">core_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">core_instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">core_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">core_min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">core_scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarCoreScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">core_scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarCoreScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">core_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ec2_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expose_cluster_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_weights</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarInstanceWeightArgs]]</span> = None<span class="p">, </span><span class="nx">job_flow_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">keep_job_flow_alive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_primary_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_replica_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarMasterEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">master_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">master_instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">master_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_timeout</span><span class="p">:</span> <span class="nx">Optional[MrScalarProvisioningTimeoutArgs]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repo_upgrade_on_boot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retries</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_access_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">steps_files</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarStepsFileArgs]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTagArgs]]</span> = None<span class="p">, </span><span class="nx">task_desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">task_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTaskEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">task_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">task_instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">task_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">task_max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">task_min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">task_scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTaskScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">task_scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTaskScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">task_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTerminationPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">termination_protected</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3378,7 +3378,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#applications_python" style="color: inherit; text-decoration: inherit;">applications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarapplication">List[Mr<wbr>Scalar<wbr>Application]</a></span>
+        <span class="property-type"><a href="#mrscalarapplication">List[Mr<wbr>Scalar<wbr>Application<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3398,7 +3398,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#bootstrap_actions_files_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>actions_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">List[Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File]</a></span>
+        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">List[Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3419,7 +3419,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#configurations_files_python" style="color: inherit; text-decoration: inherit;">configurations_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarconfigurationsfile">List[Mr<wbr>Scalar<wbr>Configurations<wbr>File]</a></span>
+        <span class="property-type"><a href="#mrscalarconfigurationsfile">List[Mr<wbr>Scalar<wbr>Configurations<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3439,7 +3439,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#core_ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">core_<wbr>ebs_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">List[Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">List[Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3499,7 +3499,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#core_scaling_down_policies_python" style="color: inherit; text-decoration: inherit;">core_<wbr>scaling_<wbr>down_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">List[Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">List[Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3509,7 +3509,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#core_scaling_up_policies_python" style="color: inherit; text-decoration: inherit;">core_<wbr>scaling_<wbr>up_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">List[Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">List[Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3580,7 +3580,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instance_weights_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>weights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarinstanceweight">List[Mr<wbr>Scalar<wbr>Instance<wbr>Weight]</a></span>
+        <span class="property-type"><a href="#mrscalarinstanceweight">List[Mr<wbr>Scalar<wbr>Instance<wbr>Weight<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3640,7 +3640,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#master_ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">master_<wbr>ebs_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">List[Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">List[Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3691,7 +3691,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#provisioning_timeout_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Dict[Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout]</a></span>
+        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3742,7 +3742,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#scheduled_tasks_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>tasks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarscheduledtask">List[Mr<wbr>Scalar<wbr>Scheduled<wbr>Task]</a></span>
+        <span class="property-type"><a href="#mrscalarscheduledtask">List[Mr<wbr>Scalar<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3782,7 +3782,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#steps_files_python" style="color: inherit; text-decoration: inherit;">steps_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarstepsfile">List[Mr<wbr>Scalar<wbr>Steps<wbr>File]</a></span>
+        <span class="property-type"><a href="#mrscalarstepsfile">List[Mr<wbr>Scalar<wbr>Steps<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3792,7 +3792,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartag">List[Mr<wbr>Scalar<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#mrscalartag">List[Mr<wbr>Scalar<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3812,7 +3812,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#task_ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">task_<wbr>ebs_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskebsblockdevice">List[Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#mrscalartaskebsblockdevice">List[Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3872,7 +3872,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#task_scaling_down_policies_python" style="color: inherit; text-decoration: inherit;">task_<wbr>scaling_<wbr>down_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">List[Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">List[Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3882,7 +3882,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#task_scaling_up_policies_python" style="color: inherit; text-decoration: inherit;">task_<wbr>scaling_<wbr>up_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">List[Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">List[Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3902,7 +3902,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#termination_policies_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarterminationpolicy">List[Mr<wbr>Scalar<wbr>Termination<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#mrscalarterminationpolicy">List[Mr<wbr>Scalar<wbr>Termination<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allows defining termination policies for EMR clusters based on CloudWatch Metrics.
 {{% /md %}}</dd>
@@ -4066,7 +4066,7 @@ Get an existing MrScalar resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">additional_primary_security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">additional_replica_security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarApplication]]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">bootstrap_actions_files</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarBootstrapActionsFile]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations_files</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarConfigurationsFile]]</span> = None<span class="p">, </span><span class="nx">core_desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">core_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarCoreEbsBlockDevice]]</span> = None<span class="p">, </span><span class="nx">core_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">core_instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">core_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">core_min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">core_scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarCoreScalingDownPolicy]]</span> = None<span class="p">, </span><span class="nx">core_scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarCoreScalingUpPolicy]]</span> = None<span class="p">, </span><span class="nx">core_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ec2_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expose_cluster_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_weights</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarInstanceWeight]]</span> = None<span class="p">, </span><span class="nx">job_flow_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">keep_job_flow_alive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_primary_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_replica_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarMasterEbsBlockDevice]]</span> = None<span class="p">, </span><span class="nx">master_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">master_instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">master_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_timeout</span><span class="p">:</span> <span class="nx">Optional[Dict[MrScalarProvisioningTimeout]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repo_upgrade_on_boot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retries</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarScheduledTask]]</span> = None<span class="p">, </span><span class="nx">security_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_access_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">steps_files</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarStepsFile]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTag]]</span> = None<span class="p">, </span><span class="nx">task_desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">task_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTaskEbsBlockDevice]]</span> = None<span class="p">, </span><span class="nx">task_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">task_instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">task_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">task_max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">task_min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">task_scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTaskScalingDownPolicy]]</span> = None<span class="p">, </span><span class="nx">task_scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTaskScalingUpPolicy]]</span> = None<span class="p">, </span><span class="nx">task_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTerminationPolicy]]</span> = None<span class="p">, </span><span class="nx">termination_protected</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> MrScalar</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">additional_primary_security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">additional_replica_security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarApplicationArgs]]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">bootstrap_actions_files</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarBootstrapActionsFileArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations_files</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarConfigurationsFileArgs]]</span> = None<span class="p">, </span><span class="nx">core_desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">core_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarCoreEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">core_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">core_instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">core_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">core_min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">core_scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarCoreScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">core_scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarCoreScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">core_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ec2_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expose_cluster_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_weights</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarInstanceWeightArgs]]</span> = None<span class="p">, </span><span class="nx">job_flow_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">keep_job_flow_alive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_primary_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_replica_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarMasterEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">master_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">master_instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">master_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_timeout</span><span class="p">:</span> <span class="nx">Optional[MrScalarProvisioningTimeoutArgs]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repo_upgrade_on_boot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retries</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_access_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">steps_files</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarStepsFileArgs]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTagArgs]]</span> = None<span class="p">, </span><span class="nx">task_desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">task_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTaskEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">task_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">task_instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">task_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">task_max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">task_min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">task_scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTaskScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">task_scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTaskScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">task_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_policies</span><span class="p">:</span> <span class="nx">Optional[List[MrScalarTerminationPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">termination_protected</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> MrScalar</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -6055,7 +6055,7 @@ The following state arguments are supported:
 <a href="#state_applications_python" style="color: inherit; text-decoration: inherit;">applications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarapplication">List[Mr<wbr>Scalar<wbr>Application]</a></span>
+        <span class="property-type"><a href="#mrscalarapplication">List[Mr<wbr>Scalar<wbr>Application<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6075,7 +6075,7 @@ The following state arguments are supported:
 <a href="#state_bootstrap_actions_files_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>actions_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">List[Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File]</a></span>
+        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">List[Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6096,7 +6096,7 @@ The following state arguments are supported:
 <a href="#state_configurations_files_python" style="color: inherit; text-decoration: inherit;">configurations_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarconfigurationsfile">List[Mr<wbr>Scalar<wbr>Configurations<wbr>File]</a></span>
+        <span class="property-type"><a href="#mrscalarconfigurationsfile">List[Mr<wbr>Scalar<wbr>Configurations<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6116,7 +6116,7 @@ The following state arguments are supported:
 <a href="#state_core_ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">core_<wbr>ebs_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">List[Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">List[Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6176,7 +6176,7 @@ The following state arguments are supported:
 <a href="#state_core_scaling_down_policies_python" style="color: inherit; text-decoration: inherit;">core_<wbr>scaling_<wbr>down_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">List[Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">List[Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6186,7 +6186,7 @@ The following state arguments are supported:
 <a href="#state_core_scaling_up_policies_python" style="color: inherit; text-decoration: inherit;">core_<wbr>scaling_<wbr>up_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">List[Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">List[Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6257,7 +6257,7 @@ The following state arguments are supported:
 <a href="#state_instance_weights_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>weights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarinstanceweight">List[Mr<wbr>Scalar<wbr>Instance<wbr>Weight]</a></span>
+        <span class="property-type"><a href="#mrscalarinstanceweight">List[Mr<wbr>Scalar<wbr>Instance<wbr>Weight<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6317,7 +6317,7 @@ The following state arguments are supported:
 <a href="#state_master_ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">master_<wbr>ebs_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">List[Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">List[Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6378,7 +6378,7 @@ The following state arguments are supported:
 <a href="#state_provisioning_timeout_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Dict[Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout]</a></span>
+        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6429,7 +6429,7 @@ The following state arguments are supported:
 <a href="#state_scheduled_tasks_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>tasks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarscheduledtask">List[Mr<wbr>Scalar<wbr>Scheduled<wbr>Task]</a></span>
+        <span class="property-type"><a href="#mrscalarscheduledtask">List[Mr<wbr>Scalar<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6469,7 +6469,7 @@ The following state arguments are supported:
 <a href="#state_steps_files_python" style="color: inherit; text-decoration: inherit;">steps_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarstepsfile">List[Mr<wbr>Scalar<wbr>Steps<wbr>File]</a></span>
+        <span class="property-type"><a href="#mrscalarstepsfile">List[Mr<wbr>Scalar<wbr>Steps<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6490,7 +6490,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartag">List[Mr<wbr>Scalar<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#mrscalartag">List[Mr<wbr>Scalar<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6510,7 +6510,7 @@ The following state arguments are supported:
 <a href="#state_task_ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">task_<wbr>ebs_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskebsblockdevice">List[Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#mrscalartaskebsblockdevice">List[Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6570,7 +6570,7 @@ The following state arguments are supported:
 <a href="#state_task_scaling_down_policies_python" style="color: inherit; text-decoration: inherit;">task_<wbr>scaling_<wbr>down_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">List[Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">List[Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6580,7 +6580,7 @@ The following state arguments are supported:
 <a href="#state_task_scaling_up_policies_python" style="color: inherit; text-decoration: inherit;">task_<wbr>scaling_<wbr>up_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">List[Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">List[Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6600,7 +6600,7 @@ The following state arguments are supported:
 <a href="#state_termination_policies_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarterminationpolicy">List[Mr<wbr>Scalar<wbr>Termination<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#mrscalarterminationpolicy">List[Mr<wbr>Scalar<wbr>Termination<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allows defining termination policies for EMR clusters based on CloudWatch Metrics.
 {{% /md %}}</dd>
@@ -7223,8 +7223,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="sizeingb_python">
-<a href="#sizeingb_python" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>Gb</a>
+        <span id="size_in_gb_python">
+<a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7233,8 +7233,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="volumetype_python">
-<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7253,8 +7253,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumesperinstance_python">
-<a href="#volumesperinstance_python" style="color: inherit; text-decoration: inherit;">volumes<wbr>Per<wbr>Instance</a>
+        <span id="volumes_per_instance_python">
+<a href="#volumes_per_instance_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>per_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7873,8 +7873,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7895,8 +7895,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="policyname_python">
-<a href="#policyname_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
+        <span id="policy_name_python">
+<a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7927,8 +7927,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actiontype_python">
-<a href="#actiontype_python" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
+        <span id="action_type_python">
+<a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7961,14 +7961,14 @@ The following state arguments are supported:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="evaluationperiods_python">
-<a href="#evaluationperiods_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
+        <span id="evaluation_periods_python">
+<a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7978,8 +7978,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxtargetcapacity_python">
-<a href="#maxtargetcapacity_python" style="color: inherit; text-decoration: inherit;">max<wbr>Target<wbr>Capacity</a>
+        <span id="max_target_capacity_python">
+<a href="#max_target_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7998,8 +7998,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mintargetcapacity_python">
-<a href="#mintargetcapacity_python" style="color: inherit; text-decoration: inherit;">min<wbr>Target<wbr>Capacity</a>
+        <span id="min_target_capacity_python">
+<a href="#min_target_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8671,8 +8671,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8693,8 +8693,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="policyname_python">
-<a href="#policyname_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
+        <span id="policy_name_python">
+<a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8725,8 +8725,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actiontype_python">
-<a href="#actiontype_python" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
+        <span id="action_type_python">
+<a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8759,14 +8759,14 @@ The following state arguments are supported:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="evaluationperiods_python">
-<a href="#evaluationperiods_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
+        <span id="evaluation_periods_python">
+<a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8776,8 +8776,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxtargetcapacity_python">
-<a href="#maxtargetcapacity_python" style="color: inherit; text-decoration: inherit;">max<wbr>Target<wbr>Capacity</a>
+        <span id="max_target_capacity_python">
+<a href="#max_target_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8796,8 +8796,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mintargetcapacity_python">
-<a href="#mintargetcapacity_python" style="color: inherit; text-decoration: inherit;">min<wbr>Target<wbr>Capacity</a>
+        <span id="min_target_capacity_python">
+<a href="#min_target_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8965,8 +8965,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="instancetype_python">
-<a href="#instancetype_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+        <span id="instance_type_python">
+<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8975,8 +8975,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="weightedcapacity_python">
-<a href="#weightedcapacity_python" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
+        <span id="weighted_capacity_python">
+<a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -9151,8 +9151,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="sizeingb_python">
-<a href="#sizeingb_python" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>Gb</a>
+        <span id="size_in_gb_python">
+<a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -9161,8 +9161,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="volumetype_python">
-<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9181,8 +9181,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumesperinstance_python">
-<a href="#volumesperinstance_python" style="color: inherit; text-decoration: inherit;">volumes<wbr>Per<wbr>Instance</a>
+        <span id="volumes_per_instance_python">
+<a href="#volumes_per_instance_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>per_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -9307,8 +9307,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="timeoutaction_python">
-<a href="#timeoutaction_python" style="color: inherit; text-decoration: inherit;">timeout<wbr>Action</a>
+        <span id="timeout_action_python">
+<a href="#timeout_action_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9583,8 +9583,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="instancegrouptype_python">
-<a href="#instancegrouptype_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Group<wbr>Type</a>
+        <span id="instance_group_type_python">
+<a href="#instance_group_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9593,8 +9593,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="tasktype_python">
-<a href="#tasktype_python" style="color: inherit; text-decoration: inherit;">task<wbr>Type</a>
+        <span id="task_type_python">
+<a href="#task_type_python" style="color: inherit; text-decoration: inherit;">task_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9613,8 +9613,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isenabled_python">
-<a href="#isenabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+        <span id="is_enabled_python">
+<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9623,8 +9623,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxcapacity_python">
-<a href="#maxcapacity_python" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity</a>
+        <span id="max_capacity_python">
+<a href="#max_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9633,8 +9633,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mincapacity_python">
-<a href="#mincapacity_python" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
+        <span id="min_capacity_python">
+<a href="#min_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10061,8 +10061,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="sizeingb_python">
-<a href="#sizeingb_python" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>Gb</a>
+        <span id="size_in_gb_python">
+<a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -10071,8 +10071,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="volumetype_python">
-<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10091,8 +10091,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumesperinstance_python">
-<a href="#volumesperinstance_python" style="color: inherit; text-decoration: inherit;">volumes<wbr>Per<wbr>Instance</a>
+        <span id="volumes_per_instance_python">
+<a href="#volumes_per_instance_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>per_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -10711,8 +10711,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10733,8 +10733,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="policyname_python">
-<a href="#policyname_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
+        <span id="policy_name_python">
+<a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10765,8 +10765,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actiontype_python">
-<a href="#actiontype_python" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
+        <span id="action_type_python">
+<a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10799,14 +10799,14 @@ The following state arguments are supported:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="evaluationperiods_python">
-<a href="#evaluationperiods_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
+        <span id="evaluation_periods_python">
+<a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -10816,8 +10816,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxtargetcapacity_python">
-<a href="#maxtargetcapacity_python" style="color: inherit; text-decoration: inherit;">max<wbr>Target<wbr>Capacity</a>
+        <span id="max_target_capacity_python">
+<a href="#max_target_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10836,8 +10836,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mintargetcapacity_python">
-<a href="#mintargetcapacity_python" style="color: inherit; text-decoration: inherit;">min<wbr>Target<wbr>Capacity</a>
+        <span id="min_target_capacity_python">
+<a href="#min_target_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11509,8 +11509,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11531,8 +11531,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="policyname_python">
-<a href="#policyname_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
+        <span id="policy_name_python">
+<a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11563,8 +11563,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actiontype_python">
-<a href="#actiontype_python" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
+        <span id="action_type_python">
+<a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11597,14 +11597,14 @@ The following state arguments are supported:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="evaluationperiods_python">
-<a href="#evaluationperiods_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
+        <span id="evaluation_periods_python">
+<a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -11614,8 +11614,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxtargetcapacity_python">
-<a href="#maxtargetcapacity_python" style="color: inherit; text-decoration: inherit;">max<wbr>Target<wbr>Capacity</a>
+        <span id="max_target_capacity_python">
+<a href="#max_target_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11634,8 +11634,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mintargetcapacity_python">
-<a href="#mintargetcapacity_python" style="color: inherit; text-decoration: inherit;">min<wbr>Target<wbr>Capacity</a>
+        <span id="min_target_capacity_python">
+<a href="#min_target_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11777,7 +11777,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarterminationpolicystatement">List[Mr<wbr>Scalar<wbr>Termination<wbr>Policy<wbr>Statement]</a></span>
+        <span class="property-type"><a href="#mrscalarterminationpolicystatement">List[Mr<wbr>Scalar<wbr>Termination<wbr>Policy<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12093,8 +12093,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12126,8 +12126,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="evaluationperiods_python">
-<a href="#evaluationperiods_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
+        <span id="evaluation_periods_python">
+<a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

@@ -22,7 +22,7 @@ meta_desc: "Explore the Listener resource of the multai module, including exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/multai/#pulumi_spotinst.multai.Listener">Listener</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[ListenerTag]]</span> = None<span class="p">, </span><span class="nx">tls_config</span><span class="p">:</span> <span class="nx">Optional[Dict[ListenerTlsConfig]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/multai/#pulumi_spotinst.multai.Listener">Listener</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[ListenerTagArgs]]</span> = None<span class="p">, </span><span class="nx">tls_config</span><span class="p">:</span> <span class="nx">Optional[ListenerTlsConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -401,7 +401,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertag">List[Listener<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#listenertag">List[Listener<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -411,7 +411,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tls_config_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertlsconfig">Dict[Listener<wbr>Tls<wbr>Config]</a></span>
+        <span class="property-type"><a href="#listenertlsconfig">Listener<wbr>Tls<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -514,7 +514,7 @@ Get an existing Listener resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[ListenerTag]]</span> = None<span class="p">, </span><span class="nx">tls_config</span><span class="p">:</span> <span class="nx">Optional[Dict[ListenerTlsConfig]]</span> = None<span class="p">) -&gt;</span> Listener</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[ListenerTagArgs]]</span> = None<span class="p">, </span><span class="nx">tls_config</span><span class="p">:</span> <span class="nx">Optional[ListenerTlsConfigArgs]</span> = None<span class="p">) -&gt;</span> Listener</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -835,7 +835,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertag">List[Listener<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#listenertag">List[Listener<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -845,7 +845,7 @@ The following state arguments are supported:
 <a href="#state_tls_config_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertlsconfig">Dict[Listener<wbr>Tls<wbr>Config]</a></span>
+        <span class="property-type"><a href="#listenertlsconfig">Listener<wbr>Tls<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1211,8 +1211,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="certificateids_python">
-<a href="#certificateids_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Ids</a>
+        <span id="certificate_ids_python">
+<a href="#certificate_ids_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1221,8 +1221,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="ciphersuites_python">
-<a href="#ciphersuites_python" style="color: inherit; text-decoration: inherit;">cipher<wbr>Suites</a>
+        <span id="cipher_suites_python">
+<a href="#cipher_suites_python" style="color: inherit; text-decoration: inherit;">cipher_<wbr>suites</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1231,8 +1231,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxversion_python">
-<a href="#maxversion_python" style="color: inherit; text-decoration: inherit;">max<wbr>Version</a>
+        <span id="max_version_python">
+<a href="#max_version_python" style="color: inherit; text-decoration: inherit;">max_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1241,8 +1241,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="minversion_python">
-<a href="#minversion_python" style="color: inherit; text-decoration: inherit;">min<wbr>Version</a>
+        <span id="min_version_python">
+<a href="#min_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1251,8 +1251,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="preferserverciphersuites_python">
-<a href="#preferserverciphersuites_python" style="color: inherit; text-decoration: inherit;">prefer<wbr>Server<wbr>Cipher<wbr>Suites</a>
+        <span id="prefer_server_cipher_suites_python">
+<a href="#prefer_server_cipher_suites_python" style="color: inherit; text-decoration: inherit;">prefer_<wbr>server_<wbr>cipher_<wbr>suites</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1261,8 +1261,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="sessionticketsdisabled_python">
-<a href="#sessionticketsdisabled_python" style="color: inherit; text-decoration: inherit;">session<wbr>Tickets<wbr>Disabled</a>
+        <span id="session_tickets_disabled_python">
+<a href="#session_tickets_disabled_python" style="color: inherit; text-decoration: inherit;">session_<wbr>tickets_<wbr>disabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
