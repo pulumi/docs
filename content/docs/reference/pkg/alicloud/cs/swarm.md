@@ -32,13 +32,13 @@ class MyStack : Stack
     {
         var myCluster = new AliCloud.CS.Swarm("myCluster", new AliCloud.CS.SwarmArgs
         {
-            CidrBlock = "172.18.0.0/24",
-            DiskCategory = "cloud_efficiency",
-            DiskSize = 20,
-            ImageId = @var.Image_id,
+            Password = "Yourpassword1234",
             InstanceType = "ecs.n4.small",
             NodeNumber = 2,
-            Password = "Yourpassword1234",
+            DiskCategory = "cloud_efficiency",
+            DiskSize = 20,
+            CidrBlock = "172.18.0.0/24",
+            ImageId = @var.Image_id,
             VswitchId = @var.Vswitch_id,
         });
     }
@@ -60,13 +60,13 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := cs.NewSwarm(ctx, "myCluster", &cs.SwarmArgs{
-			CidrBlock:    pulumi.String("172.18.0.0/24"),
-			DiskCategory: pulumi.String("cloud_efficiency"),
-			DiskSize:     pulumi.Int(20),
-			ImageId:      pulumi.Any(_var.Image_id),
+			Password:     pulumi.String("Yourpassword1234"),
 			InstanceType: pulumi.String("ecs.n4.small"),
 			NodeNumber:   pulumi.Int(2),
-			Password:     pulumi.String("Yourpassword1234"),
+			DiskCategory: pulumi.String("cloud_efficiency"),
+			DiskSize:     pulumi.Int(20),
+			CidrBlock:    pulumi.String("172.18.0.0/24"),
+			ImageId:      pulumi.Any(_var.Image_id),
 			VswitchId:    pulumi.Any(_var.Vswitch_id),
 		})
 		if err != nil {
@@ -85,13 +85,13 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 my_cluster = alicloud.cs.Swarm("myCluster",
-    cidr_block="172.18.0.0/24",
-    disk_category="cloud_efficiency",
-    disk_size=20,
-    image_id=var["image_id"],
+    password="Yourpassword1234",
     instance_type="ecs.n4.small",
     node_number=2,
-    password="Yourpassword1234",
+    disk_category="cloud_efficiency",
+    disk_size=20,
+    cidr_block="172.18.0.0/24",
+    image_id=var["image_id"],
     vswitch_id=var["vswitch_id"])
 ```
 
@@ -103,15 +103,15 @@ my_cluster = alicloud.cs.Swarm("myCluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const myCluster = new alicloud.cs.Swarm("my_cluster", {
-    cidrBlock: "172.18.0.0/24",
-    diskCategory: "cloud_efficiency",
-    diskSize: 20,
-    imageId: var_image_id,
+const myCluster = new alicloud.cs.Swarm("myCluster", {
+    password: "Yourpassword1234",
     instanceType: "ecs.n4.small",
     nodeNumber: 2,
-    password: "Yourpassword1234",
-    vswitchId: var_vswitch_id,
+    diskCategory: "cloud_efficiency",
+    diskSize: 20,
+    cidrBlock: "172.18.0.0/24",
+    imageId: _var.image_id,
+    vswitchId: _var.vswitch_id,
 });
 ```
 

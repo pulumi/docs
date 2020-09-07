@@ -35,58 +35,58 @@ class MyStack : Stack
         });
         var exampleStore = new AliCloud.Log.Store("exampleStore", new AliCloud.Log.StoreArgs
         {
-            AppendMeta = true,
-            AutoSplit = true,
-            MaxSplitShardCount = 60,
             Project = exampleProject.Name,
             RetentionPeriod = 3650,
             ShardCount = 3,
+            AutoSplit = true,
+            MaxSplitShardCount = 60,
+            AppendMeta = true,
         });
         var exampleAlert = new AliCloud.Log.Alert("exampleAlert", new AliCloud.Log.AlertArgs
         {
-            AlertDisplayname = "tf-test-alert-displayname",
+            ProjectName = exampleProject.Name,
             AlertName = "tf-test-alert",
+            AlertDisplayname = "tf-test-alert-displayname",
             Condition = "count> 100",
             Dashboard = "tf-test-dashboard",
+            QueryLists = 
+            {
+                new AliCloud.Log.Inputs.AlertQueryListArgs
+                {
+                    Logstore = "tf-test-logstore",
+                    ChartTitle = "chart_title",
+                    Start = "-60s",
+                    End = "20s",
+                    Query = "* AND aliyun",
+                },
+            },
             NotificationLists = 
             {
                 new AliCloud.Log.Inputs.AlertNotificationListArgs
                 {
-                    Content = "alert content",
+                    Type = "SMS",
                     MobileLists = 
                     {
                         "12345678",
                         "87654321",
                     },
-                    Type = "SMS",
+                    Content = "alert content",
                 },
                 new AliCloud.Log.Inputs.AlertNotificationListArgs
                 {
-                    Content = "alert content",
+                    Type = "Email",
                     EmailLists = 
                     {
                         "aliyun@alibaba-inc.com",
                         "tf-test@123.com",
                     },
-                    Type = "Email",
+                    Content = "alert content",
                 },
                 new AliCloud.Log.Inputs.AlertNotificationListArgs
                 {
-                    Content = "alert content",
-                    ServiceUri = "www.aliyun.com",
                     Type = "DingTalk",
-                },
-            },
-            ProjectName = exampleProject.Name,
-            QueryLists = 
-            {
-                new AliCloud.Log.Inputs.AlertQueryListArgs
-                {
-                    ChartTitle = "chart_title",
-                    End = "20s",
-                    Logstore = "tf-test-logstore",
-                    Query = "* AND aliyun",
-                    Start = "-60s",
+                    ServiceUri = "www.aliyun.com",
+                    Content = "alert content",
                 },
             },
         });
@@ -115,52 +115,52 @@ func main() {
 			return err
 		}
 		_, err = log.NewStore(ctx, "exampleStore", &log.StoreArgs{
-			AppendMeta:         pulumi.Bool(true),
-			AutoSplit:          pulumi.Bool(true),
-			MaxSplitShardCount: pulumi.Int(60),
 			Project:            exampleProject.Name,
 			RetentionPeriod:    pulumi.Int(3650),
 			ShardCount:         pulumi.Int(3),
+			AutoSplit:          pulumi.Bool(true),
+			MaxSplitShardCount: pulumi.Int(60),
+			AppendMeta:         pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = log.NewAlert(ctx, "exampleAlert", &log.AlertArgs{
-			AlertDisplayname: pulumi.String("tf-test-alert-displayname"),
+			ProjectName:      exampleProject.Name,
 			AlertName:        pulumi.String("tf-test-alert"),
+			AlertDisplayname: pulumi.String("tf-test-alert-displayname"),
 			Condition:        pulumi.String("count> 100"),
 			Dashboard:        pulumi.String("tf-test-dashboard"),
+			QueryLists: log.AlertQueryListArray{
+				&log.AlertQueryListArgs{
+					Logstore:   pulumi.String("tf-test-logstore"),
+					ChartTitle: pulumi.String("chart_title"),
+					Start:      pulumi.String("-60s"),
+					End:        pulumi.String("20s"),
+					Query:      pulumi.String("* AND aliyun"),
+				},
+			},
 			NotificationLists: log.AlertNotificationListArray{
 				&log.AlertNotificationListArgs{
-					Content: pulumi.String("alert content"),
+					Type: pulumi.String("SMS"),
 					MobileLists: pulumi.StringArray{
 						pulumi.String("12345678"),
 						pulumi.String("87654321"),
 					},
-					Type: pulumi.String("SMS"),
+					Content: pulumi.String("alert content"),
 				},
 				&log.AlertNotificationListArgs{
-					Content: pulumi.String("alert content"),
+					Type: pulumi.String("Email"),
 					EmailLists: pulumi.StringArray{
 						pulumi.String("aliyun@alibaba-inc.com"),
 						pulumi.String("tf-test@123.com"),
 					},
-					Type: pulumi.String("Email"),
+					Content: pulumi.String("alert content"),
 				},
 				&log.AlertNotificationListArgs{
-					Content:    pulumi.String("alert content"),
-					ServiceUri: pulumi.String("www.aliyun.com"),
 					Type:       pulumi.String("DingTalk"),
-				},
-			},
-			ProjectName: exampleProject.Name,
-			QueryLists: log.AlertQueryListArray{
-				&log.AlertQueryListArgs{
-					ChartTitle: pulumi.String("chart_title"),
-					End:        pulumi.String("20s"),
-					Logstore:   pulumi.String("tf-test-logstore"),
-					Query:      pulumi.String("* AND aliyun"),
-					Start:      pulumi.String("-60s"),
+					ServiceUri: pulumi.String("www.aliyun.com"),
+					Content:    pulumi.String("alert content"),
 				},
 			},
 		})
@@ -181,48 +181,48 @@ import pulumi_alicloud as alicloud
 
 example_project = alicloud.log.Project("exampleProject", description="create by terraform")
 example_store = alicloud.log.Store("exampleStore",
-    append_meta=True,
-    auto_split=True,
-    max_split_shard_count=60,
     project=example_project.name,
     retention_period=3650,
-    shard_count=3)
+    shard_count=3,
+    auto_split=True,
+    max_split_shard_count=60,
+    append_meta=True)
 example_alert = alicloud.log.Alert("exampleAlert",
-    alert_displayname="tf-test-alert-displayname",
+    project_name=example_project.name,
     alert_name="tf-test-alert",
+    alert_displayname="tf-test-alert-displayname",
     condition="count> 100",
     dashboard="tf-test-dashboard",
+    query_lists=[alicloud.log.AlertQueryListArgs(
+        logstore="tf-test-logstore",
+        chart_title="chart_title",
+        start="-60s",
+        end="20s",
+        query="* AND aliyun",
+    )],
     notification_lists=[
         alicloud.log.AlertNotificationListArgs(
-            content="alert content",
+            type="SMS",
             mobile_lists=[
                 "12345678",
                 "87654321",
             ],
-            type="SMS",
+            content="alert content",
         ),
         alicloud.log.AlertNotificationListArgs(
-            content="alert content",
+            type="Email",
             email_lists=[
                 "aliyun@alibaba-inc.com",
                 "tf-test@123.com",
             ],
-            type="Email",
+            content="alert content",
         ),
         alicloud.log.AlertNotificationListArgs(
-            content="alert content",
-            service_uri="www.aliyun.com",
             type="DingTalk",
+            service_uri="www.aliyun.com",
+            content="alert content",
         ),
-    ],
-    project_name=example_project.name,
-    query_lists=[alicloud.log.AlertQueryListArgs(
-        chart_title="chart_title",
-        end="20s",
-        logstore="tf-test-logstore",
-        query="* AND aliyun",
-        start="-60s",
-    )])
+    ])
 ```
 
 {{% /example %}}
@@ -233,53 +233,51 @@ example_alert = alicloud.log.Alert("exampleAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const exampleProject = new alicloud.log.Project("example", {
-    description: "create by terraform",
-});
-const exampleStore = new alicloud.log.Store("example", {
-    appendMeta: true,
-    autoSplit: true,
-    maxSplitShardCount: 60,
+const exampleProject = new alicloud.log.Project("exampleProject", {description: "create by terraform"});
+const exampleStore = new alicloud.log.Store("exampleStore", {
     project: exampleProject.name,
     retentionPeriod: 3650,
     shardCount: 3,
+    autoSplit: true,
+    maxSplitShardCount: 60,
+    appendMeta: true,
 });
-const exampleAlert = new alicloud.log.Alert("example", {
-    alertDisplayname: "tf-test-alert-displayname",
+const exampleAlert = new alicloud.log.Alert("exampleAlert", {
+    projectName: exampleProject.name,
     alertName: "tf-test-alert",
+    alertDisplayname: "tf-test-alert-displayname",
     condition: "count> 100",
     dashboard: "tf-test-dashboard",
+    queryLists: [{
+        logstore: "tf-test-logstore",
+        chartTitle: "chart_title",
+        start: "-60s",
+        end: "20s",
+        query: "* AND aliyun",
+    }],
     notificationLists: [
         {
-            content: "alert content",
+            type: "SMS",
             mobileLists: [
                 "12345678",
                 "87654321",
             ],
-            type: "SMS",
+            content: "alert content",
         },
         {
-            content: "alert content",
+            type: "Email",
             emailLists: [
                 "aliyun@alibaba-inc.com",
                 "tf-test@123.com",
             ],
-            type: "Email",
+            content: "alert content",
         },
         {
-            content: "alert content",
-            serviceUri: "www.aliyun.com",
             type: "DingTalk",
+            serviceUri: "www.aliyun.com",
+            content: "alert content",
         },
     ],
-    projectName: exampleProject.name,
-    queryLists: [{
-        chartTitle: "chart_title",
-        end: "20s",
-        logstore: "tf-test-logstore",
-        query: "* AND aliyun",
-        start: "-60s",
-    }],
 });
 ```
 

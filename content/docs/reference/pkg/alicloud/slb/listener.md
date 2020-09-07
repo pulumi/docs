@@ -81,56 +81,56 @@ class MyStack : Stack
         var ipVersion = config.Get("ipVersion") ?? "ipv4";
         var defaultLoadBalancer = new AliCloud.Slb.LoadBalancer("defaultLoadBalancer", new AliCloud.Slb.LoadBalancerArgs
         {
-            Internet = true,
             InternetChargeType = "PayByTraffic",
+            Internet = true,
         });
         var defaultAcl = new AliCloud.Slb.Acl("defaultAcl", new AliCloud.Slb.AclArgs
         {
+            IpVersion = ipVersion,
             EntryLists = 
             {
                 new AliCloud.Slb.Inputs.AclEntryListArgs
                 {
-                    Comment = "first",
                     Entry = "10.10.10.0/24",
+                    Comment = "first",
                 },
                 new AliCloud.Slb.Inputs.AclEntryListArgs
                 {
-                    Comment = "second",
                     Entry = "168.10.10.0/24",
+                    Comment = "second",
                 },
             },
-            IpVersion = ipVersion,
         });
         var defaultListener = new AliCloud.Slb.Listener("defaultListener", new AliCloud.Slb.ListenerArgs
         {
-            AclId = defaultAcl.Id,
-            AclStatus = "on",
-            AclType = "white",
-            BackendPort = 80,
-            Bandwidth = 10,
-            Cookie = "testslblistenercookie",
-            CookieTimeout = 86400,
-            FrontendPort = 80,
-            HealthCheck = "on",
-            HealthCheckConnectPort = 20,
-            HealthCheckDomain = "ali.com",
-            HealthCheckHttpCode = "http_2xx,http_3xx",
-            HealthCheckInterval = 5,
-            HealthCheckTimeout = 8,
-            HealthCheckUri = "/cons",
-            HealthyThreshold = 8,
-            IdleTimeout = 30,
             LoadBalancerId = defaultLoadBalancer.Id,
+            BackendPort = 80,
+            FrontendPort = 80,
             Protocol = "http",
-            RequestTimeout = 80,
+            Bandwidth = 10,
             StickySession = "on",
             StickySessionType = "insert",
+            CookieTimeout = 86400,
+            Cookie = "testslblistenercookie",
+            HealthCheck = "on",
+            HealthCheckDomain = "ali.com",
+            HealthCheckUri = "/cons",
+            HealthCheckConnectPort = 20,
+            HealthyThreshold = 8,
             UnhealthyThreshold = 8,
+            HealthCheckTimeout = 8,
+            HealthCheckInterval = 5,
+            HealthCheckHttpCode = "http_2xx,http_3xx",
             XForwardedFor = new AliCloud.Slb.Inputs.ListenerXForwardedForArgs
             {
-                RetriveSlbId = true,
                 RetriveSlbIp = true,
+                RetriveSlbId = true,
             },
+            AclStatus = "on",
+            AclType = "white",
+            AclId = defaultAcl.Id,
+            RequestTimeout = 80,
+            IdleTimeout = 30,
         });
     }
 
@@ -151,56 +151,56 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		defaultLoadBalancer, err := slb.NewLoadBalancer(ctx, "defaultLoadBalancer", &slb.LoadBalancerArgs{
-			Internet:           pulumi.Bool(true),
 			InternetChargeType: pulumi.String("PayByTraffic"),
+			Internet:           pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
 		}
 		defaultAcl, err := slb.NewAcl(ctx, "defaultAcl", &slb.AclArgs{
+			IpVersion: pulumi.String(ipVersion),
 			EntryLists: slb.AclEntryListArray{
 				&slb.AclEntryListArgs{
-					Comment: pulumi.String("first"),
 					Entry:   pulumi.String("10.10.10.0/24"),
+					Comment: pulumi.String("first"),
 				},
 				&slb.AclEntryListArgs{
-					Comment: pulumi.String("second"),
 					Entry:   pulumi.String("168.10.10.0/24"),
+					Comment: pulumi.String("second"),
 				},
 			},
-			IpVersion: pulumi.String(ipVersion),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = slb.NewListener(ctx, "defaultListener", &slb.ListenerArgs{
-			AclId:                  defaultAcl.ID(),
-			AclStatus:              pulumi.String("on"),
-			AclType:                pulumi.String("white"),
-			BackendPort:            pulumi.Int(80),
-			Bandwidth:              pulumi.Int(10),
-			Cookie:                 pulumi.String("testslblistenercookie"),
-			CookieTimeout:          pulumi.Int(86400),
-			FrontendPort:           pulumi.Int(80),
-			HealthCheck:            pulumi.String("on"),
-			HealthCheckConnectPort: pulumi.Int(20),
-			HealthCheckDomain:      pulumi.String("ali.com"),
-			HealthCheckHttpCode:    pulumi.String("http_2xx,http_3xx"),
-			HealthCheckInterval:    pulumi.Int(5),
-			HealthCheckTimeout:     pulumi.Int(8),
-			HealthCheckUri:         pulumi.String("/cons"),
-			HealthyThreshold:       pulumi.Int(8),
-			IdleTimeout:            pulumi.Int(30),
 			LoadBalancerId:         defaultLoadBalancer.ID(),
+			BackendPort:            pulumi.Int(80),
+			FrontendPort:           pulumi.Int(80),
 			Protocol:               pulumi.String("http"),
-			RequestTimeout:         pulumi.Int(80),
+			Bandwidth:              pulumi.Int(10),
 			StickySession:          pulumi.String("on"),
 			StickySessionType:      pulumi.String("insert"),
+			CookieTimeout:          pulumi.Int(86400),
+			Cookie:                 pulumi.String("testslblistenercookie"),
+			HealthCheck:            pulumi.String("on"),
+			HealthCheckDomain:      pulumi.String("ali.com"),
+			HealthCheckUri:         pulumi.String("/cons"),
+			HealthCheckConnectPort: pulumi.Int(20),
+			HealthyThreshold:       pulumi.Int(8),
 			UnhealthyThreshold:     pulumi.Int(8),
+			HealthCheckTimeout:     pulumi.Int(8),
+			HealthCheckInterval:    pulumi.Int(5),
+			HealthCheckHttpCode:    pulumi.String("http_2xx,http_3xx"),
 			XForwardedFor: &slb.ListenerXForwardedForArgs{
-				RetriveSlbId: pulumi.Bool(true),
 				RetriveSlbIp: pulumi.Bool(true),
+				RetriveSlbId: pulumi.Bool(true),
 			},
+			AclStatus:      pulumi.String("on"),
+			AclType:        pulumi.String("white"),
+			AclId:          defaultAcl.ID(),
+			RequestTimeout: pulumi.Int(80),
+			IdleTimeout:    pulumi.Int(30),
 		})
 		if err != nil {
 			return err
@@ -225,48 +225,48 @@ ip_version = config.get("ipVersion")
 if ip_version is None:
     ip_version = "ipv4"
 default_load_balancer = alicloud.slb.LoadBalancer("defaultLoadBalancer",
-    internet=True,
-    internet_charge_type="PayByTraffic")
+    internet_charge_type="PayByTraffic",
+    internet=True)
 default_acl = alicloud.slb.Acl("defaultAcl",
+    ip_version=ip_version,
     entry_lists=[
         alicloud.slb.AclEntryListArgs(
-            comment="first",
             entry="10.10.10.0/24",
+            comment="first",
         ),
         alicloud.slb.AclEntryListArgs(
-            comment="second",
             entry="168.10.10.0/24",
+            comment="second",
         ),
-    ],
-    ip_version=ip_version)
+    ])
 default_listener = alicloud.slb.Listener("defaultListener",
-    acl_id=default_acl.id,
-    acl_status="on",
-    acl_type="white",
-    backend_port=80,
-    bandwidth=10,
-    cookie="testslblistenercookie",
-    cookie_timeout=86400,
-    frontend_port=80,
-    health_check="on",
-    health_check_connect_port=20,
-    health_check_domain="ali.com",
-    health_check_http_code="http_2xx,http_3xx",
-    health_check_interval=5,
-    health_check_timeout=8,
-    health_check_uri="/cons",
-    healthy_threshold=8,
-    idle_timeout=30,
     load_balancer_id=default_load_balancer.id,
+    backend_port=80,
+    frontend_port=80,
     protocol="http",
-    request_timeout=80,
+    bandwidth=10,
     sticky_session="on",
     sticky_session_type="insert",
+    cookie_timeout=86400,
+    cookie="testslblistenercookie",
+    health_check="on",
+    health_check_domain="ali.com",
+    health_check_uri="/cons",
+    health_check_connect_port=20,
+    healthy_threshold=8,
     unhealthy_threshold=8,
+    health_check_timeout=8,
+    health_check_interval=5,
+    health_check_http_code="http_2xx,http_3xx",
     x_forwarded_for=alicloud.slb.ListenerXForwardedForArgs(
-        retrive_slb_id=True,
         retrive_slb_ip=True,
-    ))
+        retrive_slb_id=True,
+    ),
+    acl_status="on",
+    acl_type="white",
+    acl_id=default_acl.id,
+    request_timeout=80,
+    idle_timeout=30)
 ```
 
 {{% /example %}}
@@ -280,52 +280,51 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "testcreatehttplistener";
 const ipVersion = config.get("ipVersion") || "ipv4";
-
-const defaultLoadBalancer = new alicloud.slb.LoadBalancer("default", {
-    internet: true,
+const defaultLoadBalancer = new alicloud.slb.LoadBalancer("defaultLoadBalancer", {
     internetChargeType: "PayByTraffic",
+    internet: true,
 });
-const defaultAcl = new alicloud.slb.Acl("default", {
+const defaultAcl = new alicloud.slb.Acl("defaultAcl", {
+    ipVersion: ipVersion,
     entryLists: [
         {
-            comment: "first",
             entry: "10.10.10.0/24",
+            comment: "first",
         },
         {
-            comment: "second",
             entry: "168.10.10.0/24",
+            comment: "second",
         },
     ],
-    ipVersion: ipVersion,
 });
-const defaultListener = new alicloud.slb.Listener("default", {
-    aclId: defaultAcl.id,
-    aclStatus: "on",
-    aclType: "white",
-    backendPort: 80,
-    bandwidth: 10,
-    cookie: "testslblistenercookie",
-    cookieTimeout: 86400,
-    frontendPort: 80,
-    healthCheck: "on",
-    healthCheckConnectPort: 20,
-    healthCheckDomain: "ali.com",
-    healthCheckHttpCode: "http_2xx,http_3xx",
-    healthCheckInterval: 5,
-    healthCheckTimeout: 8,
-    healthCheckUri: "/cons",
-    healthyThreshold: 8,
-    idleTimeout: 30,
+const defaultListener = new alicloud.slb.Listener("defaultListener", {
     loadBalancerId: defaultLoadBalancer.id,
+    backendPort: 80,
+    frontendPort: 80,
     protocol: "http",
-    requestTimeout: 80,
+    bandwidth: 10,
     stickySession: "on",
     stickySessionType: "insert",
+    cookieTimeout: 86400,
+    cookie: "testslblistenercookie",
+    healthCheck: "on",
+    healthCheckDomain: "ali.com",
+    healthCheckUri: "/cons",
+    healthCheckConnectPort: 20,
+    healthyThreshold: 8,
     unhealthyThreshold: 8,
+    healthCheckTimeout: 8,
+    healthCheckInterval: 5,
+    healthCheckHttpCode: "http_2xx,http_3xx",
     xForwardedFor: {
-        retriveSlbId: true,
         retriveSlbIp: true,
+        retriveSlbId: true,
     },
+    aclStatus: "on",
+    aclType: "white",
+    aclId: defaultAcl.id,
+    requestTimeout: 80,
+    idleTimeout: 30,
 });
 ```
 

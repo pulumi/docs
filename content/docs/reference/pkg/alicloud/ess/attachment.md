@@ -46,8 +46,8 @@ class MyStack : Stack
         })));
         var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
         {
-            MostRecent = true,
             NameRegex = "^ubuntu_18.*64",
+            MostRecent = true,
             Owners = "system",
         }));
         var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
@@ -56,9 +56,9 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/24",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup("defaultSecurityGroup", new AliCloud.Ecs.SecurityGroupArgs
         {
@@ -66,25 +66,25 @@ class MyStack : Stack
         });
         var defaultSecurityGroupRule = new AliCloud.Ecs.SecurityGroupRule("defaultSecurityGroupRule", new AliCloud.Ecs.SecurityGroupRuleArgs
         {
-            CidrIp = "172.16.0.0/24",
+            Type = "ingress",
             IpProtocol = "tcp",
             NicType = "intranet",
             Policy = "accept",
             PortRange = "22/22",
             Priority = 1,
             SecurityGroupId = defaultSecurityGroup.Id,
-            Type = "ingress",
+            CidrIp = "172.16.0.0/24",
         });
         var defaultScalingGroup = new AliCloud.Ess.ScalingGroup("defaultScalingGroup", new AliCloud.Ess.ScalingGroupArgs
         {
-            MaxSize = 2,
             MinSize = 0,
+            MaxSize = 2,
+            ScalingGroupName = name,
             RemovalPolicies = 
             {
                 "OldestInstance",
                 "NewestInstance",
             },
-            ScalingGroupName = name,
             VswitchIds = 
             {
                 defaultSwitch.Id,
@@ -92,13 +92,13 @@ class MyStack : Stack
         });
         var defaultScalingConfiguration = new AliCloud.Ess.ScalingConfiguration("defaultScalingConfiguration", new AliCloud.Ess.ScalingConfigurationArgs
         {
-            Active = true,
-            Enable = true,
-            ForceDelete = true,
+            ScalingGroupId = defaultScalingGroup.Id,
             ImageId = defaultImages.Apply(defaultImages => defaultImages.Images[0].Id),
             InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.InstanceTypes[0].Id),
-            ScalingGroupId = defaultScalingGroup.Id,
             SecurityGroupId = defaultSecurityGroup.Id,
+            ForceDelete = true,
+            Active = true,
+            Enable = true,
         });
         var defaultInstance = new List<AliCloud.Ecs.Instance>();
         for (var rangeIndex = 0; rangeIndex < 2; rangeIndex++)
@@ -107,28 +107,28 @@ class MyStack : Stack
             defaultInstance.Add(new AliCloud.Ecs.Instance($"defaultInstance-{range.Value}", new AliCloud.Ecs.InstanceArgs
             {
                 ImageId = defaultImages.Apply(defaultImages => defaultImages.Images[0].Id),
-                InstanceChargeType = "PostPaid",
-                InstanceName = name,
                 InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.InstanceTypes[0].Id),
-                InternetChargeType = "PayByTraffic",
-                InternetMaxBandwidthOut = 10,
                 SecurityGroups = 
                 {
                     defaultSecurityGroup.Id,
                 },
+                InternetChargeType = "PayByTraffic",
+                InternetMaxBandwidthOut = 10,
+                InstanceChargeType = "PostPaid",
                 SystemDiskCategory = "cloud_efficiency",
                 VswitchId = defaultSwitch.Id,
+                InstanceName = name,
             }));
         }
         var defaultAttachment = new AliCloud.Ess.Attachment("defaultAttachment", new AliCloud.Ess.AttachmentArgs
         {
-            Force = true,
+            ScalingGroupId = defaultScalingGroup.Id,
             InstanceIds = 
             {
                 defaultInstance[0].Id,
                 defaultInstance[1].Id,
             },
-            ScalingGroupId = defaultScalingGroup.Id,
+            Force = true,
         });
     }
 
@@ -171,12 +171,12 @@ func main() {
 		if err != nil {
 			return err
 		}
-		opt5 := true
-		opt6 := "^ubuntu_18.*64"
+		opt5 := "^ubuntu_18.*64"
+		opt6 := true
 		opt7 := "system"
 		defaultImages, err := ecs.GetImages(ctx, &ecs.GetImagesArgs{
-			MostRecent: &opt5,
-			NameRegex:  &opt6,
+			NameRegex:  &opt5,
+			MostRecent: &opt6,
 			Owners:     &opt7,
 		}, nil)
 		if err != nil {
@@ -189,9 +189,9 @@ func main() {
 			return err
 		}
 		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			CidrBlock:        pulumi.String("172.16.0.0/24"),
 			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
 		})
 		if err != nil {
 			return err
@@ -203,26 +203,26 @@ func main() {
 			return err
 		}
 		_, err = ecs.NewSecurityGroupRule(ctx, "defaultSecurityGroupRule", &ecs.SecurityGroupRuleArgs{
-			CidrIp:          pulumi.String("172.16.0.0/24"),
+			Type:            pulumi.String("ingress"),
 			IpProtocol:      pulumi.String("tcp"),
 			NicType:         pulumi.String("intranet"),
 			Policy:          pulumi.String("accept"),
 			PortRange:       pulumi.String("22/22"),
 			Priority:        pulumi.Int(1),
 			SecurityGroupId: defaultSecurityGroup.ID(),
-			Type:            pulumi.String("ingress"),
+			CidrIp:          pulumi.String("172.16.0.0/24"),
 		})
 		if err != nil {
 			return err
 		}
 		defaultScalingGroup, err := ess.NewScalingGroup(ctx, "defaultScalingGroup", &ess.ScalingGroupArgs{
-			MaxSize: pulumi.Int(2),
-			MinSize: pulumi.Int(0),
+			MinSize:          pulumi.Int(0),
+			MaxSize:          pulumi.Int(2),
+			ScalingGroupName: pulumi.String(name),
 			RemovalPolicies: pulumi.StringArray{
 				pulumi.String("OldestInstance"),
 				pulumi.String("NewestInstance"),
 			},
-			ScalingGroupName: pulumi.String(name),
 			VswitchIds: pulumi.StringArray{
 				defaultSwitch.ID(),
 			},
@@ -231,13 +231,13 @@ func main() {
 			return err
 		}
 		_, err = ess.NewScalingConfiguration(ctx, "defaultScalingConfiguration", &ess.ScalingConfigurationArgs{
-			Active:          pulumi.Bool(true),
-			Enable:          pulumi.Bool(true),
-			ForceDelete:     pulumi.Bool(true),
+			ScalingGroupId:  defaultScalingGroup.ID(),
 			ImageId:         pulumi.String(defaultImages.Images[0].Id),
 			InstanceType:    pulumi.String(defaultInstanceTypes.InstanceTypes[0].Id),
-			ScalingGroupId:  defaultScalingGroup.ID(),
 			SecurityGroupId: defaultSecurityGroup.ID(),
+			ForceDelete:     pulumi.Bool(true),
+			Active:          pulumi.Bool(true),
+			Enable:          pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -245,17 +245,17 @@ func main() {
 		var defaultInstance []*ecs.Instance
 		for key0, _ := range 2 {
 			__res, err := ecs.NewInstance(ctx, fmt.Sprintf("defaultInstance-%v", key0), &ecs.InstanceArgs{
-				ImageId:                 pulumi.String(defaultImages.Images[0].Id),
-				InstanceChargeType:      pulumi.String("PostPaid"),
-				InstanceName:            pulumi.String(name),
-				InstanceType:            pulumi.String(defaultInstanceTypes.InstanceTypes[0].Id),
-				InternetChargeType:      pulumi.String("PayByTraffic"),
-				InternetMaxBandwidthOut: pulumi.Int(10),
+				ImageId:      pulumi.String(defaultImages.Images[0].Id),
+				InstanceType: pulumi.String(defaultInstanceTypes.InstanceTypes[0].Id),
 				SecurityGroups: pulumi.StringArray{
 					defaultSecurityGroup.ID(),
 				},
-				SystemDiskCategory: pulumi.String("cloud_efficiency"),
-				VswitchId:          defaultSwitch.ID(),
+				InternetChargeType:      pulumi.String("PayByTraffic"),
+				InternetMaxBandwidthOut: pulumi.Int(10),
+				InstanceChargeType:      pulumi.String("PostPaid"),
+				SystemDiskCategory:      pulumi.String("cloud_efficiency"),
+				VswitchId:               defaultSwitch.ID(),
+				InstanceName:            pulumi.String(name),
 			})
 			if err != nil {
 				return err
@@ -263,12 +263,12 @@ func main() {
 			defaultInstance = append(defaultInstance, __res)
 		}
 		_, err = ess.NewAttachment(ctx, "defaultAttachment", &ess.AttachmentArgs{
-			Force: pulumi.Bool(true),
+			ScalingGroupId: defaultScalingGroup.ID(),
 			InstanceIds: pulumi.StringArray{
 				defaultInstance[0].ID(),
 				defaultInstance[1].ID(),
 			},
-			ScalingGroupId: defaultScalingGroup.ID(),
+			Force: pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -294,60 +294,60 @@ default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
 default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0].id,
     cpu_core_count=2,
     memory_size=4)
-default_images = alicloud.ecs.get_images(most_recent=True,
-    name_regex="^ubuntu_18.*64",
+default_images = alicloud.ecs.get_images(name_regex="^ubuntu_18.*64",
+    most_recent=True,
     owners="system")
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0].id,
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup", vpc_id=default_network.id)
 default_security_group_rule = alicloud.ecs.SecurityGroupRule("defaultSecurityGroupRule",
-    cidr_ip="172.16.0.0/24",
+    type="ingress",
     ip_protocol="tcp",
     nic_type="intranet",
     policy="accept",
     port_range="22/22",
     priority=1,
     security_group_id=default_security_group.id,
-    type="ingress")
+    cidr_ip="172.16.0.0/24")
 default_scaling_group = alicloud.ess.ScalingGroup("defaultScalingGroup",
-    max_size=2,
     min_size=0,
+    max_size=2,
+    scaling_group_name=name,
     removal_policies=[
         "OldestInstance",
         "NewestInstance",
     ],
-    scaling_group_name=name,
     vswitch_ids=[default_switch.id])
 default_scaling_configuration = alicloud.ess.ScalingConfiguration("defaultScalingConfiguration",
-    active=True,
-    enable=True,
-    force_delete=True,
+    scaling_group_id=default_scaling_group.id,
     image_id=default_images.images[0].id,
     instance_type=default_instance_types.instance_types[0].id,
-    scaling_group_id=default_scaling_group.id,
-    security_group_id=default_security_group.id)
+    security_group_id=default_security_group.id,
+    force_delete=True,
+    active=True,
+    enable=True)
 default_instance = []
 for range in [{"value": i} for i in range(0, 2)]:
     default_instance.append(alicloud.ecs.Instance(f"defaultInstance-{range['value']}",
         image_id=default_images.images[0].id,
-        instance_charge_type="PostPaid",
-        instance_name=name,
         instance_type=default_instance_types.instance_types[0].id,
+        security_groups=[default_security_group.id],
         internet_charge_type="PayByTraffic",
         internet_max_bandwidth_out=10,
-        security_groups=[default_security_group.id],
+        instance_charge_type="PostPaid",
         system_disk_category="cloud_efficiency",
-        vswitch_id=default_switch.id))
+        vswitch_id=default_switch.id,
+        instance_name=name))
 default_attachment = alicloud.ess.Attachment("defaultAttachment",
-    force=True,
+    scaling_group_id=default_scaling_group.id,
     instance_ids=[
         default_instance[0].id,
         default_instance[1].id,
     ],
-    scaling_group_id=default_scaling_group.id)
+    force=True)
 ```
 
 {{% /example %}}
@@ -360,82 +360,77 @@ import * as alicloud from "@pulumi/alicloud";
 
 const config = new pulumi.Config();
 const name = config.get("name") || "essattachmentconfig";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableDiskCategory: "cloud_efficiency",
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
+});
+const defaultInstanceTypes = defaultZones.then(defaultZones => alicloud.ecs.getInstanceTypes({
     availabilityZone: defaultZones.zones[0].id,
     cpuCoreCount: 2,
     memorySize: 4,
-}, { async: true }));
-const defaultImages = pulumi.output(alicloud.ecs.getImages({
-    mostRecent: true,
+}));
+const defaultImages = alicloud.ecs.getImages({
     nameRegex: "^ubuntu_18.*64",
+    mostRecent: true,
     owners: "system",
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/16",
 });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
+    vpcId: defaultNetwork.id,
     cidrBlock: "172.16.0.0/24",
-    vpcId: defaultNetwork.id,
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("default", {
-    vpcId: defaultNetwork.id,
-});
-const defaultSecurityGroupRule = new alicloud.ecs.SecurityGroupRule("default", {
-    cidrIp: "172.16.0.0/24",
+const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("defaultSecurityGroup", {vpcId: defaultNetwork.id});
+const defaultSecurityGroupRule = new alicloud.ecs.SecurityGroupRule("defaultSecurityGroupRule", {
+    type: "ingress",
     ipProtocol: "tcp",
     nicType: "intranet",
     policy: "accept",
     portRange: "22/22",
     priority: 1,
     securityGroupId: defaultSecurityGroup.id,
-    type: "ingress",
+    cidrIp: "172.16.0.0/24",
 });
-const defaultScalingGroup = new alicloud.ess.ScalingGroup("default", {
-    maxSize: 2,
+const defaultScalingGroup = new alicloud.ess.ScalingGroup("defaultScalingGroup", {
     minSize: 0,
+    maxSize: 2,
+    scalingGroupName: name,
     removalPolicies: [
         "OldestInstance",
         "NewestInstance",
     ],
-    scalingGroupName: name,
     vswitchIds: [defaultSwitch.id],
 });
-const defaultScalingConfiguration = new alicloud.ess.ScalingConfiguration("default", {
+const defaultScalingConfiguration = new alicloud.ess.ScalingConfiguration("defaultScalingConfiguration", {
+    scalingGroupId: defaultScalingGroup.id,
+    imageId: defaultImages.then(defaultImages => defaultImages.images[0].id),
+    instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.instanceTypes[0].id),
+    securityGroupId: defaultSecurityGroup.id,
+    forceDelete: true,
     active: true,
     enable: true,
-    forceDelete: true,
-    imageId: defaultImages.images[0].id,
-    instanceType: defaultInstanceTypes.instanceTypes[0].id,
-    scalingGroupId: defaultScalingGroup.id,
-    securityGroupId: defaultSecurityGroup.id,
 });
-const defaultInstance: alicloud.ecs.Instance[] = [];
-for (let i = 0; i < 2; i++) {
-    defaultInstance.push(new alicloud.ecs.Instance(`default-${i}`, {
-        imageId: defaultImages.images[0].id,
-        instanceChargeType: "PostPaid",
-        instanceName: name,
-        instanceType: defaultInstanceTypes.instanceTypes[0].id,
-        internetChargeType: "PayByTraffic",
-        internetMaxBandwidthOut: 10,
+const defaultInstance: alicloud.ecs.Instance[];
+for (const range = {value: 0}; range.value < 2; range.value++) {
+    defaultInstance.push(new alicloud.ecs.Instance(`defaultInstance-${range.value}`, {
+        imageId: defaultImages.then(defaultImages => defaultImages.images[0].id),
+        instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.instanceTypes[0].id),
         securityGroups: [defaultSecurityGroup.id],
+        internetChargeType: "PayByTraffic",
+        internetMaxBandwidthOut: "10",
+        instanceChargeType: "PostPaid",
         systemDiskCategory: "cloud_efficiency",
         vswitchId: defaultSwitch.id,
+        instanceName: name,
     }));
 }
-const defaultAttachment = new alicloud.ess.Attachment("default", {
-    force: true,
+const defaultAttachment = new alicloud.ess.Attachment("defaultAttachment", {
+    scalingGroupId: defaultScalingGroup.id,
     instanceIds: [
         defaultInstance[0].id,
         defaultInstance[1].id,
     ],
-    scalingGroupId: defaultScalingGroup.id,
+    force: true,
 });
 ```
 

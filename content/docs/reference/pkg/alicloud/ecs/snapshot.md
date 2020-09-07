@@ -30,8 +30,8 @@ class MyStack : Stack
     {
         var snapshot = new AliCloud.Ecs.Snapshot("snapshot", new AliCloud.Ecs.SnapshotArgs
         {
-            Description = "this snapshot is created for testing",
             DiskId = alicloud_disk_attachment.Instance_attachment.Disk_id,
+            Description = "this snapshot is created for testing",
             Tags = 
             {
                 { "version", "1.2" },
@@ -56,8 +56,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ecs.NewSnapshot(ctx, "snapshot", &ecs.SnapshotArgs{
-			Description: pulumi.String("this snapshot is created for testing"),
 			DiskId:      pulumi.Any(alicloud_disk_attachment.Instance - attachment.Disk_id),
+			Description: pulumi.String("this snapshot is created for testing"),
 			Tags: pulumi.StringMap{
 				"version": pulumi.String("1.2"),
 			},
@@ -78,8 +78,8 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 snapshot = alicloud.ecs.Snapshot("snapshot",
-    description="this snapshot is created for testing",
     disk_id=alicloud_disk_attachment["instance-attachment"]["disk_id"],
+    description="this snapshot is created for testing",
     tags={
         "version": "1.2",
     })
@@ -94,8 +94,8 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const snapshot = new alicloud.ecs.Snapshot("snapshot", {
+    diskId: alicloud_disk_attachment["instance-attachment"].disk_id,
     description: "this snapshot is created for testing",
-    diskId: alicloud_disk_attachment_instance_attachment.diskId,
     tags: {
         version: "1.2",
     },

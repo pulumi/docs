@@ -28,6 +28,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        // Create a cen_route_entry resource and use it to publish a route entry pointing to an ECS.
         var hz = new AliCloud.Provider("hz", new AliCloud.ProviderArgs
         {
             Region = "cn-hangzhou",
@@ -47,8 +48,8 @@ class MyStack : Stack
         })));
         var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
         {
-            MostRecent = true,
             NameRegex = "^ubuntu_18.*64",
+            MostRecent = true,
             Owners = "system",
         }));
         var vpc = new AliCloud.Vpc.Network("vpc", new AliCloud.Vpc.NetworkArgs
@@ -56,16 +57,16 @@ class MyStack : Stack
             CidrBlock = "172.16.0.0/12",
         }, new CustomResourceOptions
         {
-            Provider = "alicloud.hz",
+            Provider = alicloud.Hz,
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/21",
             VpcId = vpc.Id,
+            CidrBlock = "172.16.0.0/21",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         }, new CustomResourceOptions
         {
-            Provider = "alicloud.hz",
+            Provider = alicloud.Hz,
         });
         var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup("defaultSecurityGroup", new AliCloud.Ecs.SecurityGroupArgs
         {
@@ -73,61 +74,61 @@ class MyStack : Stack
             VpcId = vpc.Id,
         }, new CustomResourceOptions
         {
-            Provider = "alicloud.hz",
+            Provider = alicloud.Hz,
         });
         var defaultInstance = new AliCloud.Ecs.Instance("defaultInstance", new AliCloud.Ecs.InstanceArgs
         {
+            VswitchId = defaultSwitch.Id,
             ImageId = defaultImages.Apply(defaultImages => defaultImages.Images[0].Id),
-            InstanceName = name,
             InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.InstanceTypes[0].Id),
+            SystemDiskCategory = "cloud_efficiency",
             InternetChargeType = "PayByTraffic",
             InternetMaxBandwidthOut = 5,
             SecurityGroups = 
             {
                 defaultSecurityGroup.Id,
             },
-            SystemDiskCategory = "cloud_efficiency",
-            VswitchId = defaultSwitch.Id,
+            InstanceName = name,
         }, new CustomResourceOptions
         {
-            Provider = "alicloud.hz",
+            Provider = alicloud.Hz,
         });
         var cen = new AliCloud.Cen.Instance("cen", new AliCloud.Cen.InstanceArgs
         {
         });
         var attach = new AliCloud.Cen.InstanceAttachment("attach", new AliCloud.Cen.InstanceAttachmentArgs
         {
+            InstanceId = cen.Id,
             ChildInstanceId = vpc.Id,
             ChildInstanceRegionId = "cn-hangzhou",
-            InstanceId = cen.Id,
         }, new CustomResourceOptions
         {
             DependsOn = 
             {
-                "alicloud_vswitch.default",
+                defaultSwitch,
             },
         });
         var route = new AliCloud.Vpc.RouteEntry("route", new AliCloud.Vpc.RouteEntryArgs
         {
-            DestinationCidrblock = "11.0.0.0/16",
-            NexthopId = defaultInstance.Id,
-            NexthopType = "Instance",
             RouteTableId = vpc.RouteTableId,
+            DestinationCidrblock = "11.0.0.0/16",
+            NexthopType = "Instance",
+            NexthopId = defaultInstance.Id,
         }, new CustomResourceOptions
         {
-            Provider = "alicloud.hz",
+            Provider = alicloud.Hz,
         });
         var foo = new AliCloud.Cen.RouteEntry("foo", new AliCloud.Cen.RouteEntryArgs
         {
-            CidrBlock = route.DestinationCidrblock,
             InstanceId = cen.Id,
             RouteTableId = vpc.RouteTableId,
+            CidrBlock = route.DestinationCidrblock,
         }, new CustomResourceOptions
         {
-            Provider = "alicloud.hz",
+            Provider = alicloud.Hz,
             DependsOn = 
             {
-                "alicloud_cen_instance_attachment.attach",
+                attach,
             },
         });
     }
@@ -178,12 +179,12 @@ func main() {
 		if err != nil {
 			return err
 		}
-		opt5 := true
-		opt6 := "^ubuntu_18.*64"
+		opt5 := "^ubuntu_18.*64"
+		opt6 := true
 		opt7 := "system"
 		defaultImages, err := ecs.GetImages(ctx, &ecs.GetImagesArgs{
-			MostRecent: &opt5,
-			NameRegex:  &opt6,
+			NameRegex:  &opt5,
+			MostRecent: &opt6,
 			Owners:     &opt7,
 		}, nil)
 		if err != nil {
@@ -191,37 +192,37 @@ func main() {
 		}
 		vpc, err := vpc.NewNetwork(ctx, "vpc", &vpc.NetworkArgs{
 			CidrBlock: pulumi.String("172.16.0.0/12"),
-		}, pulumi.Provider("alicloud.hz"))
+		}, pulumi.Provider(alicloud.Hz))
 		if err != nil {
 			return err
 		}
 		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			CidrBlock:        pulumi.String("172.16.0.0/21"),
 			VpcId:            vpc.ID(),
-		}, pulumi.Provider("alicloud.hz"))
+			CidrBlock:        pulumi.String("172.16.0.0/21"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
+		}, pulumi.Provider(alicloud.Hz))
 		if err != nil {
 			return err
 		}
 		defaultSecurityGroup, err := ecs.NewSecurityGroup(ctx, "defaultSecurityGroup", &ecs.SecurityGroupArgs{
 			Description: pulumi.String("foo"),
 			VpcId:       vpc.ID(),
-		}, pulumi.Provider("alicloud.hz"))
+		}, pulumi.Provider(alicloud.Hz))
 		if err != nil {
 			return err
 		}
 		defaultInstance, err := ecs.NewInstance(ctx, "defaultInstance", &ecs.InstanceArgs{
+			VswitchId:               defaultSwitch.ID(),
 			ImageId:                 pulumi.String(defaultImages.Images[0].Id),
-			InstanceName:            pulumi.String(name),
 			InstanceType:            pulumi.String(defaultInstanceTypes.InstanceTypes[0].Id),
+			SystemDiskCategory:      pulumi.String("cloud_efficiency"),
 			InternetChargeType:      pulumi.String("PayByTraffic"),
 			InternetMaxBandwidthOut: pulumi.Int(5),
 			SecurityGroups: pulumi.StringArray{
 				defaultSecurityGroup.ID(),
 			},
-			SystemDiskCategory: pulumi.String("cloud_efficiency"),
-			VswitchId:          defaultSwitch.ID(),
-		}, pulumi.Provider("alicloud.hz"))
+			InstanceName: pulumi.String(name),
+		}, pulumi.Provider(alicloud.Hz))
 		if err != nil {
 			return err
 		}
@@ -229,31 +230,31 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = cen.NewInstanceAttachment(ctx, "attach", &cen.InstanceAttachmentArgs{
+		attach, err := cen.NewInstanceAttachment(ctx, "attach", &cen.InstanceAttachmentArgs{
+			InstanceId:            cen.ID(),
 			ChildInstanceId:       vpc.ID(),
 			ChildInstanceRegionId: pulumi.String("cn-hangzhou"),
-			InstanceId:            cen.ID(),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"alicloud_vswitch.default",
+			defaultSwitch,
 		}))
 		if err != nil {
 			return err
 		}
 		route, err := vpc.NewRouteEntry(ctx, "route", &vpc.RouteEntryArgs{
-			DestinationCidrblock: pulumi.String("11.0.0.0/16"),
-			NexthopId:            defaultInstance.ID(),
-			NexthopType:          pulumi.String("Instance"),
 			RouteTableId:         vpc.RouteTableId,
-		}, pulumi.Provider("alicloud.hz"))
+			DestinationCidrblock: pulumi.String("11.0.0.0/16"),
+			NexthopType:          pulumi.String("Instance"),
+			NexthopId:            defaultInstance.ID(),
+		}, pulumi.Provider(alicloud.Hz))
 		if err != nil {
 			return err
 		}
 		_, err = cen.NewRouteEntry(ctx, "foo", &cen.RouteEntryArgs{
-			CidrBlock:    route.DestinationCidrblock,
 			InstanceId:   cen.ID(),
 			RouteTableId: vpc.RouteTableId,
-		}, pulumi.Provider("alicloud.hz"), pulumi.DependsOn([]pulumi.Resource{
-			"alicloud_cen_instance_attachment.attach",
+			CidrBlock:    route.DestinationCidrblock,
+		}, pulumi.Provider(alicloud.Hz), pulumi.DependsOn([]pulumi.Resource{
+			attach,
 		}))
 		if err != nil {
 			return err
@@ -271,6 +272,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 import pulumi_pulumi as pulumi
 
+# Create a cen_route_entry resource and use it to publish a route entry pointing to an ECS.
 hz = pulumi.providers.Alicloud("hz", region="cn-hangzhou")
 config = pulumi.Config()
 name = config.get("name")
@@ -281,48 +283,48 @@ default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
 default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0].id,
     cpu_core_count=1,
     memory_size=2)
-default_images = alicloud.ecs.get_images(most_recent=True,
-    name_regex="^ubuntu_18.*64",
+default_images = alicloud.ecs.get_images(name_regex="^ubuntu_18.*64",
+    most_recent=True,
     owners="system")
 vpc = alicloud.vpc.Network("vpc", cidr_block="172.16.0.0/12",
-opts=ResourceOptions(provider="alicloud.hz"))
+opts=ResourceOptions(provider=alicloud["hz"]))
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0].id,
-    cidr_block="172.16.0.0/21",
     vpc_id=vpc.id,
-    opts=ResourceOptions(provider="alicloud.hz"))
+    cidr_block="172.16.0.0/21",
+    availability_zone=default_zones.zones[0].id,
+    opts=ResourceOptions(provider=alicloud["hz"]))
 default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup",
     description="foo",
     vpc_id=vpc.id,
-    opts=ResourceOptions(provider="alicloud.hz"))
+    opts=ResourceOptions(provider=alicloud["hz"]))
 default_instance = alicloud.ecs.Instance("defaultInstance",
+    vswitch_id=default_switch.id,
     image_id=default_images.images[0].id,
-    instance_name=name,
     instance_type=default_instance_types.instance_types[0].id,
+    system_disk_category="cloud_efficiency",
     internet_charge_type="PayByTraffic",
     internet_max_bandwidth_out=5,
     security_groups=[default_security_group.id],
-    system_disk_category="cloud_efficiency",
-    vswitch_id=default_switch.id,
-    opts=ResourceOptions(provider="alicloud.hz"))
+    instance_name=name,
+    opts=ResourceOptions(provider=alicloud["hz"]))
 cen = alicloud.cen.Instance("cen")
 attach = alicloud.cen.InstanceAttachment("attach",
+    instance_id=cen.id,
     child_instance_id=vpc.id,
     child_instance_region_id="cn-hangzhou",
-    instance_id=cen.id,
-    opts=ResourceOptions(depends_on=["alicloud_vswitch.default"]))
+    opts=ResourceOptions(depends_on=[default_switch]))
 route = alicloud.vpc.RouteEntry("route",
-    destination_cidrblock="11.0.0.0/16",
-    nexthop_id=default_instance.id,
-    nexthop_type="Instance",
     route_table_id=vpc.route_table_id,
-    opts=ResourceOptions(provider="alicloud.hz"))
+    destination_cidrblock="11.0.0.0/16",
+    nexthop_type="Instance",
+    nexthop_id=default_instance.id,
+    opts=ResourceOptions(provider=alicloud["hz"]))
 foo = alicloud.cen.RouteEntry("foo",
-    cidr_block=route.destination_cidrblock,
     instance_id=cen.id,
     route_table_id=vpc.route_table_id,
-    opts=ResourceOptions(provider="alicloud.hz",
-        depends_on=["alicloud_cen_instance_attachment.attach"]))
+    cidr_block=route.destination_cidrblock,
+    opts=ResourceOptions(provider=alicloud["hz"],
+        depends_on=[attach]))
 ```
 
 {{% /example %}}
@@ -333,65 +335,76 @@ foo = alicloud.cen.RouteEntry("foo",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
+// Create a cen_route_entry resource and use it to publish a route entry pointing to an ECS.
+const hz = new alicloud.Provider("hz", {region: "cn-hangzhou"});
 const config = new pulumi.Config();
 const name = config.get("name") || "tf-testAccCenRouteEntryConfig";
-
-const hz = new alicloud.Provider("hz", {
-    region: "cn-hangzhou",
-});
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableDiskCategory: "cloud_efficiency",
     availableResourceCreation: "VSwitch",
-}, { provider: hz, async: true }));
-const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
+});
+const defaultInstanceTypes = defaultZones.then(defaultZones => alicloud.ecs.getInstanceTypes({
     availabilityZone: defaultZones.zones[0].id,
     cpuCoreCount: 1,
     memorySize: 2,
-}, { provider: hz, async: true }));
-const defaultImages = pulumi.output(alicloud.ecs.getImages({
-    mostRecent: true,
+}));
+const defaultImages = alicloud.ecs.getImages({
     nameRegex: "^ubuntu_18.*64",
+    mostRecent: true,
     owners: "system",
-}, { provider: hz, async: true }));
-const vpc = new alicloud.vpc.Network("vpc", {
-    cidrBlock: "172.16.0.0/12",
-}, { provider: hz });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/21",
+});
+const vpc = new alicloud.vpc.Network("vpc", {cidrBlock: "172.16.0.0/12"}, {
+    provider: alicloud.hz,
+});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: vpc.id,
-}, { provider: hz });
-const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("default", {
+    cidrBlock: "172.16.0.0/21",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+}, {
+    provider: alicloud.hz,
+});
+const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("defaultSecurityGroup", {
     description: "foo",
     vpcId: vpc.id,
-}, { provider: hz });
-const defaultInstance = new alicloud.ecs.Instance("default", {
-    imageId: defaultImages.images[0].id,
-    instanceName: name,
-    instanceType: defaultInstanceTypes.instanceTypes[0].id,
+}, {
+    provider: alicloud.hz,
+});
+const defaultInstance = new alicloud.ecs.Instance("defaultInstance", {
+    vswitchId: defaultSwitch.id,
+    imageId: defaultImages.then(defaultImages => defaultImages.images[0].id),
+    instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.instanceTypes[0].id),
+    systemDiskCategory: "cloud_efficiency",
     internetChargeType: "PayByTraffic",
     internetMaxBandwidthOut: 5,
     securityGroups: [defaultSecurityGroup.id],
-    systemDiskCategory: "cloud_efficiency",
-    vswitchId: defaultSwitch.id,
-}, { provider: hz });
+    instanceName: name,
+}, {
+    provider: alicloud.hz,
+});
 const cen = new alicloud.cen.Instance("cen", {});
 const attach = new alicloud.cen.InstanceAttachment("attach", {
+    instanceId: cen.id,
     childInstanceId: vpc.id,
     childInstanceRegionId: "cn-hangzhou",
-    instanceId: cen.id,
-}, { dependsOn: [defaultSwitch] });
+}, {
+    dependsOn: [defaultSwitch],
+});
 const route = new alicloud.vpc.RouteEntry("route", {
-    destinationCidrblock: "11.0.0.0/16",
-    nexthopId: defaultInstance.id,
-    nexthopType: "Instance",
     routeTableId: vpc.routeTableId,
-}, { provider: hz });
+    destinationCidrblock: "11.0.0.0/16",
+    nexthopType: "Instance",
+    nexthopId: defaultInstance.id,
+}, {
+    provider: alicloud.hz,
+});
 const foo = new alicloud.cen.RouteEntry("foo", {
-    cidrBlock: route.destinationCidrblock,
     instanceId: cen.id,
     routeTableId: vpc.routeTableId,
-}, { provider: hz, dependsOn: [attach] });
+    cidrBlock: route.destinationCidrblock,
+}, {
+    provider: alicloud.hz,
+    dependsOn: [attach],
+});
 ```
 
 {{% /example %}}

@@ -31,29 +31,30 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        // Create a cen vbr HealrhCheck resource and use it.
         var defaultInstance = new AliCloud.Cen.Instance("defaultInstance", new AliCloud.Cen.InstanceArgs
         {
         });
         var defaultInstanceAttachment = new AliCloud.Cen.InstanceAttachment("defaultInstanceAttachment", new AliCloud.Cen.InstanceAttachmentArgs
         {
+            InstanceId = defaultInstance.Id,
             ChildInstanceId = "vbr-xxxxx",
             ChildInstanceRegionId = "cn-hangzhou",
-            InstanceId = defaultInstance.Id,
         });
         var defaultVbrHealthCheck = new AliCloud.Cen.VbrHealthCheck("defaultVbrHealthCheck", new AliCloud.Cen.VbrHealthCheckArgs
         {
             CenId = defaultInstance.Id,
-            HealthCheckInterval = 2,
             HealthCheckSourceIp = "192.168.1.2",
             HealthCheckTargetIp = "10.0.0.2",
-            HealthyThreshold = 8,
             VbrInstanceId = "vbr-xxxxx",
             VbrInstanceRegionId = "cn-hangzhou",
+            HealthCheckInterval = 2,
+            HealthyThreshold = 8,
         }, new CustomResourceOptions
         {
             DependsOn = 
             {
-                "alicloud_cen_instance_attachment.default",
+                defaultInstanceAttachment,
             },
         });
     }
@@ -78,24 +79,24 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = cen.NewInstanceAttachment(ctx, "defaultInstanceAttachment", &cen.InstanceAttachmentArgs{
+		defaultInstanceAttachment, err := cen.NewInstanceAttachment(ctx, "defaultInstanceAttachment", &cen.InstanceAttachmentArgs{
+			InstanceId:            defaultInstance.ID(),
 			ChildInstanceId:       pulumi.String("vbr-xxxxx"),
 			ChildInstanceRegionId: pulumi.String("cn-hangzhou"),
-			InstanceId:            defaultInstance.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = cen.NewVbrHealthCheck(ctx, "defaultVbrHealthCheck", &cen.VbrHealthCheckArgs{
 			CenId:               defaultInstance.ID(),
-			HealthCheckInterval: pulumi.Int(2),
 			HealthCheckSourceIp: pulumi.String("192.168.1.2"),
 			HealthCheckTargetIp: pulumi.String("10.0.0.2"),
-			HealthyThreshold:    pulumi.Int(8),
 			VbrInstanceId:       pulumi.String("vbr-xxxxx"),
 			VbrInstanceRegionId: pulumi.String("cn-hangzhou"),
+			HealthCheckInterval: pulumi.Int(2),
+			HealthyThreshold:    pulumi.Int(8),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"alicloud_cen_instance_attachment.default",
+			defaultInstanceAttachment,
 		}))
 		if err != nil {
 			return err
@@ -112,20 +113,21 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
+# Create a cen vbr HealrhCheck resource and use it.
 default_instance = alicloud.cen.Instance("defaultInstance")
 default_instance_attachment = alicloud.cen.InstanceAttachment("defaultInstanceAttachment",
+    instance_id=default_instance.id,
     child_instance_id="vbr-xxxxx",
-    child_instance_region_id="cn-hangzhou",
-    instance_id=default_instance.id)
+    child_instance_region_id="cn-hangzhou")
 default_vbr_health_check = alicloud.cen.VbrHealthCheck("defaultVbrHealthCheck",
     cen_id=default_instance.id,
-    health_check_interval=2,
     health_check_source_ip="192.168.1.2",
     health_check_target_ip="10.0.0.2",
-    healthy_threshold=8,
     vbr_instance_id="vbr-xxxxx",
     vbr_instance_region_id="cn-hangzhou",
-    opts=ResourceOptions(depends_on=["alicloud_cen_instance_attachment.default"]))
+    health_check_interval=2,
+    healthy_threshold=8,
+    opts=ResourceOptions(depends_on=[default_instance_attachment]))
 ```
 
 {{% /example %}}
@@ -136,21 +138,24 @@ default_vbr_health_check = alicloud.cen.VbrHealthCheck("defaultVbrHealthCheck",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultInstance = new alicloud.cen.Instance("default", {});
-const defaultInstanceAttachment = new alicloud.cen.InstanceAttachment("default", {
+// Create a cen vbr HealrhCheck resource and use it.
+const defaultInstance = new alicloud.cen.Instance("defaultInstance", {});
+const defaultInstanceAttachment = new alicloud.cen.InstanceAttachment("defaultInstanceAttachment", {
+    instanceId: defaultInstance.id,
     childInstanceId: "vbr-xxxxx",
     childInstanceRegionId: "cn-hangzhou",
-    instanceId: defaultInstance.id,
 });
-const defaultVbrHealthCheck = new alicloud.cen.VbrHealthCheck("default", {
+const defaultVbrHealthCheck = new alicloud.cen.VbrHealthCheck("defaultVbrHealthCheck", {
     cenId: defaultInstance.id,
-    healthCheckInterval: 2,
     healthCheckSourceIp: "192.168.1.2",
     healthCheckTargetIp: "10.0.0.2",
-    healthyThreshold: 8,
     vbrInstanceId: "vbr-xxxxx",
     vbrInstanceRegionId: "cn-hangzhou",
-}, { dependsOn: [defaultInstanceAttachment] });
+    healthCheckInterval: 2,
+    healthyThreshold: 8,
+}, {
+    dependsOn: [defaultInstanceAttachment],
+});
 ```
 
 {{% /example %}}

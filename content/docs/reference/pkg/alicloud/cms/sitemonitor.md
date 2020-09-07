@@ -15,6 +15,114 @@ Details at https://www.alibabacloud.com/help/doc-detail/67907.htm
 
 Available in 1.72.0+
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var basic = new AliCloud.Cms.SiteMonitor("basic", new AliCloud.Cms.SiteMonitorArgs
+        {
+            Address = "http://www.alibabacloud.com",
+            Interval = 5,
+            IspCities = 
+            {
+                new AliCloud.Cms.Inputs.SiteMonitorIspCityArgs
+                {
+                    City = "546",
+                    Isp = "465",
+                },
+            },
+            TaskName = "tf-testAccCmsSiteMonitor_basic",
+            TaskType = "HTTP",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cms.NewSiteMonitor(ctx, "basic", &cms.SiteMonitorArgs{
+			Address:  pulumi.String("http://www.alibabacloud.com"),
+			Interval: pulumi.Int(5),
+			IspCities: cms.SiteMonitorIspCityArray{
+				&cms.SiteMonitorIspCityArgs{
+					City: pulumi.String("546"),
+					Isp:  pulumi.String("465"),
+				},
+			},
+			TaskName: pulumi.String("tf-testAccCmsSiteMonitor_basic"),
+			TaskType: pulumi.String("HTTP"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+basic = alicloud.cms.SiteMonitor("basic",
+    address="http://www.alibabacloud.com",
+    interval=5,
+    isp_cities=[alicloud.cms.SiteMonitorIspCityArgs(
+        city="546",
+        isp="465",
+    )],
+    task_name="tf-testAccCmsSiteMonitor_basic",
+    task_type="HTTP")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const basic = new alicloud.cms.SiteMonitor("basic", {
+    address: "http://www.alibabacloud.com",
+    interval: 5,
+    ispCities: [{
+        city: "546",
+        isp: "465",
+    }],
+    taskName: "tf-testAccCmsSiteMonitor_basic",
+    taskType: "HTTP",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SiteMonitor Resource {#create}

@@ -44,7 +44,7 @@ class MyStack : Stack
         {
             DependsOn = 
             {
-                "alicloud_cloud_connect_network.ccn",
+                ccn,
             },
         });
     }
@@ -75,7 +75,7 @@ func main() {
 			CcnId: ccn.ID(),
 			SagId: pulumi.String("sag-xxxxx"),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"alicloud_cloud_connect_network.ccn",
+			ccn,
 		}))
 		if err != nil {
 			return err
@@ -96,7 +96,7 @@ ccn = alicloud.cloudconnect.Network("ccn", is_default=True)
 default = alicloud.cloudconnect.NetworkAttachment("default",
     ccn_id=ccn.id,
     sag_id="sag-xxxxx",
-    opts=ResourceOptions(depends_on=["alicloud_cloud_connect_network.ccn"]))
+    opts=ResourceOptions(depends_on=[ccn]))
 ```
 
 {{% /example %}}
@@ -107,13 +107,13 @@ default = alicloud.cloudconnect.NetworkAttachment("default",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const ccn = new alicloud.cloudconnect.Network("ccn", {
-    isDefault: true,
-});
-const defaultNetworkAttachment = new alicloud.cloudconnect.NetworkAttachment("default", {
+const ccn = new alicloud.cloudconnect.Network("ccn", {isDefault: "true"});
+const _default = new alicloud.cloudconnect.NetworkAttachment("default", {
     ccnId: ccn.id,
     sagId: "sag-xxxxx",
-}, { dependsOn: [ccn] });
+}, {
+    dependsOn: [ccn],
+});
 ```
 
 {{% /example %}}

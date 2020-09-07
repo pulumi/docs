@@ -29,16 +29,16 @@ class MyStack : Stack
         // Create a RAM login profile.
         var user = new AliCloud.Ram.User("user", new AliCloud.Ram.UserArgs
         {
-            Comments = "yoyoyo",
             DisplayName = "user_display_name",
-            Email = "hello.uuu@aaa.com",
-            Force = true,
             Mobile = "86-18688888888",
+            Email = "hello.uuu@aaa.com",
+            Comments = "yoyoyo",
+            Force = true,
         });
         var profile = new AliCloud.Ram.LoginProfile("profile", new AliCloud.Ram.LoginProfileArgs
         {
-            Password = "Yourpassword1234",
             UserName = user.Name,
+            Password = "Yourpassword1234",
         });
     }
 
@@ -59,18 +59,18 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		user, err := ram.NewUser(ctx, "user", &ram.UserArgs{
-			Comments:    pulumi.String("yoyoyo"),
 			DisplayName: pulumi.String("user_display_name"),
-			Email:       pulumi.String("hello.uuu@aaa.com"),
-			Force:       pulumi.Bool(true),
 			Mobile:      pulumi.String("86-18688888888"),
+			Email:       pulumi.String("hello.uuu@aaa.com"),
+			Comments:    pulumi.String("yoyoyo"),
+			Force:       pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = ram.NewLoginProfile(ctx, "profile", &ram.LoginProfileArgs{
-			Password: pulumi.String("Yourpassword1234"),
 			UserName: user.Name,
+			Password: pulumi.String("Yourpassword1234"),
 		})
 		if err != nil {
 			return err
@@ -89,14 +89,14 @@ import pulumi_alicloud as alicloud
 
 # Create a RAM login profile.
 user = alicloud.ram.User("user",
-    comments="yoyoyo",
     display_name="user_display_name",
+    mobile="86-18688888888",
     email="hello.uuu@aaa.com",
-    force=True,
-    mobile="86-18688888888")
+    comments="yoyoyo",
+    force=True)
 profile = alicloud.ram.LoginProfile("profile",
-    password="Yourpassword1234",
-    user_name=user.name)
+    user_name=user.name,
+    password="Yourpassword1234")
 ```
 
 {{% /example %}}
@@ -109,15 +109,15 @@ import * as alicloud from "@pulumi/alicloud";
 
 // Create a RAM login profile.
 const user = new alicloud.ram.User("user", {
-    comments: "yoyoyo",
     displayName: "user_display_name",
-    email: "hello.uuu@aaa.com",
-    force: true,
     mobile: "86-18688888888",
+    email: "hello.uuu@aaa.com",
+    comments: "yoyoyo",
+    force: true,
 });
 const profile = new alicloud.ram.LoginProfile("profile", {
-    password: "Yourpassword1234",
     userName: user.name,
+    password: "Yourpassword1234",
 });
 ```
 

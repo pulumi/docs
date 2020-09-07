@@ -33,8 +33,8 @@ class MyStack : Stack
         var name = config.Get("name") ?? "terraformtest";
         var foo = new AliCloud.Ots.Instance("foo", new AliCloud.Ots.InstanceArgs
         {
-            AccessedBy = "Any",
             Description = name,
+            AccessedBy = "Any",
             Tags = 
             {
                 { "Created", "TF" },
@@ -43,9 +43,8 @@ class MyStack : Stack
         });
         var basic = new AliCloud.Ots.Table("basic", new AliCloud.Ots.TableArgs
         {
-            DeviationCellVersionInSec = "1",
             InstanceName = foo.Name,
-            MaxVersion = 1,
+            TableName = name,
             PrimaryKeys = 
             {
                 new AliCloud.Ots.Inputs.TablePrimaryKeyArgs
@@ -64,8 +63,9 @@ class MyStack : Stack
                     Type = "Binary",
                 },
             },
-            TableName = name,
             TimeToLive = -1,
+            MaxVersion = 1,
+            DeviationCellVersionInSec = "1",
         });
     }
 
@@ -86,8 +86,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		foo, err := ots.NewInstance(ctx, "foo", &ots.InstanceArgs{
-			AccessedBy:  pulumi.String("Any"),
 			Description: pulumi.String(name),
+			AccessedBy:  pulumi.String("Any"),
 			Tags: pulumi.StringMap{
 				"Created": pulumi.String("TF"),
 				"For":     pulumi.String("acceptance test"),
@@ -97,9 +97,8 @@ func main() {
 			return err
 		}
 		_, err = ots.NewTable(ctx, "basic", &ots.TableArgs{
-			DeviationCellVersionInSec: pulumi.String("1"),
-			InstanceName:              foo.Name,
-			MaxVersion:                pulumi.Int(1),
+			InstanceName: foo.Name,
+			TableName:    pulumi.String(name),
 			PrimaryKeys: ots.TablePrimaryKeyArray{
 				&ots.TablePrimaryKeyArgs{
 					Name: pulumi.String("pk1"),
@@ -114,8 +113,9 @@ func main() {
 					Type: pulumi.String("Binary"),
 				},
 			},
-			TableName:  pulumi.String(name),
-			TimeToLive: pulumi.Int(-1),
+			TimeToLive:                pulumi.Int(-1),
+			MaxVersion:                pulumi.Int(1),
+			DeviationCellVersionInSec: pulumi.String("1"),
 		})
 		if err != nil {
 			return err
@@ -137,16 +137,15 @@ name = config.get("name")
 if name is None:
     name = "terraformtest"
 foo = alicloud.ots.Instance("foo",
-    accessed_by="Any",
     description=name,
+    accessed_by="Any",
     tags={
         "Created": "TF",
         "For": "acceptance test",
     })
 basic = alicloud.ots.Table("basic",
-    deviation_cell_version_in_sec="1",
     instance_name=foo.name,
-    max_version=1,
+    table_name=name,
     primary_keys=[
         alicloud.ots.TablePrimaryKeyArgs(
             name="pk1",
@@ -161,8 +160,9 @@ basic = alicloud.ots.Table("basic",
             type="Binary",
         ),
     ],
-    table_name=name,
-    time_to_live=-1)
+    time_to_live=-1,
+    max_version=1,
+    deviation_cell_version_in_sec="1")
 ```
 
 {{% /example %}}
@@ -175,19 +175,17 @@ import * as alicloud from "@pulumi/alicloud";
 
 const config = new pulumi.Config();
 const name = config.get("name") || "terraformtest";
-
 const foo = new alicloud.ots.Instance("foo", {
-    accessedBy: "Any",
     description: name,
+    accessedBy: "Any",
     tags: {
         Created: "TF",
         For: "acceptance test",
     },
 });
 const basic = new alicloud.ots.Table("basic", {
-    deviationCellVersionInSec: "1",
     instanceName: foo.name,
-    maxVersion: 1,
+    tableName: name,
     primaryKeys: [
         {
             name: "pk1",
@@ -202,8 +200,9 @@ const basic = new alicloud.ots.Table("basic", {
             type: "Binary",
         },
     ],
-    tableName: name,
     timeToLive: -1,
+    maxVersion: 1,
+    deviationCellVersionInSec: 1,
 });
 ```
 

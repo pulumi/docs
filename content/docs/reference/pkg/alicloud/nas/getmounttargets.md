@@ -28,16 +28,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var mt = Output.Create(AliCloud.Nas.GetMountTargets.InvokeAsync(new AliCloud.Nas.GetMountTargetsArgs
+        var example = Output.Create(AliCloud.Nas.GetMountTargets.InvokeAsync(new AliCloud.Nas.GetMountTargetsArgs
         {
-            AccessGroupName = "tf-testAccNasConfig",
             FileSystemId = "1a2sc4d",
+            AccessGroupName = "tf-testAccNasConfig",
         }));
-        this.AlicloudNasMountTargetsId = mt.Apply(mt => mt.Targets[0].Id);
+        this.TheFirstMountTargetDomain = example.Apply(example => example.Targets[0].Id);
     }
 
-    [Output("alicloudNasMountTargetsId")]
-    public Output<string> AlicloudNasMountTargetsId { get; set; }
+    [Output("theFirstMountTargetDomain")]
+    public Output<string> TheFirstMountTargetDomain { get; set; }
 }
 ```
 
@@ -55,14 +55,14 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "tf-testAccNasConfig"
-		mt, err := nas.GetMountTargets(ctx, &nas.GetMountTargetsArgs{
-			AccessGroupName: &opt0,
+		example, err := nas.GetMountTargets(ctx, &nas.GetMountTargetsArgs{
 			FileSystemId:    "1a2sc4d",
+			AccessGroupName: &opt0,
 		}, nil)
 		if err != nil {
 			return err
 		}
-		ctx.Export("alicloudNasMountTargetsId", mt.Targets[0].Id)
+		ctx.Export("theFirstMountTargetDomain", example.Targets[0].Id)
 		return nil
 	})
 }
@@ -75,9 +75,9 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
-mt = alicloud.nas.get_mount_targets(access_group_name="tf-testAccNasConfig",
-    file_system_id="1a2sc4d")
-pulumi.export("alicloudNasMountTargetsId", mt.targets[0].id)
+example = alicloud.nas.get_mount_targets(file_system_id="1a2sc4d",
+    access_group_name="tf-testAccNasConfig")
+pulumi.export("theFirstMountTargetDomain", example.targets[0].id)
 ```
 
 {{% /example %}}
@@ -88,12 +88,11 @@ pulumi.export("alicloudNasMountTargetsId", mt.targets[0].id)
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const mt = pulumi.output(alicloud.nas.getMountTargets({
-    accessGroupName: "tf-testAccNasConfig",
+const example = alicloud.nas.getMountTargets({
     fileSystemId: "1a2sc4d",
-}, { async: true }));
-
-export const alicloudNasMountTargetsId = mt.targets[0].id;
+    accessGroupName: "tf-testAccNasConfig",
+});
+export const theFirstMountTargetDomain = example.then(example => example.targets[0].id);
 ```
 
 {{% /example %}}
@@ -112,7 +111,7 @@ export const alicloudNasMountTargetsId = mt.targets[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_mount_targets(</span><span class="nx">access_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">mount_target_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMountTargetsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_mount_targets(</span><span class="nx">access_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">mount_target_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMountTargetsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -178,8 +177,19 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific MountTargetDomain.
+    <dd>{{% md %}}Field `mount_target_domain` has been deprecated from provider version 1.53.0. New field `ids` replaces it.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mount_target_domain&#39; has been deprecated from provider version 1.53.0. New field &#39;ids&#39; replaces it.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networktype_csharp">
+<a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Filter results by a specific NetworkType.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -193,14 +203,25 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Filter results by the status of mount target. Valid values: `Active`, `Inactive` and `Pending`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific NetworkType.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Field `type` has been deprecated from provider version 1.95.0. New field `network_type` replaces it.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;network_type&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -272,8 +293,19 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific MountTargetDomain.
+    <dd>{{% md %}}Field `mount_target_domain` has been deprecated from provider version 1.53.0. New field `ids` replaces it.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mount_target_domain&#39; has been deprecated from provider version 1.53.0. New field &#39;ids&#39; replaces it.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networktype_go">
+<a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Filter results by a specific NetworkType.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -287,14 +319,25 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Filter results by the status of mount target. Valid values: `Active`, `Inactive` and `Pending`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific NetworkType.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Field `type` has been deprecated from provider version 1.95.0. New field `network_type` replaces it.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;network_type&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -366,8 +409,19 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific MountTargetDomain.
+    <dd>{{% md %}}Field `mount_target_domain` has been deprecated from provider version 1.53.0. New field `ids` replaces it.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mount_target_domain&#39; has been deprecated from provider version 1.53.0. New field &#39;ids&#39; replaces it.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networktype_nodejs">
+<a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Filter results by a specific NetworkType.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -381,14 +435,25 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Filter results by the status of mount target. Valid values: `Active`, `Inactive` and `Pending`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific NetworkType.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Field `type` has been deprecated from provider version 1.95.0. New field `network_type` replaces it.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;network_type&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -460,8 +525,19 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific MountTargetDomain.
+    <dd>{{% md %}}Field `mount_target_domain` has been deprecated from provider version 1.53.0. New field `ids` replaces it.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mount_target_domain&#39; has been deprecated from provider version 1.53.0. New field &#39;ids&#39; replaces it.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="network_type_python">
+<a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Filter results by a specific NetworkType.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -475,14 +551,25 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Filter results by the status of mount target. Valid values: `Active`, `Inactive` and `Pending`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific NetworkType.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Field `type` has been deprecated from provider version 1.95.0. New field `network_type` replaces it.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;network_type&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -589,8 +676,20 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}MountTargetDomain of the MountTarget.
-* `type`- NetworkType of The MountTarget.
+* `type`- Field `type` has been deprecated from provider version 1.95.0. New field `network_type` replaces it.
+* `network_type`- (Available 1.95.0+) NetworkType of The MountTarget.
+* `status`- (Available 1.95.0+) The status of the mount target.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mount_target_domain&#39; has been deprecated from provider version 1.53.0. New field &#39;ids&#39; replaces it.{{% /md %}}</p></dd>
+
+    <dt class="property-"
+            title="">
+        <span id="networktype_csharp">
+<a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -604,13 +703,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;network_type&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -704,8 +813,20 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}MountTargetDomain of the MountTarget.
-* `type`- NetworkType of The MountTarget.
+* `type`- Field `type` has been deprecated from provider version 1.95.0. New field `network_type` replaces it.
+* `network_type`- (Available 1.95.0+) NetworkType of The MountTarget.
+* `status`- (Available 1.95.0+) The status of the mount target.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mount_target_domain&#39; has been deprecated from provider version 1.53.0. New field &#39;ids&#39; replaces it.{{% /md %}}</p></dd>
+
+    <dt class="property-"
+            title="">
+        <span id="networktype_go">
+<a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -719,13 +840,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;network_type&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -819,8 +950,20 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}MountTargetDomain of the MountTarget.
-* `type`- NetworkType of The MountTarget.
+* `type`- Field `type` has been deprecated from provider version 1.95.0. New field `network_type` replaces it.
+* `network_type`- (Available 1.95.0+) NetworkType of The MountTarget.
+* `status`- (Available 1.95.0+) The status of the mount target.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mount_target_domain&#39; has been deprecated from provider version 1.53.0. New field &#39;ids&#39; replaces it.{{% /md %}}</p></dd>
+
+    <dt class="property-"
+            title="">
+        <span id="networktype_nodejs">
+<a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -834,13 +977,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;network_type&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -934,8 +1087,20 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}MountTargetDomain of the MountTarget.
-* `type`- NetworkType of The MountTarget.
+* `type`- Field `type` has been deprecated from provider version 1.95.0. New field `network_type` replaces it.
+* `network_type`- (Available 1.95.0+) NetworkType of The MountTarget.
+* `status`- (Available 1.95.0+) The status of the mount target.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mount_target_domain&#39; has been deprecated from provider version 1.53.0. New field &#39;ids&#39; replaces it.{{% /md %}}</p></dd>
+
+    <dt class="property-"
+            title="">
+        <span id="network_type_python">
+<a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -949,13 +1114,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;network_type&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -1040,7 +1215,29 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific MountTargetDomain.
+    <dd>{{% md %}}Field `mount_target_domain` has been deprecated from provider version 1.53.0. New field `ids` replaces it.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="networktype_csharp">
+<a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Filter results by a specific NetworkType.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Filter results by the status of mount target. Valid values: `Active`, `Inactive` and `Pending`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1051,7 +1248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific NetworkType.
+    <dd>{{% md %}}Field `type` has been deprecated from provider version 1.95.0. New field `network_type` replaces it.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1113,7 +1310,29 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific MountTargetDomain.
+    <dd>{{% md %}}Field `mount_target_domain` has been deprecated from provider version 1.53.0. New field `ids` replaces it.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="networktype_go">
+<a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Filter results by a specific NetworkType.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Filter results by the status of mount target. Valid values: `Active`, `Inactive` and `Pending`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1124,7 +1343,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific NetworkType.
+    <dd>{{% md %}}Field `type` has been deprecated from provider version 1.95.0. New field `network_type` replaces it.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1186,7 +1405,29 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific MountTargetDomain.
+    <dd>{{% md %}}Field `mount_target_domain` has been deprecated from provider version 1.53.0. New field `ids` replaces it.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="networktype_nodejs">
+<a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Filter results by a specific NetworkType.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Filter results by the status of mount target. Valid values: `Active`, `Inactive` and `Pending`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1197,7 +1438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific NetworkType.
+    <dd>{{% md %}}Field `type` has been deprecated from provider version 1.95.0. New field `network_type` replaces it.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1259,7 +1500,29 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific MountTargetDomain.
+    <dd>{{% md %}}Field `mount_target_domain` has been deprecated from provider version 1.53.0. New field `ids` replaces it.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="network_type_python">
+<a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Filter results by a specific NetworkType.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Filter results by the status of mount target. Valid values: `Active`, `Inactive` and `Pending`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1270,7 +1533,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific NetworkType.
+    <dd>{{% md %}}Field `type` has been deprecated from provider version 1.95.0. New field `network_type` replaces it.
 {{% /md %}}</dd>
 
     <dt class="property-required"

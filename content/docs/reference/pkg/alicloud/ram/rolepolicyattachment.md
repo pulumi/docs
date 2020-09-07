@@ -29,7 +29,6 @@ class MyStack : Stack
         // Create a RAM Role Policy attachment.
         var role = new AliCloud.Ram.Role("role", new AliCloud.Ram.RoleArgs
         {
-            Description = "this is a role test.",
             Document = @"    {
       ""Statement"": [
         {
@@ -45,13 +44,12 @@ class MyStack : Stack
       ],
       ""Version"": ""1""
     }
-    
 ",
+            Description = "this is a role test.",
             Force = true,
         });
         var policy = new AliCloud.Ram.Policy("policy", new AliCloud.Ram.PolicyArgs
         {
-            Description = "this is a policy test",
             Document = @"  {
     ""Statement"": [
       {
@@ -68,8 +66,8 @@ class MyStack : Stack
     ],
       ""Version"": ""1""
   }
-  
 ",
+            Description = "this is a policy test",
             Force = true,
         });
         var attach = new AliCloud.Ram.RolePolicyAttachment("attach", new AliCloud.Ram.RolePolicyAttachmentArgs
@@ -99,16 +97,16 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		role, err := ram.NewRole(ctx, "role", &ram.RoleArgs{
+			Document:    pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "    {\n", "      \"Statement\": [\n", "        {\n", "          \"Action\": \"sts:AssumeRole\",\n", "          \"Effect\": \"Allow\",\n", "          \"Principal\": {\n", "            \"Service\": [\n", "              \"apigateway.aliyuncs.com\", \n", "              \"ecs.aliyuncs.com\"\n", "            ]\n", "          }\n", "        }\n", "      ],\n", "      \"Version\": \"1\"\n", "    }\n")),
 			Description: pulumi.String("this is a role test."),
-			Document:    pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "    {\n", "      \"Statement\": [\n", "        {\n", "          \"Action\": \"sts:AssumeRole\",\n", "          \"Effect\": \"Allow\",\n", "          \"Principal\": {\n", "            \"Service\": [\n", "              \"apigateway.aliyuncs.com\", \n", "              \"ecs.aliyuncs.com\"\n", "            ]\n", "          }\n", "        }\n", "      ],\n", "      \"Version\": \"1\"\n", "    }\n", "    \n")),
 			Force:       pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
 		}
 		policy, err := ram.NewPolicy(ctx, "policy", &ram.PolicyArgs{
+			Document:    pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "  {\n", "    \"Statement\": [\n", "      {\n", "        \"Action\": [\n", "          \"oss:ListObjects\",\n", "          \"oss:GetObject\"\n", "        ],\n", "        \"Effect\": \"Allow\",\n", "        \"Resource\": [\n", "          \"acs:oss:*:*:mybucket\",\n", "          \"acs:oss:*:*:mybucket/*\"\n", "        ]\n", "      }\n", "    ],\n", "      \"Version\": \"1\"\n", "  }\n")),
 			Description: pulumi.String("this is a policy test"),
-			Document:    pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "  {\n", "    \"Statement\": [\n", "      {\n", "        \"Action\": [\n", "          \"oss:ListObjects\",\n", "          \"oss:GetObject\"\n", "        ],\n", "        \"Effect\": \"Allow\",\n", "        \"Resource\": [\n", "          \"acs:oss:*:*:mybucket\",\n", "          \"acs:oss:*:*:mybucket/*\"\n", "        ]\n", "      }\n", "    ],\n", "      \"Version\": \"1\"\n", "  }\n", "  \n")),
 			Force:       pulumi.Bool(true),
 		})
 		if err != nil {
@@ -136,7 +134,6 @@ import pulumi_alicloud as alicloud
 
 # Create a RAM Role Policy attachment.
 role = alicloud.ram.Role("role",
-    description="this is a role test.",
     document="""    {
       "Statement": [
         {
@@ -152,11 +149,10 @@ role = alicloud.ram.Role("role",
       ],
       "Version": "1"
     }
-    
 """,
+    description="this is a role test.",
     force=True)
 policy = alicloud.ram.Policy("policy",
-    description="this is a policy test",
     document="""  {
     "Statement": [
       {
@@ -173,8 +169,8 @@ policy = alicloud.ram.Policy("policy",
     ],
       "Version": "1"
   }
-  
 """,
+    description="this is a policy test",
     force=True)
 attach = alicloud.ram.RolePolicyAttachment("attach",
     policy_name=policy.name,
@@ -192,7 +188,6 @@ import * as alicloud from "@pulumi/alicloud";
 
 // Create a RAM Role Policy attachment.
 const role = new alicloud.ram.Role("role", {
-    description: "this is a role test.",
     document: `    {
       "Statement": [
         {
@@ -208,11 +203,11 @@ const role = new alicloud.ram.Role("role", {
       ],
       "Version": "1"
     }
-    `,
+`,
+    description: "this is a role test.",
     force: true,
 });
 const policy = new alicloud.ram.Policy("policy", {
-    description: "this is a policy test",
     document: `  {
     "Statement": [
       {
@@ -229,7 +224,8 @@ const policy = new alicloud.ram.Policy("policy", {
     ],
       "Version": "1"
   }
-  `,
+`,
+    description: "this is a policy test",
     force: true,
 });
 const attach = new alicloud.ram.RolePolicyAttachment("attach", {

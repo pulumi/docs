@@ -45,36 +45,36 @@ class MyStack : Stack
         {
         }, new CustomResourceOptions
         {
-            Provider = "alicloud.account2",
+            Provider = alicloud.Account2,
         });
         var vpc = new AliCloud.Vpc.Network("vpc", new AliCloud.Vpc.NetworkArgs
         {
             CidrBlock = "192.168.0.0/16",
         }, new CustomResourceOptions
         {
-            Provider = "alicloud.account1",
+            Provider = alicloud.Account1,
         });
         var fooInstanceGrant = new AliCloud.Cen.InstanceGrant("fooInstanceGrant", new AliCloud.Cen.InstanceGrantArgs
         {
             CenId = cen.Id,
-            CenOwnerId = "uid2",
             ChildInstanceId = vpc.Id,
+            CenOwnerId = "uid2",
         }, new CustomResourceOptions
         {
-            Provider = "alicloud.account1",
+            Provider = alicloud.Account1,
         });
         var fooInstanceAttachment = new AliCloud.Cen.InstanceAttachment("fooInstanceAttachment", new AliCloud.Cen.InstanceAttachmentArgs
         {
-            ChildInstanceId = vpc.Id,
-            ChildInstanceOwnerId = "uid1",
-            ChildInstanceRegionId = "cn-qingdao",
             InstanceId = cen.Id,
+            ChildInstanceId = vpc.Id,
+            ChildInstanceRegionId = "cn-qingdao",
+            ChildInstanceOwnerId = "uid1",
         }, new CustomResourceOptions
         {
-            Provider = "alicloud.account2",
+            Provider = alicloud.Account2,
             DependsOn = 
             {
-                "alicloud_cen_instance_grant.foo",
+                fooInstanceGrant,
             },
         });
     }
@@ -111,31 +111,31 @@ func main() {
 		if err != nil {
 			return err
 		}
-		cen, err := cen.NewInstance(ctx, "cen", nil, pulumi.Provider("alicloud.account2"))
+		cen, err := cen.NewInstance(ctx, "cen", nil, pulumi.Provider(alicloud.Account2))
 		if err != nil {
 			return err
 		}
 		vpc, err := vpc.NewNetwork(ctx, "vpc", &vpc.NetworkArgs{
 			CidrBlock: pulumi.String("192.168.0.0/16"),
-		}, pulumi.Provider("alicloud.account1"))
+		}, pulumi.Provider(alicloud.Account1))
 		if err != nil {
 			return err
 		}
-		_, err = cen.NewInstanceGrant(ctx, "fooInstanceGrant", &cen.InstanceGrantArgs{
+		fooInstanceGrant, err := cen.NewInstanceGrant(ctx, "fooInstanceGrant", &cen.InstanceGrantArgs{
 			CenId:           cen.ID(),
-			CenOwnerId:      pulumi.String("uid2"),
 			ChildInstanceId: vpc.ID(),
-		}, pulumi.Provider("alicloud.account1"))
+			CenOwnerId:      pulumi.String("uid2"),
+		}, pulumi.Provider(alicloud.Account1))
 		if err != nil {
 			return err
 		}
 		_, err = cen.NewInstanceAttachment(ctx, "fooInstanceAttachment", &cen.InstanceAttachmentArgs{
-			ChildInstanceId:       vpc.ID(),
-			ChildInstanceOwnerId:  pulumi.String("uid1"),
-			ChildInstanceRegionId: pulumi.String("cn-qingdao"),
 			InstanceId:            cen.ID(),
-		}, pulumi.Provider("alicloud.account2"), pulumi.DependsOn([]pulumi.Resource{
-			"alicloud_cen_instance_grant.foo",
+			ChildInstanceId:       vpc.ID(),
+			ChildInstanceRegionId: pulumi.String("cn-qingdao"),
+			ChildInstanceOwnerId:  pulumi.String("uid1"),
+		}, pulumi.Provider(alicloud.Account2), pulumi.DependsOn([]pulumi.Resource{
+			fooInstanceGrant,
 		}))
 		if err != nil {
 			return err
@@ -164,21 +164,21 @@ config = pulumi.Config()
 name = config.get("name")
 if name is None:
     name = "tf-testAccCenInstanceGrantBasic"
-cen = alicloud.cen.Instance("cen", opts=ResourceOptions(provider="alicloud.account2"))
+cen = alicloud.cen.Instance("cen", opts=ResourceOptions(provider=alicloud["account2"]))
 vpc = alicloud.vpc.Network("vpc", cidr_block="192.168.0.0/16",
-opts=ResourceOptions(provider="alicloud.account1"))
+opts=ResourceOptions(provider=alicloud["account1"]))
 foo_instance_grant = alicloud.cen.InstanceGrant("fooInstanceGrant",
     cen_id=cen.id,
+    child_instance_id=vpc.id,
     cen_owner_id="uid2",
-    child_instance_id=vpc.id,
-    opts=ResourceOptions(provider="alicloud.account1"))
+    opts=ResourceOptions(provider=alicloud["account1"]))
 foo_instance_attachment = alicloud.cen.InstanceAttachment("fooInstanceAttachment",
-    child_instance_id=vpc.id,
-    child_instance_owner_id="uid1",
-    child_instance_region_id="cn-qingdao",
     instance_id=cen.id,
-    opts=ResourceOptions(provider="alicloud.account2",
-        depends_on=["alicloud_cen_instance_grant.foo"]))
+    child_instance_id=vpc.id,
+    child_instance_region_id="cn-qingdao",
+    child_instance_owner_id="uid1",
+    opts=ResourceOptions(provider=alicloud["account2"],
+        depends_on=[foo_instance_grant]))
 ```
 
 {{% /example %}}
@@ -189,9 +189,6 @@ foo_instance_attachment = alicloud.cen.InstanceAttachment("fooInstanceAttachment
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const config = new pulumi.Config();
-const name = config.get("name") || "tf-testAccCenInstanceGrantBasic";
-
 // Create a new instance-grant and use it to grant one child instance of account1 to a new CEN of account 2.
 const account1 = new alicloud.Provider("account1", {
     accessKey: "access123",
@@ -201,21 +198,30 @@ const account2 = new alicloud.Provider("account2", {
     accessKey: "access456",
     secretKey: "secret456",
 });
-const cen = new alicloud.cen.Instance("cen", {}, { provider: account2 });
-const vpc = new alicloud.vpc.Network("vpc", {
-    cidrBlock: "192.168.0.0/16",
-}, { provider: account1 });
-const fooInstanceGrant = new alicloud.cen.InstanceGrant("foo", {
+const config = new pulumi.Config();
+const name = config.get("name") || "tf-testAccCenInstanceGrantBasic";
+const cen = new alicloud.cen.Instance("cen", {}, {
+    provider: alicloud.account2,
+});
+const vpc = new alicloud.vpc.Network("vpc", {cidrBlock: "192.168.0.0/16"}, {
+    provider: alicloud.account1,
+});
+const fooInstanceGrant = new alicloud.cen.InstanceGrant("fooInstanceGrant", {
     cenId: cen.id,
+    childInstanceId: vpc.id,
     cenOwnerId: "uid2",
-    childInstanceId: vpc.id,
-}, { provider: account1 });
-const fooInstanceAttachment = new alicloud.cen.InstanceAttachment("foo", {
-    childInstanceId: vpc.id,
-    childInstanceOwnerId: "uid1",
-    childInstanceRegionId: "cn-qingdao",
+}, {
+    provider: alicloud.account1,
+});
+const fooInstanceAttachment = new alicloud.cen.InstanceAttachment("fooInstanceAttachment", {
     instanceId: cen.id,
-}, { provider: account2, dependsOn: [fooInstanceGrant] });
+    childInstanceId: vpc.id,
+    childInstanceRegionId: "cn-qingdao",
+    childInstanceOwnerId: "uid1",
+}, {
+    provider: alicloud.account2,
+    dependsOn: [fooInstanceGrant],
+});
 ```
 
 {{% /example %}}

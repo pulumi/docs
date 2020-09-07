@@ -41,18 +41,18 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/24",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var instance = new AliCloud.Rds.Instance("instance", new AliCloud.Rds.InstanceArgs
         {
             Engine = "MySQL",
             EngineVersion = "5.6",
-            InstanceName = name,
-            InstanceStorage = 10,
             InstanceType = "rds.mysql.s1.small",
+            InstanceStorage = 10,
             VswitchId = defaultSwitch.Id,
+            InstanceName = name,
         });
         var db = new List<AliCloud.Rds.Database>();
         for (var rangeIndex = 0; rangeIndex < 2; rangeIndex++)
@@ -60,22 +60,22 @@ class MyStack : Stack
             var range = new { Value = rangeIndex };
             db.Add(new AliCloud.Rds.Database($"db-{range.Value}", new AliCloud.Rds.DatabaseArgs
             {
-                Description = "from terraform",
                 InstanceId = instance.Id,
+                Description = "from terraform",
             }));
         }
         var account = new AliCloud.Rds.Account("account", new AliCloud.Rds.AccountArgs
         {
-            Description = "from terraform",
             InstanceId = instance.Id,
             Password = "Test12345",
+            Description = "from terraform",
         });
         var privilege = new AliCloud.Rds.AccountPrivilege("privilege", new AliCloud.Rds.AccountPrivilegeArgs
         {
-            AccountName = account.Name,
-            DbNames = db.Select(__item => __item.Name).ToList(),
             InstanceId = instance.Id,
+            AccountName = account.Name,
             Privilege = "ReadOnly",
+            DbNames = db.Select(__item => __item.Name).ToList(),
         });
     }
 
@@ -111,9 +111,9 @@ func main() {
 			return err
 		}
 		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			CidrBlock:        pulumi.String("172.16.0.0/24"),
 			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
 		})
 		if err != nil {
 			return err
@@ -121,10 +121,10 @@ func main() {
 		instance, err := rds.NewInstance(ctx, "instance", &rds.InstanceArgs{
 			Engine:          pulumi.String("MySQL"),
 			EngineVersion:   pulumi.String("5.6"),
-			InstanceName:    pulumi.String(name),
-			InstanceStorage: pulumi.Int(10),
 			InstanceType:    pulumi.String("rds.mysql.s1.small"),
+			InstanceStorage: pulumi.Int(10),
 			VswitchId:       defaultSwitch.ID(),
+			InstanceName:    pulumi.String(name),
 		})
 		if err != nil {
 			return err
@@ -132,8 +132,8 @@ func main() {
 		var db []*rds.Database
 		for key0, _ := range 2 {
 			__res, err := rds.NewDatabase(ctx, fmt.Sprintf("db-%v", key0), &rds.DatabaseArgs{
-				Description: pulumi.String("from terraform"),
 				InstanceId:  instance.ID(),
+				Description: pulumi.String("from terraform"),
 			})
 			if err != nil {
 				return err
@@ -141,9 +141,9 @@ func main() {
 			db = append(db, __res)
 		}
 		account, err := rds.NewAccount(ctx, "account", &rds.AccountArgs{
-			Description: pulumi.String("from terraform"),
 			InstanceId:  instance.ID(),
 			Password:    pulumi.String("Test12345"),
+			Description: pulumi.String("from terraform"),
 		})
 		if err != nil {
 			return err
@@ -153,10 +153,10 @@ func main() {
 			splat0 = append(splat0, val0.Name)
 		}
 		_, err = rds.NewAccountPrivilege(ctx, "privilege", &rds.AccountPrivilegeArgs{
-			AccountName: account.Name,
-			DbNames:     toPulumiStringArray(splat0),
 			InstanceId:  instance.ID(),
+			AccountName: account.Name,
 			Privilege:   pulumi.String("ReadOnly"),
+			DbNames:     toPulumiStringArray(splat0),
 		})
 		if err != nil {
 			return err
@@ -190,30 +190,30 @@ if name is None:
 default_zones = alicloud.get_zones(available_resource_creation=creation)
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0].id,
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 instance = alicloud.rds.Instance("instance",
     engine="MySQL",
     engine_version="5.6",
-    instance_name=name,
-    instance_storage=10,
     instance_type="rds.mysql.s1.small",
-    vswitch_id=default_switch.id)
+    instance_storage=10,
+    vswitch_id=default_switch.id,
+    instance_name=name)
 db = []
 for range in [{"value": i} for i in range(0, 2)]:
     db.append(alicloud.rds.Database(f"db-{range['value']}",
-        description="from terraform",
-        instance_id=instance.id))
+        instance_id=instance.id,
+        description="from terraform"))
 account = alicloud.rds.Account("account",
-    description="from terraform",
     instance_id=instance.id,
-    password="Test12345")
+    password="Test12345",
+    description="from terraform")
 privilege = alicloud.rds.AccountPrivilege("privilege",
-    account_name=account.name,
-    db_names=[__item.name for __item in db],
     instance_id=instance.id,
-    privilege="ReadOnly")
+    account_name=account.name,
+    privilege="ReadOnly",
+    db_names=[__item.name for __item in db])
 ```
 
 {{% /example %}}
@@ -227,43 +227,40 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const creation = config.get("creation") || "Rds";
 const name = config.get("name") || "dbaccountprivilegebasic";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: creation,
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/16",
 });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/24",
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
+    cidrBlock: "172.16.0.0/24",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
 const instance = new alicloud.rds.Instance("instance", {
     engine: "MySQL",
     engineVersion: "5.6",
-    instanceName: name,
-    instanceStorage: 10,
     instanceType: "rds.mysql.s1.small",
+    instanceStorage: "10",
     vswitchId: defaultSwitch.id,
+    instanceName: name,
 });
-const db: alicloud.rds.Database[] = [];
-for (let i = 0; i < 2; i++) {
-    db.push(new alicloud.rds.Database(`db-${i}`, {
-        description: "from terraform",
+const db: alicloud.rds.Database[];
+for (const range = {value: 0}; range.value < 2; range.value++) {
+    db.push(new alicloud.rds.Database(`db-${range.value}`, {
         instanceId: instance.id,
+        description: "from terraform",
     }));
 }
 const account = new alicloud.rds.Account("account", {
-    description: "from terraform",
     instanceId: instance.id,
     password: "Test12345",
+    description: "from terraform",
 });
 const privilege = new alicloud.rds.AccountPrivilege("privilege", {
-    accountName: account.name,
-    dbNames: db.map(v => v.name),
     instanceId: instance.id,
+    accountName: account.name,
     privilege: "ReadOnly",
+    dbNames: db.map(__item => __item.name),
 });
 ```
 

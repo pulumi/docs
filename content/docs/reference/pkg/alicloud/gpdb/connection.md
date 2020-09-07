@@ -44,23 +44,23 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/24",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var defaultInstance = new AliCloud.Gpdb.Instance("defaultInstance", new AliCloud.Gpdb.InstanceArgs
         {
-            Description = name,
+            VswitchId = defaultSwitch.Id,
             Engine = "gpdb",
             EngineVersion = "4.3",
             InstanceClass = "gpdb.group.segsdx2",
             InstanceGroupCount = "2",
-            VswitchId = defaultSwitch.Id,
+            Description = name,
         });
         var defaultConnection = new AliCloud.Gpdb.Connection("defaultConnection", new AliCloud.Gpdb.ConnectionArgs
         {
-            ConnectionPrefix = "testAbc",
             InstanceId = defaultInstance.Id,
+            ConnectionPrefix = "testAbc",
         });
     }
 
@@ -96,27 +96,27 @@ func main() {
 			return err
 		}
 		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			CidrBlock:        pulumi.String("172.16.0.0/24"),
 			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
 		})
 		if err != nil {
 			return err
 		}
 		defaultInstance, err := gpdb.NewInstance(ctx, "defaultInstance", &gpdb.InstanceArgs{
-			Description:        pulumi.String(name),
+			VswitchId:          defaultSwitch.ID(),
 			Engine:             pulumi.String("gpdb"),
 			EngineVersion:      pulumi.String("4.3"),
 			InstanceClass:      pulumi.String("gpdb.group.segsdx2"),
 			InstanceGroupCount: pulumi.String("2"),
-			VswitchId:          defaultSwitch.ID(),
+			Description:        pulumi.String(name),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = gpdb.NewConnection(ctx, "defaultConnection", &gpdb.ConnectionArgs{
-			ConnectionPrefix: pulumi.String("testAbc"),
 			InstanceId:       defaultInstance.ID(),
+			ConnectionPrefix: pulumi.String("testAbc"),
 		})
 		if err != nil {
 			return err
@@ -143,19 +143,19 @@ if name is None:
 default_zones = alicloud.get_zones(available_resource_creation=creation)
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0].id,
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 default_instance = alicloud.gpdb.Instance("defaultInstance",
-    description=name,
+    vswitch_id=default_switch.id,
     engine="gpdb",
     engine_version="4.3",
     instance_class="gpdb.group.segsdx2",
     instance_group_count="2",
-    vswitch_id=default_switch.id)
+    description=name)
 default_connection = alicloud.gpdb.Connection("defaultConnection",
-    connection_prefix="testAbc",
-    instance_id=default_instance.id)
+    instance_id=default_instance.id,
+    connection_prefix="testAbc")
 ```
 
 {{% /example %}}
@@ -169,29 +169,26 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const creation = config.get("creation") || "Gpdb";
 const name = config.get("name") || "gpdbConnectionBasic";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: creation,
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/16",
 });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/24",
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
+    cidrBlock: "172.16.0.0/24",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const defaultInstance = new alicloud.gpdb.Instance("default", {
-    description: name,
+const defaultInstance = new alicloud.gpdb.Instance("defaultInstance", {
+    vswitchId: defaultSwitch.id,
     engine: "gpdb",
     engineVersion: "4.3",
     instanceClass: "gpdb.group.segsdx2",
     instanceGroupCount: "2",
-    vswitchId: defaultSwitch.id,
+    description: name,
 });
-const defaultConnection = new alicloud.gpdb.Connection("default", {
-    connectionPrefix: "testAbc",
+const defaultConnection = new alicloud.gpdb.Connection("defaultConnection", {
     instanceId: defaultInstance.id,
+    connectionPrefix: "testAbc",
 });
 ```
 

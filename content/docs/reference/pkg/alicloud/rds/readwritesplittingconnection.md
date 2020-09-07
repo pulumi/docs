@@ -39,45 +39,45 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/24",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var defaultInstance = new AliCloud.Rds.Instance("defaultInstance", new AliCloud.Rds.InstanceArgs
         {
             Engine = "MySQL",
             EngineVersion = "5.6",
+            InstanceType = "rds.mysql.t1.small",
+            InstanceStorage = 20,
             InstanceChargeType = "Postpaid",
             InstanceName = name,
-            InstanceStorage = 20,
-            InstanceType = "rds.mysql.t1.small",
+            VswitchId = defaultSwitch.Id,
             SecurityIps = 
             {
                 "10.168.1.12",
                 "100.69.7.112",
             },
-            VswitchId = defaultSwitch.Id,
         });
         var defaultReadOnlyInstance = new AliCloud.Rds.ReadOnlyInstance("defaultReadOnlyInstance", new AliCloud.Rds.ReadOnlyInstanceArgs
         {
-            EngineVersion = defaultInstance.EngineVersion,
-            InstanceName = $"{name}ro",
-            InstanceStorage = 30,
-            InstanceType = defaultInstance.InstanceType,
             MasterDbInstanceId = defaultInstance.Id,
-            VswitchId = defaultSwitch.Id,
             ZoneId = defaultInstance.ZoneId,
+            EngineVersion = defaultInstance.EngineVersion,
+            InstanceType = defaultInstance.InstanceType,
+            InstanceStorage = 30,
+            InstanceName = $"{name}ro",
+            VswitchId = defaultSwitch.Id,
         });
         var defaultReadWriteSplittingConnection = new AliCloud.Rds.ReadWriteSplittingConnection("defaultReadWriteSplittingConnection", new AliCloud.Rds.ReadWriteSplittingConnectionArgs
         {
+            InstanceId = defaultInstance.Id,
             ConnectionPrefix = "t-con-123",
             DistributionType = "Standard",
-            InstanceId = defaultInstance.Id,
         }, new CustomResourceOptions
         {
             DependsOn = 
             {
-                "alicloud_db_readonly_instance.default",
+                defaultReadOnlyInstance,
             },
         });
     }
@@ -116,9 +116,9 @@ func main() {
 			return err
 		}
 		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			CidrBlock:        pulumi.String("172.16.0.0/24"),
 			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
 		})
 		if err != nil {
 			return err
@@ -126,37 +126,37 @@ func main() {
 		defaultInstance, err := rds.NewInstance(ctx, "defaultInstance", &rds.InstanceArgs{
 			Engine:             pulumi.String("MySQL"),
 			EngineVersion:      pulumi.String("5.6"),
+			InstanceType:       pulumi.String("rds.mysql.t1.small"),
+			InstanceStorage:    pulumi.Int(20),
 			InstanceChargeType: pulumi.String("Postpaid"),
 			InstanceName:       pulumi.String(name),
-			InstanceStorage:    pulumi.Int(20),
-			InstanceType:       pulumi.String("rds.mysql.t1.small"),
+			VswitchId:          defaultSwitch.ID(),
 			SecurityIps: pulumi.StringArray{
 				pulumi.String("10.168.1.12"),
 				pulumi.String("100.69.7.112"),
 			},
-			VswitchId: defaultSwitch.ID(),
 		})
 		if err != nil {
 			return err
 		}
-		_, err = rds.NewReadOnlyInstance(ctx, "defaultReadOnlyInstance", &rds.ReadOnlyInstanceArgs{
-			EngineVersion:      defaultInstance.EngineVersion,
-			InstanceName:       pulumi.String(fmt.Sprintf("%v%v", name, "ro")),
-			InstanceStorage:    pulumi.Int(30),
-			InstanceType:       defaultInstance.InstanceType,
+		defaultReadOnlyInstance, err := rds.NewReadOnlyInstance(ctx, "defaultReadOnlyInstance", &rds.ReadOnlyInstanceArgs{
 			MasterDbInstanceId: defaultInstance.ID(),
-			VswitchId:          defaultSwitch.ID(),
 			ZoneId:             defaultInstance.ZoneId,
+			EngineVersion:      defaultInstance.EngineVersion,
+			InstanceType:       defaultInstance.InstanceType,
+			InstanceStorage:    pulumi.Int(30),
+			InstanceName:       pulumi.String(fmt.Sprintf("%v%v", name, "ro")),
+			VswitchId:          defaultSwitch.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = rds.NewReadWriteSplittingConnection(ctx, "defaultReadWriteSplittingConnection", &rds.ReadWriteSplittingConnectionArgs{
+			InstanceId:       defaultInstance.ID(),
 			ConnectionPrefix: pulumi.String("t-con-123"),
 			DistributionType: pulumi.String("Standard"),
-			InstanceId:       defaultInstance.ID(),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"alicloud_db_readonly_instance.default",
+			defaultReadOnlyInstance,
 		}))
 		if err != nil {
 			return err
@@ -183,34 +183,34 @@ if name is None:
 default_zones = alicloud.get_zones(available_resource_creation=creation)
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0].id,
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 default_instance = alicloud.rds.Instance("defaultInstance",
     engine="MySQL",
     engine_version="5.6",
+    instance_type="rds.mysql.t1.small",
+    instance_storage=20,
     instance_charge_type="Postpaid",
     instance_name=name,
-    instance_storage=20,
-    instance_type="rds.mysql.t1.small",
+    vswitch_id=default_switch.id,
     security_ips=[
         "10.168.1.12",
         "100.69.7.112",
-    ],
-    vswitch_id=default_switch.id)
+    ])
 default_read_only_instance = alicloud.rds.ReadOnlyInstance("defaultReadOnlyInstance",
-    engine_version=default_instance.engine_version,
-    instance_name=f"{name}ro",
-    instance_storage=30,
-    instance_type=default_instance.instance_type,
     master_db_instance_id=default_instance.id,
-    vswitch_id=default_switch.id,
-    zone_id=default_instance.zone_id)
+    zone_id=default_instance.zone_id,
+    engine_version=default_instance.engine_version,
+    instance_type=default_instance.instance_type,
+    instance_storage=30,
+    instance_name=f"{name}ro",
+    vswitch_id=default_switch.id)
 default_read_write_splitting_connection = alicloud.rds.ReadWriteSplittingConnection("defaultReadWriteSplittingConnection",
+    instance_id=default_instance.id,
     connection_prefix="t-con-123",
     distribution_type="Standard",
-    instance_id=default_instance.id,
-    opts=ResourceOptions(depends_on=["alicloud_db_readonly_instance.default"]))
+    opts=ResourceOptions(depends_on=[default_read_only_instance]))
 ```
 
 {{% /example %}}
@@ -224,45 +224,44 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const creation = config.get("creation") || "Rds";
 const name = config.get("name") || "dbInstancevpc";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: creation,
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/16",
 });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/24",
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
+    cidrBlock: "172.16.0.0/24",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const defaultInstance = new alicloud.rds.Instance("default", {
+const defaultInstance = new alicloud.rds.Instance("defaultInstance", {
     engine: "MySQL",
     engineVersion: "5.6",
+    instanceType: "rds.mysql.t1.small",
+    instanceStorage: "20",
     instanceChargeType: "Postpaid",
     instanceName: name,
-    instanceStorage: 20,
-    instanceType: "rds.mysql.t1.small",
+    vswitchId: defaultSwitch.id,
     securityIps: [
         "10.168.1.12",
         "100.69.7.112",
     ],
-    vswitchId: defaultSwitch.id,
 });
-const defaultReadOnlyInstance = new alicloud.rds.ReadOnlyInstance("default", {
-    engineVersion: defaultInstance.engineVersion,
-    instanceName: `${name}ro`,
-    instanceStorage: 30,
-    instanceType: defaultInstance.instanceType,
+const defaultReadOnlyInstance = new alicloud.rds.ReadOnlyInstance("defaultReadOnlyInstance", {
     masterDbInstanceId: defaultInstance.id,
-    vswitchId: defaultSwitch.id,
     zoneId: defaultInstance.zoneId,
+    engineVersion: defaultInstance.engineVersion,
+    instanceType: defaultInstance.instanceType,
+    instanceStorage: "30",
+    instanceName: `${name}ro`,
+    vswitchId: defaultSwitch.id,
 });
-const defaultReadWriteSplittingConnection = new alicloud.rds.ReadWriteSplittingConnection("default", {
+const defaultReadWriteSplittingConnection = new alicloud.rds.ReadWriteSplittingConnection("defaultReadWriteSplittingConnection", {
+    instanceId: defaultInstance.id,
     connectionPrefix: "t-con-123",
     distributionType: "Standard",
-    instanceId: defaultInstance.id,
-}, { dependsOn: [defaultReadOnlyInstance] });
+}, {
+    dependsOn: [defaultReadOnlyInstance],
+});
 ```
 
 {{% /example %}}

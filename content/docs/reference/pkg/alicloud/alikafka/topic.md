@@ -41,29 +41,29 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/24",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var defaultInstance = new AliCloud.AliKafka.Instance("defaultInstance", new AliCloud.AliKafka.InstanceArgs
         {
-            DeployType = 5,
-            DiskSize = 500,
-            DiskType = 1,
-            IoMax = 20,
             TopicQuota = 50,
+            DiskType = 1,
+            DiskSize = 500,
+            DeployType = 5,
+            IoMax = 20,
             VswitchId = defaultSwitch.Id,
         });
         var config = new Config();
         var topic = config.Get("topic") ?? "alikafkaTopicName";
         var defaultTopic = new AliCloud.AliKafka.Topic("defaultTopic", new AliCloud.AliKafka.TopicArgs
         {
-            CompactTopic = false,
             InstanceId = defaultInstance.Id,
+            Topic = topic,
             LocalTopic = false,
+            CompactTopic = false,
             PartitionNum = 12,
             Remark = "dafault_kafka_topic_remark",
-            Topic = topic,
         });
     }
 
@@ -99,31 +99,31 @@ func main() {
 			return err
 		}
 		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			CidrBlock:        pulumi.String("172.16.0.0/24"),
 			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
 		})
 		if err != nil {
 			return err
 		}
 		defaultInstance, err := alikafka.NewInstance(ctx, "defaultInstance", &alikafka.InstanceArgs{
-			DeployType: pulumi.Int(5),
-			DiskSize:   pulumi.Int(500),
-			DiskType:   pulumi.Int(1),
-			IoMax:      pulumi.Int(20),
 			TopicQuota: pulumi.Int(50),
+			DiskType:   pulumi.Int(1),
+			DiskSize:   pulumi.Int(500),
+			DeployType: pulumi.Int(5),
+			IoMax:      pulumi.Int(20),
 			VswitchId:  defaultSwitch.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = alikafka.NewTopic(ctx, "defaultTopic", &alikafka.TopicArgs{
-			CompactTopic: pulumi.Bool(false),
 			InstanceId:   defaultInstance.ID(),
+			Topic:        pulumi.String(topic),
 			LocalTopic:   pulumi.Bool(false),
+			CompactTopic: pulumi.Bool(false),
 			PartitionNum: pulumi.Int(12),
 			Remark:       pulumi.String("dafault_kafka_topic_remark"),
-			Topic:        pulumi.String(topic),
 		})
 		if err != nil {
 			return err
@@ -143,27 +143,27 @@ import pulumi_alicloud as alicloud
 default_zones = alicloud.get_zones(available_resource_creation="VSwitch")
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/12")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0].id,
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 default_instance = alicloud.alikafka.Instance("defaultInstance",
-    deploy_type=5,
-    disk_size=500,
-    disk_type=1,
-    io_max=20,
     topic_quota=50,
+    disk_type=1,
+    disk_size=500,
+    deploy_type=5,
+    io_max=20,
     vswitch_id=default_switch.id)
 config = pulumi.Config()
 topic = config.get("topic")
 if topic is None:
     topic = "alikafkaTopicName"
 default_topic = alicloud.alikafka.Topic("defaultTopic",
-    compact_topic=False,
     instance_id=default_instance.id,
+    topic=topic,
     local_topic=False,
+    compact_topic=False,
     partition_num=12,
-    remark="dafault_kafka_topic_remark",
-    topic=topic)
+    remark="dafault_kafka_topic_remark")
 ```
 
 {{% /example %}}
@@ -174,35 +174,32 @@ default_topic = alicloud.alikafka.Topic("defaultTopic",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const config = new pulumi.Config();
-const topic = config.get("topic") || "alikafkaTopicName";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/12",
 });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/24",
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/12"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
+    cidrBlock: "172.16.0.0/24",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const defaultInstance = new alicloud.alikafka.Instance("default", {
-    deployType: 5,
-    diskSize: 500,
-    diskType: 1,
-    ioMax: 20,
-    topicQuota: 50,
+const defaultInstance = new alicloud.alikafka.Instance("defaultInstance", {
+    topicQuota: "50",
+    diskType: "1",
+    diskSize: "500",
+    deployType: "5",
+    ioMax: "20",
     vswitchId: defaultSwitch.id,
 });
-const defaultTopic = new alicloud.alikafka.Topic("default", {
-    compactTopic: false,
+const config = new pulumi.Config();
+const topic = config.get("topic") || "alikafkaTopicName";
+const defaultTopic = new alicloud.alikafka.Topic("defaultTopic", {
     instanceId: defaultInstance.id,
-    localTopic: false,
-    partitionNum: 12,
-    remark: "dafault_kafka_topic_remark",
     topic: topic,
+    localTopic: "false",
+    compactTopic: "false",
+    partitionNum: "12",
+    remark: "dafault_kafka_topic_remark",
 });
 ```
 

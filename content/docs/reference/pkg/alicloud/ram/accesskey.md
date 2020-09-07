@@ -31,16 +31,16 @@ class MyStack : Stack
         // Create a new RAM access key for user.
         var user = new AliCloud.Ram.User("user", new AliCloud.Ram.UserArgs
         {
-            Comments = "yoyoyo",
             DisplayName = "user_display_name",
-            Email = "hello.uuu@aaa.com",
-            Force = true,
             Mobile = "86-18688888888",
+            Email = "hello.uuu@aaa.com",
+            Comments = "yoyoyo",
+            Force = true,
         });
         var ak = new AliCloud.Ram.AccessKey("ak", new AliCloud.Ram.AccessKeyArgs
         {
-            SecretFile = "/xxx/xxx/xxx.txt",
             UserName = user.Name,
+            SecretFile = "/xxx/xxx/xxx.txt",
         });
     }
 
@@ -61,18 +61,18 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		user, err := ram.NewUser(ctx, "user", &ram.UserArgs{
-			Comments:    pulumi.String("yoyoyo"),
 			DisplayName: pulumi.String("user_display_name"),
-			Email:       pulumi.String("hello.uuu@aaa.com"),
-			Force:       pulumi.Bool(true),
 			Mobile:      pulumi.String("86-18688888888"),
+			Email:       pulumi.String("hello.uuu@aaa.com"),
+			Comments:    pulumi.String("yoyoyo"),
+			Force:       pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = ram.NewAccessKey(ctx, "ak", &ram.AccessKeyArgs{
-			SecretFile: pulumi.String("/xxx/xxx/xxx.txt"),
 			UserName:   user.Name,
+			SecretFile: pulumi.String("/xxx/xxx/xxx.txt"),
 		})
 		if err != nil {
 			return err
@@ -91,14 +91,14 @@ import pulumi_alicloud as alicloud
 
 # Create a new RAM access key for user.
 user = alicloud.ram.User("user",
-    comments="yoyoyo",
     display_name="user_display_name",
+    mobile="86-18688888888",
     email="hello.uuu@aaa.com",
-    force=True,
-    mobile="86-18688888888")
+    comments="yoyoyo",
+    force=True)
 ak = alicloud.ram.AccessKey("ak",
-    secret_file="/xxx/xxx/xxx.txt",
-    user_name=user.name)
+    user_name=user.name,
+    secret_file="/xxx/xxx/xxx.txt")
 ```
 
 {{% /example %}}
@@ -111,15 +111,15 @@ import * as alicloud from "@pulumi/alicloud";
 
 // Create a new RAM access key for user.
 const user = new alicloud.ram.User("user", {
-    comments: "yoyoyo",
     displayName: "user_display_name",
-    email: "hello.uuu@aaa.com",
-    force: true,
     mobile: "86-18688888888",
+    email: "hello.uuu@aaa.com",
+    comments: "yoyoyo",
+    force: true,
 });
 const ak = new alicloud.ram.AccessKey("ak", {
-    secretFile: "/xxx/xxx/xxx.txt",
     userName: user.name,
+    secretFile: "/xxx/xxx/xxx.txt",
 });
 ```
 

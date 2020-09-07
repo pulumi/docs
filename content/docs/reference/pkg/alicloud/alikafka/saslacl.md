@@ -44,39 +44,39 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/24",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var defaultInstance = new AliCloud.AliKafka.Instance("defaultInstance", new AliCloud.AliKafka.InstanceArgs
         {
-            DeployType = 5,
-            DiskSize = 500,
-            DiskType = 1,
-            IoMax = 20,
             TopicQuota = 50,
+            DiskType = 1,
+            DiskSize = 500,
+            DeployType = 5,
+            IoMax = 20,
             VswitchId = defaultSwitch.Id,
         });
         var defaultTopic = new AliCloud.AliKafka.Topic("defaultTopic", new AliCloud.AliKafka.TopicArgs
         {
             InstanceId = defaultInstance.Id,
-            Remark = "topic-remark",
             Topic = "test-topic",
+            Remark = "topic-remark",
         });
         var defaultSaslUser = new AliCloud.AliKafka.SaslUser("defaultSaslUser", new AliCloud.AliKafka.SaslUserArgs
         {
             InstanceId = defaultInstance.Id,
-            Password = password,
             Username = username,
+            Password = password,
         });
         var defaultSaslAcl = new AliCloud.AliKafka.SaslAcl("defaultSaslAcl", new AliCloud.AliKafka.SaslAclArgs
         {
-            AclOperationType = "Write",
-            AclResourceName = defaultTopic.TopicName,
-            AclResourcePatternType = "LITERAL",
-            AclResourceType = "Topic",
             InstanceId = defaultInstance.Id,
             Username = defaultSaslUser.Username,
+            AclResourceType = "Topic",
+            AclResourceName = defaultTopic.TopicName,
+            AclResourcePatternType = "LITERAL",
+            AclOperationType = "Write",
         });
     }
 
@@ -112,19 +112,19 @@ func main() {
 			return err
 		}
 		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			CidrBlock:        pulumi.String("172.16.0.0/24"),
 			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
 		})
 		if err != nil {
 			return err
 		}
 		defaultInstance, err := alikafka.NewInstance(ctx, "defaultInstance", &alikafka.InstanceArgs{
-			DeployType: pulumi.Int(5),
-			DiskSize:   pulumi.Int(500),
-			DiskType:   pulumi.Int(1),
-			IoMax:      pulumi.Int(20),
 			TopicQuota: pulumi.Int(50),
+			DiskType:   pulumi.Int(1),
+			DiskSize:   pulumi.Int(500),
+			DeployType: pulumi.Int(5),
+			IoMax:      pulumi.Int(20),
 			VswitchId:  defaultSwitch.ID(),
 		})
 		if err != nil {
@@ -132,27 +132,27 @@ func main() {
 		}
 		defaultTopic, err := alikafka.NewTopic(ctx, "defaultTopic", &alikafka.TopicArgs{
 			InstanceId: defaultInstance.ID(),
-			Remark:     pulumi.String("topic-remark"),
 			Topic:      pulumi.String("test-topic"),
+			Remark:     pulumi.String("topic-remark"),
 		})
 		if err != nil {
 			return err
 		}
 		defaultSaslUser, err := alikafka.NewSaslUser(ctx, "defaultSaslUser", &alikafka.SaslUserArgs{
 			InstanceId: defaultInstance.ID(),
-			Password:   pulumi.String(password),
 			Username:   pulumi.String(username),
+			Password:   pulumi.String(password),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = alikafka.NewSaslAcl(ctx, "defaultSaslAcl", &alikafka.SaslAclArgs{
-			AclOperationType:       pulumi.String("Write"),
-			AclResourceName:        defaultTopic.Topic,
-			AclResourcePatternType: pulumi.String("LITERAL"),
-			AclResourceType:        pulumi.String("Topic"),
 			InstanceId:             defaultInstance.ID(),
 			Username:               defaultSaslUser.Username,
+			AclResourceType:        pulumi.String("Topic"),
+			AclResourceName:        defaultTopic.Topic,
+			AclResourcePatternType: pulumi.String("LITERAL"),
+			AclOperationType:       pulumi.String("Write"),
 		})
 		if err != nil {
 			return err
@@ -179,31 +179,31 @@ if password is None:
 default_zones = alicloud.get_zones(available_resource_creation="VSwitch")
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/12")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0].id,
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 default_instance = alicloud.alikafka.Instance("defaultInstance",
-    deploy_type=5,
-    disk_size=500,
-    disk_type=1,
-    io_max=20,
     topic_quota=50,
+    disk_type=1,
+    disk_size=500,
+    deploy_type=5,
+    io_max=20,
     vswitch_id=default_switch.id)
 default_topic = alicloud.alikafka.Topic("defaultTopic",
     instance_id=default_instance.id,
-    remark="topic-remark",
-    topic="test-topic")
+    topic="test-topic",
+    remark="topic-remark")
 default_sasl_user = alicloud.alikafka.SaslUser("defaultSaslUser",
     instance_id=default_instance.id,
-    password=password,
-    username=username)
+    username=username,
+    password=password)
 default_sasl_acl = alicloud.alikafka.SaslAcl("defaultSaslAcl",
-    acl_operation_type="Write",
+    instance_id=default_instance.id,
+    username=default_sasl_user.username,
+    acl_resource_type="Topic",
     acl_resource_name=default_topic.topic,
     acl_resource_pattern_type="LITERAL",
-    acl_resource_type="Topic",
-    instance_id=default_instance.id,
-    username=default_sasl_user.username)
+    acl_operation_type="Write")
 ```
 
 {{% /example %}}
@@ -217,43 +217,40 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const username = config.get("username") || "testusername";
 const password = config.get("password") || "testpassword";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/12",
 });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/24",
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/12"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
+    cidrBlock: "172.16.0.0/24",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const defaultInstance = new alicloud.alikafka.Instance("default", {
-    deployType: 5,
-    diskSize: 500,
-    diskType: 1,
-    ioMax: 20,
-    topicQuota: 50,
+const defaultInstance = new alicloud.alikafka.Instance("defaultInstance", {
+    topicQuota: "50",
+    diskType: "1",
+    diskSize: "500",
+    deployType: "5",
+    ioMax: "20",
     vswitchId: defaultSwitch.id,
 });
-const defaultTopic = new alicloud.alikafka.Topic("default", {
+const defaultTopic = new alicloud.alikafka.Topic("defaultTopic", {
     instanceId: defaultInstance.id,
-    remark: "topic-remark",
     topic: "test-topic",
+    remark: "topic-remark",
 });
-const defaultSaslUser = new alicloud.alikafka.SaslUser("default", {
+const defaultSaslUser = new alicloud.alikafka.SaslUser("defaultSaslUser", {
     instanceId: defaultInstance.id,
-    password: password,
     username: username,
+    password: password,
 });
-const defaultSaslAcl = new alicloud.alikafka.SaslAcl("default", {
-    aclOperationType: "Write",
-    aclResourceName: defaultTopic.topic,
-    aclResourcePatternType: "LITERAL",
-    aclResourceType: "Topic",
+const defaultSaslAcl = new alicloud.alikafka.SaslAcl("defaultSaslAcl", {
     instanceId: defaultInstance.id,
     username: defaultSaslUser.username,
+    aclResourceType: "Topic",
+    aclResourceName: defaultTopic.topic,
+    aclResourcePatternType: "LITERAL",
+    aclOperationType: "Write",
 });
 ```
 

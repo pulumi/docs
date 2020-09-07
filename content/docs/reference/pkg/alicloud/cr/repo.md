@@ -37,10 +37,10 @@ class MyStack : Stack
         });
         var my_repo = new AliCloud.CR.Repo("my-repo", new AliCloud.CR.RepoArgs
         {
-            Detail = "this is a public repo",
             Namespace = my_namespace.Name,
-            RepoType = "PUBLIC",
             Summary = "this is summary of my new repo",
+            RepoType = "PUBLIC",
+            Detail = "this is a public repo",
         });
     }
 
@@ -68,10 +68,10 @@ func main() {
 			return err
 		}
 		_, err = cr.NewRepo(ctx, "my_repo", &cr.RepoArgs{
-			Detail:    pulumi.String("this is a public repo"),
 			Namespace: my_namespace.Name,
-			RepoType:  pulumi.String("PUBLIC"),
 			Summary:   pulumi.String("this is summary of my new repo"),
+			RepoType:  pulumi.String("PUBLIC"),
+			Detail:    pulumi.String("this is a public repo"),
 		})
 		if err != nil {
 			return err
@@ -92,10 +92,10 @@ my_namespace = alicloud.cr.Namespace("my-namespace",
     auto_create=False,
     default_visibility="PUBLIC")
 my_repo = alicloud.cr.Repo("my-repo",
-    detail="this is a public repo",
     namespace=my_namespace.name,
+    summary="this is summary of my new repo",
     repo_type="PUBLIC",
-    summary="this is summary of my new repo")
+    detail="this is a public repo")
 ```
 
 {{% /example %}}
@@ -111,10 +111,10 @@ const my_namespace = new alicloud.cr.Namespace("my-namespace", {
     defaultVisibility: "PUBLIC",
 });
 const my_repo = new alicloud.cr.Repo("my-repo", {
-    detail: "this is a public repo",
     namespace: my_namespace.name,
-    repoType: "PUBLIC",
     summary: "this is summary of my new repo",
+    repoType: "PUBLIC",
+    detail: "this is a public repo",
 });
 ```
 

@@ -42,8 +42,8 @@ class MyStack : Stack
         });
         var foo = new AliCloud.Cen.BandwidthPackageAttachment("foo", new AliCloud.Cen.BandwidthPackageAttachmentArgs
         {
-            BandwidthPackageId = bwp.Id,
             InstanceId = cen.Id,
+            BandwidthPackageId = bwp.Id,
         });
     }
 
@@ -80,8 +80,8 @@ func main() {
 			return err
 		}
 		_, err = cen.NewBandwidthPackageAttachment(ctx, "foo", &cen.BandwidthPackageAttachmentArgs{
-			BandwidthPackageId: bwp.ID(),
 			InstanceId:         cen.ID(),
+			BandwidthPackageId: bwp.ID(),
 		})
 		if err != nil {
 			return err
@@ -107,8 +107,8 @@ bwp = alicloud.cen.BandwidthPackage("bwp",
         "Asia-Pacific",
     ])
 foo = alicloud.cen.BandwidthPackageAttachment("foo",
-    bandwidth_package_id=bwp.id,
-    instance_id=cen.id)
+    instance_id=cen.id,
+    bandwidth_package_id=bwp.id)
 ```
 
 {{% /example %}}
@@ -120,9 +120,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 // Create a new bandwidth package attachment and use it to attach a bandwidth package to a new CEN
-const cen = new alicloud.cen.Instance("cen", {
-    description: "tf-testAccCenBandwidthPackageAttachmentDescription",
-});
+const cen = new alicloud.cen.Instance("cen", {description: "tf-testAccCenBandwidthPackageAttachmentDescription"});
 const bwp = new alicloud.cen.BandwidthPackage("bwp", {
     bandwidth: 20,
     geographicRegionIds: [
@@ -131,8 +129,8 @@ const bwp = new alicloud.cen.BandwidthPackage("bwp", {
     ],
 });
 const foo = new alicloud.cen.BandwidthPackageAttachment("foo", {
-    bandwidthPackageId: bwp.id,
     instanceId: cen.id,
+    bandwidthPackageId: bwp.id,
 });
 ```
 

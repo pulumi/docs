@@ -29,8 +29,8 @@ class MyStack : Stack
         // Create an OTS instance
         var fooInstance = new AliCloud.Ots.Instance("fooInstance", new AliCloud.Ots.InstanceArgs
         {
-            AccessedBy = "Vpc",
             Description = "for table",
+            AccessedBy = "Vpc",
             Tags = 
             {
                 { "Created", "TF" },
@@ -47,9 +47,9 @@ class MyStack : Stack
         });
         var fooSwitch = new AliCloud.Vpc.Switch("fooSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = fooZones.Apply(fooZones => fooZones.Zones[0].Id),
-            CidrBlock = "172.16.1.0/24",
             VpcId = fooNetwork.Id,
+            CidrBlock = "172.16.1.0/24",
+            AvailabilityZone = fooZones.Apply(fooZones => fooZones.Zones[0].Id),
         });
         var fooInstanceAttachment = new AliCloud.Ots.InstanceAttachment("fooInstanceAttachment", new AliCloud.Ots.InstanceAttachmentArgs
         {
@@ -78,8 +78,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		fooInstance, err := ots.NewInstance(ctx, "fooInstance", &ots.InstanceArgs{
-			AccessedBy:  pulumi.String("Vpc"),
 			Description: pulumi.String("for table"),
+			AccessedBy:  pulumi.String("Vpc"),
 			Tags: pulumi.StringMap{
 				"Created": pulumi.String("TF"),
 				"For":     pulumi.String("Building table"),
@@ -102,9 +102,9 @@ func main() {
 			return err
 		}
 		fooSwitch, err := vpc.NewSwitch(ctx, "fooSwitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(fooZones.Zones[0].Id),
-			CidrBlock:        pulumi.String("172.16.1.0/24"),
 			VpcId:            fooNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.1.0/24"),
+			AvailabilityZone: pulumi.String(fooZones.Zones[0].Id),
 		})
 		if err != nil {
 			return err
@@ -131,8 +131,8 @@ import pulumi_alicloud as alicloud
 
 # Create an OTS instance
 foo_instance = alicloud.ots.Instance("fooInstance",
-    accessed_by="Vpc",
     description="for table",
+    accessed_by="Vpc",
     tags={
         "Created": "TF",
         "For": "Building table",
@@ -140,9 +140,9 @@ foo_instance = alicloud.ots.Instance("fooInstance",
 foo_zones = alicloud.get_zones(available_resource_creation="VSwitch")
 foo_network = alicloud.vpc.Network("fooNetwork", cidr_block="172.16.0.0/16")
 foo_switch = alicloud.vpc.Switch("fooSwitch",
-    availability_zone=foo_zones.zones[0].id,
+    vpc_id=foo_network.id,
     cidr_block="172.16.1.0/24",
-    vpc_id=foo_network.id)
+    availability_zone=foo_zones.zones[0].id)
 foo_instance_attachment = alicloud.ots.InstanceAttachment("fooInstanceAttachment",
     instance_name=foo_instance.name,
     vpc_name="attachment1",
@@ -158,26 +158,24 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 // Create an OTS instance
-const fooInstance = new alicloud.ots.Instance("foo", {
-    accessedBy: "Vpc",
+const fooInstance = new alicloud.ots.Instance("fooInstance", {
     description: "for table",
+    accessedBy: "Vpc",
     tags: {
         Created: "TF",
         For: "Building table",
     },
 });
-const fooZones = pulumi.output(alicloud.getZones({
+const fooZones = alicloud.getZones({
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const fooNetwork = new alicloud.vpc.Network("foo", {
-    cidrBlock: "172.16.0.0/16",
 });
-const fooSwitch = new alicloud.vpc.Switch("foo", {
-    availabilityZone: fooZones.zones[0].id,
-    cidrBlock: "172.16.1.0/24",
+const fooNetwork = new alicloud.vpc.Network("fooNetwork", {cidrBlock: "172.16.0.0/16"});
+const fooSwitch = new alicloud.vpc.Switch("fooSwitch", {
     vpcId: fooNetwork.id,
+    cidrBlock: "172.16.1.0/24",
+    availabilityZone: fooZones.then(fooZones => fooZones.zones[0].id),
 });
-const fooInstanceAttachment = new alicloud.ots.InstanceAttachment("foo", {
+const fooInstanceAttachment = new alicloud.ots.InstanceAttachment("fooInstanceAttachment", {
     instanceName: fooInstance.name,
     vpcName: "attachment1",
     vswitchId: fooSwitch.id,

@@ -26,6 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        // Create a new ECS disk-attachment and use it attach one disk to a new instance.
         var ecsSg = new AliCloud.Ecs.SecurityGroup("ecsSg", new AliCloud.Ecs.SecurityGroupArgs
         {
             Description = "New security group",
@@ -41,15 +42,15 @@ class MyStack : Stack
         });
         var ecsInstance = new AliCloud.Ecs.Instance("ecsInstance", new AliCloud.Ecs.InstanceArgs
         {
-            AvailabilityZone = "cn-beijing-a",
             ImageId = "ubuntu_18_04_64_20G_alibase_20190624.vhd",
-            InstanceName = "Hello",
             InstanceType = "ecs.n4.small",
-            InternetChargeType = "PayByBandwidth",
+            AvailabilityZone = "cn-beijing-a",
             SecurityGroups = 
             {
                 ecsSg.Id,
             },
+            InstanceName = "Hello",
+            InternetChargeType = "PayByBandwidth",
             Tags = 
             {
                 { "Name", "TerraformTest-instance" },
@@ -95,14 +96,14 @@ func main() {
 			return err
 		}
 		ecsInstance, err := ecs.NewInstance(ctx, "ecsInstance", &ecs.InstanceArgs{
-			AvailabilityZone:   pulumi.String("cn-beijing-a"),
-			ImageId:            pulumi.String("ubuntu_18_04_64_20G_alibase_20190624.vhd"),
-			InstanceName:       pulumi.String("Hello"),
-			InstanceType:       pulumi.String("ecs.n4.small"),
-			InternetChargeType: pulumi.String("PayByBandwidth"),
+			ImageId:          pulumi.String("ubuntu_18_04_64_20G_alibase_20190624.vhd"),
+			InstanceType:     pulumi.String("ecs.n4.small"),
+			AvailabilityZone: pulumi.String("cn-beijing-a"),
 			SecurityGroups: pulumi.StringArray{
 				ecsSg.ID(),
 			},
+			InstanceName:       pulumi.String("Hello"),
+			InternetChargeType: pulumi.String("PayByBandwidth"),
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("TerraformTest-instance"),
 			},
@@ -129,6 +130,7 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
+# Create a new ECS disk-attachment and use it attach one disk to a new instance.
 ecs_sg = alicloud.ecs.SecurityGroup("ecsSg", description="New security group")
 ecs_disk = alicloud.ecs.Disk("ecsDisk",
     availability_zone="cn-beijing-a",
@@ -137,12 +139,12 @@ ecs_disk = alicloud.ecs.Disk("ecsDisk",
         "Name": "TerraformTest-disk",
     })
 ecs_instance = alicloud.ecs.Instance("ecsInstance",
-    availability_zone="cn-beijing-a",
     image_id="ubuntu_18_04_64_20G_alibase_20190624.vhd",
-    instance_name="Hello",
     instance_type="ecs.n4.small",
-    internet_charge_type="PayByBandwidth",
+    availability_zone="cn-beijing-a",
     security_groups=[ecs_sg.id],
+    instance_name="Hello",
+    internet_charge_type="PayByBandwidth",
     tags={
         "Name": "TerraformTest-instance",
     })
@@ -159,28 +161,27 @@ ecs_disk_att = alicloud.ecs.DiskAttachment("ecsDiskAtt",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const ecsSg = new alicloud.ecs.SecurityGroup("ecs_sg", {
-    description: "New security group",
-});
-const ecsDisk = new alicloud.ecs.Disk("ecs_disk", {
+// Create a new ECS disk-attachment and use it attach one disk to a new instance.
+const ecsSg = new alicloud.ecs.SecurityGroup("ecsSg", {description: "New security group"});
+const ecsDisk = new alicloud.ecs.Disk("ecsDisk", {
     availabilityZone: "cn-beijing-a",
-    size: 50,
+    size: "50",
     tags: {
         Name: "TerraformTest-disk",
     },
 });
-const ecsInstance = new alicloud.ecs.Instance("ecs_instance", {
-    availabilityZone: "cn-beijing-a",
+const ecsInstance = new alicloud.ecs.Instance("ecsInstance", {
     imageId: "ubuntu_18_04_64_20G_alibase_20190624.vhd",
-    instanceName: "Hello",
     instanceType: "ecs.n4.small",
-    internetChargeType: "PayByBandwidth",
+    availabilityZone: "cn-beijing-a",
     securityGroups: [ecsSg.id],
+    instanceName: "Hello",
+    internetChargeType: "PayByBandwidth",
     tags: {
         Name: "TerraformTest-instance",
     },
 });
-const ecsDiskAtt = new alicloud.ecs.DiskAttachment("ecs_disk_att", {
+const ecsDiskAtt = new alicloud.ecs.DiskAttachment("ecsDiskAtt", {
     diskId: ecsDisk.id,
     instanceId: ecsInstance.id,
 });

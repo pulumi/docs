@@ -39,10 +39,10 @@ class MyStack : Stack
         });
         var defaultTopic = new AliCloud.RocketMQ.Topic("defaultTopic", new AliCloud.RocketMQ.TopicArgs
         {
+            Topic = topic,
             InstanceId = defaultInstance.Id,
             MessageType = 0,
             Remark = "dafault_ons_topic_remark",
-            Topic = topic,
         });
     }
 
@@ -69,10 +69,10 @@ func main() {
 			return err
 		}
 		_, err = rocketmq.NewTopic(ctx, "defaultTopic", &rocketmq.TopicArgs{
+			Topic:       pulumi.String(topic),
 			InstanceId:  defaultInstance.ID(),
 			MessageType: pulumi.Int(0),
 			Remark:      pulumi.String("dafault_ons_topic_remark"),
-			Topic:       pulumi.String(topic),
 		})
 		if err != nil {
 			return err
@@ -98,10 +98,10 @@ if topic is None:
     topic = "onsTopicName"
 default_instance = alicloud.rocketmq.Instance("defaultInstance", remark="default_ons_instance_remark")
 default_topic = alicloud.rocketmq.Topic("defaultTopic",
+    topic=topic,
     instance_id=default_instance.id,
     message_type=0,
-    remark="dafault_ons_topic_remark",
-    topic=topic)
+    remark="dafault_ons_topic_remark")
 ```
 
 {{% /example %}}
@@ -115,15 +115,12 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "onsInstanceName";
 const topic = config.get("topic") || "onsTopicName";
-
-const defaultInstance = new alicloud.rocketmq.Instance("default", {
-    remark: "default_ons_instance_remark",
-});
-const defaultTopic = new alicloud.rocketmq.Topic("default", {
+const defaultInstance = new alicloud.rocketmq.Instance("defaultInstance", {remark: "default_ons_instance_remark"});
+const defaultTopic = new alicloud.rocketmq.Topic("defaultTopic", {
+    topic: topic,
     instanceId: defaultInstance.id,
     messageType: 0,
     remark: "dafault_ons_topic_remark",
-    topic: topic,
 });
 ```
 

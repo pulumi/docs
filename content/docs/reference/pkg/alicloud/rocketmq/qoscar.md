@@ -38,15 +38,15 @@ class MyStack : Stack
         });
         var defaultQosCar = new AliCloud.RocketMQ.QosCar("defaultQosCar", new AliCloud.RocketMQ.QosCarArgs
         {
-            Description = "tf-testSagQosCarDescription",
-            LimitType = "Absolute",
-            MaxBandwidthAbs = 20,
-            MaxBandwidthPercent = 20,
-            MinBandwidthAbs = 10,
-            MinBandwidthPercent = 10,
-            PercentSourceType = "InternetUpBandwidth",
-            Priority = 1,
             QosId = defaultQos.Id,
+            Description = "tf-testSagQosCarDescription",
+            Priority = 1,
+            LimitType = "Absolute",
+            MinBandwidthAbs = 10,
+            MaxBandwidthAbs = 20,
+            MinBandwidthPercent = 10,
+            MaxBandwidthPercent = 20,
+            PercentSourceType = "InternetUpBandwidth",
         });
     }
 
@@ -71,15 +71,15 @@ func main() {
 			return err
 		}
 		_, err = rocketmq.NewQosCar(ctx, "defaultQosCar", &rocketmq.QosCarArgs{
-			Description:         pulumi.String("tf-testSagQosCarDescription"),
-			LimitType:           pulumi.String("Absolute"),
-			MaxBandwidthAbs:     pulumi.Int(20),
-			MaxBandwidthPercent: pulumi.Int(20),
-			MinBandwidthAbs:     pulumi.Int(10),
-			MinBandwidthPercent: pulumi.Int(10),
-			PercentSourceType:   pulumi.String("InternetUpBandwidth"),
-			Priority:            pulumi.Int(1),
 			QosId:               defaultQos.ID(),
+			Description:         pulumi.String("tf-testSagQosCarDescription"),
+			Priority:            pulumi.Int(1),
+			LimitType:           pulumi.String("Absolute"),
+			MinBandwidthAbs:     pulumi.Int(10),
+			MaxBandwidthAbs:     pulumi.Int(20),
+			MinBandwidthPercent: pulumi.Int(10),
+			MaxBandwidthPercent: pulumi.Int(20),
+			PercentSourceType:   pulumi.String("InternetUpBandwidth"),
 		})
 		if err != nil {
 			return err
@@ -98,15 +98,15 @@ import pulumi_alicloud as alicloud
 
 default_qos = alicloud.rocketmq.Qos("defaultQos")
 default_qos_car = alicloud.rocketmq.QosCar("defaultQosCar",
+    qos_id=default_qos.id,
     description="tf-testSagQosCarDescription",
-    limit_type="Absolute",
-    max_bandwidth_abs=20,
-    max_bandwidth_percent=20,
-    min_bandwidth_abs=10,
-    min_bandwidth_percent=10,
-    percent_source_type="InternetUpBandwidth",
     priority=1,
-    qos_id=default_qos.id)
+    limit_type="Absolute",
+    min_bandwidth_abs=10,
+    max_bandwidth_abs=20,
+    min_bandwidth_percent=10,
+    max_bandwidth_percent=20,
+    percent_source_type="InternetUpBandwidth")
 ```
 
 {{% /example %}}
@@ -117,17 +117,17 @@ default_qos_car = alicloud.rocketmq.QosCar("defaultQosCar",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultQos = new alicloud.rocketmq.Qos("default", {});
-const defaultQosCar = new alicloud.rocketmq.QosCar("default", {
-    description: "tf-testSagQosCarDescription",
-    limitType: "Absolute",
-    maxBandwidthAbs: 20,
-    maxBandwidthPercent: 20,
-    minBandwidthAbs: 10,
-    minBandwidthPercent: 10,
-    percentSourceType: "InternetUpBandwidth",
-    priority: 1,
+const defaultQos = new alicloud.rocketmq.Qos("defaultQos", {});
+const defaultQosCar = new alicloud.rocketmq.QosCar("defaultQosCar", {
     qosId: defaultQos.id,
+    description: "tf-testSagQosCarDescription",
+    priority: "1",
+    limitType: "Absolute",
+    minBandwidthAbs: "10",
+    maxBandwidthAbs: "20",
+    minBandwidthPercent: "10",
+    maxBandwidthPercent: "20",
+    percentSourceType: "InternetUpBandwidth",
 });
 ```
 

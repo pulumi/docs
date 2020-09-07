@@ -49,9 +49,9 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/24",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup("defaultSecurityGroup", new AliCloud.Ecs.SecurityGroupArgs
         {
@@ -59,8 +59,8 @@ class MyStack : Stack
         });
         var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
         {
-            MostRecent = true,
             NameRegex = "^ubuntu_18.*64",
+            MostRecent = true,
             Owners = "system",
         }));
         var template = new AliCloud.Ecs.LaunchTemplate("template", new AliCloud.Ecs.LaunchTemplateArgs
@@ -71,6 +71,10 @@ class MyStack : Stack
         });
         var defaultAutoProvisioningGroup = new AliCloud.Ecs.AutoProvisioningGroup("defaultAutoProvisioningGroup", new AliCloud.Ecs.AutoProvisioningGroupArgs
         {
+            LaunchTemplateId = template.Id,
+            TotalTargetCapacity = "4",
+            PayAsYouGoTargetCapacity = "1",
+            SpotTargetCapacity = "2",
             LaunchTemplateConfigs = 
             {
                 new AliCloud.Ecs.Inputs.AutoProvisioningGroupLaunchTemplateConfigArgs
@@ -79,10 +83,6 @@ class MyStack : Stack
                     VswitchId = defaultSwitch.Id,
                 },
             },
-            LaunchTemplateId = template.Id,
-            PayAsYouGoTargetCapacity = "1",
-            SpotTargetCapacity = "2",
-            TotalTargetCapacity = "4",
         });
     }
 
@@ -120,9 +120,9 @@ func main() {
 			return err
 		}
 		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			CidrBlock:        pulumi.String("172.16.0.0/24"),
 			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
 		})
 		if err != nil {
 			return err
@@ -133,12 +133,12 @@ func main() {
 		if err != nil {
 			return err
 		}
-		opt2 := true
-		opt3 := "^ubuntu_18.*64"
+		opt2 := "^ubuntu_18.*64"
+		opt3 := true
 		opt4 := "system"
 		defaultImages, err := ecs.GetImages(ctx, &ecs.GetImagesArgs{
-			MostRecent: &opt2,
-			NameRegex:  &opt3,
+			NameRegex:  &opt2,
+			MostRecent: &opt3,
 			Owners:     &opt4,
 		}, nil)
 		if err != nil {
@@ -153,16 +153,16 @@ func main() {
 			return err
 		}
 		_, err = ecs.NewAutoProvisioningGroup(ctx, "defaultAutoProvisioningGroup", &ecs.AutoProvisioningGroupArgs{
+			LaunchTemplateId:         template.ID(),
+			TotalTargetCapacity:      pulumi.String("4"),
+			PayAsYouGoTargetCapacity: pulumi.String("1"),
+			SpotTargetCapacity:       pulumi.String("2"),
 			LaunchTemplateConfigs: ecs.AutoProvisioningGroupLaunchTemplateConfigArray{
 				&ecs.AutoProvisioningGroupLaunchTemplateConfigArgs{
 					InstanceType: pulumi.String("ecs.n1.small"),
 					VswitchId:    defaultSwitch.ID(),
 				},
 			},
-			LaunchTemplateId:         template.ID(),
-			PayAsYouGoTargetCapacity: pulumi.String("1"),
-			SpotTargetCapacity:       pulumi.String("2"),
-			TotalTargetCapacity:      pulumi.String("4"),
 		})
 		if err != nil {
 			return err
@@ -187,26 +187,26 @@ default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
     available_resource_creation="VSwitch")
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0].id,
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup", vpc_id=default_network.id)
-default_images = alicloud.ecs.get_images(most_recent=True,
-    name_regex="^ubuntu_18.*64",
+default_images = alicloud.ecs.get_images(name_regex="^ubuntu_18.*64",
+    most_recent=True,
     owners="system")
 template = alicloud.ecs.LaunchTemplate("template",
     image_id=default_images.images[0].id,
     instance_type="ecs.n1.tiny",
     security_group_id=default_security_group.id)
 default_auto_provisioning_group = alicloud.ecs.AutoProvisioningGroup("defaultAutoProvisioningGroup",
+    launch_template_id=template.id,
+    total_target_capacity="4",
+    pay_as_you_go_target_capacity="1",
+    spot_target_capacity="2",
     launch_template_configs=[alicloud.ecs.AutoProvisioningGroupLaunchTemplateConfigArgs(
         instance_type="ecs.n1.small",
         vswitch_id=default_switch.id,
-    )],
-    launch_template_id=template.id,
-    pay_as_you_go_target_capacity="1",
-    spot_target_capacity="2",
-    total_target_capacity="4")
+    )])
 ```
 
 {{% /example %}}
@@ -219,41 +219,36 @@ import * as alicloud from "@pulumi/alicloud";
 
 const config = new pulumi.Config();
 const name = config.get("name") || "auto_provisioning_group";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableDiskCategory: "cloud_efficiency",
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/16",
 });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
+    vpcId: defaultNetwork.id,
     cidrBlock: "172.16.0.0/24",
-    vpcId: defaultNetwork.id,
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("default", {
-    vpcId: defaultNetwork.id,
-});
-const defaultImages = pulumi.output(alicloud.ecs.getImages({
-    mostRecent: true,
+const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("defaultSecurityGroup", {vpcId: defaultNetwork.id});
+const defaultImages = alicloud.ecs.getImages({
     nameRegex: "^ubuntu_18.*64",
+    mostRecent: true,
     owners: "system",
-}, { async: true }));
+});
 const template = new alicloud.ecs.LaunchTemplate("template", {
-    imageId: defaultImages.images[0].id,
+    imageId: defaultImages.then(defaultImages => defaultImages.images[0].id),
     instanceType: "ecs.n1.tiny",
     securityGroupId: defaultSecurityGroup.id,
 });
-const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("default", {
+const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("defaultAutoProvisioningGroup", {
+    launchTemplateId: template.id,
+    totalTargetCapacity: "4",
+    payAsYouGoTargetCapacity: "1",
+    spotTargetCapacity: "2",
     launchTemplateConfigs: [{
         instanceType: "ecs.n1.small",
         vswitchId: defaultSwitch.id,
     }],
-    launchTemplateId: template.id,
-    payAsYouGoTargetCapacity: "1",
-    spotTargetCapacity: "2",
-    totalTargetCapacity: "4",
 });
 ```
 

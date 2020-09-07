@@ -30,12 +30,12 @@ class MyStack : Stack
     {
         var cluster = new AliCloud.PolarDB.Cluster("cluster", new AliCloud.PolarDB.ClusterArgs
         {
-            DbNodeClass = @var.Clusterclass,
             DbType = "MySQL",
             DbVersion = "8.0",
-            Description = "testDB",
             PayType = "PostPaid",
+            DbNodeClass = @var.Clusterclass,
             VswitchId = "polar.mysql.x4.large",
+            Description = "testDB",
         });
         var @default = new AliCloud.PolarDB.Database("default", new AliCloud.PolarDB.DatabaseArgs
         {
@@ -61,12 +61,12 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		cluster, err := polardb.NewCluster(ctx, "cluster", &polardb.ClusterArgs{
-			DbNodeClass: pulumi.Any(_var.Clusterclass),
 			DbType:      pulumi.String("MySQL"),
 			DbVersion:   pulumi.String("8.0"),
-			Description: pulumi.String("testDB"),
 			PayType:     pulumi.String("PostPaid"),
+			DbNodeClass: pulumi.Any(_var.Clusterclass),
 			VswitchId:   pulumi.String("polar.mysql.x4.large"),
+			Description: pulumi.String("testDB"),
 		})
 		if err != nil {
 			return err
@@ -91,12 +91,12 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 cluster = alicloud.polardb.Cluster("cluster",
-    db_node_class=var["clusterclass"],
     db_type="MySQL",
     db_version="8.0",
-    description="testDB",
     pay_type="PostPaid",
-    vswitch_id="polar.mysql.x4.large")
+    db_node_class=var["clusterclass"],
+    vswitch_id="polar.mysql.x4.large",
+    description="testDB")
 default = alicloud.polardb.Database("default",
     db_cluster_id=cluster.id,
     db_name="tftestdatabase")
@@ -111,14 +111,14 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const cluster = new alicloud.polardb.Cluster("cluster", {
-    dbNodeClass: var_clusterclass,
     dbType: "MySQL",
     dbVersion: "8.0",
-    description: "testDB",
     payType: "PostPaid",
+    dbNodeClass: _var.clusterclass,
     vswitchId: "polar.mysql.x4.large",
+    description: "testDB",
 });
-const defaultDatabase = new alicloud.polardb.Database("default", {
+const _default = new alicloud.polardb.Database("default", {
     dbClusterId: cluster.id,
     dbName: "tftestdatabase",
 });

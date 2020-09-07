@@ -29,15 +29,14 @@ class MyStack : Stack
         // Create a RAM User Policy attachment.
         var user = new AliCloud.Ram.User("user", new AliCloud.Ram.UserArgs
         {
-            Comments = "yoyoyo",
             DisplayName = "user_display_name",
-            Email = "hello.uuu@aaa.com",
-            Force = true,
             Mobile = "86-18688888888",
+            Email = "hello.uuu@aaa.com",
+            Comments = "yoyoyo",
+            Force = true,
         });
         var policy = new AliCloud.Ram.Policy("policy", new AliCloud.Ram.PolicyArgs
         {
-            Description = "this is a policy test",
             Document = @"  {
     ""Statement"": [
       {
@@ -54,8 +53,8 @@ class MyStack : Stack
     ],
       ""Version"": ""1""
   }
-  
 ",
+            Description = "this is a policy test",
             Force = true,
         });
         var attach = new AliCloud.Ram.UserPolicyAttachment("attach", new AliCloud.Ram.UserPolicyAttachmentArgs
@@ -85,18 +84,18 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		user, err := ram.NewUser(ctx, "user", &ram.UserArgs{
-			Comments:    pulumi.String("yoyoyo"),
 			DisplayName: pulumi.String("user_display_name"),
-			Email:       pulumi.String("hello.uuu@aaa.com"),
-			Force:       pulumi.Bool(true),
 			Mobile:      pulumi.String("86-18688888888"),
+			Email:       pulumi.String("hello.uuu@aaa.com"),
+			Comments:    pulumi.String("yoyoyo"),
+			Force:       pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
 		}
 		policy, err := ram.NewPolicy(ctx, "policy", &ram.PolicyArgs{
+			Document:    pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "  {\n", "    \"Statement\": [\n", "      {\n", "        \"Action\": [\n", "          \"oss:ListObjects\",\n", "          \"oss:GetObject\"\n", "        ],\n", "        \"Effect\": \"Allow\",\n", "        \"Resource\": [\n", "          \"acs:oss:*:*:mybucket\",\n", "          \"acs:oss:*:*:mybucket/*\"\n", "        ]\n", "      }\n", "    ],\n", "      \"Version\": \"1\"\n", "  }\n")),
 			Description: pulumi.String("this is a policy test"),
-			Document:    pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "  {\n", "    \"Statement\": [\n", "      {\n", "        \"Action\": [\n", "          \"oss:ListObjects\",\n", "          \"oss:GetObject\"\n", "        ],\n", "        \"Effect\": \"Allow\",\n", "        \"Resource\": [\n", "          \"acs:oss:*:*:mybucket\",\n", "          \"acs:oss:*:*:mybucket/*\"\n", "        ]\n", "      }\n", "    ],\n", "      \"Version\": \"1\"\n", "  }\n", "  \n")),
 			Force:       pulumi.Bool(true),
 		})
 		if err != nil {
@@ -124,13 +123,12 @@ import pulumi_alicloud as alicloud
 
 # Create a RAM User Policy attachment.
 user = alicloud.ram.User("user",
-    comments="yoyoyo",
     display_name="user_display_name",
+    mobile="86-18688888888",
     email="hello.uuu@aaa.com",
-    force=True,
-    mobile="86-18688888888")
+    comments="yoyoyo",
+    force=True)
 policy = alicloud.ram.Policy("policy",
-    description="this is a policy test",
     document="""  {
     "Statement": [
       {
@@ -147,8 +145,8 @@ policy = alicloud.ram.Policy("policy",
     ],
       "Version": "1"
   }
-  
 """,
+    description="this is a policy test",
     force=True)
 attach = alicloud.ram.UserPolicyAttachment("attach",
     policy_name=policy.name,
@@ -166,14 +164,13 @@ import * as alicloud from "@pulumi/alicloud";
 
 // Create a RAM User Policy attachment.
 const user = new alicloud.ram.User("user", {
-    comments: "yoyoyo",
     displayName: "user_display_name",
-    email: "hello.uuu@aaa.com",
-    force: true,
     mobile: "86-18688888888",
+    email: "hello.uuu@aaa.com",
+    comments: "yoyoyo",
+    force: true,
 });
 const policy = new alicloud.ram.Policy("policy", {
-    description: "this is a policy test",
     document: `  {
     "Statement": [
       {
@@ -190,7 +187,8 @@ const policy = new alicloud.ram.Policy("policy", {
     ],
       "Version": "1"
   }
-  `,
+`,
+    description: "this is a policy test",
     force: true,
 });
 const attach = new alicloud.ram.UserPolicyAttachment("attach", {

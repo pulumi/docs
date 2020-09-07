@@ -59,20 +59,20 @@ class MyStack : Stack
         var ipVersion = config.Get("ipVersion") ?? "ipv4";
         var @default = new AliCloud.Slb.Acl("default", new AliCloud.Slb.AclArgs
         {
+            IpVersion = ipVersion,
             EntryLists = 
             {
                 new AliCloud.Slb.Inputs.AclEntryListArgs
                 {
-                    Comment = "first",
                     Entry = "10.10.10.0/24",
+                    Comment = "first",
                 },
                 new AliCloud.Slb.Inputs.AclEntryListArgs
                 {
-                    Comment = "second",
                     Entry = "168.10.10.0/24",
+                    Comment = "second",
                 },
             },
-            IpVersion = ipVersion,
         });
     }
 
@@ -93,17 +93,17 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := slb.NewAcl(ctx, "_default", &slb.AclArgs{
+			IpVersion: pulumi.String(ipVersion),
 			EntryLists: slb.AclEntryListArray{
 				&slb.AclEntryListArgs{
-					Comment: pulumi.String("first"),
 					Entry:   pulumi.String("10.10.10.0/24"),
+					Comment: pulumi.String("first"),
 				},
 				&slb.AclEntryListArgs{
-					Comment: pulumi.String("second"),
 					Entry:   pulumi.String("168.10.10.0/24"),
+					Comment: pulumi.String("second"),
 				},
 			},
-			IpVersion: pulumi.String(ipVersion),
 		})
 		if err != nil {
 			return err
@@ -128,17 +128,17 @@ ip_version = config.get("ipVersion")
 if ip_version is None:
     ip_version = "ipv4"
 default = alicloud.slb.Acl("default",
+    ip_version=ip_version,
     entry_lists=[
         alicloud.slb.AclEntryListArgs(
-            comment="first",
             entry="10.10.10.0/24",
+            comment="first",
         ),
         alicloud.slb.AclEntryListArgs(
-            comment="second",
             entry="168.10.10.0/24",
+            comment="second",
         ),
-    ],
-    ip_version=ip_version)
+    ])
 ```
 
 {{% /example %}}
@@ -152,19 +152,18 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "terraformslbaclconfig";
 const ipVersion = config.get("ipVersion") || "ipv4";
-
-const defaultAcl = new alicloud.slb.Acl("default", {
+const _default = new alicloud.slb.Acl("default", {
+    ipVersion: ipVersion,
     entryLists: [
         {
-            comment: "first",
             entry: "10.10.10.0/24",
+            comment: "first",
         },
         {
-            comment: "second",
             entry: "168.10.10.0/24",
+            comment: "second",
         },
     ],
-    ipVersion: ipVersion,
 });
 ```
 

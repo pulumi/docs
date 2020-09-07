@@ -38,16 +38,16 @@ class MyStack : Stack
         });
         var defaultQosPolicy = new AliCloud.RocketMQ.QosPolicy("defaultQosPolicy", new AliCloud.RocketMQ.QosPolicyArgs
         {
-            Description = "tf-testSagQosPolicyDescription",
-            DestCidr = "10.10.0.0/24",
-            DestPortRange = "-1/-1",
-            EndTime = "2019-10-26T16:41:33+0800",
-            IpProtocol = "ALL",
-            Priority = 1,
             QosId = defaultQos.Id,
+            Description = "tf-testSagQosPolicyDescription",
+            Priority = 1,
+            IpProtocol = "ALL",
             SourceCidr = "192.168.0.0/24",
             SourcePortRange = "-1/-1",
+            DestCidr = "10.10.0.0/24",
+            DestPortRange = "-1/-1",
             StartTime = "2019-10-25T16:41:33+0800",
+            EndTime = "2019-10-26T16:41:33+0800",
         });
     }
 
@@ -72,16 +72,16 @@ func main() {
 			return err
 		}
 		_, err = rocketmq.NewQosPolicy(ctx, "defaultQosPolicy", &rocketmq.QosPolicyArgs{
-			Description:     pulumi.String("tf-testSagQosPolicyDescription"),
-			DestCidr:        pulumi.String("10.10.0.0/24"),
-			DestPortRange:   pulumi.String("-1/-1"),
-			EndTime:         pulumi.String("2019-10-26T16:41:33+0800"),
-			IpProtocol:      pulumi.String("ALL"),
-			Priority:        pulumi.Int(1),
 			QosId:           defaultQos.ID(),
+			Description:     pulumi.String("tf-testSagQosPolicyDescription"),
+			Priority:        pulumi.Int(1),
+			IpProtocol:      pulumi.String("ALL"),
 			SourceCidr:      pulumi.String("192.168.0.0/24"),
 			SourcePortRange: pulumi.String("-1/-1"),
+			DestCidr:        pulumi.String("10.10.0.0/24"),
+			DestPortRange:   pulumi.String("-1/-1"),
 			StartTime:       pulumi.String("2019-10-25T16:41:33+0800"),
+			EndTime:         pulumi.String("2019-10-26T16:41:33+0800"),
 		})
 		if err != nil {
 			return err
@@ -100,16 +100,16 @@ import pulumi_alicloud as alicloud
 
 default_qos = alicloud.rocketmq.Qos("defaultQos")
 default_qos_policy = alicloud.rocketmq.QosPolicy("defaultQosPolicy",
-    description="tf-testSagQosPolicyDescription",
-    dest_cidr="10.10.0.0/24",
-    dest_port_range="-1/-1",
-    end_time="2019-10-26T16:41:33+0800",
-    ip_protocol="ALL",
-    priority=1,
     qos_id=default_qos.id,
+    description="tf-testSagQosPolicyDescription",
+    priority=1,
+    ip_protocol="ALL",
     source_cidr="192.168.0.0/24",
     source_port_range="-1/-1",
-    start_time="2019-10-25T16:41:33+0800")
+    dest_cidr="10.10.0.0/24",
+    dest_port_range="-1/-1",
+    start_time="2019-10-25T16:41:33+0800",
+    end_time="2019-10-26T16:41:33+0800")
 ```
 
 {{% /example %}}
@@ -120,18 +120,18 @@ default_qos_policy = alicloud.rocketmq.QosPolicy("defaultQosPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultQos = new alicloud.rocketmq.Qos("default", {});
-const defaultQosPolicy = new alicloud.rocketmq.QosPolicy("default", {
-    description: "tf-testSagQosPolicyDescription",
-    destCidr: "10.10.0.0/24",
-    destPortRange: "-1/-1",
-    endTime: "2019-10-26T16:41:33+0800",
-    ipProtocol: "ALL",
-    priority: 1,
+const defaultQos = new alicloud.rocketmq.Qos("defaultQos", {});
+const defaultQosPolicy = new alicloud.rocketmq.QosPolicy("defaultQosPolicy", {
     qosId: defaultQos.id,
+    description: "tf-testSagQosPolicyDescription",
+    priority: "1",
+    ipProtocol: "ALL",
     sourceCidr: "192.168.0.0/24",
     sourcePortRange: "-1/-1",
+    destCidr: "10.10.0.0/24",
+    destPortRange: "-1/-1",
     startTime: "2019-10-25T16:41:33+0800",
+    endTime: "2019-10-26T16:41:33+0800",
 });
 ```
 

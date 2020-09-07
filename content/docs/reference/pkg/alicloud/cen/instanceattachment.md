@@ -38,9 +38,9 @@ class MyStack : Stack
         });
         var foo = new AliCloud.Cen.InstanceAttachment("foo", new AliCloud.Cen.InstanceAttachmentArgs
         {
+            InstanceId = cen.Id,
             ChildInstanceId = vpc.Id,
             ChildInstanceRegionId = "cn-beijing",
-            InstanceId = cen.Id,
         });
     }
 
@@ -74,9 +74,9 @@ func main() {
 			return err
 		}
 		_, err = cen.NewInstanceAttachment(ctx, "foo", &cen.InstanceAttachmentArgs{
+			InstanceId:            cen.ID(),
 			ChildInstanceId:       vpc.ID(),
 			ChildInstanceRegionId: pulumi.String("cn-beijing"),
-			InstanceId:            cen.ID(),
 		})
 		if err != nil {
 			return err
@@ -100,9 +100,9 @@ if name is None:
 cen = alicloud.cen.Instance("cen", description="terraform01")
 vpc = alicloud.vpc.Network("vpc", cidr_block="192.168.0.0/16")
 foo = alicloud.cen.InstanceAttachment("foo",
+    instance_id=cen.id,
     child_instance_id=vpc.id,
-    child_instance_region_id="cn-beijing",
-    instance_id=cen.id)
+    child_instance_region_id="cn-beijing")
 ```
 
 {{% /example %}}
@@ -114,19 +114,13 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const config = new pulumi.Config();
-// Create a new instance-attachment and use it to attach one child instance to a new CEN
 const name = config.get("name") || "tf-testAccCenInstanceAttachmentBasic";
-
-const cen = new alicloud.cen.Instance("cen", {
-    description: "terraform01",
-});
-const vpc = new alicloud.vpc.Network("vpc", {
-    cidrBlock: "192.168.0.0/16",
-});
+const cen = new alicloud.cen.Instance("cen", {description: "terraform01"});
+const vpc = new alicloud.vpc.Network("vpc", {cidrBlock: "192.168.0.0/16"});
 const foo = new alicloud.cen.InstanceAttachment("foo", {
+    instanceId: cen.id,
     childInstanceId: vpc.id,
     childInstanceRegionId: "cn-beijing",
-    instanceId: cen.id,
 });
 ```
 

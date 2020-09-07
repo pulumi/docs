@@ -46,20 +46,20 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/24",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var defaultScalingGroup = new AliCloud.Ess.ScalingGroup("defaultScalingGroup", new AliCloud.Ess.ScalingGroupArgs
         {
-            MaxSize = 1,
             MinSize = 1,
+            MaxSize = 1,
+            ScalingGroupName = name,
             RemovalPolicies = 
             {
                 "OldestInstance",
                 "NewestInstance",
             },
-            ScalingGroupName = name,
             VswitchIds = 
             {
                 defaultSwitch.Id,
@@ -70,6 +70,12 @@ class MyStack : Stack
         });
         var defaultNotification = new AliCloud.Ess.Notification("defaultNotification", new AliCloud.Ess.NotificationArgs
         {
+            ScalingGroupId = defaultScalingGroup.Id,
+            NotificationTypes = 
+            {
+                "AUTOSCALING:SCALE_OUT_SUCCESS",
+                "AUTOSCALING:SCALE_OUT_ERROR",
+            },
             NotificationArn = Output.Tuple(defaultRegions, defaultAccount, defaultQueue.Name).Apply(values =>
             {
                 var defaultRegions = values.Item1;
@@ -77,12 +83,6 @@ class MyStack : Stack
                 var name = values.Item3;
                 return $"acs:ess:{defaultRegions.Regions[0].Id}:{defaultAccount.Id}:queue/{name}";
             }),
-            NotificationTypes = 
-            {
-                "AUTOSCALING:SCALE_OUT_SUCCESS",
-                "AUTOSCALING:SCALE_OUT_ERROR",
-            },
-            ScalingGroupId = defaultScalingGroup.Id,
         });
     }
 
@@ -134,21 +134,21 @@ func main() {
 			return err
 		}
 		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			CidrBlock:        pulumi.String("172.16.0.0/24"),
 			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
 		})
 		if err != nil {
 			return err
 		}
 		defaultScalingGroup, err := ess.NewScalingGroup(ctx, "defaultScalingGroup", &ess.ScalingGroupArgs{
-			MaxSize: pulumi.Int(1),
-			MinSize: pulumi.Int(1),
+			MinSize:          pulumi.Int(1),
+			MaxSize:          pulumi.Int(1),
+			ScalingGroupName: pulumi.String(name),
 			RemovalPolicies: pulumi.StringArray{
 				pulumi.String("OldestInstance"),
 				pulumi.String("NewestInstance"),
 			},
-			ScalingGroupName: pulumi.String(name),
 			VswitchIds: pulumi.StringArray{
 				defaultSwitch.ID(),
 			},
@@ -161,14 +161,14 @@ func main() {
 			return err
 		}
 		_, err = ess.NewNotification(ctx, "defaultNotification", &ess.NotificationArgs{
-			NotificationArn: defaultQueue.Name.ApplyT(func(name string) (string, error) {
-				return fmt.Sprintf("%v%v%v%v%v%v", "acs:ess:", defaultRegions.Regions[0].Id, ":", defaultAccount.Id, ":queue/", name), nil
-			}).(pulumi.StringOutput),
+			ScalingGroupId: defaultScalingGroup.ID(),
 			NotificationTypes: pulumi.StringArray{
 				pulumi.String("AUTOSCALING:SCALE_OUT_SUCCESS"),
 				pulumi.String("AUTOSCALING:SCALE_OUT_ERROR"),
 			},
-			ScalingGroupId: defaultScalingGroup.ID(),
+			NotificationArn: defaultQueue.Name.ApplyT(func(name string) (string, error) {
+				return fmt.Sprintf("%v%v%v%v%v%v", "acs:ess:", defaultRegions.Regions[0].Id, ":", defaultAccount.Id, ":queue/", name), nil
+			}).(pulumi.StringOutput),
 		})
 		if err != nil {
 			return err
@@ -195,26 +195,26 @@ default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
     available_resource_creation="VSwitch")
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0].id,
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 default_scaling_group = alicloud.ess.ScalingGroup("defaultScalingGroup",
-    max_size=1,
     min_size=1,
+    max_size=1,
+    scaling_group_name=name,
     removal_policies=[
         "OldestInstance",
         "NewestInstance",
     ],
-    scaling_group_name=name,
     vswitch_ids=[default_switch.id])
 default_queue = alicloud.mns.Queue("defaultQueue")
 default_notification = alicloud.ess.Notification("defaultNotification",
-    notification_arn=default_queue.name.apply(lambda name: f"acs:ess:{default_regions.regions[0].id}:{default_account.id}:queue/{name}"),
+    scaling_group_id=default_scaling_group.id,
     notification_types=[
         "AUTOSCALING:SCALE_OUT_SUCCESS",
         "AUTOSCALING:SCALE_OUT_ERROR",
     ],
-    scaling_group_id=default_scaling_group.id)
+    notification_arn=default_queue.name.apply(lambda name: f"acs:ess:{default_regions.regions[0].id}:{default_account.id}:queue/{name}"))
 ```
 
 {{% /example %}}
@@ -226,42 +226,39 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const config = new pulumi.Config();
-const name = config.get("name") || "tf-testAccEssNotification-%d";
-
-const defaultRegions = pulumi.output(alicloud.getRegions({
+const name = config.get("name") || `tf-testAccEssNotification-%d`;
+const defaultRegions = alicloud.getRegions({
     current: true,
-}, { async: true }));
-const defaultAccount = pulumi.output(alicloud.getAccount({ async: true }));
-const defaultZones = pulumi.output(alicloud.getZones({
+});
+const defaultAccount = alicloud.getAccount({});
+const defaultZones = alicloud.getZones({
     availableDiskCategory: "cloud_efficiency",
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/16",
 });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/24",
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
+    cidrBlock: "172.16.0.0/24",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const defaultScalingGroup = new alicloud.ess.ScalingGroup("default", {
-    maxSize: 1,
+const defaultScalingGroup = new alicloud.ess.ScalingGroup("defaultScalingGroup", {
     minSize: 1,
+    maxSize: 1,
+    scalingGroupName: name,
     removalPolicies: [
         "OldestInstance",
         "NewestInstance",
     ],
-    scalingGroupName: name,
     vswitchIds: [defaultSwitch.id],
 });
-const defaultQueue = new alicloud.mns.Queue("default", {});
-const defaultNotification = new alicloud.ess.Notification("default", {
-    notificationArn: pulumi.interpolate`acs:ess:${defaultRegions.regions[0].id}:${defaultAccount.id}:queue/${defaultQueue.name}`,
+const defaultQueue = new alicloud.mns.Queue("defaultQueue", {});
+const defaultNotification = new alicloud.ess.Notification("defaultNotification", {
+    scalingGroupId: defaultScalingGroup.id,
     notificationTypes: [
         "AUTOSCALING:SCALE_OUT_SUCCESS",
         "AUTOSCALING:SCALE_OUT_ERROR",
     ],
-    scalingGroupId: defaultScalingGroup.id,
+    notificationArn: pulumi.all([defaultRegions, defaultAccount, defaultQueue.name]).apply(([defaultRegions, defaultAccount, name]) => `acs:ess:${defaultRegions.regions[0].id}:${defaultAccount.id}:queue/${name}`),
 });
 ```
 

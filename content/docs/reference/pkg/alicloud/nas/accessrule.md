@@ -32,16 +32,16 @@ class MyStack : Stack
     {
         var fooAccessGroup = new AliCloud.Nas.AccessGroup("fooAccessGroup", new AliCloud.Nas.AccessGroupArgs
         {
-            Description = "tf-testAccNasConfig",
             Type = "Vpc",
+            Description = "tf-testAccNasConfig",
         });
         var fooAccessRule = new AliCloud.Nas.AccessRule("fooAccessRule", new AliCloud.Nas.AccessRuleArgs
         {
             AccessGroupName = fooAccessGroup.Id,
-            Priority = 2,
-            RwAccessType = "RDWR",
             SourceCidrIp = "168.1.1.0/16",
+            RwAccessType = "RDWR",
             UserAccessType = "no_squash",
+            Priority = 2,
         });
     }
 
@@ -62,18 +62,18 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		fooAccessGroup, err := nas.NewAccessGroup(ctx, "fooAccessGroup", &nas.AccessGroupArgs{
-			Description: pulumi.String("tf-testAccNasConfig"),
 			Type:        pulumi.String("Vpc"),
+			Description: pulumi.String("tf-testAccNasConfig"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = nas.NewAccessRule(ctx, "fooAccessRule", &nas.AccessRuleArgs{
 			AccessGroupName: fooAccessGroup.ID(),
-			Priority:        pulumi.Int(2),
-			RwAccessType:    pulumi.String("RDWR"),
 			SourceCidrIp:    pulumi.String("168.1.1.0/16"),
+			RwAccessType:    pulumi.String("RDWR"),
 			UserAccessType:  pulumi.String("no_squash"),
+			Priority:        pulumi.Int(2),
 		})
 		if err != nil {
 			return err
@@ -91,14 +91,14 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 foo_access_group = alicloud.nas.AccessGroup("fooAccessGroup",
-    description="tf-testAccNasConfig",
-    type="Vpc")
+    type="Vpc",
+    description="tf-testAccNasConfig")
 foo_access_rule = alicloud.nas.AccessRule("fooAccessRule",
     access_group_name=foo_access_group.id,
-    priority=2,
-    rw_access_type="RDWR",
     source_cidr_ip="168.1.1.0/16",
-    user_access_type="no_squash")
+    rw_access_type="RDWR",
+    user_access_type="no_squash",
+    priority=2)
 ```
 
 {{% /example %}}
@@ -109,16 +109,16 @@ foo_access_rule = alicloud.nas.AccessRule("fooAccessRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const fooAccessGroup = new alicloud.nas.AccessGroup("foo", {
-    description: "tf-testAccNasConfig",
+const fooAccessGroup = new alicloud.nas.AccessGroup("fooAccessGroup", {
     type: "Vpc",
+    description: "tf-testAccNasConfig",
 });
-const fooAccessRule = new alicloud.nas.AccessRule("foo", {
+const fooAccessRule = new alicloud.nas.AccessRule("fooAccessRule", {
     accessGroupName: fooAccessGroup.id,
-    priority: 2,
-    rwAccessType: "RDWR",
     sourceCidrIp: "168.1.1.0/16",
+    rwAccessType: "RDWR",
     userAccessType: "no_squash",
+    priority: 2,
 });
 ```
 

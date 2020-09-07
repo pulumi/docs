@@ -23,6 +23,175 @@ The official website mark  more regions. Or you can call [DescribeRegions](https
 
 > **NOTE:**  Create Cassandra dataCenter or change dataCenter type and storage would cost 30 minutes. Please make full preparation.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a cassandra dataCenter
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultCluster = new AliCloud.Cassandra.Cluster("defaultCluster", new AliCloud.Cassandra.ClusterArgs
+        {
+            ClusterName = "cassandra-cluster-name-tf",
+            DataCenterName = "dc-1",
+            AutoRenew = false,
+            InstanceType = "cassandra.c.large",
+            MajorVersion = "3.11",
+            NodeCount = 2,
+            PayType = "PayAsYouGo",
+            VswitchId = "vsw-xxxx1",
+            DiskSize = 160,
+            DiskType = "cloud_ssd",
+            MaintainStartTime = "18:00Z",
+            MaintainEndTime = "20:00Z",
+            IpWhite = "127.0.0.1",
+        });
+        var defaultDataCenter = new AliCloud.Cassandra.DataCenter("defaultDataCenter", new AliCloud.Cassandra.DataCenterArgs
+        {
+            ClusterId = defaultCluster.Id,
+            DataCenterName = "dc-2",
+            AutoRenew = false,
+            InstanceType = "cassandra.c.large",
+            NodeCount = 2,
+            PayType = "PayAsYouGo",
+            VswitchId = "vsw-xxxx2",
+            DiskSize = 160,
+            DiskType = "cloud_ssd",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cassandra"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultCluster, err := cassandra.NewCluster(ctx, "defaultCluster", &cassandra.ClusterArgs{
+			ClusterName:       pulumi.String("cassandra-cluster-name-tf"),
+			DataCenterName:    pulumi.String("dc-1"),
+			AutoRenew:         pulumi.Bool(false),
+			InstanceType:      pulumi.String("cassandra.c.large"),
+			MajorVersion:      pulumi.String("3.11"),
+			NodeCount:         pulumi.Int(2),
+			PayType:           pulumi.String("PayAsYouGo"),
+			VswitchId:         pulumi.String("vsw-xxxx1"),
+			DiskSize:          pulumi.Int(160),
+			DiskType:          pulumi.String("cloud_ssd"),
+			MaintainStartTime: pulumi.String("18:00Z"),
+			MaintainEndTime:   pulumi.String("20:00Z"),
+			IpWhite:           pulumi.String("127.0.0.1"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cassandra.NewDataCenter(ctx, "defaultDataCenter", &cassandra.DataCenterArgs{
+			ClusterId:      defaultCluster.ID(),
+			DataCenterName: pulumi.String("dc-2"),
+			AutoRenew:      pulumi.Bool(false),
+			InstanceType:   pulumi.String("cassandra.c.large"),
+			NodeCount:      pulumi.Int(2),
+			PayType:        pulumi.String("PayAsYouGo"),
+			VswitchId:      pulumi.String("vsw-xxxx2"),
+			DiskSize:       pulumi.Int(160),
+			DiskType:       pulumi.String("cloud_ssd"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default_cluster = alicloud.cassandra.Cluster("defaultCluster",
+    cluster_name="cassandra-cluster-name-tf",
+    data_center_name="dc-1",
+    auto_renew=False,
+    instance_type="cassandra.c.large",
+    major_version="3.11",
+    node_count=2,
+    pay_type="PayAsYouGo",
+    vswitch_id="vsw-xxxx1",
+    disk_size=160,
+    disk_type="cloud_ssd",
+    maintain_start_time="18:00Z",
+    maintain_end_time="20:00Z",
+    ip_white="127.0.0.1")
+default_data_center = alicloud.cassandra.DataCenter("defaultDataCenter",
+    cluster_id=default_cluster.id,
+    data_center_name="dc-2",
+    auto_renew=False,
+    instance_type="cassandra.c.large",
+    node_count=2,
+    pay_type="PayAsYouGo",
+    vswitch_id="vsw-xxxx2",
+    disk_size=160,
+    disk_type="cloud_ssd")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultCluster = new alicloud.cassandra.Cluster("defaultCluster", {
+    clusterName: "cassandra-cluster-name-tf",
+    dataCenterName: "dc-1",
+    autoRenew: "false",
+    instanceType: "cassandra.c.large",
+    majorVersion: "3.11",
+    nodeCount: "2",
+    payType: "PayAsYouGo",
+    vswitchId: "vsw-xxxx1",
+    diskSize: "160",
+    diskType: "cloud_ssd",
+    maintainStartTime: "18:00Z",
+    maintainEndTime: "20:00Z",
+    ipWhite: "127.0.0.1",
+});
+const defaultDataCenter = new alicloud.cassandra.DataCenter("defaultDataCenter", {
+    clusterId: defaultCluster.id,
+    dataCenterName: "dc-2",
+    autoRenew: "false",
+    instanceType: "cassandra.c.large",
+    nodeCount: "2",
+    payType: "PayAsYouGo",
+    vswitchId: "vsw-xxxx2",
+    diskSize: "160",
+    diskType: "cloud_ssd",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DataCenter Resource {#create}

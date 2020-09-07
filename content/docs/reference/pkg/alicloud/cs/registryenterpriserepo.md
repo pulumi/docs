@@ -34,17 +34,17 @@ class MyStack : Stack
     {
         var my_namespace = new AliCloud.CS.RegistryEnterpriseNamespace("my-namespace", new AliCloud.CS.RegistryEnterpriseNamespaceArgs
         {
+            InstanceId = "cri-xxx",
             AutoCreate = false,
             DefaultVisibility = "PUBLIC",
-            InstanceId = "cri-xxx",
         });
         var my_repo = new AliCloud.CS.RegistryEnterpriseRepo("my-repo", new AliCloud.CS.RegistryEnterpriseRepoArgs
         {
-            Detail = "this is a public repo",
             InstanceId = my_namespace.InstanceId,
             Namespace = my_namespace.Name,
-            RepoType = "PUBLIC",
             Summary = "this is summary of my new repo",
+            RepoType = "PUBLIC",
+            Detail = "this is a public repo",
         });
     }
 
@@ -65,19 +65,19 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := cs.NewRegistryEnterpriseNamespace(ctx, "my_namespace", &cs.RegistryEnterpriseNamespaceArgs{
+			InstanceId:        pulumi.String("cri-xxx"),
 			AutoCreate:        pulumi.Bool(false),
 			DefaultVisibility: pulumi.String("PUBLIC"),
-			InstanceId:        pulumi.String("cri-xxx"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = cs.NewRegistryEnterpriseRepo(ctx, "my_repo", &cs.RegistryEnterpriseRepoArgs{
-			Detail:     pulumi.String("this is a public repo"),
 			InstanceId: my_namespace.InstanceId,
 			Namespace:  my_namespace.Name,
-			RepoType:   pulumi.String("PUBLIC"),
 			Summary:    pulumi.String("this is summary of my new repo"),
+			RepoType:   pulumi.String("PUBLIC"),
+			Detail:     pulumi.String("this is a public repo"),
 		})
 		if err != nil {
 			return err
@@ -95,15 +95,15 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 my_namespace = alicloud.cs.RegistryEnterpriseNamespace("my-namespace",
+    instance_id="cri-xxx",
     auto_create=False,
-    default_visibility="PUBLIC",
-    instance_id="cri-xxx")
+    default_visibility="PUBLIC")
 my_repo = alicloud.cs.RegistryEnterpriseRepo("my-repo",
-    detail="this is a public repo",
     instance_id=my_namespace.instance_id,
     namespace=my_namespace.name,
+    summary="this is summary of my new repo",
     repo_type="PUBLIC",
-    summary="this is summary of my new repo")
+    detail="this is a public repo")
 ```
 
 {{% /example %}}
@@ -115,16 +115,16 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const my_namespace = new alicloud.cs.RegistryEnterpriseNamespace("my-namespace", {
+    instanceId: "cri-xxx",
     autoCreate: false,
     defaultVisibility: "PUBLIC",
-    instanceId: "cri-xxx",
 });
 const my_repo = new alicloud.cs.RegistryEnterpriseRepo("my-repo", {
-    detail: "this is a public repo",
     instanceId: my_namespace.instanceId,
     namespace: my_namespace.name,
-    repoType: "PUBLIC",
     summary: "this is summary of my new repo",
+    repoType: "PUBLIC",
+    detail: "this is a public repo",
 });
 ```
 

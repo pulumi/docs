@@ -11,6 +11,8 @@ Explore the resources and functions of the dns module in the AliCloud package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="alidnsdomain" title="AlidnsDomain"><span class="symbol resource"></span>AlidnsDomain</a></li>
+    <li><a href="alidnsinstance" title="AlidnsInstance"><span class="symbol resource"></span>AlidnsInstance</a></li>
     <li><a href="alidnsrecord" title="AlidnsRecord"><span class="symbol resource"></span>AlidnsRecord</a></li>
     <li><a href="ddosbgpinstance" title="DdosBgpInstance"><span class="symbol resource"></span>DdosBgpInstance</a></li>
     <li><a href="ddoscooinstance" title="DdosCooInstance"><span class="symbol resource"></span>DdosCooInstance</a></li>
@@ -26,6 +28,8 @@ Explore the resources and functions of the dns module in the AliCloud package.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getalidnsdomaingroups" title="GetAlidnsDomainGroups"><span class="symbol function"></span>GetAlidnsDomainGroups</a></li>
+    <li><a href="getalidnsdomains" title="GetAlidnsDomains"><span class="symbol function"></span>GetAlidnsDomains</a></li>
+    <li><a href="getalidnsinstances" title="GetAlidnsInstances"><span class="symbol function"></span>GetAlidnsInstances</a></li>
     <li><a href="getalidnsrecords" title="GetAlidnsRecords"><span class="symbol function"></span>GetAlidnsRecords</a></li>
     <li><a href="getdomaingroups" title="GetDomainGroups"><span class="symbol function"></span>GetDomainGroups</a></li>
     <li><a href="getdomainrecords" title="GetDomainRecords"><span class="symbol function"></span>GetDomainRecords</a></li>
@@ -46,7 +50,7 @@ Explore the resources and functions of the dns module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.15.0</dd>
+	<dd>2.16.0</dd>
 </dl>
 
 

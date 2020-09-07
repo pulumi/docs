@@ -35,22 +35,9 @@ class MyStack : Stack
         var instances = Output.Create(AliCloud.Ecs.GetInstances.InvokeAsync());
         var template = new AliCloud.Ecs.LaunchTemplate("template", new AliCloud.Ecs.LaunchTemplateArgs
         {
-            DataDisks = 
-            {
-                new AliCloud.Ecs.Inputs.LaunchTemplateDataDiskArgs
-                {
-                    Description = "test1",
-                    Name = "disk1",
-                },
-                new AliCloud.Ecs.Inputs.LaunchTemplateDataDiskArgs
-                {
-                    Description = "test2",
-                    Name = "disk2",
-                },
-            },
             Description = "test1",
-            HostName = "tf-test-host",
             ImageId = images.Apply(images => images.Images[0].Id),
+            HostName = "tf-test-host",
             InstanceChargeType = "PrePaid",
             InstanceName = "tf-instance-name",
             InstanceType = instances.Apply(instances => instances.Instances[0].InstanceType),
@@ -59,34 +46,47 @@ class MyStack : Stack
             InternetMaxBandwidthOut = 0,
             IoOptimized = "none",
             KeyPairName = "test-key-pair",
-            NetworkInterfaces = new AliCloud.Ecs.Inputs.LaunchTemplateNetworkInterfacesArgs
-            {
-                Description = "hello1",
-                Name = "eth0",
-                PrimaryIp = "10.0.0.2",
-                SecurityGroupId = "xxxx",
-                VswitchId = "xxxxxxx",
-            },
-            NetworkType = "vpc",
             RamRoleName = "xxxxx",
-            ResourceGroupId = "rg-zkdfjahg9zxncv0",
+            NetworkType = "vpc",
             SecurityEnhancementStrategy = "Active",
-            SecurityGroupId = "sg-zxcvj0lasdf102350asdf9a",
             SpotPriceLimit = 5,
             SpotStrategy = "SpotWithPriceLimit",
+            SecurityGroupId = "sg-zxcvj0lasdf102350asdf9a",
             SystemDiskCategory = "cloud_ssd",
             SystemDiskDescription = "test disk",
             SystemDiskName = "hello",
             SystemDiskSize = 40,
+            ResourceGroupId = "rg-zkdfjahg9zxncv0",
+            Userdata = "xxxxxxxxxxxxxx",
+            VswitchId = "sw-ljkngaksdjfj0nnasdf",
+            VpcId = "vpc-asdfnbg0as8dfk1nb2",
+            ZoneId = "beijing-a",
             Tags = 
             {
                 { "tag1", "hello" },
                 { "tag2", "world" },
             },
-            Userdata = "xxxxxxxxxxxxxx",
-            VpcId = "vpc-asdfnbg0as8dfk1nb2",
-            VswitchId = "sw-ljkngaksdjfj0nnasdf",
-            ZoneId = "beijing-a",
+            NetworkInterfaces = new AliCloud.Ecs.Inputs.LaunchTemplateNetworkInterfacesArgs
+            {
+                Name = "eth0",
+                Description = "hello1",
+                PrimaryIp = "10.0.0.2",
+                SecurityGroupId = "xxxx",
+                VswitchId = "xxxxxxx",
+            },
+            DataDisks = 
+            {
+                new AliCloud.Ecs.Inputs.LaunchTemplateDataDiskArgs
+                {
+                    Name = "disk1",
+                    Description = "test1",
+                },
+                new AliCloud.Ecs.Inputs.LaunchTemplateDataDiskArgs
+                {
+                    Name = "disk2",
+                    Description = "test2",
+                },
+            },
         });
     }
 
@@ -118,53 +118,53 @@ func main() {
 			return err
 		}
 		_, err = ecs.NewLaunchTemplate(ctx, "template", &ecs.LaunchTemplateArgs{
-			DataDisks: ecs.LaunchTemplateDataDiskArray{
-				&ecs.LaunchTemplateDataDiskArgs{
-					Description: pulumi.String("test1"),
-					Name:        pulumi.String("disk1"),
-				},
-				&ecs.LaunchTemplateDataDiskArgs{
-					Description: pulumi.String("test2"),
-					Name:        pulumi.String("disk2"),
-				},
-			},
-			Description:             pulumi.String("test1"),
-			HostName:                pulumi.String("tf-test-host"),
-			ImageId:                 pulumi.String(images.Images[0].Id),
-			InstanceChargeType:      pulumi.String("PrePaid"),
-			InstanceName:            pulumi.String("tf-instance-name"),
-			InstanceType:            pulumi.String(instances.Instances[0].InstanceType),
-			InternetChargeType:      pulumi.String("PayByBandwidth"),
-			InternetMaxBandwidthIn:  pulumi.Int(5),
-			InternetMaxBandwidthOut: pulumi.Int(0),
-			IoOptimized:             pulumi.String("none"),
-			KeyPairName:             pulumi.String("test-key-pair"),
-			NetworkInterfaces: &ecs.LaunchTemplateNetworkInterfacesArgs{
-				Description:     pulumi.String("hello1"),
-				Name:            pulumi.String("eth0"),
-				PrimaryIp:       pulumi.String("10.0.0.2"),
-				SecurityGroupId: pulumi.String("xxxx"),
-				VswitchId:       pulumi.String("xxxxxxx"),
-			},
-			NetworkType:                 pulumi.String("vpc"),
+			Description:                 pulumi.String("test1"),
+			ImageId:                     pulumi.String(images.Images[0].Id),
+			HostName:                    pulumi.String("tf-test-host"),
+			InstanceChargeType:          pulumi.String("PrePaid"),
+			InstanceName:                pulumi.String("tf-instance-name"),
+			InstanceType:                pulumi.String(instances.Instances[0].InstanceType),
+			InternetChargeType:          pulumi.String("PayByBandwidth"),
+			InternetMaxBandwidthIn:      pulumi.Int(5),
+			InternetMaxBandwidthOut:     pulumi.Int(0),
+			IoOptimized:                 pulumi.String("none"),
+			KeyPairName:                 pulumi.String("test-key-pair"),
 			RamRoleName:                 pulumi.String("xxxxx"),
-			ResourceGroupId:             pulumi.String("rg-zkdfjahg9zxncv0"),
+			NetworkType:                 pulumi.String("vpc"),
 			SecurityEnhancementStrategy: pulumi.String("Active"),
-			SecurityGroupId:             pulumi.String("sg-zxcvj0lasdf102350asdf9a"),
 			SpotPriceLimit:              pulumi.Float64(5),
 			SpotStrategy:                pulumi.String("SpotWithPriceLimit"),
+			SecurityGroupId:             pulumi.String("sg-zxcvj0lasdf102350asdf9a"),
 			SystemDiskCategory:          pulumi.String("cloud_ssd"),
 			SystemDiskDescription:       pulumi.String("test disk"),
 			SystemDiskName:              pulumi.String("hello"),
 			SystemDiskSize:              pulumi.Int(40),
+			ResourceGroupId:             pulumi.String("rg-zkdfjahg9zxncv0"),
+			Userdata:                    pulumi.String("xxxxxxxxxxxxxx"),
+			VswitchId:                   pulumi.String("sw-ljkngaksdjfj0nnasdf"),
+			VpcId:                       pulumi.String("vpc-asdfnbg0as8dfk1nb2"),
+			ZoneId:                      pulumi.String("beijing-a"),
 			Tags: pulumi.StringMap{
 				"tag1": pulumi.String("hello"),
 				"tag2": pulumi.String("world"),
 			},
-			Userdata:  pulumi.String("xxxxxxxxxxxxxx"),
-			VpcId:     pulumi.String("vpc-asdfnbg0as8dfk1nb2"),
-			VswitchId: pulumi.String("sw-ljkngaksdjfj0nnasdf"),
-			ZoneId:    pulumi.String("beijing-a"),
+			NetworkInterfaces: &ecs.LaunchTemplateNetworkInterfacesArgs{
+				Name:            pulumi.String("eth0"),
+				Description:     pulumi.String("hello1"),
+				PrimaryIp:       pulumi.String("10.0.0.2"),
+				SecurityGroupId: pulumi.String("xxxx"),
+				VswitchId:       pulumi.String("xxxxxxx"),
+			},
+			DataDisks: ecs.LaunchTemplateDataDiskArray{
+				&ecs.LaunchTemplateDataDiskArgs{
+					Name:        pulumi.String("disk1"),
+					Description: pulumi.String("test1"),
+				},
+				&ecs.LaunchTemplateDataDiskArgs{
+					Name:        pulumi.String("disk2"),
+					Description: pulumi.String("test2"),
+				},
+			},
 		})
 		if err != nil {
 			return err
@@ -184,19 +184,9 @@ import pulumi_alicloud as alicloud
 images = alicloud.ecs.get_images(owners="system")
 instances = alicloud.ecs.get_instances()
 template = alicloud.ecs.LaunchTemplate("template",
-    data_disks=[
-        alicloud.ecs.LaunchTemplateDataDiskArgs(
-            description="test1",
-            name="disk1",
-        ),
-        alicloud.ecs.LaunchTemplateDataDiskArgs(
-            description="test2",
-            name="disk2",
-        ),
-    ],
     description="test1",
-    host_name="tf-test-host",
     image_id=images.images[0].id,
+    host_name="tf-test-host",
     instance_charge_type="PrePaid",
     instance_name="tf-instance-name",
     instance_type=instances.instances[0].instance_type,
@@ -205,32 +195,42 @@ template = alicloud.ecs.LaunchTemplate("template",
     internet_max_bandwidth_out=0,
     io_optimized="none",
     key_pair_name="test-key-pair",
-    network_interfaces=alicloud.ecs.LaunchTemplateNetworkInterfacesArgs(
-        description="hello1",
-        name="eth0",
-        primary_ip="10.0.0.2",
-        security_group_id="xxxx",
-        vswitch_id="xxxxxxx",
-    ),
-    network_type="vpc",
     ram_role_name="xxxxx",
-    resource_group_id="rg-zkdfjahg9zxncv0",
+    network_type="vpc",
     security_enhancement_strategy="Active",
-    security_group_id="sg-zxcvj0lasdf102350asdf9a",
     spot_price_limit=5,
     spot_strategy="SpotWithPriceLimit",
+    security_group_id="sg-zxcvj0lasdf102350asdf9a",
     system_disk_category="cloud_ssd",
     system_disk_description="test disk",
     system_disk_name="hello",
     system_disk_size=40,
+    resource_group_id="rg-zkdfjahg9zxncv0",
+    userdata="xxxxxxxxxxxxxx",
+    vswitch_id="sw-ljkngaksdjfj0nnasdf",
+    vpc_id="vpc-asdfnbg0as8dfk1nb2",
+    zone_id="beijing-a",
     tags={
         "tag1": "hello",
         "tag2": "world",
     },
-    userdata="xxxxxxxxxxxxxx",
-    vpc_id="vpc-asdfnbg0as8dfk1nb2",
-    vswitch_id="sw-ljkngaksdjfj0nnasdf",
-    zone_id="beijing-a")
+    network_interfaces=alicloud.ecs.LaunchTemplateNetworkInterfacesArgs(
+        name="eth0",
+        description="hello1",
+        primary_ip="10.0.0.2",
+        security_group_id="xxxx",
+        vswitch_id="xxxxxxx",
+    ),
+    data_disks=[
+        alicloud.ecs.LaunchTemplateDataDiskArgs(
+            name="disk1",
+            description="test1",
+        ),
+        alicloud.ecs.LaunchTemplateDataDiskArgs(
+            name="disk2",
+            description="test2",
+        ),
+    ])
 ```
 
 {{% /example %}}
@@ -241,58 +241,58 @@ template = alicloud.ecs.LaunchTemplate("template",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const images = pulumi.output(alicloud.ecs.getImages({
+const images = alicloud.ecs.getImages({
     owners: "system",
-}, { async: true }));
-const instances = pulumi.output(alicloud.ecs.getInstances({ async: true }));
+});
+const instances = alicloud.ecs.getInstances({});
 const template = new alicloud.ecs.LaunchTemplate("template", {
-    dataDisks: [
-        {
-            description: "test1",
-            name: "disk1",
-        },
-        {
-            description: "test2",
-            name: "disk2",
-        },
-    ],
     description: "test1",
+    imageId: images.then(images => images.images[0].id),
     hostName: "tf-test-host",
-    imageId: images.images[0].id,
     instanceChargeType: "PrePaid",
     instanceName: "tf-instance-name",
-    instanceType: instances.instances[0].instanceType,
+    instanceType: instances.then(instances => instances.instances[0].instanceType),
     internetChargeType: "PayByBandwidth",
     internetMaxBandwidthIn: 5,
     internetMaxBandwidthOut: 0,
     ioOptimized: "none",
     keyPairName: "test-key-pair",
-    networkInterfaces: {
-        description: "hello1",
-        name: "eth0",
-        primaryIp: "10.0.0.2",
-        securityGroupId: "xxxx",
-        vswitchId: "xxxxxxx",
-    },
-    networkType: "vpc",
     ramRoleName: "xxxxx",
-    resourceGroupId: "rg-zkdfjahg9zxncv0",
+    networkType: "vpc",
     securityEnhancementStrategy: "Active",
-    securityGroupId: "sg-zxcvj0lasdf102350asdf9a",
     spotPriceLimit: 5,
     spotStrategy: "SpotWithPriceLimit",
+    securityGroupId: "sg-zxcvj0lasdf102350asdf9a",
     systemDiskCategory: "cloud_ssd",
     systemDiskDescription: "test disk",
     systemDiskName: "hello",
     systemDiskSize: 40,
+    resourceGroupId: "rg-zkdfjahg9zxncv0",
+    userdata: "xxxxxxxxxxxxxx",
+    vswitchId: "sw-ljkngaksdjfj0nnasdf",
+    vpcId: "vpc-asdfnbg0as8dfk1nb2",
+    zoneId: "beijing-a",
     tags: {
         tag1: "hello",
         tag2: "world",
     },
-    userdata: "xxxxxxxxxxxxxx",
-    vpcId: "vpc-asdfnbg0as8dfk1nb2",
-    vswitchId: "sw-ljkngaksdjfj0nnasdf",
-    zoneId: "beijing-a",
+    networkInterfaces: {
+        name: "eth0",
+        description: "hello1",
+        primaryIp: "10.0.0.2",
+        securityGroupId: "xxxx",
+        vswitchId: "xxxxxxx",
+    },
+    dataDisks: [
+        {
+            name: "disk1",
+            description: "test1",
+        },
+        {
+            name: "disk2",
+            description: "test2",
+        },
+    ],
 });
 ```
 

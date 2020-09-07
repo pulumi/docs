@@ -43,13 +43,14 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/21",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/21",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var defaultLoadBalancer = new AliCloud.Slb.LoadBalancer("defaultLoadBalancer", new AliCloud.Slb.LoadBalancerArgs
         {
             Specification = "slb.s2.small",
+            VswitchId = defaultSwitch.Id,
             Tags = 
             {
                 { "tag_a", 1 },
@@ -63,7 +64,6 @@ class MyStack : Stack
                 { "tag_i", 9 },
                 { "tag_j", 10 },
             },
-            VswitchId = defaultSwitch.Id,
         });
     }
 
@@ -99,15 +99,16 @@ func main() {
 			return err
 		}
 		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			CidrBlock:        pulumi.String("172.16.0.0/21"),
 			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/21"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = slb.NewLoadBalancer(ctx, "defaultLoadBalancer", &slb.LoadBalancerArgs{
 			Specification: pulumi.String("slb.s2.small"),
+			VswitchId:     defaultSwitch.ID(),
 			Tags: pulumi.Float64Map{
 				"tag_a": pulumi.Float64(1),
 				"tag_b": pulumi.Float64(2),
@@ -120,7 +121,6 @@ func main() {
 				"tag_i": pulumi.Float64(9),
 				"tag_j": pulumi.Float64(10),
 			},
-			VswitchId: defaultSwitch.ID(),
 		})
 		if err != nil {
 			return err
@@ -144,11 +144,12 @@ if name is None:
 default_zones = alicloud.get_zones(available_resource_creation="VSwitch")
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/12")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0].id,
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/21",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 default_load_balancer = alicloud.slb.LoadBalancer("defaultLoadBalancer",
     specification="slb.s2.small",
+    vswitch_id=default_switch.id,
     tags={
         "tag_a": 1,
         "tag_b": 2,
@@ -160,8 +161,7 @@ default_load_balancer = alicloud.slb.LoadBalancer("defaultLoadBalancer",
         "tag_h": 8,
         "tag_i": 9,
         "tag_j": 10,
-    },
-    vswitch_id=default_switch.id)
+    })
 ```
 
 {{% /example %}}
@@ -174,20 +174,18 @@ import * as alicloud from "@pulumi/alicloud";
 
 const config = new pulumi.Config();
 const name = config.get("name") || "terraformtestslbconfig";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/12",
 });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/21",
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/12"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
+    cidrBlock: "172.16.0.0/21",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const defaultLoadBalancer = new alicloud.slb.LoadBalancer("default", {
+const defaultLoadBalancer = new alicloud.slb.LoadBalancer("defaultLoadBalancer", {
     specification: "slb.s2.small",
+    vswitchId: defaultSwitch.id,
     tags: {
         tag_a: 1,
         tag_b: 2,
@@ -200,7 +198,6 @@ const defaultLoadBalancer = new alicloud.slb.LoadBalancer("default", {
         tag_i: 9,
         tag_j: 10,
     },
-    vswitchId: defaultSwitch.id,
 });
 ```
 
