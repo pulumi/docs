@@ -351,7 +351,7 @@ The site_domain is the URL of the CMS and the base_url is the URL of the OAuth S
 
 ## In the End
 
-Congratulations on building both CMS web application, the OAuth client-server, and deploy the infrastructure! Now if everything works perfectly, you would see the "Login with Github" button shown and click it would redirect to the Github login pages.
+Congratulations on building both CMS web application, the OAuth client-server, and also deploying the infrastructure! Now if everything works perfectly, you should see the **Login with Github** button and clicking it would redirect to the GitHub login page.
 
 ![OAuth Client Server](./oauth-client-server.jpg)
 
