@@ -343,7 +343,7 @@ backend:
   # This site_domain and base_url are sudo domains
   # Replace site_domain with targetDomain pulumi stack configuration inside cms/infrastructure folder
   # Replace base_url with targetDomain pulumi stack configuration inside cms-oauth/infrastructure folder
-  site_domain: https://some-cms-domain.pulumi-demos.com
+  site_domain: https://some-cms-domain.com
   base_url: https://some-oauth-domain.com
 ```
 
