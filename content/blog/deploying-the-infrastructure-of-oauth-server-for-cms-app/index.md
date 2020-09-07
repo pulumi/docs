@@ -368,4 +368,4 @@ Special Thanks to:
 - Tony Alves @talves for providing [template](https://github.com/ADARTA/netlify-cms-react-example) to separate CMS as a stand-alone React App
 - Igor Kuznetsov @igk1972 for providing [go code example](https://github.com/igk1972/netlify-cms-oauth-provider-go) for providing the OAuth Client-Server source code
 - Paul Stack @stack72 for developing [Pulumi example of deploying Dockerized App using ECS Fargate](https://github.com/pulumi/examples/tree/master/aws-ts-hello-fargate) and [Pulumi example of deploying the static website on AWS](https://github.com/pulumi/examples/tree/master/aws-ts-static-website)
-- Every Pulumi folks have ever helped me out about this~
+- Everyone at Pulumi who helped me out with this
