@@ -355,7 +355,7 @@ Congratulations on building both CMS web application, the OAuth client-server, a
 
 ![OAuth Client Server](./oauth-client-server.jpg)
 
-People with correct access could now use and see the CMS.
+People with correct access can now use the CMS.
 
 ![CMS](./cms.jpg)
 
