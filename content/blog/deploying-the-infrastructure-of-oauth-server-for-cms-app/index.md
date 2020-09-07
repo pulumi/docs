@@ -257,7 +257,7 @@ The Authorization callback URL is `https://{{the domain of your OAuth App}}/call
     )
 ```
 
-If you use different repositories, like Bitbucket and Gitlab, you can specify callback URL to `https://{{the domain of your OAuth App}}/callback/{{ backend name }}` and relace `{{backend name}}` with `bitbucket` or `github` depending upon the repository.
+If you use different repositories, like Bitbucket and Gitlab, you can specify callback URL to `https://{{the domain of your OAuth App}}/callback/{{ backend name }}` and replace `{{backend name}}` with `bitbucket` or `github` depending upon the repository.
 
 We can set the github key and secret in the stack configuration.
 
