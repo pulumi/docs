@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/mongodbatlas | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/mongodbatlas package."
-git_sha: "acfff6b279f7f37dea66fcfff61b180b1c326db7"
+git_sha: "575beaa12cffd71c827d380553d0736d1748888c"
 block_external_search_index: true
 ---
 
@@ -28,7 +28,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="privateKey" data-link-title="privateKey">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/config/vars.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/575beaa12cffd71c827d380553d0736d1748888c/sdk/nodejs/config/vars.ts#L12">
         let <strong>privateKey</strong>
     </a>
 </h3>
@@ -38,7 +38,7 @@ block_external_search_index: true
 MongoDB Atlas Programmatic Private Key
 
 <h3 class="pdoc-module-header" id="publicKey" data-link-title="publicKey">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/acfff6b279f7f37dea66fcfff61b180b1c326db7/sdk/nodejs/config/vars.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/575beaa12cffd71c827d380553d0736d1748888c/sdk/nodejs/config/vars.ts#L16">
         let <strong>publicKey</strong>
     </a>
 </h3>

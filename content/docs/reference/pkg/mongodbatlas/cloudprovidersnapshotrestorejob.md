@@ -156,11 +156,11 @@ test_cloud_provider_snapshot_restore_job = mongodbatlas.CloudProviderSnapshotRes
     project_id=test_cloud_provider_snapshot.project_id,
     cluster_name=test_cloud_provider_snapshot.cluster_name,
     snapshot_id=test_cloud_provider_snapshot.snapshot_id,
-    delivery_type={
-        "automated": True,
-        "target_cluster_name": "MyCluster",
-        "target_project_id": "5cf5a45a9ccf6400e60981b6",
-    },
+    delivery_type=mongodbatlas.CloudProviderSnapshotRestoreJobDeliveryTypeArgs(
+        automated=True,
+        target_cluster_name="MyCluster",
+        target_project_id="5cf5a45a9ccf6400e60981b6",
+    ),
     opts=ResourceOptions(depends_on=["mongodbatlas_cloud_provider_snapshot.test"]))
 ```
 
@@ -323,9 +323,9 @@ test_cloud_provider_snapshot_restore_job = mongodbatlas.CloudProviderSnapshotRes
     project_id=test_cloud_provider_snapshot.project_id,
     cluster_name=test_cloud_provider_snapshot.cluster_name,
     snapshot_id=test_cloud_provider_snapshot.snapshot_id,
-    delivery_type={
-        "download": True,
-    })
+    delivery_type=mongodbatlas.CloudProviderSnapshotRestoreJobDeliveryTypeArgs(
+        download=True,
+    ))
 ```
 
 {{% /example %}}
@@ -376,7 +376,7 @@ const testCloudProviderSnapshotRestoreJob = new mongodbatlas.CloudProviderSnapsh
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.CloudProviderSnapshotRestoreJob">CloudProviderSnapshotRestoreJob</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_name=None<span class="p">, </span>delivery_type=None<span class="p">, </span>project_id=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.CloudProviderSnapshotRestoreJob">CloudProviderSnapshotRestoreJob</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delivery_type</span><span class="p">:</span> <span class="nx">Optional[CloudProviderSnapshotRestoreJobDeliveryTypeArgs]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -718,7 +718,7 @@ The CloudProviderSnapshotRestoreJob resource accepts the following [input]({{< r
 <a href="#delivery_type_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudprovidersnapshotrestorejobdeliverytype">Dict[Cloud<wbr>Provider<wbr>Snapshot<wbr>Restore<wbr>Job<wbr>Delivery<wbr>Type]</a></span>
+        <span class="property-type"><a href="#cloudprovidersnapshotrestorejobdeliverytype">Cloud<wbr>Provider<wbr>Snapshot<wbr>Restore<wbr>Job<wbr>Delivery<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Type of restore job to create. Possible values are: **download** or **automated**, only one must be set it in ``true``.
 {{% /md %}}</dd>
@@ -1195,7 +1195,8 @@ Get an existing CloudProviderSnapshotRestoreJob resource's state with the given 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cancelled=None<span class="p">, </span>cluster_name=None<span class="p">, </span>created_at=None<span class="p">, </span>delivery_type=None<span class="p">, </span>delivery_urls=None<span class="p">, </span>expired=None<span class="p">, </span>expires_at=None<span class="p">, </span>finished_at=None<span class="p">, </span>project_id=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>snapshot_restore_job_id=None<span class="p">, </span>timestamp=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cancelled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delivery_type</span><span class="p">:</span> <span class="nx">Optional[CloudProviderSnapshotRestoreJobDeliveryTypeArgs]</span> = None<span class="p">, </span><span class="nx">delivery_urls</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">expired</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expires_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">finished_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_restore_job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CloudProviderSnapshotRestoreJob</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1203,7 +1204,7 @@ Get an existing CloudProviderSnapshotRestoreJob resource's state with the given 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.CloudProviderSnapshotRestoreJob.html">CloudProviderSnapshotRestoreJob</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas..CloudProviderSnapshotRestoreJobState.html">CloudProviderSnapshotRestoreJobState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.CloudProviderSnapshotRestoreJob.html">CloudProviderSnapshotRestoreJob</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas..CloudProviderSnapshotRestoreJobState.html">CloudProviderSnapshotRestoreJobState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1765,7 +1766,7 @@ The following state arguments are supported:
 <a href="#state_delivery_type_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudprovidersnapshotrestorejobdeliverytype">Dict[Cloud<wbr>Provider<wbr>Snapshot<wbr>Restore<wbr>Job<wbr>Delivery<wbr>Type]</a></span>
+        <span class="property-type"><a href="#cloudprovidersnapshotrestorejobdeliverytype">Cloud<wbr>Provider<wbr>Snapshot<wbr>Restore<wbr>Job<wbr>Delivery<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Type of restore job to create. Possible values are: **download** or **automated**, only one must be set it in ``true``.
 {{% /md %}}</dd>
@@ -2254,6 +2255,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mongodbatlas).</dd>
+	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
 </dl>
 

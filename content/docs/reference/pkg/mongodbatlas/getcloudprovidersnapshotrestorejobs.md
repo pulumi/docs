@@ -118,11 +118,11 @@ test_cloud_provider_snapshot = mongodbatlas.CloudProviderSnapshot("testCloudProv
     retention_in_days=1)
 test_cloud_provider_snapshot_restore_job = mongodbatlas.CloudProviderSnapshotRestoreJob("testCloudProviderSnapshotRestoreJob",
     cluster_name="MyCluster",
-    delivery_type={
-        "automated": True,
-        "target_cluster_name": "MyCluster",
-        "target_project_id": "5cf5a45a9ccf6400e60981b6",
-    },
+    delivery_type=mongodbatlas.CloudProviderSnapshotRestoreJobDeliveryTypeArgs(
+        automated=True,
+        target_cluster_name="MyCluster",
+        target_project_id="5cf5a45a9ccf6400e60981b6",
+    ),
     project_id="5cf5a45a9ccf6400e60981b6",
     snapshot_id=test_cloud_provider_snapshot.id)
 test_cloud_provider_snapshot_restore_jobs = pulumi.Output.all(test_cloud_provider_snapshot_restore_job.cluster_name, test_cloud_provider_snapshot_restore_job.project_id).apply(lambda cluster_name, project_id: mongodbatlas.get_cloud_provider_snapshot_restore_jobs(cluster_name=cluster_name,
@@ -179,7 +179,7 @@ const testCloudProviderSnapshotRestoreJobs = pulumi.all([testCloudProviderSnapsh
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_cloud_provider_snapshot_restore_jobs(</span>cluster_name=None<span class="p">, </span>items_per_page=None<span class="p">, </span>page_num=None<span class="p">, </span>project_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cloud_provider_snapshot_restore_jobs(</span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">items_per_page</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">page_num</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCloudProviderSnapshotRestoreJobsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1444,6 +1444,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mongodbatlas).</dd>
+	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
 </dl>
 
