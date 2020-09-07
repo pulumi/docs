@@ -344,7 +344,7 @@ backend:
   # Replace site_domain with targetDomain pulumi stack configuration inside cms/infrastructure folder
   # Replace base_url with targetDomain pulumi stack configuration inside cms-oauth/infrastructure folder
   site_domain: https://some-cms-domain.pulumi-demos.com
-  base_url: https://some-oauth-domain.pulumi-demos.com
+  base_url: https://some-oauth-domain.com
 ```
 
 The site_domain is the URL of the CMS and the base_url is the URL of the OAuth Server . They should be the same as the `targetDomain` variable we set in the stack configuration of both CMS and OAuth Server.
