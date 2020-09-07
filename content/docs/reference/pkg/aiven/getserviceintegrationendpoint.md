@@ -101,7 +101,7 @@ const myendpoint = aiven.getServiceIntegrationEndpoint({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_service_integration_endpoint(</span>datadog_user_config=None<span class="p">, </span>endpoint_config=None<span class="p">, </span>endpoint_name=None<span class="p">, </span>endpoint_type=None<span class="p">, </span>external_elasticsearch_logs_user_config=None<span class="p">, </span>project=None<span class="p">, </span>prometheus_user_config=None<span class="p">, </span>rsyslog_user_config=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service_integration_endpoint(</span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointDatadogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointPrometheusUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointRsyslogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceIntegrationEndpointResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -415,7 +415,7 @@ The following arguments are supported:
 <a href="#datadog_user_config_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -425,7 +425,7 @@ The following arguments are supported:
 <a href="#endpoint_config_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -445,7 +445,7 @@ The following arguments are supported:
 <a href="#external_elasticsearch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointexternalelasticsearchlogsuserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalelasticsearchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -455,7 +455,7 @@ The following arguments are supported:
 <a href="#prometheus_user_config_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointprometheususerconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointprometheususerconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -465,7 +465,7 @@ The following arguments are supported:
 <a href="#rsyslog_user_config_python" style="color: inherit; text-decoration: inherit;">rsyslog_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointrsysloguserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#endpoint_config_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -830,7 +830,7 @@ The following output properties are available:
 <a href="#datadog_user_config_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -850,7 +850,7 @@ The following output properties are available:
 <a href="#external_elasticsearch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointexternalelasticsearchlogsuserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalelasticsearchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -860,7 +860,7 @@ The following output properties are available:
 <a href="#prometheus_user_config_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointprometheususerconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointprometheususerconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -870,7 +870,7 @@ The following output properties are available:
 <a href="#rsyslog_user_config_python" style="color: inherit; text-decoration: inherit;">rsyslog_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointrsysloguserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1048,8 +1048,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datadogapikey_python">
-<a href="#datadogapikey_python" style="color: inherit; text-decoration: inherit;">datadog<wbr>Api<wbr>Key</a>
+        <span id="datadog_api_key_python">
+<a href="#datadog_api_key_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>api_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1058,8 +1058,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disableconsumerstats_python">
-<a href="#disableconsumerstats_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Consumer<wbr>Stats</a>
+        <span id="disable_consumer_stats_python">
+<a href="#disable_consumer_stats_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>consumer_<wbr>stats</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1068,8 +1068,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxpartitioncontexts_python">
-<a href="#maxpartitioncontexts_python" style="color: inherit; text-decoration: inherit;">max<wbr>Partition<wbr>Contexts</a>
+        <span id="max_partition_contexts_python">
+<a href="#max_partition_contexts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>partition_<wbr>contexts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1294,8 +1294,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="indexdaysmax_python">
-<a href="#indexdaysmax_python" style="color: inherit; text-decoration: inherit;">index<wbr>Days<wbr>Max</a>
+        <span id="index_days_max_python">
+<a href="#index_days_max_python" style="color: inherit; text-decoration: inherit;">index_<wbr>days_<wbr>max</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1304,8 +1304,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="indexprefix_python">
-<a href="#indexprefix_python" style="color: inherit; text-decoration: inherit;">index<wbr>Prefix</a>
+        <span id="index_prefix_python">
+<a href="#index_prefix_python" style="color: inherit; text-decoration: inherit;">index_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1440,8 +1440,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="basicauthpassword_python">
-<a href="#basicauthpassword_python" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Password</a>
+        <span id="basic_auth_password_python">
+<a href="#basic_auth_password_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1450,8 +1450,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="basicauthusername_python">
-<a href="#basicauthusername_python" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Username</a>
+        <span id="basic_auth_username_python">
+<a href="#basic_auth_username_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>username</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -22,7 +22,7 @@ meta_desc: "Explore the Redis resource of the Aiven package, including examples,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.Redis">Redis</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cloud_name=None<span class="p">, </span>maintenance_window_dow=None<span class="p">, </span>maintenance_window_time=None<span class="p">, </span>plan=None<span class="p">, </span>project=None<span class="p">, </span>project_vpc_id=None<span class="p">, </span>redis=None<span class="p">, </span>redis_user_config=None<span class="p">, </span>service_integrations=None<span class="p">, </span>service_name=None<span class="p">, </span>termination_protection=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.Redis">Redis</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redis</span><span class="p">:</span> <span class="nx">Optional[RedisRedisArgs]</span> = None<span class="p">, </span><span class="nx">redis_user_config</span><span class="p">:</span> <span class="nx">Optional[RedisRedisUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[List[RedisServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -661,7 +661,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#redis_python" style="color: inherit; text-decoration: inherit;">redis</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redisredis">Dict[Redis<wbr>Redis]</a></span>
+        <span class="property-type"><a href="#redisredis">Redis<wbr>Redis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redis server provided values
 {{% /md %}}</dd>
@@ -672,7 +672,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#redis_user_config_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redisredisuserconfig">Dict[Redis<wbr>Redis<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#redisredisuserconfig">Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redis user configurable settings
 {{% /md %}}</dd>
@@ -683,7 +683,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redisserviceintegration">List[Redis<wbr>Service<wbr>Integration]</a></span>
+        <span class="property-type"><a href="#redisserviceintegration">List[Redis<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd>
@@ -1149,7 +1149,8 @@ Get an existing Redis resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cloud_name=None<span class="p">, </span>components=None<span class="p">, </span>maintenance_window_dow=None<span class="p">, </span>maintenance_window_time=None<span class="p">, </span>plan=None<span class="p">, </span>project=None<span class="p">, </span>project_vpc_id=None<span class="p">, </span>redis=None<span class="p">, </span>redis_user_config=None<span class="p">, </span>service_host=None<span class="p">, </span>service_integrations=None<span class="p">, </span>service_name=None<span class="p">, </span>service_password=None<span class="p">, </span>service_port=None<span class="p">, </span>service_type=None<span class="p">, </span>service_uri=None<span class="p">, </span>service_username=None<span class="p">, </span>state=None<span class="p">, </span>termination_protection=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[List[RedisComponentArgs]]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redis</span><span class="p">:</span> <span class="nx">Optional[RedisRedisArgs]</span> = None<span class="p">, </span><span class="nx">redis_user_config</span><span class="p">:</span> <span class="nx">Optional[RedisRedisUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[List[RedisServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Redis</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1157,7 +1158,7 @@ Get an existing Redis resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Redis.html">Redis</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven..RedisState.html">RedisState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Redis.html">Redis</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven..RedisState.html">RedisState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1928,7 +1929,7 @@ The following state arguments are supported:
 <a href="#state_components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rediscomponent">List[Redis<wbr>Component]</a></span>
+        <span class="property-type"><a href="#rediscomponent">List[Redis<wbr>Component<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd>
@@ -1994,7 +1995,7 @@ The following state arguments are supported:
 <a href="#state_redis_python" style="color: inherit; text-decoration: inherit;">redis</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redisredis">Dict[Redis<wbr>Redis]</a></span>
+        <span class="property-type"><a href="#redisredis">Redis<wbr>Redis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redis server provided values
 {{% /md %}}</dd>
@@ -2005,7 +2006,7 @@ The following state arguments are supported:
 <a href="#state_redis_user_config_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redisredisuserconfig">Dict[Redis<wbr>Redis<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#redisredisuserconfig">Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redis user configurable settings
 {{% /md %}}</dd>
@@ -2027,7 +2028,7 @@ The following state arguments are supported:
 <a href="#state_service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redisserviceintegration">List[Redis<wbr>Service<wbr>Integration]</a></span>
+        <span class="property-type"><a href="#redisserviceintegration">List[Redis<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd>
@@ -2406,8 +2407,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kafkaauthenticationmethod_python">
-<a href="#kafkaauthenticationmethod_python" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Method</a>
+        <span id="kafka_authentication_method_python">
+<a href="#kafka_authentication_method_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2802,8 +2803,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipfilters_python">
-<a href="#ipfilters_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
+        <span id="ip_filters_python">
+<a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2816,44 +2817,34 @@ The following state arguments are supported:
 <a href="#migration_python" style="color: inherit; text-decoration: inherit;">migration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redisredisuserconfigmigration">Dict[Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Migration]</a></span>
+        <span class="property-type"><a href="#redisredisuserconfigmigration">Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateaccess_python">
-<a href="#privateaccess_python" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
+        <span id="private_access_python">
+<a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redisredisuserconfigprivateaccess">Dict[Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access]</a></span>
+        <span class="property-type"><a href="#redisredisuserconfigprivateaccess">Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicaccess_python">
-<a href="#publicaccess_python" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
+        <span id="public_access_python">
+<a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redisredisuserconfigpublicaccess">Dict[Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access]</a></span>
+        <span class="property-type"><a href="#redisredisuserconfigpublicaccess">Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redislfudecaytime_python">
-<a href="#redislfudecaytime_python" style="color: inherit; text-decoration: inherit;">redis<wbr>Lfu<wbr>Decay<wbr>Time</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="redislfulogfactor_python">
-<a href="#redislfulogfactor_python" style="color: inherit; text-decoration: inherit;">redis<wbr>Lfu<wbr>Log<wbr>Factor</a>
+        <span id="redis_lfu_decay_time_python">
+<a href="#redis_lfu_decay_time_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>lfu_<wbr>decay_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2862,8 +2853,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redismaxmemorypolicy_python">
-<a href="#redismaxmemorypolicy_python" style="color: inherit; text-decoration: inherit;">redis<wbr>Maxmemory<wbr>Policy</a>
+        <span id="redis_lfu_log_factor_python">
+<a href="#redis_lfu_log_factor_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>lfu_<wbr>log_<wbr>factor</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2872,8 +2863,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redisnotifykeyspaceevents_python">
-<a href="#redisnotifykeyspaceevents_python" style="color: inherit; text-decoration: inherit;">redis<wbr>Notify<wbr>Keyspace<wbr>Events</a>
+        <span id="redis_maxmemory_policy_python">
+<a href="#redis_maxmemory_policy_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>maxmemory_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2882,8 +2873,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redisssl_python">
-<a href="#redisssl_python" style="color: inherit; text-decoration: inherit;">redis<wbr>Ssl</a>
+        <span id="redis_notify_keyspace_events_python">
+<a href="#redis_notify_keyspace_events_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>notify_<wbr>keyspace_<wbr>events</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2892,8 +2883,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redistimeout_python">
-<a href="#redistimeout_python" style="color: inherit; text-decoration: inherit;">redis<wbr>Timeout</a>
+        <span id="redis_ssl_python">
+<a href="#redis_ssl_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>ssl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redis_timeout_python">
+<a href="#redis_timeout_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

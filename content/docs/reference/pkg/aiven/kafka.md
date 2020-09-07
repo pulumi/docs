@@ -22,7 +22,7 @@ meta_desc: "Explore the Kafka resource of the Aiven package, including examples,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.Kafka">Kafka</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cloud_name=None<span class="p">, </span>default_acl=None<span class="p">, </span>kafka=None<span class="p">, </span>kafka_user_config=None<span class="p">, </span>maintenance_window_dow=None<span class="p">, </span>maintenance_window_time=None<span class="p">, </span>plan=None<span class="p">, </span>project=None<span class="p">, </span>project_vpc_id=None<span class="p">, </span>service_integrations=None<span class="p">, </span>service_name=None<span class="p">, </span>termination_protection=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.Kafka">Kafka</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_acl</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kafka</span><span class="p">:</span> <span class="nx">Optional[KafkaKafkaArgs]</span> = None<span class="p">, </span><span class="nx">kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[KafkaKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[List[KafkaServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -661,7 +661,7 @@ The Kafka resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafka">Dict[Kafka<wbr>Kafka]</a></span>
+        <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka server provided values
 {{% /md %}}</dd>
@@ -672,7 +672,7 @@ The Kafka resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#kafka_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfig">Dict[Kafka<wbr>Kafka<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka user configurable settings
 {{% /md %}}</dd>
@@ -727,7 +727,7 @@ The Kafka resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaserviceintegration">List[Kafka<wbr>Service<wbr>Integration]</a></span>
+        <span class="property-type"><a href="#kafkaserviceintegration">List[Kafka<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd>
@@ -1193,7 +1193,8 @@ Get an existing Kafka resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cloud_name=None<span class="p">, </span>components=None<span class="p">, </span>default_acl=None<span class="p">, </span>kafka=None<span class="p">, </span>kafka_user_config=None<span class="p">, </span>maintenance_window_dow=None<span class="p">, </span>maintenance_window_time=None<span class="p">, </span>plan=None<span class="p">, </span>project=None<span class="p">, </span>project_vpc_id=None<span class="p">, </span>service_host=None<span class="p">, </span>service_integrations=None<span class="p">, </span>service_name=None<span class="p">, </span>service_password=None<span class="p">, </span>service_port=None<span class="p">, </span>service_type=None<span class="p">, </span>service_uri=None<span class="p">, </span>service_username=None<span class="p">, </span>state=None<span class="p">, </span>termination_protection=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[List[KafkaComponentArgs]]</span> = None<span class="p">, </span><span class="nx">default_acl</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kafka</span><span class="p">:</span> <span class="nx">Optional[KafkaKafkaArgs]</span> = None<span class="p">, </span><span class="nx">kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[KafkaKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[List[KafkaServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Kafka</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1201,7 +1202,7 @@ Get an existing Kafka resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Kafka.html">Kafka</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven..KafkaState.html">KafkaState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Kafka.html">Kafka</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven..KafkaState.html">KafkaState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2005,7 +2006,7 @@ The following state arguments are supported:
 <a href="#state_components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkacomponent">List[Kafka<wbr>Component]</a></span>
+        <span class="property-type"><a href="#kafkacomponent">List[Kafka<wbr>Component<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd>
@@ -2027,7 +2028,7 @@ The following state arguments are supported:
 <a href="#state_kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafka">Dict[Kafka<wbr>Kafka]</a></span>
+        <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka server provided values
 {{% /md %}}</dd>
@@ -2038,7 +2039,7 @@ The following state arguments are supported:
 <a href="#state_kafka_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfig">Dict[Kafka<wbr>Kafka<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka user configurable settings
 {{% /md %}}</dd>
@@ -2115,7 +2116,7 @@ The following state arguments are supported:
 <a href="#state_service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaserviceintegration">List[Kafka<wbr>Service<wbr>Integration]</a></span>
+        <span class="property-type"><a href="#kafkaserviceintegration">List[Kafka<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd>
@@ -2494,8 +2495,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kafkaauthenticationmethod_python">
-<a href="#kafkaauthenticationmethod_python" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Method</a>
+        <span id="kafka_authentication_method_python">
+<a href="#kafka_authentication_method_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2760,8 +2761,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connecturi_python">
-<a href="#connecturi_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Uri</a>
+        <span id="connect_uri_python">
+<a href="#connect_uri_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2770,8 +2771,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resturi_python">
-<a href="#resturi_python" style="color: inherit; text-decoration: inherit;">rest<wbr>Uri</a>
+        <span id="rest_uri_python">
+<a href="#rest_uri_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2780,8 +2781,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schemaregistryuri_python">
-<a href="#schemaregistryuri_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry<wbr>Uri</a>
+        <span id="schema_registry_uri_python">
+<a href="#schema_registry_uri_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3196,8 +3197,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customdomain_python">
-<a href="#customdomain_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
+        <span id="custom_domain_python">
+<a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3206,8 +3207,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipfilters_python">
-<a href="#ipfilters_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
+        <span id="ip_filters_python">
+<a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3220,57 +3221,17 @@ The following state arguments are supported:
 <a href="#kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigkafka">Dict[Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka]</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigkafka">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kafkaauthenticationmethods_python">
-<a href="#kafkaauthenticationmethods_python" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Methods</a>
+        <span id="kafka_authentication_methods_python">
+<a href="#kafka_authentication_methods_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigkafkaauthenticationmethods">Dict[Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="kafkaconnectconfig_python">
-<a href="#kafkaconnectconfig_python" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect<wbr>Config</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigkafkaconnectconfig">Dict[Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="kafkarest_python">
-<a href="#kafkarest_python" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="kafkarestconfig_python">
-<a href="#kafkarestconfig_python" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest<wbr>Config</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigkafkarestconfig">Dict[Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="kafkaversion_python">
-<a href="#kafkaversion_python" style="color: inherit; text-decoration: inherit;">kafka<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigkafkaauthenticationmethods">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3286,28 +3247,68 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateaccess_python">
-<a href="#privateaccess_python" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
+        <span id="kafka_connect_config_python">
+<a href="#kafka_connect_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigprivateaccess">Dict[Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access]</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigkafkaconnectconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicaccess_python">
-<a href="#publicaccess_python" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
+        <span id="kafka_rest_python">
+<a href="#kafka_rest_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigpublicaccess">Dict[Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schemaregistry_python">
-<a href="#schemaregistry_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry</a>
+        <span id="kafka_rest_config_python">
+<a href="#kafka_rest_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigkafkarestconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafka_version_python">
+<a href="#kafka_version_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_access_python">
+<a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigprivateaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="public_access_python">
+<a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigpublicaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schema_registry_python">
+<a href="#schema_registry_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4082,8 +4083,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autocreatetopicsenable_python">
-<a href="#autocreatetopicsenable_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Create<wbr>Topics<wbr>Enable</a>
+        <span id="auto_create_topics_enable_python">
+<a href="#auto_create_topics_enable_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>create_<wbr>topics_<wbr>enable</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4092,8 +4093,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="compressiontype_python">
-<a href="#compressiontype_python" style="color: inherit; text-decoration: inherit;">compression<wbr>Type</a>
+        <span id="compression_type_python">
+<a href="#compression_type_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4102,8 +4103,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionsmaxidlems_python">
-<a href="#connectionsmaxidlems_python" style="color: inherit; text-decoration: inherit;">connections<wbr>Max<wbr>Idle<wbr>Ms</a>
+        <span id="connections_max_idle_ms_python">
+<a href="#connections_max_idle_ms_python" style="color: inherit; text-decoration: inherit;">connections_<wbr>max_<wbr>idle_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4112,8 +4113,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultreplicationfactor_python">
-<a href="#defaultreplicationfactor_python" style="color: inherit; text-decoration: inherit;">default<wbr>Replication<wbr>Factor</a>
+        <span id="default_replication_factor_python">
+<a href="#default_replication_factor_python" style="color: inherit; text-decoration: inherit;">default_<wbr>replication_<wbr>factor</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4122,8 +4123,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupmaxsessiontimeoutms_python">
-<a href="#groupmaxsessiontimeoutms_python" style="color: inherit; text-decoration: inherit;">group<wbr>Max<wbr>Session<wbr>Timeout<wbr>Ms</a>
+        <span id="group_max_session_timeout_ms_python">
+<a href="#group_max_session_timeout_ms_python" style="color: inherit; text-decoration: inherit;">group_<wbr>max_<wbr>session_<wbr>timeout_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4132,8 +4133,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupminsessiontimeoutms_python">
-<a href="#groupminsessiontimeoutms_python" style="color: inherit; text-decoration: inherit;">group<wbr>Min<wbr>Session<wbr>Timeout<wbr>Ms</a>
+        <span id="group_min_session_timeout_ms_python">
+<a href="#group_min_session_timeout_ms_python" style="color: inherit; text-decoration: inherit;">group_<wbr>min_<wbr>session_<wbr>timeout_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4142,8 +4143,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logcleanermaxcompactionlagms_python">
-<a href="#logcleanermaxcompactionlagms_python" style="color: inherit; text-decoration: inherit;">log<wbr>Cleaner<wbr>Max<wbr>Compaction<wbr>Lag<wbr>Ms</a>
+        <span id="log_cleaner_max_compaction_lag_ms_python">
+<a href="#log_cleaner_max_compaction_lag_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>cleaner_<wbr>max_<wbr>compaction_<wbr>lag_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4152,8 +4153,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logcleanermincleanableratio_python">
-<a href="#logcleanermincleanableratio_python" style="color: inherit; text-decoration: inherit;">log<wbr>Cleaner<wbr>Min<wbr>Cleanable<wbr>Ratio</a>
+        <span id="log_cleaner_min_cleanable_ratio_python">
+<a href="#log_cleaner_min_cleanable_ratio_python" style="color: inherit; text-decoration: inherit;">log_<wbr>cleaner_<wbr>min_<wbr>cleanable_<wbr>ratio</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4162,8 +4163,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logcleanermincompactionlagms_python">
-<a href="#logcleanermincompactionlagms_python" style="color: inherit; text-decoration: inherit;">log<wbr>Cleaner<wbr>Min<wbr>Compaction<wbr>Lag<wbr>Ms</a>
+        <span id="log_cleaner_min_compaction_lag_ms_python">
+<a href="#log_cleaner_min_compaction_lag_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>cleaner_<wbr>min_<wbr>compaction_<wbr>lag_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4172,8 +4173,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logcleanuppolicy_python">
-<a href="#logcleanuppolicy_python" style="color: inherit; text-decoration: inherit;">log<wbr>Cleanup<wbr>Policy</a>
+        <span id="log_cleanup_policy_python">
+<a href="#log_cleanup_policy_python" style="color: inherit; text-decoration: inherit;">log_<wbr>cleanup_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4182,8 +4183,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logmessagetimestampdifferencemaxms_python">
-<a href="#logmessagetimestampdifferencemaxms_python" style="color: inherit; text-decoration: inherit;">log<wbr>Message<wbr>Timestamp<wbr>Difference<wbr>Max<wbr>Ms</a>
+        <span id="log_message_timestamp_difference_max_ms_python">
+<a href="#log_message_timestamp_difference_max_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>message_<wbr>timestamp_<wbr>difference_<wbr>max_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4192,8 +4193,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logmessagetimestamptype_python">
-<a href="#logmessagetimestamptype_python" style="color: inherit; text-decoration: inherit;">log<wbr>Message<wbr>Timestamp<wbr>Type</a>
+        <span id="log_message_timestamp_type_python">
+<a href="#log_message_timestamp_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>message_<wbr>timestamp_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4202,8 +4203,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logretentionbytes_python">
-<a href="#logretentionbytes_python" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Bytes</a>
+        <span id="log_retention_bytes_python">
+<a href="#log_retention_bytes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4212,8 +4213,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logretentionhours_python">
-<a href="#logretentionhours_python" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Hours</a>
+        <span id="log_retention_hours_python">
+<a href="#log_retention_hours_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4222,8 +4223,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logsegmentbytes_python">
-<a href="#logsegmentbytes_python" style="color: inherit; text-decoration: inherit;">log<wbr>Segment<wbr>Bytes</a>
+        <span id="log_segment_bytes_python">
+<a href="#log_segment_bytes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>segment_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4232,8 +4233,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconnectionsperip_python">
-<a href="#maxconnectionsperip_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Ip</a>
+        <span id="max_connections_per_ip_python">
+<a href="#max_connections_per_ip_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4242,8 +4243,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxincrementalfetchsessioncacheslots_python">
-<a href="#maxincrementalfetchsessioncacheslots_python" style="color: inherit; text-decoration: inherit;">max<wbr>Incremental<wbr>Fetch<wbr>Session<wbr>Cache<wbr>Slots</a>
+        <span id="max_incremental_fetch_session_cache_slots_python">
+<a href="#max_incremental_fetch_session_cache_slots_python" style="color: inherit; text-decoration: inherit;">max_<wbr>incremental_<wbr>fetch_<wbr>session_<wbr>cache_<wbr>slots</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4252,8 +4253,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagemaxbytes_python">
-<a href="#messagemaxbytes_python" style="color: inherit; text-decoration: inherit;">message<wbr>Max<wbr>Bytes</a>
+        <span id="message_max_bytes_python">
+<a href="#message_max_bytes_python" style="color: inherit; text-decoration: inherit;">message_<wbr>max_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4262,8 +4263,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numpartitions_python">
-<a href="#numpartitions_python" style="color: inherit; text-decoration: inherit;">num<wbr>Partitions</a>
+        <span id="num_partitions_python">
+<a href="#num_partitions_python" style="color: inherit; text-decoration: inherit;">num_<wbr>partitions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4272,8 +4273,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offsetsretentionminutes_python">
-<a href="#offsetsretentionminutes_python" style="color: inherit; text-decoration: inherit;">offsets<wbr>Retention<wbr>Minutes</a>
+        <span id="offsets_retention_minutes_python">
+<a href="#offsets_retention_minutes_python" style="color: inherit; text-decoration: inherit;">offsets_<wbr>retention_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4282,8 +4283,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="producerpurgatorypurgeintervalrequests_python">
-<a href="#producerpurgatorypurgeintervalrequests_python" style="color: inherit; text-decoration: inherit;">producer<wbr>Purgatory<wbr>Purge<wbr>Interval<wbr>Requests</a>
+        <span id="producer_purgatory_purge_interval_requests_python">
+<a href="#producer_purgatory_purge_interval_requests_python" style="color: inherit; text-decoration: inherit;">producer_<wbr>purgatory_<wbr>purge_<wbr>interval_<wbr>requests</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4292,8 +4293,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicafetchmaxbytes_python">
-<a href="#replicafetchmaxbytes_python" style="color: inherit; text-decoration: inherit;">replica<wbr>Fetch<wbr>Max<wbr>Bytes</a>
+        <span id="replica_fetch_max_bytes_python">
+<a href="#replica_fetch_max_bytes_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>fetch_<wbr>max_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4302,8 +4303,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicafetchresponsemaxbytes_python">
-<a href="#replicafetchresponsemaxbytes_python" style="color: inherit; text-decoration: inherit;">replica<wbr>Fetch<wbr>Response<wbr>Max<wbr>Bytes</a>
+        <span id="replica_fetch_response_max_bytes_python">
+<a href="#replica_fetch_response_max_bytes_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>fetch_<wbr>response_<wbr>max_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4312,8 +4313,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="socketrequestmaxbytes_python">
-<a href="#socketrequestmaxbytes_python" style="color: inherit; text-decoration: inherit;">socket<wbr>Request<wbr>Max<wbr>Bytes</a>
+        <span id="socket_request_max_bytes_python">
+<a href="#socket_request_max_bytes_python" style="color: inherit; text-decoration: inherit;">socket_<wbr>request_<wbr>max_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4734,8 +4735,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectorclientconfigoverridepolicy_python">
-<a href="#connectorclientconfigoverridepolicy_python" style="color: inherit; text-decoration: inherit;">connector<wbr>Client<wbr>Config<wbr>Override<wbr>Policy</a>
+        <span id="connector_client_config_override_policy_python">
+<a href="#connector_client_config_override_policy_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>client_<wbr>config_<wbr>override_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4744,8 +4745,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumerautooffsetreset_python">
-<a href="#consumerautooffsetreset_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Auto<wbr>Offset<wbr>Reset</a>
+        <span id="consumer_auto_offset_reset_python">
+<a href="#consumer_auto_offset_reset_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>auto_<wbr>offset_<wbr>reset</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4754,8 +4755,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumerisolationlevel_python">
-<a href="#consumerisolationlevel_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Isolation<wbr>Level</a>
+        <span id="consumer_isolation_level_python">
+<a href="#consumer_isolation_level_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>isolation_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4764,8 +4765,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumermaxpollintervalms_python">
-<a href="#consumermaxpollintervalms_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Max<wbr>Poll<wbr>Interval<wbr>Ms</a>
+        <span id="consumer_max_poll_interval_ms_python">
+<a href="#consumer_max_poll_interval_ms_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>max_<wbr>poll_<wbr>interval_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4774,8 +4775,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumermaxpollrecords_python">
-<a href="#consumermaxpollrecords_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Max<wbr>Poll<wbr>Records</a>
+        <span id="consumer_max_poll_records_python">
+<a href="#consumer_max_poll_records_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>max_<wbr>poll_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4784,8 +4785,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offsetflushintervalms_python">
-<a href="#offsetflushintervalms_python" style="color: inherit; text-decoration: inherit;">offset<wbr>Flush<wbr>Interval<wbr>Ms</a>
+        <span id="offset_flush_interval_ms_python">
+<a href="#offset_flush_interval_ms_python" style="color: inherit; text-decoration: inherit;">offset_<wbr>flush_<wbr>interval_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4794,8 +4795,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offsetflushtimeoutms_python">
-<a href="#offsetflushtimeoutms_python" style="color: inherit; text-decoration: inherit;">offset<wbr>Flush<wbr>Timeout<wbr>Ms</a>
+        <span id="offset_flush_timeout_ms_python">
+<a href="#offset_flush_timeout_ms_python" style="color: inherit; text-decoration: inherit;">offset_<wbr>flush_<wbr>timeout_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4804,8 +4805,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessiontimeoutms_python">
-<a href="#sessiontimeoutms_python" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout<wbr>Ms</a>
+        <span id="session_timeout_ms_python">
+<a href="#session_timeout_ms_python" style="color: inherit; text-decoration: inherit;">session_<wbr>timeout_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5040,8 +5041,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumerenableautocommit_python">
-<a href="#consumerenableautocommit_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Enable<wbr>Auto<wbr>Commit</a>
+        <span id="consumer_enable_auto_commit_python">
+<a href="#consumer_enable_auto_commit_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>enable_<wbr>auto_<wbr>commit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5050,8 +5051,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumerrequestmaxbytes_python">
-<a href="#consumerrequestmaxbytes_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Request<wbr>Max<wbr>Bytes</a>
+        <span id="consumer_request_max_bytes_python">
+<a href="#consumer_request_max_bytes_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>request_<wbr>max_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5060,8 +5061,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumerrequesttimeoutms_python">
-<a href="#consumerrequesttimeoutms_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Request<wbr>Timeout<wbr>Ms</a>
+        <span id="consumer_request_timeout_ms_python">
+<a href="#consumer_request_timeout_ms_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>request_<wbr>timeout_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5070,8 +5071,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="produceracks_python">
-<a href="#produceracks_python" style="color: inherit; text-decoration: inherit;">producer<wbr>Acks</a>
+        <span id="producer_acks_python">
+<a href="#producer_acks_python" style="color: inherit; text-decoration: inherit;">producer_<wbr>acks</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5080,8 +5081,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="producerlingerms_python">
-<a href="#producerlingerms_python" style="color: inherit; text-decoration: inherit;">producer<wbr>Linger<wbr>Ms</a>
+        <span id="producer_linger_ms_python">
+<a href="#producer_linger_ms_python" style="color: inherit; text-decoration: inherit;">producer_<wbr>linger_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5090,8 +5091,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="simpleconsumerpoolsizemax_python">
-<a href="#simpleconsumerpoolsizemax_python" style="color: inherit; text-decoration: inherit;">simpleconsumer<wbr>Pool<wbr>Size<wbr>Max</a>
+        <span id="simpleconsumer_pool_size_max_python">
+<a href="#simpleconsumer_pool_size_max_python" style="color: inherit; text-decoration: inherit;">simpleconsumer_<wbr>pool_<wbr>size_<wbr>max</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5392,8 +5393,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kafkarest_python">
-<a href="#kafkarest_python" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest</a>
+        <span id="kafka_connect_python">
+<a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5402,8 +5403,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kafka_connect_python">
-<a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
+        <span id="kafka_rest_python">
+<a href="#kafka_rest_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5422,8 +5423,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schemaregistry_python">
-<a href="#schemaregistry_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry</a>
+        <span id="schema_registry_python">
+<a href="#schema_registry_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

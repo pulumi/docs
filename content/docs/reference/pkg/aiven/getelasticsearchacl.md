@@ -24,7 +24,7 @@ meta_desc: "Explore the GetElasticSearchAcl function of the Aiven package, inclu
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_elastic_search_acl(</span>acls=None<span class="p">, </span>enabled=None<span class="p">, </span>extended_acl=None<span class="p">, </span>project=None<span class="p">, </span>service_name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_elastic_search_acl(</span><span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[List[GetElasticSearchAclAclArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">extended_acl</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetElasticSearchAclResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -248,7 +248,7 @@ The following arguments are supported:
 <a href="#acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getelasticsearchaclacl">List[Get<wbr>Elastic<wbr>Search<wbr>Acl<wbr>Acl]</a></span>
+        <span class="property-type"><a href="#getelasticsearchaclacl">List[Get<wbr>Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -675,7 +675,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getelasticsearchaclaclrule">List[Get<wbr>Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getelasticsearchaclaclrule">List[Get<wbr>Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
