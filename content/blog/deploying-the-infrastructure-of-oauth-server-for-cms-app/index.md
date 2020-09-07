@@ -267,7 +267,7 @@ $ pulumi config set --secret netlify-cms-oauth-provider-infrastructure:githubSec
 $ {{YOUR_GITHUB_SECRET}}
 ```
 
-The `--secret` flag encrypts your Github secret.
+The `--secret` flag encrypts your GitHub secret.
 
 In addition, don't append the secret to the command, e.g., `$ pulumi config set --secret netlify-cms-oauth-provider-infrastructure:githubKey {{YOUR_GITHUB_SECRET}}`.
 
