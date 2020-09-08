@@ -1,6 +1,6 @@
 ---
 title: "Deploying the Infrastructure of OAuth Server for CMS App"
-date: "2020-09-02"
+date: "2020-09-09"
 draft: false
 meta_desc: "Implementing OAuth server for Netlify CMS app, deployING it using ECS Fargate Service, and configurING domain and certificate for it."
 meta_image: cms-oauth.png
