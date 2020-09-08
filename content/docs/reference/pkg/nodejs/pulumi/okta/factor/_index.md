@@ -3,7 +3,7 @@ title: "Module factor"
 title_tag: "Module factor | Package @pulumi/okta | Node.js SDK"
 linktitle: "factor"
 meta_desc: "Explore members of the factor module in the @pulumi/okta package."
-git_sha: "07edb51373af622d7954d5797ce4209caf96299c"
+git_sha: "531207198cbf0df03ac4639f7dc4d5670f09adc9"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Factor" data-link-title="Factor">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/factor/factor.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/factor/factor.ts#L23">
         Resource <strong>Factor</strong>
     </a>
 </h3>
@@ -53,7 +53,7 @@ const example = new okta.factor.Factor("example", {}, {
 ```
 
 <h4 class="pdoc-member-header" id="Factor-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/factor/factor.ts#L58"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/factor/factor.ts#L58"> <b>constructor</b></a>
 </h4>
 
 
@@ -67,7 +67,7 @@ Create a Factor resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Factor-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/factor/factor.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/factor/factor.ts#L33">method <b>get</b></a>
 </h4>
 
 
@@ -78,14 +78,14 @@ Get an existing Factor resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Factor-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/factor/factor.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/factor/factor.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Factor-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/factor/factor.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/factor/factor.ts#L44">method <b>isInstance</b></a>
 </h4>
 
 
@@ -96,7 +96,7 @@ Returns true if the given object is an instance of Factor.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Factor-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/factor/factor.ts#L54">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/factor/factor.ts#L54">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>active: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -104,7 +104,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether or not to activate the provider, by default it is set to `true`.
 
 <h4 class="pdoc-member-header" id="Factor-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/factor/factor.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/factor/factor.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -113,7 +113,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Factor-providerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/factor/factor.ts#L58">property <b>providerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/factor/factor.ts#L58">property <b>providerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>providerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -121,7 +121,7 @@ deployments and may be missing (undefined) during planning phases.
 Factor provider ID
 
 <h4 class="pdoc-member-header" id="Factor-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/factor/factor.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/factor/factor.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -133,7 +133,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="FactorArgs" data-link-title="FactorArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/factor/factor.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/factor/factor.ts#L110">
         interface <strong>FactorArgs</strong>
     </a>
 </h3>
@@ -143,7 +143,7 @@ deployments.
 The set of arguments for constructing a Factor resource.
 
 <h4 class="pdoc-member-header" id="FactorArgs-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/factor/factor.ts#L114">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/factor/factor.ts#L114">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -151,7 +151,7 @@ The set of arguments for constructing a Factor resource.
 Whether or not to activate the provider, by default it is set to `true`.
 
 <h4 class="pdoc-member-header" id="FactorArgs-providerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/factor/factor.ts#L118">property <b>providerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/factor/factor.ts#L118">property <b>providerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -159,7 +159,7 @@ Whether or not to activate the provider, by default it is set to `true`.
 Factor provider ID
 
 <h3 class="pdoc-module-header" id="FactorState" data-link-title="FactorState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/factor/factor.ts#L96">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/factor/factor.ts#L96">
         interface <strong>FactorState</strong>
     </a>
 </h3>
@@ -169,7 +169,7 @@ Factor provider ID
 Input properties used for looking up and filtering Factor resources.
 
 <h4 class="pdoc-member-header" id="FactorState-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/factor/factor.ts#L100">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/factor/factor.ts#L100">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ Input properties used for looking up and filtering Factor resources.
 Whether or not to activate the provider, by default it is set to `true`.
 
 <h4 class="pdoc-member-header" id="FactorState-providerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/factor/factor.ts#L104">property <b>providerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/factor/factor.ts#L104">property <b>providerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

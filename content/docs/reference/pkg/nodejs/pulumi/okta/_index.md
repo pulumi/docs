@@ -3,7 +3,7 @@ title: "Package @pulumi/okta"
 title_tag: "Package @pulumi/okta | Node.js SDK"
 linktitle: "@pulumi/okta"
 meta_desc: "Explore members of the @pulumi/okta package."
-git_sha: "07edb51373af622d7954d5797ce4209caf96299c"
+git_sha: "531207198cbf0df03ac4639f7dc4d5670f09adc9"
 block_external_search_index: true
 ---
 
@@ -75,7 +75,7 @@ import * as okta from "@pulumi/okta";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/provider.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/provider.ts#L13">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -88,7 +88,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
 </h4>
 
 
@@ -102,14 +102,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
 </h4>
 
 
@@ -120,14 +120,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -136,7 +136,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -148,7 +148,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -157,7 +157,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -166,7 +166,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -175,7 +175,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -184,7 +184,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/provider.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/provider.ts#L62">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -194,7 +194,7 @@ deployments.
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-apiToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/provider.ts#L66">property <b>apiToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/provider.ts#L66">property <b>apiToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -202,7 +202,7 @@ The set of arguments for constructing a Provider resource.
 API Token granting privileges to Okta API.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-backoff">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/provider.ts#L70">property <b>backoff</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/provider.ts#L70">property <b>backoff</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backoff?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -210,7 +210,7 @@ API Token granting privileges to Okta API.
 Use exponential back off strategy for rate limits.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-baseUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/provider.ts#L74">property <b>baseUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/provider.ts#L74">property <b>baseUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -218,7 +218,7 @@ Use exponential back off strategy for rate limits.
 The Okta url. (Use 'oktapreview.com' for Okta testing)
 
 <h4 class="pdoc-member-header" id="ProviderArgs-maxRetries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/provider.ts#L78">property <b>maxRetries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/provider.ts#L78">property <b>maxRetries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxRetries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -226,7 +226,7 @@ The Okta url. (Use 'oktapreview.com' for Okta testing)
 maximum number of retries to attempt before erroring out.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-maxWaitSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/provider.ts#L82">property <b>maxWaitSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/provider.ts#L82">property <b>maxWaitSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxWaitSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -234,7 +234,7 @@ maximum number of retries to attempt before erroring out.
 maximum seconds to wait when rate limit is hit. We use exponential backoffs when backoff is enabled.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-minWaitSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/provider.ts#L86">property <b>minWaitSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/provider.ts#L86">property <b>minWaitSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minWaitSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -242,7 +242,7 @@ maximum seconds to wait when rate limit is hit. We use exponential backoffs when
 minimum seconds to wait when rate limit is hit. We use exponential backoffs when backoff is enabled.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-orgName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/provider.ts#L90">property <b>orgName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/provider.ts#L90">property <b>orgName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orgName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -250,7 +250,7 @@ minimum seconds to wait when rate limit is hit. We use exponential backoffs when
 The organization to manage in Okta.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-parallelism">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/07edb51373af622d7954d5797ce4209caf96299c/sdk/nodejs/provider.ts#L95">property <b>parallelism</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/531207198cbf0df03ac4639f7dc4d5670f09adc9/sdk/nodejs/provider.ts#L95">property <b>parallelism</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parallelism?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>

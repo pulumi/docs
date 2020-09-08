@@ -93,16 +93,16 @@ import pulumi
 import pulumi_okta as okta
 
 example = okta.inline.Hook("example",
-    auth={
-        "key": "Authorization",
-        "type": "HEADER",
-        "value": "secret",
-    },
-    channel={
-        "method": "POST",
-        "uri": "https://example.com/test",
-        "version": "1.0.0",
-    },
+    auth=okta.inline.HookAuthArgs(
+        key="Authorization",
+        type="HEADER",
+        value="secret",
+    ),
+    channel=okta.inline.HookChannelArgs(
+        method="POST",
+        uri="https://example.com/test",
+        version="1.0.0",
+    ),
     type="com.okta.oauth2.tokens.transform",
     version="1.0.1")
 ```
@@ -145,7 +145,7 @@ const example = new okta.inline.Hook("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/inline/#pulumi_okta.inline.Hook">Hook</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth=None<span class="p">, </span>channel=None<span class="p">, </span>headers=None<span class="p">, </span>name=None<span class="p">, </span>status=None<span class="p">, </span>type=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/inline/#pulumi_okta.inline.Hook">Hook</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth</span><span class="p">:</span> <span class="nx">Optional[HookAuthArgs]</span> = None<span class="p">, </span><span class="nx">channel</span><span class="p">:</span> <span class="nx">Optional[HookChannelArgs]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[List[HookHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -594,7 +594,7 @@ The Hook resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookauth">Dict[Hook<wbr>Auth]</a></span>
+        <span class="property-type"><a href="#hookauth">Hook<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication required for inline hook request.
 {{% /md %}}</dd>
@@ -605,7 +605,7 @@ The Hook resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#channel_python" style="color: inherit; text-decoration: inherit;">channel</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookchannel">Dict[Hook<wbr>Channel]</a></span>
+        <span class="property-type"><a href="#hookchannel">Hook<wbr>Channel<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the endpoint the inline hook will hit.
 {{% /md %}}</dd>
@@ -616,7 +616,7 @@ The Hook resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookheader">List[Hook<wbr>Header]</a></span>
+        <span class="property-type"><a href="#hookheader">List[Hook<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Map of headers to send along in inline hook request.
 {{% /md %}}</dd>
@@ -740,7 +740,8 @@ Get an existing Hook resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auth=None<span class="p">, </span>channel=None<span class="p">, </span>headers=None<span class="p">, </span>name=None<span class="p">, </span>status=None<span class="p">, </span>type=None<span class="p">, </span>version=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth</span><span class="p">:</span> <span class="nx">Optional[HookAuthArgs]</span> = None<span class="p">, </span><span class="nx">channel</span><span class="p">:</span> <span class="nx">Optional[HookChannelArgs]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[List[HookHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Hook</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -748,7 +749,7 @@ Get an existing Hook resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Inline.Hook.html">Hook</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Inline.HookState.html">HookState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Inline.Hook.html">Hook</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Inline.HookState.html">HookState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1109,7 +1110,7 @@ The following state arguments are supported:
 <a href="#state_auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookauth">Dict[Hook<wbr>Auth]</a></span>
+        <span class="property-type"><a href="#hookauth">Hook<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication required for inline hook request.
 {{% /md %}}</dd>
@@ -1120,7 +1121,7 @@ The following state arguments are supported:
 <a href="#state_channel_python" style="color: inherit; text-decoration: inherit;">channel</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookchannel">Dict[Hook<wbr>Channel]</a></span>
+        <span class="property-type"><a href="#hookchannel">Hook<wbr>Channel<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the endpoint the inline hook will hit.
 {{% /md %}}</dd>
@@ -1131,7 +1132,7 @@ The following state arguments are supported:
 <a href="#state_headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookheader">List[Hook<wbr>Header]</a></span>
+        <span class="property-type"><a href="#hookheader">List[Hook<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Map of headers to send along in inline hook request.
 {{% /md %}}</dd>

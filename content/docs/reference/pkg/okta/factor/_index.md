@@ -23,7 +23,7 @@ Explore the resources and functions of the factor module in the Okta package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/articulate/terraform-provider-okta).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>2.3.0</dd>
 </dl>
 
 

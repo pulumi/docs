@@ -98,10 +98,10 @@ example = okta.policy.RuleIdpDiscovery("example",
     policyid="<policy id>",
     priority=1,
     user_identifier_attribute="company",
-    user_identifier_patterns=[{
-        "match_type": "EQUALS",
-        "value": "Articulate",
-    }],
+    user_identifier_patterns=[okta.policy.RuleIdpDiscoveryUserIdentifierPatternArgs(
+        match_type="EQUALS",
+        value="Articulate",
+    )],
     user_identifier_type="ATTRIBUTE")
 ```
 
@@ -141,7 +141,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/policy/#pulumi_okta.policy.RuleIdpDiscovery">RuleIdpDiscovery</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_excludes=None<span class="p">, </span>app_includes=None<span class="p">, </span>idp_id=None<span class="p">, </span>idp_type=None<span class="p">, </span>name=None<span class="p">, </span>network_connection=None<span class="p">, </span>network_excludes=None<span class="p">, </span>network_includes=None<span class="p">, </span>platform_includes=None<span class="p">, </span>policyid=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>user_identifier_attribute=None<span class="p">, </span>user_identifier_patterns=None<span class="p">, </span>user_identifier_type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/policy/#pulumi_okta.policy.RuleIdpDiscovery">RuleIdpDiscovery</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_excludes</span><span class="p">:</span> <span class="nx">Optional[List[RuleIdpDiscoveryAppExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">app_includes</span><span class="p">:</span> <span class="nx">Optional[List[RuleIdpDiscoveryAppIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">idp_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">idp_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_connection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_excludes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">network_includes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">platform_includes</span><span class="p">:</span> <span class="nx">Optional[List[RuleIdpDiscoveryPlatformIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">policyid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_identifier_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_identifier_patterns</span><span class="p">:</span> <span class="nx">Optional[List[RuleIdpDiscoveryUserIdentifierPatternArgs]]</span> = None<span class="p">, </span><span class="nx">user_identifier_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -828,7 +828,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 <a href="#app_excludes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>excludes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappexclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude]</a></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryappexclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Applications to exclude in discovery rule
 {{% /md %}}</dd>
@@ -839,7 +839,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 <a href="#app_includes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>includes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappinclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include]</a></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryappinclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Applications to include in discovery rule
 {{% /md %}}</dd>
@@ -914,7 +914,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 <a href="#platform_includes_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>includes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include]</a></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -956,7 +956,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 <a href="#user_identifier_patterns_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identifier_<wbr>patterns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">List[Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern]</a></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">List[Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1068,7 +1068,8 @@ Get an existing RuleIdpDiscovery resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_excludes=None<span class="p">, </span>app_includes=None<span class="p">, </span>idp_id=None<span class="p">, </span>idp_type=None<span class="p">, </span>name=None<span class="p">, </span>network_connection=None<span class="p">, </span>network_excludes=None<span class="p">, </span>network_includes=None<span class="p">, </span>platform_includes=None<span class="p">, </span>policyid=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>user_identifier_attribute=None<span class="p">, </span>user_identifier_patterns=None<span class="p">, </span>user_identifier_type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_excludes</span><span class="p">:</span> <span class="nx">Optional[List[RuleIdpDiscoveryAppExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">app_includes</span><span class="p">:</span> <span class="nx">Optional[List[RuleIdpDiscoveryAppIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">idp_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">idp_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_connection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_excludes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">network_includes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">platform_includes</span><span class="p">:</span> <span class="nx">Optional[List[RuleIdpDiscoveryPlatformIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">policyid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_identifier_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_identifier_patterns</span><span class="p">:</span> <span class="nx">Optional[List[RuleIdpDiscoveryUserIdentifierPatternArgs]]</span> = None<span class="p">, </span><span class="nx">user_identifier_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RuleIdpDiscovery</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1076,7 +1077,7 @@ Get an existing RuleIdpDiscovery resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.RuleIdpDiscovery.html">RuleIdpDiscovery</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.RuleIdpDiscoveryState.html">RuleIdpDiscoveryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.RuleIdpDiscovery.html">RuleIdpDiscovery</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.RuleIdpDiscoveryState.html">RuleIdpDiscoveryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1686,7 +1687,7 @@ The following state arguments are supported:
 <a href="#state_app_excludes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>excludes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappexclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude]</a></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryappexclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Applications to exclude in discovery rule
 {{% /md %}}</dd>
@@ -1697,7 +1698,7 @@ The following state arguments are supported:
 <a href="#state_app_includes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>includes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappinclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include]</a></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryappinclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Applications to include in discovery rule
 {{% /md %}}</dd>
@@ -1772,7 +1773,7 @@ The following state arguments are supported:
 <a href="#state_platform_includes_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>includes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include]</a></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1825,7 +1826,7 @@ The following state arguments are supported:
 <a href="#state_user_identifier_patterns_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identifier_<wbr>patterns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">List[Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern]</a></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">List[Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2333,8 +2334,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="osexpression_python">
-<a href="#osexpression_python" style="color: inherit; text-decoration: inherit;">os<wbr>Expression</a>
+        <span id="os_expression_python">
+<a href="#os_expression_python" style="color: inherit; text-decoration: inherit;">os_<wbr>expression</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2343,8 +2344,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ostype_python">
-<a href="#ostype_python" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+        <span id="os_type_python">
+<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
