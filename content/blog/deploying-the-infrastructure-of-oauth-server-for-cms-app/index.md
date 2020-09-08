@@ -153,7 +153,7 @@ const web = alb.createListener("web", {
 });
 ```
 
-We also created a single target group for load balancers to distribute the traffic. This lets the user address a different port for the target group without having to use port 443.
+We create a [target group](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html) for the load balancers to distribute traffic. The target group lets the user use port 80 for the target group.
 
 ``` typescript
 let inputTargetGroupPort: pulumi.Input<number> = cmsStackConfig.targetGroupPort!;
