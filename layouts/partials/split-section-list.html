@@ -1,0 +1,47 @@
+<section class="bg-white pt-12 px-4 justify-center">
+    <div class="container mx-auto max-w-4xl">
+        <div class="text-center mt-0 mb-16">
+            <h2 class="bg-white text-gray-800">{{ .data.section_title }}</h2>
+        </div>
+        <ul class="flex flex-col items-start w-full list-none p-0">
+
+            {{ $page := .Page }}
+            {{ range .data.items }}
+                <li class="md:flex w-full items-start pb-12 mb-12 border-b border-gray-200">
+                    <div class="mb-4 md:mb-0 md:mr-8 md:w-2/5">
+                        {{ if eq .external true }}
+                            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="rounded transition-all block border-2 border-gray-400" title="{{ .title }}">
+                                <img src="{{ .image }}" alt="{{ .image_alt }}">
+                            </a>
+                        {{ else }}
+                            <a href="{{ relref $page .url }}" class="rounded transition-all block border-2 border-gray-400" title="{{ .title }}">
+                                <img src="{{ .image }}" alt="{{ .image_alt }}">
+                            </a>
+                        {{ end }}
+                    </div>
+                    <div class="md:mt-2 md:w-3/5">
+                        <h3>
+                            {{ if eq .external true }}
+                                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="text-blue-600 text-2xl">{{ .title }}</a>
+                                <i class="text-sm ml-2 fas fa-external-link-alt"></i>
+                            {{ else }}
+                                <a href="{{ relref $page .url }}" class="text-blue-600 text-2xl">{{ .title }}</a>
+                            {{ end }}
+                        </h3>
+                        <p class="leading-relaxed mb-8 text-lg">
+                            {{ .description }}
+                        </p>
+                        <div>
+                            {{ if eq .external true }}
+                                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">{{ .button_text }}</a>
+                            {{ else }}
+                                <a href="{{ relref $page .url }}" class="btn btn-secondary">{{ .button_text }}</a>
+                            {{ end }}
+                        </div>
+                    </div>
+                </li>
+            {{ end }}
+
+        </ul>
+    </div>
+</section>
