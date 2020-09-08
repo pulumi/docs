@@ -129,7 +129,6 @@ WORKDIR /go/src/github.com/pulumi/aws-ts-netlify-cms-and-oauth/cms-oauth
 ```
 
 
-Now that CMS Server is deployed, we can start to implement the infrastructure.
 
 ## Infrastructure
 
