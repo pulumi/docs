@@ -24,7 +24,7 @@ Netlify CMS's website provides [External OAuth Client examples](https://www.netl
 
 In *Netlify's example*, the `./dotenv/dotenv.go` retrieves environment variables from a file. The main.go file uses [goth](https://github.com/markbates/goth) to instantiate the OAuth Provider. The code `./randstr/randstr.go` file to generate a random string used by `SESSION_SECRET` environment variable used for authentication. However,  Pulumi can implement both functions, replacing the code in goth.
 
-The random string can be generated with Pulumi this way:
+The Pulumi random package generates the random string for the session secret.
 
 ```typescript
 // Create a random string and also mark its `result` property as a secret,
