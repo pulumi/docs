@@ -34,7 +34,7 @@ const sessionSecretRandomString = new random.RandomPassword("random", {
 }, { additionalSecretOutputs: ["result"] });
 ```
 
-Environment variables can be passed when we create a Fargate Service.
+We pass the environment variables when we create the Fargate Service.
 
 ```typescript
 // Create a Fargate service task that can scale out.
