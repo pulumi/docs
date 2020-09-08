@@ -27,27 +27,25 @@ write this as a simple example using Pulumi SDKs.
 
 ```typescript
 import * as azure from "@pulumi/azure";
-import * as pulumi from "@pulumi/pulumi";
-import * as k8s from "@pulumi/kubernetes";
 import * as azuread from "@pulumi/azuread";
+import * as k8s from "@pulumi/kubernetes";
+import * as pulumi from "@pulumi/pulumi";
 
 // Step 1: Parse and export configuration variables for the AKS stack.
-
 const config = new pulumi.Config();
-export const password = config.require("password");
-export const location = config.get("location") || "East US";
-export const failoverLocation = config.get("failoverLocation") || "East US 2";
-export const nodeCount = config.getNumber("nodeCount") || 2;
-export const nodeSize = config.get("nodeSize") || "Standard_D2_v2";
-export const sshPublicKey = config.require("sshPublicKey");
+const password = config.require("password");
+const location = config.get("location") || "East US";
+const nodeCount = config.getNumber("nodeCount") || 2;
+const nodeSize = config.get("nodeSize") || "Standard_D2_v2";
+const sshPublicKey = config.require("sshPublicKey");
 
-export const resourceGroup = new azure.core.ResourceGroup("aks", { location });
-export const loganalytics = new azure.operationalinsights.AnalyticsWorkspace("aksloganalytics", {
+const resourceGroup = new azure.core.ResourceGroup("aks", { location });
+const loganalytics = new azure.operationalinsights.AnalyticsWorkspace("aksloganalytics", {
     resourceGroupName: resourceGroup.name,
     location: resourceGroup.location,
     sku: "PerGB2018",
     retentionInDays: 30,
-})
+});
 ```
 
 ## Step 2: Create the AD Service principal for the AKS cluster
@@ -70,9 +68,9 @@ found", simply re-run `pulumi update`to proceed.
 
 ```javascript
 // Step 2: Create the AD service principal for the k8s cluster.
-let adApp = new azuread.Application("aks");
-let adSp = new azuread.ServicePrincipal("aksSp", { applicationId: adApp.applicationId });
-let adSpPassword = new azuread.ServicePrincipalPassword("aksSpPassword", {
+const adApp = new azuread.Application("aks");
+const adSp = new azuread.ServicePrincipal("aksSp", { applicationId: adApp.applicationId });
+const adSpPassword = new azuread.ServicePrincipalPassword("aksSpPassword", {
     servicePrincipalId: adSp.id,
     value: password,
     endDate: "2099-01-01T00:00:00Z",
@@ -86,38 +84,38 @@ principal.
 
 ```javascript
 // Step 3: This step creates an AKS cluster.
-export const k8sCluster = new azure.containerservice.KubernetesCluster("aksCluster", {
-        resourceGroupName: resourceGroup.name,
-        location: location,
-        agentPoolProfile: {
-            name: "aksagentpool",
-            count: nodeCount,
-            vmSize: nodeSize,
+const k8sCluster = new azure.containerservice.KubernetesCluster("aksCluster", {
+    resourceGroupName: resourceGroup.name,
+    location: location,
+    defaultNodePool: {
+        name: "aksagentpool",
+        nodeCount: nodeCount,
+        vmSize: nodeSize,
+    },
+    dnsPrefix: `${pulumi.getStack()}-kube`,
+    linuxProfile: {
+        adminUsername: "aksuser",
+        sshKey: { keyData: sshPublicKey},
+    },
+    servicePrincipal: {
+        clientId: applicationId,
+        clientSecret: adSpPassword.value,
+    },
+    addonProfile: {
+        omsAgent: {
+            enabled: true,
+            logAnalyticsWorkspaceId: loganalytics.id,
         },
-        dnsPrefix: `${pulumi.getStack()}-kube`,
-        linuxProfile: {
-            adminUsername: "aksuser",
-            sshKey: { keyData: sshPublicKey, }
-        },
-        servicePrincipal: {
-            clientId: applicationId,
-            clientSecret: adSpPassword.value,
-        },
-        addonProfile: {
-            omsAgent: {
-                enabled: true,
-                logAnalyticsWorkspaceId: loganalytics.id,
-            },
-        },
-    });
+    },
+});
 
 // Expose a k8s provider instance using our custom cluster instance.
-export const k8sProvider = new k8s.Provider("aksK8s", {
-        kubeconfig: k8sCluster.kubeConfigRaw,
-    });
+const k8sProvider = new k8s.Provider("aksK8s", {
+    kubeconfig: k8sCluster.kubeConfigRaw,
+});
 
 // Export the kubeconfig
-export const kubeconfig = k8sCluster.kubeConfigRaw
+export const kubeconfig = k8sCluster.kubeConfigRaw;
 ```
 
 ## Step 4: Enable default monitoring and logging for the AKS cluster
@@ -135,7 +133,7 @@ run `pulumi up`
 
 ```javascript
 // Step 4: Enables the Monitoring Diagonostic control plane component logs and AllMetrics
-export const azMonitoringDiagnostic = new azure.monitoring.DiagnosticSetting("aks", {
+const azMonitoringDiagnostic = new azure.monitoring.DiagnosticSetting("aks", {
     logAnalyticsWorkspaceId: loganalytics.id,
     targetResourceId: k8sCluster.id,
     logs:  [{
@@ -143,22 +141,21 @@ export const azMonitoringDiagnostic = new azure.monitoring.DiagnosticSetting("ak
         enabled : true,
 
         retentionPolicy: {
-        enabled: true,
-        }
-    },
-    ],
+            enabled: true,
+        },
+    }],
     metrics: [{
         category: "AllMetrics",
 
         retentionPolicy: {
-        enabled: true,
-        }
+            enabled: true,
+        },
     }],
-})
+});
 ```
 
 If you run `pulumi up` with the entire `index.ts` file as defined
-[here](https://gist.github.com/d-nishi/b757e1e8b3ebe187d81ce32a4d15525e)
+[here](https://github.com/pulumi/examples/tree/master/azure-ts-aks-with-diagnostics/index.ts)
 you will see an AKS cluster get created with monitoring and logging
 enabled.
 
@@ -174,7 +171,7 @@ a) Check with Pulumi CLI and `kubectl`
 b) Check Pulumi Service Console for the resource creation on the stack
 you just initialized: `d-nishi/azure-mean/dev`.
 
-![initliazed](./initialized.png)
+![initialized](./initialized.png)
 
 c) Check your Azure portal for the cluster-id and to find all the
 metrics (Insights) and logs (Logs) show up as follows:
@@ -188,7 +185,7 @@ metrics (Insights) and logs (Logs) show up as follows:
 We discussed how to set up AKS clusters with monitoring
 and logging in simple steps with Pulumi packages. You can find the
 complete pulumi code for our example
-[*here*](https://gist.github.com/d-nishi/b757e1e8b3ebe187d81ce32a4d15525e).
+[*here*](https://github.com/pulumi/examples/tree/master/azure-ts-aks-with-diagnostics).
 For more examples visit our [GitHub examples](https://github.com/pulumi/examples) repo.
 
 If you want to additionally look at how to integrate Azure DevOps with
