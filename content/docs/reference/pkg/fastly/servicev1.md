@@ -103,15 +103,15 @@ import pulumi
 import pulumi_fastly as fastly
 
 demo = fastly.Servicev1("demo",
-    backends=[{
-        "address": "127.0.0.1",
-        "name": "localhost",
-        "port": 80,
-    }],
-    domains=[{
-        "comment": "demo",
-        "name": "demo.notexample.com",
-    }],
+    backends=[fastly.Servicev1BackendArgs(
+        address="127.0.0.1",
+        name="localhost",
+        port=80,
+    )],
+    domains=[fastly.Servicev1DomainArgs(
+        comment="demo",
+        name="demo.notexample.com",
+    )],
     force_destroy=True)
 ```
 
@@ -263,26 +263,26 @@ import pulumi
 import pulumi_fastly as fastly
 
 demo = fastly.Servicev1("demo",
-    backends=[{
-        "address": "127.0.0.1",
-        "name": "localhost",
-        "port": 80,
-    }],
-    domains=[{
-        "comment": "demo",
-        "name": "demo.notexample.com",
-    }],
+    backends=[fastly.Servicev1BackendArgs(
+        address="127.0.0.1",
+        name="localhost",
+        port=80,
+    )],
+    domains=[fastly.Servicev1DomainArgs(
+        comment="demo",
+        name="demo.notexample.com",
+    )],
     force_destroy=True,
     vcls=[
-        {
-            "content": (lambda path: open(path).read())(f"{path['module']}/my_custom_main.vcl"),
-            "main": True,
-            "name": "my_custom_main_vcl",
-        },
-        {
-            "content": (lambda path: open(path).read())(f"{path['module']}/my_custom_library.vcl"),
-            "name": "my_custom_library_vcl",
-        },
+        fastly.Servicev1VclArgs(
+            content=(lambda path: open(path).read())(f"{path['module']}/my_custom_main.vcl"),
+            main=True,
+            name="my_custom_main_vcl",
+        ),
+        fastly.Servicev1VclArgs(
+            content=(lambda path: open(path).read())(f"{path['module']}/my_custom_library.vcl"),
+            name="my_custom_library_vcl",
+        ),
     ])
 ```
 
@@ -440,30 +440,30 @@ import pulumi_fastly as fastly
 
 demo = fastly.Servicev1("demo",
     backends=[
-        {
-            "address": "127.0.0.1",
-            "name": "origin1",
-            "port": 80,
-        },
-        {
-            "address": "127.0.0.2",
-            "name": "origin2",
-            "port": 80,
-        },
+        fastly.Servicev1BackendArgs(
+            address="127.0.0.1",
+            name="origin1",
+            port=80,
+        ),
+        fastly.Servicev1BackendArgs(
+            address="127.0.0.2",
+            name="origin2",
+            port=80,
+        ),
     ],
-    directors=[{
-        "backends": [
+    directors=[fastly.Servicev1DirectorArgs(
+        backends=[
             "origin1",
             "origin2",
         ],
-        "name": "mydirector",
-        "quorum": 0,
-        "type": 3,
-    }],
-    domains=[{
-        "comment": "demo",
-        "name": "demo.notexample.com",
-    }],
+        name="mydirector",
+        quorum=0,
+        type=3,
+    )],
+    domains=[fastly.Servicev1DomainArgs(
+        comment="demo",
+        name="demo.notexample.com",
+    )],
     force_destroy=True)
 ```
 
@@ -519,7 +519,7 @@ const demo = new fastly.Servicev1("demo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_fastly/#pulumi_fastly.Servicev1">Servicev1</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acls=None<span class="p">, </span>activate=None<span class="p">, </span>backends=None<span class="p">, </span>bigqueryloggings=None<span class="p">, </span>blobstorageloggings=None<span class="p">, </span>cache_settings=None<span class="p">, </span>comment=None<span class="p">, </span>conditions=None<span class="p">, </span>default_host=None<span class="p">, </span>default_ttl=None<span class="p">, </span>dictionaries=None<span class="p">, </span>directors=None<span class="p">, </span>domains=None<span class="p">, </span>dynamicsnippets=None<span class="p">, </span>force_destroy=None<span class="p">, </span>gcsloggings=None<span class="p">, </span>gzips=None<span class="p">, </span>headers=None<span class="p">, </span>healthchecks=None<span class="p">, </span>httpsloggings=None<span class="p">, </span>logentries=None<span class="p">, </span>logging_cloudfiles=None<span class="p">, </span>logging_datadogs=None<span class="p">, </span>logging_digitaloceans=None<span class="p">, </span>logging_elasticsearches=None<span class="p">, </span>logging_ftps=None<span class="p">, </span>logging_googlepubsubs=None<span class="p">, </span>logging_heroku=None<span class="p">, </span>logging_honeycombs=None<span class="p">, </span>logging_kafkas=None<span class="p">, </span>logging_logglies=None<span class="p">, </span>logging_logshuttles=None<span class="p">, </span>logging_newrelics=None<span class="p">, </span>logging_openstacks=None<span class="p">, </span>logging_scalyrs=None<span class="p">, </span>logging_sftps=None<span class="p">, </span>name=None<span class="p">, </span>papertrails=None<span class="p">, </span>request_settings=None<span class="p">, </span>response_objects=None<span class="p">, </span>s3loggings=None<span class="p">, </span>snippets=None<span class="p">, </span>splunks=None<span class="p">, </span>sumologics=None<span class="p">, </span>syslogs=None<span class="p">, </span>vcls=None<span class="p">, </span>version_comment=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_fastly/#pulumi_fastly.Servicev1">Servicev1</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1AclArgs]]</span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1BackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1BigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1BlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">cache_settings</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1CacheSettingArgs]]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1ConditionArgs]]</span> = None<span class="p">, </span><span class="nx">default_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dictionaries</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1DictionaryArgs]]</span> = None<span class="p">, </span><span class="nx">directors</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1DirectorArgs]]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1DomainArgs]]</span> = None<span class="p">, </span><span class="nx">dynamicsnippets</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1DynamicsnippetArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1GcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">gzips</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1GzipArgs]]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1HeaderArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1HealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1HttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1PapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">request_settings</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1RequestSettingArgs]]</span> = None<span class="p">, </span><span class="nx">response_objects</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1ResponseObjectArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1S3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">snippets</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1SnippetArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1SplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1SumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1SyslogArgs]]</span> = None<span class="p">, </span><span class="nx">vcls</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1VclArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2368,7 +2368,7 @@ Defined below.
 <a href="#domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1domain">List[Servicev1Domain]</a></span>
+        <span class="property-type"><a href="#servicev1domain">List[Servicev1Domain<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd>
@@ -2379,7 +2379,7 @@ Defined below.
 <a href="#acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1acl">List[Servicev1Acl]</a></span>
+        <span class="property-type"><a href="#servicev1acl">List[Servicev1Acl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of ACL configuration blocks.  Defined below.
 {{% /md %}}</dd>
@@ -2401,7 +2401,7 @@ Defined below.
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1backend">List[Servicev1Backend]</a></span>
+        <span class="property-type"><a href="#servicev1backend">List[Servicev1Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
@@ -2414,7 +2414,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 <a href="#bigqueryloggings_python" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1bigquerylogging">List[Servicev1Bigquerylogging]</a></span>
+        <span class="property-type"><a href="#servicev1bigquerylogging">List[Servicev1Bigquerylogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
@@ -2426,7 +2426,7 @@ Defined below.
 <a href="#blobstorageloggings_python" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1blobstoragelogging">List[Servicev1Blobstoragelogging]</a></span>
+        <span class="property-type"><a href="#servicev1blobstoragelogging">List[Servicev1Blobstoragelogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
@@ -2438,7 +2438,7 @@ Defined below.
 <a href="#cache_settings_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1cachesetting">List[Servicev1Cache<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#servicev1cachesetting">List[Servicev1Cache<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Cache Settings, allowing you to override
 {{% /md %}}</dd>
@@ -2460,7 +2460,7 @@ Defined below.
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1condition">List[Servicev1Condition]</a></span>
+        <span class="property-type"><a href="#servicev1condition">List[Servicev1Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of conditions to add logic to any basic
 configuration object in this service. Defined below.
@@ -2495,7 +2495,7 @@ requests.
 <a href="#dictionaries_python" style="color: inherit; text-decoration: inherit;">dictionaries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1dictionary">List[Servicev1Dictionary]</a></span>
+        <span class="property-type"><a href="#servicev1dictionary">List[Servicev1Dictionary<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of dictionaries that allow the storing of key values pair for use within VCL functions. Defined below.
 {{% /md %}}</dd>
@@ -2506,7 +2506,7 @@ requests.
 <a href="#directors_python" style="color: inherit; text-decoration: inherit;">directors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1director">List[Servicev1Director]</a></span>
+        <span class="property-type"><a href="#servicev1director">List[Servicev1Director<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A director to allow more control over balancing traffic over backends.
 when an item is not to be cached based on an above `condition`. Defined below
@@ -2518,7 +2518,7 @@ when an item is not to be cached based on an above `condition`. Defined below
 <a href="#dynamicsnippets_python" style="color: inherit; text-decoration: inherit;">dynamicsnippets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1dynamicsnippet">List[Servicev1Dynamicsnippet]</a></span>
+        <span class="property-type"><a href="#servicev1dynamicsnippet">List[Servicev1Dynamicsnippet<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of custom, "dynamic" VCL Snippet configuration blocks.  Defined below.
 {{% /md %}}</dd>
@@ -2541,7 +2541,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
 <a href="#gcsloggings_python" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1gcslogging">List[Servicev1Gcslogging]</a></span>
+        <span class="property-type"><a href="#servicev1gcslogging">List[Servicev1Gcslogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
@@ -2553,7 +2553,7 @@ Defined below.
 <a href="#gzips_python" style="color: inherit; text-decoration: inherit;">gzips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1gzip">List[Servicev1Gzip]</a></span>
+        <span class="property-type"><a href="#servicev1gzip">List[Servicev1Gzip<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of gzip rules to control automatic gzipping of
 content. Defined below.
@@ -2565,7 +2565,7 @@ content. Defined below.
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1header">List[Servicev1Header]</a></span>
+        <span class="property-type"><a href="#servicev1header">List[Servicev1Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Headers to manipulate for each request. Defined
 below.
@@ -2577,7 +2577,7 @@ below.
 <a href="#healthchecks_python" style="color: inherit; text-decoration: inherit;">healthchecks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1healthcheck">List[Servicev1Healthcheck]</a></span>
+        <span class="property-type"><a href="#servicev1healthcheck">List[Servicev1Healthcheck<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd>
@@ -2588,7 +2588,7 @@ below.
 <a href="#httpsloggings_python" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1httpslogging">List[Servicev1Httpslogging]</a></span>
+        <span class="property-type"><a href="#servicev1httpslogging">List[Servicev1Httpslogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
@@ -2600,7 +2600,7 @@ Defined below.
 <a href="#logentries_python" style="color: inherit; text-decoration: inherit;">logentries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logentry">List[Servicev1Logentry]</a></span>
+        <span class="property-type"><a href="#servicev1logentry">List[Servicev1Logentry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
@@ -2612,7 +2612,7 @@ Defined below.
 <a href="#logging_cloudfiles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>cloudfiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingcloudfile">List[Servicev1Logging<wbr>Cloudfile]</a></span>
+        <span class="property-type"><a href="#servicev1loggingcloudfile">List[Servicev1Logging<wbr>Cloudfile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
@@ -2624,7 +2624,7 @@ Defined below.
 <a href="#logging_datadogs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>datadogs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingdatadog">List[Servicev1Logging<wbr>Datadog]</a></span>
+        <span class="property-type"><a href="#servicev1loggingdatadog">List[Servicev1Logging<wbr>Datadog<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
@@ -2636,7 +2636,7 @@ Defined below.
 <a href="#logging_digitaloceans_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>digitaloceans</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingdigitalocean">List[Servicev1Logging<wbr>Digitalocean]</a></span>
+        <span class="property-type"><a href="#servicev1loggingdigitalocean">List[Servicev1Logging<wbr>Digitalocean<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
@@ -2648,7 +2648,7 @@ Defined below.
 <a href="#logging_elasticsearches_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>elasticsearches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingelasticsearch">List[Servicev1Logging<wbr>Elasticsearch]</a></span>
+        <span class="property-type"><a href="#servicev1loggingelasticsearch">List[Servicev1Logging<wbr>Elasticsearch<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
@@ -2660,7 +2660,7 @@ Defined below.
 <a href="#logging_ftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>ftps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingftp">List[Servicev1Logging<wbr>Ftp]</a></span>
+        <span class="property-type"><a href="#servicev1loggingftp">List[Servicev1Logging<wbr>Ftp<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
@@ -2672,7 +2672,7 @@ Defined below.
 <a href="#logging_googlepubsubs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>googlepubsubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginggooglepubsub">List[Servicev1Logging<wbr>Googlepubsub]</a></span>
+        <span class="property-type"><a href="#servicev1logginggooglepubsub">List[Servicev1Logging<wbr>Googlepubsub<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
@@ -2684,7 +2684,7 @@ Defined below.
 <a href="#logging_heroku_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>heroku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingheroku">List[Servicev1Logging<wbr>Heroku]</a></span>
+        <span class="property-type"><a href="#servicev1loggingheroku">List[Servicev1Logging<wbr>Heroku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
@@ -2696,7 +2696,7 @@ Defined below.
 <a href="#logging_honeycombs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>honeycombs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginghoneycomb">List[Servicev1Logging<wbr>Honeycomb]</a></span>
+        <span class="property-type"><a href="#servicev1logginghoneycomb">List[Servicev1Logging<wbr>Honeycomb<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
@@ -2708,7 +2708,7 @@ Defined below.
 <a href="#logging_kafkas_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kafkas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingkafka">List[Servicev1Logging<wbr>Kafka]</a></span>
+        <span class="property-type"><a href="#servicev1loggingkafka">List[Servicev1Logging<wbr>Kafka<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
@@ -2720,7 +2720,7 @@ Defined below.
 <a href="#logging_logglies_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logglies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingloggly">List[Servicev1Logging<wbr>Loggly]</a></span>
+        <span class="property-type"><a href="#servicev1loggingloggly">List[Servicev1Logging<wbr>Loggly<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
@@ -2732,7 +2732,7 @@ Defined below.
 <a href="#logging_logshuttles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logshuttles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginglogshuttle">List[Servicev1Logging<wbr>Logshuttle]</a></span>
+        <span class="property-type"><a href="#servicev1logginglogshuttle">List[Servicev1Logging<wbr>Logshuttle<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
@@ -2744,7 +2744,7 @@ Defined below.
 <a href="#logging_newrelics_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>newrelics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingnewrelic">List[Servicev1Logging<wbr>Newrelic]</a></span>
+        <span class="property-type"><a href="#servicev1loggingnewrelic">List[Servicev1Logging<wbr>Newrelic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
@@ -2756,7 +2756,7 @@ Defined below.
 <a href="#logging_openstacks_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>openstacks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingopenstack">List[Servicev1Logging<wbr>Openstack]</a></span>
+        <span class="property-type"><a href="#servicev1loggingopenstack">List[Servicev1Logging<wbr>Openstack<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
@@ -2768,7 +2768,7 @@ Defined below.
 <a href="#logging_scalyrs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>scalyrs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingscalyr">List[Servicev1Logging<wbr>Scalyr]</a></span>
+        <span class="property-type"><a href="#servicev1loggingscalyr">List[Servicev1Logging<wbr>Scalyr<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
@@ -2780,7 +2780,7 @@ Defined below.
 <a href="#logging_sftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>sftps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingsftp">List[Servicev1Logging<wbr>Sftp]</a></span>
+        <span class="property-type"><a href="#servicev1loggingsftp">List[Servicev1Logging<wbr>Sftp<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
@@ -2803,7 +2803,7 @@ Defined below.
 <a href="#papertrails_python" style="color: inherit; text-decoration: inherit;">papertrails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1papertrail">List[Servicev1Papertrail]</a></span>
+        <span class="property-type"><a href="#servicev1papertrail">List[Servicev1Papertrail<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
@@ -2815,7 +2815,7 @@ Defined below.
 <a href="#request_settings_python" style="color: inherit; text-decoration: inherit;">request_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1requestsetting">List[Servicev1Request<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#servicev1requestsetting">List[Servicev1Request<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Request modifiers. Defined below
 {{% /md %}}</dd>
@@ -2826,7 +2826,7 @@ Defined below.
 <a href="#response_objects_python" style="color: inherit; text-decoration: inherit;">response_<wbr>objects</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1responseobject">List[Servicev1Response<wbr>Object]</a></span>
+        <span class="property-type"><a href="#servicev1responseobject">List[Servicev1Response<wbr>Object<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allows you to create synthetic responses that exist entirely on the varnish machine. Useful for creating error or maintenance pages that exists outside the scope of your datacenter. Best when used with Condition objects.
 {{% /md %}}</dd>
@@ -2837,7 +2837,7 @@ Defined below.
 <a href="#s3loggings_python" style="color: inherit; text-decoration: inherit;">s3loggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1s3logging">List[Servicev1S3logging]</a></span>
+        <span class="property-type"><a href="#servicev1s3logging">List[Servicev1S3logging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
@@ -2849,7 +2849,7 @@ Defined below.
 <a href="#snippets_python" style="color: inherit; text-decoration: inherit;">snippets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1snippet">List[Servicev1Snippet]</a></span>
+        <span class="property-type"><a href="#servicev1snippet">List[Servicev1Snippet<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of custom, "regular" (non-dynamic) VCL Snippet configuration blocks.  Defined below.
 {{% /md %}}</dd>
@@ -2860,7 +2860,7 @@ Defined below.
 <a href="#splunks_python" style="color: inherit; text-decoration: inherit;">splunks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1splunk">List[Servicev1Splunk]</a></span>
+        <span class="property-type"><a href="#servicev1splunk">List[Servicev1Splunk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
@@ -2872,7 +2872,7 @@ Defined below.
 <a href="#sumologics_python" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1sumologic">List[Servicev1Sumologic]</a></span>
+        <span class="property-type"><a href="#servicev1sumologic">List[Servicev1Sumologic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
@@ -2884,7 +2884,7 @@ Defined below.
 <a href="#syslogs_python" style="color: inherit; text-decoration: inherit;">syslogs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1syslog">List[Servicev1Syslog]</a></span>
+        <span class="property-type"><a href="#servicev1syslog">List[Servicev1Syslog<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
@@ -2896,7 +2896,7 @@ Defined below.
 <a href="#vcls_python" style="color: inherit; text-decoration: inherit;">vcls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1vcl">List[Servicev1Vcl]</a></span>
+        <span class="property-type"><a href="#servicev1vcl">List[Servicev1Vcl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of custom VCL configuration blocks. See the [Fastly documentation](https://docs.fastly.com/vcl/custom-vcl/uploading-custom-vcl/) for more information on using custom VCL.
 {{% /md %}}</dd>
@@ -3098,7 +3098,8 @@ Get an existing Servicev1 resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acls=None<span class="p">, </span>activate=None<span class="p">, </span>active_version=None<span class="p">, </span>backends=None<span class="p">, </span>bigqueryloggings=None<span class="p">, </span>blobstorageloggings=None<span class="p">, </span>cache_settings=None<span class="p">, </span>cloned_version=None<span class="p">, </span>comment=None<span class="p">, </span>conditions=None<span class="p">, </span>default_host=None<span class="p">, </span>default_ttl=None<span class="p">, </span>dictionaries=None<span class="p">, </span>directors=None<span class="p">, </span>domains=None<span class="p">, </span>dynamicsnippets=None<span class="p">, </span>force_destroy=None<span class="p">, </span>gcsloggings=None<span class="p">, </span>gzips=None<span class="p">, </span>headers=None<span class="p">, </span>healthchecks=None<span class="p">, </span>httpsloggings=None<span class="p">, </span>logentries=None<span class="p">, </span>logging_cloudfiles=None<span class="p">, </span>logging_datadogs=None<span class="p">, </span>logging_digitaloceans=None<span class="p">, </span>logging_elasticsearches=None<span class="p">, </span>logging_ftps=None<span class="p">, </span>logging_googlepubsubs=None<span class="p">, </span>logging_heroku=None<span class="p">, </span>logging_honeycombs=None<span class="p">, </span>logging_kafkas=None<span class="p">, </span>logging_logglies=None<span class="p">, </span>logging_logshuttles=None<span class="p">, </span>logging_newrelics=None<span class="p">, </span>logging_openstacks=None<span class="p">, </span>logging_scalyrs=None<span class="p">, </span>logging_sftps=None<span class="p">, </span>name=None<span class="p">, </span>papertrails=None<span class="p">, </span>request_settings=None<span class="p">, </span>response_objects=None<span class="p">, </span>s3loggings=None<span class="p">, </span>snippets=None<span class="p">, </span>splunks=None<span class="p">, </span>sumologics=None<span class="p">, </span>syslogs=None<span class="p">, </span>vcls=None<span class="p">, </span>version_comment=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1AclArgs]]</span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">active_version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1BackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1BigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1BlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">cache_settings</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1CacheSettingArgs]]</span> = None<span class="p">, </span><span class="nx">cloned_version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1ConditionArgs]]</span> = None<span class="p">, </span><span class="nx">default_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dictionaries</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1DictionaryArgs]]</span> = None<span class="p">, </span><span class="nx">directors</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1DirectorArgs]]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1DomainArgs]]</span> = None<span class="p">, </span><span class="nx">dynamicsnippets</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1DynamicsnippetArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1GcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">gzips</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1GzipArgs]]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1HeaderArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1HealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1HttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1LoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1PapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">request_settings</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1RequestSettingArgs]]</span> = None<span class="p">, </span><span class="nx">response_objects</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1ResponseObjectArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1S3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">snippets</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1SnippetArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1SplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1SumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1SyslogArgs]]</span> = None<span class="p">, </span><span class="nx">vcls</span><span class="p">:</span> <span class="nx">Optional[List[Servicev1VclArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Servicev1</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3106,7 +3107,7 @@ Get an existing Servicev1 resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Servicev1.html">Servicev1</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly..Servicev1State.html">Servicev1State</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Servicev1.html">Servicev1</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly..Servicev1State.html">Servicev1State</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4955,7 +4956,7 @@ Defined below.
 <a href="#state_acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1acl">List[Servicev1Acl]</a></span>
+        <span class="property-type"><a href="#servicev1acl">List[Servicev1Acl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of ACL configuration blocks.  Defined below.
 {{% /md %}}</dd>
@@ -4988,7 +4989,7 @@ Defined below.
 <a href="#state_backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1backend">List[Servicev1Backend]</a></span>
+        <span class="property-type"><a href="#servicev1backend">List[Servicev1Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
@@ -5001,7 +5002,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 <a href="#state_bigqueryloggings_python" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1bigquerylogging">List[Servicev1Bigquerylogging]</a></span>
+        <span class="property-type"><a href="#servicev1bigquerylogging">List[Servicev1Bigquerylogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
@@ -5013,7 +5014,7 @@ Defined below.
 <a href="#state_blobstorageloggings_python" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1blobstoragelogging">List[Servicev1Blobstoragelogging]</a></span>
+        <span class="property-type"><a href="#servicev1blobstoragelogging">List[Servicev1Blobstoragelogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
@@ -5025,7 +5026,7 @@ Defined below.
 <a href="#state_cache_settings_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1cachesetting">List[Servicev1Cache<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#servicev1cachesetting">List[Servicev1Cache<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Cache Settings, allowing you to override
 {{% /md %}}</dd>
@@ -5058,7 +5059,7 @@ Defined below.
 <a href="#state_conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1condition">List[Servicev1Condition]</a></span>
+        <span class="property-type"><a href="#servicev1condition">List[Servicev1Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of conditions to add logic to any basic
 configuration object in this service. Defined below.
@@ -5093,7 +5094,7 @@ requests.
 <a href="#state_dictionaries_python" style="color: inherit; text-decoration: inherit;">dictionaries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1dictionary">List[Servicev1Dictionary]</a></span>
+        <span class="property-type"><a href="#servicev1dictionary">List[Servicev1Dictionary<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of dictionaries that allow the storing of key values pair for use within VCL functions. Defined below.
 {{% /md %}}</dd>
@@ -5104,7 +5105,7 @@ requests.
 <a href="#state_directors_python" style="color: inherit; text-decoration: inherit;">directors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1director">List[Servicev1Director]</a></span>
+        <span class="property-type"><a href="#servicev1director">List[Servicev1Director<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A director to allow more control over balancing traffic over backends.
 when an item is not to be cached based on an above `condition`. Defined below
@@ -5116,7 +5117,7 @@ when an item is not to be cached based on an above `condition`. Defined below
 <a href="#state_domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1domain">List[Servicev1Domain]</a></span>
+        <span class="property-type"><a href="#servicev1domain">List[Servicev1Domain<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd>
@@ -5127,7 +5128,7 @@ when an item is not to be cached based on an above `condition`. Defined below
 <a href="#state_dynamicsnippets_python" style="color: inherit; text-decoration: inherit;">dynamicsnippets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1dynamicsnippet">List[Servicev1Dynamicsnippet]</a></span>
+        <span class="property-type"><a href="#servicev1dynamicsnippet">List[Servicev1Dynamicsnippet<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of custom, "dynamic" VCL Snippet configuration blocks.  Defined below.
 {{% /md %}}</dd>
@@ -5150,7 +5151,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
 <a href="#state_gcsloggings_python" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1gcslogging">List[Servicev1Gcslogging]</a></span>
+        <span class="property-type"><a href="#servicev1gcslogging">List[Servicev1Gcslogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
@@ -5162,7 +5163,7 @@ Defined below.
 <a href="#state_gzips_python" style="color: inherit; text-decoration: inherit;">gzips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1gzip">List[Servicev1Gzip]</a></span>
+        <span class="property-type"><a href="#servicev1gzip">List[Servicev1Gzip<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of gzip rules to control automatic gzipping of
 content. Defined below.
@@ -5174,7 +5175,7 @@ content. Defined below.
 <a href="#state_headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1header">List[Servicev1Header]</a></span>
+        <span class="property-type"><a href="#servicev1header">List[Servicev1Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Headers to manipulate for each request. Defined
 below.
@@ -5186,7 +5187,7 @@ below.
 <a href="#state_healthchecks_python" style="color: inherit; text-decoration: inherit;">healthchecks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1healthcheck">List[Servicev1Healthcheck]</a></span>
+        <span class="property-type"><a href="#servicev1healthcheck">List[Servicev1Healthcheck<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd>
@@ -5197,7 +5198,7 @@ below.
 <a href="#state_httpsloggings_python" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1httpslogging">List[Servicev1Httpslogging]</a></span>
+        <span class="property-type"><a href="#servicev1httpslogging">List[Servicev1Httpslogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
@@ -5209,7 +5210,7 @@ Defined below.
 <a href="#state_logentries_python" style="color: inherit; text-decoration: inherit;">logentries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logentry">List[Servicev1Logentry]</a></span>
+        <span class="property-type"><a href="#servicev1logentry">List[Servicev1Logentry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
@@ -5221,7 +5222,7 @@ Defined below.
 <a href="#state_logging_cloudfiles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>cloudfiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingcloudfile">List[Servicev1Logging<wbr>Cloudfile]</a></span>
+        <span class="property-type"><a href="#servicev1loggingcloudfile">List[Servicev1Logging<wbr>Cloudfile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
@@ -5233,7 +5234,7 @@ Defined below.
 <a href="#state_logging_datadogs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>datadogs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingdatadog">List[Servicev1Logging<wbr>Datadog]</a></span>
+        <span class="property-type"><a href="#servicev1loggingdatadog">List[Servicev1Logging<wbr>Datadog<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
@@ -5245,7 +5246,7 @@ Defined below.
 <a href="#state_logging_digitaloceans_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>digitaloceans</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingdigitalocean">List[Servicev1Logging<wbr>Digitalocean]</a></span>
+        <span class="property-type"><a href="#servicev1loggingdigitalocean">List[Servicev1Logging<wbr>Digitalocean<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
@@ -5257,7 +5258,7 @@ Defined below.
 <a href="#state_logging_elasticsearches_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>elasticsearches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingelasticsearch">List[Servicev1Logging<wbr>Elasticsearch]</a></span>
+        <span class="property-type"><a href="#servicev1loggingelasticsearch">List[Servicev1Logging<wbr>Elasticsearch<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
@@ -5269,7 +5270,7 @@ Defined below.
 <a href="#state_logging_ftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>ftps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingftp">List[Servicev1Logging<wbr>Ftp]</a></span>
+        <span class="property-type"><a href="#servicev1loggingftp">List[Servicev1Logging<wbr>Ftp<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
@@ -5281,7 +5282,7 @@ Defined below.
 <a href="#state_logging_googlepubsubs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>googlepubsubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginggooglepubsub">List[Servicev1Logging<wbr>Googlepubsub]</a></span>
+        <span class="property-type"><a href="#servicev1logginggooglepubsub">List[Servicev1Logging<wbr>Googlepubsub<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
@@ -5293,7 +5294,7 @@ Defined below.
 <a href="#state_logging_heroku_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>heroku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingheroku">List[Servicev1Logging<wbr>Heroku]</a></span>
+        <span class="property-type"><a href="#servicev1loggingheroku">List[Servicev1Logging<wbr>Heroku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
@@ -5305,7 +5306,7 @@ Defined below.
 <a href="#state_logging_honeycombs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>honeycombs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginghoneycomb">List[Servicev1Logging<wbr>Honeycomb]</a></span>
+        <span class="property-type"><a href="#servicev1logginghoneycomb">List[Servicev1Logging<wbr>Honeycomb<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
@@ -5317,7 +5318,7 @@ Defined below.
 <a href="#state_logging_kafkas_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kafkas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingkafka">List[Servicev1Logging<wbr>Kafka]</a></span>
+        <span class="property-type"><a href="#servicev1loggingkafka">List[Servicev1Logging<wbr>Kafka<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
@@ -5329,7 +5330,7 @@ Defined below.
 <a href="#state_logging_logglies_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logglies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingloggly">List[Servicev1Logging<wbr>Loggly]</a></span>
+        <span class="property-type"><a href="#servicev1loggingloggly">List[Servicev1Logging<wbr>Loggly<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
@@ -5341,7 +5342,7 @@ Defined below.
 <a href="#state_logging_logshuttles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logshuttles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginglogshuttle">List[Servicev1Logging<wbr>Logshuttle]</a></span>
+        <span class="property-type"><a href="#servicev1logginglogshuttle">List[Servicev1Logging<wbr>Logshuttle<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
@@ -5353,7 +5354,7 @@ Defined below.
 <a href="#state_logging_newrelics_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>newrelics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingnewrelic">List[Servicev1Logging<wbr>Newrelic]</a></span>
+        <span class="property-type"><a href="#servicev1loggingnewrelic">List[Servicev1Logging<wbr>Newrelic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
@@ -5365,7 +5366,7 @@ Defined below.
 <a href="#state_logging_openstacks_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>openstacks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingopenstack">List[Servicev1Logging<wbr>Openstack]</a></span>
+        <span class="property-type"><a href="#servicev1loggingopenstack">List[Servicev1Logging<wbr>Openstack<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
@@ -5377,7 +5378,7 @@ Defined below.
 <a href="#state_logging_scalyrs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>scalyrs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingscalyr">List[Servicev1Logging<wbr>Scalyr]</a></span>
+        <span class="property-type"><a href="#servicev1loggingscalyr">List[Servicev1Logging<wbr>Scalyr<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
@@ -5389,7 +5390,7 @@ Defined below.
 <a href="#state_logging_sftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>sftps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingsftp">List[Servicev1Logging<wbr>Sftp]</a></span>
+        <span class="property-type"><a href="#servicev1loggingsftp">List[Servicev1Logging<wbr>Sftp<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
@@ -5412,7 +5413,7 @@ Defined below.
 <a href="#state_papertrails_python" style="color: inherit; text-decoration: inherit;">papertrails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1papertrail">List[Servicev1Papertrail]</a></span>
+        <span class="property-type"><a href="#servicev1papertrail">List[Servicev1Papertrail<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
@@ -5424,7 +5425,7 @@ Defined below.
 <a href="#state_request_settings_python" style="color: inherit; text-decoration: inherit;">request_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1requestsetting">List[Servicev1Request<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#servicev1requestsetting">List[Servicev1Request<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Request modifiers. Defined below
 {{% /md %}}</dd>
@@ -5435,7 +5436,7 @@ Defined below.
 <a href="#state_response_objects_python" style="color: inherit; text-decoration: inherit;">response_<wbr>objects</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1responseobject">List[Servicev1Response<wbr>Object]</a></span>
+        <span class="property-type"><a href="#servicev1responseobject">List[Servicev1Response<wbr>Object<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allows you to create synthetic responses that exist entirely on the varnish machine. Useful for creating error or maintenance pages that exists outside the scope of your datacenter. Best when used with Condition objects.
 {{% /md %}}</dd>
@@ -5446,7 +5447,7 @@ Defined below.
 <a href="#state_s3loggings_python" style="color: inherit; text-decoration: inherit;">s3loggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1s3logging">List[Servicev1S3logging]</a></span>
+        <span class="property-type"><a href="#servicev1s3logging">List[Servicev1S3logging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
@@ -5458,7 +5459,7 @@ Defined below.
 <a href="#state_snippets_python" style="color: inherit; text-decoration: inherit;">snippets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1snippet">List[Servicev1Snippet]</a></span>
+        <span class="property-type"><a href="#servicev1snippet">List[Servicev1Snippet<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of custom, "regular" (non-dynamic) VCL Snippet configuration blocks.  Defined below.
 {{% /md %}}</dd>
@@ -5469,7 +5470,7 @@ Defined below.
 <a href="#state_splunks_python" style="color: inherit; text-decoration: inherit;">splunks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1splunk">List[Servicev1Splunk]</a></span>
+        <span class="property-type"><a href="#servicev1splunk">List[Servicev1Splunk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
@@ -5481,7 +5482,7 @@ Defined below.
 <a href="#state_sumologics_python" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1sumologic">List[Servicev1Sumologic]</a></span>
+        <span class="property-type"><a href="#servicev1sumologic">List[Servicev1Sumologic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
@@ -5493,7 +5494,7 @@ Defined below.
 <a href="#state_syslogs_python" style="color: inherit; text-decoration: inherit;">syslogs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1syslog">List[Servicev1Syslog]</a></span>
+        <span class="property-type"><a href="#servicev1syslog">List[Servicev1Syslog<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
@@ -5505,7 +5506,7 @@ Defined below.
 <a href="#state_vcls_python" style="color: inherit; text-decoration: inherit;">vcls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1vcl">List[Servicev1Vcl]</a></span>
+        <span class="property-type"><a href="#servicev1vcl">List[Servicev1Vcl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of custom VCL configuration blocks. See the [Fastly documentation](https://docs.fastly.com/vcl/custom-vcl/uploading-custom-vcl/) for more information on using custom VCL.
 {{% /md %}}</dd>
@@ -6570,8 +6571,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoloadbalance_python">
-<a href="#autoloadbalance_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Loadbalance</a>
+        <span id="auto_loadbalance_python">
+<a href="#auto_loadbalance_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>loadbalance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6583,8 +6584,8 @@ Default `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="betweenbytestimeout_python">
-<a href="#betweenbytestimeout_python" style="color: inherit; text-decoration: inherit;">between<wbr>Bytes<wbr>Timeout</a>
+        <span id="between_bytes_timeout_python">
+<a href="#between_bytes_timeout_python" style="color: inherit; text-decoration: inherit;">between_<wbr>bytes_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6594,8 +6595,8 @@ Default `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connecttimeout_python">
-<a href="#connecttimeout_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
+        <span id="connect_timeout_python">
+<a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6606,8 +6607,8 @@ Default `1000`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errorthreshold_python">
-<a href="#errorthreshold_python" style="color: inherit; text-decoration: inherit;">error<wbr>Threshold</a>
+        <span id="error_threshold_python">
+<a href="#error_threshold_python" style="color: inherit; text-decoration: inherit;">error_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6617,8 +6618,8 @@ Default `1000`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="firstbytetimeout_python">
-<a href="#firstbytetimeout_python" style="color: inherit; text-decoration: inherit;">first<wbr>Byte<wbr>Timeout</a>
+        <span id="first_byte_timeout_python">
+<a href="#first_byte_timeout_python" style="color: inherit; text-decoration: inherit;">first_<wbr>byte_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6639,8 +6640,8 @@ Default `1000`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconn_python">
-<a href="#maxconn_python" style="color: inherit; text-decoration: inherit;">max<wbr>Conn</a>
+        <span id="max_conn_python">
+<a href="#max_conn_python" style="color: inherit; text-decoration: inherit;">max_<wbr>conn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6651,8 +6652,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxtlsversion_python">
-<a href="#maxtlsversion_python" style="color: inherit; text-decoration: inherit;">max<wbr>Tls<wbr>Version</a>
+        <span id="max_tls_version_python">
+<a href="#max_tls_version_python" style="color: inherit; text-decoration: inherit;">max_<wbr>tls_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6662,8 +6663,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mintlsversion_python">
-<a href="#mintlsversion_python" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
+        <span id="min_tls_version_python">
+<a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6673,8 +6674,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="overridehost_python">
-<a href="#overridehost_python" style="color: inherit; text-decoration: inherit;">override<wbr>Host</a>
+        <span id="override_host_python">
+<a href="#override_host_python" style="color: inherit; text-decoration: inherit;">override_<wbr>host</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6695,8 +6696,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestcondition_python">
-<a href="#requestcondition_python" style="color: inherit; text-decoration: inherit;">request<wbr>Condition</a>
+        <span id="request_condition_python">
+<a href="#request_condition_python" style="color: inherit; text-decoration: inherit;">request_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6717,8 +6718,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslcacert_python">
-<a href="#sslcacert_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Ca<wbr>Cert</a>
+        <span id="ssl_ca_cert_python">
+<a href="#ssl_ca_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>ca_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6728,8 +6729,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslcerthostname_python">
-<a href="#sslcerthostname_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert<wbr>Hostname</a>
+        <span id="ssl_cert_hostname_python">
+<a href="#ssl_cert_hostname_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cert_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6739,8 +6740,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslcheckcert_python">
-<a href="#sslcheckcert_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Check<wbr>Cert</a>
+        <span id="ssl_check_cert_python">
+<a href="#ssl_check_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>check_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6750,8 +6751,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslciphers_python">
-<a href="#sslciphers_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Ciphers</a>
+        <span id="ssl_ciphers_python">
+<a href="#ssl_ciphers_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>ciphers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6761,8 +6762,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslclientcert_python">
-<a href="#sslclientcert_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Cert</a>
+        <span id="ssl_client_cert_python">
+<a href="#ssl_client_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6772,8 +6773,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslclientkey_python">
-<a href="#sslclientkey_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Key</a>
+        <span id="ssl_client_key_python">
+<a href="#ssl_client_key_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6783,8 +6784,8 @@ Default `200`.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="sslhostname_python">
-<a href="#sslhostname_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Hostname</a>
+        <span id="ssl_hostname_python">
+<a href="#ssl_hostname_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6794,8 +6795,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslsnihostname_python">
-<a href="#sslsnihostname_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Sni<wbr>Hostname</a>
+        <span id="ssl_sni_hostname_python">
+<a href="#ssl_sni_hostname_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>sni_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6805,8 +6806,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usessl_python">
-<a href="#usessl_python" style="color: inherit; text-decoration: inherit;">use<wbr>Ssl</a>
+        <span id="use_ssl_python">
+<a href="#use_ssl_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7225,8 +7226,8 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="projectid_python">
-<a href="#projectid_python" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7280,8 +7281,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7291,8 +7292,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secretkey_python">
-<a href="#secretkey_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+        <span id="secret_key_python">
+<a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7821,8 +7822,8 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="accountname_python">
-<a href="#accountname_python" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
+        <span id="account_name_python">
+<a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7854,8 +7855,8 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="sastoken_python">
-<a href="#sastoken_python" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
+        <span id="sas_token_python">
+<a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7876,8 +7877,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7887,8 +7888,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gziplevel_python">
-<a href="#gziplevel_python" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+        <span id="gzip_level_python">
+<a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7898,8 +7899,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7942,8 +7943,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publickey_python">
-<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7953,8 +7954,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7964,8 +7965,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timestampformat_python">
-<a href="#timestampformat_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+        <span id="timestamp_format_python">
+<a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8215,8 +8216,8 @@ perform an action. When set it can be `lookup` or `pass` (Ignore the cache compl
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cachecondition_python">
-<a href="#cachecondition_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Condition</a>
+        <span id="cache_condition_python">
+<a href="#cache_condition_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8227,8 +8228,8 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
     <dt class="property-optional"
             title="Optional">
-        <span id="stalettl_python">
-<a href="#stalettl_python" style="color: inherit; text-decoration: inherit;">stale<wbr>Ttl</a>
+        <span id="stale_ttl_python">
+<a href="#stale_ttl_python" style="color: inherit; text-decoration: inherit;">stale_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8647,8 +8648,8 @@ the items are managed outside of the provider.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="writeonly_python">
-<a href="#writeonly_python" style="color: inherit; text-decoration: inherit;">write<wbr>Only</a>
+        <span id="write_only_python">
+<a href="#write_only_python" style="color: inherit; text-decoration: inherit;">write_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9857,8 +9858,8 @@ the items are managed outside of the provider.
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketname_python">
-<a href="#bucketname_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9901,8 +9902,8 @@ the items are managed outside of the provider.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gziplevel_python">
-<a href="#gziplevel_python" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+        <span id="gzip_level_python">
+<a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -9912,8 +9913,8 @@ the items are managed outside of the provider.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9956,8 +9957,8 @@ the items are managed outside of the provider.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9967,8 +9968,8 @@ the items are managed outside of the provider.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secretkey_python">
-<a href="#secretkey_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+        <span id="secret_key_python">
+<a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9978,8 +9979,8 @@ the items are managed outside of the provider.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timestampformat_python">
-<a href="#timestampformat_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+        <span id="timestamp_format_python">
+<a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10187,8 +10188,8 @@ gzip. Example: `["css", "js"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cachecondition_python">
-<a href="#cachecondition_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Condition</a>
+        <span id="cache_condition_python">
+<a href="#cache_condition_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10199,8 +10200,8 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contenttypes_python">
-<a href="#contenttypes_python" style="color: inherit; text-decoration: inherit;">content<wbr>Types</a>
+        <span id="content_types_python">
+<a href="#content_types_python" style="color: inherit; text-decoration: inherit;">content_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -10719,8 +10720,8 @@ perform an action. When set it can be `lookup` or `pass` (Ignore the cache compl
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cachecondition_python">
-<a href="#cachecondition_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Condition</a>
+        <span id="cache_condition_python">
+<a href="#cache_condition_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10731,8 +10732,8 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ignoreifset_python">
-<a href="#ignoreifset_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>If<wbr>Set</a>
+        <span id="ignore_if_set_python">
+<a href="#ignore_if_set_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>if_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -10764,8 +10765,8 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestcondition_python">
-<a href="#requestcondition_python" style="color: inherit; text-decoration: inherit;">request<wbr>Condition</a>
+        <span id="request_condition_python">
+<a href="#request_condition_python" style="color: inherit; text-decoration: inherit;">request_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10775,8 +10776,8 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11251,8 +11252,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="checkinterval_python">
-<a href="#checkinterval_python" style="color: inherit; text-decoration: inherit;">check<wbr>Interval</a>
+        <span id="check_interval_python">
+<a href="#check_interval_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -11262,8 +11263,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="expectedresponse_python">
-<a href="#expectedresponse_python" style="color: inherit; text-decoration: inherit;">expected<wbr>Response</a>
+        <span id="expected_response_python">
+<a href="#expected_response_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>response</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -11273,8 +11274,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpversion_python">
-<a href="#httpversion_python" style="color: inherit; text-decoration: inherit;">http<wbr>Version</a>
+        <span id="http_version_python">
+<a href="#http_version_python" style="color: inherit; text-decoration: inherit;">http_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12001,8 +12002,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contenttype_python">
-<a href="#contenttype_python" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
+        <span id="content_type_python">
+<a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12023,8 +12024,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -12034,8 +12035,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="headername_python">
-<a href="#headername_python" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12045,8 +12046,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="headervalue_python">
-<a href="#headervalue_python" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+        <span id="header_value_python">
+<a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12056,8 +12057,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="jsonformat_python">
-<a href="#jsonformat_python" style="color: inherit; text-decoration: inherit;">json<wbr>Format</a>
+        <span id="json_format_python">
+<a href="#json_format_python" style="color: inherit; text-decoration: inherit;">json_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12067,8 +12068,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12100,8 +12101,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestmaxbytes_python">
-<a href="#requestmaxbytes_python" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Bytes</a>
+        <span id="request_max_bytes_python">
+<a href="#request_max_bytes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -12111,8 +12112,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestmaxentries_python">
-<a href="#requestmaxentries_python" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Entries</a>
+        <span id="request_max_entries_python">
+<a href="#request_max_entries_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>entries</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -12122,8 +12123,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12133,8 +12134,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlscacert_python">
-<a href="#tlscacert_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
+        <span id="tls_ca_cert_python">
+<a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12144,8 +12145,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlsclientcert_python">
-<a href="#tlsclientcert_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
+        <span id="tls_client_cert_python">
+<a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12155,8 +12156,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlsclientkey_python">
-<a href="#tlsclientkey_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
+        <span id="tls_client_key_python">
+<a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12166,8 +12167,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlshostname_python">
-<a href="#tlshostname_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
+        <span id="tls_hostname_python">
+<a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12520,8 +12521,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -12553,8 +12554,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12564,8 +12565,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usetls_python">
-<a href="#usetls_python" style="color: inherit; text-decoration: inherit;">use<wbr>Tls</a>
+        <span id="use_tls_python">
+<a href="#use_tls_python" style="color: inherit; text-decoration: inherit;">use_<wbr>tls</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -13116,8 +13117,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-required"
             title="Required">
-        <span id="accesskey_python">
-<a href="#accesskey_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+        <span id="access_key_python">
+<a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13127,8 +13128,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketname_python">
-<a href="#bucketname_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13171,8 +13172,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -13182,8 +13183,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gziplevel_python">
-<a href="#gziplevel_python" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+        <span id="gzip_level_python">
+<a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -13193,8 +13194,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13237,8 +13238,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publickey_python">
-<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13259,8 +13260,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13270,8 +13271,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timestampformat_python">
-<a href="#timestampformat_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+        <span id="timestamp_format_python">
+<a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13591,8 +13592,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -13624,8 +13625,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14176,8 +14177,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-required"
             title="Required">
-        <span id="accesskey_python">
-<a href="#accesskey_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+        <span id="access_key_python">
+<a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14187,8 +14188,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketname_python">
-<a href="#bucketname_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14209,8 +14210,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-required"
             title="Required">
-        <span id="secretkey_python">
-<a href="#secretkey_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+        <span id="secret_key_python">
+<a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14242,8 +14243,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -14253,8 +14254,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gziplevel_python">
-<a href="#gziplevel_python" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+        <span id="gzip_level_python">
+<a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -14264,8 +14265,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14308,8 +14309,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publickey_python">
-<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14319,8 +14320,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14330,8 +14331,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timestampformat_python">
-<a href="#timestampformat_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+        <span id="timestamp_format_python">
+<a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14959,8 +14960,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -15003,8 +15004,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestmaxbytes_python">
-<a href="#requestmaxbytes_python" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Bytes</a>
+        <span id="request_max_bytes_python">
+<a href="#request_max_bytes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -15014,8 +15015,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestmaxentries_python">
-<a href="#requestmaxentries_python" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Entries</a>
+        <span id="request_max_entries_python">
+<a href="#request_max_entries_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>entries</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -15025,8 +15026,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15036,8 +15037,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlscacert_python">
-<a href="#tlscacert_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
+        <span id="tls_ca_cert_python">
+<a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15047,8 +15048,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlsclientcert_python">
-<a href="#tlsclientcert_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
+        <span id="tls_client_cert_python">
+<a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15058,8 +15059,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlsclientkey_python">
-<a href="#tlsclientkey_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
+        <span id="tls_client_key_python">
+<a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15069,8 +15070,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlshostname_python">
-<a href="#tlshostname_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
+        <span id="tls_hostname_python">
+<a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15698,8 +15699,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -15709,8 +15710,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gziplevel_python">
-<a href="#gziplevel_python" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+        <span id="gzip_level_python">
+<a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -15720,8 +15721,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15764,8 +15765,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publickey_python">
-<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15775,8 +15776,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15786,8 +15787,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timestampformat_python">
-<a href="#timestampformat_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+        <span id="timestamp_format_python">
+<a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16151,8 +16152,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-required"
             title="Required">
-        <span id="projectid_python">
-<a href="#projectid_python" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16162,8 +16163,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-required"
             title="Required">
-        <span id="secretkey_python">
-<a href="#secretkey_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+        <span id="secret_key_python">
+<a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16206,8 +16207,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -16228,8 +16229,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16560,8 +16561,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -16582,8 +16583,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16914,8 +16915,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -16936,8 +16937,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17488,8 +17489,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="compressioncodec_python">
-<a href="#compressioncodec_python" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
+        <span id="compression_codec_python">
+<a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17510,8 +17511,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -17532,8 +17533,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requiredacks_python">
-<a href="#requiredacks_python" style="color: inherit; text-decoration: inherit;">required<wbr>Acks</a>
+        <span id="required_acks_python">
+<a href="#required_acks_python" style="color: inherit; text-decoration: inherit;">required_<wbr>acks</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17543,8 +17544,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17554,8 +17555,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlscacert_python">
-<a href="#tlscacert_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
+        <span id="tls_ca_cert_python">
+<a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17565,8 +17566,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlsclientcert_python">
-<a href="#tlsclientcert_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
+        <span id="tls_client_cert_python">
+<a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17576,8 +17577,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlsclientkey_python">
-<a href="#tlsclientkey_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
+        <span id="tls_client_key_python">
+<a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17587,8 +17588,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlshostname_python">
-<a href="#tlshostname_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
+        <span id="tls_hostname_python">
+<a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17598,8 +17599,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usetls_python">
-<a href="#usetls_python" style="color: inherit; text-decoration: inherit;">use<wbr>Tls</a>
+        <span id="use_tls_python">
+<a href="#use_tls_python" style="color: inherit; text-decoration: inherit;">use_<wbr>tls</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -17886,8 +17887,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -17908,8 +17909,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -18240,8 +18241,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -18262,8 +18263,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -18550,8 +18551,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -18572,8 +18573,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -19124,8 +19125,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-required"
             title="Required">
-        <span id="accesskey_python">
-<a href="#accesskey_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+        <span id="access_key_python">
+<a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -19135,8 +19136,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketname_python">
-<a href="#bucketname_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -19190,8 +19191,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -19201,8 +19202,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gziplevel_python">
-<a href="#gziplevel_python" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+        <span id="gzip_level_python">
+<a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -19212,8 +19213,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -19256,8 +19257,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publickey_python">
-<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -19267,8 +19268,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -19278,8 +19279,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timestampformat_python">
-<a href="#timestampformat_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+        <span id="timestamp_format_python">
+<a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -19599,8 +19600,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -19632,8 +19633,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -20283,8 +20284,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-required"
             title="Required">
-        <span id="sshknownhosts_python">
-<a href="#sshknownhosts_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Known<wbr>Hosts</a>
+        <span id="ssh_known_hosts_python">
+<a href="#ssh_known_hosts_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>known_<wbr>hosts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -20316,8 +20317,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -20327,8 +20328,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gziplevel_python">
-<a href="#gziplevel_python" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+        <span id="gzip_level_python">
+<a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -20338,8 +20339,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -20393,8 +20394,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publickey_python">
-<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -20404,8 +20405,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -20415,8 +20416,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secretkey_python">
-<a href="#secretkey_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+        <span id="secret_key_python">
+<a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -20426,8 +20427,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timestampformat_python">
-<a href="#timestampformat_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+        <span id="timestamp_format_python">
+<a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -20736,8 +20737,8 @@ content. (Does not apply to the `delete` action.)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -21236,8 +21237,8 @@ perform an action. When set it can be `lookup` or `pass` (Ignore the cache compl
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bypassbusywait_python">
-<a href="#bypassbusywait_python" style="color: inherit; text-decoration: inherit;">bypass<wbr>Busy<wbr>Wait</a>
+        <span id="bypass_busy_wait_python">
+<a href="#bypass_busy_wait_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>busy_<wbr>wait</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -21259,8 +21260,8 @@ for other objects to origin.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="forcemiss_python">
-<a href="#forcemiss_python" style="color: inherit; text-decoration: inherit;">force<wbr>Miss</a>
+        <span id="force_miss_python">
+<a href="#force_miss_python" style="color: inherit; text-decoration: inherit;">force_<wbr>miss</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -21271,8 +21272,8 @@ can be `true` or `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="forcessl_python">
-<a href="#forcessl_python" style="color: inherit; text-decoration: inherit;">force<wbr>Ssl</a>
+        <span id="force_ssl_python">
+<a href="#force_ssl_python" style="color: inherit; text-decoration: inherit;">force_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -21282,8 +21283,8 @@ can be `true` or `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="geoheaders_python">
-<a href="#geoheaders_python" style="color: inherit; text-decoration: inherit;">geo<wbr>Headers</a>
+        <span id="geo_headers_python">
+<a href="#geo_headers_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -21294,8 +21295,8 @@ Fastly-Geo-Region into the request headers.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hashkeys_python">
-<a href="#hashkeys_python" style="color: inherit; text-decoration: inherit;">hash<wbr>Keys</a>
+        <span id="hash_keys_python">
+<a href="#hash_keys_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -21306,8 +21307,8 @@ that should be in the hash key.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxstaleage_python">
-<a href="#maxstaleage_python" style="color: inherit; text-decoration: inherit;">max<wbr>Stale<wbr>Age</a>
+        <span id="max_stale_age_python">
+<a href="#max_stale_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>stale_<wbr>age</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -21318,8 +21319,8 @@ that should be in the hash key.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestcondition_python">
-<a href="#requestcondition_python" style="color: inherit; text-decoration: inherit;">request<wbr>Condition</a>
+        <span id="request_condition_python">
+<a href="#request_condition_python" style="color: inherit; text-decoration: inherit;">request_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -21329,8 +21330,8 @@ that should be in the hash key.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timersupport_python">
-<a href="#timersupport_python" style="color: inherit; text-decoration: inherit;">timer<wbr>Support</a>
+        <span id="timer_support_python">
+<a href="#timer_support_python" style="color: inherit; text-decoration: inherit;">timer_<wbr>support</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -21644,8 +21645,8 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cachecondition_python">
-<a href="#cachecondition_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Condition</a>
+        <span id="cache_condition_python">
+<a href="#cache_condition_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -21667,8 +21668,8 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contenttype_python">
-<a href="#contenttype_python" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
+        <span id="content_type_python">
+<a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -21678,8 +21679,8 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestcondition_python">
-<a href="#requestcondition_python" style="color: inherit; text-decoration: inherit;">request<wbr>Condition</a>
+        <span id="request_condition_python">
+<a href="#request_condition_python" style="color: inherit; text-decoration: inherit;">request_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -22363,8 +22364,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketname_python">
-<a href="#bucketname_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -22407,8 +22408,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -22418,8 +22419,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gziplevel_python">
-<a href="#gziplevel_python" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+        <span id="gzip_level_python">
+<a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -22429,8 +22430,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -22473,8 +22474,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publickey_python">
-<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -22495,8 +22496,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -22506,8 +22507,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="s3accesskey_python">
-<a href="#s3accesskey_python" style="color: inherit; text-decoration: inherit;">s3Access<wbr>Key</a>
+        <span id="s3_access_key_python">
+<a href="#s3_access_key_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -22520,8 +22521,8 @@ not be encrypted. You can provide this key via an environment variable, `FASTLY_
 
     <dt class="property-optional"
             title="Optional">
-        <span id="s3secretkey_python">
-<a href="#s3secretkey_python" style="color: inherit; text-decoration: inherit;">s3Secret<wbr>Key</a>
+        <span id="s3_secret_key_python">
+<a href="#s3_secret_key_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>secret_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -22534,8 +22535,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serversideencryption_python">
-<a href="#serversideencryption_python" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption</a>
+        <span id="server_side_encryption_python">
+<a href="#server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -22544,8 +22545,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serversideencryptionkmskeyid_python">
-<a href="#serversideencryptionkmskeyid_python" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption<wbr>Kms<wbr>Key<wbr>Id</a>
+        <span id="server_side_encryption_kms_key_id_python">
+<a href="#server_side_encryption_kms_key_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>kms_<wbr>key_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -22554,8 +22555,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timestampformat_python">
-<a href="#timestampformat_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+        <span id="timestamp_format_python">
+<a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -23174,8 +23175,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -23196,8 +23197,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -23207,8 +23208,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlscacert_python">
-<a href="#tlscacert_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
+        <span id="tls_ca_cert_python">
+<a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -23218,8 +23219,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlshostname_python">
-<a href="#tlshostname_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
+        <span id="tls_hostname_python">
+<a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -23539,8 +23540,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -23550,8 +23551,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -23572,8 +23573,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -24124,8 +24125,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -24135,8 +24136,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -24168,8 +24169,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecondition_python">
-<a href="#responsecondition_python" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -24179,8 +24180,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlscacert_python">
-<a href="#tlscacert_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
+        <span id="tls_ca_cert_python">
+<a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -24190,8 +24191,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlsclientcert_python">
-<a href="#tlsclientcert_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
+        <span id="tls_client_cert_python">
+<a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -24201,8 +24202,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlsclientkey_python">
-<a href="#tlsclientkey_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
+        <span id="tls_client_key_python">
+<a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -24212,8 +24213,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlshostname_python">
-<a href="#tlshostname_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
+        <span id="tls_hostname_python">
+<a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -24234,8 +24235,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usetls_python">
-<a href="#usetls_python" style="color: inherit; text-decoration: inherit;">use<wbr>Tls</a>
+        <span id="use_tls_python">
+<a href="#use_tls_python" style="color: inherit; text-decoration: inherit;">use_<wbr>tls</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
