@@ -290,9 +290,7 @@ As mentioned previously, `GITHUB_SCOPE` sets the type of access the CMS has for 
 
 ### Create a Certificate for the OAuth Server
 
-The process is similar to how we created a certificate for CMS in our [previous post]({{< relref "/blog/deploying-netlify-cms-on-aws" >}}).
-
-We can extract what we need just for creating the certificate and delete irrelevant parts including uploading content to the S3 bucket and configure CloudFront. Then the rest only involves creating an east region provider, a certificate, and certificate validation.
+The process is similar to how we created a certificate for CMS in our [previous post]({{< relref "/blog/deploying-netlify-cms-on-aws" >}}). We use just what we need just for creating the certificate.
 
 When we create the Alias Record, we configure it with application load balancer settings.
 
@@ -340,11 +338,9 @@ backend:
   name: github
   # Replace this with the Github repo you want to make change
   repo: github-username/target-github-repo
-  # This site_domain and base_url are sudo domains
-  # Replace site_domain with targetDomain pulumi stack configuration inside cms/infrastructure folder
-  # Replace base_url with targetDomain pulumi stack configuration inside cms-oauth/infrastructure folder
-  site_domain: https://some-cms-domain.com
-  base_url: https://some-oauth-domain.com
+  # This site_domain and base_url are placeholders, replace with the correct one.
+  site_domain: https://some-cms-domain.com # CMS's domain
+  base_url: https://some-oauth-domain.com # OAuth Server's domain
 ```
 
 The site_domain is the URL of the CMS and the base_url is the URL of the OAuth Server . They should be the same as the `targetDomain` variable we set in the stack configuration of both CMS and OAuth Server.
