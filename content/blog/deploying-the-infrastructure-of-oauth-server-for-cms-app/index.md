@@ -290,7 +290,7 @@ As mentioned previously, `GITHUB_SCOPE` sets the type of access the CMS has for 
 
 ### Create a Certificate for the OAuth Server
 
-The process is similar to how we created a certificate for CMS in our [previous post]({{< relref "/blog/deploying-netlify-cms-on-aws" >}}). We use just what we need just for creating the certificate.
+The process is similar to how we created a certificate for CMS in our [previous post]({{< relref "/blog/deploying-netlify-cms-on-aws" >}}). We use what we need just for creating the certificate.
 
 When we create the Alias Record, we configure it with application load balancer settings.
 
