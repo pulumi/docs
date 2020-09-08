@@ -10,7 +10,7 @@ tags: ["aws","netlify-cms","github-oauth","ecs-fargate", "github-actions"]
 
 In our [previous post]({{< relref "/blog/deploying-netlify-cms-on-aws" >}}), we deployed our CMS app on AWS instead of Netlify. We couldn't use [Netlify's Identity Service](https://docs.netlify.com/visitor-access/identity/#enable-identity-in-the-ui), which manages Github access to Netlify CMS, because we deployed on AWS. As a result, we need to implement an [External OAuth Server](https://www.netlifycms.org/docs/external-oauth-clients/#header).
 
-We used the Netlify CMS Go example to deploy on ECS Fargate and configured the domain and certificate. We'll show how we accomplished the deployment.
+We used Netlify's Go example to deploy on ECS Fargate and configure the domain and certificate. We'll show how we accomplished the deployment.
 
 <!--more-->
 
