@@ -62,7 +62,7 @@ A Pulumi package for creating and managing keycloak cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>2.5.0</dd>
 </dl>
 
 

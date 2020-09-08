@@ -160,7 +160,7 @@ In addition to the arguments listed above, the following computed attributes are
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/openid/#pulumi_keycloak.openid.Client">Client</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_token_lifespan=None<span class="p">, </span>access_type=None<span class="p">, </span>admin_url=None<span class="p">, </span>authentication_flow_binding_overrides=None<span class="p">, </span>authorization=None<span class="p">, </span>base_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>consent_required=None<span class="p">, </span>description=None<span class="p">, </span>direct_access_grants_enabled=None<span class="p">, </span>enabled=None<span class="p">, </span>exclude_session_state_from_auth_response=None<span class="p">, </span>full_scope_allowed=None<span class="p">, </span>implicit_flow_enabled=None<span class="p">, </span>login_theme=None<span class="p">, </span>name=None<span class="p">, </span>pkce_code_challenge_method=None<span class="p">, </span>realm_id=None<span class="p">, </span>root_url=None<span class="p">, </span>service_accounts_enabled=None<span class="p">, </span>standard_flow_enabled=None<span class="p">, </span>valid_redirect_uris=None<span class="p">, </span>web_origins=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/openid/#pulumi_keycloak.openid.Client">Client</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_token_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_flow_binding_overrides</span><span class="p">:</span> <span class="nx">Optional[ClientAuthenticationFlowBindingOverridesArgs]</span> = None<span class="p">, </span><span class="nx">authorization</span><span class="p">:</span> <span class="nx">Optional[ClientAuthorizationArgs]</span> = None<span class="p">, </span><span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consent_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direct_access_grants_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">exclude_session_state_from_auth_response</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">full_scope_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">implicit_flow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">login_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pkce_code_challenge_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_accounts_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">standard_flow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">valid_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">web_origins</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1129,7 +1129,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#authentication_flow_binding_overrides_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>flow_<wbr>binding_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">Dict[Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides]</a></span>
+        <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1139,7 +1139,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientauthorization">Dict[Client<wbr>Authorization]</a></span>
+        <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1491,7 +1491,8 @@ Get an existing Client resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_token_lifespan=None<span class="p">, </span>access_type=None<span class="p">, </span>admin_url=None<span class="p">, </span>authentication_flow_binding_overrides=None<span class="p">, </span>authorization=None<span class="p">, </span>base_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>consent_required=None<span class="p">, </span>description=None<span class="p">, </span>direct_access_grants_enabled=None<span class="p">, </span>enabled=None<span class="p">, </span>exclude_session_state_from_auth_response=None<span class="p">, </span>full_scope_allowed=None<span class="p">, </span>implicit_flow_enabled=None<span class="p">, </span>login_theme=None<span class="p">, </span>name=None<span class="p">, </span>pkce_code_challenge_method=None<span class="p">, </span>realm_id=None<span class="p">, </span>resource_server_id=None<span class="p">, </span>root_url=None<span class="p">, </span>service_account_user_id=None<span class="p">, </span>service_accounts_enabled=None<span class="p">, </span>standard_flow_enabled=None<span class="p">, </span>valid_redirect_uris=None<span class="p">, </span>web_origins=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_token_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_flow_binding_overrides</span><span class="p">:</span> <span class="nx">Optional[ClientAuthenticationFlowBindingOverridesArgs]</span> = None<span class="p">, </span><span class="nx">authorization</span><span class="p">:</span> <span class="nx">Optional[ClientAuthorizationArgs]</span> = None<span class="p">, </span><span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consent_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direct_access_grants_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">exclude_session_state_from_auth_response</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">full_scope_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">implicit_flow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">login_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pkce_code_challenge_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_accounts_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">standard_flow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">valid_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">web_origins</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> Client</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1499,7 +1500,7 @@ Get an existing Client resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Client.html">Client</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.ClientState.html">ClientState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Client.html">Client</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.ClientState.html">ClientState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2442,7 +2443,7 @@ The following state arguments are supported:
 <a href="#state_authentication_flow_binding_overrides_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>flow_<wbr>binding_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">Dict[Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides]</a></span>
+        <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2452,7 +2453,7 @@ The following state arguments are supported:
 <a href="#state_authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientauthorization">Dict[Client<wbr>Authorization]</a></span>
+        <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2782,8 +2783,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="browserid_python">
-<a href="#browserid_python" style="color: inherit; text-decoration: inherit;">browser<wbr>Id</a>
+        <span id="browser_id_python">
+<a href="#browser_id_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2792,8 +2793,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="directgrantid_python">
-<a href="#directgrantid_python" style="color: inherit; text-decoration: inherit;">direct<wbr>Grant<wbr>Id</a>
+        <span id="direct_grant_id_python">
+<a href="#direct_grant_id_python" style="color: inherit; text-decoration: inherit;">direct_<wbr>grant_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2938,8 +2939,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="policyenforcementmode_python">
-<a href="#policyenforcementmode_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Enforcement<wbr>Mode</a>
+        <span id="policy_enforcement_mode_python">
+<a href="#policy_enforcement_mode_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>enforcement_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2948,8 +2949,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowremoteresourcemanagement_python">
-<a href="#allowremoteresourcemanagement_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Remote<wbr>Resource<wbr>Management</a>
+        <span id="allow_remote_resource_management_python">
+<a href="#allow_remote_resource_management_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>remote_<wbr>resource_<wbr>management</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2958,8 +2959,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keepdefaults_python">
-<a href="#keepdefaults_python" style="color: inherit; text-decoration: inherit;">keep<wbr>Defaults</a>
+        <span id="keep_defaults_python">
+<a href="#keep_defaults_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>defaults</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

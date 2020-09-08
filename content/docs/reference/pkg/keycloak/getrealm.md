@@ -70,7 +70,7 @@ func main() {
 			return err
 		}
 		_, err = keycloak.NewRole(ctx, "group", &keycloak.RoleArgs{
-			RealmId: pulumi.String(data.Keycloak_realm.Id),
+			RealmId: pulumi.Any(data.Keycloak_realm.Id),
 		})
 		if err != nil {
 			return err
@@ -103,7 +103,7 @@ See the docs for the `keycloak.Realm` resource for details on the exported attri
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_realm(</span>attributes=None<span class="p">, </span>display_name_html=None<span class="p">, </span>internationalizations=None<span class="p">, </span>realm=None<span class="p">, </span>security_defenses=None<span class="p">, </span>smtp_servers=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_realm(</span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">display_name_html</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internationalizations</span><span class="p">:</span> <span class="nx">Optional[List[GetRealmInternationalizationArgs]]</span> = None<span class="p">, </span><span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_defenses</span><span class="p">:</span> <span class="nx">Optional[List[GetRealmSecurityDefenseArgs]]</span> = None<span class="p">, </span><span class="nx">smtp_servers</span><span class="p">:</span> <span class="nx">Optional[List[GetRealmSmtpServerArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRealmResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -347,7 +347,7 @@ The following arguments are supported:
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -367,7 +367,7 @@ The following arguments are supported:
 <a href="#internationalizations_python" style="color: inherit; text-decoration: inherit;">internationalizations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealminternationalization">List[Get<wbr>Realm<wbr>Internationalization]</a></span>
+        <span class="property-type"><a href="#getrealminternationalization">List[Get<wbr>Realm<wbr>Internationalization<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -377,7 +377,7 @@ The following arguments are supported:
 <a href="#security_defenses_python" style="color: inherit; text-decoration: inherit;">security_<wbr>defenses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmsecuritydefense">List[Get<wbr>Realm<wbr>Security<wbr>Defense]</a></span>
+        <span class="property-type"><a href="#getrealmsecuritydefense">List[Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -387,7 +387,7 @@ The following arguments are supported:
 <a href="#smtp_servers_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmsmtpserver">List[Get<wbr>Realm<wbr>Smtp<wbr>Server]</a></span>
+        <span class="property-type"><a href="#getrealmsmtpserver">List[Get<wbr>Realm<wbr>Smtp<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1821,7 +1821,7 @@ The following output properties are available:
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2270,8 +2270,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="defaultlocale_python">
-<a href="#defaultlocale_python" style="color: inherit; text-decoration: inherit;">default<wbr>Locale</a>
+        <span id="default_locale_python">
+<a href="#default_locale_python" style="color: inherit; text-decoration: inherit;">default_<wbr>locale</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2280,8 +2280,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="supportedlocales_python">
-<a href="#supportedlocales_python" style="color: inherit; text-decoration: inherit;">supported<wbr>Locales</a>
+        <span id="supported_locales_python">
+<a href="#supported_locales_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>locales</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2396,11 +2396,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="bruteforcedetections_python">
-<a href="#bruteforcedetections_python" style="color: inherit; text-decoration: inherit;">brute<wbr>Force<wbr>Detections</a>
+        <span id="brute_force_detections_python">
+<a href="#brute_force_detections_python" style="color: inherit; text-decoration: inherit;">brute_<wbr>force_<wbr>detections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmsecuritydefensebruteforcedetection">List[Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Brute<wbr>Force<wbr>Detection]</a></span>
+        <span class="property-type"><a href="#getrealmsecuritydefensebruteforcedetection">List[Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Brute<wbr>Force<wbr>Detection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2410,7 +2410,7 @@ The following output properties are available:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmsecuritydefenseheader">List[Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Header]</a></span>
+        <span class="property-type"><a href="#getrealmsecuritydefenseheader">List[Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2672,8 +2672,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="failureresettimeseconds_python">
-<a href="#failureresettimeseconds_python" style="color: inherit; text-decoration: inherit;">failure<wbr>Reset<wbr>Time<wbr>Seconds</a>
+        <span id="failure_reset_time_seconds_python">
+<a href="#failure_reset_time_seconds_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>reset_<wbr>time_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2682,8 +2682,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxfailurewaitseconds_python">
-<a href="#maxfailurewaitseconds_python" style="color: inherit; text-decoration: inherit;">max<wbr>Failure<wbr>Wait<wbr>Seconds</a>
+        <span id="max_failure_wait_seconds_python">
+<a href="#max_failure_wait_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failure_<wbr>wait_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2692,8 +2692,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxloginfailures_python">
-<a href="#maxloginfailures_python" style="color: inherit; text-decoration: inherit;">max<wbr>Login<wbr>Failures</a>
+        <span id="max_login_failures_python">
+<a href="#max_login_failures_python" style="color: inherit; text-decoration: inherit;">max_<wbr>login_<wbr>failures</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2702,8 +2702,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="minimumquickloginwaitseconds_python">
-<a href="#minimumquickloginwaitseconds_python" style="color: inherit; text-decoration: inherit;">minimum<wbr>Quick<wbr>Login<wbr>Wait<wbr>Seconds</a>
+        <span id="minimum_quick_login_wait_seconds_python">
+<a href="#minimum_quick_login_wait_seconds_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>quick_<wbr>login_<wbr>wait_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2712,8 +2712,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="permanentlockout_python">
-<a href="#permanentlockout_python" style="color: inherit; text-decoration: inherit;">permanent<wbr>Lockout</a>
+        <span id="permanent_lockout_python">
+<a href="#permanent_lockout_python" style="color: inherit; text-decoration: inherit;">permanent_<wbr>lockout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2722,8 +2722,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="quicklogincheckmilliseconds_python">
-<a href="#quicklogincheckmilliseconds_python" style="color: inherit; text-decoration: inherit;">quick<wbr>Login<wbr>Check<wbr>Milli<wbr>Seconds</a>
+        <span id="quick_login_check_milli_seconds_python">
+<a href="#quick_login_check_milli_seconds_python" style="color: inherit; text-decoration: inherit;">quick_<wbr>login_<wbr>check_<wbr>milli_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2732,8 +2732,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="waitincrementseconds_python">
-<a href="#waitincrementseconds_python" style="color: inherit; text-decoration: inherit;">wait<wbr>Increment<wbr>Seconds</a>
+        <span id="wait_increment_seconds_python">
+<a href="#wait_increment_seconds_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>increment_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2998,8 +2998,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="contentsecuritypolicy_python">
-<a href="#contentsecuritypolicy_python" style="color: inherit; text-decoration: inherit;">content<wbr>Security<wbr>Policy</a>
+        <span id="content_security_policy_python">
+<a href="#content_security_policy_python" style="color: inherit; text-decoration: inherit;">content_<wbr>security_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3008,8 +3008,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="contentsecuritypolicyreportonly_python">
-<a href="#contentsecuritypolicyreportonly_python" style="color: inherit; text-decoration: inherit;">content<wbr>Security<wbr>Policy<wbr>Report<wbr>Only</a>
+        <span id="content_security_policy_report_only_python">
+<a href="#content_security_policy_report_only_python" style="color: inherit; text-decoration: inherit;">content_<wbr>security_<wbr>policy_<wbr>report_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3018,8 +3018,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="stricttransportsecurity_python">
-<a href="#stricttransportsecurity_python" style="color: inherit; text-decoration: inherit;">strict<wbr>Transport<wbr>Security</a>
+        <span id="strict_transport_security_python">
+<a href="#strict_transport_security_python" style="color: inherit; text-decoration: inherit;">strict_<wbr>transport_<wbr>security</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3028,8 +3028,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="xcontenttypeoptions_python">
-<a href="#xcontenttypeoptions_python" style="color: inherit; text-decoration: inherit;">x<wbr>Content<wbr>Type<wbr>Options</a>
+        <span id="x_content_type_options_python">
+<a href="#x_content_type_options_python" style="color: inherit; text-decoration: inherit;">x_<wbr>content_<wbr>type_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3038,8 +3038,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="xframeoptions_python">
-<a href="#xframeoptions_python" style="color: inherit; text-decoration: inherit;">x<wbr>Frame<wbr>Options</a>
+        <span id="x_frame_options_python">
+<a href="#x_frame_options_python" style="color: inherit; text-decoration: inherit;">x_<wbr>frame_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3048,8 +3048,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="xrobotstag_python">
-<a href="#xrobotstag_python" style="color: inherit; text-decoration: inherit;">x<wbr>Robots<wbr>Tag</a>
+        <span id="x_robots_tag_python">
+<a href="#x_robots_tag_python" style="color: inherit; text-decoration: inherit;">x_<wbr>robots_<wbr>tag</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3058,8 +3058,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="xxssprotection_python">
-<a href="#xxssprotection_python" style="color: inherit; text-decoration: inherit;">x<wbr>Xss<wbr>Protection</a>
+        <span id="x_xss_protection_python">
+<a href="#x_xss_protection_python" style="color: inherit; text-decoration: inherit;">x_<wbr>xss_<wbr>protection</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3418,14 +3418,14 @@ The following output properties are available:
 <a href="#auths_python" style="color: inherit; text-decoration: inherit;">auths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmsmtpserverauth">List[Get<wbr>Realm<wbr>Smtp<wbr>Server<wbr>Auth]</a></span>
+        <span class="property-type"><a href="#getrealmsmtpserverauth">List[Get<wbr>Realm<wbr>Smtp<wbr>Server<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="envelopefrom_python">
-<a href="#envelopefrom_python" style="color: inherit; text-decoration: inherit;">envelope<wbr>From</a>
+        <span id="envelope_from_python">
+<a href="#envelope_from_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>from</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3434,8 +3434,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="from_python">
-<a href="#from_python" style="color: inherit; text-decoration: inherit;">from</a>
+        <span id="from__python">
+<a href="#from__python" style="color: inherit; text-decoration: inherit;">from_</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3444,8 +3444,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="fromdisplayname_python">
-<a href="#fromdisplayname_python" style="color: inherit; text-decoration: inherit;">from<wbr>Display<wbr>Name</a>
+        <span id="from_display_name_python">
+<a href="#from_display_name_python" style="color: inherit; text-decoration: inherit;">from_<wbr>display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3474,8 +3474,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="replyto_python">
-<a href="#replyto_python" style="color: inherit; text-decoration: inherit;">reply<wbr>To</a>
+        <span id="reply_to_python">
+<a href="#reply_to_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>to</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3484,8 +3484,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="replytodisplayname_python">
-<a href="#replytodisplayname_python" style="color: inherit; text-decoration: inherit;">reply<wbr>To<wbr>Display<wbr>Name</a>
+        <span id="reply_to_display_name_python">
+<a href="#reply_to_display_name_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>to_<wbr>display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

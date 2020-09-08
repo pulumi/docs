@@ -119,7 +119,7 @@ See the docs for the `keycloak.openid.Client` resource for details on the export
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_client(</span>client_id=None<span class="p">, </span>realm_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_client(</span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClientResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -967,7 +967,7 @@ The following output properties are available:
 <a href="#authentication_flow_binding_overrides_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>flow_<wbr>binding_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclientauthenticationflowbindingoverrides">Dict[Get<wbr>Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides]</a></span>
+        <span class="property-type"><a href="#getclientauthenticationflowbindingoverrides">Get<wbr>Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -977,7 +977,7 @@ The following output properties are available:
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclientauthorization">Dict[Get<wbr>Client<wbr>Authorization]</a></span>
+        <span class="property-type"><a href="#getclientauthorization">Get<wbr>Client<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1286,8 +1286,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="browserid_python">
-<a href="#browserid_python" style="color: inherit; text-decoration: inherit;">browser<wbr>Id</a>
+        <span id="browser_id_python">
+<a href="#browser_id_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1296,8 +1296,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="directgrantid_python">
-<a href="#directgrantid_python" style="color: inherit; text-decoration: inherit;">direct<wbr>Grant<wbr>Id</a>
+        <span id="direct_grant_id_python">
+<a href="#direct_grant_id_python" style="color: inherit; text-decoration: inherit;">direct_<wbr>grant_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1412,8 +1412,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="allowremoteresourcemanagement_python">
-<a href="#allowremoteresourcemanagement_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Remote<wbr>Resource<wbr>Management</a>
+        <span id="allow_remote_resource_management_python">
+<a href="#allow_remote_resource_management_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>remote_<wbr>resource_<wbr>management</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1422,8 +1422,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="policyenforcementmode_python">
-<a href="#policyenforcementmode_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Enforcement<wbr>Mode</a>
+        <span id="policy_enforcement_mode_python">
+<a href="#policy_enforcement_mode_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>enforcement_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

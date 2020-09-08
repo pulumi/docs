@@ -41,7 +41,7 @@ The following arguments are supported:
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_realm_keys(</span>algorithms=None<span class="p">, </span>realm_id=None<span class="p">, </span>statuses=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_realm_keys(</span><span class="nx">algorithms</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRealmKeysResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -776,16 +776,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="providerpriority_python">
-<a href="#providerpriority_python" style="color: inherit; text-decoration: inherit;">provider<wbr>Priority</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="provider_id_python">
 <a href="#provider_id_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>id</a>
 </span> 
@@ -796,8 +786,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="publickey_python">
-<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="provider_priority_python">
+<a href="#provider_priority_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
