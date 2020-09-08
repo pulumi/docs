@@ -78,7 +78,7 @@ const appService = new awsx.ecs.FargateService("app-svc", {
 });
 ```
 
-We can safely remove the `randstr` and `dotenv` folders in the OAuth client.
+Because we replaced those functions, ee can remove the `randstr` and `dotenv` folders in the OAuth client.
 
 ### Setting Github Scope
 
