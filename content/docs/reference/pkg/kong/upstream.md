@@ -22,7 +22,7 @@ meta_desc: "Explore the Upstream resource of the Kong package, including example
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kong/#pulumi_kong.Upstream">Upstream</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>hash_fallback=None<span class="p">, </span>hash_fallback_header=None<span class="p">, </span>hash_on=None<span class="p">, </span>hash_on_cookie=None<span class="p">, </span>hash_on_cookie_path=None<span class="p">, </span>hash_on_header=None<span class="p">, </span>healthchecks=None<span class="p">, </span>name=None<span class="p">, </span>slots=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kong/#pulumi_kong.Upstream">Upstream</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hash_fallback</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_fallback_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_on_cookie</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_on_cookie_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_on_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[UpstreamHealthchecksArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slots</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -551,7 +551,7 @@ The Upstream resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#healthchecks_python" style="color: inherit; text-decoration: inherit;">healthchecks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamhealthchecks">Dict[Upstream<wbr>Healthchecks]</a></span>
+        <span class="property-type"><a href="#upstreamhealthchecks">Upstream<wbr>Healthchecks<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -673,7 +673,8 @@ Get an existing Upstream resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>hash_fallback=None<span class="p">, </span>hash_fallback_header=None<span class="p">, </span>hash_on=None<span class="p">, </span>hash_on_cookie=None<span class="p">, </span>hash_on_cookie_path=None<span class="p">, </span>hash_on_header=None<span class="p">, </span>healthchecks=None<span class="p">, </span>name=None<span class="p">, </span>slots=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hash_fallback</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_fallback_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_on_cookie</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_on_cookie_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_on_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[UpstreamHealthchecksArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slots</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> Upstream</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -681,7 +682,7 @@ Get an existing Upstream resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Upstream.html">Upstream</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong..UpstreamState.html">UpstreamState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Upstream.html">Upstream</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong..UpstreamState.html">UpstreamState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1144,7 +1145,7 @@ The following state arguments are supported:
 <a href="#state_healthchecks_python" style="color: inherit; text-decoration: inherit;">healthchecks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamhealthchecks">Dict[Upstream<wbr>Healthchecks]</a></span>
+        <span class="property-type"><a href="#upstreamhealthchecks">Upstream<wbr>Healthchecks<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1288,7 +1289,7 @@ The following state arguments are supported:
 <a href="#active_python" style="color: inherit; text-decoration: inherit;">active</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamhealthchecksactive">Dict[Upstream<wbr>Healthchecks<wbr>Active]</a></span>
+        <span class="property-type"><a href="#upstreamhealthchecksactive">Upstream<wbr>Healthchecks<wbr>Active<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1298,7 +1299,7 @@ The following state arguments are supported:
 <a href="#passive_python" style="color: inherit; text-decoration: inherit;">passive</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamhealthcheckspassive">Dict[Upstream<wbr>Healthchecks<wbr>Passive]</a></span>
+        <span class="property-type"><a href="#upstreamhealthcheckspassive">Upstream<wbr>Healthchecks<wbr>Passive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1604,14 +1605,14 @@ The following state arguments are supported:
 <a href="#healthy_python" style="color: inherit; text-decoration: inherit;">healthy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamhealthchecksactivehealthy">Dict[Upstream<wbr>Healthchecks<wbr>Active<wbr>Healthy]</a></span>
+        <span class="property-type"><a href="#upstreamhealthchecksactivehealthy">Upstream<wbr>Healthchecks<wbr>Active<wbr>Healthy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httppath_python">
-<a href="#httppath_python" style="color: inherit; text-decoration: inherit;">http<wbr>Path</a>
+        <span id="http_path_python">
+<a href="#http_path_python" style="color: inherit; text-decoration: inherit;">http_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1620,8 +1621,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpssni_python">
-<a href="#httpssni_python" style="color: inherit; text-decoration: inherit;">https<wbr>Sni</a>
+        <span id="https_sni_python">
+<a href="#https_sni_python" style="color: inherit; text-decoration: inherit;">https_<wbr>sni</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1630,8 +1631,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpsverifycertificate_python">
-<a href="#httpsverifycertificate_python" style="color: inherit; text-decoration: inherit;">https<wbr>Verify<wbr>Certificate</a>
+        <span id="https_verify_certificate_python">
+<a href="#https_verify_certificate_python" style="color: inherit; text-decoration: inherit;">https_<wbr>verify_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1664,7 +1665,7 @@ The following state arguments are supported:
 <a href="#unhealthy_python" style="color: inherit; text-decoration: inherit;">unhealthy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamhealthchecksactiveunhealthy">Dict[Upstream<wbr>Healthchecks<wbr>Active<wbr>Unhealthy]</a></span>
+        <span class="property-type"><a href="#upstreamhealthchecksactiveunhealthy">Upstream<wbr>Healthchecks<wbr>Active<wbr>Unhealthy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1806,11 +1807,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpstatuses_python">
-<a href="#httpstatuses_python" style="color: inherit; text-decoration: inherit;">http<wbr>Statuses</a>
+        <span id="http_statuses_python">
+<a href="#http_statuses_python" style="color: inherit; text-decoration: inherit;">http_<wbr>statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2032,8 +2033,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpfailures_python">
-<a href="#httpfailures_python" style="color: inherit; text-decoration: inherit;">http<wbr>Failures</a>
+        <span id="http_failures_python">
+<a href="#http_failures_python" style="color: inherit; text-decoration: inherit;">http_<wbr>failures</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2042,11 +2043,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpstatuses_python">
-<a href="#httpstatuses_python" style="color: inherit; text-decoration: inherit;">http<wbr>Statuses</a>
+        <span id="http_statuses_python">
+<a href="#http_statuses_python" style="color: inherit; text-decoration: inherit;">http_<wbr>statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2062,8 +2063,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tcpfailures_python">
-<a href="#tcpfailures_python" style="color: inherit; text-decoration: inherit;">tcp<wbr>Failures</a>
+        <span id="tcp_failures_python">
+<a href="#tcp_failures_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>failures</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2222,7 +2223,7 @@ The following state arguments are supported:
 <a href="#healthy_python" style="color: inherit; text-decoration: inherit;">healthy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamhealthcheckspassivehealthy">Dict[Upstream<wbr>Healthchecks<wbr>Passive<wbr>Healthy]</a></span>
+        <span class="property-type"><a href="#upstreamhealthcheckspassivehealthy">Upstream<wbr>Healthchecks<wbr>Passive<wbr>Healthy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2242,7 +2243,7 @@ The following state arguments are supported:
 <a href="#unhealthy_python" style="color: inherit; text-decoration: inherit;">unhealthy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamhealthcheckspassiveunhealthy">Dict[Upstream<wbr>Healthchecks<wbr>Passive<wbr>Unhealthy]</a></span>
+        <span class="property-type"><a href="#upstreamhealthcheckspassiveunhealthy">Upstream<wbr>Healthchecks<wbr>Passive<wbr>Unhealthy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2354,11 +2355,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpstatuses_python">
-<a href="#httpstatuses_python" style="color: inherit; text-decoration: inherit;">http<wbr>Statuses</a>
+        <span id="http_statuses_python">
+<a href="#http_statuses_python" style="color: inherit; text-decoration: inherit;">http_<wbr>statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2540,8 +2541,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpfailures_python">
-<a href="#httpfailures_python" style="color: inherit; text-decoration: inherit;">http<wbr>Failures</a>
+        <span id="http_failures_python">
+<a href="#http_failures_python" style="color: inherit; text-decoration: inherit;">http_<wbr>failures</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2550,18 +2551,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpstatuses_python">
-<a href="#httpstatuses_python" style="color: inherit; text-decoration: inherit;">http<wbr>Statuses</a>
+        <span id="http_statuses_python">
+<a href="#http_statuses_python" style="color: inherit; text-decoration: inherit;">http_<wbr>statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tcpfailures_python">
-<a href="#tcpfailures_python" style="color: inherit; text-decoration: inherit;">tcp<wbr>Failures</a>
+        <span id="tcp_failures_python">
+<a href="#tcp_failures_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>failures</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

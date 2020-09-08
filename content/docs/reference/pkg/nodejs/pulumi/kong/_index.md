@@ -3,7 +3,7 @@ title: "Package @pulumi/kong"
 title_tag: "Package @pulumi/kong | Node.js SDK"
 linktitle: "@pulumi/kong"
 meta_desc: "Explore members of the @pulumi/kong package."
-git_sha: "a435a01ee2592e4749dcc1b31d11696baad4d8aa"
+git_sha: "e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91"
 block_external_search_index: true
 ---
 
@@ -89,14 +89,14 @@ import * as kong from "@pulumi/kong";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Certificate" data-link-title="Certificate">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/certificate.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/certificate.ts#L7">
         Resource <strong>Certificate</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Certificate</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Certificate-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/certificate.ts#L36"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/certificate.ts#L36"> <b>constructor</b></a>
 </h4>
 
 
@@ -110,7 +110,7 @@ Create a Certificate resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Certificate-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/certificate.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/certificate.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -121,14 +121,14 @@ Get an existing Certificate resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Certificate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/certificate.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/certificate.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Certificate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/certificate.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/certificate.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -139,12 +139,12 @@ Returns true if the given object is an instance of Certificate.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Certificate-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/certificate.ts#L35">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/certificate.ts#L35">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Certificate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/certificate.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/certificate.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -153,12 +153,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Certificate-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/certificate.ts#L36">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/certificate.ts#L36">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Certificate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/certificate.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/certificate.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -167,14 +167,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Consumer" data-link-title="Consumer">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumer.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumer.ts#L7">
         Resource <strong>Consumer</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Consumer</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Consumer-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumer.ts#L36"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumer.ts#L36"> <b>constructor</b></a>
 </h4>
 
 
@@ -188,7 +188,7 @@ Create a Consumer resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Consumer-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumer.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumer.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -199,14 +199,14 @@ Get an existing Consumer resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Consumer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumer.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumer.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Consumer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumer.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumer.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -217,12 +217,12 @@ Returns true if the given object is an instance of Consumer.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Consumer-customId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumer.ts#L35">property <b>customId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumer.ts#L35">property <b>customId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Consumer-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumer.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumer.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -231,7 +231,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Consumer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumer.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumer.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -240,19 +240,19 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Consumer-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumer.ts#L36">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumer.ts#L36">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ConsumerPluginConfig" data-link-title="ConsumerPluginConfig">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L7">
         Resource <strong>ConsumerPluginConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ConsumerPluginConfig</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="ConsumerPluginConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L41"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L41"> <b>constructor</b></a>
 </h4>
 
 
@@ -266,7 +266,7 @@ Create a ConsumerPluginConfig resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ConsumerPluginConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -277,14 +277,14 @@ Get an existing ConsumerPluginConfig resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ConsumerPluginConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ConsumerPluginConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -295,12 +295,12 @@ Returns true if the given object is an instance of ConsumerPluginConfig.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ConsumerPluginConfig-computedConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L35">property <b>computedConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L35">property <b>computedConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>computedConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConsumerPluginConfig-configJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L39">property <b>configJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L39">property <b>configJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>configJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -308,12 +308,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 JSON format of plugin config
 
 <h4 class="pdoc-member-header" id="ConsumerPluginConfig-consumerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L40">property <b>consumerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L40">property <b>consumerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>consumerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConsumerPluginConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -322,12 +322,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ConsumerPluginConfig-pluginName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L41">property <b>pluginName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L41">property <b>pluginName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pluginName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConsumerPluginConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -336,14 +336,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Plugin" data-link-title="Plugin">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L7">
         Resource <strong>Plugin</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Plugin</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Plugin-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L45"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L45"> <b>constructor</b></a>
 </h4>
 
 
@@ -357,7 +357,7 @@ Create a Plugin resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Plugin-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -368,14 +368,14 @@ Get an existing Plugin resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Plugin-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Plugin-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -386,12 +386,12 @@ Returns true if the given object is an instance of Plugin.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Plugin-computedConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L35">property <b>computedConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L35">property <b>computedConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>computedConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Plugin-configJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L39">property <b>configJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L39">property <b>configJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>configJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -399,17 +399,17 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 plugin configuration in JSON format, configuration must be a valid JSON object.
 
 <h4 class="pdoc-member-header" id="Plugin-consumerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L40">property <b>consumerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L40">property <b>consumerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>consumerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Plugin-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L41">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L41">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Plugin-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -418,27 +418,27 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Plugin-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L42">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L42">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Plugin-routeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L43">property <b>routeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L43">property <b>routeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>routeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Plugin-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L44">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L44">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Plugin-strictMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L45">property <b>strictMatch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L45">property <b>strictMatch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>strictMatch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Plugin-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -447,7 +447,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/provider.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/provider.ts#L13">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -460,7 +460,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
 </h4>
 
 
@@ -474,14 +474,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
 </h4>
 
 
@@ -492,14 +492,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -508,7 +508,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -517,14 +517,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Route" data-link-title="Route">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L9">
         Resource <strong>Route</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Route</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Route-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L48"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L48"> <b>constructor</b></a>
 </h4>
 
 
@@ -538,7 +538,7 @@ Create a Route resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Route-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -549,14 +549,14 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Route-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Route-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -567,17 +567,17 @@ Returns true if the given object is an instance of Route.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Route-destinations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L37">property <b>destinations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L37">property <b>destinations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destinations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kong/types/output/#RouteDestination'>RouteDestination</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Route-hosts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L38">property <b>hosts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L38">property <b>hosts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hosts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Route-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -586,57 +586,57 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Route-methods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L39">property <b>methods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L39">property <b>methods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>methods: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Route-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L40">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L40">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Route-paths">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L41">property <b>paths</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L41">property <b>paths</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>paths: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Route-preserveHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L42">property <b>preserveHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L42">property <b>preserveHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preserveHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Route-protocols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L43">property <b>protocols</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L43">property <b>protocols</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocols: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Route-regexPriority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L44">property <b>regexPriority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L44">property <b>regexPriority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>regexPriority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Route-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L45">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L45">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Route-snis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L46">property <b>snis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L46">property <b>snis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snis: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Route-sources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L47">property <b>sources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L47">property <b>sources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kong/types/output/#RouteSource'>RouteSource</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Route-stripPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L48">property <b>stripPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L48">property <b>stripPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stripPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Route-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -645,14 +645,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Service" data-link-title="Service">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L7">
         Resource <strong>Service</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Service</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Service-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L43"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L43"> <b>constructor</b></a>
 </h4>
 
 
@@ -666,7 +666,7 @@ Create a Service resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Service-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -677,14 +677,14 @@ Get an existing Service resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Service-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Service-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -695,17 +695,17 @@ Returns true if the given object is an instance of Service.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Service-connectTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L35">property <b>connectTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L35">property <b>connectTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Service-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L36">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L36">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Service-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -714,37 +714,37 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Service-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L37">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L37">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Service-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L38">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L38">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Service-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L39">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L39">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Service-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L40">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L40">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Service-readTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L41">property <b>readTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L41">property <b>readTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>readTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Service-retries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L42">property <b>retries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L42">property <b>retries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Service-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -753,19 +753,19 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Service-writeTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L43">property <b>writeTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L43">property <b>writeTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>writeTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="Sni" data-link-title="Sni">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/sni.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/sni.ts#L7">
         Resource <strong>Sni</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Sni</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Sni-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/sni.ts#L36"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/sni.ts#L36"> <b>constructor</b></a>
 </h4>
 
 
@@ -779,7 +779,7 @@ Create a Sni resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Sni-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/sni.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/sni.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -790,14 +790,14 @@ Get an existing Sni resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Sni-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/sni.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/sni.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Sni-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/sni.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/sni.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -808,12 +808,12 @@ Returns true if the given object is an instance of Sni.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Sni-certificateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/sni.ts#L35">property <b>certificateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/sni.ts#L35">property <b>certificateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Sni-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/sni.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/sni.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -822,12 +822,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Sni-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/sni.ts#L36">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/sni.ts#L36">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Sni-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/sni.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/sni.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -836,14 +836,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Target" data-link-title="Target">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/target.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/target.ts#L7">
         Resource <strong>Target</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Target</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Target-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/target.ts#L37"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/target.ts#L37"> <b>constructor</b></a>
 </h4>
 
 
@@ -857,7 +857,7 @@ Create a Target resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Target-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/target.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/target.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -868,14 +868,14 @@ Get an existing Target resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Target-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/target.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/target.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Target-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/target.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/target.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -886,7 +886,7 @@ Returns true if the given object is an instance of Target.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Target-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/target.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/target.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -895,17 +895,17 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Target-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/target.ts#L35">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/target.ts#L35">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>target: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Target-upstreamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/target.ts#L36">property <b>upstreamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/target.ts#L36">property <b>upstreamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>upstreamId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Target-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/target.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/target.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -914,19 +914,19 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Target-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/target.ts#L37">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/target.ts#L37">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="Upstream" data-link-title="Upstream">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L9">
         Resource <strong>Upstream</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Upstream</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Upstream-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L45"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L45"> <b>constructor</b></a>
 </h4>
 
 
@@ -940,7 +940,7 @@ Create a Upstream resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Upstream-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -951,14 +951,14 @@ Get an existing Upstream resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Upstream-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Upstream-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -969,42 +969,42 @@ Returns true if the given object is an instance of Upstream.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Upstream-hashFallback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L37">property <b>hashFallback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L37">property <b>hashFallback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hashFallback: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Upstream-hashFallbackHeader">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L38">property <b>hashFallbackHeader</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L38">property <b>hashFallbackHeader</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hashFallbackHeader: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Upstream-hashOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L39">property <b>hashOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L39">property <b>hashOn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hashOn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Upstream-hashOnCookie">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L40">property <b>hashOnCookie</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L40">property <b>hashOnCookie</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hashOnCookie: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Upstream-hashOnCookiePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L41">property <b>hashOnCookiePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L41">property <b>hashOnCookiePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hashOnCookiePath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Upstream-hashOnHeader">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L42">property <b>hashOnHeader</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L42">property <b>hashOnHeader</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hashOnHeader: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Upstream-healthchecks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L43">property <b>healthchecks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L43">property <b>healthchecks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthchecks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kong/types/output/#UpstreamHealthchecks'>UpstreamHealthchecks</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Upstream-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1013,17 +1013,17 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Upstream-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L44">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L44">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Upstream-slots">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L45">property <b>slots</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L45">property <b>slots</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slots: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Upstream-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1035,7 +1035,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="CertificateArgs" data-link-title="CertificateArgs">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/certificate.ts#L82">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/certificate.ts#L82">
         interface <strong>CertificateArgs</strong>
     </a>
 </h3>
@@ -1045,17 +1045,17 @@ deployments.
 The set of arguments for constructing a Certificate resource.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/certificate.ts#L83">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/certificate.ts#L83">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CertificateArgs-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/certificate.ts#L84">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/certificate.ts#L84">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="CertificateState" data-link-title="CertificateState">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/certificate.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/certificate.ts#L74">
         interface <strong>CertificateState</strong>
     </a>
 </h3>
@@ -1065,17 +1065,17 @@ The set of arguments for constructing a Certificate resource.
 Input properties used for looking up and filtering Certificate resources.
 
 <h4 class="pdoc-member-header" id="CertificateState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/certificate.ts#L75">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/certificate.ts#L75">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CertificateState-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/certificate.ts#L76">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/certificate.ts#L76">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ConsumerArgs" data-link-title="ConsumerArgs">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumer.ts#L82">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumer.ts#L82">
         interface <strong>ConsumerArgs</strong>
     </a>
 </h3>
@@ -1085,17 +1085,17 @@ Input properties used for looking up and filtering Certificate resources.
 The set of arguments for constructing a Consumer resource.
 
 <h4 class="pdoc-member-header" id="ConsumerArgs-customId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumer.ts#L83">property <b>customId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumer.ts#L83">property <b>customId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConsumerArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumer.ts#L84">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumer.ts#L84">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ConsumerPluginConfigArgs" data-link-title="ConsumerPluginConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L99">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L99">
         interface <strong>ConsumerPluginConfigArgs</strong>
     </a>
 </h3>
@@ -1105,7 +1105,7 @@ The set of arguments for constructing a Consumer resource.
 The set of arguments for constructing a ConsumerPluginConfig resource.
 
 <h4 class="pdoc-member-header" id="ConsumerPluginConfigArgs-configJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L103">property <b>configJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L103">property <b>configJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1113,17 +1113,17 @@ The set of arguments for constructing a ConsumerPluginConfig resource.
 JSON format of plugin config
 
 <h4 class="pdoc-member-header" id="ConsumerPluginConfigArgs-consumerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L104">property <b>consumerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L104">property <b>consumerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConsumerPluginConfigArgs-pluginName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L105">property <b>pluginName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L105">property <b>pluginName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pluginName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ConsumerPluginConfigState" data-link-title="ConsumerPluginConfigState">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L86">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L86">
         interface <strong>ConsumerPluginConfigState</strong>
     </a>
 </h3>
@@ -1133,12 +1133,12 @@ JSON format of plugin config
 Input properties used for looking up and filtering ConsumerPluginConfig resources.
 
 <h4 class="pdoc-member-header" id="ConsumerPluginConfigState-computedConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L87">property <b>computedConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L87">property <b>computedConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>computedConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConsumerPluginConfigState-configJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L91">property <b>configJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L91">property <b>configJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1146,17 +1146,17 @@ Input properties used for looking up and filtering ConsumerPluginConfig resource
 JSON format of plugin config
 
 <h4 class="pdoc-member-header" id="ConsumerPluginConfigState-consumerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L92">property <b>consumerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L92">property <b>consumerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConsumerPluginConfigState-pluginName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumerPluginConfig.ts#L93">property <b>pluginName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumerPluginConfig.ts#L93">property <b>pluginName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pluginName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ConsumerState" data-link-title="ConsumerState">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumer.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumer.ts#L74">
         interface <strong>ConsumerState</strong>
     </a>
 </h3>
@@ -1166,17 +1166,17 @@ JSON format of plugin config
 Input properties used for looking up and filtering Consumer resources.
 
 <h4 class="pdoc-member-header" id="ConsumerState-customId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumer.ts#L75">property <b>customId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumer.ts#L75">property <b>customId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConsumerState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/consumer.ts#L76">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/consumer.ts#L76">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -1185,7 +1185,7 @@ Input properties used for looking up and filtering Consumer resources.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -1194,7 +1194,7 @@ Input properties used for looking up and filtering Consumer resources.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -1203,7 +1203,7 @@ Input properties used for looking up and filtering Consumer resources.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -1212,7 +1212,7 @@ Input properties used for looking up and filtering Consumer resources.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="PluginArgs" data-link-title="PluginArgs">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L109">
         interface <strong>PluginArgs</strong>
     </a>
 </h3>
@@ -1222,7 +1222,7 @@ Input properties used for looking up and filtering Consumer resources.
 The set of arguments for constructing a Plugin resource.
 
 <h4 class="pdoc-member-header" id="PluginArgs-configJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L113">property <b>configJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L113">property <b>configJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1230,37 +1230,37 @@ The set of arguments for constructing a Plugin resource.
 plugin configuration in JSON format, configuration must be a valid JSON object.
 
 <h4 class="pdoc-member-header" id="PluginArgs-consumerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L114">property <b>consumerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L114">property <b>consumerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PluginArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L115">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L115">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PluginArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L116">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L116">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PluginArgs-routeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L117">property <b>routeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L117">property <b>routeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PluginArgs-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L118">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L118">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PluginArgs-strictMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L119">property <b>strictMatch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L119">property <b>strictMatch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>strictMatch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="PluginState" data-link-title="PluginState">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L92">
         interface <strong>PluginState</strong>
     </a>
 </h3>
@@ -1270,12 +1270,12 @@ plugin configuration in JSON format, configuration must be a valid JSON object.
 Input properties used for looking up and filtering Plugin resources.
 
 <h4 class="pdoc-member-header" id="PluginState-computedConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L93">property <b>computedConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L93">property <b>computedConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>computedConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PluginState-configJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L97">property <b>configJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L97">property <b>configJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1283,37 +1283,37 @@ Input properties used for looking up and filtering Plugin resources.
 plugin configuration in JSON format, configuration must be a valid JSON object.
 
 <h4 class="pdoc-member-header" id="PluginState-consumerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L98">property <b>consumerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L98">property <b>consumerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PluginState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L99">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L99">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PluginState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L100">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L100">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PluginState-routeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L101">property <b>routeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L101">property <b>routeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PluginState-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L102">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L102">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PluginState-strictMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/plugin.ts#L103">property <b>strictMatch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/plugin.ts#L103">property <b>strictMatch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>strictMatch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/provider.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/provider.ts#L61">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -1323,7 +1323,7 @@ plugin configuration in JSON format, configuration must be a valid JSON object.
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-kongAdminPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/provider.ts#L65">property <b>kongAdminPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/provider.ts#L65">property <b>kongAdminPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kongAdminPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1331,7 +1331,7 @@ The set of arguments for constructing a Provider resource.
 An basic auth password for kong admin
 
 <h4 class="pdoc-member-header" id="ProviderArgs-kongAdminToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/provider.ts#L69">property <b>kongAdminToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/provider.ts#L69">property <b>kongAdminToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kongAdminToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1339,7 +1339,7 @@ An basic auth password for kong admin
 API key for the kong api (Enterprise Edition)
 
 <h4 class="pdoc-member-header" id="ProviderArgs-kongAdminUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/provider.ts#L73">property <b>kongAdminUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/provider.ts#L73">property <b>kongAdminUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kongAdminUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1347,7 +1347,7 @@ API key for the kong api (Enterprise Edition)
 The address of the kong admin url e.g. http://localhost:8001
 
 <h4 class="pdoc-member-header" id="ProviderArgs-kongAdminUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/provider.ts#L77">property <b>kongAdminUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/provider.ts#L77">property <b>kongAdminUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kongAdminUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1355,7 +1355,7 @@ The address of the kong admin url e.g. http://localhost:8001
 An basic auth user for kong admin
 
 <h4 class="pdoc-member-header" id="ProviderArgs-kongApiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/provider.ts#L81">property <b>kongApiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/provider.ts#L81">property <b>kongApiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kongApiKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1363,7 +1363,7 @@ An basic auth user for kong admin
 API key for the kong api (if you have locked it down)
 
 <h4 class="pdoc-member-header" id="ProviderArgs-strictPluginsMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/provider.ts#L85">property <b>strictPluginsMatch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/provider.ts#L85">property <b>strictPluginsMatch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>strictPluginsMatch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1371,7 +1371,7 @@ API key for the kong api (if you have locked it down)
 Should plugins `config_json` field strictly match plugin configuration
 
 <h4 class="pdoc-member-header" id="ProviderArgs-tlsSkipVerify">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/provider.ts#L89">property <b>tlsSkipVerify</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/provider.ts#L89">property <b>tlsSkipVerify</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsSkipVerify?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1379,7 +1379,7 @@ Should plugins `config_json` field strictly match plugin configuration
 Whether to skip tls verify for https kong api endpoint using self signed or untrusted certs
 
 <h3 class="pdoc-module-header" id="RouteArgs" data-link-title="RouteArgs">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L127">
         interface <strong>RouteArgs</strong>
     </a>
 </h3>
@@ -1389,67 +1389,67 @@ Whether to skip tls verify for https kong api endpoint using self signed or untr
 The set of arguments for constructing a Route resource.
 
 <h4 class="pdoc-member-header" id="RouteArgs-destinations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L128">property <b>destinations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L128">property <b>destinations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kong/types/input/#RouteDestination'>RouteDestination</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteArgs-hosts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L129">property <b>hosts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L129">property <b>hosts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hosts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteArgs-methods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L130">property <b>methods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L130">property <b>methods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>methods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L131">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L131">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteArgs-paths">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L132">property <b>paths</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L132">property <b>paths</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>paths?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteArgs-preserveHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L133">property <b>preserveHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L133">property <b>preserveHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preserveHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteArgs-protocols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L134">property <b>protocols</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L134">property <b>protocols</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocols: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteArgs-regexPriority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L135">property <b>regexPriority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L135">property <b>regexPriority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regexPriority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteArgs-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L136">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L136">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteArgs-snis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L137">property <b>snis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L137">property <b>snis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteArgs-sources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L138">property <b>sources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L138">property <b>sources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kong/types/input/#RouteSource'>RouteSource</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteArgs-stripPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L139">property <b>stripPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L139">property <b>stripPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stripPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="RouteState" data-link-title="RouteState">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L109">
         interface <strong>RouteState</strong>
     </a>
 </h3>
@@ -1459,67 +1459,67 @@ The set of arguments for constructing a Route resource.
 Input properties used for looking up and filtering Route resources.
 
 <h4 class="pdoc-member-header" id="RouteState-destinations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L110">property <b>destinations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L110">property <b>destinations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kong/types/input/#RouteDestination'>RouteDestination</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteState-hosts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L111">property <b>hosts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L111">property <b>hosts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hosts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteState-methods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L112">property <b>methods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L112">property <b>methods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>methods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L113">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L113">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteState-paths">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L114">property <b>paths</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L114">property <b>paths</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>paths?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteState-preserveHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L115">property <b>preserveHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L115">property <b>preserveHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preserveHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteState-protocols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L116">property <b>protocols</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L116">property <b>protocols</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocols?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteState-regexPriority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L117">property <b>regexPriority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L117">property <b>regexPriority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regexPriority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteState-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L118">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L118">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteState-snis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L119">property <b>snis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L119">property <b>snis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteState-sources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L120">property <b>sources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L120">property <b>sources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kong/types/input/#RouteSource'>RouteSource</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteState-stripPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/route.ts#L121">property <b>stripPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/route.ts#L121">property <b>stripPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stripPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceArgs" data-link-title="ServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L110">
         interface <strong>ServiceArgs</strong>
     </a>
 </h3>
@@ -1529,52 +1529,52 @@ Input properties used for looking up and filtering Route resources.
 The set of arguments for constructing a Service resource.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-connectTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L111">property <b>connectTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L111">property <b>connectTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceArgs-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L112">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L112">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L113">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L113">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L114">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L114">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L115">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L115">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L116">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L116">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceArgs-readTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L117">property <b>readTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L117">property <b>readTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceArgs-retries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L118">property <b>retries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L118">property <b>retries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceArgs-writeTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L119">property <b>writeTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L119">property <b>writeTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writeTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceState" data-link-title="ServiceState">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L95">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L95">
         interface <strong>ServiceState</strong>
     </a>
 </h3>
@@ -1584,52 +1584,52 @@ The set of arguments for constructing a Service resource.
 Input properties used for looking up and filtering Service resources.
 
 <h4 class="pdoc-member-header" id="ServiceState-connectTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L96">property <b>connectTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L96">property <b>connectTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceState-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L97">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L97">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L98">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L98">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L99">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L99">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L100">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L100">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L101">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L101">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceState-readTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L102">property <b>readTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L102">property <b>readTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceState-retries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L103">property <b>retries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L103">property <b>retries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceState-writeTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/service.ts#L104">property <b>writeTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/service.ts#L104">property <b>writeTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writeTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="SniArgs" data-link-title="SniArgs">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/sni.ts#L82">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/sni.ts#L82">
         interface <strong>SniArgs</strong>
     </a>
 </h3>
@@ -1639,17 +1639,17 @@ Input properties used for looking up and filtering Service resources.
 The set of arguments for constructing a Sni resource.
 
 <h4 class="pdoc-member-header" id="SniArgs-certificateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/sni.ts#L83">property <b>certificateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/sni.ts#L83">property <b>certificateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SniArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/sni.ts#L84">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/sni.ts#L84">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="SniState" data-link-title="SniState">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/sni.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/sni.ts#L74">
         interface <strong>SniState</strong>
     </a>
 </h3>
@@ -1659,17 +1659,17 @@ The set of arguments for constructing a Sni resource.
 Input properties used for looking up and filtering Sni resources.
 
 <h4 class="pdoc-member-header" id="SniState-certificateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/sni.ts#L75">property <b>certificateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/sni.ts#L75">property <b>certificateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SniState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/sni.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/sni.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TargetArgs" data-link-title="TargetArgs">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/target.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/target.ts#L92">
         interface <strong>TargetArgs</strong>
     </a>
 </h3>
@@ -1679,22 +1679,22 @@ Input properties used for looking up and filtering Sni resources.
 The set of arguments for constructing a Target resource.
 
 <h4 class="pdoc-member-header" id="TargetArgs-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/target.ts#L93">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/target.ts#L93">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetArgs-upstreamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/target.ts#L94">property <b>upstreamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/target.ts#L94">property <b>upstreamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>upstreamId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetArgs-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/target.ts#L95">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/target.ts#L95">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TargetState" data-link-title="TargetState">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/target.ts#L83">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/target.ts#L83">
         interface <strong>TargetState</strong>
     </a>
 </h3>
@@ -1704,22 +1704,22 @@ The set of arguments for constructing a Target resource.
 Input properties used for looking up and filtering Target resources.
 
 <h4 class="pdoc-member-header" id="TargetState-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/target.ts#L84">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/target.ts#L84">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetState-upstreamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/target.ts#L85">property <b>upstreamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/target.ts#L85">property <b>upstreamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>upstreamId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetState-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/target.ts#L86">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/target.ts#L86">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="UpstreamArgs" data-link-title="UpstreamArgs">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L109">
         interface <strong>UpstreamArgs</strong>
     </a>
 </h3>
@@ -1729,52 +1729,52 @@ Input properties used for looking up and filtering Target resources.
 The set of arguments for constructing a Upstream resource.
 
 <h4 class="pdoc-member-header" id="UpstreamArgs-hashFallback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L110">property <b>hashFallback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L110">property <b>hashFallback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hashFallback?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UpstreamArgs-hashFallbackHeader">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L111">property <b>hashFallbackHeader</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L111">property <b>hashFallbackHeader</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hashFallbackHeader?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UpstreamArgs-hashOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L112">property <b>hashOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L112">property <b>hashOn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hashOn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UpstreamArgs-hashOnCookie">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L113">property <b>hashOnCookie</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L113">property <b>hashOnCookie</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hashOnCookie?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UpstreamArgs-hashOnCookiePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L114">property <b>hashOnCookiePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L114">property <b>hashOnCookiePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hashOnCookiePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UpstreamArgs-hashOnHeader">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L115">property <b>hashOnHeader</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L115">property <b>hashOnHeader</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hashOnHeader?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UpstreamArgs-healthchecks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L116">property <b>healthchecks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L116">property <b>healthchecks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthchecks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kong/types/input/#UpstreamHealthchecks'>UpstreamHealthchecks</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UpstreamArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L117">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L117">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UpstreamArgs-slots">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L118">property <b>slots</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L118">property <b>slots</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slots?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="UpstreamState" data-link-title="UpstreamState">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L94">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L94">
         interface <strong>UpstreamState</strong>
     </a>
 </h3>
@@ -1784,47 +1784,47 @@ The set of arguments for constructing a Upstream resource.
 Input properties used for looking up and filtering Upstream resources.
 
 <h4 class="pdoc-member-header" id="UpstreamState-hashFallback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L95">property <b>hashFallback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L95">property <b>hashFallback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hashFallback?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UpstreamState-hashFallbackHeader">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L96">property <b>hashFallbackHeader</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L96">property <b>hashFallbackHeader</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hashFallbackHeader?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UpstreamState-hashOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L97">property <b>hashOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L97">property <b>hashOn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hashOn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UpstreamState-hashOnCookie">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L98">property <b>hashOnCookie</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L98">property <b>hashOnCookie</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hashOnCookie?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UpstreamState-hashOnCookiePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L99">property <b>hashOnCookiePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L99">property <b>hashOnCookiePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hashOnCookiePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UpstreamState-hashOnHeader">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L100">property <b>hashOnHeader</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L100">property <b>hashOnHeader</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hashOnHeader?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UpstreamState-healthchecks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L101">property <b>healthchecks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L101">property <b>healthchecks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthchecks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kong/types/input/#UpstreamHealthchecks'>UpstreamHealthchecks</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UpstreamState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L102">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L102">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UpstreamState-slots">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/a435a01ee2592e4749dcc1b31d11696baad4d8aa/sdk/nodejs/upstream.ts#L103">property <b>slots</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/upstream.ts#L103">property <b>slots</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slots?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
