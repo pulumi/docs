@@ -176,7 +176,6 @@ The target group port can be optionally configured to use a different target gro
 
 We can set the ports with `pulumi config set cms-OAuth:targetGroupPort`. The default port is 80, which is the http port for local development.
 
-The load balancer implements a listener and a rule to forward all requests to the target group we created.
 
 ```typescript
 // when the request are forwarded then every requests are send to the target group we created
