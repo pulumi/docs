@@ -238,7 +238,6 @@ const appService = new awsx.ecs.FargateService("app-svc", {
 });
 ```
 
-For `HOST`, we set the URL for the OAuth Server by running `pulumi config set pulumi-website-cms:targetDomain https://some-cms-oauth-domain.pulumi-demos.com` and replace the URL.
 
 
 
