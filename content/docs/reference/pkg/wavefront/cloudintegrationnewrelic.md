@@ -97,7 +97,7 @@ const newrelic = new wavefront.CloudIntegrationNewRelic("newrelic", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_wavefront/#pulumi_wavefront.CloudIntegrationNewRelic">CloudIntegrationNewRelic</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>additional_tags=None<span class="p">, </span>api_key=None<span class="p">, </span>app_filter_regex=None<span class="p">, </span>force_save=None<span class="p">, </span>host_filter_regex=None<span class="p">, </span>metric_filters=None<span class="p">, </span>name=None<span class="p">, </span>service=None<span class="p">, </span>service_refresh_rate_in_minutes=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_wavefront/#pulumi_wavefront.CloudIntegrationNewRelic">CloudIntegrationNewRelic</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">api_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">app_filter_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_save</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_filter_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metric_filters</span><span class="p">:</span> <span class="nx">Optional[List[CloudIntegrationNewRelicMetricFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_refresh_rate_in_minutes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -615,7 +615,7 @@ The CloudIntegrationNewRelic resource accepts the following [input]({{< relref "
 <a href="#additional_tags_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of point tag key-values to add to every point ingested using this integration
 {{% /md %}}</dd>
@@ -659,7 +659,7 @@ The CloudIntegrationNewRelic resource accepts the following [input]({{< relref "
 <a href="#metric_filters_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudintegrationnewrelicmetricfilter">List[Cloud<wbr>Integration<wbr>New<wbr>Relic<wbr>Metric<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#cloudintegrationnewrelicmetricfilter">List[Cloud<wbr>Integration<wbr>New<wbr>Relic<wbr>Metric<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Metric Filter
 {{% /md %}}</dd>
@@ -784,7 +784,8 @@ Get an existing CloudIntegrationNewRelic resource's state with the given name, I
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>additional_tags=None<span class="p">, </span>api_key=None<span class="p">, </span>app_filter_regex=None<span class="p">, </span>force_save=None<span class="p">, </span>host_filter_regex=None<span class="p">, </span>metric_filters=None<span class="p">, </span>name=None<span class="p">, </span>service=None<span class="p">, </span>service_refresh_rate_in_minutes=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">api_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">app_filter_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_save</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_filter_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metric_filters</span><span class="p">:</span> <span class="nx">Optional[List[CloudIntegrationNewRelicMetricFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_refresh_rate_in_minutes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> CloudIntegrationNewRelic</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -792,7 +793,7 @@ Get an existing CloudIntegrationNewRelic resource's state with the given name, I
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.CloudIntegrationNewRelic.html">CloudIntegrationNewRelic</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront..CloudIntegrationNewRelicState.html">CloudIntegrationNewRelicState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.CloudIntegrationNewRelic.html">CloudIntegrationNewRelic</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront..CloudIntegrationNewRelicState.html">CloudIntegrationNewRelicState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1222,7 +1223,7 @@ The following state arguments are supported:
 <a href="#state_additional_tags_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of point tag key-values to add to every point ingested using this integration
 {{% /md %}}</dd>
@@ -1277,7 +1278,7 @@ The following state arguments are supported:
 <a href="#state_metric_filters_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudintegrationnewrelicmetricfilter">List[Cloud<wbr>Integration<wbr>New<wbr>Relic<wbr>Metric<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#cloudintegrationnewrelicmetricfilter">List[Cloud<wbr>Integration<wbr>New<wbr>Relic<wbr>Metric<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Metric Filter
 {{% /md %}}</dd>
@@ -1437,8 +1438,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="appname_python">
-<a href="#appname_python" style="color: inherit; text-decoration: inherit;">app<wbr>Name</a>
+        <span id="app_name_python">
+<a href="#app_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
