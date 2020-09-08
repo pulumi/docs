@@ -172,7 +172,7 @@ const tg = alb.createTargetGroup("oauth-tg", {
 });
 ```
 
-The target group port can be optionally configured to use a different target group port.
+We can set the target group port with `pulumi config set cms-OAuth:targetGroupPort`. The load balancer implements a listener and a rule to forward all requests to the target group we created.
 
 
 
