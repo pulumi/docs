@@ -246,7 +246,7 @@ To get `GITHUB_SECRET` and `GITHUB_TOKEN` credentials, we need to register the G
 
 The Home Page URL is the targetDomain from our [previous post]({{< relref "/blog/deploying-netlify-cms-on-aws" >}}).
 
-The Authorization callback URL is `https://{{the domain of your OAuth App}}/callback/github`.
+The environment variables are passed to the OAuth server in main.go. For example, the callback URL  is the targetDomain with `callback` and the repository provider appended, e.g., `https://<targetDomain>/callback/github/`. You can also specify a different repository provider, such as Bitbucket or Gitlab.
 
 ```go
     github.New(
