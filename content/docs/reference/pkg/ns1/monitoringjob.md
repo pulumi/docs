@@ -378,7 +378,7 @@ The MonitoringJob resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A configuration dictionary with keys and values depending on the jobs' type.
+    <dd>{{% md %}}A configuration dictionary with keys and values depending on the job_type. Configuration details for each job_type are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -400,8 +400,7 @@ The MonitoringJob resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of monitoring job to be run. See NS1 API
-docs for supported values.
+    <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -479,8 +478,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of the notification list to send notifications to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -535,7 +533,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoringjobrule">List&lt;Monitoring<wbr>Job<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of rules for determining failure conditions. Job Rules are documented below.
+    <dd>{{% md %}}A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 {{% /md %}}</dd>
 
 </dl>
@@ -553,7 +551,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A configuration dictionary with keys and values depending on the jobs' type.
+    <dd>{{% md %}}A configuration dictionary with keys and values depending on the job_type. Configuration details for each job_type are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -575,8 +573,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of monitoring job to be run. See NS1 API
-docs for supported values.
+    <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -654,8 +651,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of the notification list to send notifications to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -710,7 +706,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoringjobrule">[]Monitoring<wbr>Job<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}A list of rules for determining failure conditions. Job Rules are documented below.
+    <dd>{{% md %}}A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 {{% /md %}}</dd>
 
 </dl>
@@ -728,7 +724,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A configuration dictionary with keys and values depending on the jobs' type.
+    <dd>{{% md %}}A configuration dictionary with keys and values depending on the job_type. Configuration details for each job_type are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -750,8 +746,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of monitoring job to be run. See NS1 API
-docs for supported values.
+    <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -829,8 +824,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of the notification list to send notifications to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -885,7 +879,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoringjobrule">Monitoring<wbr>Job<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of rules for determining failure conditions. Job Rules are documented below.
+    <dd>{{% md %}}A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 {{% /md %}}</dd>
 
 </dl>
@@ -903,7 +897,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A configuration dictionary with keys and values depending on the jobs' type.
+    <dd>{{% md %}}A configuration dictionary with keys and values depending on the job_type. Configuration details for each job_type are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -925,8 +919,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of monitoring job to be run. See NS1 API
-docs for supported values.
+    <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1004,8 +997,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The id of the notification list to send notifications to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1060,7 +1052,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoringjobrule">List[Monitoring<wbr>Job<wbr>Rule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of rules for determining failure conditions. Job Rules are documented below.
+    <dd>{{% md %}}A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 {{% /md %}}</dd>
 
 </dl>
@@ -1295,7 +1287,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A configuration dictionary with keys and values depending on the jobs' type.
+    <dd>{{% md %}}A configuration dictionary with keys and values depending on the job_type. Configuration details for each job_type are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1317,8 +1309,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of monitoring job to be run. See NS1 API
-docs for supported values.
+    <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1373,8 +1364,7 @@ docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of the notification list to send notifications to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1441,7 +1431,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoringjobrule">List&lt;Monitoring<wbr>Job<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of rules for determining failure conditions. Job Rules are documented below.
+    <dd>{{% md %}}A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 {{% /md %}}</dd>
 
 </dl>
@@ -1470,7 +1460,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A configuration dictionary with keys and values depending on the jobs' type.
+    <dd>{{% md %}}A configuration dictionary with keys and values depending on the job_type. Configuration details for each job_type are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1492,8 +1482,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of monitoring job to be run. See NS1 API
-docs for supported values.
+    <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1548,8 +1537,7 @@ docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of the notification list to send notifications to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1616,7 +1604,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoringjobrule">[]Monitoring<wbr>Job<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}A list of rules for determining failure conditions. Job Rules are documented below.
+    <dd>{{% md %}}A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 {{% /md %}}</dd>
 
 </dl>
@@ -1645,7 +1633,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A configuration dictionary with keys and values depending on the jobs' type.
+    <dd>{{% md %}}A configuration dictionary with keys and values depending on the job_type. Configuration details for each job_type are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1667,8 +1655,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of monitoring job to be run. See NS1 API
-docs for supported values.
+    <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1723,8 +1710,7 @@ docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of the notification list to send notifications to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1791,7 +1777,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoringjobrule">Monitoring<wbr>Job<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of rules for determining failure conditions. Job Rules are documented below.
+    <dd>{{% md %}}A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 {{% /md %}}</dd>
 
 </dl>
@@ -1820,7 +1806,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A configuration dictionary with keys and values depending on the jobs' type.
+    <dd>{{% md %}}A configuration dictionary with keys and values depending on the job_type. Configuration details for each job_type are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1842,8 +1828,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of monitoring job to be run. See NS1 API
-docs for supported values.
+    <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1898,8 +1883,7 @@ docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The id of the notification list to send notifications to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1966,7 +1950,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoringjobrule">List[Monitoring<wbr>Job<wbr>Rule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of rules for determining failure conditions. Job Rules are documented below.
+    <dd>{{% md %}}A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 {{% /md %}}</dd>
 
 </dl>
@@ -2010,8 +1994,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The comparison to perform on the the output.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2021,8 +2004,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The output key.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2032,8 +2014,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value to compare to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2050,8 +2031,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The comparison to perform on the the output.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2061,8 +2041,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The output key.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2072,8 +2051,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value to compare to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2090,8 +2068,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The comparison to perform on the the output.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2101,8 +2078,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The output key.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2112,8 +2088,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value to compare to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2130,8 +2105,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The comparison to perform on the the output.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2141,8 +2115,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The output key.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2152,8 +2125,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value to compare to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2173,6 +2145,6 @@ job. See NS1 API docs for supported values.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/terraform-providers/terraform-provider-ns1).</dd>
+	<dd>This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/ns1-terraform/terraform-provider-ns1).</dd>
 </dl>
 

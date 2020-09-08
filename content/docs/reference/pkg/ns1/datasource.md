@@ -818,6 +818,6 @@ matching the specification in `config` from /data/sourcetypes.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/terraform-providers/terraform-provider-ns1).</dd>
+	<dd>This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/ns1-terraform/terraform-provider-ns1).</dd>
 </dl>
 
