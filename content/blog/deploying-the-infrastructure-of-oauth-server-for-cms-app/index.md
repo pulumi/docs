@@ -132,7 +132,7 @@ WORKDIR /go/src/github.com/pulumi/aws-ts-netlify-cms-and-oauth/cms-oauth
 
 ## Infrastructure
 
-### Deploying use ECS Fargate
+### Deploying to Fargate
 
 To deploy the OAuth server to AWS Fargate, we'll use the [Hello Fargate Example](https://github.com/pulumi/examples/tree/master/aws-ts-hello-fargate) from the [Pulumi's example repository](https://github.com/pulumi/examples) as a template.
 
