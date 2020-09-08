@@ -20,7 +20,7 @@ OAuth Server also enables authorization for Gitlab and Bitbucket by changing the
 
 ## Make Changes to Example Code
 
-Netlify CMS's webiste provides [External OAuth Clients examples](https://www.netlifycms.org/docs/external-oauth-clients/#header) for various languages and platforms. We will use the [Go example]((https://github.com/igk1972/netlify-cms-oauth-provider-go)) for demonstration. Later, we will refer this Go example as *Netlify CMS's example*.
+Netlify CMS's website provides [External OAuth Client examples](https://www.netlifycms.org/docs/external-oauth-clients/#header) for various languages and platforms. We use the [Go example]((https://github.com/igk1972/netlify-cms-oauth-provider-go))  to demonstrate the client.
 
 The *Netlify CMS's example code* uses `./dotenv/dotenv.go` to retrieve the environment variables from a file. The main.go file uses [goth](https://github.com/markbates/goth) to build the OAuth Provider. The `./randstr/randstr.go` file generates the random string for the `SESSION_SECRET` environment variable used by main.go. However, we can use Pulumi to implement both functions.
 
