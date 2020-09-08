@@ -32,10 +32,10 @@ class MyStack : Stack
             {
                 Firebase = 
                 {
-                    { "client_email", "john.doe@example.com" },
-                    { "lifetime_in_seconds", 1 },
-                    { "private_key", "wer" },
-                    { "private_key_id", "qwreerwerwe" },
+                    { "clientEmail", "john.doe@example.com" },
+                    { "lifetimeInSeconds", 1 },
+                    { "privateKey", "wer" },
+                    { "privateKeyId", "qwreerwerwe" },
                 },
                 Samlp = new Auth0.Inputs.ClientAddonsSamlpArgs
                 {
@@ -118,7 +118,92 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-auth0/sdk/go/auth0"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := auth0.NewClient(ctx, "myClient", &auth0.ClientArgs{
+			Addons: &auth0.ClientAddonsArgs{
+				Firebase: pulumi.Map{
+					"clientEmail":       pulumi.String("john.doe@example.com"),
+					"lifetimeInSeconds": pulumi.Float64(1),
+					"privateKey":        pulumi.String("wer"),
+					"privateKeyId":      pulumi.String("qwreerwerwe"),
+				},
+				Samlp: &auth0.ClientAddonsSamlpArgs{
+					Audience:             pulumi.String("https://example.com/saml"),
+					CreateUpnClaim:       pulumi.Bool(false),
+					MapIdentities:        pulumi.Bool(false),
+					MapUnknownClaimsAsIs: pulumi.Bool(false),
+					Mappings: pulumi.StringMap{
+						"email": pulumi.String("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"),
+						"name":  pulumi.String("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"),
+					},
+					NameIdentifierFormat: pulumi.String("urn:oasis:names:tc:SAML:2.0:nameid-format:persistent"),
+					NameIdentifierProbes: pulumi.StringArray{
+						pulumi.String("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"),
+					},
+					PassthroughClaimsWithNoMapping: pulumi.Bool(false),
+				},
+			},
+			AllowedLogoutUrls: pulumi.StringArray{
+				pulumi.String("https://example.com"),
+			},
+			AllowedOrigins: pulumi.StringArray{
+				pulumi.String("https://example.com"),
+			},
+			AppType: pulumi.String("non_interactive"),
+			Callbacks: pulumi.StringArray{
+				pulumi.String("https://example.com/callback"),
+			},
+			ClientMetadata: pulumi.StringMap{
+				"foo": pulumi.String("zoo"),
+			},
+			CustomLoginPageOn: pulumi.Bool(true),
+			Description:       pulumi.String("Test Applications Long Description"),
+			GrantTypes: pulumi.StringArray{
+				pulumi.String("authorization_code"),
+				pulumi.String("http://auth0.com/oauth/grant-type/password-realm"),
+				pulumi.String("implicit"),
+				pulumi.String("password"),
+				pulumi.String("refresh_token"),
+			},
+			IsFirstParty:                   pulumi.Bool(true),
+			IsTokenEndpointIpHeaderTrusted: pulumi.Bool(true),
+			JwtConfiguration: &auth0.ClientJwtConfigurationArgs{
+				Alg:               pulumi.String("RS256"),
+				LifetimeInSeconds: pulumi.Int(300),
+				Scopes: pulumi.StringMap{
+					"foo": pulumi.String("bar"),
+				},
+				SecretEncoded: pulumi.Bool(true),
+			},
+			Mobile: &auth0.ClientMobileArgs{
+				Ios: &auth0.ClientMobileIosArgs{
+					AppBundleIdentifier: pulumi.String("com.my.bundle.id"),
+					TeamId:              pulumi.String("9JA89QQLNQ"),
+				},
+			},
+			OidcConformant:          pulumi.Bool(false),
+			TokenEndpointAuthMethod: pulumi.String("client_secret_post"),
+			WebOrigins: pulumi.StringArray{
+				pulumi.String("https://example.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -127,27 +212,27 @@ import pulumi
 import pulumi_auth0 as auth0
 
 my_client = auth0.Client("myClient",
-    addons={
-        "firebase": {
-            "client_email": "john.doe@example.com",
-            "lifetime_in_seconds": 1,
-            "private_key": "wer",
-            "private_key_id": "qwreerwerwe",
+    addons=auth0.ClientAddonsArgs(
+        firebase={
+            "clientEmail": "john.doe@example.com",
+            "lifetimeInSeconds": 1,
+            "privateKey": "wer",
+            "privateKeyId": "qwreerwerwe",
         },
-        "samlp": {
-            "audience": "https://example.com/saml",
-            "createUpnClaim": False,
-            "mapIdentities": False,
-            "mapUnknownClaimsAsIs": False,
-            "mappings": {
+        samlp=auth0.ClientAddonsSamlpArgs(
+            audience="https://example.com/saml",
+            create_upn_claim=False,
+            map_identities=False,
+            map_unknown_claims_as_is=False,
+            mappings={
                 "email": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
                 "name": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
             },
-            "nameIdentifierFormat": "urn:oasis:names:tc:SAML:2.0:nameid-format:persistent",
-            "nameIdentifierProbes": ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"],
-            "passthroughClaimsWithNoMapping": False,
-        },
-    },
+            name_identifier_format="urn:oasis:names:tc:SAML:2.0:nameid-format:persistent",
+            name_identifier_probes=["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"],
+            passthrough_claims_with_no_mapping=False,
+        ),
+    ),
     allowed_logout_urls=["https://example.com"],
     allowed_origins=["https://example.com"],
     app_type="non_interactive",
@@ -166,20 +251,20 @@ my_client = auth0.Client("myClient",
     ],
     is_first_party=True,
     is_token_endpoint_ip_header_trusted=True,
-    jwt_configuration={
-        "alg": "RS256",
-        "lifetimeInSeconds": 300,
-        "scopes": {
+    jwt_configuration=auth0.ClientJwtConfigurationArgs(
+        alg="RS256",
+        lifetime_in_seconds=300,
+        scopes={
             "foo": "bar",
         },
-        "secretEncoded": True,
-    },
-    mobile={
-        "ios": {
-            "appBundleIdentifier": "com.my.bundle.id",
-            "teamId": "9JA89QQLNQ",
-        },
-    },
+        secret_encoded=True,
+    ),
+    mobile=auth0.ClientMobileArgs(
+        ios=auth0.ClientMobileIosArgs(
+            app_bundle_identifier="com.my.bundle.id",
+            team_id="9JA89QQLNQ",
+        ),
+    ),
     oidc_conformant=False,
     token_endpoint_auth_method="client_secret_post",
     web_origins=["https://example.com"])
@@ -267,7 +352,7 @@ const myClient = new auth0.Client("my_client", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.Client">Client</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addons=None<span class="p">, </span>allowed_logout_urls=None<span class="p">, </span>allowed_origins=None<span class="p">, </span>app_type=None<span class="p">, </span>callbacks=None<span class="p">, </span>client_metadata=None<span class="p">, </span>client_secret_rotation_trigger=None<span class="p">, </span>cross_origin_auth=None<span class="p">, </span>cross_origin_loc=None<span class="p">, </span>custom_login_page=None<span class="p">, </span>custom_login_page_on=None<span class="p">, </span>custom_login_page_preview=None<span class="p">, </span>description=None<span class="p">, </span>encryption_key=None<span class="p">, </span>form_template=None<span class="p">, </span>grant_types=None<span class="p">, </span>initiate_login_uri=None<span class="p">, </span>is_first_party=None<span class="p">, </span>is_token_endpoint_ip_header_trusted=None<span class="p">, </span>jwt_configuration=None<span class="p">, </span>logo_uri=None<span class="p">, </span>mobile=None<span class="p">, </span>name=None<span class="p">, </span>oidc_conformant=None<span class="p">, </span>sso=None<span class="p">, </span>sso_disabled=None<span class="p">, </span>token_endpoint_auth_method=None<span class="p">, </span>web_origins=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.Client">Client</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[ClientAddonsArgs]</span> = None<span class="p">, </span><span class="nx">allowed_logout_urls</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">allowed_origins</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">app_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">callbacks</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">client_metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">client_secret_rotation_trigger</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cross_origin_auth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cross_origin_loc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_login_page</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_login_page_on</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">custom_login_page_preview</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">form_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">initiate_login_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_first_party</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_token_endpoint_ip_header_trusted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">jwt_configuration</span><span class="p">:</span> <span class="nx">Optional[ClientJwtConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mobile</span><span class="p">:</span> <span class="nx">Optional[ClientMobileArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_conformant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sso</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sso_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_origins</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -524,7 +609,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the client can be used to make cross-origin authentication requests. 
+    <dd>{{% md %}}Boolean. Indicates whether or not the client can be used to make cross-origin authentication requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -838,7 +923,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the client can be used to make cross-origin authentication requests. 
+    <dd>{{% md %}}Boolean. Indicates whether or not the client can be used to make cross-origin authentication requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1152,7 +1237,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the client can be used to make cross-origin authentication requests. 
+    <dd>{{% md %}}Boolean. Indicates whether or not the client can be used to make cross-origin authentication requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1387,7 +1472,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#addons_python" style="color: inherit; text-decoration: inherit;">addons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientaddons">Dict[Client<wbr>Addons]</a></span>
+        <span class="property-type"><a href="#clientaddons">Client<wbr>Addons<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for add-ons for this client. For details, see Add-ons.
 {{% /md %}}</dd>
@@ -1442,7 +1527,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#client_metadata_python" style="color: inherit; text-decoration: inherit;">client_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map(String)
 {{% /md %}}</dd>
@@ -1453,7 +1538,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#client_secret_rotation_trigger_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>rotation_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map.
 {{% /md %}}</dd>
@@ -1466,7 +1551,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the client can be used to make cross-origin authentication requests. 
+    <dd>{{% md %}}Boolean. Indicates whether or not the client can be used to make cross-origin authentication requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1530,7 +1615,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map(String).
 {{% /md %}}</dd>
@@ -1595,7 +1680,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#jwt_configuration_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientjwtconfiguration">Dict[Client<wbr>Jwt<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#clientjwtconfiguration">Client<wbr>Jwt<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the JWTs issued for this client. For details, see JWT Configuration.
 {{% /md %}}</dd>
@@ -1617,7 +1702,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#mobile_python" style="color: inherit; text-decoration: inherit;">mobile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientmobile">Dict[Client<wbr>Mobile]</a></span>
+        <span class="property-type"><a href="#clientmobile">Client<wbr>Mobile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for mobile native applications. For details, see Mobile.
 {{% /md %}}</dd>
@@ -1874,7 +1959,8 @@ Get an existing Client resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>addons=None<span class="p">, </span>allowed_logout_urls=None<span class="p">, </span>allowed_origins=None<span class="p">, </span>app_type=None<span class="p">, </span>callbacks=None<span class="p">, </span>client_id=None<span class="p">, </span>client_metadata=None<span class="p">, </span>client_secret=None<span class="p">, </span>client_secret_rotation_trigger=None<span class="p">, </span>cross_origin_auth=None<span class="p">, </span>cross_origin_loc=None<span class="p">, </span>custom_login_page=None<span class="p">, </span>custom_login_page_on=None<span class="p">, </span>custom_login_page_preview=None<span class="p">, </span>description=None<span class="p">, </span>encryption_key=None<span class="p">, </span>form_template=None<span class="p">, </span>grant_types=None<span class="p">, </span>initiate_login_uri=None<span class="p">, </span>is_first_party=None<span class="p">, </span>is_token_endpoint_ip_header_trusted=None<span class="p">, </span>jwt_configuration=None<span class="p">, </span>logo_uri=None<span class="p">, </span>mobile=None<span class="p">, </span>name=None<span class="p">, </span>oidc_conformant=None<span class="p">, </span>sso=None<span class="p">, </span>sso_disabled=None<span class="p">, </span>token_endpoint_auth_method=None<span class="p">, </span>web_origins=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[ClientAddonsArgs]</span> = None<span class="p">, </span><span class="nx">allowed_logout_urls</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">allowed_origins</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">app_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">callbacks</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret_rotation_trigger</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cross_origin_auth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cross_origin_loc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_login_page</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_login_page_on</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">custom_login_page_preview</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">form_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">initiate_login_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_first_party</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_token_endpoint_ip_header_trusted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">jwt_configuration</span><span class="p">:</span> <span class="nx">Optional[ClientJwtConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mobile</span><span class="p">:</span> <span class="nx">Optional[ClientMobileArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_conformant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sso</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sso_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_origins</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> Client</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1882,7 +1968,7 @@ Get an existing Client resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Client.html">Client</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0..ClientState.html">ClientState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Client.html">Client</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0..ClientState.html">ClientState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2095,7 +2181,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the client can be used to make cross-origin authentication requests. 
+    <dd>{{% md %}}Boolean. Indicates whether or not the client can be used to make cross-origin authentication requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2431,7 +2517,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the client can be used to make cross-origin authentication requests. 
+    <dd>{{% md %}}Boolean. Indicates whether or not the client can be used to make cross-origin authentication requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2767,7 +2853,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the client can be used to make cross-origin authentication requests. 
+    <dd>{{% md %}}Boolean. Indicates whether or not the client can be used to make cross-origin authentication requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3002,7 +3088,7 @@ The following state arguments are supported:
 <a href="#state_addons_python" style="color: inherit; text-decoration: inherit;">addons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientaddons">Dict[Client<wbr>Addons]</a></span>
+        <span class="property-type"><a href="#clientaddons">Client<wbr>Addons<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for add-ons for this client. For details, see Add-ons.
 {{% /md %}}</dd>
@@ -3068,7 +3154,7 @@ The following state arguments are supported:
 <a href="#state_client_metadata_python" style="color: inherit; text-decoration: inherit;">client_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map(String)
 {{% /md %}}</dd>
@@ -3090,7 +3176,7 @@ The following state arguments are supported:
 <a href="#state_client_secret_rotation_trigger_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>rotation_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map.
 {{% /md %}}</dd>
@@ -3103,7 +3189,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the client can be used to make cross-origin authentication requests. 
+    <dd>{{% md %}}Boolean. Indicates whether or not the client can be used to make cross-origin authentication requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3167,7 +3253,7 @@ The following state arguments are supported:
 <a href="#state_encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map(String).
 {{% /md %}}</dd>
@@ -3232,7 +3318,7 @@ The following state arguments are supported:
 <a href="#state_jwt_configuration_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientjwtconfiguration">Dict[Client<wbr>Jwt<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#clientjwtconfiguration">Client<wbr>Jwt<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the JWTs issued for this client. For details, see JWT Configuration.
 {{% /md %}}</dd>
@@ -3254,7 +3340,7 @@ The following state arguments are supported:
 <a href="#state_mobile_python" style="color: inherit; text-decoration: inherit;">mobile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientmobile">Dict[Client<wbr>Mobile]</a></span>
+        <span class="property-type"><a href="#clientmobile">Client<wbr>Mobile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for mobile native applications. For details, see Mobile.
 {{% /md %}}</dd>
@@ -4309,29 +4395,29 @@ The following state arguments are supported:
 <a href="#aws_python" style="color: inherit; text-decoration: inherit;">aws</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azureblob_python">
-<a href="#azureblob_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob</a>
+        <span id="azure_blob_python">
+<a href="#azure_blob_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azuresb_python">
-<a href="#azuresb_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Sb</a>
+        <span id="azure_sb_python">
+<a href="#azure_sb_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>sb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4342,7 +4428,7 @@ The following state arguments are supported:
 <a href="#box_python" style="color: inherit; text-decoration: inherit;">box</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4353,7 +4439,7 @@ The following state arguments are supported:
 <a href="#cloudbees_python" style="color: inherit; text-decoration: inherit;">cloudbees</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4364,7 +4450,7 @@ The following state arguments are supported:
 <a href="#concur_python" style="color: inherit; text-decoration: inherit;">concur</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4375,7 +4461,7 @@ The following state arguments are supported:
 <a href="#dropbox_python" style="color: inherit; text-decoration: inherit;">dropbox</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4386,7 +4472,7 @@ The following state arguments are supported:
 <a href="#echosign_python" style="color: inherit; text-decoration: inherit;">echosign</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4397,7 +4483,7 @@ The following state arguments are supported:
 <a href="#egnyte_python" style="color: inherit; text-decoration: inherit;">egnyte</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4408,7 +4494,7 @@ The following state arguments are supported:
 <a href="#firebase_python" style="color: inherit; text-decoration: inherit;">firebase</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4419,7 +4505,7 @@ The following state arguments are supported:
 <a href="#layer_python" style="color: inherit; text-decoration: inherit;">layer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4430,7 +4516,7 @@ The following state arguments are supported:
 <a href="#mscrm_python" style="color: inherit; text-decoration: inherit;">mscrm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4441,7 +4527,7 @@ The following state arguments are supported:
 <a href="#newrelic_python" style="color: inherit; text-decoration: inherit;">newrelic</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4452,7 +4538,7 @@ The following state arguments are supported:
 <a href="#office365_python" style="color: inherit; text-decoration: inherit;">office365</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4463,7 +4549,7 @@ The following state arguments are supported:
 <a href="#rms_python" style="color: inherit; text-decoration: inherit;">rms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4474,29 +4560,29 @@ The following state arguments are supported:
 <a href="#salesforce_python" style="color: inherit; text-decoration: inherit;">salesforce</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="salesforceapi_python">
-<a href="#salesforceapi_python" style="color: inherit; text-decoration: inherit;">salesforce<wbr>Api</a>
+        <span id="salesforce_api_python">
+<a href="#salesforce_api_python" style="color: inherit; text-decoration: inherit;">salesforce_<wbr>api</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="salesforcesandboxapi_python">
-<a href="#salesforcesandboxapi_python" style="color: inherit; text-decoration: inherit;">salesforce<wbr>Sandbox<wbr>Api</a>
+        <span id="salesforce_sandbox_api_python">
+<a href="#salesforce_sandbox_api_python" style="color: inherit; text-decoration: inherit;">salesforce_<wbr>sandbox_<wbr>api</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4507,18 +4593,18 @@ The following state arguments are supported:
 <a href="#samlp_python" style="color: inherit; text-decoration: inherit;">samlp</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientaddonssamlp">Dict[Client<wbr>Addons<wbr>Samlp]</a></span>
+        <span class="property-type"><a href="#clientaddonssamlp">Client<wbr>Addons<wbr>Samlp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for a SAML add-on. For details, see SAML.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sapapi_python">
-<a href="#sapapi_python" style="color: inherit; text-decoration: inherit;">sap<wbr>Api</a>
+        <span id="sap_api_python">
+<a href="#sap_api_python" style="color: inherit; text-decoration: inherit;">sap_<wbr>api</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4529,7 +4615,7 @@ The following state arguments are supported:
 <a href="#sentry_python" style="color: inherit; text-decoration: inherit;">sentry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4540,7 +4626,7 @@ The following state arguments are supported:
 <a href="#sharepoint_python" style="color: inherit; text-decoration: inherit;">sharepoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4551,7 +4637,7 @@ The following state arguments are supported:
 <a href="#slack_python" style="color: inherit; text-decoration: inherit;">slack</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4562,7 +4648,7 @@ The following state arguments are supported:
 <a href="#springcm_python" style="color: inherit; text-decoration: inherit;">springcm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4573,7 +4659,7 @@ The following state arguments are supported:
 <a href="#wams_python" style="color: inherit; text-decoration: inherit;">wams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4584,7 +4670,7 @@ The following state arguments are supported:
 <a href="#wsfed_python" style="color: inherit; text-decoration: inherit;">wsfed</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4595,7 +4681,7 @@ The following state arguments are supported:
 <a href="#zendesk_python" style="color: inherit; text-decoration: inherit;">zendesk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -4606,7 +4692,7 @@ The following state arguments are supported:
 <a href="#zoom_python" style="color: inherit; text-decoration: inherit;">zoom</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}String
 {{% /md %}}</dd>
@@ -5297,8 +5383,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authncontextclassref_python">
-<a href="#authncontextclassref_python" style="color: inherit; text-decoration: inherit;">authn<wbr>Context<wbr>Class<wbr>Ref</a>
+        <span id="authn_context_class_ref_python">
+<a href="#authn_context_class_ref_python" style="color: inherit; text-decoration: inherit;">authn_<wbr>context_<wbr>class_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5319,8 +5405,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="createupnclaim_python">
-<a href="#createupnclaim_python" style="color: inherit; text-decoration: inherit;">create<wbr>Upn<wbr>Claim</a>
+        <span id="create_upn_claim_python">
+<a href="#create_upn_claim_python" style="color: inherit; text-decoration: inherit;">create_<wbr>upn_<wbr>claim</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5341,8 +5427,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="digestalgorithm_python">
-<a href="#digestalgorithm_python" style="color: inherit; text-decoration: inherit;">digest<wbr>Algorithm</a>
+        <span id="digest_algorithm_python">
+<a href="#digest_algorithm_python" style="color: inherit; text-decoration: inherit;">digest_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5352,8 +5438,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includeattributenameformat_python">
-<a href="#includeattributenameformat_python" style="color: inherit; text-decoration: inherit;">include<wbr>Attribute<wbr>Name<wbr>Format</a>
+        <span id="include_attribute_name_format_python">
+<a href="#include_attribute_name_format_python" style="color: inherit; text-decoration: inherit;">include_<wbr>attribute_<wbr>name_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5363,8 +5449,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lifetimeinseconds_python">
-<a href="#lifetimeinseconds_python" style="color: inherit; text-decoration: inherit;">lifetime<wbr>In<wbr>Seconds</a>
+        <span id="lifetime_in_seconds_python">
+<a href="#lifetime_in_seconds_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5378,15 +5464,15 @@ The following state arguments are supported:
 <a href="#logout_python" style="color: inherit; text-decoration: inherit;">logout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientaddonssamlplogout">Dict[Client<wbr>Addons<wbr>Samlp<wbr>Logout]</a></span>
+        <span class="property-type"><a href="#clientaddonssamlplogout">Client<wbr>Addons<wbr>Samlp<wbr>Logout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Map(Resource). Configuration settings for logout. For details, see Logout.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mapidentities_python">
-<a href="#mapidentities_python" style="color: inherit; text-decoration: inherit;">map<wbr>Identities</a>
+        <span id="map_identities_python">
+<a href="#map_identities_python" style="color: inherit; text-decoration: inherit;">map_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5396,8 +5482,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mapunknownclaimsasis_python">
-<a href="#mapunknownclaimsasis_python" style="color: inherit; text-decoration: inherit;">map<wbr>Unknown<wbr>Claims<wbr>As<wbr>Is</a>
+        <span id="map_unknown_claims_as_is_python">
+<a href="#map_unknown_claims_as_is_python" style="color: inherit; text-decoration: inherit;">map_<wbr>unknown_<wbr>claims_<wbr>as_<wbr>is</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5411,15 +5497,15 @@ The following state arguments are supported:
 <a href="#mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map(String). Mappings between the Auth0 user profile property name (`name`) and the output attributes on the SAML attribute in the assertion (`value`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nameidentifierformat_python">
-<a href="#nameidentifierformat_python" style="color: inherit; text-decoration: inherit;">name<wbr>Identifier<wbr>Format</a>
+        <span id="name_identifier_format_python">
+<a href="#name_identifier_format_python" style="color: inherit; text-decoration: inherit;">name_<wbr>identifier_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5429,8 +5515,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nameidentifierprobes_python">
-<a href="#nameidentifierprobes_python" style="color: inherit; text-decoration: inherit;">name<wbr>Identifier<wbr>Probes</a>
+        <span id="name_identifier_probes_python">
+<a href="#name_identifier_probes_python" style="color: inherit; text-decoration: inherit;">name_<wbr>identifier_<wbr>probes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5440,8 +5526,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="passthroughclaimswithnomapping_python">
-<a href="#passthroughclaimswithnomapping_python" style="color: inherit; text-decoration: inherit;">passthrough<wbr>Claims<wbr>With<wbr>No<wbr>Mapping</a>
+        <span id="passthrough_claims_with_no_mapping_python">
+<a href="#passthrough_claims_with_no_mapping_python" style="color: inherit; text-decoration: inherit;">passthrough_<wbr>claims_<wbr>with_<wbr>no_<wbr>mapping</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5462,8 +5548,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="signresponse_python">
-<a href="#signresponse_python" style="color: inherit; text-decoration: inherit;">sign<wbr>Response</a>
+        <span id="sign_response_python">
+<a href="#sign_response_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>response</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5473,8 +5559,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="signaturealgorithm_python">
-<a href="#signaturealgorithm_python" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
+        <span id="signature_algorithm_python">
+<a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5484,8 +5570,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="typedattributes_python">
-<a href="#typedattributes_python" style="color: inherit; text-decoration: inherit;">typed<wbr>Attributes</a>
+        <span id="typed_attributes_python">
+<a href="#typed_attributes_python" style="color: inherit; text-decoration: inherit;">typed_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5618,8 +5704,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sloenabled_python">
-<a href="#sloenabled_python" style="color: inherit; text-decoration: inherit;">slo<wbr>Enabled</a>
+        <span id="slo_enabled_python">
+<a href="#slo_enabled_python" style="color: inherit; text-decoration: inherit;">slo_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5818,8 +5904,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lifetimeinseconds_python">
-<a href="#lifetimeinseconds_python" style="color: inherit; text-decoration: inherit;">lifetime<wbr>In<wbr>Seconds</a>
+        <span id="lifetime_in_seconds_python">
+<a href="#lifetime_in_seconds_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5833,15 +5919,15 @@ The following state arguments are supported:
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map(String). Permissions (scopes) included in JWTs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secretencoded_python">
-<a href="#secretencoded_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Encoded</a>
+        <span id="secret_encoded_python">
+<a href="#secret_encoded_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>encoded</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5967,7 +6053,7 @@ The following state arguments are supported:
 <a href="#android_python" style="color: inherit; text-decoration: inherit;">android</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientmobileandroid">Dict[Client<wbr>Mobile<wbr>Android]</a></span>
+        <span class="property-type"><a href="#clientmobileandroid">Client<wbr>Mobile<wbr>Android<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Android native apps. For details, see Android.
 {{% /md %}}</dd>
@@ -5978,7 +6064,7 @@ The following state arguments are supported:
 <a href="#ios_python" style="color: inherit; text-decoration: inherit;">ios</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientmobileios">Dict[Client<wbr>Mobile<wbr>Ios]</a></span>
+        <span class="property-type"><a href="#clientmobileios">Client<wbr>Mobile<wbr>Ios<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for i0S native apps. For details, see iOS.
 {{% /md %}}</dd>
@@ -6097,8 +6183,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="apppackagename_python">
-<a href="#apppackagename_python" style="color: inherit; text-decoration: inherit;">app<wbr>Package<wbr>Name</a>
+        <span id="app_package_name_python">
+<a href="#app_package_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>package_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6108,8 +6194,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sha256certfingerprints_python">
-<a href="#sha256certfingerprints_python" style="color: inherit; text-decoration: inherit;">sha256Cert<wbr>Fingerprints</a>
+        <span id="sha256_cert_fingerprints_python">
+<a href="#sha256_cert_fingerprints_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>cert_<wbr>fingerprints</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6231,8 +6317,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appbundleidentifier_python">
-<a href="#appbundleidentifier_python" style="color: inherit; text-decoration: inherit;">app<wbr>Bundle<wbr>Identifier</a>
+        <span id="app_bundle_identifier_python">
+<a href="#app_bundle_identifier_python" style="color: inherit; text-decoration: inherit;">app_<wbr>bundle_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6242,8 +6328,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="teamid_python">
-<a href="#teamid_python" style="color: inherit; text-decoration: inherit;">team<wbr>Id</a>
+        <span id="team_id_python">
+<a href="#team_id_python" style="color: inherit; text-decoration: inherit;">team_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -76,22 +76,22 @@ import pulumi_auth0 as auth0
 
 tenant = auth0.Tenant("tenant",
     allowed_logout_urls=["http://mysite/logout"],
-    change_password={
-        "enabled": True,
-        "html": (lambda path: open(path).read())("./password_reset.html"),
-    },
+    change_password=auth0.TenantChangePasswordArgs(
+        enabled=True,
+        html=(lambda path: open(path).read())("./password_reset.html"),
+    ),
     default_audience="<client_id>",
     default_directory="Connection-Name",
-    error_page={
-        "html": (lambda path: open(path).read())("./error.html"),
-        "showLogLink": True,
-        "url": "http://mysite/errors",
-    },
+    error_page=auth0.TenantErrorPageArgs(
+        html=(lambda path: open(path).read())("./error.html"),
+        show_log_link=True,
+        url="http://mysite/errors",
+    ),
     friendly_name="Tenant Name",
-    guardian_mfa_page={
-        "enabled": True,
-        "html": (lambda path: open(path).read())("./guardian_multifactor.html"),
-    },
+    guardian_mfa_page=auth0.TenantGuardianMfaPageArgs(
+        enabled=True,
+        html=(lambda path: open(path).read())("./guardian_multifactor.html"),
+    ),
     picture_url="http://mysite/logo.png",
     sandbox_version="8",
     session_lifetime=46000,
@@ -148,7 +148,7 @@ const tenant = new auth0.Tenant("tenant", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.Tenant">Tenant</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allowed_logout_urls=None<span class="p">, </span>change_password=None<span class="p">, </span>default_audience=None<span class="p">, </span>default_directory=None<span class="p">, </span>default_redirection_uri=None<span class="p">, </span>enabled_locales=None<span class="p">, </span>error_page=None<span class="p">, </span>flags=None<span class="p">, </span>friendly_name=None<span class="p">, </span>guardian_mfa_page=None<span class="p">, </span>idle_session_lifetime=None<span class="p">, </span>picture_url=None<span class="p">, </span>sandbox_version=None<span class="p">, </span>session_lifetime=None<span class="p">, </span>support_email=None<span class="p">, </span>support_url=None<span class="p">, </span>universal_login=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.Tenant">Tenant</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_logout_urls</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">change_password</span><span class="p">:</span> <span class="nx">Optional[TenantChangePasswordArgs]</span> = None<span class="p">, </span><span class="nx">default_audience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_directory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_redirection_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_locales</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">error_page</span><span class="p">:</span> <span class="nx">Optional[TenantErrorPageArgs]</span> = None<span class="p">, </span><span class="nx">flags</span><span class="p">:</span> <span class="nx">Optional[TenantFlagsArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guardian_mfa_page</span><span class="p">:</span> <span class="nx">Optional[TenantGuardianMfaPageArgs]</span> = None<span class="p">, </span><span class="nx">idle_session_lifetime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">picture_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sandbox_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_lifetime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">support_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">universal_login</span><span class="p">:</span> <span class="nx">Optional[TenantUniversalLoginArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -448,7 +448,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used. 
+    <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -641,7 +641,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used. 
+    <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -834,7 +834,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used. 
+    <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -916,7 +916,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#change_password_python" style="color: inherit; text-decoration: inherit;">change_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantchangepassword">Dict[Tenant<wbr>Change<wbr>Password]</a></span>
+        <span class="property-type"><a href="#tenantchangepassword">Tenant<wbr>Change<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for change passsword page. For details, see Change Password Page.
 {{% /md %}}</dd>
@@ -970,7 +970,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#error_page_python" style="color: inherit; text-decoration: inherit;">error_<wbr>page</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenanterrorpage">Dict[Tenant<wbr>Error<wbr>Page]</a></span>
+        <span class="property-type"><a href="#tenanterrorpage">Tenant<wbr>Error<wbr>Page<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for error pages. For details, see Error Page.
 {{% /md %}}</dd>
@@ -981,7 +981,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantflags">Dict[Tenant<wbr>Flags]</a></span>
+        <span class="property-type"><a href="#tenantflags">Tenant<wbr>Flags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for tenant flags. For details, see Flags.
 {{% /md %}}</dd>
@@ -1003,7 +1003,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#guardian_mfa_page_python" style="color: inherit; text-decoration: inherit;">guardian_<wbr>mfa_<wbr>page</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantguardianmfapage">Dict[Tenant<wbr>Guardian<wbr>Mfa<wbr>Page]</a></span>
+        <span class="property-type"><a href="#tenantguardianmfapage">Tenant<wbr>Guardian<wbr>Mfa<wbr>Page<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the Guardian MFA page. For details, see Guardian MFA Page.
 {{% /md %}}</dd>
@@ -1027,7 +1027,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used. 
+    <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1080,7 +1080,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#universal_login_python" style="color: inherit; text-decoration: inherit;">universal_<wbr>login</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantuniversallogin">Dict[Tenant<wbr>Universal<wbr>Login]</a></span>
+        <span class="property-type"><a href="#tenantuniversallogin">Tenant<wbr>Universal<wbr>Login<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login. For details, see Universal Login.
 {{% /md %}}</dd>
@@ -1183,7 +1183,8 @@ Get an existing Tenant resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allowed_logout_urls=None<span class="p">, </span>change_password=None<span class="p">, </span>default_audience=None<span class="p">, </span>default_directory=None<span class="p">, </span>default_redirection_uri=None<span class="p">, </span>enabled_locales=None<span class="p">, </span>error_page=None<span class="p">, </span>flags=None<span class="p">, </span>friendly_name=None<span class="p">, </span>guardian_mfa_page=None<span class="p">, </span>idle_session_lifetime=None<span class="p">, </span>picture_url=None<span class="p">, </span>sandbox_version=None<span class="p">, </span>session_lifetime=None<span class="p">, </span>support_email=None<span class="p">, </span>support_url=None<span class="p">, </span>universal_login=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_logout_urls</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">change_password</span><span class="p">:</span> <span class="nx">Optional[TenantChangePasswordArgs]</span> = None<span class="p">, </span><span class="nx">default_audience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_directory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_redirection_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_locales</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">error_page</span><span class="p">:</span> <span class="nx">Optional[TenantErrorPageArgs]</span> = None<span class="p">, </span><span class="nx">flags</span><span class="p">:</span> <span class="nx">Optional[TenantFlagsArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guardian_mfa_page</span><span class="p">:</span> <span class="nx">Optional[TenantGuardianMfaPageArgs]</span> = None<span class="p">, </span><span class="nx">idle_session_lifetime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">picture_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sandbox_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_lifetime</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">support_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">universal_login</span><span class="p">:</span> <span class="nx">Optional[TenantUniversalLoginArgs]</span> = None<span class="p">) -&gt;</span> Tenant</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1191,7 +1192,7 @@ Get an existing Tenant resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Tenant.html">Tenant</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0..TenantState.html">TenantState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Tenant.html">Tenant</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0..TenantState.html">TenantState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1425,7 +1426,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used. 
+    <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1618,7 +1619,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used. 
+    <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1811,7 +1812,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used. 
+    <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1893,7 +1894,7 @@ The following state arguments are supported:
 <a href="#state_change_password_python" style="color: inherit; text-decoration: inherit;">change_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantchangepassword">Dict[Tenant<wbr>Change<wbr>Password]</a></span>
+        <span class="property-type"><a href="#tenantchangepassword">Tenant<wbr>Change<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for change passsword page. For details, see Change Password Page.
 {{% /md %}}</dd>
@@ -1947,7 +1948,7 @@ The following state arguments are supported:
 <a href="#state_error_page_python" style="color: inherit; text-decoration: inherit;">error_<wbr>page</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenanterrorpage">Dict[Tenant<wbr>Error<wbr>Page]</a></span>
+        <span class="property-type"><a href="#tenanterrorpage">Tenant<wbr>Error<wbr>Page<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for error pages. For details, see Error Page.
 {{% /md %}}</dd>
@@ -1958,7 +1959,7 @@ The following state arguments are supported:
 <a href="#state_flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantflags">Dict[Tenant<wbr>Flags]</a></span>
+        <span class="property-type"><a href="#tenantflags">Tenant<wbr>Flags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for tenant flags. For details, see Flags.
 {{% /md %}}</dd>
@@ -1980,7 +1981,7 @@ The following state arguments are supported:
 <a href="#state_guardian_mfa_page_python" style="color: inherit; text-decoration: inherit;">guardian_<wbr>mfa_<wbr>page</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantguardianmfapage">Dict[Tenant<wbr>Guardian<wbr>Mfa<wbr>Page]</a></span>
+        <span class="property-type"><a href="#tenantguardianmfapage">Tenant<wbr>Guardian<wbr>Mfa<wbr>Page<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the Guardian MFA page. For details, see Guardian MFA Page.
 {{% /md %}}</dd>
@@ -2004,7 +2005,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used. 
+    <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2057,7 +2058,7 @@ The following state arguments are supported:
 <a href="#state_universal_login_python" style="color: inherit; text-decoration: inherit;">universal_<wbr>login</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantuniversallogin">Dict[Tenant<wbr>Universal<wbr>Login]</a></span>
+        <span class="property-type"><a href="#tenantuniversallogin">Tenant<wbr>Universal<wbr>Login<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login. For details, see Universal Login.
 {{% /md %}}</dd>
@@ -2362,8 +2363,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="showloglink_python">
-<a href="#showloglink_python" style="color: inherit; text-decoration: inherit;">show<wbr>Log<wbr>Link</a>
+        <span id="show_log_link_python">
+<a href="#show_log_link_python" style="color: inherit; text-decoration: inherit;">show_<wbr>log_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2790,8 +2791,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="changepwdflowv1_python">
-<a href="#changepwdflowv1_python" style="color: inherit; text-decoration: inherit;">change<wbr>Pwd<wbr>Flow<wbr>V1</a>
+        <span id="change_pwd_flow_v1_python">
+<a href="#change_pwd_flow_v1_python" style="color: inherit; text-decoration: inherit;">change_<wbr>pwd_<wbr>flow_<wbr>v1</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2801,8 +2802,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disableclickjackprotectionheaders_python">
-<a href="#disableclickjackprotectionheaders_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Clickjack<wbr>Protection<wbr>Headers</a>
+        <span id="disable_clickjack_protection_headers_python">
+<a href="#disable_clickjack_protection_headers_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>clickjack_<wbr>protection_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2812,8 +2813,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enableapissection_python">
-<a href="#enableapissection_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Apis<wbr>Section</a>
+        <span id="enable_apis_section_python">
+<a href="#enable_apis_section_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>apis_<wbr>section</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2823,8 +2824,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enableclientconnections_python">
-<a href="#enableclientconnections_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Client<wbr>Connections</a>
+        <span id="enable_client_connections_python">
+<a href="#enable_client_connections_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>client_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2834,8 +2835,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablecustomdomaininemails_python">
-<a href="#enablecustomdomaininemails_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Custom<wbr>Domain<wbr>In<wbr>Emails</a>
+        <span id="enable_custom_domain_in_emails_python">
+<a href="#enable_custom_domain_in_emails_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>custom_<wbr>domain_<wbr>in_<wbr>emails</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2845,8 +2846,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enabledynamicclientregistration_python">
-<a href="#enabledynamicclientregistration_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Dynamic<wbr>Client<wbr>Registration</a>
+        <span id="enable_dynamic_client_registration_python">
+<a href="#enable_dynamic_client_registration_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>dynamic_<wbr>client_<wbr>registration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2856,8 +2857,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablelegacylogssearchv2_python">
-<a href="#enablelegacylogssearchv2_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Legacy<wbr>Logs<wbr>Search<wbr>V2</a>
+        <span id="enable_legacy_logs_search_v2_python">
+<a href="#enable_legacy_logs_search_v2_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>legacy_<wbr>logs_<wbr>search_<wbr>v2</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2867,8 +2868,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablepipeline2_python">
-<a href="#enablepipeline2_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Pipeline2</a>
+        <span id="enable_pipeline2_python">
+<a href="#enable_pipeline2_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>pipeline2</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2878,8 +2879,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablepublicsignupuserexistserror_python">
-<a href="#enablepublicsignupuserexistserror_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Public<wbr>Signup<wbr>User<wbr>Exists<wbr>Error</a>
+        <span id="enable_public_signup_user_exists_error_python">
+<a href="#enable_public_signup_user_exists_error_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>public_<wbr>signup_<wbr>user_<wbr>exists_<wbr>error</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2900,8 +2901,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usescopedescriptionsforconsent_python">
-<a href="#usescopedescriptionsforconsent_python" style="color: inherit; text-decoration: inherit;">use<wbr>Scope<wbr>Descriptions<wbr>For<wbr>Consent</a>
+        <span id="use_scope_descriptions_for_consent_python">
+<a href="#use_scope_descriptions_for_consent_python" style="color: inherit; text-decoration: inherit;">use_<wbr>scope_<wbr>descriptions_<wbr>for_<wbr>consent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3127,7 +3128,7 @@ The following state arguments are supported:
 <a href="#colors_python" style="color: inherit; text-decoration: inherit;">colors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantuniversallogincolors">Dict[Tenant<wbr>Universal<wbr>Login<wbr>Colors]</a></span>
+        <span class="property-type"><a href="#tenantuniversallogincolors">Tenant<wbr>Universal<wbr>Login<wbr>Colors<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login colors. See Universal Login - Colors.
 {{% /md %}}</dd>
@@ -3246,8 +3247,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pagebackground_python">
-<a href="#pagebackground_python" style="color: inherit; text-decoration: inherit;">page<wbr>Background</a>
+        <span id="page_background_python">
+<a href="#page_background_python" style="color: inherit; text-decoration: inherit;">page_<wbr>background</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

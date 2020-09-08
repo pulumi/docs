@@ -47,6 +47,12 @@ class MyStack : Stack
             Syntax = "liquid",
             UrlLifetimeInSeconds = 3600,
             Enabled = true,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                myEmailProvider,
+            },
         });
     }
 
@@ -56,7 +62,48 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-auth0/sdk/go/auth0"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myEmailProvider, err := auth0.NewEmail(ctx, "myEmailProvider", &auth0.EmailArgs{
+			Enabled:            pulumi.Bool(true),
+			DefaultFromAddress: pulumi.String("accounts@example.com"),
+			Credentials: &auth0.EmailCredentialsArgs{
+				AccessKeyId:     pulumi.String("AKIAXXXXXXXXXXXXXXXX"),
+				SecretAccessKey: pulumi.String("7e8c2148xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"),
+				Region:          pulumi.String("us-east-1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = auth0.NewEmailTemplate(ctx, "myEmailTemplate", &auth0.EmailTemplateArgs{
+			Template:             pulumi.String("welcome_email"),
+			Body:                 pulumi.String("<html><body><h1>Welcome!</h1></body></html>"),
+			From:                 pulumi.String("welcome@example.com"),
+			ResultUrl:            pulumi.String("https://example.com/welcome"),
+			Subject:              pulumi.String("Welcome"),
+			Syntax:               pulumi.String("liquid"),
+			UrlLifetimeInSeconds: pulumi.Int(3600),
+			Enabled:              pulumi.Bool(true),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			myEmailProvider,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -67,11 +114,11 @@ import pulumi_auth0 as auth0
 my_email_provider = auth0.Email("myEmailProvider",
     enabled=True,
     default_from_address="accounts@example.com",
-    credentials={
-        "accessKeyId": "AKIAXXXXXXXXXXXXXXXX",
-        "secretAccessKey": "7e8c2148xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-        "region": "us-east-1",
-    })
+    credentials=auth0.EmailCredentialsArgs(
+        access_key_id="AKIAXXXXXXXXXXXXXXXX",
+        secret_access_key="7e8c2148xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        region="us-east-1",
+    ))
 my_email_template = auth0.EmailTemplate("myEmailTemplate",
     template="welcome_email",
     body="<html><body><h1>Welcome!</h1></body></html>",
@@ -80,7 +127,8 @@ my_email_template = auth0.EmailTemplate("myEmailTemplate",
     subject="Welcome",
     syntax="liquid",
     url_lifetime_in_seconds=3600,
-    enabled=True)
+    enabled=True,
+    opts=ResourceOptions(depends_on=[my_email_provider]))
 ```
 
 {{% /example %}}
@@ -109,6 +157,8 @@ const myEmailTemplate = new auth0.EmailTemplate("myEmailTemplate", {
     syntax: "liquid",
     urlLifetimeInSeconds: 3600,
     enabled: true,
+}, {
+    dependsOn: [myEmailProvider],
 });
 ```
 
@@ -126,7 +176,7 @@ const myEmailTemplate = new auth0.EmailTemplate("myEmailTemplate", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.EmailTemplate">EmailTemplate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>body=None<span class="p">, </span>enabled=None<span class="p">, </span>from_=None<span class="p">, </span>result_url=None<span class="p">, </span>subject=None<span class="p">, </span>syntax=None<span class="p">, </span>template=None<span class="p">, </span>url_lifetime_in_seconds=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.EmailTemplate">EmailTemplate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">from_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">result_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subject</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">syntax</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url_lifetime_in_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -769,7 +819,8 @@ Get an existing EmailTemplate resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>body=None<span class="p">, </span>enabled=None<span class="p">, </span>from_=None<span class="p">, </span>result_url=None<span class="p">, </span>subject=None<span class="p">, </span>syntax=None<span class="p">, </span>template=None<span class="p">, </span>url_lifetime_in_seconds=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">from_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">result_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subject</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">syntax</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url_lifetime_in_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> EmailTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -777,7 +828,7 @@ Get an existing EmailTemplate resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.EmailTemplate.html">EmailTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0..EmailTemplateState.html">EmailTemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.EmailTemplate.html">EmailTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0..EmailTemplateState.html">EmailTemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
