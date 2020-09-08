@@ -64,7 +64,7 @@ const vaultServiceHealth = pulumi.output(consul.getServiceHealth({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_service_health(</span>datacenter=None<span class="p">, </span>filter=None<span class="p">, </span>name=None<span class="p">, </span>near=None<span class="p">, </span>node_meta=None<span class="p">, </span>passing=None<span class="p">, </span>tag=None<span class="p">, </span>wait_for=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service_health(</span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">near</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">passing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceHealthResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -438,7 +438,7 @@ based on the estimated round trip time from that node.
 <a href="#node_meta_python" style="color: inherit; text-decoration: inherit;">node_<wbr>meta</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Filter the results to nodes with the specified key/value
 pairs.
@@ -933,7 +933,7 @@ List of explicit LAN and WAN IP addresses for the agent.
 <a href="#node_meta_python" style="color: inherit; text-decoration: inherit;">node_<wbr>meta</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The list of metadata to filter the nodes.
 {{% /md %}}</dd>
@@ -1122,7 +1122,7 @@ passing state.
 <a href="#checks_python" style="color: inherit; text-decoration: inherit;">checks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehealthresultcheck">List[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Check]</a></span>
+        <span class="property-type"><a href="#getservicehealthresultcheck">List[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Check<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1132,7 +1132,7 @@ passing state.
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehealthresultnode">List[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Node]</a></span>
+        <span class="property-type"><a href="#getservicehealthresultnode">List[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Node<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The name of the node associated with this health-check.
 {{% /md %}}</dd>
@@ -1143,7 +1143,7 @@ passing state.
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehealthresultservice">List[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Service]</a></span>
+        <span class="property-type"><a href="#getservicehealthresultservice">List[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1547,8 +1547,19 @@ passing state.
 
     <dt class="property-required"
             title="Required">
-        <span id="servicename_python">
-<a href="#servicename_python" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
+        <span id="service_id_python">
+<a href="#service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the service associated to this health-check.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="service_name_python">
+<a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1558,24 +1569,13 @@ passing state.
 
     <dt class="property-required"
             title="Required">
-        <span id="servicetags_python">
-<a href="#servicetags_python" style="color: inherit; text-decoration: inherit;">service<wbr>Tags</a>
+        <span id="service_tags_python">
+<a href="#service_tags_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of tags associated with this health-check.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="service_id_python">
-<a href="#service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the service associated to this health-check.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1869,7 +1869,7 @@ passing state.
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Service metadata tag information, if any.
 {{% /md %}}</dd>
@@ -1887,11 +1887,11 @@ passing state.
 
     <dt class="property-required"
             title="Required">
-        <span id="taggedaddresses_python">
-<a href="#taggedaddresses_python" style="color: inherit; text-decoration: inherit;">tagged<wbr>Addresses</a>
+        <span id="tagged_addresses_python">
+<a href="#tagged_addresses_python" style="color: inherit; text-decoration: inherit;">tagged_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2167,7 +2167,7 @@ passing state.
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Service metadata tag information, if any.
 {{% /md %}}</dd>

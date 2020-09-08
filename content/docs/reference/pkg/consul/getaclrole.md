@@ -105,7 +105,7 @@ export const consulAclRole = test.then(test => test.id);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_acl_role(</span>description=None<span class="p">, </span>name=None<span class="p">, </span>namespace=None<span class="p">, </span>policies=None<span class="p">, </span>service_identities=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_acl_role(</span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[List[GetAclRolePolicyArgs]]</span> = None<span class="p">, </span><span class="nx">service_identities</span><span class="p">:</span> <span class="nx">Optional[List[GetAclRoleServiceIdentityArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAclRoleResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -363,7 +363,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaclrolepolicy">List[Get<wbr>Acl<wbr>Role<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getaclrolepolicy">List[Get<wbr>Acl<wbr>Role<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of policies associated with the ACL Role. Each entry has
 an `id` and a `name` attribute.
@@ -375,7 +375,7 @@ an `id` and a `name` attribute.
 <a href="#service_identities_python" style="color: inherit; text-decoration: inherit;">service_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaclroleserviceidentity">List[Get<wbr>Acl<wbr>Role<wbr>Service<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#getaclroleserviceidentity">List[Get<wbr>Acl<wbr>Role<wbr>Service<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of service identities associated with the ACL
 Role. Each entry has a `service_name` attribute and a list of `datacenters`.
@@ -940,8 +940,8 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicename_python">
-<a href="#servicename_python" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
+        <span id="service_name_python">
+<a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

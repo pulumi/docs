@@ -102,11 +102,11 @@ import pulumi_aws as aws
 import pulumi_consul as consul
 
 app_keys = consul.get_keys(datacenter="nyc1",
-    keys=[{
-        "default": "ami-1234",
-        "name": "ami",
-        "path": "service/app/launch_ami",
-    }],
+    keys=[consul.GetKeysKeyArgs(
+        default="ami-1234",
+        name="ami",
+        path="service/app/launch_ami",
+    )],
     token="abcd")
 # Start our instance with the dynamic ami value
 app_instance = aws.ec2.Instance("appInstance", ami=app_keys.var["ami"])
@@ -153,7 +153,7 @@ const appInstance = new aws.ec2.Instance("app", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_keys(</span>datacenter=None<span class="p">, </span>keys=None<span class="p">, </span>namespace=None<span class="p">, </span>token=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_keys(</span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">keys</span><span class="p">:</span> <span class="nx">Optional[List[GetKeysKeyArgs]]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKeysResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -360,7 +360,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkeyskey">List[Get<wbr>Keys<wbr>Key]</a></span>
+        <span class="property-type"><a href="#getkeyskey">List[Get<wbr>Keys<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a key in Consul to be read. Supported
 values documented below. Multiple blocks supported.
@@ -652,7 +652,7 @@ has the value of the key.
 <a href="#var_python" style="color: inherit; text-decoration: inherit;">var</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

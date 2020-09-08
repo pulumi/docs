@@ -105,7 +105,7 @@ export const consulAclAuthMethod = test.then(test => test.config);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_acl_auth_method(</span>name=None<span class="p">, </span>namespace=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_acl_auth_method(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAclAuthMethodResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -663,7 +663,7 @@ be either 'local' or 'global'.
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The configuration options of the ACL Auth Method. This attribute is
 deprecated and will be removed in a future version. If the configuration is
@@ -896,8 +896,8 @@ be either 'local' or 'global'.
 
     <dt class="property-required"
             title="Required">
-        <span id="bindnamespace_python">
-<a href="#bindnamespace_python" style="color: inherit; text-decoration: inherit;">bind<wbr>Namespace</a>
+        <span id="bind_namespace_python">
+<a href="#bind_namespace_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
