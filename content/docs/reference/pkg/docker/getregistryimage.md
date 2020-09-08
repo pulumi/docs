@@ -48,7 +48,37 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-docker/sdk/v2/go/docker"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "ubuntu:precise"
+		ubuntuRegistryImage, err := docker.GetRegistryImage(ctx, &docker.GetRegistryImageArgs{
+			Name: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = docker.NewRemoteImage(ctx, "ubuntuRemoteImage", &docker.RemoteImageArgs{
+			Name: pulumi.String(ubuntuRegistryImage.Name),
+			PullTriggers: pulumi.StringArray{
+				pulumi.String(ubuntuRegistryImage.Sha256Digest),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -95,7 +125,7 @@ const ubuntuRemoteImage = new docker.RemoteImage("ubuntu", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_registry_image(</span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_registry_image(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRegistryImageResult</code></pre></div>
 {{% /choosable %}}
 
 

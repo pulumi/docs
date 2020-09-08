@@ -189,7 +189,7 @@ const myImage = new docker.Image(customImage, {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#pulumi_docker.Image">Image</a></span><span class="p">(resource_name, </span>image_name<span class="p">, </span>build<span class="p">, </span>local_image_name=None<span class="p">, </span>registry=None<span class="p">, </span>skip_push=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#pulumi_docker.Image">Image</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx"></span><span class="p">, </span><span class="nx">build</span><span class="p">:</span> <span class="nx"></span><span class="p">, </span><span class="nx">local_image_name</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">, </span><span class="nx">registry</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">, </span><span class="nx">skip_push</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -550,7 +550,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
 <a href="#build_python" style="color: inherit; text-decoration: inherit;">build</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | Dict[Docker<wbr>Build]</span>
+        <span class="property-type">Union[str, Docker<wbr>Build<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The Docker build context, as a folder path or a detailed DockerBuild object.{{% /md %}}</dd>
 
@@ -584,7 +584,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
 <a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageregistry">Dict[Image<wbr>Registry]</a></span>
+        <span class="property-type"><a href="#imageregistry">Image<wbr>Registry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials for the docker registry to push to.{{% /md %}}</dd>
 
@@ -1194,17 +1194,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}An optional map of named build-time argument variables to set during the Docker build. This flag allows you to pass built-time variables that can be accessed like environment variables inside the `RUN` instruction.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cachefrom_python">
-<a href="#cachefrom_python" style="color: inherit; text-decoration: inherit;">cache<wbr>From</a>
+        <span id="cache_from_python">
+<a href="#cache_from_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>from</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">boolean | Dict[Cache<wbr>From]</span>
+        <span class="property-type">Union[bool, Cache<wbr>From<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1234,14 +1234,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Environment variables to set on the invocation of `docker build`, for example to support `DOCKER_BUILDKIT=1 docker build`.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extraoptions_python">
-<a href="#extraoptions_python" style="color: inherit; text-decoration: inherit;">extra<wbr>Options</a>
+        <span id="extra_options_python">
+<a href="#extra_options_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

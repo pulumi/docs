@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#pulumi_docker.Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ca_material=None<span class="p">, </span>cert_material=None<span class="p">, </span>cert_path=None<span class="p">, </span>host=None<span class="p">, </span>key_material=None<span class="p">, </span>registry_auth=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#pulumi_docker.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ca_material</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cert_material</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cert_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_material</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registry_auth</span><span class="p">:</span> <span class="nx">Optional[List[ProviderRegistryAuthArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -475,7 +475,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#registry_auth_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>auth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerregistryauth">List[Provider<wbr>Registry<wbr>Auth]</a></span>
+        <span class="property-type"><a href="#providerregistryauth">List[Provider<wbr>Registry<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -775,8 +775,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="configfile_python">
-<a href="#configfile_python" style="color: inherit; text-decoration: inherit;">config<wbr>File</a>
+        <span id="config_file_python">
+<a href="#config_file_python" style="color: inherit; text-decoration: inherit;">config_<wbr>file</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -785,8 +785,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="configfilecontent_python">
-<a href="#configfilecontent_python" style="color: inherit; text-decoration: inherit;">config<wbr>File<wbr>Content</a>
+        <span id="config_file_content_python">
+<a href="#config_file_content_python" style="color: inherit; text-decoration: inherit;">config_<wbr>file_<wbr>content</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -40,7 +40,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-docker/sdk/v2/go/docker"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := docker.NewNetwork(ctx, "privateNetwork", nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -78,7 +96,7 @@ const privateNetwork = new docker.Network("private_network", {});
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#pulumi_docker.Network">Network</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attachable=None<span class="p">, </span>check_duplicate=None<span class="p">, </span>driver=None<span class="p">, </span>ingress=None<span class="p">, </span>internal=None<span class="p">, </span>ipam_configs=None<span class="p">, </span>ipam_driver=None<span class="p">, </span>ipv6=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#pulumi_docker.Network">Network</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attachable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">check_duplicate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">internal</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipam_configs</span><span class="p">:</span> <span class="nx">Optional[List[NetworkIpamConfigArgs]]</span> = None<span class="p">, </span><span class="nx">ipam_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[NetworkLabelArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -727,7 +745,7 @@ Defaults to `false`.
 <a href="#ipam_configs_python" style="color: inherit; text-decoration: inherit;">ipam_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkipamconfig">List[Network<wbr>Ipam<wbr>Config]</a></span>
+        <span class="property-type"><a href="#networkipamconfig">List[Network<wbr>Ipam<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See IPAM config below for
 details.
@@ -763,7 +781,7 @@ Defaults to `false`.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networklabel">List[Network<wbr>Label]</a></span>
+        <span class="property-type"><a href="#networklabel">List[Network<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
 {{% /md %}}</dd>
@@ -785,7 +803,7 @@ Defaults to `false`.
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Network specific options to be used by
 the drivers.
@@ -929,7 +947,8 @@ Get an existing Network resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>attachable=None<span class="p">, </span>check_duplicate=None<span class="p">, </span>driver=None<span class="p">, </span>ingress=None<span class="p">, </span>internal=None<span class="p">, </span>ipam_configs=None<span class="p">, </span>ipam_driver=None<span class="p">, </span>ipv6=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, </span>scope=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attachable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">check_duplicate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">internal</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipam_configs</span><span class="p">:</span> <span class="nx">Optional[List[NetworkIpamConfigArgs]]</span> = None<span class="p">, </span><span class="nx">ipam_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[NetworkLabelArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Network</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -937,7 +956,7 @@ Get an existing Network resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Network.html">Network</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker..NetworkState.html">NetworkState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Network.html">Network</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker..NetworkState.html">NetworkState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1550,7 +1569,7 @@ Defaults to `false`.
 <a href="#state_ipam_configs_python" style="color: inherit; text-decoration: inherit;">ipam_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkipamconfig">List[Network<wbr>Ipam<wbr>Config]</a></span>
+        <span class="property-type"><a href="#networkipamconfig">List[Network<wbr>Ipam<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See IPAM config below for
 details.
@@ -1586,7 +1605,7 @@ Defaults to `false`.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networklabel">List[Network<wbr>Label]</a></span>
+        <span class="property-type"><a href="#networklabel">List[Network<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
 {{% /md %}}</dd>
@@ -1608,7 +1627,7 @@ Defaults to `false`.
 <a href="#state_options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Network specific options to be used by
 the drivers.
@@ -1800,11 +1819,11 @@ the drivers.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="auxaddress_python">
-<a href="#auxaddress_python" style="color: inherit; text-decoration: inherit;">aux<wbr>Address</a>
+        <span id="aux_address_python">
+<a href="#aux_address_python" style="color: inherit; text-decoration: inherit;">aux_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1820,8 +1839,8 @@ the drivers.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iprange_python">
-<a href="#iprange_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Range</a>
+        <span id="ip_range_python">
+<a href="#ip_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
