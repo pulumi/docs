@@ -16,7 +16,7 @@ We used Netlify's Go example to deploy on ECS Fargate and configure the domain a
 
 Backend is a package that supports communications between Netlify CMS and repositories like Github, Gitlab, and Bitbucket. The Pulumi [example code](https://github.com/pulumi/examples/tree/master/aws-ts-netlify-cms-and-oauth/cms-oauth)uses [backend](https://www.netlifycms.org/docs/github-backend/) to authenticate to the CMS.
 
-The OAuth Server's code `cms-oauth/main.go` also enables authorization for Gitlab and Bitbucket by changing the callback URL to `https://{{YOUR_OAUTH_SERVER_URL}}/callback/{{YOUR_BACKEND_NAME}}`. To learn more about configuring the OAuth server, refer to the "Environment Variable and Pulumi Stack Configuration" section.
+OAuth Server also enables authorization for Gitlab and Bitbucket by changing the callback URL to `https://{{YOUR_OAUTH_SERVER_URL}}/callback/{{YOUR_BACKEND_NAME}}`. To learn more about configuring OAuth Server, refer to the "Environment Variable and Pulumi Stack Configuration" section.
 
 ## Make Changes to Example Code
 
