@@ -122,7 +122,7 @@ githubScope := os.Getenv("GITHUB_SCOPE")
 
 ## Creating the Application Image
 
-Replace the working directory in the Dockerfile with the path to your cloned repository.
+To deploy our application, replace the working directory in the Dockerfile with the path to your repository. Setting the working directory copies the content to when Docker builds the image.
 
 ```dockerfile
 WORKDIR /go/src/github.com/pulumi/aws-ts-netlify-cms-and-oauth/cms-oauth
