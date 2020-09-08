@@ -82,7 +82,7 @@ Because we replaced those functions, ee can remove the `randstr` and `dotenv` fo
 
 ### Setting Github Scope
 
-When building an OAuth application for Github, it's important to note that that the default  [github scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/) of *Netlify CMS's example code* is read-only. When we call the `github.New` function, read and write access must be set to edit a target repository.
+The default  [Github scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/) of *Netlify's code* is read-only. When we call the `github.New` function, read and write access must be set to edit a target repository.
 
 We can set the GitHub scope as an environmental variable, e.g., `GITHUB_SCOPE` set to `public_repo`, which grants read and write access to public repository. We can even add several scope values by adding `,` between scope values. The `GITHUB_SCOPE` value is read and parsed when the Fargate Service is created, which sets the scope for the `Github.New` function.
 
