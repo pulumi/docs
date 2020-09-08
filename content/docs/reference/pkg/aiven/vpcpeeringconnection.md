@@ -108,7 +108,7 @@ const mypeeringconnection = new aiven.VpcPeeringConnection("mypeeringconnection"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.VpcPeeringConnection">VpcPeeringConnection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">peer_cloud_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_vpc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.VpcPeeringConnection">VpcPeeringConnection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">peer_azure_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_azure_tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_cloud_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_vpc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -315,6 +315,28 @@ The VpcPeeringConnection resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="peerazureappid_csharp">
+<a href="#peerazureappid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>App<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peerazuretenantid_csharp">
+<a href="#peerazuretenantid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure tenant id in UUID4 form
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="peerregion_csharp">
 <a href="#peerregion_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
 </span> 
@@ -322,6 +344,17 @@ The VpcPeeringConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}AWS region of the peered VPC (if not in the same region as Aiven VPC)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peerresourcegroup_csharp">
+<a href="#peerresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource group name of the peered VPC
 {{% /md %}}</dd>
 
 </dl>
@@ -366,6 +399,28 @@ The VpcPeeringConnection resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="peerazureappid_go">
+<a href="#peerazureappid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>App<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peerazuretenantid_go">
+<a href="#peerazuretenantid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure tenant id in UUID4 form
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="peerregion_go">
 <a href="#peerregion_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
 </span> 
@@ -373,6 +428,17 @@ The VpcPeeringConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}AWS region of the peered VPC (if not in the same region as Aiven VPC)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peerresourcegroup_go">
+<a href="#peerresourcegroup_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource group name of the peered VPC
 {{% /md %}}</dd>
 
 </dl>
@@ -417,6 +483,28 @@ The VpcPeeringConnection resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="peerazureappid_nodejs">
+<a href="#peerazureappid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Azure<wbr>App<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peerazuretenantid_nodejs">
+<a href="#peerazuretenantid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure tenant id in UUID4 form
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="peerregion_nodejs">
 <a href="#peerregion_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Region</a>
 </span> 
@@ -424,6 +512,17 @@ The VpcPeeringConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}AWS region of the peered VPC (if not in the same region as Aiven VPC)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peerresourcegroup_nodejs">
+<a href="#peerresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource group name of the peered VPC
 {{% /md %}}</dd>
 
 </dl>
@@ -468,6 +567,28 @@ The VpcPeeringConnection resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="peer_azure_app_id_python">
+<a href="#peer_azure_app_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>azure_<wbr>app_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peer_azure_tenant_id_python">
+<a href="#peer_azure_tenant_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>azure_<wbr>tenant_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure tenant id in UUID4 form
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="peer_region_python">
 <a href="#peer_region_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>region</a>
 </span> 
@@ -475,6 +596,17 @@ The VpcPeeringConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}AWS region of the peered VPC (if not in the same region as Aiven VPC)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peer_resource_group_python">
+<a href="#peer_resource_group_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>resource_<wbr>group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource group name of the peered VPC
 {{% /md %}}</dd>
 
 </dl>
@@ -504,39 +636,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="peerazureappid_csharp">
-<a href="#peerazureappid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>App<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="peerazuretenantid_csharp">
-<a href="#peerazuretenantid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure tenant id in UUID4 form
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="peerresourcegroup_csharp">
-<a href="#peerresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Resource<wbr>Group</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure resource group name of the peered VPC
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -590,39 +689,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="peerazureappid_go">
-<a href="#peerazureappid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>App<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="peerazuretenantid_go">
-<a href="#peerazuretenantid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure tenant id in UUID4 form
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="peerresourcegroup_go">
-<a href="#peerresourcegroup_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Resource<wbr>Group</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure resource group name of the peered VPC
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="peeringconnectionid_go">
 <a href="#peeringconnectionid_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Connection<wbr>Id</a>
 </span> 
@@ -673,39 +739,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="peerazureappid_nodejs">
-<a href="#peerazureappid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Azure<wbr>App<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="peerazuretenantid_nodejs">
-<a href="#peerazuretenantid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure tenant id in UUID4 form
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="peerresourcegroup_nodejs">
-<a href="#peerresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Resource<wbr>Group</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure resource group name of the peered VPC
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="peeringconnectionid_nodejs">
 <a href="#peeringconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Connection<wbr>Id</a>
 </span> 
@@ -753,39 +786,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="peer_azure_app_id_python">
-<a href="#peer_azure_app_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>azure_<wbr>app_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="peer_azure_tenant_id_python">
-<a href="#peer_azure_tenant_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>azure_<wbr>tenant_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Azure tenant id in UUID4 form
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="peer_resource_group_python">
-<a href="#peer_resource_group_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>resource_<wbr>group</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Azure resource group name of the peered VPC
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
