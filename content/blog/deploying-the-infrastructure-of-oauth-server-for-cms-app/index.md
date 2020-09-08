@@ -244,7 +244,6 @@ For `HOST`, we set the URL for the OAuth Server by running `pulumi config set pu
 
 To get `GITHUB_SECRET` and `GITHUB_TOKEN` credentials, we need to register the Github OAuth application. Netlify provides [instructions](https://docs.netlify.com/visitor-access/oauth-provider-tokens/#setup-and-settings) for obtaining these credentials.
 
-The Home Page URL is the targetDomain from our [previous post]({{< relref "/blog/deploying-netlify-cms-on-aws" >}}).
 
 The environment variables are passed to the OAuth server in main.go. For example, the callback URL  is the targetDomain with `callback` and the repository provider appended, e.g., `https://<targetDomain>/callback/github/`. You can also specify a different repository provider, such as Bitbucket or Gitlab.
 
