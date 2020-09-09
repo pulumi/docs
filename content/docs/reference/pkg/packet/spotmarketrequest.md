@@ -101,12 +101,12 @@ req = packet.SpotMarketRequest("req",
     facilities=["ewr1"],
     devices_min=1,
     devices_max=1,
-    instance_parameters={
-        "hostname": "testspot",
-        "billing_cycle": "hourly",
-        "operating_system": "coreos_stable",
-        "plan": "t1.small.x86",
-    })
+    instance_parameters=packet.SpotMarketRequestInstanceParametersArgs(
+        hostname="testspot",
+        billing_cycle="hourly",
+        operating_system="coreos_stable",
+        plan="t1.small.x86",
+    ))
 ```
 
 {{% /example %}}
@@ -147,7 +147,7 @@ const req = new packet.SpotMarketRequest("req", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_packet/#pulumi_packet.SpotMarketRequest">SpotMarketRequest</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>devices_max=None<span class="p">, </span>devices_min=None<span class="p">, </span>facilities=None<span class="p">, </span>instance_parameters=None<span class="p">, </span>max_bid_price=None<span class="p">, </span>project_id=None<span class="p">, </span>wait_for_devices=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_packet/#pulumi_packet.SpotMarketRequest">SpotMarketRequest</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">devices_max</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">devices_min</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_parameters</span><span class="p">:</span> <span class="nx">Optional[SpotMarketRequestInstanceParametersArgs]</span> = None<span class="p">, </span><span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -610,7 +610,7 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 <a href="#instance_parameters_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Dict[Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Device parameters. See device resource for details
 {{% /md %}}</dd>
@@ -746,7 +746,8 @@ Get an existing SpotMarketRequest resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>devices_max=None<span class="p">, </span>devices_min=None<span class="p">, </span>facilities=None<span class="p">, </span>instance_parameters=None<span class="p">, </span>max_bid_price=None<span class="p">, </span>project_id=None<span class="p">, </span>wait_for_devices=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">devices_max</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">devices_min</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_parameters</span><span class="p">:</span> <span class="nx">Optional[SpotMarketRequestInstanceParametersArgs]</span> = None<span class="p">, </span><span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> SpotMarketRequest</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -754,7 +755,7 @@ Get an existing SpotMarketRequest resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.SpotMarketRequest.html">SpotMarketRequest</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet..SpotMarketRequestState.html">SpotMarketRequestState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.SpotMarketRequest.html">SpotMarketRequest</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet..SpotMarketRequestState.html">SpotMarketRequestState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1151,7 +1152,7 @@ The following state arguments are supported:
 <a href="#state_instance_parameters_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Dict[Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Device parameters. See device resource for details
 {{% /md %}}</dd>
@@ -1685,8 +1686,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="projectsshkeys_python">
-<a href="#projectsshkeys_python" style="color: inherit; text-decoration: inherit;">project<wbr>Ssh<wbr>Keys</a>
+        <span id="project_ssh_keys_python">
+<a href="#project_ssh_keys_python" style="color: inherit; text-decoration: inherit;">project_<wbr>ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1695,8 +1696,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="termintationtime_python">
-<a href="#termintationtime_python" style="color: inherit; text-decoration: inherit;">termintation<wbr>Time</a>
+        <span id="termintation_time_python">
+<a href="#termintation_time_python" style="color: inherit; text-decoration: inherit;">termintation_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1705,8 +1706,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usersshkeys_python">
-<a href="#usersshkeys_python" style="color: inherit; text-decoration: inherit;">user<wbr>Ssh<wbr>Keys</a>
+        <span id="user_ssh_keys_python">
+<a href="#user_ssh_keys_python" style="color: inherit; text-decoration: inherit;">user_<wbr>ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

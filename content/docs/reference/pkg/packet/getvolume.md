@@ -110,7 +110,7 @@ export const volumeSize = volume1.then(volume1 => volume1.size);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_volume(</span>name=None<span class="p">, </span>project_id=None<span class="p">, </span>volume_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_volume(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVolumeResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1085,8 +1085,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="snapshotcount_python">
-<a href="#snapshotcount_python" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Count</a>
+        <span id="snapshot_count_python">
+<a href="#snapshot_count_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1095,8 +1095,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="snapshotfrequency_python">
-<a href="#snapshotfrequency_python" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Frequency</a>
+        <span id="snapshot_frequency_python">
+<a href="#snapshot_frequency_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>frequency</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -127,7 +127,7 @@ const web1 = new packet.Device("web1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_packet/#pulumi_packet.Device">Device</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>always_pxe=None<span class="p">, </span>billing_cycle=None<span class="p">, </span>description=None<span class="p">, </span>facilities=None<span class="p">, </span>force_detach_volumes=None<span class="p">, </span>hardware_reservation_id=None<span class="p">, </span>hostname=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>ipxe_script_url=None<span class="p">, </span>operating_system=None<span class="p">, </span>plan=None<span class="p">, </span>project_id=None<span class="p">, </span>project_ssh_key_ids=None<span class="p">, </span>storage=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>wait_for_reservation_deprovision=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_packet/#pulumi_packet.Device">Device</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">always_pxe</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">billing_cycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">force_detach_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hardware_reservation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[DeviceIpAddressArgs]]</span> = None<span class="p">, </span><span class="nx">ipxe_script_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_ssh_key_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">storage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_reservation_deprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -913,7 +913,7 @@ doc.
 <a href="#facilities_python" style="color: inherit; text-decoration: inherit;">facilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Facility]</span>
+        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://www.packet.com/developers/api/facilities), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd>
@@ -1014,7 +1014,7 @@ continue to boot via iPXE on reboots.
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceipaddress">List[Device<wbr>Ip<wbr>Address]</a></span>
+        <span class="property-type"><a href="#deviceipaddress">List[Device<wbr>Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
 {{% /md %}}</dd>
@@ -1774,7 +1774,8 @@ Get an existing Device resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_private_ipv4=None<span class="p">, </span>access_public_ipv4=None<span class="p">, </span>access_public_ipv6=None<span class="p">, </span>always_pxe=None<span class="p">, </span>billing_cycle=None<span class="p">, </span>created=None<span class="p">, </span>deployed_facility=None<span class="p">, </span>description=None<span class="p">, </span>facilities=None<span class="p">, </span>force_detach_volumes=None<span class="p">, </span>hardware_reservation_id=None<span class="p">, </span>hostname=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>ipxe_script_url=None<span class="p">, </span>locked=None<span class="p">, </span>network_type=None<span class="p">, </span>networks=None<span class="p">, </span>operating_system=None<span class="p">, </span>plan=None<span class="p">, </span>ports=None<span class="p">, </span>project_id=None<span class="p">, </span>project_ssh_key_ids=None<span class="p">, </span>root_password=None<span class="p">, </span>ssh_key_ids=None<span class="p">, </span>state=None<span class="p">, </span>storage=None<span class="p">, </span>tags=None<span class="p">, </span>updated=None<span class="p">, </span>user_data=None<span class="p">, </span>wait_for_reservation_deprovision=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_private_ipv4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_public_ipv4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_public_ipv6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">always_pxe</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">billing_cycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployed_facility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">force_detach_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hardware_reservation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[DeviceIpAddressArgs]]</span> = None<span class="p">, </span><span class="nx">ipxe_script_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[List[DeviceNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[List[DevicePortArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_ssh_key_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_key_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_reservation_deprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Device</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1782,7 +1783,7 @@ Get an existing Device resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.Device.html">Device</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet..DeviceState.html">DeviceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.Device.html">Device</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet..DeviceState.html">DeviceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3021,7 +3022,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_facilities_python" style="color: inherit; text-decoration: inherit;">facilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Facility]</span>
+        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://www.packet.com/developers/api/facilities), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd>
@@ -3066,7 +3067,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceipaddress">List[Device<wbr>Ip<wbr>Address]</a></span>
+        <span class="property-type"><a href="#deviceipaddress">List[Device<wbr>Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
 {{% /md %}}</dd>
@@ -3112,7 +3113,7 @@ doc.
 <a href="#state_networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicenetwork">List[Device<wbr>Network]</a></span>
+        <span class="property-type"><a href="#devicenetwork">List[Device<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The device's private and public IP (v4 and v6) network details. When a device is run without any special network configuration, it will have 3 networks: 
 * Public IPv4 at `packet_device.name.network.0`
@@ -3150,7 +3151,7 @@ The fields of the network attributes are:
 <a href="#state_ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceport">List[Device<wbr>Port]</a></span>
+        <span class="property-type"><a href="#deviceport">List[Device<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
 {{% /md %}}</dd>
@@ -3439,8 +3440,8 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="reservationids_python">
-<a href="#reservationids_python" style="color: inherit; text-decoration: inherit;">reservation<wbr>Ids</a>
+        <span id="reservation_ids_python">
+<a href="#reservation_ids_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

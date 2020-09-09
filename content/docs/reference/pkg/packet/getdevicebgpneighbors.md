@@ -108,7 +108,7 @@ export const bgpNeighborsListing = test.then(test => test.bgpNeighbors);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_device_bgp_neighbors(</span>device_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_device_bgp_neighbors(</span><span class="nx">device_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDeviceBgpNeighborsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -762,8 +762,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="customeras_python">
-<a href="#customeras_python" style="color: inherit; text-decoration: inherit;">customer<wbr>As</a>
+        <span id="customer_as_python">
+<a href="#customer_as_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>as</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -773,8 +773,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="customerip_python">
-<a href="#customerip_python" style="color: inherit; text-decoration: inherit;">customer<wbr>Ip</a>
+        <span id="customer_ip_python">
+<a href="#customer_ip_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -784,8 +784,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="md5enabled_python">
-<a href="#md5enabled_python" style="color: inherit; text-decoration: inherit;">md5Enabled</a>
+        <span id="md5_enabled_python">
+<a href="#md5_enabled_python" style="color: inherit; text-decoration: inherit;">md5_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -795,8 +795,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="md5password_python">
-<a href="#md5password_python" style="color: inherit; text-decoration: inherit;">md5Password</a>
+        <span id="md5_password_python">
+<a href="#md5_password_python" style="color: inherit; text-decoration: inherit;">md5_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -817,8 +817,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="peeras_python">
-<a href="#peeras_python" style="color: inherit; text-decoration: inherit;">peer<wbr>As</a>
+        <span id="peer_as_python">
+<a href="#peer_as_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>as</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -828,30 +828,30 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="routesins_python">
-<a href="#routesins_python" style="color: inherit; text-decoration: inherit;">routes<wbr>Ins</a>
+        <span id="routes_ins_python">
+<a href="#routes_ins_python" style="color: inherit; text-decoration: inherit;">routes_<wbr>ins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesin">List[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>In]</a></span>
+        <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesin">List[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>In<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of incoming routes. Each route has attributes:
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="routesouts_python">
-<a href="#routesouts_python" style="color: inherit; text-decoration: inherit;">routes<wbr>Outs</a>
+        <span id="routes_outs_python">
+<a href="#routes_outs_python" style="color: inherit; text-decoration: inherit;">routes_<wbr>outs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesout">List[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>Out]</a></span>
+        <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesout">List[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>Out<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of outgoing routes in the same format
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="peerips_python">
-<a href="#peerips_python" style="color: inherit; text-decoration: inherit;">peer<wbr>Ips</a>
+        <span id="peer_ips_python">
+<a href="#peer_ips_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
