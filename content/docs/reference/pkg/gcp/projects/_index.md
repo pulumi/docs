@@ -19,6 +19,7 @@ Explore the resources and functions of the projects module in the GCP package.
     <li><a href="iampolicy" title="IAMPolicy"><span class="symbol resource"></span>IAMPolicy</a></li>
     <li><a href="organizationpolicy" title="OrganizationPolicy"><span class="symbol resource"></span>OrganizationPolicy</a></li>
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
+    <li><a href="serviceidentity" title="ServiceIdentity"><span class="symbol resource"></span>ServiceIdentity</a></li>
     <li><a href="usageexportbucket" title="UsageExportBucket"><span class="symbol resource"></span>UsageExportBucket</a></li>
 </ul>
 
@@ -37,7 +38,7 @@ Explore the resources and functions of the projects module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.22.0</dd>
+	<dd>3.23.0</dd>
 </dl>
 
 

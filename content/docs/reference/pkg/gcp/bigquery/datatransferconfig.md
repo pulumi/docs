@@ -19,6 +19,9 @@ To get more information about Config, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/bigquery/docs/reference/datatransfer/rest/)
 
+> **Warning:** All arguments including `sensitive_params.secret_access_key` will be stored in the raw
+state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+
 
 
 ## Create a DataTransferConfig Resource {#create}
@@ -30,7 +33,7 @@ To get more information about Config, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#pulumi_gcp.bigquery.DataTransferConfig">DataTransferConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_refresh_window_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_pubsub_topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">params</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#pulumi_gcp.bigquery.DataTransferConfig">DataTransferConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_refresh_window_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_pubsub_topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">params</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sensitive_params</span><span class="p">:</span> <span class="nx">Optional[DataTransferConfigSensitiveParamsArgs]</span> = None<span class="p">, </span><span class="nx">service_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -328,6 +331,23 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sensitiveparams_csharp">
+<a href="#sensitiveparams_csharp" style="color: inherit; text-decoration: inherit;">Sensitive<wbr>Params</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigsensitiveparams">Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Different parameters are configured primarily using the the `params` field on this
+resource. This block contains the parameters which contain secrets or passwords so that they can be marked
+sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key
+in the `params` map in the api request.
+Credentials may not be specified in both locations and will cause an error. Changing from one location
+to a different credential configuration in the config will require an apply to update state.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="serviceaccountname_csharp">
 <a href="#serviceaccountname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Name</a>
 </span> 
@@ -468,6 +488,23 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sensitiveparams_go">
+<a href="#sensitiveparams_go" style="color: inherit; text-decoration: inherit;">Sensitive<wbr>Params</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigsensitiveparams">Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params</a></span>
+    </dt>
+    <dd>{{% md %}}Different parameters are configured primarily using the the `params` field on this
+resource. This block contains the parameters which contain secrets or passwords so that they can be marked
+sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key
+in the `params` map in the api request.
+Credentials may not be specified in both locations and will cause an error. Changing from one location
+to a different credential configuration in the config will require an apply to update state.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -616,6 +653,23 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sensitiveparams_nodejs">
+<a href="#sensitiveparams_nodejs" style="color: inherit; text-decoration: inherit;">sensitive<wbr>Params</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigsensitiveparams">Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params</a></span>
+    </dt>
+    <dd>{{% md %}}Different parameters are configured primarily using the the `params` field on this
+resource. This block contains the parameters which contain secrets or passwords so that they can be marked
+sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key
+in the `params` map in the api request.
+Credentials may not be specified in both locations and will cause an error. Changing from one location
+to a different credential configuration in the config will require an apply to update state.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="serviceaccountname_nodejs">
 <a href="#serviceaccountname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Name</a>
 </span> 
@@ -756,6 +810,23 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sensitive_params_python">
+<a href="#sensitive_params_python" style="color: inherit; text-decoration: inherit;">sensitive_<wbr>params</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigsensitiveparams">Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Different parameters are configured primarily using the the `params` field on this
+resource. This block contains the parameters which contain secrets or passwords so that they can be marked
+sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key
+in the `params` map in the api request.
+Credentials may not be specified in both locations and will cause an error. Changing from one location
+to a different credential configuration in the config will require an apply to update state.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -922,7 +993,7 @@ Get an existing DataTransferConfig resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_refresh_window_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_pubsub_topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">params</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DataTransferConfig</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_refresh_window_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_pubsub_topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">params</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sensitive_params</span><span class="p">:</span> <span class="nx">Optional[DataTransferConfigSensitiveParamsArgs]</span> = None<span class="p">, </span><span class="nx">service_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DataTransferConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1175,6 +1246,23 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_sensitiveparams_csharp">
+<a href="#state_sensitiveparams_csharp" style="color: inherit; text-decoration: inherit;">Sensitive<wbr>Params</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigsensitiveparams">Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Different parameters are configured primarily using the the `params` field on this
+resource. This block contains the parameters which contain secrets or passwords so that they can be marked
+sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key
+in the `params` map in the api request.
+Credentials may not be specified in both locations and will cause an error. Changing from one location
+to a different credential configuration in the config will require an apply to update state.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_serviceaccountname_csharp">
 <a href="#state_serviceaccountname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Name</a>
 </span> 
@@ -1328,6 +1416,23 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sensitiveparams_go">
+<a href="#state_sensitiveparams_go" style="color: inherit; text-decoration: inherit;">Sensitive<wbr>Params</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigsensitiveparams">Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params</a></span>
+    </dt>
+    <dd>{{% md %}}Different parameters are configured primarily using the the `params` field on this
+resource. This block contains the parameters which contain secrets or passwords so that they can be marked
+sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key
+in the `params` map in the api request.
+Credentials may not be specified in both locations and will cause an error. Changing from one location
+to a different credential configuration in the config will require an apply to update state.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1489,6 +1594,23 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_sensitiveparams_nodejs">
+<a href="#state_sensitiveparams_nodejs" style="color: inherit; text-decoration: inherit;">sensitive<wbr>Params</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigsensitiveparams">Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params</a></span>
+    </dt>
+    <dd>{{% md %}}Different parameters are configured primarily using the the `params` field on this
+resource. This block contains the parameters which contain secrets or passwords so that they can be marked
+sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key
+in the `params` map in the api request.
+Credentials may not be specified in both locations and will cause an error. Changing from one location
+to a different credential configuration in the config will require an apply to update state.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_serviceaccountname_nodejs">
 <a href="#state_serviceaccountname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Name</a>
 </span> 
@@ -1646,6 +1768,23 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_sensitive_params_python">
+<a href="#state_sensitive_params_python" style="color: inherit; text-decoration: inherit;">sensitive_<wbr>params</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigsensitiveparams">Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Different parameters are configured primarily using the the `params` field on this
+resource. This block contains the parameters which contain secrets or passwords so that they can be marked
+sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key
+in the `params` map in the api request.
+Credentials may not be specified in both locations and will cause an error. Changing from one location
+to a different credential configuration in the config will require an apply to update state.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_service_account_name_python">
 <a href="#state_service_account_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>name</a>
 </span> 
@@ -1661,6 +1800,106 @@ requesting user calling this API has permissions to act as this service account.
 {{% /choosable %}}
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="datatransferconfigsensitiveparams">Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DataTransferConfigSensitiveParams">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DataTransferConfigSensitiveParams">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#DataTransferConfigSensitiveParamsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#DataTransferConfigSensitiveParamsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.DataTransferConfigSensitiveParamsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.DataTransferConfigSensitiveParams.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secretaccesskey_csharp">
+<a href="#secretaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Secret Access Key of the AWS account transferring data from.
+**Note**: This property is sensitive and will not be displayed in the plan.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secretaccesskey_go">
+<a href="#secretaccesskey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Secret Access Key of the AWS account transferring data from.
+**Note**: This property is sensitive and will not be displayed in the plan.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secretaccesskey_nodejs">
+<a href="#secretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Secret Access Key of the AWS account transferring data from.
+**Note**: This property is sensitive and will not be displayed in the plan.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secret_access_key_python">
+<a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Secret Access Key of the AWS account transferring data from.
+**Note**: This property is sensitive and will not be displayed in the plan.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 
