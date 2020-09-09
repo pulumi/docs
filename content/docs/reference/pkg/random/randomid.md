@@ -23,132 +23,6 @@ the `create_before_destroy` lifecycle flag set to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-using Random = Pulumi.Random;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var serverRandomId = new Random.RandomId("serverRandomId", new Random.RandomIdArgs
-        {
-            ByteLength = 8,
-            Keepers = 
-            {
-                { "ami_id", @var.Ami_id },
-            },
-        });
-        var serverInstance = new Aws.Ec2.Instance("serverInstance", new Aws.Ec2.InstanceArgs
-        {
-            Ami = serverRandomId.Keepers.Apply(keepers => keepers.AmiId),
-            Tags = 
-            {
-                { "Name", serverRandomId.Hex.Apply(hex => $"web-server {hex}") },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"fmt"
-
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
-	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		serverRandomId, err := random.NewRandomId(ctx, "serverRandomId", &random.RandomIdArgs{
-			ByteLength: pulumi.Int(8),
-			Keepers: pulumi.StringMap{
-				"ami_id": pulumi.String(_var.Ami_id),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		_, err = ec2.NewInstance(ctx, "serverInstance", &ec2.InstanceArgs{
-			Ami: pulumi.String(serverRandomId.Keepers.ApplyT(func(keepers map[string]string) (string, error) {
-				return keepers.AmiId, nil
-			}).(pulumi.StringOutput)),
-			Tags: pulumi.StringMap{
-				"Name": serverRandomId.Hex.ApplyT(func(hex string) (string, error) {
-					return fmt.Sprintf("%v%v", "web-server ", hex), nil
-				}).(pulumi.StringOutput),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-import pulumi_random as random
-
-server_random_id = random.RandomId("serverRandomId",
-    byte_length=8,
-    keepers={
-        "ami_id": var["ami_id"],
-    })
-server_instance = aws.ec2.Instance("serverInstance",
-    ami=server_random_id.keepers["amiId"],
-    tags={
-        "Name": server_random_id.hex.apply(lambda hex: f"web-server {hex}"),
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as random from "@pulumi/random";
-
-const serverRandomId = new random.RandomId("server", {
-    byteLength: 8,
-    keepers: {
-        // Generate a new id each time we switch to a new AMI id
-        ami_id: var_ami_id,
-    },
-});
-const serverInstance = new aws.ec2.Instance("server", {
-    ami: serverRandomId.keepers.apply(keepers => keepers.amiId),
-    tags: {
-        Name: pulumi.interpolate`web-server ${serverRandomId.hex}`,
-    },
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a RandomId Resource {#create}
@@ -160,7 +34,7 @@ const serverInstance = new aws.ec2.Instance("server", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_random/#pulumi_random.RandomId">RandomId</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>byte_length=None<span class="p">, </span>keepers=None<span class="p">, </span>prefix=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_random/#pulumi_random.RandomId">RandomId</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">byte_length</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">keepers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -482,7 +356,7 @@ minimum value is 1, which produces eight bits of randomness.
 <a href="#keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
 trigger a new id to be generated.
@@ -815,7 +689,8 @@ Get an existing RandomId resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>b64=None<span class="p">, </span>b64_std=None<span class="p">, </span>b64_url=None<span class="p">, </span>byte_length=None<span class="p">, </span>dec=None<span class="p">, </span>hex=None<span class="p">, </span>keepers=None<span class="p">, </span>prefix=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">b64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">b64_std</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">b64_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">byte_length</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">keepers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RandomId</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -823,7 +698,7 @@ Get an existing RandomId resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Random/Pulumi.Random.RandomId.html">RandomId</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Random/Pulumi.Random..RandomIdState.html">RandomIdState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Random/Pulumi.Random.RandomId.html">RandomId</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Random/Pulumi.Random..RandomIdState.html">RandomIdState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1295,7 +1170,7 @@ minimum value is 1, which produces eight bits of randomness.
 <a href="#state_keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
 trigger a new id to be generated.
