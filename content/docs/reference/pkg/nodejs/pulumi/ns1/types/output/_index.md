@@ -3,7 +3,7 @@ title: "Module types/output"
 title_tag: "Module types/output | Package @pulumi/ns1 | Node.js SDK"
 linktitle: "output"
 meta_desc: "Explore members of the output module in the @pulumi/ns1 package."
-git_sha: "b05fe1f54516e631a1db91e8371f8b524adc4141"
+git_sha: "9f1969918446769834a11601ea0a6a33fa56920f"
 block_external_search_index: true
 ---
 
@@ -24,6 +24,9 @@ block_external_search_index: true
     <li><a href="#GetDNSSecDelegationDnskey"><span class="symbol api"></span>GetDNSSecDelegationDnskey</a></li>
     <li><a href="#GetDNSSecKeys"><span class="symbol api"></span>GetDNSSecKeys</a></li>
     <li><a href="#GetDNSSecKeysDnskey"><span class="symbol api"></span>GetDNSSecKeysDnskey</a></li>
+    <li><a href="#GetRecordAnswer"><span class="symbol api"></span>GetRecordAnswer</a></li>
+    <li><a href="#GetRecordFilter"><span class="symbol api"></span>GetRecordFilter</a></li>
+    <li><a href="#GetRecordRegion"><span class="symbol api"></span>GetRecordRegion</a></li>
     <li><a href="#GetZoneSecondary"><span class="symbol api"></span>GetZoneSecondary</a></li>
     <li><a href="#MonitoringJobRule"><span class="symbol api"></span>MonitoringJobRule</a></li>
     <li><a href="#NotifyListNotification"><span class="symbol api"></span>NotifyListNotification</a></li>
@@ -39,14 +42,14 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="GetDNSSecDelegation" data-link-title="GetDNSSecDelegation">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L8">
         interface <strong>GetDNSSecDelegation</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetDNSSecDelegation</span></code></pre>
 <h4 class="pdoc-member-header" id="GetDNSSecDelegation-dnskeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L12">property <b>dnskeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L12">property <b>dnskeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnskeys: <a href='#GetDNSSecDelegationDnskey'>GetDNSSecDelegationDnskey</a>[];</code></pre>
@@ -54,7 +57,7 @@ block_external_search_index: true
 (Computed) List of Keys. Key is documented below.
 
 <h4 class="pdoc-member-header" id="GetDNSSecDelegation-ds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L16">property <b>ds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L16">property <b>ds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ds: <a href='#GetDNSSecDelegationD'>GetDNSSecDelegationD</a>[];</code></pre>
@@ -62,7 +65,7 @@ block_external_search_index: true
 (Computed) List of Keys. Key is documented below.
 
 <h4 class="pdoc-member-header" id="GetDNSSecDelegation-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L20">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L20">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -70,14 +73,14 @@ block_external_search_index: true
 (Computed) TTL for the Keys (int).
 
 <h3 class="pdoc-module-header" id="GetDNSSecDelegationD" data-link-title="GetDNSSecDelegationD">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L23">
         interface <strong>GetDNSSecDelegationD</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetDNSSecDelegationD</span></code></pre>
 <h4 class="pdoc-member-header" id="GetDNSSecDelegationD-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L27">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L27">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -85,7 +88,7 @@ block_external_search_index: true
 (Computed) Algorithm of the key.
 
 <h4 class="pdoc-member-header" id="GetDNSSecDelegationD-flags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L31">property <b>flags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L31">property <b>flags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -93,7 +96,7 @@ block_external_search_index: true
 (Computed) Flags for the key.
 
 <h4 class="pdoc-member-header" id="GetDNSSecDelegationD-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L35">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L35">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -101,7 +104,7 @@ block_external_search_index: true
 (Computed) Protocol of the key.
 
 <h4 class="pdoc-member-header" id="GetDNSSecDelegationD-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L39">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L39">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -109,14 +112,14 @@ block_external_search_index: true
 (Computed) Public key for the key.
 
 <h3 class="pdoc-module-header" id="GetDNSSecDelegationDnskey" data-link-title="GetDNSSecDelegationDnskey">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L42">
         interface <strong>GetDNSSecDelegationDnskey</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetDNSSecDelegationDnskey</span></code></pre>
 <h4 class="pdoc-member-header" id="GetDNSSecDelegationDnskey-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L46">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L46">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -124,7 +127,7 @@ block_external_search_index: true
 (Computed) Algorithm of the key.
 
 <h4 class="pdoc-member-header" id="GetDNSSecDelegationDnskey-flags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L50">property <b>flags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L50">property <b>flags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -132,7 +135,7 @@ block_external_search_index: true
 (Computed) Flags for the key.
 
 <h4 class="pdoc-member-header" id="GetDNSSecDelegationDnskey-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L54">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L54">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -140,7 +143,7 @@ block_external_search_index: true
 (Computed) Protocol of the key.
 
 <h4 class="pdoc-member-header" id="GetDNSSecDelegationDnskey-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L58">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L58">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -148,14 +151,14 @@ block_external_search_index: true
 (Computed) Public key for the key.
 
 <h3 class="pdoc-module-header" id="GetDNSSecKeys" data-link-title="GetDNSSecKeys">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L61">
         interface <strong>GetDNSSecKeys</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetDNSSecKeys</span></code></pre>
 <h4 class="pdoc-member-header" id="GetDNSSecKeys-dnskeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L65">property <b>dnskeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L65">property <b>dnskeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnskeys: <a href='#GetDNSSecKeysDnskey'>GetDNSSecKeysDnskey</a>[];</code></pre>
@@ -163,7 +166,7 @@ block_external_search_index: true
 (Computed) List of Keys. Key is documented below.
 
 <h4 class="pdoc-member-header" id="GetDNSSecKeys-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L69">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L69">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -171,14 +174,14 @@ block_external_search_index: true
 (Computed) TTL for the Keys (int).
 
 <h3 class="pdoc-module-header" id="GetDNSSecKeysDnskey" data-link-title="GetDNSSecKeysDnskey">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L72">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L72">
         interface <strong>GetDNSSecKeysDnskey</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetDNSSecKeysDnskey</span></code></pre>
 <h4 class="pdoc-member-header" id="GetDNSSecKeysDnskey-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L76">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L76">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -186,7 +189,7 @@ block_external_search_index: true
 (Computed) Algorithm of the key.
 
 <h4 class="pdoc-member-header" id="GetDNSSecKeysDnskey-flags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L80">property <b>flags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L80">property <b>flags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -194,7 +197,7 @@ block_external_search_index: true
 (Computed) Flags for the key.
 
 <h4 class="pdoc-member-header" id="GetDNSSecKeysDnskey-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L84">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L84">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -202,22 +205,89 @@ block_external_search_index: true
 (Computed) Protocol of the key.
 
 <h4 class="pdoc-member-header" id="GetDNSSecKeysDnskey-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L88">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L88">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
 (Computed) Public key for the key.
 
+<h3 class="pdoc-module-header" id="GetRecordAnswer" data-link-title="GetRecordAnswer">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L91">
+        interface <strong>GetRecordAnswer</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetRecordAnswer</span></code></pre>
+<h4 class="pdoc-member-header" id="GetRecordAnswer-answer">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L92">property <b>answer</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>answer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetRecordAnswer-meta">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L96">property <b>meta</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>meta: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
+
+Map of metadata
+
+<h4 class="pdoc-member-header" id="GetRecordAnswer-region">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L97">property <b>region</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h3 class="pdoc-module-header" id="GetRecordFilter" data-link-title="GetRecordFilter">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L100">
+        interface <strong>GetRecordFilter</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetRecordFilter</span></code></pre>
+<h4 class="pdoc-member-header" id="GetRecordFilter-config">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L101">property <b>config</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>config: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
+<h4 class="pdoc-member-header" id="GetRecordFilter-disabled">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L102">property <b>disabled</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>disabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetRecordFilter-filter">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L103">property <b>filter</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>filter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h3 class="pdoc-module-header" id="GetRecordRegion" data-link-title="GetRecordRegion">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L106">
+        interface <strong>GetRecordRegion</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetRecordRegion</span></code></pre>
+<h4 class="pdoc-member-header" id="GetRecordRegion-meta">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L110">property <b>meta</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>meta: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
+
+Map of metadata
+
+<h4 class="pdoc-member-header" id="GetRecordRegion-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L111">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetZoneSecondary" data-link-title="GetZoneSecondary">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L91">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L114">
         interface <strong>GetZoneSecondary</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetZoneSecondary</span></code></pre>
 <h4 class="pdoc-member-header" id="GetZoneSecondary-ip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L95">property <b>ip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L118">property <b>ip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ip: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -225,7 +295,7 @@ block_external_search_index: true
 IPv4 address of the secondary server.
 
 <h4 class="pdoc-member-header" id="GetZoneSecondary-networks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L100">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L123">property <b>networks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networks: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</code></pre>
@@ -234,7 +304,7 @@ List of network IDs (`int`) for which the zone should be made
 available. Default is network 0, the primary NSONE Global Network.
 
 <h4 class="pdoc-member-header" id="GetZoneSecondary-notify">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L105">property <b>notify</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L128">property <b>notify</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notify: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -243,7 +313,7 @@ Whether we send `NOTIFY` messages to the secondary host
 when the zone changes. Default `false`.
 
 <h4 class="pdoc-member-header" id="GetZoneSecondary-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L109">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L132">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -251,45 +321,36 @@ when the zone changes. Default `false`.
 Port of the the secondary server. Default `53`.
 
 <h3 class="pdoc-module-header" id="MonitoringJobRule" data-link-title="MonitoringJobRule">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L112">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L135">
         interface <strong>MonitoringJobRule</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MonitoringJobRule</span></code></pre>
 <h4 class="pdoc-member-header" id="MonitoringJobRule-comparison">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L116">property <b>comparison</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L136">property <b>comparison</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comparison: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-The comparison to perform on the the output.
-
 <h4 class="pdoc-member-header" id="MonitoringJobRule-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L120">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L137">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-The output key.
-
 <h4 class="pdoc-member-header" id="MonitoringJobRule-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L124">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L138">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-The value to compare to.
-
 <h3 class="pdoc-module-header" id="NotifyListNotification" data-link-title="NotifyListNotification">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L141">
         interface <strong>NotifyListNotification</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>NotifyListNotification</span></code></pre>
 <h4 class="pdoc-member-header" id="NotifyListNotification-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L131">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L145">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -297,7 +358,7 @@ The value to compare to.
 Configuration details for the given notifier type.
 
 <h4 class="pdoc-member-header" id="NotifyListNotification-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L135">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L149">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -305,14 +366,14 @@ Configuration details for the given notifier type.
 The type of notifier. Available notifiers are indicated in /notifytypes endpoint.
 
 <h3 class="pdoc-module-header" id="RecordAnswer" data-link-title="RecordAnswer">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L152">
         interface <strong>RecordAnswer</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RecordAnswer</span></code></pre>
 <h4 class="pdoc-member-header" id="RecordAnswer-answer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L142">property <b>answer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L156">property <b>answer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>answer?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -320,12 +381,12 @@ The type of notifier. Available notifiers are indicated in /notifytypes endpoint
 Space delimited string of RDATA fields dependent on the record type.
 
 <h4 class="pdoc-member-header" id="RecordAnswer-meta">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L143">property <b>meta</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L157">property <b>meta</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meta?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="RecordAnswer-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L153">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L167">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -339,14 +400,14 @@ approach.
 is documented below.
 
 <h3 class="pdoc-module-header" id="RecordFilter" data-link-title="RecordFilter">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L170">
         interface <strong>RecordFilter</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RecordFilter</span></code></pre>
 <h4 class="pdoc-member-header" id="RecordFilter-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L161">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L175">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -355,7 +416,7 @@ The filters' configuration. Simple key/value pairs
 determined by the filter type.
 
 <h4 class="pdoc-member-header" id="RecordFilter-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L166">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L180">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -364,7 +425,7 @@ Determines whether the filter is applied in the
 filter chain.
 
 <h4 class="pdoc-member-header" id="RecordFilter-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L170">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L184">property <b>filter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -372,19 +433,19 @@ filter chain.
 The type of filter.
 
 <h3 class="pdoc-module-header" id="RecordRegion" data-link-title="RecordRegion">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L173">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L187">
         interface <strong>RecordRegion</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RecordRegion</span></code></pre>
 <h4 class="pdoc-member-header" id="RecordRegion-meta">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L174">property <b>meta</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L188">property <b>meta</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meta?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="RecordRegion-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L178">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L192">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -392,14 +453,14 @@ The type of filter.
 Name of the region (or Answer Group).
 
 <h3 class="pdoc-module-header" id="TeamIpWhitelist" data-link-title="TeamIpWhitelist">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L195">
         interface <strong>TeamIpWhitelist</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TeamIpWhitelist</span></code></pre>
 <h4 class="pdoc-member-header" id="TeamIpWhitelist-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L185">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L199">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -407,19 +468,19 @@ Name of the region (or Answer Group).
 The free form name of the team.
 
 <h4 class="pdoc-member-header" id="TeamIpWhitelist-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L186">property <b>values</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L200">property <b>values</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h3 class="pdoc-module-header" id="ZoneSecondary" data-link-title="ZoneSecondary">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L189">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L203">
         interface <strong>ZoneSecondary</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ZoneSecondary</span></code></pre>
 <h4 class="pdoc-member-header" id="ZoneSecondary-ip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L193">property <b>ip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L207">property <b>ip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ip: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -427,7 +488,7 @@ The free form name of the team.
 IPv4 address of the secondary server.
 
 <h4 class="pdoc-member-header" id="ZoneSecondary-networks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L199">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L213">property <b>networks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networks: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</code></pre>
@@ -437,7 +498,7 @@ should be made available. Default is network 0, the primary NSONE Global
 Network. Normally, you should not have to worry about this.
 
 <h4 class="pdoc-member-header" id="ZoneSecondary-notify">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L204">property <b>notify</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L218">property <b>notify</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notify: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -446,7 +507,7 @@ Whether we send `NOTIFY` messages to the secondary host
 when the zone changes. Default `false`.
 
 <h4 class="pdoc-member-header" id="ZoneSecondary-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/types/output.ts#L208">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/9f1969918446769834a11601ea0a6a33fa56920f/sdk/nodejs/types/output.ts#L222">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>

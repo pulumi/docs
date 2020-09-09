@@ -29,6 +29,7 @@ A Pulumi package for creating and managing ns1 cloud resources.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getdnssec" title="GetDNSSec"><span class="symbol function"></span>GetDNSSec</a></li>
+    <li><a href="getrecord" title="GetRecord"><span class="symbol function"></span>GetRecord</a></li>
     <li><a href="getzone" title="GetZone"><span class="symbol function"></span>GetZone</a></li>
 </ul>
 
@@ -39,9 +40,9 @@ A Pulumi package for creating and managing ns1 cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/terraform-providers/terraform-provider-ns1).</dd>
+	<dd>This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/ns1-terraform/terraform-provider-ns1).</dd>
 	<dt>Version</dt>
-	<dd>1.1.0</dd>
+	<dd>1.2.0</dd>
 </dl>
 
 

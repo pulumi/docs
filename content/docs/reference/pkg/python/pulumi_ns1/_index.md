@@ -344,6 +344,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_ns1.AwaitableGetRecordResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_ns1.</code><code class="sig-name descname">AwaitableGetRecordResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">answers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">meta</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">regions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">short_answers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_client_subnet</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_ns1.AwaitableGetRecordResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_ns1.AwaitableGetZoneResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_ns1.</code><code class="sig-name descname">AwaitableGetZoneResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">additional_primaries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dnssec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expiry</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostmaster</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">networks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nx_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">primary</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">refresh</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retry</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secondaries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_ns1.AwaitableGetZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -584,6 +589,60 @@ below.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_ns1.GetRecordResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_ns1.</code><code class="sig-name descname">GetRecordResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">answers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">meta</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">regions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">short_answers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_client_subnet</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_ns1.GetRecordResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getRecord.</p>
+<dl class="py method">
+<dt id="pulumi_ns1.GetRecordResult.answers">
+<em class="property">property </em><code class="sig-name descname">answers</code><a class="headerlink" href="#pulumi_ns1.GetRecordResult.answers" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of NS1 answers.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_ns1.GetRecordResult.filters">
+<em class="property">property </em><code class="sig-name descname">filters</code><a class="headerlink" href="#pulumi_ns1.GetRecordResult.filters" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of NS1 filters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_ns1.GetRecordResult.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_ns1.GetRecordResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_ns1.GetRecordResult.link">
+<em class="property">property </em><code class="sig-name descname">link</code><a class="headerlink" href="#pulumi_ns1.GetRecordResult.link" title="Permalink to this definition">¶</a></dt>
+<dd><p>The target record this links to.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_ns1.GetRecordResult.meta">
+<em class="property">property </em><code class="sig-name descname">meta</code><a class="headerlink" href="#pulumi_ns1.GetRecordResult.meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Map of metadata</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_ns1.GetRecordResult.regions">
+<em class="property">property </em><code class="sig-name descname">regions</code><a class="headerlink" href="#pulumi_ns1.GetRecordResult.regions" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of regions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_ns1.GetRecordResult.ttl">
+<em class="property">property </em><code class="sig-name descname">ttl</code><a class="headerlink" href="#pulumi_ns1.GetRecordResult.ttl" title="Permalink to this definition">¶</a></dt>
+<dd><p>The records’ time to live (in seconds).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_ns1.GetRecordResult.use_client_subnet">
+<em class="property">property </em><code class="sig-name descname">use_client_subnet</code><a class="headerlink" href="#pulumi_ns1.GetRecordResult.use_client_subnet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to use EDNS client subnet data when available (in filter chain).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_ns1.GetZoneResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_ns1.</code><code class="sig-name descname">GetZoneResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">additional_primaries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dnssec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expiry</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostmaster</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">networks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nx_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">primary</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">refresh</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retry</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secondaries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_ns1.GetZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getZone.</p>
@@ -717,15 +776,13 @@ documented below.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>active</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the job is active or temporarily disabled.</p></li>
-<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>config</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – A configuration dictionary with keys and values depending on the jobs’ type.</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>config</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – A configuration dictionary with keys and values depending on the job_type. Configuration details for each job_type are found by submitting a GET request to <a class="reference external" href="https://api.nsone.net/v1/monitoring/jobtypes">https://api.nsone.net/v1/monitoring/jobtypes</a>.</p></li>
 <li><p><strong>frequency</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The frequency, in seconds, at which to run the monitoring job in each region.</p></li>
-<li><p><strong>job_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of monitoring job to be run. See NS1 API
-docs for supported values.</p></li>
+<li><p><strong>job_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of monitoring job to be run. Refer to the NS1 API documentation (<a class="reference external" href="https://ns1.com/api#monitoring-jobs">https://ns1.com/api#monitoring-jobs</a>) for supported values which include ping, tcp, dns, http.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The free-form display name for the monitoring job.</p></li>
 <li><p><strong>notes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Freeform notes to be included in any notifications about this job.</p></li>
 <li><p><strong>notify_delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time in seconds after a failure to wait before sending a notification.</p></li>
 <li><p><strong>notify_failback</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, a notification is sent when a job returns to an “up” state.</p></li>
-<li><p><strong>notify_list</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the notification list to send notifications to.</p></li>
 <li><p><strong>notify_regional</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, notifications are sent for any regional failure (and failback if desired), in addition to global state notifications.</p></li>
 <li><p><strong>notify_repeat</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time in seconds between repeat notifications of a failed job.</p></li>
 <li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy for determining the monitor’s global status
@@ -733,7 +790,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
 <li><p><strong>rapid_recheck</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, on any apparent state change, the job is quickly re-run after one second to confirm the state change before notification.</p></li>
 <li><p><strong>regions</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – The list of region codes in which to run the monitoring
 job. See NS1 API docs for supported values.</p></li>
-<li><p><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'MonitoringJobRuleArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A list of rules for determining failure conditions. Job Rules are documented below.</p></li>
+<li><p><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'MonitoringJobRuleArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {“key”:”rtt”, “comparison”:”&lt;”, “value”:100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to <a class="reference external" href="https://api.nsone.net/v1/monitoring/jobtypes">https://api.nsone.net/v1/monitoring/jobtypes</a>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -749,15 +806,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>active</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the job is active or temporarily disabled.</p></li>
-<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>config</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – A configuration dictionary with keys and values depending on the jobs’ type.</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>config</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – A configuration dictionary with keys and values depending on the job_type. Configuration details for each job_type are found by submitting a GET request to <a class="reference external" href="https://api.nsone.net/v1/monitoring/jobtypes">https://api.nsone.net/v1/monitoring/jobtypes</a>.</p></li>
 <li><p><strong>frequency</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The frequency, in seconds, at which to run the monitoring job in each region.</p></li>
-<li><p><strong>job_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of monitoring job to be run. See NS1 API
-docs for supported values.</p></li>
+<li><p><strong>job_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of monitoring job to be run. Refer to the NS1 API documentation (<a class="reference external" href="https://ns1.com/api#monitoring-jobs">https://ns1.com/api#monitoring-jobs</a>) for supported values which include ping, tcp, dns, http.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The free-form display name for the monitoring job.</p></li>
 <li><p><strong>notes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Freeform notes to be included in any notifications about this job.</p></li>
 <li><p><strong>notify_delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time in seconds after a failure to wait before sending a notification.</p></li>
 <li><p><strong>notify_failback</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, a notification is sent when a job returns to an “up” state.</p></li>
-<li><p><strong>notify_list</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the notification list to send notifications to.</p></li>
 <li><p><strong>notify_regional</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, notifications are sent for any regional failure (and failback if desired), in addition to global state notifications.</p></li>
 <li><p><strong>notify_repeat</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time in seconds between repeat notifications of a failed job.</p></li>
 <li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy for determining the monitor’s global status
@@ -765,7 +820,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
 <li><p><strong>rapid_recheck</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, on any apparent state change, the job is quickly re-run after one second to confirm the state change before notification.</p></li>
 <li><p><strong>regions</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – The list of region codes in which to run the monitoring
 job. See NS1 API docs for supported values.</p></li>
-<li><p><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'MonitoringJobRuleArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A list of rules for determining failure conditions. Job Rules are documented below.</p></li>
+<li><p><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'MonitoringJobRuleArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {“key”:”rtt”, “comparison”:”&lt;”, “value”:100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to <a class="reference external" href="https://api.nsone.net/v1/monitoring/jobtypes">https://api.nsone.net/v1/monitoring/jobtypes</a>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -780,7 +835,7 @@ job. See NS1 API docs for supported values.</p></li>
 <dl class="py method">
 <dt id="pulumi_ns1.MonitoringJob.config">
 <em class="property">property </em><code class="sig-name descname">config</code><a class="headerlink" href="#pulumi_ns1.MonitoringJob.config" title="Permalink to this definition">¶</a></dt>
-<dd><p>A configuration dictionary with keys and values depending on the jobs’ type.</p>
+<dd><p>A configuration dictionary with keys and values depending on the job_type. Configuration details for each job_type are found by submitting a GET request to <a class="reference external" href="https://api.nsone.net/v1/monitoring/jobtypes">https://api.nsone.net/v1/monitoring/jobtypes</a>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -792,8 +847,7 @@ job. See NS1 API docs for supported values.</p></li>
 <dl class="py method">
 <dt id="pulumi_ns1.MonitoringJob.job_type">
 <em class="property">property </em><code class="sig-name descname">job_type</code><a class="headerlink" href="#pulumi_ns1.MonitoringJob.job_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of monitoring job to be run. See NS1 API
-docs for supported values.</p>
+<dd><p>The type of monitoring job to be run. Refer to the NS1 API documentation (<a class="reference external" href="https://ns1.com/api#monitoring-jobs">https://ns1.com/api#monitoring-jobs</a>) for supported values which include ping, tcp, dns, http.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -818,12 +872,6 @@ docs for supported values.</p>
 <dt id="pulumi_ns1.MonitoringJob.notify_failback">
 <em class="property">property </em><code class="sig-name descname">notify_failback</code><a class="headerlink" href="#pulumi_ns1.MonitoringJob.notify_failback" title="Permalink to this definition">¶</a></dt>
 <dd><p>If true, a notification is sent when a job returns to an “up” state.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pulumi_ns1.MonitoringJob.notify_list">
-<em class="property">property </em><code class="sig-name descname">notify_list</code><a class="headerlink" href="#pulumi_ns1.MonitoringJob.notify_list" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of the notification list to send notifications to.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -861,7 +909,7 @@ job. See NS1 API docs for supported values.</p>
 <dl class="py method">
 <dt id="pulumi_ns1.MonitoringJob.rules">
 <em class="property">property </em><code class="sig-name descname">rules</code><a class="headerlink" href="#pulumi_ns1.MonitoringJob.rules" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of rules for determining failure conditions. Job Rules are documented below.</p>
+<dd><p>A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {“key”:”rtt”, “comparison”:”&lt;”, “value”:100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to <a class="reference external" href="https://api.nsone.net/v1/monitoring/jobtypes">https://api.nsone.net/v1/monitoring/jobtypes</a>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1080,7 +1128,7 @@ Filters are documented below.</p></li>
 just groupings based on metadata, and are called “Answer Groups” in the NS1 UI,
 but remain <code class="docutils literal notranslate"><span class="pre">regions</span></code> here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!</p></li>
-<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The records’ time to live.</p></li>
+<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The records’ time to live (in seconds).</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The records’ RR type.</p></li>
 <li><p><strong>use_client_subnet</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EDNS client subnet data when
 available(in filter chain).</p></li>
@@ -1120,7 +1168,7 @@ Filters are documented below.</p></li>
 just groupings based on metadata, and are called “Answer Groups” in the NS1 UI,
 but remain <code class="docutils literal notranslate"><span class="pre">regions</span></code> here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!</p></li>
-<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The records’ time to live.</p></li>
+<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The records’ time to live (in seconds).</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The records’ RR type.</p></li>
 <li><p><strong>use_client_subnet</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EDNS client subnet data when
 available(in filter chain).</p></li>
@@ -1179,7 +1227,7 @@ documented below. Please note the ordering requirement!</p>
 <dl class="py method">
 <dt id="pulumi_ns1.Record.ttl">
 <em class="property">property </em><code class="sig-name descname">ttl</code><a class="headerlink" href="#pulumi_ns1.Record.ttl" title="Permalink to this definition">¶</a></dt>
-<dd><p>The records’ time to live.</p>
+<dd><p>The records’ time to live (in seconds).</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1584,7 +1632,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[bool] account_manage_account_settings: Whether the user can modify account settings.
 :param pulumi.Input[bool] account_manage_apikeys: Whether the user can modify account apikeys.
 :param pulumi.Input[bool] account_manage_payment_methods: Whether the user can modify account payment methods.
-:param pulumi.Input[bool] account_manage_plan: Whether the user can modify the account plan.
+:param pulumi.Input[bool] account_manage_plan: <strong>Deprecated</strong> Whether the user can modify the account plan.
 :param pulumi.Input[bool] account_manage_teams: Whether the user can modify other teams in the account.
 :param pulumi.Input[bool] account_manage_users: Whether the user can modify account users.
 :param pulumi.Input[bool] account_view_activity_log: Whether the user can view activity logs.
@@ -1638,7 +1686,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>account_manage_account_settings</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the user can modify account settings.</p></li>
 <li><p><strong>account_manage_apikeys</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the user can modify account apikeys.</p></li>
 <li><p><strong>account_manage_payment_methods</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the user can modify account payment methods.</p></li>
-<li><p><strong>account_manage_plan</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the user can modify the account plan.</p></li>
+<li><p><strong>account_manage_plan</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <strong>Deprecated</strong> Whether the user can modify the account plan.</p></li>
 <li><p><strong>account_manage_teams</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the user can modify other teams in the account.</p></li>
 <li><p><strong>account_manage_users</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the user can modify account users.</p></li>
 <li><p><strong>account_view_activity_log</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the user can view activity logs.</p></li>
@@ -1696,7 +1744,7 @@ Only relevant for the DDI product.</p></li>
 <dl class="py method">
 <dt id="pulumi_ns1.User.account_manage_plan">
 <em class="property">property </em><code class="sig-name descname">account_manage_plan</code><a class="headerlink" href="#pulumi_ns1.User.account_manage_plan" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether the user can modify the account plan.</p>
+<dd><p><strong>Deprecated</strong> Whether the user can modify the account plan.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2142,6 +2190,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>zone</strong> (<em>str</em>) – The name of the zone to get DNSSEC details for.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_ns1.get_record">
+<code class="sig-prename descclassname">pulumi_ns1.</code><code class="sig-name descname">get_record</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domain</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_ns1.get_record.AwaitableGetRecordResult<a class="headerlink" href="#pulumi_ns1.get_record" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides details about a NS1 Record. Use this if you would simply like to read
+information from NS1 into your configurations. For read/write operations, you
+should use a resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_ns1</span> <span class="k">as</span> <span class="nn">ns1</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">ns1</span><span class="o">.</span><span class="n">get_record</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="s2">&quot;terraform.example.io&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;example.io&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>domain</strong> (<em>str</em>) – The records’ domain.</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – The records’ RR type.</p></li>
+<li><p><strong>zone</strong> (<em>str</em>) – The zone the record belongs to.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

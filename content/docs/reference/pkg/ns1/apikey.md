@@ -227,8 +227,8 @@ The APIKey resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Whether the apikey can modify account payment methods.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="accountmanageplan_csharp">
 <a href="#accountmanageplan_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Plan</a>
 </span> 
@@ -236,7 +236,7 @@ The APIKey resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify the account plan.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -558,8 +558,8 @@ Only relevant for the DDI product.
     <dd>{{% md %}}Whether the apikey can modify account payment methods.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="accountmanageplan_go">
 <a href="#accountmanageplan_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Plan</a>
 </span> 
@@ -567,7 +567,7 @@ Only relevant for the DDI product.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify the account plan.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -889,8 +889,8 @@ Only relevant for the DDI product.
     <dd>{{% md %}}Whether the apikey can modify account payment methods.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="accountmanageplan_nodejs">
 <a href="#accountmanageplan_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Plan</a>
 </span> 
@@ -898,7 +898,7 @@ Only relevant for the DDI product.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify the account plan.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1220,8 +1220,8 @@ Only relevant for the DDI product.
     <dd>{{% md %}}Whether the apikey can modify account payment methods.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="account_manage_plan_python">
 <a href="#account_manage_plan_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>plan</a>
 </span> 
@@ -1229,7 +1229,7 @@ Only relevant for the DDI product.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify the account plan.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1801,8 +1801,8 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether the apikey can modify account payment methods.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_accountmanageplan_csharp">
 <a href="#state_accountmanageplan_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Plan</a>
 </span> 
@@ -1810,7 +1810,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify the account plan.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2143,8 +2143,8 @@ Only relevant for the DDI product.
     <dd>{{% md %}}Whether the apikey can modify account payment methods.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_accountmanageplan_go">
 <a href="#state_accountmanageplan_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Plan</a>
 </span> 
@@ -2152,7 +2152,7 @@ Only relevant for the DDI product.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify the account plan.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2485,8 +2485,8 @@ Only relevant for the DDI product.
     <dd>{{% md %}}Whether the apikey can modify account payment methods.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_accountmanageplan_nodejs">
 <a href="#state_accountmanageplan_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Plan</a>
 </span> 
@@ -2494,7 +2494,7 @@ Only relevant for the DDI product.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify the account plan.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2827,8 +2827,8 @@ Only relevant for the DDI product.
     <dd>{{% md %}}Whether the apikey can modify account payment methods.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_account_manage_plan_python">
 <a href="#state_account_manage_plan_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>plan</a>
 </span> 
@@ -2836,7 +2836,7 @@ Only relevant for the DDI product.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the apikey can modify the account plan.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3149,6 +3149,6 @@ Only relevant for the DDI product.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/terraform-providers/terraform-provider-ns1).</dd>
+	<dd>This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/ns1-terraform/terraform-provider-ns1).</dd>
 </dl>
 
