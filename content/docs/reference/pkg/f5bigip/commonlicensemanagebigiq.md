@@ -85,9 +85,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := f5bigip.NewCommonLicenseManageBigIq(ctx, "testExampleCommonLicenseManageBigIq", &f5bigip.CommonLicenseManageBigIqArgs{
-			BigiqAddress:    pulumi.String(_var.Bigiq),
-			BigiqUser:       pulumi.String(_var.Bigiq_un),
-			BigiqPassword:   pulumi.String(_var.Bigiq_pw),
+			BigiqAddress:    pulumi.Any(_var.Bigiq),
+			BigiqUser:       pulumi.Any(_var.Bigiq_un),
+			BigiqPassword:   pulumi.Any(_var.Bigiq_pw),
 			LicensePoolname: pulumi.String("regkeypool_name"),
 			AssignmentType:  pulumi.String("MANAGED"),
 		})
@@ -95,9 +95,9 @@ func main() {
 			return err
 		}
 		_, err = f5bigip.NewCommonLicenseManageBigIq(ctx, "testExampleIndex_commonLicenseManageBigIqCommonLicenseManageBigIq", &f5bigip.CommonLicenseManageBigIqArgs{
-			BigiqAddress:    pulumi.String(_var.Bigiq),
-			BigiqUser:       pulumi.String(_var.Bigiq_un),
-			BigiqPassword:   pulumi.String(_var.Bigiq_pw),
+			BigiqAddress:    pulumi.Any(_var.Bigiq),
+			BigiqUser:       pulumi.Any(_var.Bigiq_un),
+			BigiqPassword:   pulumi.Any(_var.Bigiq_pw),
 			LicensePoolname: pulumi.String("regkeypool_name"),
 			AssignmentType:  pulumi.String("UNMANAGED"),
 		})
@@ -105,9 +105,9 @@ func main() {
 			return err
 		}
 		_, err = f5bigip.NewCommonLicenseManageBigIq(ctx, "testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq", &f5bigip.CommonLicenseManageBigIqArgs{
-			BigiqAddress:    pulumi.String(_var.Bigiq),
-			BigiqUser:       pulumi.String(_var.Bigiq_un),
-			BigiqPassword:   pulumi.String(_var.Bigiq_pw),
+			BigiqAddress:    pulumi.Any(_var.Bigiq),
+			BigiqUser:       pulumi.Any(_var.Bigiq_un),
+			BigiqPassword:   pulumi.Any(_var.Bigiq_pw),
 			LicensePoolname: pulumi.String("utilitypool_name"),
 			AssignmentType:  pulumi.String("UNMANAGED"),
 			UnitOfMeasure:   pulumi.String("yearly"),
@@ -234,7 +234,7 @@ const testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq1 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/#pulumi_f5bigip.CommonLicenseManageBigIq">CommonLicenseManageBigIq</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>assignment_type=None<span class="p">, </span>bigiq_address=None<span class="p">, </span>bigiq_login_ref=None<span class="p">, </span>bigiq_password=None<span class="p">, </span>bigiq_port=None<span class="p">, </span>bigiq_token_auth=None<span class="p">, </span>bigiq_user=None<span class="p">, </span>device_license_status=None<span class="p">, </span>hypervisor=None<span class="p">, </span>key=None<span class="p">, </span>license_poolname=None<span class="p">, </span>mac_address=None<span class="p">, </span>skukeyword1=None<span class="p">, </span>skukeyword2=None<span class="p">, </span>tenant=None<span class="p">, </span>unit_of_measure=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/#pulumi_f5bigip.CommonLicenseManageBigIq">CommonLicenseManageBigIq</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_login_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_token_auth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bigiq_user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_license_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hypervisor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_poolname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mac_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skukeyword1</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skukeyword2</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit_of_measure</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1229,7 +1229,8 @@ Get an existing CommonLicenseManageBigIq resource's state with the given name, I
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>assignment_type=None<span class="p">, </span>bigiq_address=None<span class="p">, </span>bigiq_login_ref=None<span class="p">, </span>bigiq_password=None<span class="p">, </span>bigiq_port=None<span class="p">, </span>bigiq_token_auth=None<span class="p">, </span>bigiq_user=None<span class="p">, </span>device_license_status=None<span class="p">, </span>hypervisor=None<span class="p">, </span>key=None<span class="p">, </span>license_poolname=None<span class="p">, </span>mac_address=None<span class="p">, </span>skukeyword1=None<span class="p">, </span>skukeyword2=None<span class="p">, </span>tenant=None<span class="p">, </span>unit_of_measure=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_login_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_token_auth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bigiq_user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_license_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hypervisor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_poolname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mac_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skukeyword1</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skukeyword2</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit_of_measure</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CommonLicenseManageBigIq</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1237,7 +1238,7 @@ Get an existing CommonLicenseManageBigIq resource's state with the given name, I
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.CommonLicenseManageBigIq.html">CommonLicenseManageBigIq</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP..CommonLicenseManageBigIqState.html">CommonLicenseManageBigIqState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.CommonLicenseManageBigIq.html">CommonLicenseManageBigIq</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP..CommonLicenseManageBigIqState.html">CommonLicenseManageBigIqState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
