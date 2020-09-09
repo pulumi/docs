@@ -24,7 +24,7 @@ meta_desc: "Explore the GetKafkaSchemaConfiguration function of the Aiven packag
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kafka_schema_configuration(</span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subject_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKafkaSchemaConfigurationResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kafka_schema_configuration(</span><span class="nx">compatibility_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subject_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKafkaSchemaConfigurationResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -65,6 +65,16 @@ The following arguments are supported:
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="compatibilitylevel_csharp">
+<a href="#compatibilitylevel_csharp" style="color: inherit; text-decoration: inherit;">Compatibility<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -130,6 +140,16 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="compatibilitylevel_go">
+<a href="#compatibilitylevel_go" style="color: inherit; text-decoration: inherit;">Compatibility<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="schema_go">
 <a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span> 
@@ -187,6 +207,16 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="compatibilitylevel_nodejs">
+<a href="#compatibilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">compatibility<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="schema_nodejs">
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
@@ -236,6 +266,16 @@ The following arguments are supported:
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="compatibility_level_python">
+<a href="#compatibility_level_python" style="color: inherit; text-decoration: inherit;">compatibility_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -335,6 +375,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="compatibilitylevel_csharp">
+<a href="#compatibilitylevel_csharp" style="color: inherit; text-decoration: inherit;">Compatibility<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="schema_csharp">
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span> 
@@ -398,6 +448,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="compatibilitylevel_go">
+<a href="#compatibilitylevel_go" style="color: inherit; text-decoration: inherit;">Compatibility<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -471,6 +531,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="compatibilitylevel_nodejs">
+<a href="#compatibilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">compatibility<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="schema_nodejs">
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
@@ -534,6 +604,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="compatibility_level_python">
+<a href="#compatibility_level_python" style="color: inherit; text-decoration: inherit;">compatibility_<wbr>level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

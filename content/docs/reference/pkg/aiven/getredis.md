@@ -2134,6 +2134,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetoforkfrom_csharp">
+<a href="#servicetoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2235,6 +2245,16 @@ The following output properties are available:
             title="Optional">
         <span id="redistimeout_go">
 <a href="#redistimeout_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetoforkfrom_go">
+<a href="#servicetoforkfrom_go" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -2348,6 +2368,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetoforkfrom_nodejs">
+<a href="#servicetoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2455,6 +2485,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_to_fork_from_python">
+<a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2479,6 +2519,16 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dbname_csharp">
+<a href="#dbname_csharp" style="color: inherit; text-decoration: inherit;">Dbname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2539,6 +2589,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="dbname_go">
+<a href="#dbname_go" style="color: inherit; text-decoration: inherit;">Dbname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
 </span> 
@@ -2596,6 +2656,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="dbname_nodejs">
+<a href="#dbname_nodejs" style="color: inherit; text-decoration: inherit;">dbname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
@@ -2650,6 +2720,16 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dbname_python">
+<a href="#dbname_python" style="color: inherit; text-decoration: inherit;">dbname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

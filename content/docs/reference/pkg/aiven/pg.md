@@ -2898,6 +2898,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="migration_csharp">
+<a href="#migration_csharp" style="color: inherit; text-decoration: inherit;">Migration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pgpguserconfigmigration">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="pg_csharp">
 <a href="#pg_csharp" style="color: inherit; text-decoration: inherit;">Pg</a>
 </span> 
@@ -3100,6 +3110,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migration_go">
+<a href="#migration_go" style="color: inherit; text-decoration: inherit;">Migration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pgpguserconfigmigration">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3312,6 +3332,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="migration_nodejs">
+<a href="#migration_nodejs" style="color: inherit; text-decoration: inherit;">migration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pgpguserconfigmigration">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="pg_nodejs">
 <a href="#pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
 </span> 
@@ -3519,6 +3549,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="migration_python">
+<a href="#migration_python" style="color: inherit; text-decoration: inherit;">migration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pgpguserconfigmigration">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="pg_python">
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
 </span> 
@@ -3661,6 +3701,292 @@ The following state arguments are supported:
             title="Optional">
         <span id="work_mem_python">
 <a href="#work_mem_python" style="color: inherit; text-decoration: inherit;">work_<wbr>mem</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="pgpguserconfigmigration">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#PgPgUserConfigMigration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#PgPgUserConfigMigration">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#PgPgUserConfigMigrationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#PgPgUserConfigMigrationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.PgPgUserConfigMigrationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.PgPgUserConfigMigration.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dbname_csharp">
+<a href="#dbname_csharp" style="color: inherit; text-decoration: inherit;">Dbname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_csharp">
+<a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssl_csharp">
+<a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dbname_go">
+<a href="#dbname_go" style="color: inherit; text-decoration: inherit;">Dbname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_go">
+<a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssl_go">
+<a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dbname_nodejs">
+<a href="#dbname_nodejs" style="color: inherit; text-decoration: inherit;">dbname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_nodejs">
+<a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssl_nodejs">
+<a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dbname_python">
+<a href="#dbname_python" style="color: inherit; text-decoration: inherit;">dbname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_python">
+<a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssl_python">
+<a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3926,6 +4252,26 @@ The following state arguments are supported:
             title="Optional">
         <span id="maxworkerprocesses_csharp">
 <a href="#maxworkerprocesses_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Worker<wbr>Processes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pgpartmanbgwdotinterval_csharp">
+<a href="#pgpartmanbgwdotinterval_csharp" style="color: inherit; text-decoration: inherit;">Pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pgpartmanbgwdotrole_csharp">
+<a href="#pgpartmanbgwdotrole_csharp" style="color: inherit; text-decoration: inherit;">Pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Role</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -4261,6 +4607,26 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="pgpartmanbgwdotinterval_go">
+<a href="#pgpartmanbgwdotinterval_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pgpartmanbgwdotrole_go">
+<a href="#pgpartmanbgwdotrole_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Role</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="pgstatstatementsdottrack_go">
 <a href="#pgstatstatementsdottrack_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>Stat<wbr>Statements<wbr>Dot<wbr>Track</a>
 </span> 
@@ -4588,6 +4954,26 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="pgpartmanbgwdotinterval_nodejs">
+<a href="#pgpartmanbgwdotinterval_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pgpartmanbgwdotrole_nodejs">
+<a href="#pgpartmanbgwdotrole_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Role</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="pgstatstatementsdottrack_nodejs">
 <a href="#pgstatstatementsdottrack_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>Stat<wbr>Statements<wbr>Dot<wbr>Track</a>
 </span> 
@@ -4907,6 +5293,26 @@ The following state arguments are supported:
             title="Optional">
         <span id="max_worker_processes_python">
 <a href="#max_worker_processes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>worker_<wbr>processes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pg_partman_bgw_dot_interval_python">
+<a href="#pg_partman_bgw_dot_interval_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>partman_<wbr>bgw_<wbr>dot_<wbr>interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pg_partman_bgw_dot_role_python">
+<a href="#pg_partman_bgw_dot_role_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>partman_<wbr>bgw_<wbr>dot_<wbr>role</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
