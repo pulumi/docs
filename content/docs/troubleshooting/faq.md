@@ -17,13 +17,13 @@ You can disable this "auto-naming" on a per-resource basis if this isn't right f
 
 ## How can I add support for my favorite cloud?
 
-To enable a new cloud, you need to create a Pulumi Resource Provider.  This requires a gRPC interface, and can be implemented directly; see [https://github.com/pulumi/pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes) for an example of this.
+To enable a new cloud, you need to create a Pulumi Resource Provider.  This requires a gRPC interface, and can be implemented directly; see the [Pulumi Resource Provider Boilerplate](https://github.com/pulumi/pulumi-provider-boilerplate) to get started, and [https://github.com/pulumi/pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes) for a complete example of this.
 
 If there is an existing Terraform Resource Provider for the target, you can also use Terraform Bridge;  see [https://github.com/pulumi/pulumi-terraform-bridge/blob/master/README.md](https://github.com/pulumi/pulumi-terraform-bridge/blob/master/README.md) for a description of the overall structure and process of adding a new provider using the bridge and [https://github.com/pulumi/pulumi-aws/blob/master/provider/resources.go](https://github.com/pulumi/pulumi-aws/blob/master/provider/resources.go) for a specific example.
 
 ## How can I add support for my favorite language?
 
-Supported languages run out of process and communicate over gRPC with the Pulumi engine and resource providers.  The protocol definitions can be found at [https://github.com/pulumi/pulumi/tree/master/sdk/proto](https://github.com/pulumi/pulumi/tree/master/sdk/proto) along with the language providers themselves.  You can look at how we added support for Go at [https://github.com/pulumi/pulumi/pull/1456](https://github.com/pulumi/pulumi/pull/1456), which should help with scoping.
+Supported languages run out of process and communicate over gRPC with the Pulumi engine and resource providers.  The protocol definitions can be found at [https://github.com/pulumi/pulumi/tree/master/sdk/proto](https://github.com/pulumi/pulumi/tree/master/sdk/proto) along with the language providers themselves.  You can look at how we added support for Go at [https://github.com/pulumi/pulumi/pull/1456](https://github.com/pulumi/pulumi/pull/1456), which should help with scoping.  There is also a summary of the core work items needed as part of a typical new language in the [New Language Bringup wiki page](https://github.com/pulumi/pulumi/wiki/New-Language-Bringup).
 
 ## Does Pulumi support automatic rollback in the event of an error or failure?
 
@@ -36,7 +36,7 @@ There is an issue related to the idea of automatic rollbacks on GitHub at <https
 
 ## How does Pulumi manage secrets?
 
-When you set a configuration value, you may pass `--secret` to `pulumi config set` which causes the value to be encrypted so it can be safely persisted in `Pulumi.<stack-name>.yaml`. For every stack, pulumi.com manages a unique encryption key, which it uses to encrypt secrets for that stack. Because a different key is used for each stack, encrypting the same value across two different stacks will lead to different encrypted strings being stored in the `Pulumi.<stack-name>.yaml` files. This also means that you can not copy an encrypted value from one file to another using a text editor. Instead, you must use `pulumi config set`.
+When you set a configuration value, you may pass `--secret` to `pulumi config set` which causes the value to be encrypted so it can be safely persisted in `Pulumi.<stack-name>.yaml`. For every stack, pulumi.com manages a unique encryption key, which it uses to encrypt secrets for that stack (and this is configurable to use your own custom secrets provider). Because a different key is used for each stack, encrypting the same value across two different stacks will lead to different encrypted strings being stored in the `Pulumi.<stack-name>.yaml` files. This also means that you can not copy an encrypted value from one file to another using a text editor. Instead, you must use `pulumi config set`.
 
 When you run a preview, update or destroy, pulumi decrypts this data. It is plain text during the execution of your deployment, and any part of your Pulumi program may access it using the Pulumi config object. To learn more, see [Configuration]({{< relref "/docs/intro/concepts/config" >}}).
 
@@ -67,9 +67,9 @@ If pulumi.com is down, you'll be unable to preview, update or destroy a stack us
 
 We think that using the Pulumi service and the Pulumi tool together provides the right combination of usability, safety, and security for most users. However, for users with especially unique requirements, it is possible to use the Pulumi tool apart from the service.
 
-When you use Pulumi without pulumi.com, the checkpoint for your stack is stored locally. If that file is lost or outdated, Pulumi can no longer operate on your stack. To collaborate with others on your stack, you must host this file yourself and protect against conflicting updates to it. If you use your own checkpoint file, the pulumi.com features, such as the deployment history and resource view, will not be available.
+When you use Pulumi without pulumi.com, the checkpoint for your stack is stored locally or in your own external self-managed state storage. If that file is lost or outdated, Pulumi can no longer operate on your stack. To collaborate with others on your stack, you must host this file yourself and protect against conflicting updates to it. If you use your own checkpoint file, the pulumi.com features, such as the deployment history and resource view, will not be available.
 
-To use Pulumi without pulumi.com, log in using `pulumi login --local`. For more information, read more at [State and Backends]({{< relref "/docs/intro/concepts/state" >}}).
+To use Pulumi without pulumi.com, log in using `pulumi login --local` or by logging in to an alternative backend. For more information, read more at [State and Backends]({{< relref "/docs/intro/concepts/state" >}}).
 
 ## How can I go back to using the Pulumi service?
 
