@@ -111,7 +111,7 @@ const example = pulumi.output(gitlab.getUsers({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_users(</span>active=None<span class="p">, </span>blocked=None<span class="p">, </span>created_after=None<span class="p">, </span>created_before=None<span class="p">, </span>extern_provider=None<span class="p">, </span>extern_uid=None<span class="p">, </span>order_by=None<span class="p">, </span>search=None<span class="p">, </span>sort=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_users(</span><span class="nx">active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">blocked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">created_after</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_before</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extern_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extern_uid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">order_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">search</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sort</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetUsersResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1958,8 +1958,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="avatarurl_python">
-<a href="#avatarurl_python" style="color: inherit; text-decoration: inherit;">avatar<wbr>Url</a>
+        <span id="avatar_url_python">
+<a href="#avatar_url_python" style="color: inherit; text-decoration: inherit;">avatar_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1980,17 +1980,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="cancreateproject_python">
-<a href="#cancreateproject_python" style="color: inherit; text-decoration: inherit;">can<wbr>Create<wbr>Project</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Whether the user can create projects.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="can_create_group_python">
 <a href="#can_create_group_python" style="color: inherit; text-decoration: inherit;">can_<wbr>create_<wbr>group</a>
 </span> 
@@ -2002,8 +1991,19 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="colorschemeid_python">
-<a href="#colorschemeid_python" style="color: inherit; text-decoration: inherit;">color<wbr>Scheme<wbr>Id</a>
+        <span id="can_create_project_python">
+<a href="#can_create_project_python" style="color: inherit; text-decoration: inherit;">can_<wbr>create_<wbr>project</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the user can create projects.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="color_scheme_id_python">
+<a href="#color_scheme_id_python" style="color: inherit; text-decoration: inherit;">color_<wbr>scheme_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2024,8 +2024,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="currentsigninat_python">
-<a href="#currentsigninat_python" style="color: inherit; text-decoration: inherit;">current<wbr>Sign<wbr>In<wbr>At</a>
+        <span id="current_sign_in_at_python">
+<a href="#current_sign_in_at_python" style="color: inherit; text-decoration: inherit;">current_<wbr>sign_<wbr>in_<wbr>at</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2046,8 +2046,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="externuid_python">
-<a href="#externuid_python" style="color: inherit; text-decoration: inherit;">extern<wbr>Uid</a>
+        <span id="extern_uid_python">
+<a href="#extern_uid_python" style="color: inherit; text-decoration: inherit;">extern_<wbr>uid</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2090,8 +2090,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lastsigninat_python">
-<a href="#lastsigninat_python" style="color: inherit; text-decoration: inherit;">last<wbr>Sign<wbr>In<wbr>At</a>
+        <span id="last_sign_in_at_python">
+<a href="#last_sign_in_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sign_<wbr>in_<wbr>at</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2189,8 +2189,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="themeid_python">
-<a href="#themeid_python" style="color: inherit; text-decoration: inherit;">theme<wbr>Id</a>
+        <span id="theme_id_python">
+<a href="#theme_id_python" style="color: inherit; text-decoration: inherit;">theme_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2211,8 +2211,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="twofactorenabled_python">
-<a href="#twofactorenabled_python" style="color: inherit; text-decoration: inherit;">two<wbr>Factor<wbr>Enabled</a>
+        <span id="two_factor_enabled_python">
+<a href="#two_factor_enabled_python" style="color: inherit; text-decoration: inherit;">two_<wbr>factor_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2233,8 +2233,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="websiteurl_python">
-<a href="#websiteurl_python" style="color: inherit; text-decoration: inherit;">website<wbr>Url</a>
+        <span id="website_url_python">
+<a href="#website_url_python" style="color: inherit; text-decoration: inherit;">website_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

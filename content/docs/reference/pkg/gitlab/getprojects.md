@@ -205,7 +205,7 @@ const projects = pulumi.output(gitlab.getProjects({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_projects(</span>archived=None<span class="p">, </span>group_id=None<span class="p">, </span>include_subgroups=None<span class="p">, </span>max_queryable_pages=None<span class="p">, </span>membership=None<span class="p">, </span>min_access_level=None<span class="p">, </span>order_by=None<span class="p">, </span>owned=None<span class="p">, </span>page=None<span class="p">, </span>per_page=None<span class="p">, </span>search=None<span class="p">, </span>simple=None<span class="p">, </span>sort=None<span class="p">, </span>starred=None<span class="p">, </span>statistics=None<span class="p">, </span>visibility=None<span class="p">, </span>with_custom_attributes=None<span class="p">, </span>with_issues_enabled=None<span class="p">, </span>with_merge_requests_enabled=None<span class="p">, </span>with_programming_language=None<span class="p">, </span>with_shared=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_projects(</span><span class="nx">archived</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">include_subgroups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_queryable_pages</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">membership</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">min_access_level</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">order_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owned</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">page</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">per_page</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">search</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">simple</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sort</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">starred</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">statistics</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">with_custom_attributes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">with_issues_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">with_merge_requests_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">with_programming_language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">with_shared</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProjectsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -3857,7 +3857,7 @@ The following output properties are available:
 <a href="#_links_python" style="color: inherit; text-decoration: inherit;">_<wbr>links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3885,8 +3885,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="avatarurl_python">
-<a href="#avatarurl_python" style="color: inherit; text-decoration: inherit;">avatar<wbr>Url</a>
+        <span id="avatar_url_python">
+<a href="#avatar_url_python" style="color: inherit; text-decoration: inherit;">avatar_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3895,8 +3895,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ciconfigpath_python">
-<a href="#ciconfigpath_python" style="color: inherit; text-decoration: inherit;">ci<wbr>Config<wbr>Path</a>
+        <span id="ci_config_path_python">
+<a href="#ci_config_path_python" style="color: inherit; text-decoration: inherit;">ci_<wbr>config_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3925,8 +3925,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="creatorid_python">
-<a href="#creatorid_python" style="color: inherit; text-decoration: inherit;">creator<wbr>Id</a>
+        <span id="creator_id_python">
+<a href="#creator_id_python" style="color: inherit; text-decoration: inherit;">creator_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3935,11 +3935,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="customattributes_python">
-<a href="#customattributes_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
+        <span id="custom_attributes_python">
+<a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type">List[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3965,18 +3965,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="forkedfromproject_python">
-<a href="#forkedfromproject_python" style="color: inherit; text-decoration: inherit;">forked<wbr>From<wbr>Project</a>
+        <span id="forked_from_project_python">
+<a href="#forked_from_project_python" style="color: inherit; text-decoration: inherit;">forked_<wbr>from_<wbr>project</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectsprojectforkedfromproject">Dict[Get<wbr>Projects<wbr>Project<wbr>Forked<wbr>From<wbr>Project]</a></span>
+        <span class="property-type"><a href="#getprojectsprojectforkedfromproject">Get<wbr>Projects<wbr>Project<wbr>Forked<wbr>From<wbr>Project<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="forkscount_python">
-<a href="#forkscount_python" style="color: inherit; text-decoration: inherit;">forks<wbr>Count</a>
+        <span id="forks_count_python">
+<a href="#forks_count_python" style="color: inherit; text-decoration: inherit;">forks_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4007,8 +4007,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="importerror_python">
-<a href="#importerror_python" style="color: inherit; text-decoration: inherit;">import<wbr>Error</a>
+        <span id="import_error_python">
+<a href="#import_error_python" style="color: inherit; text-decoration: inherit;">import_<wbr>error</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4017,8 +4017,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="importstatus_python">
-<a href="#importstatus_python" style="color: inherit; text-decoration: inherit;">import<wbr>Status</a>
+        <span id="import_status_python">
+<a href="#import_status_python" style="color: inherit; text-decoration: inherit;">import_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4037,8 +4037,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="jobsenabled_python">
-<a href="#jobsenabled_python" style="color: inherit; text-decoration: inherit;">jobs<wbr>Enabled</a>
+        <span id="jobs_enabled_python">
+<a href="#jobs_enabled_python" style="color: inherit; text-decoration: inherit;">jobs_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4048,8 +4048,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lastactivityat_python">
-<a href="#lastactivityat_python" style="color: inherit; text-decoration: inherit;">last<wbr>Activity<wbr>At</a>
+        <span id="last_activity_at_python">
+<a href="#last_activity_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>activity_<wbr>at</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4098,8 +4098,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="mirroroverwritesdivergedbranches_python">
-<a href="#mirroroverwritesdivergedbranches_python" style="color: inherit; text-decoration: inherit;">mirror<wbr>Overwrites<wbr>Diverged<wbr>Branches</a>
+        <span id="mirror_overwrites_diverged_branches_python">
+<a href="#mirror_overwrites_diverged_branches_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>overwrites_<wbr>diverged_<wbr>branches</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4108,8 +4108,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="mirrortriggerbuilds_python">
-<a href="#mirrortriggerbuilds_python" style="color: inherit; text-decoration: inherit;">mirror<wbr>Trigger<wbr>Builds</a>
+        <span id="mirror_trigger_builds_python">
+<a href="#mirror_trigger_builds_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>trigger_<wbr>builds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4118,8 +4118,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="mirroruserid_python">
-<a href="#mirroruserid_python" style="color: inherit; text-decoration: inherit;">mirror<wbr>User<wbr>Id</a>
+        <span id="mirror_user_id_python">
+<a href="#mirror_user_id_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>user_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4139,8 +4139,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="namewithnamespace_python">
-<a href="#namewithnamespace_python" style="color: inherit; text-decoration: inherit;">name<wbr>With<wbr>Namespace</a>
+        <span id="name_with_namespace_python">
+<a href="#name_with_namespace_python" style="color: inherit; text-decoration: inherit;">name_<wbr>with_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4154,17 +4154,7 @@ The following output properties are available:
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectsprojectnamespace">Dict[Get<wbr>Projects<wbr>Project<wbr>Namespace]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="onlymirrorprotectedbranches_python">
-<a href="#onlymirrorprotectedbranches_python" style="color: inherit; text-decoration: inherit;">only<wbr>Mirror<wbr>Protected<wbr>Branches</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type"><a href="#getprojectsprojectnamespace">Get<wbr>Projects<wbr>Project<wbr>Namespace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4190,8 +4180,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="openissuescount_python">
-<a href="#openissuescount_python" style="color: inherit; text-decoration: inherit;">open<wbr>Issues<wbr>Count</a>
+        <span id="only_mirror_protected_branches_python">
+<a href="#only_mirror_protected_branches_python" style="color: inherit; text-decoration: inherit;">only_<wbr>mirror_<wbr>protected_<wbr>branches</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="open_issues_count_python">
+<a href="#open_issues_count_python" style="color: inherit; text-decoration: inherit;">open_<wbr>issues_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4204,7 +4204,7 @@ The following output properties are available:
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectsprojectowner">Dict[Get<wbr>Projects<wbr>Project<wbr>Owner]</a></span>
+        <span class="property-type"><a href="#getprojectsprojectowner">Get<wbr>Projects<wbr>Project<wbr>Owner<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4220,8 +4220,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="pathwithnamespace_python">
-<a href="#pathwithnamespace_python" style="color: inherit; text-decoration: inherit;">path<wbr>With<wbr>Namespace</a>
+        <span id="path_with_namespace_python">
+<a href="#path_with_namespace_python" style="color: inherit; text-decoration: inherit;">path_<wbr>with_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4235,7 +4235,7 @@ The following output properties are available:
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectsprojectpermissions">Dict[Get<wbr>Projects<wbr>Project<wbr>Permissions]</a></span>
+        <span class="property-type"><a href="#getprojectsprojectpermissions">Get<wbr>Projects<wbr>Project<wbr>Permissions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4252,8 +4252,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="publicbuilds_python">
-<a href="#publicbuilds_python" style="color: inherit; text-decoration: inherit;">public<wbr>Builds</a>
+        <span id="public_builds_python">
+<a href="#public_builds_python" style="color: inherit; text-decoration: inherit;">public_<wbr>builds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4262,8 +4262,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="readmeurl_python">
-<a href="#readmeurl_python" style="color: inherit; text-decoration: inherit;">readme<wbr>Url</a>
+        <span id="readme_url_python">
+<a href="#readme_url_python" style="color: inherit; text-decoration: inherit;">readme_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4282,8 +4282,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="resolveoutdateddiffdiscussions_python">
-<a href="#resolveoutdateddiffdiscussions_python" style="color: inherit; text-decoration: inherit;">resolve<wbr>Outdated<wbr>Diff<wbr>Discussions</a>
+        <span id="resolve_outdated_diff_discussions_python">
+<a href="#resolve_outdated_diff_discussions_python" style="color: inherit; text-decoration: inherit;">resolve_<wbr>outdated_<wbr>diff_<wbr>discussions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4316,7 +4316,7 @@ The following output properties are available:
 <a href="#shared_with_groups_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>with_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectsprojectsharedwithgroup">List[Get<wbr>Projects<wbr>Project<wbr>Shared<wbr>With<wbr>Group]</a></span>
+        <span class="property-type"><a href="#getprojectsprojectsharedwithgroup">List[Get<wbr>Projects<wbr>Project<wbr>Shared<wbr>With<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4343,8 +4343,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="starcount_python">
-<a href="#starcount_python" style="color: inherit; text-decoration: inherit;">star<wbr>Count</a>
+        <span id="star_count_python">
+<a href="#star_count_python" style="color: inherit; text-decoration: inherit;">star_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4357,15 +4357,15 @@ The following output properties are available:
 <a href="#statistics_python" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Integer]</span>
+        <span class="property-type">Mapping[str, float]</span>
     </dt>
     <dd>{{% md %}}Include project statistics. Cannot be used with `group_id`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="taglists_python">
-<a href="#taglists_python" style="color: inherit; text-decoration: inherit;">tag<wbr>Lists</a>
+        <span id="tag_lists_python">
+<a href="#tag_lists_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4710,8 +4710,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="namewithnamespace_python">
-<a href="#namewithnamespace_python" style="color: inherit; text-decoration: inherit;">name<wbr>With<wbr>Namespace</a>
+        <span id="name_with_namespace_python">
+<a href="#name_with_namespace_python" style="color: inherit; text-decoration: inherit;">name_<wbr>with_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4731,8 +4731,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="pathwithnamespace_python">
-<a href="#pathwithnamespace_python" style="color: inherit; text-decoration: inherit;">path<wbr>With<wbr>Namespace</a>
+        <span id="path_with_namespace_python">
+<a href="#path_with_namespace_python" style="color: inherit; text-decoration: inherit;">path_<wbr>with_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5238,8 +5238,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="avatarurl_python">
-<a href="#avatarurl_python" style="color: inherit; text-decoration: inherit;">avatar<wbr>Url</a>
+        <span id="avatar_url_python">
+<a href="#avatar_url_python" style="color: inherit; text-decoration: inherit;">avatar_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5290,8 +5290,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="websiteurl_python">
-<a href="#websiteurl_python" style="color: inherit; text-decoration: inherit;">website<wbr>Url</a>
+        <span id="website_url_python">
+<a href="#website_url_python" style="color: inherit; text-decoration: inherit;">website_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5406,21 +5406,21 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="groupaccess_python">
-<a href="#groupaccess_python" style="color: inherit; text-decoration: inherit;">group<wbr>Access</a>
+        <span id="group_access_python">
+<a href="#group_access_python" style="color: inherit; text-decoration: inherit;">group_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Integer]</span>
+        <span class="property-type">Mapping[str, float]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="projectaccess_python">
-<a href="#projectaccess_python" style="color: inherit; text-decoration: inherit;">project<wbr>Access</a>
+        <span id="project_access_python">
+<a href="#project_access_python" style="color: inherit; text-decoration: inherit;">project_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Integer]</span>
+        <span class="property-type">Mapping[str, float]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5565,18 +5565,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="groupaccesslevel_python">
-<a href="#groupaccesslevel_python" style="color: inherit; text-decoration: inherit;">group<wbr>Access<wbr>Level</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="groupname_python">
-<a href="#groupname_python" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
+        <span id="group_access_level_python">
+<a href="#group_access_level_python" style="color: inherit; text-decoration: inherit;">group_<wbr>access_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5593,6 +5583,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ID of the group owned by the authenticated user to look projects for within. Cannot be used with `min_access_level`, `with_programming_language` or `statistics`.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="group_name_python">
+<a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
