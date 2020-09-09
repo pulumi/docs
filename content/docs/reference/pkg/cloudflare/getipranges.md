@@ -12,6 +12,124 @@ meta_desc: "Explore the GetIpRanges function of the Cloudflare package, includin
 
 Use this data source to get the [IP ranges](https://www.cloudflare.com/ips/) of Cloudflare edge nodes.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cloudflare = Output.Create(Cloudflare.GetIpRanges.InvokeAsync());
+        var allowCloudflareIngress = new Gcp.Compute.Firewall("allowCloudflareIngress", new Gcp.Compute.FirewallArgs
+        {
+            Network = "default",
+            SourceRanges = cloudflare.Apply(cloudflare => cloudflare.Ipv4CidrBlocks),
+            Allows = 
+            {
+                new Gcp.Compute.Inputs.FirewallAllowArgs
+                {
+                    Ports = "443",
+                    Protocol = "tcp",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cloudflare, err := cloudflare.GetIpRanges(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewFirewall(ctx, "allowCloudflareIngress", &compute.FirewallArgs{
+			Network:      pulumi.String("default"),
+			SourceRanges: toPulumiStringArray(cloudflare.Ipv4CidrBlocks),
+			Allows: compute.FirewallAllowArray{
+				&compute.FirewallAllowArgs{
+					Ports:    "443",
+					Protocol: pulumi.String("tcp"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+func toPulumiStringArray(arr []string) pulumi.StringArray {
+	var pulumiArr pulumi.StringArray
+	for _, v := range arr {
+		pulumiArr = append(pulumiArr, pulumi.String(v))
+	}
+	return pulumiArr
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+import pulumi_gcp as gcp
+
+cloudflare = cloudflare.get_ip_ranges()
+allow_cloudflare_ingress = gcp.compute.Firewall("allowCloudflareIngress",
+    network="default",
+    source_ranges=cloudflare.ipv4_cidr_blocks,
+    allows=[{
+        "ports": "443",
+        "protocol": "tcp",
+    }])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+import * as gcp from "@pulumi/gcp";
+
+const cloudflare = cloudflare.getIpRanges({});
+const allowCloudflareIngress = new gcp.compute.Firewall("allowCloudflareIngress", {
+    network: "default",
+    sourceRanges: cloudflare.then(cloudflare => cloudflare.ipv4CidrBlocks),
+    allows: [{
+        ports: "443",
+        protocol: "tcp",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetIpRanges {#using}
@@ -25,7 +143,7 @@ Use this data source to get the [IP ranges](https://www.cloudflare.com/ips/) of 
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_ip_ranges(</span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_ip_ranges(</span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIpRangesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -62,7 +180,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The lexically ordered list of all CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -83,7 +202,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The lexically ordered list of only the IPv4 CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -93,7 +213,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The lexically ordered list of only the IPv6 CIDR blocks.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -110,7 +231,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The lexically ordered list of all CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -131,7 +253,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The lexically ordered list of only the IPv4 CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -141,7 +264,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The lexically ordered list of only the IPv6 CIDR blocks.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -158,7 +282,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The lexically ordered list of all CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -179,7 +304,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The lexically ordered list of only the IPv4 CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -189,7 +315,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The lexically ordered list of only the IPv6 CIDR blocks.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -206,7 +333,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The lexically ordered list of all CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -227,7 +355,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The lexically ordered list of only the IPv4 CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -237,7 +366,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The lexically ordered list of only the IPv6 CIDR blocks.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -257,6 +387,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
+	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 </dl>
 

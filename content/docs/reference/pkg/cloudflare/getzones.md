@@ -12,6 +12,132 @@ meta_desc: "Explore the GetZones function of the Cloudflare package, including e
 
 Use this data source to look up [Zone](https://api.cloudflare.com/#zone-properties) records.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Cloudflare.GetZones.InvokeAsync(new Cloudflare.GetZonesArgs
+        {
+            Filter = new Cloudflare.Inputs.GetZonesFilterArgs
+            {
+                Name = "example.com",
+            },
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudflare.GetZones(ctx, &cloudflare.GetZonesArgs{
+			Filter: cloudflare.GetZonesFilter{
+				Name: "example.com",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+example = cloudflare.get_zones(filter=cloudflare.GetZonesFilterArgs(
+    name="example.com",
+))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+// Look for a single zone that you know exists using an exact match.
+// API request will be for zones?name=example.com. Will not match not-example.com
+// or example.net.
+const example = pulumi.output(cloudflare.getZones({
+    filter: {
+        name: "example.com",
+    },
+}, { async: true }));
+```
+
+{{% /example %}}
+
+### Example usage with other resources
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const test = pulumi.output(cloudflare.getZones({
+    filter: {
+        lookupType: "contains",
+        match: ".com$",
+        name: "example",
+        status: "active",
+    },
+}, { async: true }));
+const endpointLockdown = new cloudflare.ZoneLockdown("endpoint_lockdown", {
+    configurations: [{
+        target: "ip",
+        value: "198.51.100.4",
+    }],
+    description: "Restrict access to these endpoints to requests from a known IP address",
+    paused: false,
+    urls: ["api.mysite.com/some/endpoint*"],
+    zone: test.apply(test => (<any>test.zones[0])["name"]),
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetZones {#using}
@@ -25,7 +151,7 @@ Use this data source to look up [Zone](https://api.cloudflare.com/#zone-properti
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_zones(</span>filter=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_zones(</span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[GetZonesFilterArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetZonesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -58,7 +184,9 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzonesfilter">Get<wbr>Zones<wbr>Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}One or more values used to look up zone records. If more than one value is given all
+values must match in order to be included, see below for full list.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -75,7 +203,9 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzonesfilter">Get<wbr>Zones<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}One or more values used to look up zone records. If more than one value is given all
+values must match in order to be included, see below for full list.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -92,7 +222,9 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzonesfilter">Get<wbr>Zones<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}One or more values used to look up zone records. If more than one value is given all
+values must match in order to be included, see below for full list.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -107,9 +239,11 @@ The following arguments are supported:
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getzonesfilter">Dict[Get<wbr>Zones<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getzonesfilter">Get<wbr>Zones<wbr>Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}One or more values used to look up zone records. If more than one value is given all
+values must match in order to be included, see below for full list.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -160,7 +294,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzoneszone">List&lt;Get<wbr>Zones<wbr>Zone&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A map of zone details. Full list below:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -198,7 +333,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzoneszone">[]Get<wbr>Zones<wbr>Zone</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A map of zone details. Full list below:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -236,7 +372,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzoneszone">Get<wbr>Zones<wbr>Zone[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A map of zone details. Full list below:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -251,7 +388,7 @@ The following output properties are available:
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getzonesfilter">Dict[Get<wbr>Zones<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getzonesfilter">Get<wbr>Zones<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -274,7 +411,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzoneszone">List[Get<wbr>Zones<wbr>Zone]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A map of zone details. Full list below:
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -309,13 +447,40 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="lookuptype_csharp">
+<a href="#lookuptype_csharp" style="color: inherit; text-decoration: inherit;">Lookup<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of search to perform for the `name` value
+when querying the zone API. Valid values: `"exact"` and `"contains"`. Defaults
+to `"exact"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="match_csharp">
+<a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A RE2 compatible regular expression to filter the
+results. This is performed client side whereas the `name` and `lookup_type`
+are performed on the Cloudflare server side.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A string value to search for.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -325,7 +490,9 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Paused status of the zone to lookup. Valid values are
+`true` or `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -335,7 +502,10 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Status of the zone to lookup. Valid values: `"active"`,
+`"pending"`, `"initializing"`, `"moved"`, `"deleted"`, `"deactivated"` and
+`"read only"`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -346,13 +516,40 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="lookuptype_go">
+<a href="#lookuptype_go" style="color: inherit; text-decoration: inherit;">Lookup<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of search to perform for the `name` value
+when querying the zone API. Valid values: `"exact"` and `"contains"`. Defaults
+to `"exact"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="match_go">
+<a href="#match_go" style="color: inherit; text-decoration: inherit;">Match</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A RE2 compatible regular expression to filter the
+results. This is performed client side whereas the `name` and `lookup_type`
+are performed on the Cloudflare server side.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A string value to search for.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -362,7 +559,9 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Paused status of the zone to lookup. Valid values are
+`true` or `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -372,7 +571,10 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Status of the zone to lookup. Valid values: `"active"`,
+`"pending"`, `"initializing"`, `"moved"`, `"deleted"`, `"deactivated"` and
+`"read only"`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -383,13 +585,40 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="lookuptype_nodejs">
+<a href="#lookuptype_nodejs" style="color: inherit; text-decoration: inherit;">lookup<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of search to perform for the `name` value
+when querying the zone API. Valid values: `"exact"` and `"contains"`. Defaults
+to `"exact"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="match_nodejs">
+<a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A RE2 compatible regular expression to filter the
+results. This is performed client side whereas the `name` and `lookup_type`
+are performed on the Cloudflare server side.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A string value to search for.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -399,7 +628,9 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Paused status of the zone to lookup. Valid values are
+`true` or `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -409,7 +640,10 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Status of the zone to lookup. Valid values: `"active"`,
+`"pending"`, `"initializing"`, `"moved"`, `"deleted"`, `"deactivated"` and
+`"read only"`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -420,13 +654,40 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="lookup_type_python">
+<a href="#lookup_type_python" style="color: inherit; text-decoration: inherit;">lookup_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of search to perform for the `name` value
+when querying the zone API. Valid values: `"exact"` and `"contains"`. Defaults
+to `"exact"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="match_python">
+<a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A RE2 compatible regular expression to filter the
+results. This is performed client side whereas the `name` and `lookup_type`
+are performed on the Cloudflare server side.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A string value to search for.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -436,7 +697,9 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Paused status of the zone to lookup. Valid values are
+`true` or `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -446,7 +709,10 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Status of the zone to lookup. Valid values: `"active"`,
+`"pending"`, `"initializing"`, `"moved"`, `"deleted"`, `"deactivated"` and
+`"read only"`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -481,7 +747,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The zone ID
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -491,7 +758,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A string value to search for.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -508,7 +776,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The zone ID
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -518,7 +787,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A string value to search for.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -535,7 +805,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The zone ID
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -545,7 +816,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A string value to search for.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -562,7 +834,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The zone ID
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -572,7 +845,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A string value to search for.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -592,6 +866,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
+	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 </dl>
 

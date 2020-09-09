@@ -92,6 +92,176 @@ Example:
   }
   ```
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Allowing access to `test@example.com` email address only
+        var testGroupAccessGroup = new Cloudflare.AccessGroup("testGroupAccessGroup", new Cloudflare.AccessGroupArgs
+        {
+            AccountId = "975ecf5a45e3bcb680dba0722a420ad9",
+            Name = "staging group",
+            Includes = 
+            {
+                new Cloudflare.Inputs.AccessGroupIncludeArgs
+                {
+                    Emails = 
+                    {
+                        "test@example.com",
+                    },
+                },
+            },
+        });
+        // Allowing `test@example.com` to access but only when coming from a
+        // specific IP.
+        var testGroupIndex_accessGroupAccessGroup = new Cloudflare.AccessGroup("testGroupIndex/accessGroupAccessGroup", new Cloudflare.AccessGroupArgs
+        {
+            AccountId = "975ecf5a45e3bcb680dba0722a420ad9",
+            Name = "staging group",
+            Includes = 
+            {
+                new Cloudflare.Inputs.AccessGroupIncludeArgs
+                {
+                    Emails = 
+                    {
+                        "test@example.com",
+                    },
+                },
+            },
+            Requires = 
+            {
+                { "ips", 
+                {
+                    @var.Office_ip,
+                } },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudflare.NewAccessGroup(ctx, "testGroupAccessGroup", &cloudflare.AccessGroupArgs{
+			AccountId: pulumi.String("975ecf5a45e3bcb680dba0722a420ad9"),
+			Name:      pulumi.String("staging group"),
+			Includes: cloudflare.AccessGroupIncludeArray{
+				&cloudflare.AccessGroupIncludeArgs{
+					Emails: pulumi.StringArray{
+						pulumi.String("test@example.com"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cloudflare.NewAccessGroup(ctx, "testGroupIndex_accessGroupAccessGroup", &cloudflare.AccessGroupArgs{
+			AccountId: pulumi.String("975ecf5a45e3bcb680dba0722a420ad9"),
+			Name:      pulumi.String("staging group"),
+			Includes: cloudflare.AccessGroupIncludeArray{
+				&cloudflare.AccessGroupIncludeArgs{
+					Emails: pulumi.StringArray{
+						pulumi.String("test@example.com"),
+					},
+				},
+			},
+			Requires: cloudflare.AccessGroupRequireArray{
+				Ips: cloudflare.AccessGroupRequireArgs{
+					pulumi.Any(_var.Office_ip),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+# Allowing access to `test@example.com` email address only
+test_group_access_group = cloudflare.AccessGroup("testGroupAccessGroup",
+    account_id="975ecf5a45e3bcb680dba0722a420ad9",
+    name="staging group",
+    includes=[cloudflare.AccessGroupIncludeArgs(
+        emails=["test@example.com"],
+    )])
+# Allowing `test@example.com` to access but only when coming from a
+# specific IP.
+test_group_index_access_group_access_group = cloudflare.AccessGroup("testGroupIndex/accessGroupAccessGroup",
+    account_id="975ecf5a45e3bcb680dba0722a420ad9",
+    name="staging group",
+    includes=[cloudflare.AccessGroupIncludeArgs(
+        emails=["test@example.com"],
+    )],
+    requires={
+        "ips": [var["office_ip"]],
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+// Allowing access to `test@example.com` email address only
+const testGroupAccessGroup = new cloudflare.AccessGroup("testGroupAccessGroup", {
+    accountId: "975ecf5a45e3bcb680dba0722a420ad9",
+    name: "staging group",
+    includes: [{
+        emails: ["test@example.com"],
+    }],
+});
+// Allowing `test@example.com` to access but only when coming from a
+// specific IP.
+const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGroupIndex/accessGroupAccessGroup", {
+    accountId: "975ecf5a45e3bcb680dba0722a420ad9",
+    name: "staging group",
+    includes: [{
+        emails: ["test@example.com"],
+    }],
+    requires: {
+        ips: [_var.office_ip],
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AccessGroup Resource {#create}
@@ -103,7 +273,7 @@ Example:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessGroup">AccessGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>excludes=None<span class="p">, </span>includes=None<span class="p">, </span>name=None<span class="p">, </span>requires=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessGroup">AccessGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[List[AccessGroupExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[List[AccessGroupIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[List[AccessGroupRequireArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -491,7 +661,7 @@ associated with.
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupinclude">List[Access<wbr>Group<wbr>Include]</a></span>
+        <span class="property-type"><a href="#accessgroupinclude">List[Access<wbr>Group<wbr>Include<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -514,7 +684,7 @@ full list.
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexclude">List[Access<wbr>Group<wbr>Exclude]</a></span>
+        <span class="property-type"><a href="#accessgroupexclude">List[Access<wbr>Group<wbr>Exclude<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -526,7 +696,7 @@ full list.
 <a href="#requires_python" style="color: inherit; text-decoration: inherit;">requires</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequire">List[Access<wbr>Group<wbr>Require]</a></span>
+        <span class="property-type"><a href="#accessgrouprequire">List[Access<wbr>Group<wbr>Require<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -630,7 +800,8 @@ Get an existing AccessGroup resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_id=None<span class="p">, </span>excludes=None<span class="p">, </span>includes=None<span class="p">, </span>name=None<span class="p">, </span>requires=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[List[AccessGroupExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[List[AccessGroupIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[List[AccessGroupRequireArgs]]</span> = None<span class="p">) -&gt;</span> AccessGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -638,7 +809,7 @@ Get an existing AccessGroup resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessGroup.html">AccessGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessGroupState.html">AccessGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessGroup.html">AccessGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessGroupState.html">AccessGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -960,7 +1131,7 @@ associated with.
 <a href="#state_excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexclude">List[Access<wbr>Group<wbr>Exclude]</a></span>
+        <span class="property-type"><a href="#accessgroupexclude">List[Access<wbr>Group<wbr>Exclude<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -972,7 +1143,7 @@ full list.
 <a href="#state_includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupinclude">List[Access<wbr>Group<wbr>Include]</a></span>
+        <span class="property-type"><a href="#accessgroupinclude">List[Access<wbr>Group<wbr>Include<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -995,7 +1166,7 @@ full list.
 <a href="#state_requires_python" style="color: inherit; text-decoration: inherit;">requires</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequire">List[Access<wbr>Group<wbr>Require]</a></span>
+        <span class="property-type"><a href="#accessgrouprequire">List[Access<wbr>Group<wbr>Require<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -1477,8 +1648,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="anyvalidservicetoken_python">
-<a href="#anyvalidservicetoken_python" style="color: inherit; text-decoration: inherit;">any<wbr>Valid<wbr>Service<wbr>Token</a>
+        <span id="any_valid_service_token_python">
+<a href="#any_valid_service_token_python" style="color: inherit; text-decoration: inherit;">any_<wbr>valid_<wbr>service_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1491,7 +1662,7 @@ full list.
 <a href="#azures_python" style="color: inherit; text-decoration: inherit;">azures</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludeazure">List[Access<wbr>Group<wbr>Exclude<wbr>Azure]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludeazure">List[Access<wbr>Group<wbr>Exclude<wbr>Azure<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1507,8 +1678,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="commonname_python">
-<a href="#commonname_python" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
+        <span id="common_name_python">
+<a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1517,8 +1688,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emaildomains_python">
-<a href="#emaildomains_python" style="color: inherit; text-decoration: inherit;">email<wbr>Domains</a>
+        <span id="email_domains_python">
+<a href="#email_domains_python" style="color: inherit; text-decoration: inherit;">email_<wbr>domains</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1551,7 +1722,7 @@ full list.
 <a href="#githubs_python" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludegithub">List[Access<wbr>Group<wbr>Exclude<wbr>Github]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludegithub">List[Access<wbr>Group<wbr>Exclude<wbr>Github<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1571,7 +1742,7 @@ full list.
 <a href="#gsuites_python" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludegsuite">List[Access<wbr>Group<wbr>Exclude<wbr>Gsuite]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludegsuite">List[Access<wbr>Group<wbr>Exclude<wbr>Gsuite<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1591,7 +1762,7 @@ full list.
 <a href="#oktas_python" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludeokta">List[Access<wbr>Group<wbr>Exclude<wbr>Okta]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludeokta">List[Access<wbr>Group<wbr>Exclude<wbr>Okta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1601,14 +1772,14 @@ full list.
 <a href="#samls_python" style="color: inherit; text-decoration: inherit;">samls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludesaml">List[Access<wbr>Group<wbr>Exclude<wbr>Saml]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludesaml">List[Access<wbr>Group<wbr>Exclude<wbr>Saml<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicetokens_python">
-<a href="#servicetokens_python" style="color: inherit; text-decoration: inherit;">service<wbr>Tokens</a>
+        <span id="service_tokens_python">
+<a href="#service_tokens_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1733,8 +1904,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1852,8 +2023,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1989,8 +2160,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2108,8 +2279,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2265,8 +2436,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="attributename_python">
-<a href="#attributename_python" style="color: inherit; text-decoration: inherit;">attribute<wbr>Name</a>
+        <span id="attribute_name_python">
+<a href="#attribute_name_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2275,8 +2446,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="attributevalue_python">
-<a href="#attributevalue_python" style="color: inherit; text-decoration: inherit;">attribute<wbr>Value</a>
+        <span id="attribute_value_python">
+<a href="#attribute_value_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2285,8 +2456,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2761,8 +2932,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="anyvalidservicetoken_python">
-<a href="#anyvalidservicetoken_python" style="color: inherit; text-decoration: inherit;">any<wbr>Valid<wbr>Service<wbr>Token</a>
+        <span id="any_valid_service_token_python">
+<a href="#any_valid_service_token_python" style="color: inherit; text-decoration: inherit;">any_<wbr>valid_<wbr>service_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2775,7 +2946,7 @@ full list.
 <a href="#azures_python" style="color: inherit; text-decoration: inherit;">azures</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludeazure">List[Access<wbr>Group<wbr>Include<wbr>Azure]</a></span>
+        <span class="property-type"><a href="#accessgroupincludeazure">List[Access<wbr>Group<wbr>Include<wbr>Azure<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2791,8 +2962,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="commonname_python">
-<a href="#commonname_python" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
+        <span id="common_name_python">
+<a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2801,8 +2972,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emaildomains_python">
-<a href="#emaildomains_python" style="color: inherit; text-decoration: inherit;">email<wbr>Domains</a>
+        <span id="email_domains_python">
+<a href="#email_domains_python" style="color: inherit; text-decoration: inherit;">email_<wbr>domains</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2835,7 +3006,7 @@ full list.
 <a href="#githubs_python" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludegithub">List[Access<wbr>Group<wbr>Include<wbr>Github]</a></span>
+        <span class="property-type"><a href="#accessgroupincludegithub">List[Access<wbr>Group<wbr>Include<wbr>Github<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2855,7 +3026,7 @@ full list.
 <a href="#gsuites_python" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludegsuite">List[Access<wbr>Group<wbr>Include<wbr>Gsuite]</a></span>
+        <span class="property-type"><a href="#accessgroupincludegsuite">List[Access<wbr>Group<wbr>Include<wbr>Gsuite<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2875,7 +3046,7 @@ full list.
 <a href="#oktas_python" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludeokta">List[Access<wbr>Group<wbr>Include<wbr>Okta]</a></span>
+        <span class="property-type"><a href="#accessgroupincludeokta">List[Access<wbr>Group<wbr>Include<wbr>Okta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2885,14 +3056,14 @@ full list.
 <a href="#samls_python" style="color: inherit; text-decoration: inherit;">samls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludesaml">List[Access<wbr>Group<wbr>Include<wbr>Saml]</a></span>
+        <span class="property-type"><a href="#accessgroupincludesaml">List[Access<wbr>Group<wbr>Include<wbr>Saml<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicetokens_python">
-<a href="#servicetokens_python" style="color: inherit; text-decoration: inherit;">service<wbr>Tokens</a>
+        <span id="service_tokens_python">
+<a href="#service_tokens_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3017,8 +3188,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3136,8 +3307,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3273,8 +3444,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3392,8 +3563,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3549,8 +3720,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="attributename_python">
-<a href="#attributename_python" style="color: inherit; text-decoration: inherit;">attribute<wbr>Name</a>
+        <span id="attribute_name_python">
+<a href="#attribute_name_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3559,8 +3730,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="attributevalue_python">
-<a href="#attributevalue_python" style="color: inherit; text-decoration: inherit;">attribute<wbr>Value</a>
+        <span id="attribute_value_python">
+<a href="#attribute_value_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3569,8 +3740,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4045,8 +4216,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="anyvalidservicetoken_python">
-<a href="#anyvalidservicetoken_python" style="color: inherit; text-decoration: inherit;">any<wbr>Valid<wbr>Service<wbr>Token</a>
+        <span id="any_valid_service_token_python">
+<a href="#any_valid_service_token_python" style="color: inherit; text-decoration: inherit;">any_<wbr>valid_<wbr>service_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4059,7 +4230,7 @@ full list.
 <a href="#azures_python" style="color: inherit; text-decoration: inherit;">azures</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequireazure">List[Access<wbr>Group<wbr>Require<wbr>Azure]</a></span>
+        <span class="property-type"><a href="#accessgrouprequireazure">List[Access<wbr>Group<wbr>Require<wbr>Azure<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4075,8 +4246,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="commonname_python">
-<a href="#commonname_python" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
+        <span id="common_name_python">
+<a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4085,8 +4256,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emaildomains_python">
-<a href="#emaildomains_python" style="color: inherit; text-decoration: inherit;">email<wbr>Domains</a>
+        <span id="email_domains_python">
+<a href="#email_domains_python" style="color: inherit; text-decoration: inherit;">email_<wbr>domains</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4119,7 +4290,7 @@ full list.
 <a href="#githubs_python" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequiregithub">List[Access<wbr>Group<wbr>Require<wbr>Github]</a></span>
+        <span class="property-type"><a href="#accessgrouprequiregithub">List[Access<wbr>Group<wbr>Require<wbr>Github<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4139,7 +4310,7 @@ full list.
 <a href="#gsuites_python" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequiregsuite">List[Access<wbr>Group<wbr>Require<wbr>Gsuite]</a></span>
+        <span class="property-type"><a href="#accessgrouprequiregsuite">List[Access<wbr>Group<wbr>Require<wbr>Gsuite<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4159,7 +4330,7 @@ full list.
 <a href="#oktas_python" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequireokta">List[Access<wbr>Group<wbr>Require<wbr>Okta]</a></span>
+        <span class="property-type"><a href="#accessgrouprequireokta">List[Access<wbr>Group<wbr>Require<wbr>Okta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4169,14 +4340,14 @@ full list.
 <a href="#samls_python" style="color: inherit; text-decoration: inherit;">samls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequiresaml">List[Access<wbr>Group<wbr>Require<wbr>Saml]</a></span>
+        <span class="property-type"><a href="#accessgrouprequiresaml">List[Access<wbr>Group<wbr>Require<wbr>Saml<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicetokens_python">
-<a href="#servicetokens_python" style="color: inherit; text-decoration: inherit;">service<wbr>Tokens</a>
+        <span id="service_tokens_python">
+<a href="#service_tokens_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4301,8 +4472,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4420,8 +4591,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4557,8 +4728,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4676,8 +4847,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4833,8 +5004,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="attributename_python">
-<a href="#attributename_python" style="color: inherit; text-decoration: inherit;">attribute<wbr>Name</a>
+        <span id="attribute_name_python">
+<a href="#attribute_name_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4843,8 +5014,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="attributevalue_python">
-<a href="#attributevalue_python" style="color: inherit; text-decoration: inherit;">attribute<wbr>Value</a>
+        <span id="attribute_value_python">
+<a href="#attribute_value_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4853,8 +5024,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4879,6 +5050,6 @@ full list.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
+	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 </dl>
 

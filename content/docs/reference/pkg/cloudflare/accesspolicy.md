@@ -14,6 +14,200 @@ Provides a Cloudflare Access Policy resource. Access Policies are used
 in conjunction with Access Applications to restrict access to a
 particular resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Allowing access to `test@example.com` email address only
+        var testPolicyAccessPolicy = new Cloudflare.AccessPolicy("testPolicyAccessPolicy", new Cloudflare.AccessPolicyArgs
+        {
+            ApplicationId = "cb029e245cfdd66dc8d2e570d5dd3322",
+            ZoneId = "d41d8cd98f00b204e9800998ecf8427e",
+            Name = "staging policy",
+            Precedence = 1,
+            Decision = "allow",
+            Includes = 
+            {
+                new Cloudflare.Inputs.AccessPolicyIncludeArgs
+                {
+                    Emails = 
+                    {
+                        "test@example.com",
+                    },
+                },
+            },
+        });
+        // Allowing `test@example.com` to access but only when coming from a
+        // specific IP.
+        var testPolicyIndex_accessPolicyAccessPolicy = new Cloudflare.AccessPolicy("testPolicyIndex/accessPolicyAccessPolicy", new Cloudflare.AccessPolicyArgs
+        {
+            ApplicationId = "cb029e245cfdd66dc8d2e570d5dd3322",
+            ZoneId = "d41d8cd98f00b204e9800998ecf8427e",
+            Name = "staging policy",
+            Precedence = 1,
+            Decision = "allow",
+            Includes = 
+            {
+                new Cloudflare.Inputs.AccessPolicyIncludeArgs
+                {
+                    Emails = 
+                    {
+                        "test@example.com",
+                    },
+                },
+            },
+            Requires = 
+            {
+                { "ips", 
+                {
+                    @var.Office_ip,
+                } },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudflare.NewAccessPolicy(ctx, "testPolicyAccessPolicy", &cloudflare.AccessPolicyArgs{
+			ApplicationId: pulumi.String("cb029e245cfdd66dc8d2e570d5dd3322"),
+			ZoneId:        pulumi.String("d41d8cd98f00b204e9800998ecf8427e"),
+			Name:          pulumi.String("staging policy"),
+			Precedence:    pulumi.Int(1),
+			Decision:      pulumi.String("allow"),
+			Includes: cloudflare.AccessPolicyIncludeArray{
+				&cloudflare.AccessPolicyIncludeArgs{
+					Emails: pulumi.StringArray{
+						pulumi.String("test@example.com"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cloudflare.NewAccessPolicy(ctx, "testPolicyIndex_accessPolicyAccessPolicy", &cloudflare.AccessPolicyArgs{
+			ApplicationId: pulumi.String("cb029e245cfdd66dc8d2e570d5dd3322"),
+			ZoneId:        pulumi.String("d41d8cd98f00b204e9800998ecf8427e"),
+			Name:          pulumi.String("staging policy"),
+			Precedence:    pulumi.Int(1),
+			Decision:      pulumi.String("allow"),
+			Includes: cloudflare.AccessPolicyIncludeArray{
+				&cloudflare.AccessPolicyIncludeArgs{
+					Emails: pulumi.StringArray{
+						pulumi.String("test@example.com"),
+					},
+				},
+			},
+			Requires: cloudflare.AccessPolicyRequireArray{
+				Ips: cloudflare.AccessPolicyRequireArgs{
+					pulumi.Any(_var.Office_ip),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+# Allowing access to `test@example.com` email address only
+test_policy_access_policy = cloudflare.AccessPolicy("testPolicyAccessPolicy",
+    application_id="cb029e245cfdd66dc8d2e570d5dd3322",
+    zone_id="d41d8cd98f00b204e9800998ecf8427e",
+    name="staging policy",
+    precedence=1,
+    decision="allow",
+    includes=[cloudflare.AccessPolicyIncludeArgs(
+        emails=["test@example.com"],
+    )])
+# Allowing `test@example.com` to access but only when coming from a
+# specific IP.
+test_policy_index_access_policy_access_policy = cloudflare.AccessPolicy("testPolicyIndex/accessPolicyAccessPolicy",
+    application_id="cb029e245cfdd66dc8d2e570d5dd3322",
+    zone_id="d41d8cd98f00b204e9800998ecf8427e",
+    name="staging policy",
+    precedence=1,
+    decision="allow",
+    includes=[cloudflare.AccessPolicyIncludeArgs(
+        emails=["test@example.com"],
+    )],
+    requires={
+        "ips": [var["office_ip"]],
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+// Allowing access to `test@example.com` email address only
+const testPolicyAccessPolicy = new cloudflare.AccessPolicy("testPolicyAccessPolicy", {
+    applicationId: "cb029e245cfdd66dc8d2e570d5dd3322",
+    zoneId: "d41d8cd98f00b204e9800998ecf8427e",
+    name: "staging policy",
+    precedence: "1",
+    decision: "allow",
+    includes: [{
+        emails: ["test@example.com"],
+    }],
+});
+// Allowing `test@example.com` to access but only when coming from a
+// specific IP.
+const testPolicyIndex_accessPolicyAccessPolicy = new cloudflare.AccessPolicy("testPolicyIndex/accessPolicyAccessPolicy", {
+    applicationId: "cb029e245cfdd66dc8d2e570d5dd3322",
+    zoneId: "d41d8cd98f00b204e9800998ecf8427e",
+    name: "staging policy",
+    precedence: "1",
+    decision: "allow",
+    includes: [{
+        emails: ["test@example.com"],
+    }],
+    requires: {
+        ips: [_var.office_ip],
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AccessPolicy Resource {#create}
@@ -25,7 +219,7 @@ particular resource.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessPolicy">AccessPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_id=None<span class="p">, </span>decision=None<span class="p">, </span>excludes=None<span class="p">, </span>includes=None<span class="p">, </span>name=None<span class="p">, </span>precedence=None<span class="p">, </span>requires=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessPolicy">AccessPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">decision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[List[AccessPolicyExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[List[AccessPolicyIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">precedence</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[List[AccessPolicyRequireArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -243,17 +437,15 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="zoneid_csharp">
-<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountid_csharp">
+<a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be
-added.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -286,6 +478,18 @@ added.
         <span class="property-type"><a href="#accesspolicyrequire">List&lt;Access<wbr>Policy<wbr>Require<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The DNS zone to which the access rule should be
+added.
 {{% /md %}}</dd>
 
 </dl>
@@ -341,17 +545,15 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="zoneid_go">
-<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountid_go">
+<a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be
-added.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -384,6 +586,18 @@ added.
         <span class="property-type"><a href="#accesspolicyrequire">[]Access<wbr>Policy<wbr>Require</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The DNS zone to which the access rule should be
+added.
 {{% /md %}}</dd>
 
 </dl>
@@ -439,17 +653,15 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="zoneid_nodejs">
-<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountid_nodejs">
+<a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be
-added.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -482,6 +694,18 @@ added.
         <span class="property-type"><a href="#accesspolicyrequire">Access<wbr>Policy<wbr>Require[]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The DNS zone to which the access rule should be
+added.
 {{% /md %}}</dd>
 
 </dl>
@@ -521,7 +745,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyinclude">List[Access<wbr>Policy<wbr>Include]</a></span>
+        <span class="property-type"><a href="#accesspolicyinclude">List[Access<wbr>Policy<wbr>Include<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
 {{% /md %}}</dd>
@@ -537,17 +761,15 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="zone_id_python">
-<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="account_id_python">
+<a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be
-added.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -555,7 +777,7 @@ added.
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexclude">List[Access<wbr>Policy<wbr>Exclude]</a></span>
+        <span class="property-type"><a href="#accesspolicyexclude">List[Access<wbr>Policy<wbr>Exclude<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
 {{% /md %}}</dd>
@@ -577,9 +799,21 @@ added.
 <a href="#requires_python" style="color: inherit; text-decoration: inherit;">requires</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequire">List[Access<wbr>Policy<wbr>Require]</a></span>
+        <span class="property-type"><a href="#accesspolicyrequire">List[Access<wbr>Policy<wbr>Require<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The DNS zone to which the access rule should be
+added.
 {{% /md %}}</dd>
 
 </dl>
@@ -680,7 +914,8 @@ Get an existing AccessPolicy resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>application_id=None<span class="p">, </span>decision=None<span class="p">, </span>excludes=None<span class="p">, </span>includes=None<span class="p">, </span>name=None<span class="p">, </span>precedence=None<span class="p">, </span>requires=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">decision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[List[AccessPolicyExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[List[AccessPolicyIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">precedence</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[List[AccessPolicyRequireArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -688,7 +923,7 @@ Get an existing AccessPolicy resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessPolicy.html">AccessPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessPolicyState.html">AccessPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessPolicy.html">AccessPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessPolicyState.html">AccessPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -796,6 +1031,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_accountid_csharp">
+<a href="#state_accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_applicationid_csharp">
 <a href="#state_applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
 </span> 
@@ -891,6 +1136,16 @@ added.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_accountid_go">
+<a href="#state_accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -992,6 +1247,16 @@ added.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_accountid_nodejs">
+<a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_applicationid_nodejs">
 <a href="#state_applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
 </span> 
@@ -1090,6 +1355,16 @@ added.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_account_id_python">
+<a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_application_id_python">
 <a href="#state_application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
 </span> 
@@ -1118,7 +1393,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 <a href="#state_excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexclude">List[Access<wbr>Policy<wbr>Exclude]</a></span>
+        <span class="property-type"><a href="#accesspolicyexclude">List[Access<wbr>Policy<wbr>Exclude<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
 {{% /md %}}</dd>
@@ -1129,7 +1404,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 <a href="#state_includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyinclude">List[Access<wbr>Policy<wbr>Include]</a></span>
+        <span class="property-type"><a href="#accesspolicyinclude">List[Access<wbr>Policy<wbr>Include<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
 {{% /md %}}</dd>
@@ -1162,7 +1437,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 <a href="#state_requires_python" style="color: inherit; text-decoration: inherit;">requires</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequire">List[Access<wbr>Policy<wbr>Require]</a></span>
+        <span class="property-type"><a href="#accesspolicyrequire">List[Access<wbr>Policy<wbr>Require<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
 {{% /md %}}</dd>
@@ -1655,8 +1930,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="anyvalidservicetoken_python">
-<a href="#anyvalidservicetoken_python" style="color: inherit; text-decoration: inherit;">any<wbr>Valid<wbr>Service<wbr>Token</a>
+        <span id="any_valid_service_token_python">
+<a href="#any_valid_service_token_python" style="color: inherit; text-decoration: inherit;">any_<wbr>valid_<wbr>service_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1669,7 +1944,7 @@ added.
 <a href="#azures_python" style="color: inherit; text-decoration: inherit;">azures</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludeazure">List[Access<wbr>Policy<wbr>Exclude<wbr>Azure]</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludeazure">List[Access<wbr>Policy<wbr>Exclude<wbr>Azure<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1685,8 +1960,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="commonname_python">
-<a href="#commonname_python" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
+        <span id="common_name_python">
+<a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1695,8 +1970,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emaildomains_python">
-<a href="#emaildomains_python" style="color: inherit; text-decoration: inherit;">email<wbr>Domains</a>
+        <span id="email_domains_python">
+<a href="#email_domains_python" style="color: inherit; text-decoration: inherit;">email_<wbr>domains</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1729,7 +2004,7 @@ added.
 <a href="#githubs_python" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludegithub">List[Access<wbr>Policy<wbr>Exclude<wbr>Github]</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludegithub">List[Access<wbr>Policy<wbr>Exclude<wbr>Github<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1749,7 +2024,7 @@ added.
 <a href="#gsuites_python" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludegsuite">List[Access<wbr>Policy<wbr>Exclude<wbr>Gsuite]</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludegsuite">List[Access<wbr>Policy<wbr>Exclude<wbr>Gsuite<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1769,7 +2044,7 @@ added.
 <a href="#oktas_python" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludeokta">List[Access<wbr>Policy<wbr>Exclude<wbr>Okta]</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludeokta">List[Access<wbr>Policy<wbr>Exclude<wbr>Okta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1779,14 +2054,14 @@ added.
 <a href="#samls_python" style="color: inherit; text-decoration: inherit;">samls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludesaml">List[Access<wbr>Policy<wbr>Exclude<wbr>Saml]</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludesaml">List[Access<wbr>Policy<wbr>Exclude<wbr>Saml<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicetokens_python">
-<a href="#servicetokens_python" style="color: inherit; text-decoration: inherit;">service<wbr>Tokens</a>
+        <span id="service_tokens_python">
+<a href="#service_tokens_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1911,8 +2186,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2030,8 +2305,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2167,8 +2442,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2286,8 +2561,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2443,8 +2718,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="attributename_python">
-<a href="#attributename_python" style="color: inherit; text-decoration: inherit;">attribute<wbr>Name</a>
+        <span id="attribute_name_python">
+<a href="#attribute_name_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2453,8 +2728,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="attributevalue_python">
-<a href="#attributevalue_python" style="color: inherit; text-decoration: inherit;">attribute<wbr>Value</a>
+        <span id="attribute_value_python">
+<a href="#attribute_value_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2463,8 +2738,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2939,8 +3214,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="anyvalidservicetoken_python">
-<a href="#anyvalidservicetoken_python" style="color: inherit; text-decoration: inherit;">any<wbr>Valid<wbr>Service<wbr>Token</a>
+        <span id="any_valid_service_token_python">
+<a href="#any_valid_service_token_python" style="color: inherit; text-decoration: inherit;">any_<wbr>valid_<wbr>service_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2953,7 +3228,7 @@ added.
 <a href="#azures_python" style="color: inherit; text-decoration: inherit;">azures</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludeazure">List[Access<wbr>Policy<wbr>Include<wbr>Azure]</a></span>
+        <span class="property-type"><a href="#accesspolicyincludeazure">List[Access<wbr>Policy<wbr>Include<wbr>Azure<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2969,8 +3244,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="commonname_python">
-<a href="#commonname_python" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
+        <span id="common_name_python">
+<a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2979,8 +3254,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emaildomains_python">
-<a href="#emaildomains_python" style="color: inherit; text-decoration: inherit;">email<wbr>Domains</a>
+        <span id="email_domains_python">
+<a href="#email_domains_python" style="color: inherit; text-decoration: inherit;">email_<wbr>domains</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3013,7 +3288,7 @@ added.
 <a href="#githubs_python" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludegithub">List[Access<wbr>Policy<wbr>Include<wbr>Github]</a></span>
+        <span class="property-type"><a href="#accesspolicyincludegithub">List[Access<wbr>Policy<wbr>Include<wbr>Github<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3033,7 +3308,7 @@ added.
 <a href="#gsuites_python" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludegsuite">List[Access<wbr>Policy<wbr>Include<wbr>Gsuite]</a></span>
+        <span class="property-type"><a href="#accesspolicyincludegsuite">List[Access<wbr>Policy<wbr>Include<wbr>Gsuite<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3053,7 +3328,7 @@ added.
 <a href="#oktas_python" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludeokta">List[Access<wbr>Policy<wbr>Include<wbr>Okta]</a></span>
+        <span class="property-type"><a href="#accesspolicyincludeokta">List[Access<wbr>Policy<wbr>Include<wbr>Okta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3063,14 +3338,14 @@ added.
 <a href="#samls_python" style="color: inherit; text-decoration: inherit;">samls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludesaml">List[Access<wbr>Policy<wbr>Include<wbr>Saml]</a></span>
+        <span class="property-type"><a href="#accesspolicyincludesaml">List[Access<wbr>Policy<wbr>Include<wbr>Saml<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicetokens_python">
-<a href="#servicetokens_python" style="color: inherit; text-decoration: inherit;">service<wbr>Tokens</a>
+        <span id="service_tokens_python">
+<a href="#service_tokens_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3195,8 +3470,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3314,8 +3589,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3451,8 +3726,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3570,8 +3845,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3727,8 +4002,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="attributename_python">
-<a href="#attributename_python" style="color: inherit; text-decoration: inherit;">attribute<wbr>Name</a>
+        <span id="attribute_name_python">
+<a href="#attribute_name_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3737,8 +4012,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="attributevalue_python">
-<a href="#attributevalue_python" style="color: inherit; text-decoration: inherit;">attribute<wbr>Value</a>
+        <span id="attribute_value_python">
+<a href="#attribute_value_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3747,8 +4022,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4223,8 +4498,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="anyvalidservicetoken_python">
-<a href="#anyvalidservicetoken_python" style="color: inherit; text-decoration: inherit;">any<wbr>Valid<wbr>Service<wbr>Token</a>
+        <span id="any_valid_service_token_python">
+<a href="#any_valid_service_token_python" style="color: inherit; text-decoration: inherit;">any_<wbr>valid_<wbr>service_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4237,7 +4512,7 @@ added.
 <a href="#azures_python" style="color: inherit; text-decoration: inherit;">azures</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequireazure">List[Access<wbr>Policy<wbr>Require<wbr>Azure]</a></span>
+        <span class="property-type"><a href="#accesspolicyrequireazure">List[Access<wbr>Policy<wbr>Require<wbr>Azure<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4253,8 +4528,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="commonname_python">
-<a href="#commonname_python" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
+        <span id="common_name_python">
+<a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4263,8 +4538,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emaildomains_python">
-<a href="#emaildomains_python" style="color: inherit; text-decoration: inherit;">email<wbr>Domains</a>
+        <span id="email_domains_python">
+<a href="#email_domains_python" style="color: inherit; text-decoration: inherit;">email_<wbr>domains</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4297,7 +4572,7 @@ added.
 <a href="#githubs_python" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequiregithub">List[Access<wbr>Policy<wbr>Require<wbr>Github]</a></span>
+        <span class="property-type"><a href="#accesspolicyrequiregithub">List[Access<wbr>Policy<wbr>Require<wbr>Github<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4317,7 +4592,7 @@ added.
 <a href="#gsuites_python" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequiregsuite">List[Access<wbr>Policy<wbr>Require<wbr>Gsuite]</a></span>
+        <span class="property-type"><a href="#accesspolicyrequiregsuite">List[Access<wbr>Policy<wbr>Require<wbr>Gsuite<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4337,7 +4612,7 @@ added.
 <a href="#oktas_python" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequireokta">List[Access<wbr>Policy<wbr>Require<wbr>Okta]</a></span>
+        <span class="property-type"><a href="#accesspolicyrequireokta">List[Access<wbr>Policy<wbr>Require<wbr>Okta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4347,14 +4622,14 @@ added.
 <a href="#samls_python" style="color: inherit; text-decoration: inherit;">samls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequiresaml">List[Access<wbr>Policy<wbr>Require<wbr>Saml]</a></span>
+        <span class="property-type"><a href="#accesspolicyrequiresaml">List[Access<wbr>Policy<wbr>Require<wbr>Saml<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicetokens_python">
-<a href="#servicetokens_python" style="color: inherit; text-decoration: inherit;">service<wbr>Tokens</a>
+        <span id="service_tokens_python">
+<a href="#service_tokens_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4479,8 +4754,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4598,8 +4873,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4735,8 +5010,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4854,8 +5129,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5011,8 +5286,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="attributename_python">
-<a href="#attributename_python" style="color: inherit; text-decoration: inherit;">attribute<wbr>Name</a>
+        <span id="attribute_name_python">
+<a href="#attribute_name_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5021,8 +5296,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="attributevalue_python">
-<a href="#attributevalue_python" style="color: inherit; text-decoration: inherit;">attribute<wbr>Value</a>
+        <span id="attribute_value_python">
+<a href="#attribute_value_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5031,8 +5306,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_python">
-<a href="#identityproviderid_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5057,6 +5332,6 @@ added.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
+	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 </dl>
 

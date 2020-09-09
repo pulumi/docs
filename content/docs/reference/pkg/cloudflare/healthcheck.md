@@ -16,21 +16,211 @@ Standalone Health Checks provide a way to monitor origin servers without needing
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
+### HTTPS Health Check
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var httpHealthCheck = new Cloudflare.Healthcheck("httpHealthCheck", new Cloudflare.HealthcheckArgs
+        {
+            ZoneId = @var.Cloudflare_zone_id,
+            Name = "http-health-check",
+            Description = "example http health check",
+            Address = "example.com",
+            Suspended = false,
+            CheckRegions = 
+            {
+                "WEU",
+                "EEU",
+            },
+            NotificationSuspended = false,
+            NotificationEmailAddresses = 
+            {
+                "hostmaster@example.com",
+            },
+            Type = "HTTPS",
+            Port = 443,
+            Method = "GET",
+            Path = "/health",
+            ExpectedBody = "alive",
+            ExpectedCodes = 
+            {
+                "2xx",
+                "301",
+            },
+            FollowRedirects = true,
+            AllowInsecure = false,
+            Headers = 
+            {
+                new Cloudflare.Inputs.HealthcheckHeaderArgs
+                {
+                    Header = "Host",
+                    Values = 
+                    {
+                        "example.com",
+                    },
+                },
+            },
+            Timeout = 10,
+            Retries = 2,
+            Interval = 60,
+            ConsecutiveFails = 3,
+            ConsecutiveSuccesses = 2,
+        });
+    }
+
+}
+```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudflare.NewHealthcheck(ctx, "httpHealthCheck", &cloudflare.HealthcheckArgs{
+			ZoneId:      pulumi.Any(_var.Cloudflare_zone_id),
+			Name:        pulumi.String("http-health-check"),
+			Description: pulumi.String("example http health check"),
+			Address:     pulumi.String("example.com"),
+			Suspended:   pulumi.Bool(false),
+			CheckRegions: pulumi.StringArray{
+				pulumi.String("WEU"),
+				pulumi.String("EEU"),
+			},
+			NotificationSuspended: pulumi.Bool(false),
+			NotificationEmailAddresses: pulumi.StringArray{
+				pulumi.String("hostmaster@example.com"),
+			},
+			Type:         pulumi.String("HTTPS"),
+			Port:         pulumi.Int(443),
+			Method:       pulumi.String("GET"),
+			Path:         pulumi.String("/health"),
+			ExpectedBody: pulumi.String("alive"),
+			ExpectedCodes: pulumi.StringArray{
+				pulumi.String("2xx"),
+				pulumi.String("301"),
+			},
+			FollowRedirects: pulumi.Bool(true),
+			AllowInsecure:   pulumi.Bool(false),
+			Headers: cloudflare.HealthcheckHeaderArray{
+				&cloudflare.HealthcheckHeaderArgs{
+					Header: pulumi.String("Host"),
+					Values: pulumi.StringArray{
+						pulumi.String("example.com"),
+					},
+				},
+			},
+			Timeout:              pulumi.Int(10),
+			Retries:              pulumi.Int(2),
+			Interval:             pulumi.Int(60),
+			ConsecutiveFails:     pulumi.Int(3),
+			ConsecutiveSuccesses: pulumi.Int(2),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+http_health_check = cloudflare.Healthcheck("httpHealthCheck",
+    zone_id=var["cloudflare_zone_id"],
+    name="http-health-check",
+    description="example http health check",
+    address="example.com",
+    suspended=False,
+    check_regions=[
+        "WEU",
+        "EEU",
+    ],
+    notification_suspended=False,
+    notification_email_addresses=["hostmaster@example.com"],
+    type="HTTPS",
+    port=443,
+    method="GET",
+    path="/health",
+    expected_body="alive",
+    expected_codes=[
+        "2xx",
+        "301",
+    ],
+    follow_redirects=True,
+    allow_insecure=False,
+    headers=[cloudflare.HealthcheckHeaderArgs(
+        header="Host",
+        values=["example.com"],
+    )],
+    timeout=10,
+    retries=2,
+    interval=60,
+    consecutive_fails=3,
+    consecutive_successes=2)
+```
+
 {{% /example %}}
 
 {{% example typescript %}}
-Coming soon!
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const httpHealthCheck = new cloudflare.Healthcheck("httpHealthCheck", {
+    zoneId: _var.cloudflare_zone_id,
+    name: "http-health-check",
+    description: "example http health check",
+    address: "example.com",
+    suspended: false,
+    checkRegions: [
+        "WEU",
+        "EEU",
+    ],
+    notificationSuspended: false,
+    notificationEmailAddresses: ["hostmaster@example.com"],
+    type: "HTTPS",
+    port: "443",
+    method: "GET",
+    path: "/health",
+    expectedBody: "alive",
+    expectedCodes: [
+        "2xx",
+        "301",
+    ],
+    followRedirects: true,
+    allowInsecure: false,
+    headers: [{
+        header: "Host",
+        values: ["example.com"],
+    }],
+    timeout: 10,
+    retries: 2,
+    interval: 60,
+    consecutiveFails: 3,
+    consecutiveSuccesses: 2,
+});
+```
+
 {{% /example %}}
 
 ### TCP Monitor
@@ -77,7 +267,47 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudflare.NewHealthcheck(ctx, "tcpHealthCheck", &cloudflare.HealthcheckArgs{
+			ZoneId:      pulumi.Any(_var.Cloudflare_zone_id),
+			Name:        pulumi.String("tcp-health-check"),
+			Description: pulumi.String("example tcp health check"),
+			Address:     pulumi.String("example.com"),
+			Suspended:   pulumi.Bool(false),
+			CheckRegions: pulumi.StringArray{
+				pulumi.String("WEU"),
+				pulumi.String("EEU"),
+			},
+			NotificationSuspended: pulumi.Bool(false),
+			NotificationEmailAddresses: pulumi.StringArray{
+				pulumi.String("hostmaster@example.com"),
+			},
+			Type:                 pulumi.String("TCP"),
+			Port:                 pulumi.Int(22),
+			Method:               pulumi.String("connection_established"),
+			Timeout:              pulumi.Int(10),
+			Retries:              pulumi.Int(2),
+			Interval:             pulumi.Int(60),
+			ConsecutiveFails:     pulumi.Int(3),
+			ConsecutiveSuccesses: pulumi.Int(2),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -98,7 +328,7 @@ tcp_health_check = cloudflare.Healthcheck("tcpHealthCheck",
     notification_suspended=False,
     notification_email_addresses=["hostmaster@example.com"],
     type="TCP",
-    port="22",
+    port=22,
     method="connection_established",
     timeout=10,
     retries=2,
@@ -152,7 +382,7 @@ const tcpHealthCheck = new cloudflare.Healthcheck("tcpHealthCheck", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.Healthcheck">Healthcheck</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>allow_insecure=None<span class="p">, </span>check_regions=None<span class="p">, </span>consecutive_fails=None<span class="p">, </span>consecutive_successes=None<span class="p">, </span>description=None<span class="p">, </span>expected_body=None<span class="p">, </span>expected_codes=None<span class="p">, </span>follow_redirects=None<span class="p">, </span>headers=None<span class="p">, </span>interval=None<span class="p">, </span>method=None<span class="p">, </span>name=None<span class="p">, </span>notification_email_addresses=None<span class="p">, </span>notification_suspended=None<span class="p">, </span>path=None<span class="p">, </span>port=None<span class="p">, </span>retries=None<span class="p">, </span>suspended=None<span class="p">, </span>timeout=None<span class="p">, </span>type=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.Healthcheck">Healthcheck</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_insecure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">check_regions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">consecutive_fails</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">consecutive_successes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expected_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expected_codes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">follow_redirects</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[List[HealthcheckHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_email_addresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">notification_suspended</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">retries</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">suspended</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1209,7 +1439,7 @@ The Healthcheck resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckheader">List[Healthcheck<wbr>Header]</a></span>
+        <span class="property-type"><a href="#healthcheckheader">List[Healthcheck<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The header name.
 {{% /md %}}</dd>
@@ -1491,7 +1721,8 @@ Get an existing Healthcheck resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address=None<span class="p">, </span>allow_insecure=None<span class="p">, </span>check_regions=None<span class="p">, </span>consecutive_fails=None<span class="p">, </span>consecutive_successes=None<span class="p">, </span>created_on=None<span class="p">, </span>description=None<span class="p">, </span>expected_body=None<span class="p">, </span>expected_codes=None<span class="p">, </span>follow_redirects=None<span class="p">, </span>headers=None<span class="p">, </span>interval=None<span class="p">, </span>method=None<span class="p">, </span>modified_on=None<span class="p">, </span>name=None<span class="p">, </span>notification_email_addresses=None<span class="p">, </span>notification_suspended=None<span class="p">, </span>path=None<span class="p">, </span>port=None<span class="p">, </span>retries=None<span class="p">, </span>suspended=None<span class="p">, </span>timeout=None<span class="p">, </span>type=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_insecure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">check_regions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">consecutive_fails</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">consecutive_successes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">created_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expected_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expected_codes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">follow_redirects</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[List[HealthcheckHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">modified_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_email_addresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">notification_suspended</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">retries</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">suspended</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Healthcheck</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1499,7 +1730,7 @@ Get an existing Healthcheck resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Healthcheck.html">Healthcheck</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..HealthcheckState.html">HealthcheckState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Healthcheck.html">Healthcheck</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..HealthcheckState.html">HealthcheckState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2527,7 +2758,7 @@ The following state arguments are supported:
 <a href="#state_headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckheader">List[Healthcheck<wbr>Header]</a></span>
+        <span class="property-type"><a href="#healthcheckheader">List[Healthcheck<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The header name.
 {{% /md %}}</dd>
@@ -2834,6 +3065,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
+	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 </dl>
 

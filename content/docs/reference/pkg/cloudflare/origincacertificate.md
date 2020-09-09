@@ -14,6 +14,157 @@ Provides a Cloudflare Origin CA certificate used to protect traffic to your orig
 
 **This resource requires you use your Origin CA Key as the `api_user_service_key`.**
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+using Tls = Pulumi.Tls;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a CSR and generate a CA certificate
+        var examplePrivateKey = new Tls.PrivateKey("examplePrivateKey", new Tls.PrivateKeyArgs
+        {
+            Algorithm = "RSA",
+        });
+        var exampleCertRequest = new Tls.CertRequest("exampleCertRequest", new Tls.CertRequestArgs
+        {
+            KeyAlgorithm = examplePrivateKey.Algorithm,
+            PrivateKeyPem = examplePrivateKey.PrivateKeyPem,
+            Subjects = 
+            {
+                new Tls.Inputs.CertRequestSubjectArgs
+                {
+                    CommonName = "",
+                    Organization = "Terraform Test",
+                },
+            },
+        });
+        var exampleOriginCaCertificate = new Cloudflare.OriginCaCertificate("exampleOriginCaCertificate", new Cloudflare.OriginCaCertificateArgs
+        {
+            Csr = exampleCertRequest.CertRequestPem,
+            Hostnames = 
+            {
+                "example.com",
+            },
+            RequestType = "origin-rsa",
+            RequestedValidity = 7,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi-tls/sdk/v2/go/tls"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		examplePrivateKey, err := tls.NewPrivateKey(ctx, "examplePrivateKey", &tls.PrivateKeyArgs{
+			Algorithm: pulumi.String("RSA"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleCertRequest, err := tls.NewCertRequest(ctx, "exampleCertRequest", &tls.CertRequestArgs{
+			KeyAlgorithm:  examplePrivateKey.Algorithm,
+			PrivateKeyPem: examplePrivateKey.PrivateKeyPem,
+			Subjects: tls.CertRequestSubjectArray{
+				&tls.CertRequestSubjectArgs{
+					CommonName:   pulumi.String(""),
+					Organization: pulumi.String("Terraform Test"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cloudflare.NewOriginCaCertificate(ctx, "exampleOriginCaCertificate", &cloudflare.OriginCaCertificateArgs{
+			Csr: exampleCertRequest.CertRequestPem,
+			Hostnames: pulumi.StringArray{
+				pulumi.String("example.com"),
+			},
+			RequestType:       pulumi.String("origin-rsa"),
+			RequestedValidity: pulumi.Int(7),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+import pulumi_tls as tls
+
+# Create a CSR and generate a CA certificate
+example_private_key = tls.PrivateKey("examplePrivateKey", algorithm="RSA")
+example_cert_request = tls.CertRequest("exampleCertRequest",
+    key_algorithm=example_private_key.algorithm,
+    private_key_pem=example_private_key.private_key_pem,
+    subjects=[{
+        "commonName": "",
+        "organization": "Terraform Test",
+    }])
+example_origin_ca_certificate = cloudflare.OriginCaCertificate("exampleOriginCaCertificate",
+    csr=example_cert_request.cert_request_pem,
+    hostnames=["example.com"],
+    request_type="origin-rsa",
+    requested_validity=7)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+import * as tls from "@pulumi/tls";
+
+// Create a CSR and generate a CA certificate
+const examplePrivateKey = new tls.PrivateKey("examplePrivateKey", {algorithm: "RSA"});
+const exampleCertRequest = new tls.CertRequest("exampleCertRequest", {
+    keyAlgorithm: examplePrivateKey.algorithm,
+    privateKeyPem: examplePrivateKey.privateKeyPem,
+    subjects: [{
+        commonName: "",
+        organization: "Terraform Test",
+    }],
+});
+const exampleOriginCaCertificate = new cloudflare.OriginCaCertificate("exampleOriginCaCertificate", {
+    csr: exampleCertRequest.certRequestPem,
+    hostnames: ["example.com"],
+    requestType: "origin-rsa",
+    requestedValidity: 7,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a OriginCaCertificate Resource {#create}
@@ -25,7 +176,7 @@ Provides a Cloudflare Origin CA certificate used to protect traffic to your orig
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.OriginCaCertificate">OriginCaCertificate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>csr=None<span class="p">, </span>hostnames=None<span class="p">, </span>request_type=None<span class="p">, </span>requested_validity=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.OriginCaCertificate">OriginCaCertificate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">csr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostnames</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">request_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requested_validity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -580,7 +731,8 @@ Get an existing OriginCaCertificate resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>certificate=None<span class="p">, </span>csr=None<span class="p">, </span>expires_on=None<span class="p">, </span>hostnames=None<span class="p">, </span>request_type=None<span class="p">, </span>requested_validity=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">csr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expires_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostnames</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">request_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requested_validity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> OriginCaCertificate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -588,7 +740,7 @@ Get an existing OriginCaCertificate resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.OriginCaCertificate.html">OriginCaCertificate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..OriginCaCertificateState.html">OriginCaCertificateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.OriginCaCertificate.html">OriginCaCertificate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..OriginCaCertificateState.html">OriginCaCertificateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -999,6 +1151,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
+	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 </dl>
 

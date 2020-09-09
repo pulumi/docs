@@ -50,7 +50,36 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudflare.NewSpectrumApplication(ctx, "sshProxy", &cloudflare.SpectrumApplicationArgs{
+			ZoneId:      pulumi.Any(_var.Cloudflare_zone_id),
+			Protocol:    pulumi.String("tcp/22"),
+			TrafficType: pulumi.String("direct"),
+			Dns: &cloudflare.SpectrumApplicationDnsArgs{
+				Type: pulumi.String("CNAME"),
+				Name: pulumi.String("ssh.example.com"),
+			},
+			OriginDirects: pulumi.StringArray{
+				pulumi.String("tcp://109.151.40.129:22"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -63,10 +92,10 @@ ssh_proxy = cloudflare.SpectrumApplication("sshProxy",
     zone_id=var["cloudflare_zone_id"],
     protocol="tcp/22",
     traffic_type="direct",
-    dns={
-        "type": "CNAME",
-        "name": "ssh.example.com",
-    },
+    dns=cloudflare.SpectrumApplicationDnsArgs(
+        type="CNAME",
+        name="ssh.example.com",
+    ),
     origin_directs=["tcp://109.151.40.129:22"])
 ```
 
@@ -105,7 +134,7 @@ const sshProxy = new cloudflare.SpectrumApplication("sshProxy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.SpectrumApplication">SpectrumApplication</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>argo_smart_routing=None<span class="p">, </span>dns=None<span class="p">, </span>edge_ip_connectivity=None<span class="p">, </span>edge_ips=None<span class="p">, </span>ip_firewall=None<span class="p">, </span>origin_directs=None<span class="p">, </span>origin_dns=None<span class="p">, </span>origin_port=None<span class="p">, </span>protocol=None<span class="p">, </span>proxy_protocol=None<span class="p">, </span>tls=None<span class="p">, </span>traffic_type=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.SpectrumApplication">SpectrumApplication</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">argo_smart_routing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[SpectrumApplicationDnsArgs]</span> = None<span class="p">, </span><span class="nx">edge_ip_connectivity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edge_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">ip_firewall</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">origin_directs</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">origin_dns</span><span class="p">:</span> <span class="nx">Optional[SpectrumApplicationOriginDnsArgs]</span> = None<span class="p">, </span><span class="nx">origin_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">origin_port_range</span><span class="p">:</span> <span class="nx">Optional[SpectrumApplicationOriginPortRangeArgs]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -384,7 +413,18 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}If using `origin_dns` this is a required attribute. Origin port to proxy traffice to e.g. `22`.
+    <dd>{{% md %}}If using `origin_dns` and not `origin_port_range`, this is a required attribute. Origin port to proxy traffice to e.g. `22`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="originportrange_csharp">
+<a href="#originportrange_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Port<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spectrumapplicationoriginportrange">Spectrum<wbr>Application<wbr>Origin<wbr>Port<wbr>Range<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If using `origin_dns` and not `origin_port`, this is a required attribute. Origin port range to proxy traffice to.  When using a range, the protocol field must also specify a range, e.g. `tcp/22-23`. Fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -534,7 +574,18 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}If using `origin_dns` this is a required attribute. Origin port to proxy traffice to e.g. `22`.
+    <dd>{{% md %}}If using `origin_dns` and not `origin_port_range`, this is a required attribute. Origin port to proxy traffice to e.g. `22`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="originportrange_go">
+<a href="#originportrange_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Port<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spectrumapplicationoriginportrange">Spectrum<wbr>Application<wbr>Origin<wbr>Port<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}If using `origin_dns` and not `origin_port`, this is a required attribute. Origin port range to proxy traffice to.  When using a range, the protocol field must also specify a range, e.g. `tcp/22-23`. Fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -684,7 +735,18 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}If using `origin_dns` this is a required attribute. Origin port to proxy traffice to e.g. `22`.
+    <dd>{{% md %}}If using `origin_dns` and not `origin_port_range`, this is a required attribute. Origin port to proxy traffice to e.g. `22`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="originportrange_nodejs">
+<a href="#originportrange_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Port<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spectrumapplicationoriginportrange">Spectrum<wbr>Application<wbr>Origin<wbr>Port<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}If using `origin_dns` and not `origin_port`, this is a required attribute. Origin port range to proxy traffice to.  When using a range, the protocol field must also specify a range, e.g. `tcp/22-23`. Fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -733,7 +795,7 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spectrumapplicationdns">Dict[Spectrum<wbr>Application<wbr>Dns]</a></span>
+        <span class="property-type"><a href="#spectrumapplicationdns">Spectrum<wbr>Application<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name and type of DNS record for the Spectrum application. Fields documented below.
 {{% /md %}}</dd>
@@ -821,7 +883,7 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
 <a href="#origin_dns_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>dns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spectrumapplicationorigindns">Dict[Spectrum<wbr>Application<wbr>Origin<wbr>Dns]</a></span>
+        <span class="property-type"><a href="#spectrumapplicationorigindns">Spectrum<wbr>Application<wbr>Origin<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A destination DNS addresses to the origin. Fields documented below.
 {{% /md %}}</dd>
@@ -834,7 +896,18 @@ The SpectrumApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}If using `origin_dns` this is a required attribute. Origin port to proxy traffice to e.g. `22`.
+    <dd>{{% md %}}If using `origin_dns` and not `origin_port_range`, this is a required attribute. Origin port to proxy traffice to e.g. `22`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="origin_port_range_python">
+<a href="#origin_port_range_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>port_<wbr>range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spectrumapplicationoriginportrange">Spectrum<wbr>Application<wbr>Origin<wbr>Port<wbr>Range<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If using `origin_dns` and not `origin_port`, this is a required attribute. Origin port range to proxy traffice to.  When using a range, the protocol field must also specify a range, e.g. `tcp/22-23`. Fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -968,7 +1041,8 @@ Get an existing SpectrumApplication resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>argo_smart_routing=None<span class="p">, </span>dns=None<span class="p">, </span>edge_ip_connectivity=None<span class="p">, </span>edge_ips=None<span class="p">, </span>ip_firewall=None<span class="p">, </span>origin_directs=None<span class="p">, </span>origin_dns=None<span class="p">, </span>origin_port=None<span class="p">, </span>protocol=None<span class="p">, </span>proxy_protocol=None<span class="p">, </span>tls=None<span class="p">, </span>traffic_type=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">argo_smart_routing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[SpectrumApplicationDnsArgs]</span> = None<span class="p">, </span><span class="nx">edge_ip_connectivity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edge_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">ip_firewall</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">origin_directs</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">origin_dns</span><span class="p">:</span> <span class="nx">Optional[SpectrumApplicationOriginDnsArgs]</span> = None<span class="p">, </span><span class="nx">origin_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">origin_port_range</span><span class="p">:</span> <span class="nx">Optional[SpectrumApplicationOriginPortRangeArgs]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SpectrumApplication</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -976,7 +1050,7 @@ Get an existing SpectrumApplication resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.SpectrumApplication.html">SpectrumApplication</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..SpectrumApplicationState.html">SpectrumApplicationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.SpectrumApplication.html">SpectrumApplication</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..SpectrumApplicationState.html">SpectrumApplicationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1167,7 +1241,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}If using `origin_dns` this is a required attribute. Origin port to proxy traffice to e.g. `22`.
+    <dd>{{% md %}}If using `origin_dns` and not `origin_port_range`, this is a required attribute. Origin port to proxy traffice to e.g. `22`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_originportrange_csharp">
+<a href="#state_originportrange_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Port<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spectrumapplicationoriginportrange">Spectrum<wbr>Application<wbr>Origin<wbr>Port<wbr>Range<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If using `origin_dns` and not `origin_port`, this is a required attribute. Origin port range to proxy traffice to.  When using a range, the protocol field must also specify a range, e.g. `tcp/22-23`. Fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1317,7 +1402,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}If using `origin_dns` this is a required attribute. Origin port to proxy traffice to e.g. `22`.
+    <dd>{{% md %}}If using `origin_dns` and not `origin_port_range`, this is a required attribute. Origin port to proxy traffice to e.g. `22`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_originportrange_go">
+<a href="#state_originportrange_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Port<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spectrumapplicationoriginportrange">Spectrum<wbr>Application<wbr>Origin<wbr>Port<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}If using `origin_dns` and not `origin_port`, this is a required attribute. Origin port range to proxy traffice to.  When using a range, the protocol field must also specify a range, e.g. `tcp/22-23`. Fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1467,7 +1563,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}If using `origin_dns` this is a required attribute. Origin port to proxy traffice to e.g. `22`.
+    <dd>{{% md %}}If using `origin_dns` and not `origin_port_range`, this is a required attribute. Origin port to proxy traffice to e.g. `22`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_originportrange_nodejs">
+<a href="#state_originportrange_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Port<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spectrumapplicationoriginportrange">Spectrum<wbr>Application<wbr>Origin<wbr>Port<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}If using `origin_dns` and not `origin_port`, this is a required attribute. Origin port range to proxy traffice to.  When using a range, the protocol field must also specify a range, e.g. `tcp/22-23`. Fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1549,7 +1656,7 @@ The following state arguments are supported:
 <a href="#state_dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spectrumapplicationdns">Dict[Spectrum<wbr>Application<wbr>Dns]</a></span>
+        <span class="property-type"><a href="#spectrumapplicationdns">Spectrum<wbr>Application<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name and type of DNS record for the Spectrum application. Fields documented below.
 {{% /md %}}</dd>
@@ -1604,7 +1711,7 @@ The following state arguments are supported:
 <a href="#state_origin_dns_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>dns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spectrumapplicationorigindns">Dict[Spectrum<wbr>Application<wbr>Origin<wbr>Dns]</a></span>
+        <span class="property-type"><a href="#spectrumapplicationorigindns">Spectrum<wbr>Application<wbr>Origin<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A destination DNS addresses to the origin. Fields documented below.
 {{% /md %}}</dd>
@@ -1617,7 +1724,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}If using `origin_dns` this is a required attribute. Origin port to proxy traffice to e.g. `22`.
+    <dd>{{% md %}}If using `origin_dns` and not `origin_port_range`, this is a required attribute. Origin port to proxy traffice to e.g. `22`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_origin_port_range_python">
+<a href="#state_origin_port_range_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>port_<wbr>range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spectrumapplicationoriginportrange">Spectrum<wbr>Application<wbr>Origin<wbr>Port<wbr>Range<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If using `origin_dns` and not `origin_port`, this is a required attribute. Origin port range to proxy traffice to.  When using a range, the protocol field must also specify a range, e.g. `tcp/22-23`. Fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1914,6 +2032,140 @@ The following state arguments are supported:
 
 
 
+<h4 id="spectrumapplicationoriginportrange">Spectrum<wbr>Application<wbr>Origin<wbr>Port<wbr>Range</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#SpectrumApplicationOriginPortRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#SpectrumApplicationOriginPortRange">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#SpectrumApplicationOriginPortRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#SpectrumApplicationOriginPortRangeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Inputs.SpectrumApplicationOriginPortRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Outputs.SpectrumApplicationOriginPortRange.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="end_csharp">
+<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Upper bound of the origin port range, e.g. `2000`
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Lower bound of the origin port range, e.g. `1000`
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="end_go">
+<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Upper bound of the origin port range, e.g. `2000`
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Lower bound of the origin port range, e.g. `1000`
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="end_nodejs">
+<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Upper bound of the origin port range, e.g. `2000`
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Lower bound of the origin port range, e.g. `1000`
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="end_python">
+<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Upper bound of the origin port range, e.g. `2000`
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Lower bound of the origin port range, e.g. `1000`
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 
 
 
@@ -1925,6 +2177,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
+	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 </dl>
 
