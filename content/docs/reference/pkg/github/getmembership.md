@@ -45,7 +45,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-github/sdk/go/github"
+	"github.com/pulumi/pulumi-github/sdk/v2/go/github"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -101,12 +101,12 @@ const membershipForSomeUser = pulumi.output(github.getMembership({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_membership(</span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMembershipResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_membership(</span><span class="nx">organization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMembershipResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMembership<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#LookupMembershipArgs">LookupMembershipArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#LookupMembershipResult">LookupMembershipResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMembership<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#LookupMembershipArgs">LookupMembershipArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#LookupMembershipResult">LookupMembershipResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupMembership` in the Go SDK.
 
@@ -139,6 +139,17 @@ The following arguments are supported:
     <dd>{{% md %}}The username to lookup in the organization.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="organization_csharp">
+<a href="#organization_csharp" style="color: inherit; text-decoration: inherit;">Organization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The organization to check for the above username.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -155,6 +166,17 @@ The following arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The username to lookup in the organization.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="organization_go">
+<a href="#organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The organization to check for the above username.
 {{% /md %}}</dd>
 
 </dl>
@@ -175,6 +197,17 @@ The following arguments are supported:
     <dd>{{% md %}}The username to lookup in the organization.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="organization_nodejs">
+<a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The organization to check for the above username.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -191,6 +224,17 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The username to lookup in the organization.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="organization_python">
+<a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The organization to check for the above username.
 {{% /md %}}</dd>
 
 </dl>
@@ -257,6 +301,16 @@ The following output properties are available:
     <dd>{{% md %}}The username.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="organization_csharp">
+<a href="#organization_csharp" style="color: inherit; text-decoration: inherit;">Organization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -307,6 +361,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The username.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="organization_go">
+<a href="#organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -359,6 +423,16 @@ The following output properties are available:
     <dd>{{% md %}}The username.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="organization_nodejs">
+<a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -409,6 +483,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The username.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="organization_python">
+<a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

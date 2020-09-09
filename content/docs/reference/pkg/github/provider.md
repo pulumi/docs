@@ -26,11 +26,11 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">anonymous</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">individual</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">insecure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">organization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insecure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">organization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -104,7 +104,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -124,7 +124,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#ProviderArgs">ProviderArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#ProviderArgs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -134,7 +134,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -198,18 +198,6 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="anonymous_csharp">
-<a href="#anonymous_csharp" style="color: inherit; text-decoration: inherit;">Anonymous</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Authenticate without a token. When `anonymous`is true, the provider will not be able to access resourcesthat require
-authentication.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}For versions later than 3.0.0, absence of a token enables this mode{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="baseurl_csharp">
@@ -221,16 +209,6 @@ authentication.
     <dd>{{% md %}}The GitHub Base API URL
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="individual_csharp">
-<a href="#individual_csharp" style="color: inherit; text-decoration: inherit;">Individual</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}For versions later than 3.0.0, absence of an organization enables this mode{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="insecure_csharp">
@@ -239,7 +217,7 @@ authentication.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether server should be accessed without verifying the TLS certificate.
+    <dd>{{% md %}}Enable `insecure` mode for testing purposes
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -250,7 +228,18 @@ authentication.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The GitHub organization name to manage. If `individual` is false, `organization` is required.
+    <dd>{{% md %}}The GitHub organization name to manage. Use this field instead of `owner` when managing organization accounts.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="owner_csharp">
+<a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The GitHub owner name to manage. Use this field instead of `organization` when managing individual accounts.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -261,7 +250,7 @@ authentication.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The OAuth token used to connect to GitHub. If `anonymous` is false, `token` is required.
+    <dd>{{% md %}}The OAuth token used to connect to GitHub. `anonymous` mode is enabled if `token` is not configured.
 {{% /md %}}</dd>
 
 </dl>
@@ -270,18 +259,6 @@ authentication.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="anonymous_go">
-<a href="#anonymous_go" style="color: inherit; text-decoration: inherit;">Anonymous</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Authenticate without a token. When `anonymous`is true, the provider will not be able to access resourcesthat require
-authentication.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}For versions later than 3.0.0, absence of a token enables this mode{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -294,16 +271,6 @@ authentication.
     <dd>{{% md %}}The GitHub Base API URL
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="individual_go">
-<a href="#individual_go" style="color: inherit; text-decoration: inherit;">Individual</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}For versions later than 3.0.0, absence of an organization enables this mode{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="insecure_go">
@@ -312,7 +279,7 @@ authentication.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether server should be accessed without verifying the TLS certificate.
+    <dd>{{% md %}}Enable `insecure` mode for testing purposes
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -323,7 +290,18 @@ authentication.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The GitHub organization name to manage. If `individual` is false, `organization` is required.
+    <dd>{{% md %}}The GitHub organization name to manage. Use this field instead of `owner` when managing organization accounts.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="owner_go">
+<a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The GitHub owner name to manage. Use this field instead of `organization` when managing individual accounts.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -334,7 +312,7 @@ authentication.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The OAuth token used to connect to GitHub. If `anonymous` is false, `token` is required.
+    <dd>{{% md %}}The OAuth token used to connect to GitHub. `anonymous` mode is enabled if `token` is not configured.
 {{% /md %}}</dd>
 
 </dl>
@@ -343,18 +321,6 @@ authentication.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="anonymous_nodejs">
-<a href="#anonymous_nodejs" style="color: inherit; text-decoration: inherit;">anonymous</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}Authenticate without a token. When `anonymous`is true, the provider will not be able to access resourcesthat require
-authentication.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}For versions later than 3.0.0, absence of a token enables this mode{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -367,16 +333,6 @@ authentication.
     <dd>{{% md %}}The GitHub Base API URL
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="individual_nodejs">
-<a href="#individual_nodejs" style="color: inherit; text-decoration: inherit;">individual</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}For versions later than 3.0.0, absence of an organization enables this mode{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="insecure_nodejs">
@@ -385,7 +341,7 @@ authentication.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether server should be accessed without verifying the TLS certificate.
+    <dd>{{% md %}}Enable `insecure` mode for testing purposes
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -396,7 +352,18 @@ authentication.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The GitHub organization name to manage. If `individual` is false, `organization` is required.
+    <dd>{{% md %}}The GitHub organization name to manage. Use this field instead of `owner` when managing organization accounts.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="owner_nodejs">
+<a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The GitHub owner name to manage. Use this field instead of `organization` when managing individual accounts.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -407,7 +374,7 @@ authentication.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The OAuth token used to connect to GitHub. If `anonymous` is false, `token` is required.
+    <dd>{{% md %}}The OAuth token used to connect to GitHub. `anonymous` mode is enabled if `token` is not configured.
 {{% /md %}}</dd>
 
 </dl>
@@ -416,18 +383,6 @@ authentication.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="anonymous_python">
-<a href="#anonymous_python" style="color: inherit; text-decoration: inherit;">anonymous</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Authenticate without a token. When `anonymous`is true, the provider will not be able to access resourcesthat require
-authentication.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}For versions later than 3.0.0, absence of a token enables this mode{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -440,16 +395,6 @@ authentication.
     <dd>{{% md %}}The GitHub Base API URL
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="individual_python">
-<a href="#individual_python" style="color: inherit; text-decoration: inherit;">individual</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}For versions later than 3.0.0, absence of an organization enables this mode{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="insecure_python">
@@ -458,7 +403,7 @@ authentication.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether server should be accessed without verifying the TLS certificate.
+    <dd>{{% md %}}Enable `insecure` mode for testing purposes
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -469,7 +414,18 @@ authentication.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The GitHub organization name to manage. If `individual` is false, `organization` is required.
+    <dd>{{% md %}}The GitHub organization name to manage. Use this field instead of `owner` when managing organization accounts.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="owner_python">
+<a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The GitHub owner name to manage. Use this field instead of `organization` when managing individual accounts.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -480,7 +436,7 @@ authentication.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The OAuth token used to connect to GitHub. If `anonymous` is false, `token` is required.
+    <dd>{{% md %}}The OAuth token used to connect to GitHub. `anonymous` mode is enabled if `token` is not configured.
 {{% /md %}}</dd>
 
 </dl>

@@ -46,6 +46,7 @@ A Pulumi package for creating and managing github cloud resources.
     <li><a href="getcollaborators" title="GetCollaborators"><span class="symbol function"></span>GetCollaborators</a></li>
     <li><a href="getipranges" title="GetIpRanges"><span class="symbol function"></span>GetIpRanges</a></li>
     <li><a href="getmembership" title="GetMembership"><span class="symbol function"></span>GetMembership</a></li>
+    <li><a href="getorganization" title="GetOrganization"><span class="symbol function"></span>GetOrganization</a></li>
     <li><a href="getorganizationteamsyncgroups" title="GetOrganizationTeamSyncGroups"><span class="symbol function"></span>GetOrganizationTeamSyncGroups</a></li>
     <li><a href="getrelease" title="GetRelease"><span class="symbol function"></span>GetRelease</a></li>
     <li><a href="getrepositories" title="GetRepositories"><span class="symbol function"></span>GetRepositories</a></li>
@@ -63,7 +64,7 @@ A Pulumi package for creating and managing github cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`github` Terraform Provider](https://github.com/terraform-providers/terraform-provider-github).</dd>
 	<dt>Version</dt>
-	<dd>1.5.0</dd>
+	<dd>2.0.0</dd>
 </dl>
 
 
@@ -74,7 +75,7 @@ A Pulumi package for creating and managing github cloud resources.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.html" title="Pulumi.Github">Pulumi.Github</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#" title="github">github</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#" title="github">github</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/github/#" title="@pulumi/github">@pulumi/github</a></dd>
