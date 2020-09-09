@@ -12,33 +12,6 @@ meta_desc: "Explore the NrqlAlertCondition resource of the New Relic package, in
 
 Use this resource to create and manage NRQL alert conditions in New Relic.
 
-## NRQL
-
-The `nrql` block supports the following arguments:
-
-- `query` - (Required) The NRQL query to execute for the condition.
-- `evaluation_offset` - (Optional) Represented in minutes and must be within 1-20 minutes (inclusive). NRQL queries are evaluated in one-minute time windows. The start time depends on this value. It's recommended to set this to 3 minutes. An offset of less than 3 minutes will trigger violations sooner, but you may see more false positives and negatives due to data latency. With `evaluation_offset` set to 3 minutes, the NRQL time window applied to your query will be: `SINCE 3 minutes ago UNTIL 2 minutes ago`.
-- `since_value` - (Optional)  **DEPRECATED:** Use `evaluation_offset` instead. The value to be used in the `SINCE <X> minutes ago` clause for the NRQL query. Must be between 1-20 (inclusive).
-
-## Terms
-
-> **NOTE:** The direct use of the `term` has been deprecated, and users should use `critical` and `warning` instead.  What follows now applies to the named priority attributes for `critical` and `warning`, but for those attributes the priority is not allowed.
-
-NRQL alert conditions support up to two terms. At least one `term` must have `priority` set to `critical` and the second optional `term` must have `priority` set to `warning`.
-
-The `term` block the following arguments:
-
-- `operator` - (Optional) Valid values are `above`, `below`, or `equals` (case insensitive). Defaults to `equals`. Note that when using a `type` of `outlier`, the only valid option here is `above`.
-- `priority` - (Optional) `critical` or `warning`. Defaults to `critical`.
-- `threshold` - (Required) The value which will trigger a violation. Must be `0` or greater.
-- `threshold_duration` - (Optional) The duration of time, in seconds, that the threshold must violate for in order to create a violation. Value must be a multiple of 60.
-<br>For _baseline_ NRQL alert conditions, the value must be within 120-3600 seconds (inclusive).
-<br>For _static_ NRQL alert conditions, the value must be within 120-7200 seconds (inclusive).
-
-- `threshold_occurrences` - (Optional) The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `at_least_once` (case insensitive).
-- `duration` - (Optional) **DEPRECATED:** Use `threshold_duration` instead. The duration of time, in _minutes_, that the threshold must violate for in order to create a violation. Must be within 1-120 (inclusive).
-- `time_function` - (Optional) **DEPRECATED:** Use `threshold_occurrences` instead. The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `any`.
-
 
 
 ## Create a NrqlAlertCondition Resource {#create}
@@ -50,7 +23,7 @@ The `term` block the following arguments:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.NrqlAlertCondition">NrqlAlertCondition</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">baseline_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">critical</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionCriticalArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expected_groups</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ignore_overlap</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nrql</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionNrqlArgs]</span> = None<span class="p">, </span><span class="nx">open_violation_on_group_overlap</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">runbook_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">terms</span><span class="p">:</span> <span class="nx">Optional[List[NrqlAlertConditionTermArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_function</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_time_limit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_time_limit_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">warning</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionWarningArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.NrqlAlertCondition">NrqlAlertCondition</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">baseline_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">close_violations_on_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">critical</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionCriticalArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expected_groups</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">expiration_duration</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">fill_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fill_value</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ignore_overlap</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nrql</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionNrqlArgs]</span> = None<span class="p">, </span><span class="nx">open_violation_on_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">open_violation_on_group_overlap</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">runbook_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">terms</span><span class="p">:</span> <span class="nx">Optional[List[NrqlAlertConditionTermArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_function</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_time_limit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_time_limit_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">warning</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionWarningArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -268,6 +241,17 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="closeviolationsonexpiration_csharp">
+<a href="#closeviolationsonexpiration_csharp" style="color: inherit; text-decoration: inherit;">Close<wbr>Violations<wbr>On<wbr>Expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}- Whether to close all open violations when the signal expires.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="critical_csharp">
 <a href="#critical_csharp" style="color: inherit; text-decoration: inherit;">Critical</a>
 </span> 
@@ -310,6 +294,39 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Number of expected groups when using `outlier` detection.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expirationduration_csharp">
+<a href="#expirationduration_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}- The amount of time (in seconds) to wait before considering the signal expired.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filloption_csharp">
+<a href="#filloption_csharp" style="color: inherit; text-decoration: inherit;">Fill<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fillvalue_csharp">
+<a href="#fillvalue_csharp" style="color: inherit; text-decoration: inherit;">Fill<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ignoreoverlap_csharp">
@@ -330,6 +347,17 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The title of the condition.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="openviolationonexpiration_csharp">
+<a href="#openviolationonexpiration_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Violation<wbr>On<wbr>Expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}- Whether to create a new violation to capture that the signal expired.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -473,6 +501,17 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="closeviolationsonexpiration_go">
+<a href="#closeviolationsonexpiration_go" style="color: inherit; text-decoration: inherit;">Close<wbr>Violations<wbr>On<wbr>Expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}- Whether to close all open violations when the signal expires.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="critical_go">
 <a href="#critical_go" style="color: inherit; text-decoration: inherit;">Critical</a>
 </span> 
@@ -515,6 +554,39 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Number of expected groups when using `outlier` detection.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expirationduration_go">
+<a href="#expirationduration_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}- The amount of time (in seconds) to wait before considering the signal expired.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filloption_go">
+<a href="#filloption_go" style="color: inherit; text-decoration: inherit;">Fill<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fillvalue_go">
+<a href="#fillvalue_go" style="color: inherit; text-decoration: inherit;">Fill<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ignoreoverlap_go">
@@ -535,6 +607,17 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The title of the condition.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="openviolationonexpiration_go">
+<a href="#openviolationonexpiration_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Violation<wbr>On<wbr>Expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}- Whether to create a new violation to capture that the signal expired.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -678,6 +761,17 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="closeviolationsonexpiration_nodejs">
+<a href="#closeviolationsonexpiration_nodejs" style="color: inherit; text-decoration: inherit;">close<wbr>Violations<wbr>On<wbr>Expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}- Whether to close all open violations when the signal expires.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="critical_nodejs">
 <a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
 </span> 
@@ -720,6 +814,39 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Number of expected groups when using `outlier` detection.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expirationduration_nodejs">
+<a href="#expirationduration_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}- The amount of time (in seconds) to wait before considering the signal expired.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filloption_nodejs">
+<a href="#filloption_nodejs" style="color: inherit; text-decoration: inherit;">fill<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fillvalue_nodejs">
+<a href="#fillvalue_nodejs" style="color: inherit; text-decoration: inherit;">fill<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ignoreoverlap_nodejs">
@@ -740,6 +867,17 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The title of the condition.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="openviolationonexpiration_nodejs">
+<a href="#openviolationonexpiration_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Violation<wbr>On<wbr>Expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}- Whether to create a new violation to capture that the signal expired.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -883,6 +1021,17 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="close_violations_on_expiration_python">
+<a href="#close_violations_on_expiration_python" style="color: inherit; text-decoration: inherit;">close_<wbr>violations_<wbr>on_<wbr>expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}- Whether to close all open violations when the signal expires.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="critical_python">
 <a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
 </span> 
@@ -925,6 +1074,39 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Number of expected groups when using `outlier` detection.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expiration_duration_python">
+<a href="#expiration_duration_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}- The amount of time (in seconds) to wait before considering the signal expired.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fill_option_python">
+<a href="#fill_option_python" style="color: inherit; text-decoration: inherit;">fill_<wbr>option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fill_value_python">
+<a href="#fill_value_python" style="color: inherit; text-decoration: inherit;">fill_<wbr>value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ignore_overlap_python">
@@ -945,6 +1127,17 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The title of the condition.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="open_violation_on_expiration_python">
+<a href="#open_violation_on_expiration_python" style="color: inherit; text-decoration: inherit;">open_<wbr>violation_<wbr>on_<wbr>expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}- Whether to create a new violation to capture that the signal expired.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1134,7 +1327,7 @@ Get an existing NrqlAlertCondition resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">baseline_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">critical</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionCriticalArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expected_groups</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ignore_overlap</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nrql</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionNrqlArgs]</span> = None<span class="p">, </span><span class="nx">open_violation_on_group_overlap</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">runbook_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">terms</span><span class="p">:</span> <span class="nx">Optional[List[NrqlAlertConditionTermArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_function</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_time_limit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_time_limit_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">warning</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionWarningArgs]</span> = None<span class="p">) -&gt;</span> NrqlAlertCondition</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">baseline_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">close_violations_on_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">critical</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionCriticalArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expected_groups</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">expiration_duration</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">fill_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fill_value</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ignore_overlap</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nrql</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionNrqlArgs]</span> = None<span class="p">, </span><span class="nx">open_violation_on_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">open_violation_on_group_overlap</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">runbook_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">terms</span><span class="p">:</span> <span class="nx">Optional[List[NrqlAlertConditionTermArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_function</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_time_limit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_time_limit_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">warning</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionWarningArgs]</span> = None<span class="p">) -&gt;</span> NrqlAlertCondition</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1272,6 +1465,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_closeviolationsonexpiration_csharp">
+<a href="#state_closeviolationsonexpiration_csharp" style="color: inherit; text-decoration: inherit;">Close<wbr>Violations<wbr>On<wbr>Expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}- Whether to close all open violations when the signal expires.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_critical_csharp">
 <a href="#state_critical_csharp" style="color: inherit; text-decoration: inherit;">Critical</a>
 </span> 
@@ -1314,6 +1518,39 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of expected groups when using `outlier` detection.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_expirationduration_csharp">
+<a href="#state_expirationduration_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}- The amount of time (in seconds) to wait before considering the signal expired.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_filloption_csharp">
+<a href="#state_filloption_csharp" style="color: inherit; text-decoration: inherit;">Fill<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_fillvalue_csharp">
+<a href="#state_fillvalue_csharp" style="color: inherit; text-decoration: inherit;">Fill<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ignoreoverlap_csharp">
@@ -1345,6 +1582,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditionnrql">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Nrql<wbr>Alert<wbr>Condition<wbr>Nrql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A NRQL query. See NRQL below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_openviolationonexpiration_csharp">
+<a href="#state_openviolationonexpiration_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Violation<wbr>On<wbr>Expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}- Whether to create a new violation to capture that the signal expired.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1477,6 +1725,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_closeviolationsonexpiration_go">
+<a href="#state_closeviolationsonexpiration_go" style="color: inherit; text-decoration: inherit;">Close<wbr>Violations<wbr>On<wbr>Expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}- Whether to close all open violations when the signal expires.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_critical_go">
 <a href="#state_critical_go" style="color: inherit; text-decoration: inherit;">Critical</a>
 </span> 
@@ -1519,6 +1778,39 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of expected groups when using `outlier` detection.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_expirationduration_go">
+<a href="#state_expirationduration_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}- The amount of time (in seconds) to wait before considering the signal expired.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_filloption_go">
+<a href="#state_filloption_go" style="color: inherit; text-decoration: inherit;">Fill<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_fillvalue_go">
+<a href="#state_fillvalue_go" style="color: inherit; text-decoration: inherit;">Fill<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ignoreoverlap_go">
@@ -1550,6 +1842,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditionnrql">Nrql<wbr>Alert<wbr>Condition<wbr>Nrql</a></span>
     </dt>
     <dd>{{% md %}}A NRQL query. See NRQL below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_openviolationonexpiration_go">
+<a href="#state_openviolationonexpiration_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Violation<wbr>On<wbr>Expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}- Whether to create a new violation to capture that the signal expired.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1682,6 +1985,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_closeviolationsonexpiration_nodejs">
+<a href="#state_closeviolationsonexpiration_nodejs" style="color: inherit; text-decoration: inherit;">close<wbr>Violations<wbr>On<wbr>Expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}- Whether to close all open violations when the signal expires.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_critical_nodejs">
 <a href="#state_critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
 </span> 
@@ -1724,6 +2038,39 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of expected groups when using `outlier` detection.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_expirationduration_nodejs">
+<a href="#state_expirationduration_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}- The amount of time (in seconds) to wait before considering the signal expired.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_filloption_nodejs">
+<a href="#state_filloption_nodejs" style="color: inherit; text-decoration: inherit;">fill<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_fillvalue_nodejs">
+<a href="#state_fillvalue_nodejs" style="color: inherit; text-decoration: inherit;">fill<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ignoreoverlap_nodejs">
@@ -1755,6 +2102,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditionnrql">Nrql<wbr>Alert<wbr>Condition<wbr>Nrql</a></span>
     </dt>
     <dd>{{% md %}}A NRQL query. See NRQL below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_openviolationonexpiration_nodejs">
+<a href="#state_openviolationonexpiration_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Violation<wbr>On<wbr>Expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}- Whether to create a new violation to capture that the signal expired.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1887,6 +2245,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_close_violations_on_expiration_python">
+<a href="#state_close_violations_on_expiration_python" style="color: inherit; text-decoration: inherit;">close_<wbr>violations_<wbr>on_<wbr>expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}- Whether to close all open violations when the signal expires.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_critical_python">
 <a href="#state_critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
 </span> 
@@ -1929,6 +2298,39 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of expected groups when using `outlier` detection.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_expiration_duration_python">
+<a href="#state_expiration_duration_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}- The amount of time (in seconds) to wait before considering the signal expired.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_fill_option_python">
+<a href="#state_fill_option_python" style="color: inherit; text-decoration: inherit;">fill_<wbr>option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_fill_value_python">
+<a href="#state_fill_value_python" style="color: inherit; text-decoration: inherit;">fill_<wbr>value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ignore_overlap_python">
@@ -1960,6 +2362,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditionnrql">Nrql<wbr>Alert<wbr>Condition<wbr>Nrql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A NRQL query. See NRQL below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_open_violation_on_expiration_python">
+<a href="#state_open_violation_on_expiration_python" style="color: inherit; text-decoration: inherit;">open_<wbr>violation_<wbr>on_<wbr>expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}- Whether to create a new violation to capture that the signal expired.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2102,7 +2515,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value which will trigger a violation. Must be `0` or greater.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2112,7 +2526,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_duration` instead. The duration of time, in _minutes_, that the threshold must violate for in order to create a violation. Must be within 1-120 (inclusive).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2122,7 +2537,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values are `above`, `below`, or `equals` (case insensitive). Defaults to `equals`. Note that when using a `type` of `outlier`, the only valid option here is `above`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2132,7 +2548,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The duration of time, in seconds, that the threshold must violate for in order to create a violation. Value must be a multiple of 60.
+<br>For _baseline_ NRQL alert conditions, the value must be within 120-3600 seconds (inclusive).
+<br>For _static_ NRQL alert conditions, the value must be within 120-7200 seconds (inclusive).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2142,7 +2561,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `at_least_once` (case insensitive).
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2152,7 +2572,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_occurrences` instead. The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `any`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2169,7 +2590,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value which will trigger a violation. Must be `0` or greater.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2179,7 +2601,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_duration` instead. The duration of time, in _minutes_, that the threshold must violate for in order to create a violation. Must be within 1-120 (inclusive).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2189,7 +2612,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values are `above`, `below`, or `equals` (case insensitive). Defaults to `equals`. Note that when using a `type` of `outlier`, the only valid option here is `above`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2199,7 +2623,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The duration of time, in seconds, that the threshold must violate for in order to create a violation. Value must be a multiple of 60.
+<br>For _baseline_ NRQL alert conditions, the value must be within 120-3600 seconds (inclusive).
+<br>For _static_ NRQL alert conditions, the value must be within 120-7200 seconds (inclusive).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2209,7 +2636,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `at_least_once` (case insensitive).
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2219,7 +2647,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_occurrences` instead. The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `any`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2236,7 +2665,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value which will trigger a violation. Must be `0` or greater.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2246,7 +2676,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_duration` instead. The duration of time, in _minutes_, that the threshold must violate for in order to create a violation. Must be within 1-120 (inclusive).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2256,7 +2687,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values are `above`, `below`, or `equals` (case insensitive). Defaults to `equals`. Note that when using a `type` of `outlier`, the only valid option here is `above`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2266,7 +2698,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The duration of time, in seconds, that the threshold must violate for in order to create a violation. Value must be a multiple of 60.
+<br>For _baseline_ NRQL alert conditions, the value must be within 120-3600 seconds (inclusive).
+<br>For _static_ NRQL alert conditions, the value must be within 120-7200 seconds (inclusive).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2276,7 +2711,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `at_least_once` (case insensitive).
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2286,7 +2722,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_occurrences` instead. The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `any`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2303,7 +2740,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value which will trigger a violation. Must be `0` or greater.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2313,7 +2751,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_duration` instead. The duration of time, in _minutes_, that the threshold must violate for in order to create a violation. Must be within 1-120 (inclusive).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2323,7 +2762,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values are `above`, `below`, or `equals` (case insensitive). Defaults to `equals`. Note that when using a `type` of `outlier`, the only valid option here is `above`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2333,7 +2773,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The duration of time, in seconds, that the threshold must violate for in order to create a violation. Value must be a multiple of 60.
+<br>For _baseline_ NRQL alert conditions, the value must be within 120-3600 seconds (inclusive).
+<br>For _static_ NRQL alert conditions, the value must be within 120-7200 seconds (inclusive).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2343,7 +2786,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `at_least_once` (case insensitive).
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2353,7 +2797,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_occurrences` instead. The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `any`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2388,7 +2833,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The NRQL query to execute for the condition.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2398,7 +2844,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Represented in minutes and must be within 1-20 minutes (inclusive). NRQL queries are evaluated in one-minute time windows. The start time depends on this value. It's recommended to set this to 3 minutes. An offset of less than 3 minutes will trigger violations sooner, but you may see more false positives and negatives due to data latency. With `evaluation_offset` set to 3 minutes, the NRQL time window applied to your query will be: `SINCE 3 minutes ago UNTIL 2 minutes ago`.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2408,7 +2855,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `evaluation_offset` instead. The value to be used in the `SINCE <X> minutes ago` clause for the NRQL query. Must be between 1-20 (inclusive).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2425,7 +2873,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The NRQL query to execute for the condition.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2435,7 +2884,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Represented in minutes and must be within 1-20 minutes (inclusive). NRQL queries are evaluated in one-minute time windows. The start time depends on this value. It's recommended to set this to 3 minutes. An offset of less than 3 minutes will trigger violations sooner, but you may see more false positives and negatives due to data latency. With `evaluation_offset` set to 3 minutes, the NRQL time window applied to your query will be: `SINCE 3 minutes ago UNTIL 2 minutes ago`.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2445,7 +2895,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `evaluation_offset` instead. The value to be used in the `SINCE <X> minutes ago` clause for the NRQL query. Must be between 1-20 (inclusive).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2462,7 +2913,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The NRQL query to execute for the condition.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2472,7 +2924,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Represented in minutes and must be within 1-20 minutes (inclusive). NRQL queries are evaluated in one-minute time windows. The start time depends on this value. It's recommended to set this to 3 minutes. An offset of less than 3 minutes will trigger violations sooner, but you may see more false positives and negatives due to data latency. With `evaluation_offset` set to 3 minutes, the NRQL time window applied to your query will be: `SINCE 3 minutes ago UNTIL 2 minutes ago`.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2482,7 +2935,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `evaluation_offset` instead. The value to be used in the `SINCE <X> minutes ago` clause for the NRQL query. Must be between 1-20 (inclusive).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2499,7 +2953,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The NRQL query to execute for the condition.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2509,7 +2964,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Represented in minutes and must be within 1-20 minutes (inclusive). NRQL queries are evaluated in one-minute time windows. The start time depends on this value. It's recommended to set this to 3 minutes. An offset of less than 3 minutes will trigger violations sooner, but you may see more false positives and negatives due to data latency. With `evaluation_offset` set to 3 minutes, the NRQL time window applied to your query will be: `SINCE 3 minutes ago UNTIL 2 minutes ago`.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2519,7 +2975,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `evaluation_offset` instead. The value to be used in the `SINCE <X> minutes ago` clause for the NRQL query. Must be between 1-20 (inclusive).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2554,7 +3011,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value which will trigger a violation. Must be `0` or greater.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2564,7 +3022,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_duration` instead. The duration of time, in _minutes_, that the threshold must violate for in order to create a violation. Must be within 1-120 (inclusive).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2574,7 +3033,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values are `above`, `below`, or `equals` (case insensitive). Defaults to `equals`. Note that when using a `type` of `outlier`, the only valid option here is `above`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2584,7 +3044,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`critical` or `warning`. Defaults to `critical`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2594,7 +3055,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The duration of time, in seconds, that the threshold must violate for in order to create a violation. Value must be a multiple of 60.
+<br>For _baseline_ NRQL alert conditions, the value must be within 120-3600 seconds (inclusive).
+<br>For _static_ NRQL alert conditions, the value must be within 120-7200 seconds (inclusive).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2604,7 +3068,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `at_least_once` (case insensitive).
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2614,7 +3079,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_occurrences` instead. The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `any`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2631,7 +3097,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value which will trigger a violation. Must be `0` or greater.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2641,7 +3108,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_duration` instead. The duration of time, in _minutes_, that the threshold must violate for in order to create a violation. Must be within 1-120 (inclusive).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2651,7 +3119,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values are `above`, `below`, or `equals` (case insensitive). Defaults to `equals`. Note that when using a `type` of `outlier`, the only valid option here is `above`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2661,7 +3130,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`critical` or `warning`. Defaults to `critical`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2671,7 +3141,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The duration of time, in seconds, that the threshold must violate for in order to create a violation. Value must be a multiple of 60.
+<br>For _baseline_ NRQL alert conditions, the value must be within 120-3600 seconds (inclusive).
+<br>For _static_ NRQL alert conditions, the value must be within 120-7200 seconds (inclusive).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2681,7 +3154,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `at_least_once` (case insensitive).
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2691,7 +3165,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_occurrences` instead. The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `any`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2708,7 +3183,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value which will trigger a violation. Must be `0` or greater.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2718,7 +3194,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_duration` instead. The duration of time, in _minutes_, that the threshold must violate for in order to create a violation. Must be within 1-120 (inclusive).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2728,7 +3205,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values are `above`, `below`, or `equals` (case insensitive). Defaults to `equals`. Note that when using a `type` of `outlier`, the only valid option here is `above`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2738,7 +3216,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`critical` or `warning`. Defaults to `critical`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2748,7 +3227,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The duration of time, in seconds, that the threshold must violate for in order to create a violation. Value must be a multiple of 60.
+<br>For _baseline_ NRQL alert conditions, the value must be within 120-3600 seconds (inclusive).
+<br>For _static_ NRQL alert conditions, the value must be within 120-7200 seconds (inclusive).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2758,7 +3240,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `at_least_once` (case insensitive).
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2768,7 +3251,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_occurrences` instead. The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `any`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2785,7 +3269,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value which will trigger a violation. Must be `0` or greater.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2795,7 +3280,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_duration` instead. The duration of time, in _minutes_, that the threshold must violate for in order to create a violation. Must be within 1-120 (inclusive).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2805,7 +3291,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values are `above`, `below`, or `equals` (case insensitive). Defaults to `equals`. Note that when using a `type` of `outlier`, the only valid option here is `above`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2815,7 +3302,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`critical` or `warning`. Defaults to `critical`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2825,7 +3313,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The duration of time, in seconds, that the threshold must violate for in order to create a violation. Value must be a multiple of 60.
+<br>For _baseline_ NRQL alert conditions, the value must be within 120-3600 seconds (inclusive).
+<br>For _static_ NRQL alert conditions, the value must be within 120-7200 seconds (inclusive).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2835,7 +3326,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `at_least_once` (case insensitive).
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2845,7 +3337,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_occurrences` instead. The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `any`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2880,7 +3373,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value which will trigger a violation. Must be `0` or greater.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2890,7 +3384,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_duration` instead. The duration of time, in _minutes_, that the threshold must violate for in order to create a violation. Must be within 1-120 (inclusive).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2900,7 +3395,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values are `above`, `below`, or `equals` (case insensitive). Defaults to `equals`. Note that when using a `type` of `outlier`, the only valid option here is `above`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2910,7 +3406,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The duration of time, in seconds, that the threshold must violate for in order to create a violation. Value must be a multiple of 60.
+<br>For _baseline_ NRQL alert conditions, the value must be within 120-3600 seconds (inclusive).
+<br>For _static_ NRQL alert conditions, the value must be within 120-7200 seconds (inclusive).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2920,7 +3419,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `at_least_once` (case insensitive).
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2930,7 +3430,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_occurrences` instead. The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `any`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2947,7 +3448,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value which will trigger a violation. Must be `0` or greater.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2957,7 +3459,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_duration` instead. The duration of time, in _minutes_, that the threshold must violate for in order to create a violation. Must be within 1-120 (inclusive).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2967,7 +3470,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values are `above`, `below`, or `equals` (case insensitive). Defaults to `equals`. Note that when using a `type` of `outlier`, the only valid option here is `above`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2977,7 +3481,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The duration of time, in seconds, that the threshold must violate for in order to create a violation. Value must be a multiple of 60.
+<br>For _baseline_ NRQL alert conditions, the value must be within 120-3600 seconds (inclusive).
+<br>For _static_ NRQL alert conditions, the value must be within 120-7200 seconds (inclusive).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2987,7 +3494,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `at_least_once` (case insensitive).
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2997,7 +3505,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_occurrences` instead. The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `any`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -3014,7 +3523,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value which will trigger a violation. Must be `0` or greater.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -3024,7 +3534,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_duration` instead. The duration of time, in _minutes_, that the threshold must violate for in order to create a violation. Must be within 1-120 (inclusive).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3034,7 +3545,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values are `above`, `below`, or `equals` (case insensitive). Defaults to `equals`. Note that when using a `type` of `outlier`, the only valid option here is `above`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3044,7 +3556,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The duration of time, in seconds, that the threshold must violate for in order to create a violation. Value must be a multiple of 60.
+<br>For _baseline_ NRQL alert conditions, the value must be within 120-3600 seconds (inclusive).
+<br>For _static_ NRQL alert conditions, the value must be within 120-7200 seconds (inclusive).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3054,7 +3569,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `at_least_once` (case insensitive).
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -3064,7 +3580,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_occurrences` instead. The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `any`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -3081,7 +3598,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value which will trigger a violation. Must be `0` or greater.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -3091,7 +3609,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_duration` instead. The duration of time, in _minutes_, that the threshold must violate for in order to create a violation. Must be within 1-120 (inclusive).
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3101,7 +3620,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values are `above`, `below`, or `equals` (case insensitive). Defaults to `equals`. Note that when using a `type` of `outlier`, the only valid option here is `above`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3111,7 +3631,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The duration of time, in seconds, that the threshold must violate for in order to create a violation. Value must be a multiple of 60.
+<br>For _baseline_ NRQL alert conditions, the value must be within 120-3600 seconds (inclusive).
+<br>For _static_ NRQL alert conditions, the value must be within 120-7200 seconds (inclusive).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3121,7 +3644,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `at_least_once` (case insensitive).
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -3131,7 +3655,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}**DEPRECATED:** Use `threshold_occurrences` instead. The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `any`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
