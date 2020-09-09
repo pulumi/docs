@@ -1,8 +1,8 @@
 ---
-title: "Deploying the Infrastructure of OAuth Server for CMS App"
+title: "Deploying an OAuth Server for Netlify's CMS"
 date: "2020-09-09"
 draft: false
-meta_desc: "Implementing OAuth server for Netlify CMS app, deployING it using ECS Fargate Service, and configurING domain and certificate for it."
+meta_desc: "Implementing and deploying an OAuth server for Netlify CMS on Fargate."
 meta_image: cms-oauth.png
 authors: ["zephyr-zhou"]
 tags: ["aws","netlify-cms","github-oauth","ecs-fargate", "github-actions"]
@@ -14,13 +14,13 @@ We used Netlify's Go example to deploy on ECS Fargate and configure the domain a
 
 <!--more-->
 
-[Backend](https://www.netlifycms.org/docs/github-backend/) is a package that supports communications between Netlify CMS and repositories like GitHub, Gitlab, and Bitbucket. The Pulumi [example code](https://github.com/pulumi/examples/tree/master/aws-ts-netlify-cms-and-oauth/cms-oauth) uses backend to authenticate to the CMS. The OAuth Server can also enables authorization for Gitlab and Bitbucket by changing the callback URL to `https://{{YOUR_OAUTH_SERVER_URL}}/callback/{{YOUR_BACKEND_NAME}}`. To learn more about configuring OAuth Server, refer to the "Environment Variable and Pulumi Stack Configuration" section.
+[Backend](https://www.netlifycms.org/docs/github-backend/) is a package that supports communications between Netlify CMS and repositories like GitHub, GitLab, and Bitbucket. The Pulumi [example code](https://github.com/pulumi/examples/tree/master/aws-ts-netlify-cms-and-oauth/cms-oauth) uses backend to authenticate to the CMS. The OAuth Server also enables authorization for GitLab and Bitbucket by changing the callback URL to `https://{{YOUR_OAUTH_SERVER_URL}}/callback/{{YOUR_BACKEND_NAME}}`. To learn more about configuring OAuth Server, refer to the [Environment Variable and Pulumi Stack Configuration]({{< relref "/blog/deploying-the-infrastructure-of-oauth-server-for-cms-app#environment-variables-and-pulumi-stack-configuration" >}}) section.
 
 ## Building the OAuth Server
 
-Netlify CMS's website provides [External OAuth Client examples](https://www.netlifycms.org/docs/external-oauth-clients/#header) for various languages and platforms. We used the [Go example]((https://github.com/igk1972/netlify-cms-oauth-provider-go)) as template for our server.
+Netlify's CMS website provides [External OAuth Client examples](https://www.netlifycms.org/docs/external-oauth-clients/#header) for various languages and platforms. We used the [Go example]((https://github.com/igk1972/netlify-cms-oauth-provider-go)) as a template for our server.
 
-In *Netlify's example*, the `./dotenv/dotenv.go` retrieves environment variables from a file. The main.go file uses [goth](https://github.com/markbates/goth) to instantiate the OAuth Provider. The `./randstr/randstr.go` file generates a random string for the `SESSION_SECRET` environment variable, which is used for authentication. However,  Pulumi can implement both functions, replacing the code in goth by using Pulumi's random package.
+In *Netlify's example*, the `./dotenv/dotenv.go` retrieves environment variables from a file. The main.go file uses [goth](https://github.com/markbates/goth) to instantiate the OAuth provider. The `./randstr/randstr.go` file generates a random string for the `SESSION_SECRET` environment variable, which is used for authentication. However,  Pulumi can implement both functions, replacing the code in goth by using Pulumi's random package.
 
 ```typescript
 // Create a random string and also mark its `result` property as a secret,
@@ -30,11 +30,11 @@ const sessionSecretRandomString = new random.RandomPassword("random", {
 }, { additionalSecretOutputs: ["result"] });
 ```
 
-Because we replaced those functions, ee can remove the `randstr` and `dotenv` folders in the OAuth client example. Later, we'll show how we pass the environment variables when we create the Fargate Service.
+Because we replaced those functions, we can remove the `randstr` and `dotenv` folders in the OAuth client example. Later, we'll show how to pass the environment variables when we create the Fargate service.
 
 ### Setting GitHub Scope
 
-The default  [GitHub scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/) in *Netlify's code* is read-only. When we call the `github.New` function, read and write access must be set to edit a target repository.
+The default  [GitHub scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/) in Netlify's example is read-only. When we call the `github.New` function, read and write access must be set to edit a target repository.
 
 We set `GITHUB_SCOPE` to `public_repo`, granting read and write access to a public repository. The `GITHUB_SCOPE` value is read and parsed when the Fargate Service is created, which is set in the `Github.New` function in the OAuth server. We can also set `GITHUB_SCOPE` to a list of scope values.
 
@@ -72,9 +72,9 @@ githubScope := os.Getenv("GITHUB_SCOPE")
     }
 ```
 
-## Creating the Application Image
+## Creating the OAuth Server Image
 
-To build our application, replace the working directory in the Dockerfile with the path to your repository. Setting the working directory copies the content when Docker builds the image.
+To build our OAuth server container, replace the working directory in the Dockerfile with the path to your repository. Setting the working directory copies the application when Docker builds the image.
 
 ```dockerfile
 WORKDIR /go/src/github.com/pulumi/aws-ts-netlify-cms-and-oauth/cms-oauth
@@ -102,7 +102,7 @@ const web = alb.createListener("web", {
 });
 ```
 
-We also create a [target group](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html) for the load balancers to distribute traffic. The target group port defaults port 80 if it's not set.
+We create a [target group](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html) for the load balancers to distribute traffic. The target group port defaults port 80 if it's not set.
 
 ``` typescript
 let inputTargetGroupPort: pulumi.Input<number> = cmsStackConfig.targetGroupPort!;
@@ -118,7 +118,7 @@ const tg = alb.createTargetGroup("oauth-tg", {
 });
 ```
 
-We can also set the target group port as an environment variable with `pulumi config set cms-OAuth:targetGroupPort`. The load balancer implements a listener and a rule to forward all requests to the target group we created.
+We can also set the target group port as an environment variable with `pulumi config set cms-OAuth:targetGroupPort`. The load balancer implements a listener and a rule to forward all requests to the target group.
 
 ```typescript
 // when the request are forwarded then every requests are send to the target group we created
@@ -144,12 +144,15 @@ The Fargate service requires several environment variables to start. Here are th
 - The `targetDomain` is the URL of our CMS
 - GITHUB_SCOPE sets the type of access the CMS has for the target repository
 
-We can set the github key and secret in the stack configuration. The --secret flag encrypts your GitHub secret. It is good practice to use the --secret flag, e.g., $ pulumi config set --secret netlify-cms-oauth-provider-infrastructure:githubKey {{YOUR_GITHUB_SECRET}}, because appending the secret in the command line stores it in the command history. The --secret flag lets you enter the secret at the prompt, which hides the value.
+We can set the github key and secret in the stack configuration. The --secret flag encrypts your GitHub secret. It is good practice to use the --secret flag, because appending the secret in the command line stores it in the command history. The --secret flag lets you enter the secret at the prompt, which hides the value.
 
 ```bash
 $ pulumi config set netlify-cms-oauth-provider-infrastructure:githubKey {{YOUR_GITHUB_KEY}}
 $ pulumi config set --secret netlify-cms-oauth-provider-infrastructure:githubSecret
 $ {{YOUR_GITHUB_SECRET}}
+```
+
+When the Fargate service is created, it uses the environment variables set in the Pulumi project file and generates the session secret.
 
 ```typescript
 // Create a Fargate service task that can scale out.
@@ -193,7 +196,7 @@ const appService = new awsx.ecs.FargateService("app-svc", {
 });
 ```
 
-The environment variables are passed to the OAuth server in main.go. For example, the callback URL  is the targetDomain with `callback` and the repository provider appended, e.g., `https://<targetDomain>/callback/github/`. You can also specify a different repository provider, such as Bitbucket or Gitlab.
+The environment variables are passed to the OAuth server in main.go. For example, the callback URL  is the `targetDomain` with `callback` and the repository provider appended, e.g., `https://<targetDomain>/callback/github/`. You can also specify a different repository provider, such as Bitbucket or GitLab.
 
 ```go
     github.New(
@@ -219,7 +222,7 @@ targetGroupPort := os.Getenv("TARGET_PORT")
 
 ### Create a Certificate for the OAuth Server
 
-We use the same process for creating a certificate that's documented in our previous post, but we use only the code for creating the certificate and discard the rest.  The certificate used with the load balancer must be set to the same region as the fully qualified domain name (FQDN). The domain name in the certificate must be validated.
+We use the same process for creating a certificate that's documented in our previous post, but we use only the code for creating the certificate and discard the rest. The certificate used with the load balancer must be set to the same region as the fully qualified domain name (FQDN). The domain name in the certificate must be [validated](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html).
 
 ```typescript
 // Get a east provider
@@ -285,13 +288,13 @@ const aRecord = createAliasRecord(cmsStackConfig.targetDomain, alb);
 
 ### GitHub Workflow (Optional)
 
-We can automate our build with GitHub workflow. The `build-and-deploy.yml` file in  `cms-oauth/.github/workflows/` is used by GitHub Actions to build our application. Note that the workflow uses the repository secret set in GitHub.
+We can automate our build with GitHub Workflow. The `build-and-deploy.yml` file in  `cms-oauth/.github/workflows/` is used by GitHub Actions to build our application. Note that the workflow uses the repository secret set in GitHub.
 
 ![GitHub Secret](./github_secret.jpg)
 
-## Up and Running
+## Finishing Up
 
-Our last task is to update the CMS configuration file. We combine the CMS and CMS OAuth Server deployment by setting  site_domain and URL in ./public/config.yml of the CMS folder.
+Our last task is to update the CMS configuration file. We combine the CMS and CMS OAuth Server deployment by setting site_domain and URL in ./public/config.yml of the CMS folder.
 
 ```yaml
 backend:
@@ -305,7 +308,7 @@ backend:
 
 The site_domain is the CMS URL, and the base_url is the OAuth Server URL. They are the same as the `targetDomain` variable we set in the stack configuration.
 
-## Finishing Up
+## Up and Running
 
 Congratulations on building and deploying both CMS web application and the OAuth client-server! If everything works perfectly, you should see the Login with GitHub button and click it to redirect to the GitHub login page.
 
