@@ -23,7 +23,7 @@ If there is an existing Terraform Resource Provider for the target, you can also
 
 ## How can I add support for my favorite language?
 
-Supported languages run out of process and communicate over gRPC with the Pulumi engine and resource providers.  The protocol definitions can be found at [https://github.com/pulumi/pulumi/tree/master/sdk/proto](https://github.com/pulumi/pulumi/tree/master/sdk/proto) along with the language providers themselves.  You can look at how we added support for Go at [https://github.com/pulumi/pulumi/pull/1456](https://github.com/pulumi/pulumi/pull/1456), which should help with scoping.  There is also a summary of the core work items needed as part of a typical new language in the [New Language Bringup wiki page](https://github.com/pulumi/pulumi/wiki/New-Language-Bringup).
+Supported languages run out of process and communicate over gRPC with the Pulumi engine and resource providers.  The protocol definitions can be found at [https://github.com/pulumi/pulumi/tree/master/sdk/proto](https://github.com/pulumi/pulumi/tree/master/sdk/proto) along with the language providers themselves.  You can look at how we added support for Go at [https://github.com/pulumi/pulumi/pull/1456](https://github.com/pulumi/pulumi/pull/1456), which should help with scoping.  There is also a summary of the core work items needed as part of adding support for a typical new language on the [New Language Bring Up wiki page](https://github.com/pulumi/pulumi/wiki/New-Language-Bringup).
 
 ## Does Pulumi support automatic rollback in the event of an error or failure?
 
@@ -36,7 +36,7 @@ There is an issue related to the idea of automatic rollbacks on GitHub at <https
 
 ## How does Pulumi manage secrets?
 
-When you set a configuration value, you may pass `--secret` to `pulumi config set` which causes the value to be encrypted so it can be safely persisted in `Pulumi.<stack-name>.yaml`. For every stack, pulumi.com manages a unique encryption key, which it uses to encrypt secrets for that stack (and this is configurable to use your own custom secrets provider). Because a different key is used for each stack, encrypting the same value across two different stacks will lead to different encrypted strings being stored in the `Pulumi.<stack-name>.yaml` files. This also means that you can not copy an encrypted value from one file to another using a text editor. Instead, you must use `pulumi config set`.
+When you set a configuration value, you may pass `--secret` to `pulumi config set` which causes the value to be encrypted so it can be safely persisted in `Pulumi.<stack-name>.yaml`. For every stack, pulumi.com manages a unique encryption key, which it uses to encrypt secrets for that stack (and this is configurable to use your own custom secrets provider). Because a different key is used for each stack, encrypting the same value across two different stacks will lead to different encrypted strings being stored in the `Pulumi.<stack-name>.yaml` files. This also means that you cannot copy an encrypted value from one file to another using a text editor. Instead, you must use `pulumi config set`.
 
 When you run a preview, update or destroy, pulumi decrypts this data. It is plain text during the execution of your deployment, and any part of your Pulumi program may access it using the Pulumi config object. To learn more, see [Configuration]({{< relref "/docs/intro/concepts/config" >}}).
 
