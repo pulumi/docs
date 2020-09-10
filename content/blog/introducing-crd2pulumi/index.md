@@ -1,7 +1,7 @@
 ---
 title: "Introducing crd2pulumi: Typed CustomResources for Kubernetes"
 date: 2020-08-12
-meta_desc: Generate typed Kubernetes CustomResource in TypeScript, Python, C#, and Go.
+meta_desc: Generate Kubernetes CustomResource types in TypeScript, Python, C#, and Go.
 meta_image: crd.png
 authors:
     - levi-blackstone
@@ -170,7 +170,7 @@ class MyStack : Stack
                 Image = "my-awesome-cron-image",
                 Replicas = 3
             }
-        });    
+        });
     }
 }
 
@@ -190,24 +190,25 @@ package main
 import (
 	crontabsv1 "crds-go-final/crontabs/stable/v1"
 
-	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
+    metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
+    "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-    // Register the CronTab CRD.
-    _, err := yaml.NewConfigFile(ctx, "my-crontab-definition",
-      &yaml.ConfigFileArgs{
-        File: "crontabs.yaml",
-      },
-    )
-    if err != nil {
-      return err
-    }
+        // Register the CronTab CRD.
+        _, err := yaml.NewConfigFile(ctx, "my-crontab-definition",
+        &yaml.ConfigFileArgs{
+            File: "crontabs.yaml",
+        },
+        )
+        if err != nil {
+            return err
+        }
 
-		// Instantiate a CronTab resource.
-		_, err := crontabsv1.NewCronTab(ctx, "my-new-cron-object", &crontabsv1.CronTabArgs{
+        // Instantiate a CronTab resource.
+		_, err = crontabsv1.NewCronTab(ctx, "my-new-cron-object", &crontabsv1.CronTabArgs{
 			Metadata: &metav1.ObjectMetaArgs{
 				Name: pulumi.String("my-new-cron-object"),
 			},
@@ -324,7 +325,7 @@ _ = certmanager.certmanager.v1beta1.Certificate(
 {{% choosable language csharp %}}
 
 ```sh
-$ crd2pulumi --dotnetPath ./certificates certificate.yaml 
+$ crd2pulumi --dotnetPath ./certificates certificate.yaml
 ```
 
 ```csharp
