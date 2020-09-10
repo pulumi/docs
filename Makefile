@@ -101,3 +101,5 @@ ci_schedule:
 	$(MAKE) banner
 	$(MAKE) ensure
 	./scripts/check-links.sh www
+	./scripts/remove-recent-buckets.sh push
+	./scripts/remove-recent-buckets.sh pr
