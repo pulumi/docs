@@ -100,7 +100,7 @@ The service is configurable to enable connections to the backend SQL database ov
 
 ##### Migrations
 
-The database migrations are configurable to enable connections to the database over TLS. If you are intending to connect to the database over TLS to run the migrations the following environment variable must be set in order to enable this. If this variable is set connections to the database will be establised over TLS, otherwise connections will default to not using TLS.
+The database migrations container is configurable to enable connections to the database over TLS. To use TLS, the following environment variable must be set. The default is to not use TLS.
 
 | Variable Name            | Description                                                                                                   |
 |--------------------------|---------------------------------------------------------------------------------------------------------------|
