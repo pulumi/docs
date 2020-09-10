@@ -23,8 +23,6 @@ export class EventListItem {
 
     const displayDate = moment(startDate).format("MMM D, YYYY");
 
-    console.log(archetype === "webinar" && external, this.event.registrationUrl);
-
     const eventLinkProps = {
       href: archetype === "webinar" && !external ? `/webinars/${registrationUrl}` : registrationUrl,
       rel: external ? "noopener noreferrer" : undefined,
@@ -43,7 +41,7 @@ export class EventListItem {
           </div>
           <div class="w-full p-3 pl-6 event-list-item-info">
             <div class="event-title">
-              <a {...eventLinkProps} class="text-bold text-xl">
+              <a {...eventLinkProps} class="font-bold text-xl">
                 { title }
                 { external ? <i class="text-sm ml-2 fas fa-external-link-alt"></i> : null }
               </a>
@@ -57,10 +55,6 @@ export class EventListItem {
               <span class="my-0 py-1 px-2 text-lg rounded-full bg-orange-500 inline-block text-white mr-3">
                   <i class="fas fa-calendar mr-2"></i>
                   { displayDate }
-              </span>
-              <span class="my-0 py-1 px-2 text-lg rounded-full bg-green-500 inline-block text-white">
-                  <i class="fas fa-clock mr-2"></i>
-                  1 hour
               </span>
             </div>
           </div>

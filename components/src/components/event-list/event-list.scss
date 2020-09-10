@@ -7,6 +7,14 @@ pulumi-event-list-item {
 }
 
 .event-list-filter {
+  ul {
+    padding: 0.5rem;
+
+    @media (min-width: 640px) {
+      padding: 0;
+    }
+  }
+
   li {
     cursor: pointer;
 
@@ -23,6 +31,14 @@ pulumi-event-list-item {
     &:hover {
       i, p {
         color: #52A6DA;
+      }
+    }
+
+    .event-filter-item p {
+      display: hidden;
+
+      @media (min-width: 640px) {
+        display: block;
       }
     }
   }

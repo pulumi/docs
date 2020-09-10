@@ -93,14 +93,14 @@ export class EventList {
   }
 
   private renderEventFilterItem(args: EventFilterItem) {
-    const itemClass = classNames("w-1/12 text-center mx-5", {
+    const itemClass = classNames("w-1/12 text-center mx-5 event-filter-item", {
       "active": this.eventFilterChoice === args.key,
     });
 
     return(
       <li class={itemClass} onClick={() => this.handleEventFilterItemClick(args.key)}>
         <i class={`fas fa-${args.icon} text-4xl`}></i>
-        <p class="hidden sm:block m-0 mt-3">{args.text}</p>
+        <p class="m-0 mt-3">{args.text}</p>
       </li>
     );
   }
@@ -118,7 +118,7 @@ export class EventList {
 
     return(
       <div class="w-full mb-5">
-        <ul class="flex p-2 sm:p-0 list-none event-list-filter">
+        <ul class="flex list-none event-list-filter">
           { items.map(this.renderEventFilterItem.bind(this)) }
         </ul>
         <h2 class="px-5">{selectedChoice.text}</h2>
@@ -131,7 +131,7 @@ export class EventList {
       <ul class="flex flex-wrap list-none p-0">
         {chunk.map((event) => {
           return(
-            <pulumi-event-list-item class="mx-auto" event={event}></pulumi-event-list-item>
+            <pulumi-event-list-item event={event}></pulumi-event-list-item>
           );
         })}
       </ul>
