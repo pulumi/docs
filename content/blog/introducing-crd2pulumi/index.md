@@ -1,7 +1,7 @@
 ---
 title: "Introducing crd2pulumi: Typed CustomResources for Kubernetes"
 date: 2020-08-12
-meta_desc: Generate Kubernetes CustomResource types in TypeScript, Python, C#, and Go.
+meta_desc: Generate typed Kubernetes CustomResource in TypeScript, Python, C#, and Go.
 meta_image: crd.png
 authors:
     - levi-blackstone
@@ -74,20 +74,12 @@ spec:
 Copy this definition into a file called `crontab.yaml` and then run `crd2pulumi` to generate types for your language of
 choice.
 
-{{% notes type="info" %}}
-crd2pulumi supports TypeScript and Go today, and Python and .NET are coming soon.
-{{% /notes %}}
-
-By default, this creates the folder `crontabs/` in the same directory as the YAML file. Now you can instantiate a
-Pulumi project and import the generated code. In this example, we register the CronTab CRD and then create a CronTab
-CustomResource.
-
 {{< chooser language "typescript,python,csharp,go" >}}
 
 {{% choosable language typescript %}}
 
 ```sh
-$ crd2pulumi nodejs crontab.yaml
+$ crd2pulumi --nodejsPath ./crontabs crontabs.yaml
 ```
 
 ```typescript
@@ -95,10 +87,10 @@ import * as crontabs from "./crontabs"
 import * as pulumi from "@pulumi/pulumi"
 
 // Register the CronTab CRD.
-const cronTabDefinition = new crontabs.CronTabDefinition("my-crontab-definition");
+const cronTabDefinition = new crontabs.stable.CronTabDefinition("my-crontab-definition")
 
 // Instantiate a CronTab resource.
-const myCronTab = new crontabs.v1.CronTab("my-new-cron-object",
+const myCronTab = new crontabs.stable.v1.CronTab("my-new-cron-object",
 {
     metadata: {
         name: "my-new-cron-object",
@@ -108,60 +100,115 @@ const myCronTab = new crontabs.v1.CronTab("my-new-cron-object",
         image: "my-awesome-cron-image",
         replicas: 3,
     }
-});
+})
+
 ```
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-{{% notes type="info" %}}
-Coming soon along with overall [improved Python typing support](https://github.com/pulumi/pulumi/issues/3771)!
-{{% /notes %}}
+```sh
+$ crd2pulumi --pythonPath ./crontabs crontabs.yaml
+```
+
+```python
+import pulumi_kubernetes as k8s
+import crontabs.pulumi_crds as crontabs
+
+
+# Register the CronTab CRD.
+crontab_definition = k8s.yaml.ConfigFile("my-crontab-definition", file="crontabs.yaml")
+
+# Instantiate a CronTab resource.
+crontab_instance = crontabs.stable.v1.CronTab(
+    "my-new-cron-object",
+    metadata=k8s.meta.v1.ObjectMetaArgs(
+        name="my-new-cron-object"
+    ),
+    spec=crontabs.stable.v1.CronTabSpecArgs(
+        cron_spec="* * * */5",
+        image="my-awesome-cron-image",
+        replicas=3,
+    )
+)
+
+```
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-{{% notes type="info" %}}
-Coming soon!
-{{% /notes %}}
+```sh
+$ crd2pulumi --dotnetPath ./crontabs crontabs.yaml
+```
+
+```csharp
+using Pulumi;
+using Pulumi.Kubernetes.Yaml;
+using Pulumi.Kubernetes.Types.Inputs.Meta.V1;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    // Register a CronTab CRD.
+    var cronTabDefinition = new Pulumi.Kubernetes.Yaml.ConfigFile("my-crontab-definition",
+        new ConfigFileArgs{
+            File = "crontabs.yaml"
+        }
+    );
+
+    // Instantiate a CronTab resource.
+    var cronTabInstance = new Pulumi.Crds.Stable.V1.CronTab("my-new-cron-object",
+        new Pulumi.Kubernetes.Types.Inputs.Stable.V1.CronTabArgs{
+            Metadata = new ObjectMetaArgs{
+                Name = "my-new-cron-object"
+            },
+            Spec = new Pulumi.Kubernetes.Types.Inputs.Stable.V1.CronTabSpecArgs{
+                CronSpec = "* * * * */5",
+                Image = "my-awesome-cron-image",
+                Replicas = 3
+            }
+        });    
+    }
+}
+
+```
 
 {{% /choosable %}}
 
 {{% choosable language go %}}
 
 ```sh
-$ crd2pulumi go crontab.yaml
+$ crd2pulumi --goPath ./crontabs crontab.yaml
 ```
 
 ```go
 package main
 
 import (
-	crontabsv1 "goexample/crontabs/v1"
+	crontabsv1 "crds-go-final/crontabs/stable/v1"
 
-	v1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
-	"github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml"
+	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-
-		// Register the CronTab CRD.
-        _, err := yaml.NewConfigFile(ctx, "my-crontab-definition",
-			&yaml.ConfigFileArgs{
-				File: "crontab.yaml",
-			},
-		)
-		if err != nil {
-			return err
-		}
+    // Register the CronTab CRD.
+    _, err := yaml.NewConfigFile(ctx, "my-crontab-definition",
+      &yaml.ConfigFileArgs{
+        File: "crontabs.yaml",
+      },
+    )
+    if err != nil {
+      return err
+    }
 
 		// Instantiate a CronTab resource.
-        _, err = crontabsv1.NewCronTab(ctx, "my-new-cron-object", &crontabsv1.CronTabArgs{
-			Metadata: &v1.ObjectMetaArgs{
+		_, err := crontabsv1.NewCronTab(ctx, "my-new-cron-object", &crontabsv1.CronTabArgs{
+			Metadata: &metav1.ObjectMetaArgs{
 				Name: pulumi.String("my-new-cron-object"),
 			},
 			Spec: crontabsv1.CronTabSpecArgs{
@@ -173,9 +220,11 @@ func main() {
 		if err != nil {
 			return err
 		}
+
 		return nil
 	})
 }
+
 ```
 
 {{% /choosable %}}
@@ -195,16 +244,20 @@ what it looks like to create a `Certificate` CustomResource using our new types.
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
+```sh
+$ crd2pulumi --nodejsPath ./certificates certificate.yaml
+```
+
 {{% choosable language typescript %}}
 
 ```typescript
 import * as certificates from "./certificates"
 
 // Register the Certificate CRD.
-new certificates.CertificateDefinition("certificate");
+new certificates.certmanager.CertificateDefinition("certificate");
 
 // Instantiate a Certificate resource.
-new certificates.v1beta1.Certificate("example-cert", {
+new certificates.certmanager.v1beta1.Certificate("example-cert", {
     metadata: {
         name: "example-com",
     },
@@ -223,33 +276,113 @@ new certificates.v1beta1.Certificate("example-cert", {
         }
     }
 });
+
 ```
 
 {{% /choosable %}}
 
+```sh
+$ crd2pulumi --pythonPath ./certificates certificate.yaml
+```
+
 {{% choosable language python %}}
 
-{{% notes type="info" %}}
-Coming soon along with overall [improved Python typing support](https://github.com/pulumi/pulumi/issues/3771)!
-{{% /notes %}}
+```python
+import pulumi_kubernetes as k8s
+import certmanager.pulumi_crds as certmanager
+
+
+# Register the Certificate CRD.
+_ = k8s.yaml.ConfigFile("my-certificate-definition", file="certificate.yaml")
+
+# Instantiate a Certificate resource.
+_ = certmanager.certmanager.v1beta1.Certificate(
+    "example-cert",
+    metadata=k8s.meta.v1.ObjectMetaArgs(
+        name="example-com"
+    ),
+    spec=certmanager.certmanager.v1beta1.CertificateSpecArgs(
+        secret_name="example-com-tls",
+        duration="2160h",
+        renew_before="360h",
+        common_name="example.com",
+        dns_names=[
+            "example.com",
+            "www.example.com"
+        ],
+        issuer_ref=certmanager.certmanager.v1beta1.CertificateSpecIssuerRefArgs(
+            name="ca-issuer",
+            kind="Issuer"
+        )
+    )
+)
+
+```
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-{{% notes type="info" %}}
-Coming soon!
-{{% /notes %}}
+```sh
+$ crd2pulumi --dotnetPath ./certificates certificate.yaml 
+```
+
+```csharp
+using Pulumi;
+using Pulumi.Kubernetes.Yaml;
+using Pulumi.Kubernetes.Types.Inputs.Meta.V1;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Register a Certificate CRD.
+        var certificateDefinition = new Pulumi.Kubernetes.Yaml.ConfigFile("my-certificate-definition",
+            new ConfigFileArgs{
+                File = "certificate.yaml"
+            }
+        );
+
+        // Instantiate a Certificate resource.
+        var certificateInstance = new Pulumi.Crds.Certmanager.V1Beta1.Certificate("example-cert",
+            new Pulumi.Kubernetes.Types.Inputs.Certmanager.V1Beta1.CertificateArgs{
+                Metadata = new ObjectMetaArgs{
+                    Name = "example-com"
+                },
+                Spec = new Pulumi.Kubernetes.Types.Inputs.Certmanager.V1Beta1.CertificateSpecArgs{
+                    SecretName = "example-com-tls",
+                    Duration = "2160h",
+                    RenewBefore = "360h",
+                    CommonName = "example.com",
+                    DnsNames = {
+                        "example.com",
+                        "www.example.com"
+                    },
+                    IssuerRef = new Pulumi.Kubernetes.Types.Inputs.Certmanager.V1Beta1.CertificateSpecIssuerRefArgs{
+                        Name = "ca-issuer",
+                        Kind = "Issuer"
+                    }
+                }
+            }
+        );  
+    }
+}
+
+```
 
 {{% /choosable %}}
 
 {{% choosable language go %}}
 
+```sh
+$ crd2pulumi --goPath ./certificates certificate.yaml
+```
+
 ```go
 package main
 
 import (
-	certv1b1 "goexample/certificates/v1beta1"
+	certv1b1 "crds-go-final/certificates/certmanager/v1beta1"
 
 	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
 	"github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml"
@@ -258,9 +391,8 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-
 		// Register the Certificate CRD.
-        _, err := yaml.NewConfigFile(ctx, "my-certificate-definition",
+		_, err := yaml.NewConfigFile(ctx, "my-certificate-definition",
 			&yaml.ConfigFileArgs{
 				File: "certificate.yaml",
 			},
@@ -270,7 +402,7 @@ func main() {
 		}
 
 		// Instantiate a Certificate resource.
-        _, err = certv1b1.NewCertificate(ctx, "example-cert", &certv1b1.CertificateArgs{
+		_, err = certv1b1.NewCertificate(ctx, "example-cert", &certv1b1.CertificateArgs{
 			Metadata: &metav1.ObjectMetaArgs{
 				Name: pulumi.String("example-com"),
 			},
@@ -296,6 +428,7 @@ func main() {
 		return nil
 	})
 }
+
 ```
 
 {{% /choosable %}}
@@ -308,8 +441,7 @@ at your fingertips, you can stop worrying about YAML indentation, and get back t
 ## Learn More
 
 If you'd like to try `crd2pulumi` today, head to the [release page] and download the appropriate binary for your
-operating system. We will be adding support for .NET and Python in the coming weeks, and welcome your feedback in the
-meantime!
+operating system.
 
 If you'd like to learn about Pulumi and how to manage your
 infrastructure and Kubernetes through code, [get started today]({{< relref "/docs/get-started" >}}). Pulumi is open
@@ -328,12 +460,12 @@ any questions, need support, or just want to say hello.
 
 <!-- markdownlint-disable url -->
 [apiextensions package]: {{< relref "/docs/reference/pkg/kubernetes/apiextensions" >}}
-[crd2pulumi]: https://github.com/pulumi/pulumi-kubernetes/tree/master/provider/cmd/crd2pulumi
+[crd2pulumi]: https://github.com/pulumi/crd2pulumi
 [cert-manager]: https://github.com/jetstack/cert-manager/tree/master/deploy/crds
 [CronTab CRD]: https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/#create-a-customresourcedefinition
 [CustomResource]: {{< relref "/docs/reference/pkg/kubernetes/apiextensions/customresource" >}}
 [CustomResourceDefinition]: {{< relref "docs/reference/pkg/kubernetes/apiextensions/v1/customresourcedefinition" >}}
 [Istio]: https://github.com/istio/istio/tree/0321da58ca86fc786fb03a68afd29d082477e4f2/manifests/charts/base/crds
 [real-world cert-manager example]: https://docs.cert-manager.io/en/release-0.7/tasks/issuing-certificates/index.html#creating-certificate-resources
-[release page]: https://github.com/pulumi/pulumi-kubernetes/releases/tag/crd2pulumi%2Fv1.0.0
+[release page]: https://github.com/pulumi/crd2pulumi/releases
 <!-- markdownlint-enable url -->
