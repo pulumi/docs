@@ -22,7 +22,7 @@ Explore the resources and functions of the apiregistration/v1beta1 module in the
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.5.1</dd>
+	<dd>2.6.0</dd>
 </dl>
 
 
