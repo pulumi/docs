@@ -199,9 +199,9 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
         // Register the CronTab CRD.
         _, err := yaml.NewConfigFile(ctx, "my-crontab-definition",
-        &yaml.ConfigFileArgs{
-            File: "crontabs.yaml",
-        },
+            &yaml.ConfigFileArgs{
+                File: "crontabs.yaml",
+            },
         )
         if err != nil {
             return err
@@ -245,11 +245,11 @@ what it looks like to create a `Certificate` CustomResource using our new types.
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
+{{% choosable language typescript %}}
+
 ```sh
 $ crd2pulumi --nodejsPath ./certificates certificate.yaml
 ```
-
-{{% choosable language typescript %}}
 
 ```typescript
 import * as certificates from "./certificates"
@@ -282,11 +282,11 @@ new certificates.certmanager.v1beta1.Certificate("example-cert", {
 
 {{% /choosable %}}
 
+{{% choosable language python %}}
+
 ```sh
 $ crd2pulumi --pythonPath ./certificates certificate.yaml
 ```
-
-{{% choosable language python %}}
 
 ```python
 import pulumi_kubernetes as k8s
