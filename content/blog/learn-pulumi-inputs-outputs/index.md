@@ -34,7 +34,7 @@ class LoadBalancer {
   public readonly address: Output<string>;
   public readonly port: Output<string>;
 
-  constructor(name: string; argos: LoadBalancerArgs, …);
+  constructor(name: string; args: LoadBalancerArgs, ...);
 }
 ```
 
