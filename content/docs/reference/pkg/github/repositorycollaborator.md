@@ -13,9 +13,11 @@ meta_desc: "Explore the RepositoryCollaborator resource of the GitHub package, i
 Provides a GitHub repository collaborator resource.
 
 This resource allows you to add/remove collaborators from repositories in your
-organization. Collaborators can have explicit (and differing levels of) read,
-write, or administrator access to specific repositories in your organization,
-without giving the user full organization membership.
+organization or personal account. For organization repositories, collaborators can
+have explicit (and differing levels of) read, write, or administrator access to
+specific repositories, without giving the user full organization membership.
+For personal repositories, collaborators can only be granted write
+(implictly includes read) permission.
 
 When applied, an invitation will be sent to the user to become a collaborator
 on a repository. When destroyed, either the invitation will be cancelled or the
@@ -23,6 +25,7 @@ collaborator will be removed from the repository.
 
 Further documentation on GitHub collaborators:
 
+- [Adding outside collaborators to your personal repositories](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/managing-access-to-your-personal-repositories)
 - [Adding outside collaborators to repositories in your organization](https://help.github.com/articles/adding-outside-collaborators-to-repositories-in-your-organization/)
 - [Converting an organization member to an outside collaborator](https://help.github.com/articles/converting-an-organization-member-to-an-outside-collaborator/)
 
@@ -59,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-github/sdk/go/github"
+	"github.com/pulumi/pulumi-github/sdk/v2/go/github"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -126,7 +129,7 @@ const aRepoCollaborator = new github.RepositoryCollaborator("a_repo_collaborator
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#RepositoryCollaborator">NewRepositoryCollaborator</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#RepositoryCollaboratorArgs">RepositoryCollaboratorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#RepositoryCollaborator">RepositoryCollaborator</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#RepositoryCollaborator">NewRepositoryCollaborator</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#RepositoryCollaboratorArgs">RepositoryCollaboratorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#RepositoryCollaborator">RepositoryCollaborator</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -200,7 +203,7 @@ const aRepoCollaborator = new github.RepositoryCollaborator("a_repo_collaborator
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -220,7 +223,7 @@ const aRepoCollaborator = new github.RepositoryCollaborator("a_repo_collaborator
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#RepositoryCollaboratorArgs">RepositoryCollaboratorArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#RepositoryCollaboratorArgs">RepositoryCollaboratorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -230,7 +233,7 @@ const aRepoCollaborator = new github.RepositoryCollaborator("a_repo_collaborator
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -325,7 +328,8 @@ The RepositoryCollaborator resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
-Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `push`.
+Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
+Must be `push` for personal repositories. Defaults to `push`.
 {{% /md %}}</dd>
 
 </dl>
@@ -366,7 +370,8 @@ Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `pus
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
-Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `push`.
+Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
+Must be `push` for personal repositories. Defaults to `push`.
 {{% /md %}}</dd>
 
 </dl>
@@ -407,7 +412,8 @@ Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `pus
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
-Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `push`.
+Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
+Must be `push` for personal repositories. Defaults to `push`.
 {{% /md %}}</dd>
 
 </dl>
@@ -448,7 +454,8 @@ Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `pus
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
-Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `push`.
+Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
+Must be `push` for personal repositories. Defaults to `push`.
 {{% /md %}}</dd>
 
 </dl>
@@ -598,7 +605,7 @@ Get an existing RepositoryCollaborator resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRepositoryCollaborator<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#RepositoryCollaboratorState">RepositoryCollaboratorState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#RepositoryCollaborator">RepositoryCollaborator</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRepositoryCollaborator<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#RepositoryCollaboratorState">RepositoryCollaboratorState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#RepositoryCollaborator">RepositoryCollaborator</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -728,7 +735,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
-Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `push`.
+Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
+Must be `push` for personal repositories. Defaults to `push`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -780,7 +788,8 @@ Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `pus
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
-Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `push`.
+Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
+Must be `push` for personal repositories. Defaults to `push`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -832,7 +841,8 @@ Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `pus
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
-Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `push`.
+Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
+Must be `push` for personal repositories. Defaults to `push`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -884,7 +894,8 @@ Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `pus
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
-Must be one of `pull`, `push`, `maintain`, `triage` or `admin`. Defaults to `push`.
+Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
+Must be `push` for personal repositories. Defaults to `push`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
