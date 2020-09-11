@@ -7,13 +7,13 @@ authors: ["vova-ivanov"]
 tags: ["aws", "typescript", "docker", "kubernetes"]
 ---
 
-In this blog post, we will explore the advantages of Kubernetes, and will demonstrate how to use it by converting and deploying our [PERN application]({{< relref "/blog/deploying-a-pern-stack-application-to-aws" >}}) to Amazon EKS. With the help of Pulumi, the process becomes greatly simplified, and allows us to focus more on the big picture of designing our cloud architecture.
+In this blog post, we will explore the advantages of Kubernetes, and will demonstrate how to use it by converting and deploying our [PERN application]({{< relref "/blog/deploying-a-pern-stack-application-to-aws" >}}) to Amazon EKS. With the help of Pulumi, the process becomes greatly simplified and allows us to focus more on the big picture of designing our cloud architecture.
 
 <!--more-->
 
-Kubernetes offers several distinct advantages over individually deploying Docker containers to the cloud. Firstly, is its robust system for minimizing downtime and rolling out updates. If a pod or node were to be shut down, a new one will be automatically allocated to take its place. Secondly, is the ability to scale and distribute your infrastructure. By simplifying containers into pods, Kubernetes allows you to effortlessly design the right cloud setup to fit your target. And lastly, is the interchangeability of cloud providers that comes with it. Since AWS, Azure, and GCE all support deploying Kubernetes, it means that you are not forced to stick with one provider, and have the option of easily switching if the need arises.
+Kubernetes offers several distinct advantages over individually deploying Docker containers to the cloud. Firstly, is its robust system for minimizing downtime and rolling out updates. If a pod or node were to be shut down, a new one will be automatically allocated to take its place. Secondly, is the ability to scale and distribute your infrastructure. By simplifying containers into pods, Kubernetes allows you to effortlessly design the right cloud setup to fit your target. And lastly, is the interchangeability of cloud providers that comes with it. Since AWS, Azure, and GCP all support deploying Kubernetes, it means that you are not forced to stick with one provider, and have the option of easily switching if the need arises.
 
-The first step to creating the app, is to clone the [Typescript PERN example](https://github.com/pulumi/examples/tree/master/aws-pern-voting-app). We'll use a sparse clone to copy only the `aws-pern-voting-app` directory.
+The first step to creating the app is to clone the [Typescript PERN example](https://github.com/pulumi/examples/tree/master/aws-pern-voting-app). We'll use a sparse clone to copy only the `aws-pern-voting-app` directory.
 
 ```bash
 $ mkdir examples && cd examples
@@ -50,7 +50,7 @@ The `package.json` file lists the libraries used by the project. We will add the
 "pg": "^8.3.3"
 ```
 
-Some of the components of our Kubernetified project will be almost identical to that of the PERN application's. We can copy most of these files from the example into our directory.
+Some of the components of our Kubernetified project will be almost identical to that of the PERN application. We can copy most of these files from the example into our directory.
 
 ```bash
 $ cd ..
@@ -132,7 +132,7 @@ $ mkdir databaseside && cd databaseside
 $ mkdir database
 ```
 
-Similarily to the PERN app, the outer `databaseside` folder will hold our Dockerfile, while the inner `database` folder will contain any code that we need.
+Similar to the PERN app, the outer `databaseside` folder will hold our Dockerfile, while the inner `database` folder will contain any code that we need.
 
 ```bash
 FROM ubuntu:18.04
@@ -235,7 +235,7 @@ const ebsVolume = new aws.ebs.Volume("storage-volume", {
 });
 ```
 
-Now that the infrastructure for our database is ready, we can launch our very own PostgreSQL server on the cloud in the form of a Deployment. Deployments offer a multuitude of different customization options ranging from attaching volumes, setting the memory and cpu requirements, to specifying which deployments can and cannot be run on the same node.
+Now that the infrastructure for our database is ready, we can launch our very own PostgreSQL server on the cloud in the form of a Deployment. Deployments offer a multitude of different customization options ranging from attaching volumes, setting the memory and CPU requirements, to specifying which deployments can and cannot be run on the same node.
 
 ```typescript
 const databaseAppName = "database-side-service";
@@ -367,7 +367,7 @@ const postgresqlVotesSchema = new Schema("postgresql-votes-schema", {
 });
 ```
 
-And now, all that remains is the deploy the client and server containers to Kubernetes. Since the PERN application already deplyed them as docker containers, it doesn't take too much effort to reconfigure it for Kubernetes.
+And now, all that remains is to deploy the client and server containers to Kubernetes. Since the PERN application already deployed them as docker containers, it doesn't take too much effort to reconfigure it for Kubernetes.
 
 We'll first set up the server deployment:
 
@@ -469,7 +469,7 @@ To make our Kubernetes application available on the Internet, we export the clie
 export const URL = clientsideListener.status.loadBalancer.ingress[0].hostname;
 ```
 
-In this example, we went over the benefits that Kubernetes offers, and showed how to use Pulumi to convert an application to Kubernetes and deploy it on AWS. Although it might seem uneccessary to use such a system for only a single voting app, the advantages of running your project in the form of containerized services quickly become apprant as your application grows in size.  
+In this example, we went over the benefits that Kubernetes offers and showed how to use Pulumi to convert an application to Kubernetes and deploy it on AWS. Although it might seem unnecessary to use such a system for only a single voting app, the advantages of running your project in the form of containerized services quickly become apparent as your application grows in size.  
 
 Next week, I'll ____.
 
