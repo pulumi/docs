@@ -33,8 +33,8 @@ class MyStack : Stack
         });
         var master = new HCloud.FloatingIp("master", new HCloud.FloatingIpArgs
         {
-            ServerId = node1.Id,
             Type = "ipv4",
+            ServerId = node1.Id,
         });
     }
 
@@ -62,8 +62,8 @@ func main() {
 			return err
 		}
 		_, err = hcloud.NewFloatingIp(ctx, "master", &hcloud.FloatingIpArgs{
-			ServerId: node1.ID(),
 			Type:     pulumi.String("ipv4"),
+			ServerId: node1.ID(),
 		})
 		if err != nil {
 			return err
@@ -84,8 +84,8 @@ node1 = hcloud.Server("node1",
     image="debian-9",
     server_type="cx11")
 master = hcloud.FloatingIp("master",
-    server_id=node1.id,
-    type="ipv4")
+    type="ipv4",
+    server_id=node1.id)
 ```
 
 {{% /example %}}
@@ -101,8 +101,8 @@ const node1 = new hcloud.Server("node1", {
     serverType: "cx11",
 });
 const master = new hcloud.FloatingIp("master", {
-    serverId: node1.id.apply(id => Number.parseFloat(id)),
     type: "ipv4",
+    serverId: node1.id,
 });
 ```
 
@@ -1271,6 +1271,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 </dl>
 

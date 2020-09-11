@@ -28,14 +28,14 @@ class MyStack : Stack
     {
         var node1 = new HCloud.Server("node1", new HCloud.ServerArgs
         {
-            Datacenter = "fsn1-dc8",
             Image = "debian-9",
             ServerType = "cx11",
+            Datacenter = "fsn1-dc8",
         });
         var master = new HCloud.FloatingIp("master", new HCloud.FloatingIpArgs
         {
-            HomeLocation = "nbg1",
             Type = "ipv4",
+            HomeLocation = "nbg1",
         });
         var main = new HCloud.FloatingIpAssignment("main", new HCloud.FloatingIpAssignmentArgs
         {
@@ -61,16 +61,16 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		node1, err := hcloud.NewServer(ctx, "node1", &hcloud.ServerArgs{
-			Datacenter: pulumi.String("fsn1-dc8"),
 			Image:      pulumi.String("debian-9"),
 			ServerType: pulumi.String("cx11"),
+			Datacenter: pulumi.String("fsn1-dc8"),
 		})
 		if err != nil {
 			return err
 		}
 		master, err := hcloud.NewFloatingIp(ctx, "master", &hcloud.FloatingIpArgs{
-			HomeLocation: pulumi.String("nbg1"),
 			Type:         pulumi.String("ipv4"),
+			HomeLocation: pulumi.String("nbg1"),
 		})
 		if err != nil {
 			return err
@@ -95,12 +95,12 @@ import pulumi
 import pulumi_hcloud as hcloud
 
 node1 = hcloud.Server("node1",
-    datacenter="fsn1-dc8",
     image="debian-9",
-    server_type="cx11")
+    server_type="cx11",
+    datacenter="fsn1-dc8")
 master = hcloud.FloatingIp("master",
-    home_location="nbg1",
-    type="ipv4")
+    type="ipv4",
+    home_location="nbg1")
 main = hcloud.FloatingIpAssignment("main",
     floating_ip_id=master.id,
     server_id=node1.id)
@@ -115,17 +115,17 @@ import * as pulumi from "@pulumi/pulumi";
 import * as hcloud from "@pulumi/hcloud";
 
 const node1 = new hcloud.Server("node1", {
-    datacenter: "fsn1-dc8",
     image: "debian-9",
     serverType: "cx11",
+    datacenter: "fsn1-dc8",
 });
 const master = new hcloud.FloatingIp("master", {
-    homeLocation: "nbg1",
     type: "ipv4",
+    homeLocation: "nbg1",
 });
 const main = new hcloud.FloatingIpAssignment("main", {
-    floatingIpId: master.id.apply(id => Number.parseFloat(id)),
-    serverId: node1.id.apply(id => Number.parseFloat(id)),
+    floatingIpId: master.id,
+    serverId: node1.id,
 });
 ```
 
@@ -766,6 +766,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 </dl>
 

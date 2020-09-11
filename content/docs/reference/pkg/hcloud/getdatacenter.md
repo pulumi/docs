@@ -494,7 +494,7 @@ The following output properties are available:
 <a href="#available_server_type_ids_python" style="color: inherit; text-decoration: inherit;">available_<wbr>server_<wbr>type_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}(list) List of available server types.
 {{% /md %}}</dd>
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#supported_server_type_ids_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>server_<wbr>type_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}(list) List of server types supported by the datacenter.
 {{% /md %}}</dd>
@@ -572,6 +572,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 </dl>
 

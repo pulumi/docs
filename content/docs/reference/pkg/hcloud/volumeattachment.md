@@ -28,9 +28,9 @@ class MyStack : Stack
     {
         var node1 = new HCloud.Server("node1", new HCloud.ServerArgs
         {
-            Datacenter = "nbg1-dc3",
             Image = "debian-9",
             ServerType = "cx11",
+            Datacenter = "nbg1-dc3",
         });
         var master = new HCloud.Volume("master", new HCloud.VolumeArgs
         {
@@ -39,9 +39,9 @@ class MyStack : Stack
         });
         var main = new HCloud.VolumeAttachment("main", new HCloud.VolumeAttachmentArgs
         {
-            Automount = true,
-            ServerId = node1.Id,
             VolumeId = master.Id,
+            ServerId = node1.Id,
+            Automount = true,
         });
     }
 
@@ -62,9 +62,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		node1, err := hcloud.NewServer(ctx, "node1", &hcloud.ServerArgs{
-			Datacenter: pulumi.String("nbg1-dc3"),
 			Image:      pulumi.String("debian-9"),
 			ServerType: pulumi.String("cx11"),
+			Datacenter: pulumi.String("nbg1-dc3"),
 		})
 		if err != nil {
 			return err
@@ -77,9 +77,9 @@ func main() {
 			return err
 		}
 		_, err = hcloud.NewVolumeAttachment(ctx, "main", &hcloud.VolumeAttachmentArgs{
-			Automount: pulumi.Bool(true),
-			ServerId:  node1.ID(),
 			VolumeId:  master.ID(),
+			ServerId:  node1.ID(),
+			Automount: pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -97,16 +97,16 @@ import pulumi
 import pulumi_hcloud as hcloud
 
 node1 = hcloud.Server("node1",
-    datacenter="nbg1-dc3",
     image="debian-9",
-    server_type="cx11")
+    server_type="cx11",
+    datacenter="nbg1-dc3")
 master = hcloud.Volume("master",
     location="nbg1",
     size=10)
 main = hcloud.VolumeAttachment("main",
-    automount=True,
+    volume_id=master.id,
     server_id=node1.id,
-    volume_id=master.id)
+    automount=True)
 ```
 
 {{% /example %}}
@@ -118,18 +118,18 @@ import * as pulumi from "@pulumi/pulumi";
 import * as hcloud from "@pulumi/hcloud";
 
 const node1 = new hcloud.Server("node1", {
-    datacenter: "nbg1-dc3",
     image: "debian-9",
     serverType: "cx11",
+    datacenter: "nbg1-dc3",
 });
 const master = new hcloud.Volume("master", {
     location: "nbg1",
     size: 10,
 });
 const main = new hcloud.VolumeAttachment("main", {
+    volumeId: master.id,
+    serverId: node1.id,
     automount: true,
-    serverId: node1.id.apply(id => Number.parseFloat(id)),
-    volumeId: master.id.apply(id => Number.parseFloat(id)),
 });
 ```
 
@@ -858,6 +858,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 </dl>
 

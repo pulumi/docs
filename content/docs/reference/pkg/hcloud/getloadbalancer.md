@@ -822,7 +822,7 @@ The following output properties are available:
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancerservice">List[Get<wbr>Load<wbr>Balancer<wbr>Service]</a></span>
+        <span class="property-type"><a href="#getloadbalancerservice">Sequence[Get<wbr>Load<wbr>Balancer<wbr>Service]</a></span>
     </dt>
     <dd>{{% md %}}(list) List of services a Load Balancer provides.
 {{% /md %}}</dd>
@@ -833,7 +833,7 @@ The following output properties are available:
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancertarget">List[Get<wbr>Load<wbr>Balancer<wbr>Target]</a></span>
+        <span class="property-type"><a href="#getloadbalancertarget">Sequence[Get<wbr>Load<wbr>Balancer<wbr>Target]</a></span>
     </dt>
     <dd>{{% md %}}(list) List of targets of the Load Balancer.
 {{% /md %}}</dd>
@@ -1836,7 +1836,7 @@ The following output properties are available:
 <a href="#status_codes_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}(list[int]) We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
 {{% /md %}}</dd>
@@ -2069,7 +2069,7 @@ The following output properties are available:
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(list[int]) List of IDs from certificates which the Load Balancer has.
 {{% /md %}}</dd>
@@ -2314,6 +2314,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 </dl>
 

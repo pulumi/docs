@@ -32,10 +32,10 @@ class MyStack : Stack
         });
         var foonet = new HCloud.NetworkSubnet("foonet", new HCloud.NetworkSubnetArgs
         {
-            IpRange = "10.0.1.0/24",
             NetworkId = mynet.Id,
-            NetworkZone = "eu-central",
             Type = "cloud",
+            NetworkZone = "eu-central",
+            IpRange = "10.0.1.0/24",
         });
     }
 
@@ -62,10 +62,10 @@ func main() {
 			return err
 		}
 		_, err = hcloud.NewNetworkSubnet(ctx, "foonet", &hcloud.NetworkSubnetArgs{
-			IpRange:     pulumi.String("10.0.1.0/24"),
 			NetworkId:   mynet.ID(),
-			NetworkZone: pulumi.String("eu-central"),
 			Type:        pulumi.String("cloud"),
+			NetworkZone: pulumi.String("eu-central"),
+			IpRange:     pulumi.String("10.0.1.0/24"),
 		})
 		if err != nil {
 			return err
@@ -84,10 +84,10 @@ import pulumi_hcloud as hcloud
 
 mynet = hcloud.Network("mynet", ip_range="10.0.0.0/8")
 foonet = hcloud.NetworkSubnet("foonet",
-    ip_range="10.0.1.0/24",
     network_id=mynet.id,
+    type="cloud",
     network_zone="eu-central",
-    type="cloud")
+    ip_range="10.0.1.0/24")
 ```
 
 {{% /example %}}
@@ -98,14 +98,12 @@ foonet = hcloud.NetworkSubnet("foonet",
 import * as pulumi from "@pulumi/pulumi";
 import * as hcloud from "@pulumi/hcloud";
 
-const mynet = new hcloud.Network("mynet", {
-    ipRange: "10.0.0.0/8",
-});
+const mynet = new hcloud.Network("mynet", {ipRange: "10.0.0.0/8"});
 const foonet = new hcloud.NetworkSubnet("foonet", {
-    ipRange: "10.0.1.0/24",
-    networkId: mynet.id.apply(id => Number.parseFloat(id)),
-    networkZone: "eu-central",
+    networkId: mynet.id,
     type: "cloud",
+    networkZone: "eu-central",
+    ipRange: "10.0.1.0/24",
 });
 ```
 
@@ -1002,6 +1000,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 </dl>
 

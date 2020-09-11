@@ -28,8 +28,8 @@ class MyStack : Stack
     {
         var myserver = new HCloud.Server("myserver", new HCloud.ServerArgs
         {
-            Image = "ubuntu-18.04",
             ServerType = "cx11",
+            Image = "ubuntu-18.04",
         });
         var loadBalancer = new HCloud.LoadBalancer("loadBalancer", new HCloud.LoadBalancerArgs
         {
@@ -39,8 +39,8 @@ class MyStack : Stack
             {
                 new HCloud.Inputs.LoadBalancerTargetArgs
                 {
-                    ServerId = myserver.Id,
                     Type = "server",
+                    ServerId = myserver.Id,
                 },
             },
         });
@@ -63,8 +63,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		myserver, err := hcloud.NewServer(ctx, "myserver", &hcloud.ServerArgs{
-			Image:      pulumi.String("ubuntu-18.04"),
 			ServerType: pulumi.String("cx11"),
+			Image:      pulumi.String("ubuntu-18.04"),
 		})
 		if err != nil {
 			return err
@@ -74,8 +74,8 @@ func main() {
 			Location:         pulumi.String("nbg1"),
 			Targets: hcloud.LoadBalancerTargetArray{
 				&hcloud.LoadBalancerTargetArgs{
-					ServerId: myserver.ID(),
 					Type:     pulumi.String("server"),
+					ServerId: myserver.ID(),
 				},
 			},
 		})
@@ -95,14 +95,14 @@ import pulumi
 import pulumi_hcloud as hcloud
 
 myserver = hcloud.Server("myserver",
-    image="ubuntu-18.04",
-    server_type="cx11")
+    server_type="cx11",
+    image="ubuntu-18.04")
 load_balancer = hcloud.LoadBalancer("loadBalancer",
     load_balancer_type="lb11",
     location="nbg1",
     targets=[hcloud.LoadBalancerTargetArgs(
-        server_id=myserver.id,
         type="server",
+        server_id=myserver.id,
     )])
 ```
 
@@ -115,15 +115,15 @@ import * as pulumi from "@pulumi/pulumi";
 import * as hcloud from "@pulumi/hcloud";
 
 const myserver = new hcloud.Server("myserver", {
-    image: "ubuntu-18.04",
     serverType: "cx11",
+    image: "ubuntu-18.04",
 });
-const loadBalancer = new hcloud.LoadBalancer("load_balancer", {
+const loadBalancer = new hcloud.LoadBalancer("loadBalancer", {
     loadBalancerType: "lb11",
     location: "nbg1",
     targets: [{
-        serverId: myserver.id.apply(id => Number.parseFloat(id)),
         type: "server",
+        serverId: myserver.id,
     }],
 });
 ```
@@ -142,7 +142,7 @@ const loadBalancer = new hcloud.LoadBalancer("load_balancer", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.LoadBalancer">LoadBalancer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerAlgorithmArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">load_balancer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">targets</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancerTargetArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.LoadBalancer">LoadBalancer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerAlgorithmArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">load_balancer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerTargetArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -638,7 +638,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancertarget">List[Load<wbr>Balancer<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancertarget">Sequence[Load<wbr>Balancer<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of targets of the Load Balancer.
 {{% /md %}}</dd>
@@ -910,7 +910,7 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerAlgorithmArgs]</span> = None<span class="p">, </span><span class="nx">ipv4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">load_balancer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">network_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">targets</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancerTargetArgs]]</span> = None<span class="p">) -&gt;</span> LoadBalancer</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerAlgorithmArgs]</span> = None<span class="p">, </span><span class="nx">ipv4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">load_balancer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">network_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerTargetArgs]]</span> = None<span class="p">) -&gt;</span> LoadBalancer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1516,7 +1516,7 @@ The following state arguments are supported:
 <a href="#state_targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancertarget">List[Load<wbr>Balancer<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancertarget">Sequence[Load<wbr>Balancer<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of targets of the Load Balancer.
 {{% /md %}}</dd>
@@ -1811,6 +1811,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 </dl>
 

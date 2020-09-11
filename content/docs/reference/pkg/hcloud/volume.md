@@ -33,9 +33,9 @@ class MyStack : Stack
         });
         var master = new HCloud.Volume("master", new HCloud.VolumeArgs
         {
-            Automount = true,
-            ServerId = node1.Id,
             Size = 50,
+            ServerId = node1.Id,
+            Automount = true,
         });
     }
 
@@ -63,9 +63,9 @@ func main() {
 			return err
 		}
 		_, err = hcloud.NewVolume(ctx, "master", &hcloud.VolumeArgs{
-			Automount: pulumi.Bool(true),
-			ServerId:  node1.ID(),
 			Size:      pulumi.Int(50),
+			ServerId:  node1.ID(),
+			Automount: pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -86,9 +86,9 @@ node1 = hcloud.Server("node1",
     image="debian-9",
     server_type="cx11")
 master = hcloud.Volume("master",
-    automount=True,
+    size=50,
     server_id=node1.id,
-    size=50)
+    automount=True)
 ```
 
 {{% /example %}}
@@ -104,9 +104,9 @@ const node1 = new hcloud.Server("node1", {
     serverType: "cx11",
 });
 const master = new hcloud.Volume("master", {
-    automount: true,
-    serverId: node1.id.apply(id => Number.parseFloat(id)),
     size: 50,
+    serverId: node1.id,
+    automount: true,
 });
 ```
 
@@ -1275,6 +1275,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 </dl>
 

@@ -1204,7 +1204,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Interval how often the health check will be performed, in seconds. Default: `15`
+    <dd>{{% md %}}Interval how often the health check will be performed, in seconds.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1237,7 +1237,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Timeout when a health check try will be canceled if there is no response, in seconds. Default: `10`
+    <dd>{{% md %}}Timeout when a health check try will be canceled if there is no response, in seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1259,7 +1259,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of tries a health check will be performed until a target will be listed as `unhealthy`. Default: `3`
+    <dd>{{% md %}}Number of tries a health check will be performed until a target will be listed as `unhealthy`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1277,7 +1277,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Interval how often the health check will be performed, in seconds. Default: `15`
+    <dd>{{% md %}}Interval how often the health check will be performed, in seconds.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1310,7 +1310,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Timeout when a health check try will be canceled if there is no response, in seconds. Default: `10`
+    <dd>{{% md %}}Timeout when a health check try will be canceled if there is no response, in seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1332,7 +1332,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of tries a health check will be performed until a target will be listed as `unhealthy`. Default: `3`
+    <dd>{{% md %}}Number of tries a health check will be performed until a target will be listed as `unhealthy`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1350,7 +1350,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Interval how often the health check will be performed, in seconds. Default: `15`
+    <dd>{{% md %}}Interval how often the health check will be performed, in seconds.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1383,7 +1383,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Timeout when a health check try will be canceled if there is no response, in seconds. Default: `10`
+    <dd>{{% md %}}Timeout when a health check try will be canceled if there is no response, in seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1405,7 +1405,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Number of tries a health check will be performed until a target will be listed as `unhealthy`. Default: `3`
+    <dd>{{% md %}}Number of tries a health check will be performed until a target will be listed as `unhealthy`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1423,7 +1423,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Interval how often the health check will be performed, in seconds. Default: `15`
+    <dd>{{% md %}}Interval how often the health check will be performed, in seconds.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1456,7 +1456,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Timeout when a health check try will be canceled if there is no response, in seconds. Default: `10`
+    <dd>{{% md %}}Timeout when a health check try will be canceled if there is no response, in seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1478,7 +1478,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Number of tries a health check will be performed until a target will be listed as `unhealthy`. Default: `3`
+    <dd>{{% md %}}Number of tries a health check will be performed until a target will be listed as `unhealthy`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1505,17 +1505,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="statuscodes_csharp">
-<a href="#statuscodes_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Codes</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1552,6 +1541,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="statuscodes_csharp">
+<a href="#statuscodes_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Codes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tls_csharp">
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
 </span> 
@@ -1567,17 +1567,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="statuscodes_go">
-<a href="#statuscodes_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Codes</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1614,6 +1603,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="statuscodes_go">
+<a href="#statuscodes_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Codes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tls_go">
 <a href="#tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
 </span> 
@@ -1629,17 +1629,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="statuscodes_nodejs">
-<a href="#statuscodes_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1676,6 +1665,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="statuscodes_nodejs">
+<a href="#statuscodes_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tls_nodejs">
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
 </span> 
@@ -1691,17 +1691,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="status_codes_python">
-<a href="#status_codes_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1734,6 +1723,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Response we expect to be included in the Target response when a Health Check was performed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_codes_python">
+<a href="#status_codes_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1964,7 +1964,7 @@ The following state arguments are supported:
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}List of IDs from certificates which the Load Balancer has.
 {{% /md %}}</dd>
@@ -2031,6 +2031,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 </dl>
 
