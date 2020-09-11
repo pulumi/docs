@@ -35,9 +35,9 @@ class MyStack : Stack
             var range = new { Value = rangeIndex };
             workers.Add(new HCloud.Server($"workers-{range.Value}", new HCloud.ServerArgs
             {
-                Datacenter = ds.Apply(ds => ds.Names)[range.Value],
                 Image = "debian-9",
                 ServerType = "cx31",
+                Datacenter = ds.Apply(ds => ds.Names)[range.Value],
             }));
         }
     }
@@ -60,9 +60,9 @@ ds = hcloud.get_datacenters()
 workers = []
 for range in [{"value": i} for i in range(0, 3)]:
     workers.append(hcloud.Server(f"workers-{range['value']}",
-        datacenter=ds.names[range["value"]],
         image="debian-9",
-        server_type="cx31"))
+        server_type="cx31",
+        datacenter=ds.names[range["value"]]))
 ```
 
 {{% /example %}}
@@ -73,13 +73,13 @@ for range in [{"value": i} for i in range(0, 3)]:
 import * as pulumi from "@pulumi/pulumi";
 import * as hcloud from "@pulumi/hcloud";
 
-const ds = pulumi.output(hcloud.getDatacenters({ async: true }));
-const workers: hcloud.Server[] = [];
-for (let i = 0; i < 3; i++) {
-    workers.push(new hcloud.Server(`workers-${i}`, {
-        datacenter: ds.apply(ds => ds.names[i]),
+const ds = hcloud.getDatacenters({});
+const workers: hcloud.Server[];
+for (const range = {value: 0}; range.value < 3; range.value++) {
+    workers.push(new hcloud.Server(`workers-${range.value}`, {
         image: "debian-9",
         serverType: "cx31",
+        datacenter: ds.then(ds => ds.names)[range.value],
     }));
 }
 ```
@@ -100,7 +100,7 @@ for (let i = 0; i < 3; i++) {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_datacenters(</span><span class="nx">datacenter_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDatacentersResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_datacenters(</span><span class="nx">datacenter_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDatacentersResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -185,7 +185,7 @@ The following arguments are supported:
 <a href="#datacenter_ids_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(list) List of unique datacenter identifiers.
 {{% /md %}}</dd>
@@ -369,7 +369,7 @@ The following output properties are available:
 <a href="#descriptions_python" style="color: inherit; text-decoration: inherit;">descriptions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(list) List of all datacenter descriptions.
 {{% /md %}}</dd>
@@ -391,7 +391,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(list) List of datacenter names.
 {{% /md %}}</dd>
@@ -402,7 +402,7 @@ The following output properties are available:
 <a href="#datacenter_ids_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(list) List of unique datacenter identifiers.
 {{% /md %}}</dd>
@@ -425,6 +425,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 </dl>
 

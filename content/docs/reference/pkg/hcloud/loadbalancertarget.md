@@ -28,8 +28,8 @@ class MyStack : Stack
     {
         var myServer = new HCloud.Server("myServer", new HCloud.ServerArgs
         {
-            Image = "ubuntu-18.04",
             ServerType = "cx11",
+            Image = "ubuntu-18.04",
         });
         var loadBalancer = new HCloud.LoadBalancer("loadBalancer", new HCloud.LoadBalancerArgs
         {
@@ -38,9 +38,9 @@ class MyStack : Stack
         });
         var loadBalancerTarget = new HCloud.LoadBalancerTarget("loadBalancerTarget", new HCloud.LoadBalancerTargetArgs
         {
+            Type = "server",
             LoadBalancerId = hcloud_load_balancer.Load_balcancer.Id,
             ServerId = myServer.Id,
-            Type = "server",
         });
     }
 
@@ -61,8 +61,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		myServer, err := hcloud.NewServer(ctx, "myServer", &hcloud.ServerArgs{
-			Image:      pulumi.String("ubuntu-18.04"),
 			ServerType: pulumi.String("cx11"),
+			Image:      pulumi.String("ubuntu-18.04"),
 		})
 		if err != nil {
 			return err
@@ -75,9 +75,9 @@ func main() {
 			return err
 		}
 		_, err = hcloud.NewLoadBalancerTarget(ctx, "loadBalancerTarget", &hcloud.LoadBalancerTargetArgs{
+			Type:           pulumi.String("server"),
 			LoadBalancerId: pulumi.Any(hcloud_load_balancer.Load_balcancer.Id),
 			ServerId:       myServer.ID(),
-			Type:           pulumi.String("server"),
 		})
 		if err != nil {
 			return err
@@ -95,15 +95,15 @@ import pulumi
 import pulumi_hcloud as hcloud
 
 my_server = hcloud.Server("myServer",
-    image="ubuntu-18.04",
-    server_type="cx11")
+    server_type="cx11",
+    image="ubuntu-18.04")
 load_balancer = hcloud.LoadBalancer("loadBalancer",
     load_balancer_type="lb11",
     location="nbg1")
 load_balancer_target = hcloud.LoadBalancerTarget("loadBalancerTarget",
+    type="server",
     load_balancer_id=hcloud_load_balancer["load_balcancer"]["id"],
-    server_id=my_server.id,
-    type="server")
+    server_id=my_server.id)
 ```
 
 {{% /example %}}
@@ -114,18 +114,18 @@ load_balancer_target = hcloud.LoadBalancerTarget("loadBalancerTarget",
 import * as pulumi from "@pulumi/pulumi";
 import * as hcloud from "@pulumi/hcloud";
 
-const myServer = new hcloud.Server("my_server", {
-    image: "ubuntu-18.04",
+const myServer = new hcloud.Server("myServer", {
     serverType: "cx11",
+    image: "ubuntu-18.04",
 });
-const loadBalancer = new hcloud.LoadBalancer("load_balancer", {
+const loadBalancer = new hcloud.LoadBalancer("loadBalancer", {
     loadBalancerType: "lb11",
     location: "nbg1",
 });
-const loadBalancerTarget = new hcloud.LoadBalancerTarget("load_balancer_target", {
-    loadBalancerId: hcloud_load_balancer_load_balcancer.id,
-    serverId: myServer.id.apply(id => Number.parseFloat(id)),
+const loadBalancerTarget = new hcloud.LoadBalancerTarget("loadBalancerTarget", {
     type: "server",
+    loadBalancerId: hcloud_load_balancer.load_balcancer.id,
+    serverId: myServer.id,
 });
 ```
 
@@ -143,7 +143,7 @@ const loadBalancerTarget = new hcloud.LoadBalancerTarget("load_balancer_target",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.LoadBalancerTarget">LoadBalancerTarget</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.LoadBalancerTarget">LoadBalancerTarget</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -335,7 +335,32 @@ the target gets attached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of the target. `server`
+    <dd>{{% md %}}Type of the target. Possible values
+`server`, `label_selector`, `ip`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_csharp">
+<a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address for an IP Target. Required if
+`type` is `ip`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labelselector_csharp">
+<a href="#labelselector_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Label Selector selecting targets
+for this Load Balancer. Required if `type` is `label_selector`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -359,7 +384,8 @@ target for this Load Balancer. Required if `type` is `server`
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}use the private IP to connect to
-Load Balancer targets.
+Load Balancer targets. Only allowed if type is `server` or
+`label_selector`.
 {{% /md %}}</dd>
 
 </dl>
@@ -389,7 +415,32 @@ the target gets attached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of the target. `server`
+    <dd>{{% md %}}Type of the target. Possible values
+`server`, `label_selector`, `ip`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_go">
+<a href="#ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address for an IP Target. Required if
+`type` is `ip`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labelselector_go">
+<a href="#labelselector_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Label Selector selecting targets
+for this Load Balancer. Required if `type` is `label_selector`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -413,7 +464,8 @@ target for this Load Balancer. Required if `type` is `server`
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}use the private IP to connect to
-Load Balancer targets.
+Load Balancer targets. Only allowed if type is `server` or
+`label_selector`.
 {{% /md %}}</dd>
 
 </dl>
@@ -443,7 +495,32 @@ the target gets attached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of the target. `server`
+    <dd>{{% md %}}Type of the target. Possible values
+`server`, `label_selector`, `ip`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_nodejs">
+<a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address for an IP Target. Required if
+`type` is `ip`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labelselector_nodejs">
+<a href="#labelselector_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Label Selector selecting targets
+for this Load Balancer. Required if `type` is `label_selector`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -467,7 +544,8 @@ target for this Load Balancer. Required if `type` is `server`
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}use the private IP to connect to
-Load Balancer targets.
+Load Balancer targets. Only allowed if type is `server` or
+`label_selector`.
 {{% /md %}}</dd>
 
 </dl>
@@ -497,7 +575,32 @@ the target gets attached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of the target. `server`
+    <dd>{{% md %}}Type of the target. Possible values
+`server`, `label_selector`, `ip`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_python">
+<a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}IP address for an IP Target. Required if
+`type` is `ip`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_selector_python">
+<a href="#label_selector_python" style="color: inherit; text-decoration: inherit;">label_<wbr>selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Label Selector selecting targets
+for this Load Balancer. Required if `type` is `label_selector`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -521,7 +624,8 @@ target for this Load Balancer. Required if `type` is `server`
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}use the private IP to connect to
-Load Balancer targets.
+Load Balancer targets. Only allowed if type is `server` or
+`label_selector`.
 {{% /md %}}</dd>
 
 </dl>
@@ -623,7 +727,7 @@ Get an existing LoadBalancerTarget resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> LoadBalancerTarget</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> LoadBalancerTarget</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -739,6 +843,30 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_ip_csharp">
+<a href="#state_ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address for an IP Target. Required if
+`type` is `ip`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_labelselector_csharp">
+<a href="#state_labelselector_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Label Selector selecting targets
+for this Load Balancer. Required if `type` is `label_selector`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_loadbalancerid_csharp">
 <a href="#state_loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
 </span> 
@@ -769,7 +897,8 @@ target for this Load Balancer. Required if `type` is `server`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of the target. `server`
+    <dd>{{% md %}}Type of the target. Possible values
+`server`, `label_selector`, `ip`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -781,7 +910,8 @@ target for this Load Balancer. Required if `type` is `server`
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}use the private IP to connect to
-Load Balancer targets.
+Load Balancer targets. Only allowed if type is `server` or
+`label_selector`.
 {{% /md %}}</dd>
 
 </dl>
@@ -790,6 +920,30 @@ Load Balancer targets.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ip_go">
+<a href="#state_ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address for an IP Target. Required if
+`type` is `ip`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_labelselector_go">
+<a href="#state_labelselector_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Label Selector selecting targets
+for this Load Balancer. Required if `type` is `label_selector`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -823,7 +977,8 @@ target for this Load Balancer. Required if `type` is `server`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of the target. `server`
+    <dd>{{% md %}}Type of the target. Possible values
+`server`, `label_selector`, `ip`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -835,7 +990,8 @@ target for this Load Balancer. Required if `type` is `server`
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}use the private IP to connect to
-Load Balancer targets.
+Load Balancer targets. Only allowed if type is `server` or
+`label_selector`.
 {{% /md %}}</dd>
 
 </dl>
@@ -844,6 +1000,30 @@ Load Balancer targets.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ip_nodejs">
+<a href="#state_ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address for an IP Target. Required if
+`type` is `ip`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_labelselector_nodejs">
+<a href="#state_labelselector_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Label Selector selecting targets
+for this Load Balancer. Required if `type` is `label_selector`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -877,7 +1057,8 @@ target for this Load Balancer. Required if `type` is `server`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of the target. `server`
+    <dd>{{% md %}}Type of the target. Possible values
+`server`, `label_selector`, `ip`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -889,7 +1070,8 @@ target for this Load Balancer. Required if `type` is `server`
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}use the private IP to connect to
-Load Balancer targets.
+Load Balancer targets. Only allowed if type is `server` or
+`label_selector`.
 {{% /md %}}</dd>
 
 </dl>
@@ -898,6 +1080,30 @@ Load Balancer targets.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ip_python">
+<a href="#state_ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}IP address for an IP Target. Required if
+`type` is `ip`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_label_selector_python">
+<a href="#state_label_selector_python" style="color: inherit; text-decoration: inherit;">label_<wbr>selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Label Selector selecting targets
+for this Load Balancer. Required if `type` is `label_selector`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -931,7 +1137,8 @@ target for this Load Balancer. Required if `type` is `server`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of the target. `server`
+    <dd>{{% md %}}Type of the target. Possible values
+`server`, `label_selector`, `ip`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -943,7 +1150,8 @@ target for this Load Balancer. Required if `type` is `server`
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}use the private IP to connect to
-Load Balancer targets.
+Load Balancer targets. Only allowed if type is `server` or
+`label_selector`.
 {{% /md %}}</dd>
 
 </dl>
@@ -966,6 +1174,6 @@ Load Balancer targets.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 </dl>
 

@@ -268,7 +268,7 @@ The following output properties are available:
 <a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsshkeyssshkey">List[Get<wbr>Ssh<wbr>Keys<wbr>Ssh<wbr>Key]</a></span>
+        <span class="property-type"><a href="#getsshkeyssshkey">Sequence[Get<wbr>Ssh<wbr>Keys<wbr>Ssh<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}(list) List of all matches SSH keys. See `data.hcloud_ssh_key` for schema.
 {{% /md %}}</dd>
@@ -553,6 +553,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 </dl>
 

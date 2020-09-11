@@ -32,9 +32,9 @@ class MyStack : Stack
         });
         var privNet = new HCloud.NetworkRoute("privNet", new HCloud.NetworkRouteArgs
         {
+            NetworkId = mynet.Id,
             Destination = "10.100.1.0/24",
             Gateway = "10.0.1.1",
-            NetworkId = mynet.Id,
         });
     }
 
@@ -61,9 +61,9 @@ func main() {
 			return err
 		}
 		_, err = hcloud.NewNetworkRoute(ctx, "privNet", &hcloud.NetworkRouteArgs{
+			NetworkId:   mynet.ID(),
 			Destination: pulumi.String("10.100.1.0/24"),
 			Gateway:     pulumi.String("10.0.1.1"),
-			NetworkId:   mynet.ID(),
 		})
 		if err != nil {
 			return err
@@ -82,9 +82,9 @@ import pulumi_hcloud as hcloud
 
 mynet = hcloud.Network("mynet", ip_range="10.0.0.0/8")
 priv_net = hcloud.NetworkRoute("privNet",
+    network_id=mynet.id,
     destination="10.100.1.0/24",
-    gateway="10.0.1.1",
-    network_id=mynet.id)
+    gateway="10.0.1.1")
 ```
 
 {{% /example %}}
@@ -95,13 +95,11 @@ priv_net = hcloud.NetworkRoute("privNet",
 import * as pulumi from "@pulumi/pulumi";
 import * as hcloud from "@pulumi/hcloud";
 
-const mynet = new hcloud.Network("mynet", {
-    ipRange: "10.0.0.0/8",
-});
+const mynet = new hcloud.Network("mynet", {ipRange: "10.0.0.0/8"});
 const privNet = new hcloud.NetworkRoute("privNet", {
+    networkId: mynet.id,
     destination: "10.100.1.0/24",
     gateway: "10.0.1.1",
-    networkId: mynet.id.apply(id => Number.parseFloat(id)),
 });
 ```
 
@@ -830,6 +828,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 </dl>
 

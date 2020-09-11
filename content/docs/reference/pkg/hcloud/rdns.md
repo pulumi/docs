@@ -33,9 +33,9 @@ class MyStack : Stack
         });
         var master = new HCloud.Rdns("master", new HCloud.RdnsArgs
         {
-            DnsPtr = "example.com",
-            IpAddress = node1.Ipv4Address,
             ServerId = node1.Id,
+            IpAddress = node1.Ipv4Address,
+            DnsPtr = "example.com",
         });
     }
 
@@ -63,9 +63,9 @@ func main() {
 			return err
 		}
 		_, err = hcloud.NewRdns(ctx, "master", &hcloud.RdnsArgs{
-			DnsPtr:    pulumi.String("example.com"),
-			IpAddress: node1.Ipv4Address,
 			ServerId:  node1.ID(),
+			IpAddress: node1.Ipv4Address,
+			DnsPtr:    pulumi.String("example.com"),
 		})
 		if err != nil {
 			return err
@@ -86,9 +86,9 @@ node1 = hcloud.Server("node1",
     image="debian-9",
     server_type="cx11")
 master = hcloud.Rdns("master",
-    dns_ptr="example.com",
+    server_id=node1.id,
     ip_address=node1.ipv4_address,
-    server_id=node1.id)
+    dns_ptr="example.com")
 ```
 
 {{% /example %}}
@@ -104,9 +104,9 @@ const node1 = new hcloud.Server("node1", {
     serverType: "cx11",
 });
 const master = new hcloud.Rdns("master", {
-    dnsPtr: "example.com",
+    serverId: node1.id,
     ipAddress: node1.ipv4Address,
-    serverId: node1.id.apply(id => Number.parseFloat(id)),
+    dnsPtr: "example.com",
 });
 ```
 
@@ -923,6 +923,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 </dl>
 

@@ -118,17 +118,17 @@ for range in [{"value": i} for i in range(0, var.counter)]:
 import * as pulumi from "@pulumi/pulumi";
 import * as hcloud from "@pulumi/hcloud";
 
-const ip1 = pulumi.output(hcloud.getFloatingIp({
+const ip1 = hcloud.getFloatingIp({
     ipAddress: "1.2.3.4",
-}, { async: true }));
-const image2 = pulumi.output(hcloud.getFloatingIp({
+});
+const image2 = hcloud.getFloatingIp({
     withSelector: "key=value",
-}, { async: true }));
-const main: hcloud.FloatingIpAssignment[] = [];
-for (let i = 0; i < var_counter; i++) {
-    main.push(new hcloud.FloatingIpAssignment(`main-${i}`, {
-        floatingIpId: ip1.id!,
-        serverId: hcloud_server_main.id,
+});
+const main: hcloud.FloatingIpAssignment[];
+for (const range = {value: 0}; range.value < _var.counter; range.value++) {
+    main.push(new hcloud.FloatingIpAssignment(`main-${range.value}`, {
+        floatingIpId: ip1.then(ip1 => ip1.id),
+        serverId: hcloud_server.main.id,
     }));
 }
 ```
@@ -916,6 +916,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 </dl>
 

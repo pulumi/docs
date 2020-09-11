@@ -36,8 +36,8 @@ class MyStack : Stack
             workers.Add(new HCloud.Server($"workers-{range.Value}", new HCloud.ServerArgs
             {
                 Image = "debian-9",
-                Location = ds.Apply(ds => ds.Names)[range.Value],
                 ServerType = "cx31",
+                Location = ds.Apply(ds => ds.Names)[range.Value],
             }));
         }
     }
@@ -61,8 +61,8 @@ workers = []
 for range in [{"value": i} for i in range(0, 3)]:
     workers.append(hcloud.Server(f"workers-{range['value']}",
         image="debian-9",
-        location=ds.names[range["value"]],
-        server_type="cx31"))
+        server_type="cx31",
+        location=ds.names[range["value"]]))
 ```
 
 {{% /example %}}
@@ -73,13 +73,13 @@ for range in [{"value": i} for i in range(0, 3)]:
 import * as pulumi from "@pulumi/pulumi";
 import * as hcloud from "@pulumi/hcloud";
 
-const ds = pulumi.output(hcloud.getLocations({ async: true }));
-const workers: hcloud.Server[] = [];
-for (let i = 0; i < 3; i++) {
-    workers.push(new hcloud.Server(`workers-${i}`, {
+const ds = hcloud.getLocations({});
+const workers: hcloud.Server[];
+for (const range = {value: 0}; range.value < 3; range.value++) {
+    workers.push(new hcloud.Server(`workers-${range.value}`, {
         image: "debian-9",
-        location: ds.apply(ds => ds.names[i]),
         serverType: "cx31",
+        location: ds.then(ds => ds.names)[range.value],
     }));
 }
 ```
@@ -100,7 +100,7 @@ for (let i = 0; i < 3; i++) {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_locations(</span><span class="nx">location_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLocationsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_locations(</span><span class="nx">location_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLocationsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -185,7 +185,7 @@ The following arguments are supported:
 <a href="#location_ids_python" style="color: inherit; text-decoration: inherit;">location_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(list) List of unique location identifiers.
 {{% /md %}}</dd>
@@ -369,7 +369,7 @@ The following output properties are available:
 <a href="#descriptions_python" style="color: inherit; text-decoration: inherit;">descriptions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(list) List of all location descriptions.
 {{% /md %}}</dd>
@@ -391,7 +391,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(list) List of location names.
 {{% /md %}}</dd>
@@ -402,7 +402,7 @@ The following output properties are available:
 <a href="#location_ids_python" style="color: inherit; text-decoration: inherit;">location_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(list) List of unique location identifiers.
 {{% /md %}}</dd>
@@ -425,6 +425,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 </dl>
 

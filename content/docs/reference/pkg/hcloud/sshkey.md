@@ -58,13 +58,11 @@ default = hcloud.SshKey("default", public_key=(lambda path: open(path).read())("
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as fs from "fs";
 import * as hcloud from "@pulumi/hcloud";
+import * from "fs";
 
 // Create a new SSH key
-const defaultSshKey = new hcloud.SshKey("default", {
-    publicKey: fs.readFileSync("~/.ssh/id_rsa.pub", "utf-8"),
-});
+const _default = new hcloud.SshKey("default", {publicKey: fs.readFileSync("~/.ssh/id_rsa.pub")});
 ```
 
 {{% /example %}}
@@ -880,6 +878,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 </dl>
 
