@@ -252,7 +252,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
-Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -313,7 +313,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
-Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -348,7 +348,7 @@ use the first partition of the disk for its root filesystem.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The owner of this instance after creation.
+    <dd>{{% md %}}The list of owners of this instance after creation.
 Format: alias@example.com.
 Currently supports one owner only.
 If not specified, all of the service account users of
@@ -587,7 +587,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
-Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -648,7 +648,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
-Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -683,7 +683,7 @@ use the first partition of the disk for its root filesystem.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The owner of this instance after creation.
+    <dd>{{% md %}}The list of owners of this instance after creation.
 Format: alias@example.com.
 Currently supports one owner only.
 If not specified, all of the service account users of
@@ -922,7 +922,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
-Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -983,7 +983,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
-Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1018,7 +1018,7 @@ use the first partition of the disk for its root filesystem.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The owner of this instance after creation.
+    <dd>{{% md %}}The list of owners of this instance after creation.
 Format: alias@example.com.
 Currently supports one owner only.
 If not specified, all of the service account users of
@@ -1257,7 +1257,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
-Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1318,7 +1318,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
-Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1353,7 +1353,7 @@ use the first partition of the disk for its root filesystem.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The owner of this instance after creation.
+    <dd>{{% md %}}The list of owners of this instance after creation.
 Format: alias@example.com.
 Currently supports one owner only.
 If not specified, all of the service account users of
@@ -1864,7 +1864,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
-Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1925,7 +1925,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
-Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1960,7 +1960,7 @@ use the first partition of the disk for its root filesystem.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The owner of this instance after creation.
+    <dd>{{% md %}}The list of owners of this instance after creation.
 Format: alias@example.com.
 Currently supports one owner only.
 If not specified, all of the service account users of
@@ -2221,7 +2221,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
-Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2282,7 +2282,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
-Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2317,7 +2317,7 @@ use the first partition of the disk for its root filesystem.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The owner of this instance after creation.
+    <dd>{{% md %}}The list of owners of this instance after creation.
 Format: alias@example.com.
 Currently supports one owner only.
 If not specified, all of the service account users of
@@ -2578,7 +2578,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
-Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2639,7 +2639,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
-Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2674,7 +2674,7 @@ use the first partition of the disk for its root filesystem.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The owner of this instance after creation.
+    <dd>{{% md %}}The list of owners of this instance after creation.
 Format: alias@example.com.
 Currently supports one owner only.
 If not specified, all of the service account users of
@@ -2935,7 +2935,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
-Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2996,7 +2996,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
-Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3031,7 +3031,7 @@ use the first partition of the disk for its root filesystem.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The owner of this instance after creation.
+    <dd>{{% md %}}The list of owners of this instance after creation.
 Format: alias@example.com.
 Currently supports one owner only.
 If not specified, all of the service account users of

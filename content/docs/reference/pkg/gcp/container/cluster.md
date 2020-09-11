@@ -9749,7 +9749,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node.
+    <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are
+reserved by Kubernetes Core components and cannot be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10015,7 +10016,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node.
+    <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are
+reserved by Kubernetes Core components and cannot be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10281,7 +10283,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node.
+    <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are
+reserved by Kubernetes Core components and cannot be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10547,7 +10550,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node.
+    <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are
+reserved by Kubernetes Core components and cannot be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12635,7 +12639,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node.
+    <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are
+reserved by Kubernetes Core components and cannot be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12901,7 +12906,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node.
+    <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are
+reserved by Kubernetes Core components and cannot be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13167,7 +13173,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node.
+    <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are
+reserved by Kubernetes Core components and cannot be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13433,7 +13440,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node.
+    <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are
+reserved by Kubernetes Core components and cannot be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

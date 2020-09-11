@@ -3,7 +3,7 @@ title: "Module datafusion"
 title_tag: "Module datafusion | Package @pulumi/gcp | Node.js SDK"
 linktitle: "datafusion"
 meta_desc: "Explore members of the datafusion module in the @pulumi/gcp package."
-git_sha: "2400b696ba8424ff5a3a419f75640293ac2f363b"
+git_sha: "da8ea6e04df21372ae7e86dc1edfa82d0f61de1e"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Instance" data-link-title="Instance">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L20">
         Resource <strong>Instance</strong>
     </a>
 </h3>
@@ -46,43 +46,9 @@ To get more information about Instance, see:
     * [Official Documentation](https://cloud.google.com/data-fusion/docs/)
 
 #### Example Usage
-##### Data Fusion Instance Basic
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as google_beta from "@pulumi/google-beta";
-
-const basicInstance = new google_beta.datafusion.Instance("basic_instance", {
-    region: "us-central1",
-    type: "BASIC",
-});
-```
-##### Data Fusion Instance Full
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as google_beta from "@pulumi/google-beta";
-
-const extendedInstance = new google_beta.datafusion.Instance("extended_instance", {
-    description: "My Data Fusion instance",
-    enableStackdriverLogging: true,
-    enableStackdriverMonitoring: true,
-    labels: {
-        example_key: "example_value",
-    },
-    networkConfig: {
-        ipAllocation: "10.89.48.0/22",
-        network: "default",
-    },
-    privateInstance: true,
-    region: "us-central1",
-    type: "BASIC",
-    version: "6.1.1",
-});
-```
 
 <h4 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L167"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L133"> <b>constructor</b></a>
 </h4>
 
 
@@ -96,7 +62,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L64">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -107,14 +73,14 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L54">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L75">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -125,7 +91,7 @@ Returns true if the given object is an instance of Instance.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Instance-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L85">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L51">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -133,7 +99,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 
 <h4 class="pdoc-member-header" id="Instance-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L89">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L55">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -141,7 +107,7 @@ The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nano
 An optional description of the instance.
 
 <h4 class="pdoc-member-header" id="Instance-enableStackdriverLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L93">property <b>enableStackdriverLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L59">property <b>enableStackdriverLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableStackdriverLogging: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -149,7 +115,7 @@ An optional description of the instance.
 Option to enable Stackdriver Logging.
 
 <h4 class="pdoc-member-header" id="Instance-enableStackdriverMonitoring">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L97">property <b>enableStackdriverMonitoring</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L63">property <b>enableStackdriverMonitoring</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableStackdriverMonitoring: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -157,7 +123,7 @@ Option to enable Stackdriver Logging.
 Option to enable Stackdriver Monitoring.
 
 <h4 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L54">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -166,7 +132,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Instance-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L102">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L68">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -175,7 +141,7 @@ The resource labels for instance to use to annotate any related underlying resou
 such as Compute Engine VMs.
 
 <h4 class="pdoc-member-header" id="Instance-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L106">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -183,7 +149,7 @@ such as Compute Engine VMs.
 The ID of the instance or a fully qualified identifier for the instance.
 
 <h4 class="pdoc-member-header" id="Instance-networkConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L111">property <b>networkConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L77">property <b>networkConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceNetworkConfig'>InstanceNetworkConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -192,7 +158,7 @@ Network configuration options. These are required when a private Data Fusion ins
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Instance-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L115">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L81">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>options: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -200,7 +166,7 @@ Structure is documented below.
 Map of additional options used to configure the behavior of Data Fusion instance.
 
 <h4 class="pdoc-member-header" id="Instance-privateInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L121">property <b>privateInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L87">property <b>privateInstance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateInstance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -210,7 +176,7 @@ true, all Data Fusion nodes will have private IP addresses and will not be
 able to access the public internet.
 
 <h4 class="pdoc-member-header" id="Instance-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L126">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L92">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -219,7 +185,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Instance-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L130">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L96">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -227,7 +193,7 @@ If it is not provided, the provider project is used.
 The region of the Data Fusion instance.
 
 <h4 class="pdoc-member-header" id="Instance-serviceAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L134">property <b>serviceAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L100">property <b>serviceAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -235,7 +201,7 @@ The region of the Data Fusion instance.
 Service account which will be used to access resources in the customer project.
 
 <h4 class="pdoc-member-header" id="Instance-serviceEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L138">property <b>serviceEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L104">property <b>serviceEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -243,7 +209,7 @@ Service account which will be used to access resources in the customer project.
 Endpoint on which the Data Fusion UI and REST APIs are accessible.
 
 <h4 class="pdoc-member-header" id="Instance-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L144">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L110">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -253,7 +219,7 @@ ready for requests - FAILED: Instance creation failed - DELETING: Instance is be
 being upgraded - RESTARTING: Instance is being restarted
 
 <h4 class="pdoc-member-header" id="Instance-stateMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L148">property <b>stateMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L114">property <b>stateMessage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stateMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -261,7 +227,7 @@ being upgraded - RESTARTING: Instance is being restarted
 Additional information about the current state of this Data Fusion instance if available.
 
 <h4 class="pdoc-member-header" id="Instance-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L159">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L125">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -276,7 +242,7 @@ available, such as support for streaming pipelines, higher number of concurrent 
 Possible values are `BASIC` and `ENTERPRISE`.
 
 <h4 class="pdoc-member-header" id="Instance-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L163">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L129">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updateTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -284,7 +250,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
 The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 
 <h4 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L54">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -293,7 +259,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Instance-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L167">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L133">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -304,7 +270,7 @@ Current version of the Data Fusion.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="InstanceArgs" data-link-title="InstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L329">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L295">
         interface <strong>InstanceArgs</strong>
     </a>
 </h3>
@@ -314,7 +280,7 @@ Current version of the Data Fusion.
 The set of arguments for constructing a Instance resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L333">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L299">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -322,7 +288,7 @@ The set of arguments for constructing a Instance resource.
 An optional description of the instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-enableStackdriverLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L337">property <b>enableStackdriverLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L303">property <b>enableStackdriverLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableStackdriverLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -330,7 +296,7 @@ An optional description of the instance.
 Option to enable Stackdriver Logging.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-enableStackdriverMonitoring">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L341">property <b>enableStackdriverMonitoring</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L307">property <b>enableStackdriverMonitoring</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableStackdriverMonitoring?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -338,7 +304,7 @@ Option to enable Stackdriver Logging.
 Option to enable Stackdriver Monitoring.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L346">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L312">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -347,7 +313,7 @@ The resource labels for instance to use to annotate any related underlying resou
 such as Compute Engine VMs.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L350">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L316">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -355,7 +321,7 @@ such as Compute Engine VMs.
 The ID of the instance or a fully qualified identifier for the instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-networkConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L355">property <b>networkConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L321">property <b>networkConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceNetworkConfig'>InstanceNetworkConfig</a>&gt;;</code></pre>
@@ -364,7 +330,7 @@ Network configuration options. These are required when a private Data Fusion ins
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L359">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L325">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -372,7 +338,7 @@ Structure is documented below.
 Map of additional options used to configure the behavior of Data Fusion instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-privateInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L365">property <b>privateInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L331">property <b>privateInstance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateInstance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -382,7 +348,7 @@ true, all Data Fusion nodes will have private IP addresses and will not be
 able to access the public internet.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L370">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L336">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -391,7 +357,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L374">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L340">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -399,7 +365,7 @@ If it is not provided, the provider project is used.
 The region of the Data Fusion instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L385">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L351">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -414,7 +380,7 @@ available, such as support for streaming pipelines, higher number of concurrent 
 Possible values are `BASIC` and `ENTERPRISE`.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L389">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L355">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -422,7 +388,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
 Current version of the Data Fusion.
 
 <h3 class="pdoc-module-header" id="InstanceState" data-link-title="InstanceState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L237">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L203">
         interface <strong>InstanceState</strong>
     </a>
 </h3>
@@ -432,7 +398,7 @@ Current version of the Data Fusion.
 Input properties used for looking up and filtering Instance resources.
 
 <h4 class="pdoc-member-header" id="InstanceState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L241">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L207">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -440,7 +406,7 @@ Input properties used for looking up and filtering Instance resources.
 The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 
 <h4 class="pdoc-member-header" id="InstanceState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L245">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L211">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -448,7 +414,7 @@ The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nano
 An optional description of the instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-enableStackdriverLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L249">property <b>enableStackdriverLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L215">property <b>enableStackdriverLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableStackdriverLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -456,7 +422,7 @@ An optional description of the instance.
 Option to enable Stackdriver Logging.
 
 <h4 class="pdoc-member-header" id="InstanceState-enableStackdriverMonitoring">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L253">property <b>enableStackdriverMonitoring</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L219">property <b>enableStackdriverMonitoring</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableStackdriverMonitoring?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -464,7 +430,7 @@ Option to enable Stackdriver Logging.
 Option to enable Stackdriver Monitoring.
 
 <h4 class="pdoc-member-header" id="InstanceState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L258">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L224">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -473,7 +439,7 @@ The resource labels for instance to use to annotate any related underlying resou
 such as Compute Engine VMs.
 
 <h4 class="pdoc-member-header" id="InstanceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L262">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L228">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -481,7 +447,7 @@ such as Compute Engine VMs.
 The ID of the instance or a fully qualified identifier for the instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-networkConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L267">property <b>networkConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L233">property <b>networkConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceNetworkConfig'>InstanceNetworkConfig</a>&gt;;</code></pre>
@@ -490,7 +456,7 @@ Network configuration options. These are required when a private Data Fusion ins
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="InstanceState-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L271">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L237">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -498,7 +464,7 @@ Structure is documented below.
 Map of additional options used to configure the behavior of Data Fusion instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-privateInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L277">property <b>privateInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L243">property <b>privateInstance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateInstance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -508,7 +474,7 @@ true, all Data Fusion nodes will have private IP addresses and will not be
 able to access the public internet.
 
 <h4 class="pdoc-member-header" id="InstanceState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L282">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L248">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -517,7 +483,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="InstanceState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L286">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L252">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -525,7 +491,7 @@ If it is not provided, the provider project is used.
 The region of the Data Fusion instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-serviceAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L290">property <b>serviceAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L256">property <b>serviceAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -533,7 +499,7 @@ The region of the Data Fusion instance.
 Service account which will be used to access resources in the customer project.
 
 <h4 class="pdoc-member-header" id="InstanceState-serviceEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L294">property <b>serviceEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L260">property <b>serviceEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -541,7 +507,7 @@ Service account which will be used to access resources in the customer project.
 Endpoint on which the Data Fusion UI and REST APIs are accessible.
 
 <h4 class="pdoc-member-header" id="InstanceState-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L300">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L266">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -551,7 +517,7 @@ ready for requests - FAILED: Instance creation failed - DELETING: Instance is be
 being upgraded - RESTARTING: Instance is being restarted
 
 <h4 class="pdoc-member-header" id="InstanceState-stateMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L304">property <b>stateMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L270">property <b>stateMessage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stateMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -559,7 +525,7 @@ being upgraded - RESTARTING: Instance is being restarted
 Additional information about the current state of this Data Fusion instance if available.
 
 <h4 class="pdoc-member-header" id="InstanceState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L315">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L281">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -574,7 +540,7 @@ available, such as support for streaming pipelines, higher number of concurrent 
 Possible values are `BASIC` and `ENTERPRISE`.
 
 <h4 class="pdoc-member-header" id="InstanceState-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L319">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L285">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -582,7 +548,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
 The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 
 <h4 class="pdoc-member-header" id="InstanceState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/datafusion/instance.ts#L323">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/datafusion/instance.ts#L289">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

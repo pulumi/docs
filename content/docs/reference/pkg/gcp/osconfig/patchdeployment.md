@@ -30,7 +30,7 @@ To get more information about PatchDeployment, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/osconfig/#pulumi_gcp.osconfig.PatchDeployment">PatchDeployment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_filter</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentInstanceFilterArgs]</span> = None<span class="p">, </span><span class="nx">one_time_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentOneTimeScheduleArgs]</span> = None<span class="p">, </span><span class="nx">patch_config</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentPatchConfigArgs]</span> = None<span class="p">, </span><span class="nx">patch_deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recurring_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentRecurringScheduleArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/osconfig/#pulumi_gcp.osconfig.PatchDeployment">PatchDeployment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_filter</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentInstanceFilterArgs]</span> = None<span class="p">, </span><span class="nx">one_time_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentOneTimeScheduleArgs]</span> = None<span class="p">, </span><span class="nx">patch_config</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentPatchConfigArgs]</span> = None<span class="p">, </span><span class="nx">patch_deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recurring_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentRecurringScheduleArgs]</span> = None<span class="p">, </span><span class="nx">rollout</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentRolloutArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -301,6 +301,18 @@ If it is not provided, the provider project is used.
 Structure is documented below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rollout_csharp">
+<a href="#rollout_csharp" style="color: inherit; text-decoration: inherit;">Rollout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Rollout strategy of the patch job.
+Structure is documented below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -404,6 +416,18 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rollout_go">
+<a href="#rollout_go" style="color: inherit; text-decoration: inherit;">Rollout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout</a></span>
+    </dt>
+    <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -513,6 +537,18 @@ If it is not provided, the provider project is used.
 Structure is documented below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rollout_nodejs">
+<a href="#rollout_nodejs" style="color: inherit; text-decoration: inherit;">rollout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout</a></span>
+    </dt>
+    <dd>{{% md %}}Rollout strategy of the patch job.
+Structure is documented below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -616,6 +652,18 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rollout_python">
+<a href="#rollout_python" style="color: inherit; text-decoration: inherit;">rollout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -914,7 +962,7 @@ Get an existing PatchDeployment resource's state with the given name, ID, and op
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_filter</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentInstanceFilterArgs]</span> = None<span class="p">, </span><span class="nx">last_execute_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">one_time_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentOneTimeScheduleArgs]</span> = None<span class="p">, </span><span class="nx">patch_config</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentPatchConfigArgs]</span> = None<span class="p">, </span><span class="nx">patch_deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recurring_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentRecurringScheduleArgs]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PatchDeployment</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_filter</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentInstanceFilterArgs]</span> = None<span class="p">, </span><span class="nx">last_execute_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">one_time_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentOneTimeScheduleArgs]</span> = None<span class="p">, </span><span class="nx">patch_config</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentPatchConfigArgs]</span> = None<span class="p">, </span><span class="nx">patch_deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recurring_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentRecurringScheduleArgs]</span> = None<span class="p">, </span><span class="nx">rollout</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentRolloutArgs]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PatchDeployment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1166,6 +1214,18 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_rollout_csharp">
+<a href="#state_rollout_csharp" style="color: inherit; text-decoration: inherit;">Rollout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Rollout strategy of the patch job.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_updatetime_csharp">
 <a href="#state_updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
 </span> 
@@ -1316,6 +1376,18 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_rollout_go">
+<a href="#state_rollout_go" style="color: inherit; text-decoration: inherit;">Rollout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout</a></span>
+    </dt>
+    <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -1476,6 +1548,18 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_rollout_nodejs">
+<a href="#state_rollout_nodejs" style="color: inherit; text-decoration: inherit;">rollout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout</a></span>
+    </dt>
+    <dd>{{% md %}}Rollout strategy of the patch job.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_updatetime_nodejs">
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span> 
@@ -1626,6 +1710,18 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_rollout_python">
+<a href="#state_rollout_python" style="color: inherit; text-decoration: inherit;">rollout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -6665,6 +6761,298 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PatchDeploymentRollout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PatchDeploymentRollout">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRolloutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRolloutOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentRolloutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentRollout.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disruptionbudget_csharp">
+<a href="#disruptionbudget_csharp" style="color: inherit; text-decoration: inherit;">Disruption<wbr>Budget</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up.
+During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps.
+A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget.
+For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone.
+For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Mode of the patch rollout.
+Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disruptionbudget_go">
+<a href="#disruptionbudget_go" style="color: inherit; text-decoration: inherit;">Disruption<wbr>Budget</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up.
+During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps.
+A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget.
+For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone.
+For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Mode of the patch rollout.
+Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disruptionbudget_nodejs">
+<a href="#disruptionbudget_nodejs" style="color: inherit; text-decoration: inherit;">disruption<wbr>Budget</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up.
+During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps.
+A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget.
+For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone.
+For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Mode of the patch rollout.
+Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disruption_budget_python">
+<a href="#disruption_budget_python" style="color: inherit; text-decoration: inherit;">disruption_<wbr>budget</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up.
+During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps.
+A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget.
+For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone.
+For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Mode of the patch rollout.
+Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PatchDeploymentRolloutDisruptionBudget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PatchDeploymentRolloutDisruptionBudget">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRolloutDisruptionBudgetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRolloutDisruptionBudgetOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentRolloutDisruptionBudgetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentRolloutDisruptionBudget.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixed_csharp">
+<a href="#fixed_csharp" style="color: inherit; text-decoration: inherit;">Fixed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a fixed value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_csharp">
+<a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixed_go">
+<a href="#fixed_go" style="color: inherit; text-decoration: inherit;">Fixed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a fixed value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_go">
+<a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixed_nodejs">
+<a href="#fixed_nodejs" style="color: inherit; text-decoration: inherit;">fixed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a fixed value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_nodejs">
+<a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixed_python">
+<a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a fixed value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_python">
+<a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
 {{% /md %}}</dd>
 
 </dl>

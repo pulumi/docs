@@ -15,6 +15,8 @@ Allows management of a single API service for an existing Google Cloud Platform 
 For a list of services available, visit the
 [API library page](https://console.cloud.google.com/apis/library) or run `gcloud services list`.
 
+Requires [Service Usage API](https://console.cloud.google.com/apis/library/serviceusage.googleapis.com).
+
 
 
 ## Create a Service Resource {#create}
