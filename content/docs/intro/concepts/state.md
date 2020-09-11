@@ -54,14 +54,14 @@ to have Pulumi store your _checkpoint_ files locally on your machine. The defaul
 directory for these JSON files is `~/.pulumi`.
 
 To use the [cloud storage or remote](#cloud-storage-or-remote) option, run `pulumi login
---cloud-url <your-cloud-storage-url>` to have Pulumi store your checkpoint files using a
+--cloud-url <your-cloud-storage-url>` to store your checkpoint files using a
 supported cloud provider like AWS, Azure, or Google Cloud Platform. Checkpoint files are
 also stored in `.pulumi` directory. For example, if you were using the Amazon S3
 self-managed backend, your checkpoint files would be stored at
 `s3://<my-pulumi-state-bucket>/.pulumi` where `<my-pulumi-state-bucket>` represents the
 name of your S3 bucket.
 
-The following links offer additional details for setting up your provider-specific
+The following links offer additional details for setting up provider-specific
 command-line tools and storage accounts.
 
 {{< chooser cloud "aws,azure,gcp" / >}}
@@ -207,7 +207,7 @@ file://~`.
 #### Cloud storage or remote
 
 To use a remote backend instead with your preferred cloud storage provider,
-simply pass the `--cloud-url` (or `-c`) flag and your storage bucket or blob URL
+pass the `--cloud-url` (or `-c`) flag and your storage bucket or blob URL
 when logging in:
 
 ```sh
