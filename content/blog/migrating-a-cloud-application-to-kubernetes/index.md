@@ -204,7 +204,7 @@ const awsConfig = new pulumi.Config("aws");
 const region = aws.config.region;
 ```
 
-The central part of our application us an AWS Elastic Kubernetes Cluster. It holds our application and dictates how many nodes should be allocated for the processes running inside the cluster.
+The central part of our application is an AWS Elastic Kubernetes Cluster. It holds our application and dictates how many nodes should be allocated for the processes running inside the cluster.
 
 ```typescript
 const eksCluster = new eks.Cluster("eksCluster", {
