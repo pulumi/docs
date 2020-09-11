@@ -149,6 +149,10 @@ export const url = pulumi.interpolate`http://${alb.hostname}:${alb.port}`;
 
 This article is a brief introduction to Pulumi inputs and outputs. Learn more about the Pulumi [programming model]({{< relref "/docs/intro/concepts/programming-model" >}}) by visiting Pulumi Docs.
 
+You can also watch the *Pulumi Help: Resource Inputs and Outputs (Node.js* on [PulumiTV](https://www.youtube.com/c/PulumiTV/).
+
+{{< youtube "lybOxul2otM" >}}
+
 {{% notes type="info" %}}
 Learn Pulumi is an irregular series about the Pulumi programming model.
 {{% /notes %}}
