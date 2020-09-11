@@ -11,8 +11,6 @@ In this blog post, we will explore PERN stack applications and deploy one to AWS
 
 <!--more-->
 
-The nature of the project means that it has four distinct tiers: a database that keeps track of our data, a stateless server that receives commands and manipulates the database, a clientside server that contains and send out the user interface code, and the internet browser that downloads that code, presents the UI and sends requests to the stateless server.
-
 PERN projects have four distinct tiers:
 
 - a database that keeps track of our data,
