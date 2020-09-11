@@ -3,7 +3,7 @@ title: "Module sentinel"
 title_tag: "Module sentinel | Package @pulumi/azure | Node.js SDK"
 linktitle: "sentinel"
 meta_desc: "Explore members of the sentinel module in the @pulumi/azure package."
-git_sha: "87ec45403dcdc845364bf2cd86aa71620069a540"
+git_sha: "c7c4391106960cf7ba55fe9faa260f6e8f35daba"
 block_external_search_index: true
 ---
 
@@ -39,7 +39,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AlertRuleMsSecurityIncident" data-link-title="AlertRuleMsSecurityIncident">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L30">
         Resource <strong>AlertRuleMsSecurityIncident</strong>
     </a>
 </h3>
@@ -69,7 +69,7 @@ const exampleAlertRuleMsSecurityIncident = new azure.sentinel.AlertRuleMsSecurit
 ```
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncident-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L93"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L93"> <b>constructor</b></a>
 </h4>
 
 
@@ -83,7 +83,7 @@ Create a AlertRuleMsSecurityIncident resource with the given unique name, argume
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncident-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -94,14 +94,14 @@ Get an existing AlertRuleMsSecurityIncident resource's state with the given name
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncident-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncident-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -112,7 +112,7 @@ Returns true if the given object is an instance of AlertRuleMsSecurityIncident. 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncident-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L61">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L61">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -120,7 +120,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The description of this Sentinel MS Security Incident Alert Rule.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncident-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L65">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L65">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -128,7 +128,7 @@ The description of this Sentinel MS Security Incident Alert Rule.
 The friendly name of this Sentinel MS Security Incident Alert Rule.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncident-displayNameFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L69">property <b>displayNameFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L69">property <b>displayNameFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayNameFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -136,7 +136,7 @@ The friendly name of this Sentinel MS Security Incident Alert Rule.
 Only create incidents when the alert display name contain text from this list, leave empty to apply no filter.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncident-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L73">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L73">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -144,7 +144,7 @@ Only create incidents when the alert display name contain text from this list, l
 Should this Sentinel MS Security Incident Alert Rule be enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncident-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -153,7 +153,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncident-logAnalyticsWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L77">property <b>logAnalyticsWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L77">property <b>logAnalyticsWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logAnalyticsWorkspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -161,7 +161,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the Log Analytics Workspace this Sentinel MS Security Incident Alert Rule belongs to. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncident-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L81">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -169,7 +169,7 @@ The ID of the Log Analytics Workspace this Sentinel MS Security Incident Alert R
 The name which should be used for this Sentinel MS Security Incident Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncident-productFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L85">property <b>productFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L85">property <b>productFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>productFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ The name which should be used for this Sentinel MS Security Incident Alert Rule.
 The Microsoft Security Service from where the alert will be generated. Possible values are `Azure Active Directory Identity Protection`, `Azure Advanced Threat Protection`, `Azure Security Center`, `Azure Security Center for IoT` and `Microsoft Cloud App Security`.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncident-severityFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L89">property <b>severityFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L89">property <b>severityFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>severityFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -185,7 +185,7 @@ The Microsoft Security Service from where the alert will be generated. Possible 
 Only create incidents from alerts when alert severity level is contained in this list. Possible values are `High`, `Medium`, `Low` and `Informational`.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncident-textWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L93">property <b>textWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L93">property <b>textWhitelists</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -194,7 +194,7 @@ this property has been renamed to display_name_filter to better match the SDK &a
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>textWhitelists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncident-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -203,7 +203,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AlertRuleScheduled" data-link-title="AlertRuleScheduled">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L34">
         Resource <strong>AlertRuleScheduled</strong>
     </a>
 </h3>
@@ -237,7 +237,7 @@ const exampleAlertRuleScheduled = new azure.sentinel.AlertRuleScheduled("example
 ```
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L117"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L117"> <b>constructor</b></a>
 </h4>
 
 
@@ -251,7 +251,7 @@ Create a AlertRuleScheduled resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -262,14 +262,14 @@ Get an existing AlertRuleScheduled resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -280,7 +280,7 @@ Returns true if the given object is an instance of AlertRuleScheduled.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L65">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L65">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -288,7 +288,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The description of this Sentinel Scheduled Alert Rule.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L69">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L69">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -296,7 +296,7 @@ The description of this Sentinel Scheduled Alert Rule.
 The friendly name of this Sentinel Scheduled Alert Rule.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L73">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L73">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -304,7 +304,7 @@ The friendly name of this Sentinel Scheduled Alert Rule.
 Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -313,7 +313,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-logAnalyticsWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L77">property <b>logAnalyticsWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L77">property <b>logAnalyticsWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logAnalyticsWorkspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -321,7 +321,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the Log Analytics Workspace this Sentinel Scheduled Alert Rule belongs to. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L81">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -329,7 +329,7 @@ The ID of the Log Analytics Workspace this Sentinel Scheduled Alert Rule belongs
 The name which should be used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L85">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L85">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -337,7 +337,7 @@ The name which should be used for this Sentinel Scheduled Alert Rule. Changing t
 The query of this Sentinel Scheduled Alert Rule.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-queryFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L89">property <b>queryFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L89">property <b>queryFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>queryFrequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -345,7 +345,7 @@ The query of this Sentinel Scheduled Alert Rule.
 The ISO 8601 timespan duration between two consecutive queries. Defaults to `PT5H`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-queryPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L93">property <b>queryPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L93">property <b>queryPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>queryPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -353,7 +353,7 @@ The ISO 8601 timespan duration between two consecutive queries. Defaults to `PT5
 The ISO 8601 timespan duration, which determine the time period of the data covered by the query. For example, it can query the past 10 minutes of data, or the past 6 hours of data. Defaults to `PT5H`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L97">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L97">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>severity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -361,7 +361,7 @@ The ISO 8601 timespan duration, which determine the time period of the data cove
 The alert severity of this Sentinel Scheduled Alert Rule. Possible values are `High`, `Medium`, `Low` and `Informational`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-suppressionDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L101">property <b>suppressionDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L101">property <b>suppressionDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>suppressionDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -369,7 +369,7 @@ The alert severity of this Sentinel Scheduled Alert Rule. Possible values are `H
 If `suppressionEnabled` is `true`, this is ISO 8601 timespan duration, which specifies the amount of time the query should stop running after alert is generated. Defaults to `PT5H`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-suppressionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L105">property <b>suppressionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L105">property <b>suppressionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>suppressionEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -377,7 +377,7 @@ If `suppressionEnabled` is `true`, this is ISO 8601 timespan duration, which spe
 Should the Sentinel Scheduled Alert Rulea stop running query after alert is generated? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-tactics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L109">property <b>tactics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L109">property <b>tactics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tactics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -385,7 +385,7 @@ Should the Sentinel Scheduled Alert Rulea stop running query after alert is gene
 A list of categories of attacks by which to classify the rule. Possible values are `Collection`, `CommandAndControl`, `CredentialAccess`, `DefenseEvasion`, `Discovery`, `Execution`, `Exfiltration`, `Impact`, `InitialAccess`, `LateralMovement`, `Persistence` and `PrivilegeEscalation`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-triggerOperator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L113">property <b>triggerOperator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L113">property <b>triggerOperator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>triggerOperator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -393,7 +393,7 @@ A list of categories of attacks by which to classify the rule. Possible values a
 The alert trigger operator, combined with `triggerThreshold`, setting alert threshold of this Sentinel Scheduled Alert Rule. Possible values are `Equal`, `GreaterThan`, `LessThan`, `NotEqual`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-triggerThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L117">property <b>triggerThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L117">property <b>triggerThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>triggerThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -401,7 +401,7 @@ The alert trigger operator, combined with `triggerThreshold`, setting alert thre
 The baseline number of query results generated, combined with `triggerOperator`, setting alert threshold of this Sentinel Scheduled Alert Rule.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduled-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -412,7 +412,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAlertRule" data-link-title="getAlertRule">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/getAlertRule.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/getAlertRule.ts#L29">
         Function <strong>getAlertRule</strong>
     </a>
 </h3>
@@ -443,7 +443,7 @@ export const id = exampleAlertRule.then(exampleAlertRule => exampleAlertRule.id)
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AlertRuleMsSecurityIncidentArgs" data-link-title="AlertRuleMsSecurityIncidentArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L196">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L196">
         interface <strong>AlertRuleMsSecurityIncidentArgs</strong>
     </a>
 </h3>
@@ -453,7 +453,7 @@ export const id = exampleAlertRule.then(exampleAlertRule => exampleAlertRule.id)
 The set of arguments for constructing a AlertRuleMsSecurityIncident resource.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncidentArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L200">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L200">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -461,7 +461,7 @@ The set of arguments for constructing a AlertRuleMsSecurityIncident resource.
 The description of this Sentinel MS Security Incident Alert Rule.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncidentArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L204">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L204">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -469,7 +469,7 @@ The description of this Sentinel MS Security Incident Alert Rule.
 The friendly name of this Sentinel MS Security Incident Alert Rule.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncidentArgs-displayNameFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L208">property <b>displayNameFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L208">property <b>displayNameFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayNameFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -477,7 +477,7 @@ The friendly name of this Sentinel MS Security Incident Alert Rule.
 Only create incidents when the alert display name contain text from this list, leave empty to apply no filter.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncidentArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L212">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L212">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -485,7 +485,7 @@ Only create incidents when the alert display name contain text from this list, l
 Should this Sentinel MS Security Incident Alert Rule be enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncidentArgs-logAnalyticsWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L216">property <b>logAnalyticsWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L216">property <b>logAnalyticsWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logAnalyticsWorkspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -493,7 +493,7 @@ Should this Sentinel MS Security Incident Alert Rule be enabled? Defaults to `tr
 The ID of the Log Analytics Workspace this Sentinel MS Security Incident Alert Rule belongs to. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncidentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L220">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L220">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -501,7 +501,7 @@ The ID of the Log Analytics Workspace this Sentinel MS Security Incident Alert R
 The name which should be used for this Sentinel MS Security Incident Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncidentArgs-productFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L224">property <b>productFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L224">property <b>productFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -509,7 +509,7 @@ The name which should be used for this Sentinel MS Security Incident Alert Rule.
 The Microsoft Security Service from where the alert will be generated. Possible values are `Azure Active Directory Identity Protection`, `Azure Advanced Threat Protection`, `Azure Security Center`, `Azure Security Center for IoT` and `Microsoft Cloud App Security`.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncidentArgs-severityFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L228">property <b>severityFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L228">property <b>severityFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>severityFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -517,7 +517,7 @@ The Microsoft Security Service from where the alert will be generated. Possible 
 Only create incidents from alerts when alert severity level is contained in this list. Possible values are `High`, `Medium`, `Low` and `Informational`.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncidentArgs-textWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L232">property <b>textWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L232">property <b>textWhitelists</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -526,7 +526,7 @@ this property has been renamed to display_name_filter to better match the SDK &a
 </div>
 <pre class="highlight"><code><span class='kd'></span>textWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="AlertRuleMsSecurityIncidentState" data-link-title="AlertRuleMsSecurityIncidentState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L154">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L154">
         interface <strong>AlertRuleMsSecurityIncidentState</strong>
     </a>
 </h3>
@@ -536,7 +536,7 @@ this property has been renamed to display_name_filter to better match the SDK &a
 Input properties used for looking up and filtering AlertRuleMsSecurityIncident resources.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncidentState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L158">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L158">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -544,7 +544,7 @@ Input properties used for looking up and filtering AlertRuleMsSecurityIncident r
 The description of this Sentinel MS Security Incident Alert Rule.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncidentState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L162">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L162">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -552,7 +552,7 @@ The description of this Sentinel MS Security Incident Alert Rule.
 The friendly name of this Sentinel MS Security Incident Alert Rule.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncidentState-displayNameFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L166">property <b>displayNameFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L166">property <b>displayNameFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayNameFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -560,7 +560,7 @@ The friendly name of this Sentinel MS Security Incident Alert Rule.
 Only create incidents when the alert display name contain text from this list, leave empty to apply no filter.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncidentState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L170">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L170">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -568,7 +568,7 @@ Only create incidents when the alert display name contain text from this list, l
 Should this Sentinel MS Security Incident Alert Rule be enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncidentState-logAnalyticsWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L174">property <b>logAnalyticsWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L174">property <b>logAnalyticsWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logAnalyticsWorkspaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -576,7 +576,7 @@ Should this Sentinel MS Security Incident Alert Rule be enabled? Defaults to `tr
 The ID of the Log Analytics Workspace this Sentinel MS Security Incident Alert Rule belongs to. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncidentState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L178">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L178">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -584,7 +584,7 @@ The ID of the Log Analytics Workspace this Sentinel MS Security Incident Alert R
 The name which should be used for this Sentinel MS Security Incident Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncidentState-productFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L182">property <b>productFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L182">property <b>productFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -592,7 +592,7 @@ The name which should be used for this Sentinel MS Security Incident Alert Rule.
 The Microsoft Security Service from where the alert will be generated. Possible values are `Azure Active Directory Identity Protection`, `Azure Advanced Threat Protection`, `Azure Security Center`, `Azure Security Center for IoT` and `Microsoft Cloud App Security`.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncidentState-severityFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L186">property <b>severityFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L186">property <b>severityFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>severityFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -600,7 +600,7 @@ The Microsoft Security Service from where the alert will be generated. Possible 
 Only create incidents from alerts when alert severity level is contained in this list. Possible values are `High`, `Medium`, `Low` and `Informational`.
 
 <h4 class="pdoc-member-header" id="AlertRuleMsSecurityIncidentState-textWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L190">property <b>textWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleMsSecurityIncident.ts#L190">property <b>textWhitelists</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -609,7 +609,7 @@ this property has been renamed to display_name_filter to better match the SDK &a
 </div>
 <pre class="highlight"><code><span class='kd'></span>textWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="AlertRuleScheduledArgs" data-link-title="AlertRuleScheduledArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L250">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L250">
         interface <strong>AlertRuleScheduledArgs</strong>
     </a>
 </h3>
@@ -619,7 +619,7 @@ this property has been renamed to display_name_filter to better match the SDK &a
 The set of arguments for constructing a AlertRuleScheduled resource.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L254">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L254">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -627,7 +627,7 @@ The set of arguments for constructing a AlertRuleScheduled resource.
 The description of this Sentinel Scheduled Alert Rule.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L258">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L258">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -635,7 +635,7 @@ The description of this Sentinel Scheduled Alert Rule.
 The friendly name of this Sentinel Scheduled Alert Rule.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L262">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L262">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -643,7 +643,7 @@ The friendly name of this Sentinel Scheduled Alert Rule.
 Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledArgs-logAnalyticsWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L266">property <b>logAnalyticsWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L266">property <b>logAnalyticsWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logAnalyticsWorkspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -651,7 +651,7 @@ Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
 The ID of the Log Analytics Workspace this Sentinel Scheduled Alert Rule belongs to. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L270">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L270">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -659,7 +659,7 @@ The ID of the Log Analytics Workspace this Sentinel Scheduled Alert Rule belongs
 The name which should be used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledArgs-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L274">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L274">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -667,7 +667,7 @@ The name which should be used for this Sentinel Scheduled Alert Rule. Changing t
 The query of this Sentinel Scheduled Alert Rule.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledArgs-queryFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L278">property <b>queryFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L278">property <b>queryFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queryFrequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -675,7 +675,7 @@ The query of this Sentinel Scheduled Alert Rule.
 The ISO 8601 timespan duration between two consecutive queries. Defaults to `PT5H`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledArgs-queryPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L282">property <b>queryPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L282">property <b>queryPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queryPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -683,7 +683,7 @@ The ISO 8601 timespan duration between two consecutive queries. Defaults to `PT5
 The ISO 8601 timespan duration, which determine the time period of the data covered by the query. For example, it can query the past 10 minutes of data, or the past 6 hours of data. Defaults to `PT5H`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledArgs-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L286">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L286">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>severity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -691,7 +691,7 @@ The ISO 8601 timespan duration, which determine the time period of the data cove
 The alert severity of this Sentinel Scheduled Alert Rule. Possible values are `High`, `Medium`, `Low` and `Informational`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledArgs-suppressionDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L290">property <b>suppressionDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L290">property <b>suppressionDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>suppressionDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -699,7 +699,7 @@ The alert severity of this Sentinel Scheduled Alert Rule. Possible values are `H
 If `suppressionEnabled` is `true`, this is ISO 8601 timespan duration, which specifies the amount of time the query should stop running after alert is generated. Defaults to `PT5H`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledArgs-suppressionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L294">property <b>suppressionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L294">property <b>suppressionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>suppressionEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -707,7 +707,7 @@ If `suppressionEnabled` is `true`, this is ISO 8601 timespan duration, which spe
 Should the Sentinel Scheduled Alert Rulea stop running query after alert is generated? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledArgs-tactics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L298">property <b>tactics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L298">property <b>tactics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tactics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -715,7 +715,7 @@ Should the Sentinel Scheduled Alert Rulea stop running query after alert is gene
 A list of categories of attacks by which to classify the rule. Possible values are `Collection`, `CommandAndControl`, `CredentialAccess`, `DefenseEvasion`, `Discovery`, `Execution`, `Exfiltration`, `Impact`, `InitialAccess`, `LateralMovement`, `Persistence` and `PrivilegeEscalation`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledArgs-triggerOperator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L302">property <b>triggerOperator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L302">property <b>triggerOperator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggerOperator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -723,7 +723,7 @@ A list of categories of attacks by which to classify the rule. Possible values a
 The alert trigger operator, combined with `triggerThreshold`, setting alert threshold of this Sentinel Scheduled Alert Rule. Possible values are `Equal`, `GreaterThan`, `LessThan`, `NotEqual`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledArgs-triggerThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L306">property <b>triggerThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L306">property <b>triggerThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggerThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -731,7 +731,7 @@ The alert trigger operator, combined with `triggerThreshold`, setting alert thre
 The baseline number of query results generated, combined with `triggerOperator`, setting alert threshold of this Sentinel Scheduled Alert Rule.
 
 <h3 class="pdoc-module-header" id="AlertRuleScheduledState" data-link-title="AlertRuleScheduledState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L188">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L188">
         interface <strong>AlertRuleScheduledState</strong>
     </a>
 </h3>
@@ -741,7 +741,7 @@ The baseline number of query results generated, combined with `triggerOperator`,
 Input properties used for looking up and filtering AlertRuleScheduled resources.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L192">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L192">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -749,7 +749,7 @@ Input properties used for looking up and filtering AlertRuleScheduled resources.
 The description of this Sentinel Scheduled Alert Rule.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L196">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L196">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -757,7 +757,7 @@ The description of this Sentinel Scheduled Alert Rule.
 The friendly name of this Sentinel Scheduled Alert Rule.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L200">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L200">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -765,7 +765,7 @@ The friendly name of this Sentinel Scheduled Alert Rule.
 Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledState-logAnalyticsWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L204">property <b>logAnalyticsWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L204">property <b>logAnalyticsWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logAnalyticsWorkspaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -773,7 +773,7 @@ Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
 The ID of the Log Analytics Workspace this Sentinel Scheduled Alert Rule belongs to. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L208">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L208">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -781,7 +781,7 @@ The ID of the Log Analytics Workspace this Sentinel Scheduled Alert Rule belongs
 The name which should be used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledState-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L212">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L212">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>query?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -789,7 +789,7 @@ The name which should be used for this Sentinel Scheduled Alert Rule. Changing t
 The query of this Sentinel Scheduled Alert Rule.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledState-queryFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L216">property <b>queryFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L216">property <b>queryFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queryFrequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -797,7 +797,7 @@ The query of this Sentinel Scheduled Alert Rule.
 The ISO 8601 timespan duration between two consecutive queries. Defaults to `PT5H`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledState-queryPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L220">property <b>queryPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L220">property <b>queryPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queryPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -805,7 +805,7 @@ The ISO 8601 timespan duration between two consecutive queries. Defaults to `PT5
 The ISO 8601 timespan duration, which determine the time period of the data covered by the query. For example, it can query the past 10 minutes of data, or the past 6 hours of data. Defaults to `PT5H`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledState-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L224">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L224">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>severity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -813,7 +813,7 @@ The ISO 8601 timespan duration, which determine the time period of the data cove
 The alert severity of this Sentinel Scheduled Alert Rule. Possible values are `High`, `Medium`, `Low` and `Informational`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledState-suppressionDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L228">property <b>suppressionDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L228">property <b>suppressionDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>suppressionDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -821,7 +821,7 @@ The alert severity of this Sentinel Scheduled Alert Rule. Possible values are `H
 If `suppressionEnabled` is `true`, this is ISO 8601 timespan duration, which specifies the amount of time the query should stop running after alert is generated. Defaults to `PT5H`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledState-suppressionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L232">property <b>suppressionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L232">property <b>suppressionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>suppressionEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -829,7 +829,7 @@ If `suppressionEnabled` is `true`, this is ISO 8601 timespan duration, which spe
 Should the Sentinel Scheduled Alert Rulea stop running query after alert is generated? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledState-tactics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L236">property <b>tactics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L236">property <b>tactics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tactics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -837,7 +837,7 @@ Should the Sentinel Scheduled Alert Rulea stop running query after alert is gene
 A list of categories of attacks by which to classify the rule. Possible values are `Collection`, `CommandAndControl`, `CredentialAccess`, `DefenseEvasion`, `Discovery`, `Execution`, `Exfiltration`, `Impact`, `InitialAccess`, `LateralMovement`, `Persistence` and `PrivilegeEscalation`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledState-triggerOperator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L240">property <b>triggerOperator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L240">property <b>triggerOperator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggerOperator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -845,7 +845,7 @@ A list of categories of attacks by which to classify the rule. Possible values a
 The alert trigger operator, combined with `triggerThreshold`, setting alert threshold of this Sentinel Scheduled Alert Rule. Possible values are `Equal`, `GreaterThan`, `LessThan`, `NotEqual`.
 
 <h4 class="pdoc-member-header" id="AlertRuleScheduledState-triggerThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/alertRuleScheduled.ts#L244">property <b>triggerThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/alertRuleScheduled.ts#L244">property <b>triggerThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggerThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -853,7 +853,7 @@ The alert trigger operator, combined with `triggerThreshold`, setting alert thre
 The baseline number of query results generated, combined with `triggerOperator`, setting alert threshold of this Sentinel Scheduled Alert Rule.
 
 <h3 class="pdoc-module-header" id="GetAlertRuleArgs" data-link-title="GetAlertRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/getAlertRule.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/getAlertRule.ts#L46">
         interface <strong>GetAlertRuleArgs</strong>
     </a>
 </h3>
@@ -863,7 +863,7 @@ The baseline number of query results generated, combined with `triggerOperator`,
 A collection of arguments for invoking getAlertRule.
 
 <h4 class="pdoc-member-header" id="GetAlertRuleArgs-logAnalyticsWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/getAlertRule.ts#L50">property <b>logAnalyticsWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/getAlertRule.ts#L50">property <b>logAnalyticsWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logAnalyticsWorkspaceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -871,7 +871,7 @@ A collection of arguments for invoking getAlertRule.
 The ID of the Log Analytics Workspace this Sentinel Alert Rule belongs to.
 
 <h4 class="pdoc-member-header" id="GetAlertRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/getAlertRule.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/getAlertRule.ts#L54">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -879,7 +879,7 @@ The ID of the Log Analytics Workspace this Sentinel Alert Rule belongs to.
 The name which should be used for this Sentinel Alert Rule.
 
 <h3 class="pdoc-module-header" id="GetAlertRuleResult" data-link-title="GetAlertRuleResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/getAlertRule.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/getAlertRule.ts#L60">
         interface <strong>GetAlertRuleResult</strong>
     </a>
 </h3>
@@ -889,7 +889,7 @@ The name which should be used for this Sentinel Alert Rule.
 A collection of values returned by getAlertRule.
 
 <h4 class="pdoc-member-header" id="GetAlertRuleResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/getAlertRule.ts#L64">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/getAlertRule.ts#L64">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -897,12 +897,12 @@ A collection of values returned by getAlertRule.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAlertRuleResult-logAnalyticsWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/getAlertRule.ts#L65">property <b>logAnalyticsWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/getAlertRule.ts#L65">property <b>logAnalyticsWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logAnalyticsWorkspaceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlertRuleResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/87ec45403dcdc845364bf2cd86aa71620069a540/sdk/nodejs/sentinel/getAlertRule.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c7c4391106960cf7ba55fe9faa260f6e8f35daba/sdk/nodejs/sentinel/getAlertRule.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

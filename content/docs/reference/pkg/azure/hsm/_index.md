@@ -23,7 +23,7 @@ Explore the resources and functions of the hsm module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.20.0</dd>
+	<dd>3.20.1</dd>
 </dl>
 
 
