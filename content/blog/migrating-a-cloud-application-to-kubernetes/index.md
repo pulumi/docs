@@ -60,7 +60,7 @@ $ cp -r aws-pern-voting-app/postgresql_dynamic_provider.ts aws-ts-k8s-voting-app
 $ cd aws-ts-k8s-voting-app
 ```
 
-Because we haven't set up our database with any SSL certificates to authenticate and encrypt internet traffic, the PostgreSQL Dynamic Provider used in the PERN app to create schemas will need to be slightly modified to include an `ssl: false` pool parameter in the `create` and `delete` functions. 
+Because we haven't set up our database with any SSL certificates to authenticate and encrypt internet traffic, the PostgreSQL Dynamic Provider used in the PERN app to create schemas will need to be slightly modified to include an `ssl: false` pool parameter in the `create` and `delete` functions.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
