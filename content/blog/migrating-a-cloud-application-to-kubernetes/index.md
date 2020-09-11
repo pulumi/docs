@@ -31,7 +31,7 @@ $ mkdir aws-ts-k8s-voting-app && cd aws-ts-k8s-voting-app
 $ pulumi new aws-typescript
 ```
 
-The project will require several configuration variables, which we set using `pulumi config set`. The variables are used to configure the PostgreSQL admin account, a user account for initializing the schema and table, and the database's region.
+The project will require several configuration variables, which we set using `pulumi config set`. The variables are used to configure the PostgreSQL admin account, a user account for initializing the schema and table, and its region.
 
 ```bash
 $ pulumi config set sql-admin-name <NAME>
@@ -123,9 +123,9 @@ const pool = new Pool({
 module.exports = pool;
 ```
 
-In order to fully prepare our application for Kubernetes, a Docker container has to be created to act as the PostgreSQL database for the application. Although this is slightly more complex than directly asking AWS to provision an RDS instance, the underlying mechanics behind both approaches are the same.
+To prepare our application for Kubernetes, we create a PostgreSQL Docker container for the application. Although this is slightly more complex than directly asking AWS to provision an RDS instance, the underlying mechanics are the same for either approach.
 
-The first step, is to create two directories:
+The first step is to create two directories:
 
 ```bash
 $ mkdir databaseside && cd databaseside
@@ -184,7 +184,7 @@ fi
 su postgres -c "/usr/lib/postgresql/10/bin/postgres -D /persistentVolume/postgresqlDb"
 ```
 
-With our Dynamic Provider, server, client, and database in place, we can focus on the main `index.ts` file. We start with importing libraries and describing the application's configuration options.
+With our Dynamic Provider, server, client, and database in place, we can focus on the infrastructure. We start with importing libraries and describing the application's configuration options.
 
 ```typescript
 import * as aws from "@pulumi/aws";
@@ -204,7 +204,7 @@ const awsConfig = new pulumi.Config("aws");
 const region = aws.config.region;
 ```
 
-The central part of our application will be an AWS Elastic Kubernetes Cluster. It holds our application, and dictates how many nodes should be allocated for the processes running inside the cluster.
+The central part of our application us an AWS Elastic Kubernetes Cluster. It holds our application and dictates how many nodes should be allocated for the processes running inside the cluster.
 
 ```typescript
 const eksCluster = new eks.Cluster("eksCluster", {
@@ -222,7 +222,7 @@ const eksCluster = new eks.Cluster("eksCluster", {
 });
 ```
 
-Kubernetes nodes use ephemeral storage, meaning that when they shut down or get restarted, everything is erased. To create a permanent storage system suitable for our database, we need a Persistent Volume instance.
+Kubernetes nodes use ephemeral storage. When Pods shut down or get restarted, everything is erased. To create a permanent storage system suitable for our database, we need a Persistent Volume instance.
 
 ```typescript
 const ebsVolume = new aws.ebs.Volume("storage-volume", {
@@ -316,7 +316,7 @@ const postgresqlAddress = databasesideListener.status.loadBalancer.ingress[0].ho
 });
 ```
 
-We can now treat our Kubernetes database the same way as we did our RDS one. Like the PERN application, we create a user, schema, and table, grant permissions for our user to edit and select it, and populate the table with two initial voting options.
+We can use ourt Postgres database in the same way as our RDS version. Like the PERN application, we create a user, schema, and table, grant permissions for our user to edit and select it, and populate the table with two initial voting options.
 
 ```typescript
 const postgresqlProvider = new postgresql.Provider("postgresql-provider", {
