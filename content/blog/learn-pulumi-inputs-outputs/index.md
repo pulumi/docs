@@ -27,7 +27,7 @@ For example, we have a load balancer. It takes a target and a port as inputs, an
 ```typescript
 interface LoadBalancerArgs {
   target: Input<string>;
-  Port: Input<number>;
+  port: Input<number>;
 }
 
 class LoadBalancer {
