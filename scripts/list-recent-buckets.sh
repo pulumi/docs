@@ -71,7 +71,7 @@ deletables=()
 for bucket in $buckets; do
     maybe_echo
     maybe_echo "Fetching metadata for ${bucket}..."
-    metadata="$(aws s3 cp "s3://${bucket}/metadata.json" - || echo '')"
+    metadata="$(aws s3 cp "s3://${bucket}/metadata.json" 2>/dev/null - || echo '')"
 
     if [ ! -z "$metadata" ]; then
         bucket_url="$(echo $metadata | jq -r '.url')"
@@ -108,7 +108,7 @@ for bucket in $buckets; do
                 deletables+=($bucket_name)
             fi
         elif [ "$1" == "pr" ]; then
-            associated_pr="$(get_pr_for_commit $bucket_commit)"
+            associated_pr="$(get_pr_for_commit $bucket_commit || echo '')"
 
             if [ ! -z "$associated_pr" ]; then
                 pr_number="$(echo $associated_pr | jq -r '.[0].number')"
