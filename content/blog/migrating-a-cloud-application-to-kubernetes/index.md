@@ -60,7 +60,7 @@ $ cp -r aws-pern-voting-app/postgresql_dynamic_provider.ts aws-ts-k8s-voting-app
 $ cd aws-ts-k8s-voting-app
 ```
 
-The PostgreSQL Dynamic Provider used in the PERN app to create schemas will need to be slightly modified to include an `ssl: false` pool parameter in the `create` and `delete` functions.
+Because we haven't set up our database with any SSL certificates to authenticate and encrypt internet traffic, the PostgreSQL Dynamic Provider used in the PERN app to create schemas will need to be slightly modified to include an `ssl: false` pool parameter in the `create` and `delete` functions. 
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -301,11 +301,12 @@ In order to have a clean, simple URL through which we can access the database, w
 
 ```typescript
 const databasesideListener = new k8s.core.v1.Service("database-side-listener", {
-    metadata: { labels: databaseAppLabels },
+    metadata: { labels: databaseDeployment.metadata.labels },
     spec: {
         type: "LoadBalancer",
         ports: [{ port: 5432, targetPort: "http" }],
         selector: databaseAppLabels,
+        publishNotReadyAddresses: false,
     }}, {
     provider: eksCluster.provider,
     }
@@ -407,11 +408,12 @@ const serverDeployment = new k8s.apps.v1.Deployment("server-side-service", {
 });
 
 const serversideListener = new k8s.core.v1.Service("server-side-listener", {
-    metadata: { labels: serverAppLabels },
+    metadata: { labels: serverDeployment.metadata.labels },
     spec: {
         type: "LoadBalancer",
         ports: [{ port: 5000, targetPort: "http" }],
         selector: serverAppLabels,
+        publishNotReadyAddresses: false,
     }}, {
     provider: eksCluster.provider,
     }
@@ -452,11 +454,12 @@ const clientDeployment = new k8s.apps.v1.Deployment("client-side-service", {
 });
 
 const clientsideListener = new k8s.core.v1.Service("client-side-listener", {
-    metadata: { labels: clientAppLabels },
+    metadata: { labels: clientDeployment.metadata.labels },
     spec: {
         type: "LoadBalancer",
         ports: [{ port: 3000, targetPort: "http" }],
         selector: clientAppLabels,
+        publishNotReadyAddresses: false,
     }}, {
     provider: eksCluster.provider,
     }
@@ -466,11 +469,12 @@ const clientsideListener = new k8s.core.v1.Service("client-side-listener", {
 To make our Kubernetes application available on the Internet, we export the clientside listener's address. We can open a browser window with the URL and port to view our application.
 
 ```typescript
+export const kubeConfig = eksCluster.kubeconfig;
 export const URL = clientsideListener.status.loadBalancer.ingress[0].hostname;
 ```
 
 In this example, we went over the benefits that Kubernetes offers and showed how to use Pulumi to convert an application to Kubernetes and deploy it on AWS. Although it might seem unnecessary to use such a system for only a single voting app, the advantages of running your project in the form of containerized services quickly become apparent as your application grows in size.  
 
-Next week, I'll ____.
+Next week, we'll explore applications using the MERN stack: MongoDB, Express, React, and NodeJS.
 
 The blog post's code can be [found on Github](https://github.com/pulumi/examples/tree/vova/aws-ts-k8s-voting-app/aws-ts-k8s-voting-app).
