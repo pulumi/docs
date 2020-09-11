@@ -209,7 +209,7 @@ func main() {
         c := config.New(ctx, "")
 
         name := c.Require("name")
-        dbPassword := c.Require("dbPassword")
+        dbPassword := c.RequireSecret("dbPassword")
     }
 }
 ```
