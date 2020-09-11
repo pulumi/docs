@@ -14,7 +14,7 @@ This article is about resource inputs and outputs, what they are, why we have th
 
 <!--more-->
 
-When we create a resource, you pass arguments to its constructor. They are called the inputs and can be
+When you create a resource, you pass arguments to its constructor. They are called the inputs and can be
 
 - concrete values (like strings, numbers, and booleans), arrays, or other structures
 - asynchronous values such as promises or
