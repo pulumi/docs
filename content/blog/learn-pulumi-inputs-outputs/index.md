@@ -22,7 +22,7 @@ When you create a resource, you pass arguments to its constructor. They are call
 
 After a resource is created, you can access any of its properties. These are called its outputs. Outputs are resolved to values once they're known. Pulumi lets you see how resources change with [preview]({{< relref "docs/reference/cli/pulumi_preview" >}}). A preview shows the difference from the current state to the desired state. The change hasn’t been made, so some outputs might not be known at runtime.
 
-For example, we have a load balancer. It takes a target in a port as inputs, and its outputs include an IP address and a port.
+For example, we have a load balancer. It takes a target and a port as inputs, and its outputs include an IP address and a port.
 
 ```typescript
 interface LoadBalancerArgs {
