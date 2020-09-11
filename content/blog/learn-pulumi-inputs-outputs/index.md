@@ -44,7 +44,7 @@ The diagram shows how this works before we examine the code. Assume that we crea
 
 ![Load balancer example](i_o-example.png)
 
-The diagram shows the dependency. The load balancer knows that it depends on the virtual machine because the target points at the virtual machines IP address. Be aware that when you're running `pulumi up`, you may encounter outputs. In this case, we're creating
+The diagram shows the dependency. The load balancer knows that it depends on the virtual machine because the target points at the virtual machine's IP address. Be aware that when you're running `pulumi up`, you may encounter outputs. In this case, we're creating
 the virtual machine and load balancer, and if we click details, we'll see the target is listed as an output of string. That's because, during the preview, its value isn't known. In this case, the port is known as 80 because it’s a concrete value, but it’s possible that the port could come from another resource's output, or it was computed. In that case, it might be shown as an output of type number.
 
 Let's look at some code. The first thing to notice is that the code is wrapped in an `async ()` function. The reason for this is that we create a Virtual Private Cloud (VPC) which defines a virtual network for our application.  Resources, such as the virtual machines' public subnets used to communicate to the load balancer, aren’t known in advance. We create a security group to control egress from the VPC.
