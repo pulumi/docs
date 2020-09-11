@@ -3,7 +3,7 @@ title: "Module scheduling/v1"
 title_tag: "Module scheduling/v1 | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "v1"
 meta_desc: "Explore members of the v1 module in the @pulumi/kubernetes package."
-git_sha: "fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf"
+git_sha: "ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f"
 block_external_search_index: true
 ---
 
@@ -31,7 +31,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="PriorityClass" data-link-title="PriorityClass">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L12">
         Resource <strong>PriorityClass</strong>
     </a>
 </h3>
@@ -41,7 +41,7 @@ block_external_search_index: true
 PriorityClass defines mapping from a priority class name to the priority integer value. The value can be any valid integer.
 
 <h4 class="pdoc-member-header" id="PriorityClass-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L66"> <b>constructor</b></a>
 </h4>
 
 
@@ -55,7 +55,7 @@ Create a PriorityClass resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PriorityClass-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -66,14 +66,14 @@ Get an existing PriorityClass resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PriorityClass-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PriorityClass-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -84,7 +84,7 @@ Returns true if the given object is an instance of PriorityClass.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PriorityClass-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L42">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L42">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"scheduling.k8s.io/v1"</span>&gt;;</code></pre>
@@ -92,7 +92,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PriorityClass-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L46">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L46">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -100,7 +100,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 description is an arbitrary string that usually provides guidelines on when this priority class should be used.
 
 <h4 class="pdoc-member-header" id="PriorityClass-globalDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L50">property <b>globalDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L50">property <b>globalDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>globalDefault: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -108,7 +108,7 @@ description is an arbitrary string that usually provides guidelines on when this
 globalDefault specifies whether this PriorityClass should be considered as the default priority for pods that do not have any priority class. Only one PriorityClass can be marked as `globalDefault`. However, if more than one PriorityClasses exists with their `globalDefault` field set to true, the smallest value of such global default PriorityClasses will be used as the default priority.
 
 <h4 class="pdoc-member-header" id="PriorityClass-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -117,7 +117,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PriorityClass-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L54">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L54">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PriorityClass"</span>&gt;;</code></pre>
@@ -125,7 +125,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PriorityClass-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L58">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L58">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -133,7 +133,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="PriorityClass-preemptionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L62">property <b>preemptionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L62">property <b>preemptionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preemptionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -141,7 +141,7 @@ Standard object's metadata. More info: https://git.k8s.io/community/contributors
 PreemptionPolicy is the Policy for preempting pods with lower priority. One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset. This field is beta-level, gated by the NonPreemptingPriority feature-gate.
 
 <h4 class="pdoc-member-header" id="PriorityClass-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -150,7 +150,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="PriorityClass-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L66">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L66">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -158,7 +158,7 @@ deployments.
 The value of this priority class. This is the actual priority that pods receive when they have the name of this class in their pod spec.
 
 <h3 class="pdoc-module-header" id="PriorityClassList" data-link-title="PriorityClassList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClassList.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClassList.ts#L12">
         Resource <strong>PriorityClassList</strong>
     </a>
 </h3>
@@ -168,7 +168,7 @@ The value of this priority class. This is the actual priority that pods receive 
 PriorityClassList is a collection of priority classes.
 
 <h4 class="pdoc-member-header" id="PriorityClassList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClassList.ts#L54"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClassList.ts#L54"> <b>constructor</b></a>
 </h4>
 
 
@@ -182,7 +182,7 @@ Create a PriorityClassList resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PriorityClassList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClassList.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClassList.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -193,14 +193,14 @@ Get an existing PriorityClassList resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PriorityClassList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClassList.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClassList.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PriorityClassList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClassList.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClassList.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -211,7 +211,7 @@ Returns true if the given object is an instance of PriorityClassList.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PriorityClassList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClassList.ts#L42">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClassList.ts#L42">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"scheduling.k8s.io/v1"</span>&gt;;</code></pre>
@@ -219,7 +219,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PriorityClassList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClassList.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClassList.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -228,7 +228,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PriorityClassList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClassList.ts#L46">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClassList.ts#L46">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PriorityClass'>PriorityClass</a>[]&gt;;</code></pre>
@@ -236,7 +236,7 @@ deployments and may be missing (undefined) during planning phases.
 items is the list of PriorityClasses
 
 <h4 class="pdoc-member-header" id="PriorityClassList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClassList.ts#L50">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClassList.ts#L50">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PriorityClassList"</span>&gt;;</code></pre>
@@ -244,7 +244,7 @@ items is the list of PriorityClasses
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PriorityClassList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClassList.ts#L54">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClassList.ts#L54">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -252,7 +252,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard list metadata More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="PriorityClassList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClassList.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClassList.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -264,7 +264,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="PriorityClassArgs" data-link-title="PriorityClassArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L113">
         interface <strong>PriorityClassArgs</strong>
     </a>
 </h3>
@@ -274,7 +274,7 @@ deployments.
 The set of arguments for constructing a PriorityClass resource.
 
 <h4 class="pdoc-member-header" id="PriorityClassArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L117">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L117">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"scheduling.k8s.io/v1"</span>&gt;;</code></pre>
@@ -282,7 +282,7 @@ The set of arguments for constructing a PriorityClass resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PriorityClassArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L121">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L121">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -290,7 +290,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 description is an arbitrary string that usually provides guidelines on when this priority class should be used.
 
 <h4 class="pdoc-member-header" id="PriorityClassArgs-globalDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L125">property <b>globalDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L125">property <b>globalDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>globalDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -298,7 +298,7 @@ description is an arbitrary string that usually provides guidelines on when this
 globalDefault specifies whether this PriorityClass should be considered as the default priority for pods that do not have any priority class. Only one PriorityClass can be marked as `globalDefault`. However, if more than one PriorityClasses exists with their `globalDefault` field set to true, the smallest value of such global default PriorityClasses will be used as the default priority.
 
 <h4 class="pdoc-member-header" id="PriorityClassArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L129">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L129">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"PriorityClass"</span>&gt;;</code></pre>
@@ -306,7 +306,7 @@ globalDefault specifies whether this PriorityClass should be considered as the d
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PriorityClassArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L133">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L133">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -314,7 +314,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="PriorityClassArgs-preemptionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L137">property <b>preemptionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L137">property <b>preemptionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preemptionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -322,7 +322,7 @@ Standard object's metadata. More info: https://git.k8s.io/community/contributors
 PreemptionPolicy is the Policy for preempting pods with lower priority. One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset. This field is beta-level, gated by the NonPreemptingPriority feature-gate.
 
 <h4 class="pdoc-member-header" id="PriorityClassArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClass.ts#L141">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClass.ts#L141">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -330,7 +330,7 @@ PreemptionPolicy is the Policy for preempting pods with lower priority. One of N
 The value of this priority class. This is the actual priority that pods receive when they have the name of this class in their pod spec.
 
 <h3 class="pdoc-module-header" id="PriorityClassListArgs" data-link-title="PriorityClassListArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClassList.ts#L93">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClassList.ts#L93">
         interface <strong>PriorityClassListArgs</strong>
     </a>
 </h3>
@@ -340,7 +340,7 @@ The value of this priority class. This is the actual priority that pods receive 
 The set of arguments for constructing a PriorityClassList resource.
 
 <h4 class="pdoc-member-header" id="PriorityClassListArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClassList.ts#L97">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClassList.ts#L97">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"scheduling.k8s.io/v1"</span>&gt;;</code></pre>
@@ -348,7 +348,7 @@ The set of arguments for constructing a PriorityClassList resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PriorityClassListArgs-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClassList.ts#L101">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClassList.ts#L101">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PriorityClass'>PriorityClass</a>&gt;[]&gt;;</code></pre>
@@ -356,7 +356,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 items is the list of PriorityClasses
 
 <h4 class="pdoc-member-header" id="PriorityClassListArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClassList.ts#L105">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClassList.ts#L105">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"PriorityClassList"</span>&gt;;</code></pre>
@@ -364,7 +364,7 @@ items is the list of PriorityClasses
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PriorityClassListArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/scheduling/v1/priorityClassList.ts#L109">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/scheduling/v1/priorityClassList.ts#L109">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta'>ListMeta</a>&gt;;</code></pre>
