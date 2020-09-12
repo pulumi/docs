@@ -163,13 +163,13 @@ else
     echo "/persistentVolume is empty, and we need to initialize the postgresql database."
     cd /persistentVolume
     su postgres -c "/usr/lib/postgresql/10/bin/initdb -D /persistentVolume/postgresqlDb"
-    
+
     echo "host all  all    0.0.0.0/0  md5" >> /persistentVolume/postgresqlDb/pg_hba.conf
     echo "host all  all    ::/0       md5" >> /persistentVolume/postgresqlDb/pg_hba.conf
     echo "listen_addresses='*'" >> /persistentVolume/postgresqlDb/postgresql.conf
 
     su postgres -c "/usr/lib/postgresql/10/bin/pg_ctl -D /persistentVolume/postgresqlDb --wait -l logfile start"
-    
+
     set +x
     echo "psql -U postgres -c \"CREATE ROLE $ADMIN_NAME LOGIN SUPERUSER PASSWORD *********;\""
     psql -U postgres -c "CREATE ROLE $ADMIN_NAME LOGIN SUPERUSER PASSWORD '$ADMIN_PASSWORD';"
@@ -186,7 +186,7 @@ else
             choice_id SERIAL PRIMARY KEY,
             text VARCHAR(255) NOT NULL,
             vote_count INTEGER NOT NULL
-        );       
+        );
         GRANT USAGE ON SCHEMA voting_app TO $USER_NAME;
         GRANT SELECT, UPDATE ON ALL TABLES IN SCHEMA voting_app TO $USER_NAME;
         INSERT INTO voting_app.choice (text, vote_count) VALUES('Tabs', 0);
