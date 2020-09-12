@@ -149,13 +149,12 @@ ADD database /database
 CMD [ "/database/startDatabase.sh" ]
 ```
 
-Our setup doesn't require any files, and so the only thing we need to put in the `database` folder is the `startDatabase.sh` script that launches it.
+Our setup doesn't require any files, and so the only thing we need to put in the `database` folder is a `startDatabase.sh` script that launches the database, configures users, and creates a table.
 
 ```bash
 #!/bin/bash
 set -exu
 FILE=/persistentVolume/postgresqlDb/postgresql.conf
-
 chown postgres:postgres /persistentVolume
 
 if test -f "$FILE"; then
@@ -164,20 +163,35 @@ else
     echo "/persistentVolume is empty, and we need to initialize the postgresql database."
     cd /persistentVolume
     su postgres -c "/usr/lib/postgresql/10/bin/initdb -D /persistentVolume/postgresqlDb"
-
+    
     echo "host all  all    0.0.0.0/0  md5" >> /persistentVolume/postgresqlDb/pg_hba.conf
     echo "host all  all    ::/0       md5" >> /persistentVolume/postgresqlDb/pg_hba.conf
     echo "listen_addresses='*'" >> /persistentVolume/postgresqlDb/postgresql.conf
 
     su postgres -c "/usr/lib/postgresql/10/bin/pg_ctl -D /persistentVolume/postgresqlDb --wait -l logfile start"
-
+    
     set +x
-    echo "psql -U postgres -c \"CREATE ROLE $ADMIN_NAME LOGIN SUPERUSER PASSWORD '*********';\""
+    echo "psql -U postgres -c \"CREATE ROLE $ADMIN_NAME LOGIN SUPERUSER PASSWORD *********;\""
     psql -U postgres -c "CREATE ROLE $ADMIN_NAME LOGIN SUPERUSER PASSWORD '$ADMIN_PASSWORD';"
-    echo "psql -U postgres -c \"ALTER ROLE `postgres` WITH NOLOGIN\";"
-    psql -U postgres -c "ALTER ROLE \"postgres\" WITH NOLOGIN;"
+    echo "psql -U postgres -c \"CREATE USER $USER_NAME WITH PASSWORD *********;\""
+    psql -U postgres -c "CREATE USER $USER_NAME WITH PASSWORD '$USER_PASSWORD';"
+    echo "psql -U postgres -c \"ALTER ROLE postgres WITH NOLOGIN;\""
+    psql -U postgres -c "ALTER ROLE postgres WITH NOLOGIN;"
     set -x
 
+    psql -U $ADMIN_NAME -d postgres -c "CREATE DATABASE $DATABASE_NAME;"
+    psql -U $ADMIN_NAME -d $DATABASE_NAME -c "
+        CREATE SCHEMA voting_app;
+        CREATE TABLE voting_app.choice(
+            choice_id SERIAL PRIMARY KEY,
+            text VARCHAR(255) NOT NULL,
+            vote_count INTEGER NOT NULL
+        );       
+        GRANT USAGE ON SCHEMA voting_app TO $USER_NAME;
+        GRANT SELECT, UPDATE ON ALL TABLES IN SCHEMA voting_app TO $USER_NAME;
+        INSERT INTO voting_app.choice (text, vote_count) VALUES('Tabs', 0);
+        INSERT INTO voting_app.choice (text, vote_count) VALUES('Spaces', 0);
+    "
     su postgres -c "/usr/lib/postgresql/10/bin/pg_ctl -D /persistentVolume/postgresqlDb --wait -l logfile stop"
 fi
 
@@ -226,7 +240,7 @@ Kubernetes nodes use ephemeral storage. When Pods shut down or get restarted, ev
 
 ```typescript
 const ebsVolume = new aws.ebs.Volume("storage-volume", {
-    size: 10,
+    size: 1,
     type: "gp2",
     availabilityZone: region + "a",
     encrypted: true,
@@ -297,13 +311,13 @@ const databaseDeployment = new k8s.apps.v1.Deployment(databaseAppName, {
 });
 ```
 
-In order to have a clean, simple URL through which we can access the database, we create a Kubernetes service for it.
+In order to have a a way for the pods in cluster to communicate with our database, we create a Kubernetes service for it. It is best practice to keep databases and other similar components entirely within the cluster, and not allow them to be accessed directly the internet.
 
 ```typescript
 const databasesideListener = new k8s.core.v1.Service("database-side-listener", {
     metadata: { labels: databaseDeployment.metadata.labels },
     spec: {
-        type: "LoadBalancer",
+        type: "ClusterIP",
         ports: [{ port: 5432, targetPort: "http" }],
         selector: databaseAppLabels,
         publishNotReadyAddresses: false,
@@ -312,63 +326,11 @@ const databasesideListener = new k8s.core.v1.Service("database-side-listener", {
     }
 );
 
-const postgresqlAddress = databasesideListener.status.loadBalancer.ingress[0].hostname;
+const postgresqlAddress = databasesideListener.spec.clusterIP;
 });
 ```
 
-We can use ourt Postgres database in the same way as our RDS version. Like the PERN application, we create a user, schema, and table, grant permissions for our user to edit and select it, and populate the table with two initial voting options.
-
-```typescript
-const postgresqlProvider = new postgresql.Provider("postgresql-provider", {
-        host: postgresqlAddress,
-        port: 5432,
-        username: sqlAdminName,
-        password: sqlAdminPassword,
-        superuser: false,
-        sslmode: "disable",
-});
-
-const postgresDatabase = new postgresql.Database("postgresql-database", {
-    name: "votes"}, {
-    provider: postgresqlProvider,
-});
-
-const postgresUser = new postgresql.Role("postgres-standard-role", {
-    name: sqlUserName,
-    password: sqlUserPassword,
-    superuser: false,
-    login: true,
-    connectionLimit: -1}, {
-    provider: postgresqlProvider,
-});
-
-const creationScript = `
-    CREATE SCHEMA voting_app;
-    CREATE TABLE voting_app.choice(
-        choice_id SERIAL PRIMARY KEY,
-        text VARCHAR(255) NOT NULL,
-        vote_count INTEGER NOT NULL
-    );
-    GRANT USAGE ON SCHEMA voting_app TO ${sqlUserName};
-    GRANT SELECT, UPDATE ON ALL TABLES IN SCHEMA voting_app TO ${sqlUserName};
-    INSERT INTO voting_app.choice (text, vote_count) VALUES('Tabs', 0);
-    INSERT INTO voting_app.choice (text, vote_count) VALUES('Spaces', 0);
-`;
-
-const deletionScript = "DROP SCHEMA IF EXISTS voting_app CASCADE";
-
-const postgresqlVotesSchema = new Schema("postgresql-votes-schema", {
-    creatorName: sqlAdminName,
-    creatorPassword: sqlAdminPassword,
-    serverAddress: postgresqlAddress,
-    databaseName: postgresDatabase.name,
-    creationScript: creationScript,
-    deletionScript: deletionScript,
-    postgresUserName: postgresUser.name,
-});
-```
-
-And now, all that remains is deploying the client and server containers to Kubernetes. Since the PERN application already deployed them as docker containers, it doesn't take much effort to reconfigure it for Kubernetes.
+Now, all that remains is deploying the client and server containers to Kubernetes. Since the PERN application already deployed them as docker containers, it doesn't take much effort to reconfigure it for Kubernetes. Unlike the database, these components can safely be opened up to the internet using a service with a Load Balancer type.
 
 We'll first set up the server deployment:
 
@@ -466,7 +428,7 @@ const clientsideListener = new k8s.core.v1.Service("client-side-listener", {
 );
 ```
 
-To make our Kubernetes application available on the Internet, we export the clientside listener's address. We can open a browser window with the URL and port to view our application.
+To give us a simple way to connect to our application, we export the clientside listener's address. We can now open a browser window with the URL and port number to view our application.
 
 ```typescript
 export const kubeConfig = eksCluster.kubeconfig;
