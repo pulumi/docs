@@ -22,12 +22,12 @@ When you create a resource, you pass arguments to its constructor. They are call
 
 After a resource is created, you can access any of its properties. These are called its outputs. Outputs are resolved to values once they're known. Pulumi lets you see how resources change with [preview]({{< relref "docs/reference/cli/pulumi_preview" >}}). A preview shows the difference from the current state to the desired state. The change hasn’t been made, so some outputs might not be known at runtime.
 
-For example, we have a load balancer. It takes a target and a port as inputs, and its outputs include an IP address and a port.
+Let's take at an example of a load balancer class. It takes a target and a port as inputs, and its outputs include an IP address and a port.
 
 ```typescript
 interface LoadBalancerArgs {
-  target: Input<string>;
   port: Input<number>;
+  target: Input<string>;
 }
 
 class LoadBalancer {
@@ -38,16 +38,18 @@ class LoadBalancer {
 }
 ```
 
-The address can't be known in advance and will only be available once the load balancer is created. However, the input port argument is the same as the output port, making it available during previews.
-
-The diagram shows how this works before we examine the code. Assume that we create a virtual machine that has an IP address as its output.  Next, we'll create a load balancer that has a target and a port as inputs. We'll pass the virtual machine's IP address as the target because we want the load balancer to point at it, and then we'll set 80 as the input port. The resulting load balancer's outputs will then be the generated hostname and the port 80.
+When the load balancer is created, the address (as an output) will eventually become available. Because the port number is an input, it's available in a preview.
 
 ![Load balancer example](i_o-example.png)
 
-The diagram shows the dependency. The load balancer knows that it depends on the virtual machine because the target points at the virtual machine's IP address. Be aware that when you're running `pulumi up`, you may encounter outputs. In this case, we're creating
-the virtual machine and load balancer, and if we click details, we'll see the target is listed as an output of string. That's because, during the preview, its value isn't known. In this case, the port is known as 80 because it’s a concrete value, but it’s possible that the port could come from another resource's output, or it was computed. In that case, it might be shown as an output of type number.
+The diagram shows how this works. Assume that we create a virtual machine that has an IP address as its output.  Next, we'll create a load balancer that has a target and a port as inputs. We'll pass the virtual machine's IP address as the target because we want the load balancer to point at it, and then we'll set 80 as the input port. The resulting load balancer's outputs will then be the generated hostname and the port 80.
 
-Let's look at some code. The first thing to notice is that the code is wrapped in an `async ()` function. The reason for this is that we create a Virtual Private Cloud (VPC) which defines a virtual network for our application.  Resources, such as the virtual machines' public subnets used to communicate to the load balancer, aren’t known in advance. We create a security group to control egress from the VPC.
+The diagram shows the dependency. The load balancer knows that it depends on the virtual machine because the target points at the virtual machine's IP address. Be aware that when you're running `pulumi up`, you may encounter outputs. In this case, we're creating
+the virtual machine and load balancer, and if we examine details in the preview, we'll see the target is listed as an output of string. That's because, during the preview, its value isn't known. In this case, the port is known as 80 because it’s a concrete value, but it’s possible that the port could come from another resource's output, or it was computed. In that case, it might be shown as an output of type number.
+
+Let's look at some code. This worked example uses AWS resources and presents a slightly more complex situation. However, the way inputs and outputs are used are the same as the basic example.
+
+The first thing to notice is that the code is wrapped in an `async ()` function. The reason for this is that we create a Virtual Private Cloud (VPC) which defines a virtual network for our application.  In place of an IP address as a target, the load balancer uses the VPC's public subnets to communicate to the load balancer, aren’t known in advance. We also create a security group to control egress from the VPC.
 
 ```typescript
 import * as aws from "@pulumi/aws";
