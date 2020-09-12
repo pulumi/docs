@@ -171,6 +171,62 @@ or visit https://pulumi.com/docs/reference/install/ for manual instructions and 
 
 If you are upgrading to Pulumi 2.0, please see our [migration guide]({{< relref "migrating-2.0" >}}).
 
+## Installing Previous Versions
+
+You can find the list of versions on the [Available Versions]({{< relref "/docs/get-started/install/versions" >}}) page.
+
+{{< chooser os "macos,windows,linux" >}}
+
+{{% choosable os macos %}}
+
+### Homebrew
+
+```bash
+$ brew install pulumi@<version>
+```
+
+### Installation Script
+
+```bash
+$ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
+```
+
+{{% /choosable %}}
+
+{{% choosable os linux %}}
+
+### Installation Script
+
+To install, run our installation script:
+
+```bash
+$ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
+```
+
+{{% /choosable %}}
+
+{{% choosable os windows %}}
+
+### Chocolatey
+
+You can install Pulumi through the [Chocolatey package manager](https://chocolatey.org):
+
+```powershell
+> choco install pulumi --version <version>
+```
+
+### Installation Script
+
+1. Open a new command prompt window (**WIN+R**: `cmd.exe`):
+
+1. Run our installation script:
+
+```bat
+> @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $version = '<version>'; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1')).Replace('${latestVersion}', $version)" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
+```
+
+{{% /choosable %}}
+
 ## Uninstalling Pulumi
 
 To uninstall Pulumi, remove the `.pulumi` folder from your home directory. If you installed Pulumi manually, you should
