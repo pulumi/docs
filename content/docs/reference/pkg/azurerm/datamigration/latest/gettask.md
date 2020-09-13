@@ -1335,8 +1335,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sas_uri_python">
-<a href="#sas_uri_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>uri</a>
+        <span id="sasuri_python">
+<a href="#sasuri_python" style="color: inherit; text-decoration: inherit;">sas<wbr>Uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -19655,8 +19655,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="status_message_python">
-<a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
+        <span id="statusmessage_python">
+<a href="#statusmessage_python" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -20853,8 +20853,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="status_message_python">
-<a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
+        <span id="statusmessage_python">
+<a href="#statusmessage_python" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -21319,8 +21319,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="status_message_python">
-<a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
+        <span id="statusmessage_python">
+<a href="#statusmessage_python" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -23381,6 +23381,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="sourceservername_python">
+<a href="#sourceservername_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Source server name{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="sourceserverversion_python">
 <a href="#sourceserverversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Version</a>
 </span> 
@@ -23388,16 +23398,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Source server version{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="source_server_name_python">
-<a href="#source_server_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Source server name{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">

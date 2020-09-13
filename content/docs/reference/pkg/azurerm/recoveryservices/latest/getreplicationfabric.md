@@ -6279,6 +6279,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="agentcount_python">
+<a href="#agentcount_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The number of source and target servers configured to talk to this CS.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="agentexpirydate_python">
 <a href="#agentexpirydate_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Expiry<wbr>Date</a>
 </span> 
@@ -6296,16 +6306,6 @@ The following output properties are available:
         <span class="property-type"><a href="#versiondetailsresponse">Dict[Version<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The agent version details.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="agent_count_python">
-<a href="#agent_count_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The number of source and target servers configured to talk to this CS.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

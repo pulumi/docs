@@ -965,8 +965,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="storage_account_url_python">
-<a href="#storage_account_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>url</a>
+        <span id="storageaccounturl_python">
+<a href="#storageaccounturl_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

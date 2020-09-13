@@ -867,8 +867,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioning_errors_python">
-<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
+        <span id="provisioningerrors_python">
+<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -1153,8 +1153,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="system_services_python">
-<a href="#system_services_python" style="color: inherit; text-decoration: inherit;">system_<wbr>services</a>
+        <span id="systemservices_python">
+<a href="#systemservices_python" style="color: inherit; text-decoration: inherit;">system<wbr>Services</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemserviceresponse">List[System<wbr>Service<wbr>Response]</a></span>
@@ -1163,23 +1163,23 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="agentvmsize_python">
-<a href="#agentvmsize_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Vm<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Agent virtual machine size{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="agent_count_python">
-<a href="#agent_count_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>count</a>
+        <span id="agentcount_python">
+<a href="#agentcount_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Number of agents{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="agentvmsize_python">
+<a href="#agentvmsize_python" style="color: inherit; text-decoration: inherit;">agent<wbr>VMSize</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Agent virtual machine size{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1193,8 +1193,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cluster_fqdn_python">
-<a href="#cluster_fqdn_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>fqdn</a>
+        <span id="clusterfqdn_python">
+<a href="#clusterfqdn_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Fqdn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1765,8 +1765,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioning_errors_python">
-<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
+        <span id="provisioningerrors_python">
+<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -3115,8 +3115,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioning_errors_python">
-<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
+        <span id="provisioningerrors_python">
+<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -3501,8 +3501,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="connectivity_endpoints_python">
-<a href="#connectivity_endpoints_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>endpoints</a>
+        <span id="connectivityendpoints_python">
+<a href="#connectivityendpoints_python" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Endpoints</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstanceconnectivityendpointsresponse">Dict[Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response]</a></span>
@@ -4103,8 +4103,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioning_errors_python">
-<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
+        <span id="provisioningerrors_python">
+<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -4499,8 +4499,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioning_errors_python">
-<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
+        <span id="provisioningerrors_python">
+<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -4991,8 +4991,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioning_errors_python">
-<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
+        <span id="provisioningerrors_python">
+<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -5775,8 +5775,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioning_errors_python">
-<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
+        <span id="provisioningerrors_python">
+<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -7967,8 +7967,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioning_errors_python">
-<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
+        <span id="provisioningerrors_python">
+<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>

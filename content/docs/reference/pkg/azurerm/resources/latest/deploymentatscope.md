@@ -4600,8 +4600,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="resource_types_python">
-<a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
+        <span id="resourcetypes_python">
+<a href="#resourcetypes_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Types</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerresourcetyperesponse">List[Provider<wbr>Resource<wbr>Type<wbr>Response]</a></span>

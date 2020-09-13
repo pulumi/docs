@@ -34,9 +34,9 @@ class MyStack : Stack
             RuleCollectionGroupName = "ruleCollectionGroup1",
             RuleCollections = 
             {
-                new AzureRM.Network.Latest.Inputs.FirewallPolicyNatRuleCollectionArgs
+                new AzureRM.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionArgs
                 {
-                    Action = new AzureRM.Network.Latest.Inputs.FirewallPolicyNatRuleCollectionActionArgs
+                    Action = new AzureRM.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
                     {
                         Type = "Deny",
                     },
@@ -78,11 +78,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -210,11 +206,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}

@@ -1115,8 +1115,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="v_core_python">
-<a href="#v_core_python" style="color: inherit; text-decoration: inherit;">v_<wbr>core</a>
+        <span id="vcore_python">
+<a href="#vcore_python" style="color: inherit; text-decoration: inherit;">v<wbr>Core</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

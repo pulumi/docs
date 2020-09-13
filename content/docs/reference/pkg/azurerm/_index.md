@@ -23,25 +23,17 @@ A Pulumi package for creating and managing Azure resources.
     <li><a href="apimanagement/" title="apimanagement"><span class="symbol module"></span>apimanagement</a></li>
     <li><a href="appconfiguration/" title="appconfiguration"><span class="symbol module"></span>appconfiguration</a></li>
     <li><a href="appplatform/" title="appplatform"><span class="symbol module"></span>appplatform</a></li>
-    <li><a href="attestation/" title="attestation"><span class="symbol module"></span>attestation</a></li>
     <li><a href="authorization/" title="authorization"><span class="symbol module"></span>authorization</a></li>
-    <li><a href="automanage/" title="automanage"><span class="symbol module"></span>automanage</a></li>
     <li><a href="automation/" title="automation"><span class="symbol module"></span>automation</a></li>
     <li><a href="avs/" title="avs"><span class="symbol module"></span>avs</a></li>
-    <li><a href="azureactivedirectory/" title="azureactivedirectory"><span class="symbol module"></span>azureactivedirectory</a></li>
-    <li><a href="azuredata/" title="azuredata"><span class="symbol module"></span>azuredata</a></li>
     <li><a href="azurestack/" title="azurestack"><span class="symbol module"></span>azurestack</a></li>
-    <li><a href="azurestackhci/" title="azurestackhci"><span class="symbol module"></span>azurestackhci</a></li>
     <li><a href="batch/" title="batch"><span class="symbol module"></span>batch</a></li>
     <li><a href="batchai/" title="batchai"><span class="symbol module"></span>batchai</a></li>
     <li><a href="billing/" title="billing"><span class="symbol module"></span>billing</a></li>
-    <li><a href="blockchain/" title="blockchain"><span class="symbol module"></span>blockchain</a></li>
-    <li><a href="blueprint/" title="blueprint"><span class="symbol module"></span>blueprint</a></li>
     <li><a href="botservice/" title="botservice"><span class="symbol module"></span>botservice</a></li>
     <li><a href="cache/" title="cache"><span class="symbol module"></span>cache</a></li>
     <li><a href="cdn/" title="cdn"><span class="symbol module"></span>cdn</a></li>
     <li><a href="certificateregistration/" title="certificateregistration"><span class="symbol module"></span>certificateregistration</a></li>
-    <li><a href="changeanalysis/" title="changeanalysis"><span class="symbol module"></span>changeanalysis</a></li>
     <li><a href="cognitiveservices/" title="cognitiveservices"><span class="symbol module"></span>cognitiveservices</a></li>
     <li><a href="compute/" title="compute"><span class="symbol module"></span>compute</a></li>
     <li><a href="consumption/" title="consumption"><span class="symbol module"></span>consumption</a></li>
@@ -50,7 +42,6 @@ A Pulumi package for creating and managing Azure resources.
     <li><a href="containerservice/" title="containerservice"><span class="symbol module"></span>containerservice</a></li>
     <li><a href="costmanagement/" title="costmanagement"><span class="symbol module"></span>costmanagement</a></li>
     <li><a href="customerinsights/" title="customerinsights"><span class="symbol module"></span>customerinsights</a></li>
-    <li><a href="customproviders/" title="customproviders"><span class="symbol module"></span>customproviders</a></li>
     <li><a href="databox/" title="databox"><span class="symbol module"></span>databox</a></li>
     <li><a href="databoxedge/" title="databoxedge"><span class="symbol module"></span>databoxedge</a></li>
     <li><a href="databricks/" title="databricks"><span class="symbol module"></span>databricks</a></li>
@@ -63,45 +54,28 @@ A Pulumi package for creating and managing Azure resources.
     <li><a href="dbformariadb/" title="dbformariadb"><span class="symbol module"></span>dbformariadb</a></li>
     <li><a href="dbformysql/" title="dbformysql"><span class="symbol module"></span>dbformysql</a></li>
     <li><a href="dbforpostgresql/" title="dbforpostgresql"><span class="symbol module"></span>dbforpostgresql</a></li>
-    <li><a href="delegatednetwork/" title="delegatednetwork"><span class="symbol module"></span>delegatednetwork</a></li>
-    <li><a href="deploymentmanager/" title="deploymentmanager"><span class="symbol module"></span>deploymentmanager</a></li>
-    <li><a href="desktopvirtualization/" title="desktopvirtualization"><span class="symbol module"></span>desktopvirtualization</a></li>
     <li><a href="devices/" title="devices"><span class="symbol module"></span>devices</a></li>
-    <li><a href="devops/" title="devops"><span class="symbol module"></span>devops</a></li>
     <li><a href="devspaces/" title="devspaces"><span class="symbol module"></span>devspaces</a></li>
     <li><a href="devtestlab/" title="devtestlab"><span class="symbol module"></span>devtestlab</a></li>
-    <li><a href="digitaltwins/" title="digitaltwins"><span class="symbol module"></span>digitaltwins</a></li>
     <li><a href="documentdb/" title="documentdb"><span class="symbol module"></span>documentdb</a></li>
     <li><a href="domainregistration/" title="domainregistration"><span class="symbol module"></span>domainregistration</a></li>
-    <li><a href="engagementfabric/" title="engagementfabric"><span class="symbol module"></span>engagementfabric</a></li>
     <li><a href="enterpriseknowledgegraph/" title="enterpriseknowledgegraph"><span class="symbol module"></span>enterpriseknowledgegraph</a></li>
     <li><a href="eventgrid/" title="eventgrid"><span class="symbol module"></span>eventgrid</a></li>
     <li><a href="eventhub/" title="eventhub"><span class="symbol module"></span>eventhub</a></li>
-    <li><a href="hanaonazure/" title="hanaonazure"><span class="symbol module"></span>hanaonazure</a></li>
-    <li><a href="hardwaresecuritymodules/" title="hardwaresecuritymodules"><span class="symbol module"></span>hardwaresecuritymodules</a></li>
-    <li><a href="hdinsight/" title="hdinsight"><span class="symbol module"></span>hdinsight</a></li>
     <li><a href="healthcareapis/" title="healthcareapis"><span class="symbol module"></span>healthcareapis</a></li>
     <li><a href="hybridcompute/" title="hybridcompute"><span class="symbol module"></span>hybridcompute</a></li>
     <li><a href="hybriddata/" title="hybriddata"><span class="symbol module"></span>hybriddata</a></li>
-    <li><a href="hybridnetwork/" title="hybridnetwork"><span class="symbol module"></span>hybridnetwork</a></li>
     <li><a href="importexport/" title="importexport"><span class="symbol module"></span>importexport</a></li>
     <li><a href="insights/" title="insights"><span class="symbol module"></span>insights</a></li>
-    <li><a href="intune/" title="intune"><span class="symbol module"></span>intune</a></li>
     <li><a href="iotcentral/" title="iotcentral"><span class="symbol module"></span>iotcentral</a></li>
-    <li><a href="iotspaces/" title="iotspaces"><span class="symbol module"></span>iotspaces</a></li>
     <li><a href="keyvault/" title="keyvault"><span class="symbol module"></span>keyvault</a></li>
-    <li><a href="kubernetes/" title="kubernetes"><span class="symbol module"></span>kubernetes</a></li>
-    <li><a href="kubernetesconfiguration/" title="kubernetesconfiguration"><span class="symbol module"></span>kubernetesconfiguration</a></li>
     <li><a href="kusto/" title="kusto"><span class="symbol module"></span>kusto</a></li>
     <li><a href="labservices/" title="labservices"><span class="symbol module"></span>labservices</a></li>
     <li><a href="logic/" title="logic"><span class="symbol module"></span>logic</a></li>
     <li><a href="machinelearning/" title="machinelearning"><span class="symbol module"></span>machinelearning</a></li>
-    <li><a href="machinelearningcompute/" title="machinelearningcompute"><span class="symbol module"></span>machinelearningcompute</a></li>
-    <li><a href="machinelearningexperimentation/" title="machinelearningexperimentation"><span class="symbol module"></span>machinelearningexperimentation</a></li>
     <li><a href="machinelearningservices/" title="machinelearningservices"><span class="symbol module"></span>machinelearningservices</a></li>
     <li><a href="maintenance/" title="maintenance"><span class="symbol module"></span>maintenance</a></li>
     <li><a href="managedidentity/" title="managedidentity"><span class="symbol module"></span>managedidentity</a></li>
-    <li><a href="managednetwork/" title="managednetwork"><span class="symbol module"></span>managednetwork</a></li>
     <li><a href="managedservices/" title="managedservices"><span class="symbol module"></span>managedservices</a></li>
     <li><a href="management/" title="management"><span class="symbol module"></span>management</a></li>
     <li><a href="managementpartner/" title="managementpartner"><span class="symbol module"></span>managementpartner</a></li>
@@ -112,11 +86,9 @@ A Pulumi package for creating and managing Azure resources.
     <li><a href="mixedreality/" title="mixedreality"><span class="symbol module"></span>mixedreality</a></li>
     <li><a href="netapp/" title="netapp"><span class="symbol module"></span>netapp</a></li>
     <li><a href="network/" title="network"><span class="symbol module"></span>network</a></li>
-    <li><a href="notebooks/" title="notebooks"><span class="symbol module"></span>notebooks</a></li>
     <li><a href="notificationhubs/" title="notificationhubs"><span class="symbol module"></span>notificationhubs</a></li>
     <li><a href="offazure/" title="offazure"><span class="symbol module"></span>offazure</a></li>
     <li><a href="operationalinsights/" title="operationalinsights"><span class="symbol module"></span>operationalinsights</a></li>
-    <li><a href="operationsmanagement/" title="operationsmanagement"><span class="symbol module"></span>operationsmanagement</a></li>
     <li><a href="peering/" title="peering"><span class="symbol module"></span>peering</a></li>
     <li><a href="policyinsights/" title="policyinsights"><span class="symbol module"></span>policyinsights</a></li>
     <li><a href="portal/" title="portal"><span class="symbol module"></span>portal</a></li>
@@ -131,24 +103,20 @@ A Pulumi package for creating and managing Azure resources.
     <li><a href="security/" title="security"><span class="symbol module"></span>security</a></li>
     <li><a href="servicebus/" title="servicebus"><span class="symbol module"></span>servicebus</a></li>
     <li><a href="servicefabric/" title="servicefabric"><span class="symbol module"></span>servicefabric</a></li>
-    <li><a href="servicefabricmesh/" title="servicefabricmesh"><span class="symbol module"></span>servicefabricmesh</a></li>
     <li><a href="signalrservice/" title="signalrservice"><span class="symbol module"></span>signalrservice</a></li>
     <li><a href="softwareplan/" title="softwareplan"><span class="symbol module"></span>softwareplan</a></li>
     <li><a href="solutions/" title="solutions"><span class="symbol module"></span>solutions</a></li>
     <li><a href="sql/" title="sql"><span class="symbol module"></span>sql</a></li>
-    <li><a href="sqlvirtualmachine/" title="sqlvirtualmachine"><span class="symbol module"></span>sqlvirtualmachine</a></li>
     <li><a href="storage/" title="storage"><span class="symbol module"></span>storage</a></li>
     <li><a href="storagecache/" title="storagecache"><span class="symbol module"></span>storagecache</a></li>
     <li><a href="storagesync/" title="storagesync"><span class="symbol module"></span>storagesync</a></li>
     <li><a href="storsimple/" title="storsimple"><span class="symbol module"></span>storsimple</a></li>
     <li><a href="streamanalytics/" title="streamanalytics"><span class="symbol module"></span>streamanalytics</a></li>
     <li><a href="subscription/" title="subscription"><span class="symbol module"></span>subscription</a></li>
-    <li><a href="synapse/" title="synapse"><span class="symbol module"></span>synapse</a></li>
     <li><a href="timeseriesinsights/" title="timeseriesinsights"><span class="symbol module"></span>timeseriesinsights</a></li>
     <li><a href="virtualmachineimages/" title="virtualmachineimages"><span class="symbol module"></span>virtualmachineimages</a></li>
     <li><a href="vmwarecloudsimple/" title="vmwarecloudsimple"><span class="symbol module"></span>vmwarecloudsimple</a></li>
     <li><a href="web/" title="web"><span class="symbol module"></span>web</a></li>
-    <li><a href="windowsesu/" title="windowsesu"><span class="symbol module"></span>windowsesu</a></li>
     <li><a href="windowsiot/" title="windowsiot"><span class="symbol module"></span>windowsiot</a></li>
 </ul>
 

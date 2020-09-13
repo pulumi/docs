@@ -60,11 +60,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -2603,6 +2599,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="resourceprovidername_python">
+<a href="#resourceprovidername_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Provider<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span> 
@@ -2610,16 +2616,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}the resource group name.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resource_provider_name_python">
-<a href="#resource_provider_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>provider_<wbr>name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3049,6 +3045,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="resourceprovidername_python">
+<a href="#resourceprovidername_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Provider<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span> 
@@ -3056,16 +3062,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}the resource group name.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resource_provider_name_python">
-<a href="#resource_provider_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>provider_<wbr>name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

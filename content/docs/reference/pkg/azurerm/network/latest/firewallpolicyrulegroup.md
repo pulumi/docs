@@ -36,7 +36,7 @@ class MyStack : Stack
             {
                 
                 {
-                    { "action", new AzureRM.Network.Latest.Inputs.FirewallPolicyFilterRuleActionArgs
+                    { "action", new AzureRM.Network.Latest.Inputs.FirewallPolicyNatRuleActionArgs
                     {
                         Type = "Deny",
                     } },
@@ -78,11 +78,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -210,11 +206,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}

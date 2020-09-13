@@ -862,8 +862,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schedule_policy_python">
-<a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
+        <span id="schedulepolicy_python">
+<a href="#schedulepolicy_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[Long<wbr>Term<wbr>Schedule<wbr>Policy] | Dict[Simple<wbr>Schedule<wbr>Policy]</span>
@@ -1028,8 +1028,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schedule_policy_python">
-<a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
+        <span id="schedulepolicy_python">
+<a href="#schedulepolicy_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response] | Dict[Simple<wbr>Schedule<wbr>Policy<wbr>Response]</span>
@@ -2626,8 +2626,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schedule_policy_python">
-<a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
+        <span id="schedulepolicy_python">
+<a href="#schedulepolicy_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[Long<wbr>Term<wbr>Schedule<wbr>Policy] | Dict[Simple<wbr>Schedule<wbr>Policy]</span>
@@ -2792,8 +2792,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schedule_policy_python">
-<a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
+        <span id="schedulepolicy_python">
+<a href="#schedulepolicy_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response] | Dict[Simple<wbr>Schedule<wbr>Policy<wbr>Response]</span>

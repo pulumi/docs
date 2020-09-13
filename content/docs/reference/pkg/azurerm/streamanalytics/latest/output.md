@@ -54,11 +54,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -153,11 +149,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -260,11 +252,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -380,11 +368,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -511,11 +495,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -638,11 +618,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -753,11 +729,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -854,11 +826,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -968,11 +936,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
