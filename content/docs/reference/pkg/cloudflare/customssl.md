@@ -138,7 +138,7 @@ const foossl = new cloudflare.CustomSsl("foossl", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.CustomSsl">CustomSsl</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_ssl_options</span><span class="p">:</span> <span class="nx">Optional[CustomSslCustomSslOptionsArgs]</span> = None<span class="p">, </span><span class="nx">custom_ssl_priorities</span><span class="p">:</span> <span class="nx">Optional[List[CustomSslCustomSslPriorityArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.CustomSsl">CustomSsl</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_ssl_options</span><span class="p">:</span> <span class="nx">Optional[CustomSslCustomSslOptionsArgs]</span> = None<span class="p">, </span><span class="nx">custom_ssl_priorities</span><span class="p">:</span> <span class="nx">Optional[Sequence[CustomSslCustomSslPriorityArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -455,7 +455,7 @@ The CustomSsl resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#custom_ssl_priorities_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>ssl_<wbr>priorities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customsslcustomsslpriority">List[Custom<wbr>Ssl<wbr>Custom<wbr>Ssl<wbr>Priority<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customsslcustomsslpriority">Sequence[Custom<wbr>Ssl<wbr>Custom<wbr>Ssl<wbr>Priority<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -784,7 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -824,7 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -878,7 +878,7 @@ Get an existing CustomSsl resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_ssl_options</span><span class="p">:</span> <span class="nx">Optional[CustomSslCustomSslOptionsArgs]</span> = None<span class="p">, </span><span class="nx">custom_ssl_priorities</span><span class="p">:</span> <span class="nx">Optional[List[CustomSslCustomSslPriorityArgs]]</span> = None<span class="p">, </span><span class="nx">expires_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">modified_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">signature</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uploaded_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CustomSsl</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_ssl_options</span><span class="p">:</span> <span class="nx">Optional[CustomSslCustomSslOptionsArgs]</span> = None<span class="p">, </span><span class="nx">custom_ssl_priorities</span><span class="p">:</span> <span class="nx">Optional[Sequence[CustomSslCustomSslPriorityArgs]]</span> = None<span class="p">, </span><span class="nx">expires_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">modified_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">signature</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uploaded_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CustomSsl</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1366,7 +1366,7 @@ The following state arguments are supported:
 <a href="#state_custom_ssl_priorities_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>ssl_<wbr>priorities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customsslcustomsslpriority">List[Custom<wbr>Ssl<wbr>Custom<wbr>Ssl<wbr>Priority<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customsslcustomsslpriority">Sequence[Custom<wbr>Ssl<wbr>Custom<wbr>Ssl<wbr>Priority<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1386,7 +1386,7 @@ The following state arguments are supported:
 <a href="#state_hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1416,7 +1416,7 @@ The following state arguments are supported:
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1857,7 +1857,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

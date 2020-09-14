@@ -529,7 +529,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getwafrulesrule">List[Get<wbr>Waf<wbr>Rules<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getwafrulesrule">Sequence[Get<wbr>Waf<wbr>Rules<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}A map of WAF Rules details. Full list below:
 {{% /md %}}</dd>
@@ -1065,7 +1065,7 @@ The following output properties are available:
 <a href="#allowed_modes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>modes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of allowed `mode` values for the WAF Rule
 {{% /md %}}</dd>

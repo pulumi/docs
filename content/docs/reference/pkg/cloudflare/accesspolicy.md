@@ -219,7 +219,7 @@ const testPolicyIndex_accessPolicyAccessPolicy = new cloudflare.AccessPolicy("te
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessPolicy">AccessPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">decision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[List[AccessPolicyExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[List[AccessPolicyIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">precedence</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[List[AccessPolicyRequireArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessPolicy">AccessPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">decision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessPolicyExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessPolicyIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">precedence</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessPolicyRequireArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -423,7 +423,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyinclude">List&lt;Access<wbr>Policy<wbr>Include<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -455,7 +455,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexclude">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -477,7 +477,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequire">List&lt;Access<wbr>Policy<wbr>Require<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -531,7 +531,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyinclude">[]Access<wbr>Policy<wbr>Include</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -563,7 +563,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexclude">[]Access<wbr>Policy<wbr>Exclude</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -585,7 +585,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequire">[]Access<wbr>Policy<wbr>Require</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -639,7 +639,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyinclude">Access<wbr>Policy<wbr>Include[]</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -671,7 +671,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexclude">Access<wbr>Policy<wbr>Exclude[]</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -693,7 +693,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequire">Access<wbr>Policy<wbr>Require[]</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -745,9 +745,9 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyinclude">List[Access<wbr>Policy<wbr>Include<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyinclude">Sequence[Access<wbr>Policy<wbr>Include<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -777,9 +777,9 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexclude">List[Access<wbr>Policy<wbr>Exclude<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyexclude">Sequence[Access<wbr>Policy<wbr>Exclude<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -788,7 +788,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 <a href="#precedence_python" style="color: inherit; text-decoration: inherit;">precedence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
 {{% /md %}}</dd>
@@ -799,9 +799,9 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 <a href="#requires_python" style="color: inherit; text-decoration: inherit;">requires</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequire">List[Access<wbr>Policy<wbr>Require<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyrequire">Sequence[Access<wbr>Policy<wbr>Require<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -915,7 +915,7 @@ Get an existing AccessPolicy resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">decision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[List[AccessPolicyExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[List[AccessPolicyIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">precedence</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[List[AccessPolicyRequireArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">decision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessPolicyExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessPolicyIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">precedence</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessPolicyRequireArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1071,7 +1071,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexclude">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1082,7 +1082,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyinclude">List&lt;Access<wbr>Policy<wbr>Include<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1115,7 +1115,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequire">List&lt;Access<wbr>Policy<wbr>Require<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1179,7 +1179,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexclude">[]Access<wbr>Policy<wbr>Exclude</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1190,7 +1190,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyinclude">[]Access<wbr>Policy<wbr>Include</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1223,7 +1223,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequire">[]Access<wbr>Policy<wbr>Require</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1287,7 +1287,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexclude">Access<wbr>Policy<wbr>Exclude[]</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1298,7 +1298,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyinclude">Access<wbr>Policy<wbr>Include[]</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1331,7 +1331,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequire">Access<wbr>Policy<wbr>Require[]</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1393,9 +1393,9 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 <a href="#state_excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexclude">List[Access<wbr>Policy<wbr>Exclude<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyexclude">Sequence[Access<wbr>Policy<wbr>Exclude<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1404,9 +1404,9 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 <a href="#state_includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyinclude">List[Access<wbr>Policy<wbr>Include<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyinclude">Sequence[Access<wbr>Policy<wbr>Include<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1426,7 +1426,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 <a href="#state_precedence_python" style="color: inherit; text-decoration: inherit;">precedence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
 {{% /md %}}</dd>
@@ -1437,9 +1437,9 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 <a href="#state_requires_python" style="color: inherit; text-decoration: inherit;">requires</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequire">List[Access<wbr>Policy<wbr>Require<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyrequire">Sequence[Access<wbr>Policy<wbr>Require<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1494,6 +1494,16 @@ added.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authmethod_csharp">
+<a href="#authmethod_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1646,6 +1656,16 @@ added.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="authmethod_go">
+<a href="#authmethod_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="azures_go">
 <a href="#azures_go" style="color: inherit; text-decoration: inherit;">Azures</a>
 </span> 
@@ -1788,6 +1808,16 @@ added.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authmethod_nodejs">
+<a href="#authmethod_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1940,11 +1970,21 @@ added.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="auth_method_python">
+<a href="#auth_method_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="azures_python">
 <a href="#azures_python" style="color: inherit; text-decoration: inherit;">azures</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludeazure">List[Access<wbr>Policy<wbr>Exclude<wbr>Azure<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludeazure">Sequence[Access<wbr>Policy<wbr>Exclude<wbr>Azure<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1974,7 +2014,7 @@ added.
 <a href="#email_domains_python" style="color: inherit; text-decoration: inherit;">email_<wbr>domains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1984,7 +2024,7 @@ added.
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2004,7 +2044,7 @@ added.
 <a href="#githubs_python" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludegithub">List[Access<wbr>Policy<wbr>Exclude<wbr>Github<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludegithub">Sequence[Access<wbr>Policy<wbr>Exclude<wbr>Github<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2014,7 +2054,7 @@ added.
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2024,7 +2064,7 @@ added.
 <a href="#gsuites_python" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludegsuite">List[Access<wbr>Policy<wbr>Exclude<wbr>Gsuite<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludegsuite">Sequence[Access<wbr>Policy<wbr>Exclude<wbr>Gsuite<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2034,7 +2074,7 @@ added.
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2044,7 +2084,7 @@ added.
 <a href="#oktas_python" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludeokta">List[Access<wbr>Policy<wbr>Exclude<wbr>Okta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludeokta">Sequence[Access<wbr>Policy<wbr>Exclude<wbr>Okta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2054,7 +2094,7 @@ added.
 <a href="#samls_python" style="color: inherit; text-decoration: inherit;">samls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludesaml">List[Access<wbr>Policy<wbr>Exclude<wbr>Saml<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludesaml">Sequence[Access<wbr>Policy<wbr>Exclude<wbr>Saml<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2064,7 +2104,7 @@ added.
 <a href="#service_tokens_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2095,8 +2135,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+        <span id="identityproviderid_csharp">
+<a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -2105,11 +2145,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_csharp">
-<a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
+        <span id="ids_csharp">
+<a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2122,8 +2162,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+        <span id="identityproviderid_go">
+<a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -2132,11 +2172,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_go">
-<a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
+        <span id="ids_go">
+<a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2149,8 +2189,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+        <span id="identityproviderid_nodejs">
+<a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -2159,11 +2199,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_nodejs">
-<a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="ids_nodejs">
+<a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2176,8 +2216,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2186,11 +2226,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identity_provider_id_python">
-<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
+        <span id="ids_python">
+<a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2240,6 +2280,16 @@ added.
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_csharp">
+<a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2267,6 +2317,16 @@ added.
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_go">
+<a href="#teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2296,6 +2356,16 @@ added.
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_nodejs">
+<a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2324,6 +2394,16 @@ added.
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_python">
+<a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2351,11 +2431,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_csharp">
-<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+        <span id="emails_csharp">
+<a href="#emails_csharp" style="color: inherit; text-decoration: inherit;">Emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2378,11 +2458,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_go">
-<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+        <span id="emails_go">
+<a href="#emails_go" style="color: inherit; text-decoration: inherit;">Emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2405,11 +2485,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_nodejs">
-<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+        <span id="emails_nodejs">
+<a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2432,11 +2512,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_python">
-<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
+        <span id="emails_python">
+<a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2487,11 +2567,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -2515,11 +2595,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -2543,11 +2623,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -2571,11 +2651,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -2783,6 +2863,16 @@ added.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="authmethod_csharp">
+<a href="#authmethod_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="azures_csharp">
 <a href="#azures_csharp" style="color: inherit; text-decoration: inherit;">Azures</a>
 </span> 
@@ -2925,6 +3015,16 @@ added.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authmethod_go">
+<a href="#authmethod_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3077,6 +3177,16 @@ added.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="authmethod_nodejs">
+<a href="#authmethod_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="azures_nodejs">
 <a href="#azures_nodejs" style="color: inherit; text-decoration: inherit;">azures</a>
 </span> 
@@ -3224,11 +3334,21 @@ added.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="auth_method_python">
+<a href="#auth_method_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="azures_python">
 <a href="#azures_python" style="color: inherit; text-decoration: inherit;">azures</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludeazure">List[Access<wbr>Policy<wbr>Include<wbr>Azure<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyincludeazure">Sequence[Access<wbr>Policy<wbr>Include<wbr>Azure<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3258,7 +3378,7 @@ added.
 <a href="#email_domains_python" style="color: inherit; text-decoration: inherit;">email_<wbr>domains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3268,7 +3388,7 @@ added.
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3288,7 +3408,7 @@ added.
 <a href="#githubs_python" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludegithub">List[Access<wbr>Policy<wbr>Include<wbr>Github<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyincludegithub">Sequence[Access<wbr>Policy<wbr>Include<wbr>Github<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3298,7 +3418,7 @@ added.
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3308,7 +3428,7 @@ added.
 <a href="#gsuites_python" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludegsuite">List[Access<wbr>Policy<wbr>Include<wbr>Gsuite<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyincludegsuite">Sequence[Access<wbr>Policy<wbr>Include<wbr>Gsuite<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3318,7 +3438,7 @@ added.
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3328,7 +3448,7 @@ added.
 <a href="#oktas_python" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludeokta">List[Access<wbr>Policy<wbr>Include<wbr>Okta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyincludeokta">Sequence[Access<wbr>Policy<wbr>Include<wbr>Okta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3338,7 +3458,7 @@ added.
 <a href="#samls_python" style="color: inherit; text-decoration: inherit;">samls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludesaml">List[Access<wbr>Policy<wbr>Include<wbr>Saml<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyincludesaml">Sequence[Access<wbr>Policy<wbr>Include<wbr>Saml<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3348,7 +3468,7 @@ added.
 <a href="#service_tokens_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3379,8 +3499,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+        <span id="identityproviderid_csharp">
+<a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -3389,11 +3509,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_csharp">
-<a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
+        <span id="ids_csharp">
+<a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3406,8 +3526,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+        <span id="identityproviderid_go">
+<a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -3416,11 +3536,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_go">
-<a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
+        <span id="ids_go">
+<a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3433,8 +3553,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+        <span id="identityproviderid_nodejs">
+<a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -3443,11 +3563,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_nodejs">
-<a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="ids_nodejs">
+<a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3460,8 +3580,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3470,11 +3590,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identity_provider_id_python">
-<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
+        <span id="ids_python">
+<a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3524,6 +3644,16 @@ added.
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_csharp">
+<a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3551,6 +3681,16 @@ added.
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_go">
+<a href="#teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3580,6 +3720,16 @@ added.
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_nodejs">
+<a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3608,6 +3758,16 @@ added.
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_python">
+<a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3635,11 +3795,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_csharp">
-<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+        <span id="emails_csharp">
+<a href="#emails_csharp" style="color: inherit; text-decoration: inherit;">Emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3662,11 +3822,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_go">
-<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+        <span id="emails_go">
+<a href="#emails_go" style="color: inherit; text-decoration: inherit;">Emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3689,11 +3849,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_nodejs">
-<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+        <span id="emails_nodejs">
+<a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3716,11 +3876,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_python">
-<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
+        <span id="emails_python">
+<a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3771,11 +3931,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -3799,11 +3959,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -3827,11 +3987,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -3855,11 +4015,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -4067,6 +4227,16 @@ added.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="authmethod_csharp">
+<a href="#authmethod_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="azures_csharp">
 <a href="#azures_csharp" style="color: inherit; text-decoration: inherit;">Azures</a>
 </span> 
@@ -4209,6 +4379,16 @@ added.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authmethod_go">
+<a href="#authmethod_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4361,6 +4541,16 @@ added.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="authmethod_nodejs">
+<a href="#authmethod_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="azures_nodejs">
 <a href="#azures_nodejs" style="color: inherit; text-decoration: inherit;">azures</a>
 </span> 
@@ -4508,11 +4698,21 @@ added.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="auth_method_python">
+<a href="#auth_method_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="azures_python">
 <a href="#azures_python" style="color: inherit; text-decoration: inherit;">azures</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequireazure">List[Access<wbr>Policy<wbr>Require<wbr>Azure<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyrequireazure">Sequence[Access<wbr>Policy<wbr>Require<wbr>Azure<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4542,7 +4742,7 @@ added.
 <a href="#email_domains_python" style="color: inherit; text-decoration: inherit;">email_<wbr>domains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4552,7 +4752,7 @@ added.
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4572,7 +4772,7 @@ added.
 <a href="#githubs_python" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequiregithub">List[Access<wbr>Policy<wbr>Require<wbr>Github<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyrequiregithub">Sequence[Access<wbr>Policy<wbr>Require<wbr>Github<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4582,7 +4782,7 @@ added.
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4592,7 +4792,7 @@ added.
 <a href="#gsuites_python" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequiregsuite">List[Access<wbr>Policy<wbr>Require<wbr>Gsuite<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyrequiregsuite">Sequence[Access<wbr>Policy<wbr>Require<wbr>Gsuite<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4602,7 +4802,7 @@ added.
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4612,7 +4812,7 @@ added.
 <a href="#oktas_python" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequireokta">List[Access<wbr>Policy<wbr>Require<wbr>Okta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyrequireokta">Sequence[Access<wbr>Policy<wbr>Require<wbr>Okta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4622,7 +4822,7 @@ added.
 <a href="#samls_python" style="color: inherit; text-decoration: inherit;">samls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequiresaml">List[Access<wbr>Policy<wbr>Require<wbr>Saml<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesspolicyrequiresaml">Sequence[Access<wbr>Policy<wbr>Require<wbr>Saml<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4632,7 +4832,7 @@ added.
 <a href="#service_tokens_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4663,8 +4863,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+        <span id="identityproviderid_csharp">
+<a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -4673,11 +4873,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_csharp">
-<a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
+        <span id="ids_csharp">
+<a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4690,8 +4890,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+        <span id="identityproviderid_go">
+<a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -4700,11 +4900,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_go">
-<a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
+        <span id="ids_go">
+<a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4717,8 +4917,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+        <span id="identityproviderid_nodejs">
+<a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -4727,11 +4927,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_nodejs">
-<a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="ids_nodejs">
+<a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4744,8 +4944,8 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4754,11 +4954,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identity_provider_id_python">
-<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
+        <span id="ids_python">
+<a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4808,6 +5008,16 @@ added.
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_csharp">
+<a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -4835,6 +5045,16 @@ added.
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_go">
+<a href="#teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4864,6 +5084,16 @@ added.
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_nodejs">
+<a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -4892,6 +5122,16 @@ added.
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_python">
+<a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -4919,11 +5159,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_csharp">
-<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+        <span id="emails_csharp">
+<a href="#emails_csharp" style="color: inherit; text-decoration: inherit;">Emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4946,11 +5186,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_go">
-<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+        <span id="emails_go">
+<a href="#emails_go" style="color: inherit; text-decoration: inherit;">Emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4973,11 +5213,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_nodejs">
-<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+        <span id="emails_nodejs">
+<a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5000,11 +5240,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_python">
-<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
+        <span id="emails_python">
+<a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5055,11 +5295,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -5083,11 +5323,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -5111,11 +5351,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -5139,11 +5379,11 @@ added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>

@@ -34,24 +34,28 @@ all tokens to be granted. Example: `any_valid_service_token = true`
 requests. Example: `everyone = true`
 * `certificate` - (Optional) Whether to use mTLS certificate authentication.
 * `common_name` - (Optional) Use a certificate common name to authenticate with.
+* `auth_method` - (Optional) A string identifying the authentication
+method code. The list of codes are listed here: https://tools.ietf.org/html/rfc8176#section-2.
+Custom values are also supported.
 * `gsuite` - (Optional) Use GSuite as the authentication mechanism. Example:
   
   ```hcl
   # ... other configuration
   include {
     gsuite {
-      email = "admins@example.com"
+      email = ["admins@example.com"]
       identity_provider_id = "ca298b82-93b5-41bf-bc2d-10493f09b761"
     }
   }
   ```
-* `github` - (Optional) Use a GitHub team as the `include` condition. Example:
+* `github` - (Optional) Use a GitHub organization as the `include` condition. Example:
   
   ```hcl
   # ... other configuration
   include {
     github {
-      name = "my-github-team-name"
+      name = "my-github-org-name" # (Required) GitHub organization name
+      team = ["my-github-team-name"] # (Optional) GitHub teams
       identity_provider_id = "ca298b82-93b5-41bf-bc2d-10493f09b761"
     }
   }
@@ -62,7 +66,7 @@ requests. Example: `everyone = true`
   # ... other configuration
   include {
     azure {
-      id = "86773093-5feb-48dd-814b-7ccd3676ff50e"
+      id = ["86773093-5feb-48dd-814b-7ccd3676ff50e"]
       identity_provider_id = "ca298b82-93b5-41bf-bc2d-10493f09b761"
     }
   }
@@ -73,7 +77,7 @@ requests. Example: `everyone = true`
   # ... other configuration
   include {
     okta {
-      name = "admins"
+      name = ["admins"]
       identity_provider_id = "ca298b82-93b5-41bf-bc2d-10493f09b761"
     }
   }
@@ -273,7 +277,7 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessGroup">AccessGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[List[AccessGroupExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[List[AccessGroupIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[List[AccessGroupRequireArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessGroup">AccessGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupRequireArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -661,7 +665,7 @@ associated with.
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupinclude">List[Access<wbr>Group<wbr>Include<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupinclude">Sequence[Access<wbr>Group<wbr>Include<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -684,7 +688,7 @@ full list.
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexclude">List[Access<wbr>Group<wbr>Exclude<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupexclude">Sequence[Access<wbr>Group<wbr>Exclude<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -696,7 +700,7 @@ full list.
 <a href="#requires_python" style="color: inherit; text-decoration: inherit;">requires</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequire">List[Access<wbr>Group<wbr>Require<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgrouprequire">Sequence[Access<wbr>Group<wbr>Require<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -801,7 +805,7 @@ Get an existing AccessGroup resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[List[AccessGroupExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[List[AccessGroupIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[List[AccessGroupRequireArgs]]</span> = None<span class="p">) -&gt;</span> AccessGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupRequireArgs]]</span> = None<span class="p">) -&gt;</span> AccessGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1131,7 +1135,7 @@ associated with.
 <a href="#state_excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexclude">List[Access<wbr>Group<wbr>Exclude<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupexclude">Sequence[Access<wbr>Group<wbr>Exclude<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -1143,7 +1147,7 @@ full list.
 <a href="#state_includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupinclude">List[Access<wbr>Group<wbr>Include<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupinclude">Sequence[Access<wbr>Group<wbr>Include<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -1166,7 +1170,7 @@ full list.
 <a href="#state_requires_python" style="color: inherit; text-decoration: inherit;">requires</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequire">List[Access<wbr>Group<wbr>Require<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgrouprequire">Sequence[Access<wbr>Group<wbr>Require<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -1212,6 +1216,16 @@ full list.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authmethod_csharp">
+<a href="#authmethod_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1364,6 +1378,16 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="authmethod_go">
+<a href="#authmethod_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="azures_go">
 <a href="#azures_go" style="color: inherit; text-decoration: inherit;">Azures</a>
 </span> 
@@ -1506,6 +1530,16 @@ full list.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authmethod_nodejs">
+<a href="#authmethod_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1658,11 +1692,21 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="auth_method_python">
+<a href="#auth_method_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="azures_python">
 <a href="#azures_python" style="color: inherit; text-decoration: inherit;">azures</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludeazure">List[Access<wbr>Group<wbr>Exclude<wbr>Azure<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludeazure">Sequence[Access<wbr>Group<wbr>Exclude<wbr>Azure<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1692,7 +1736,7 @@ full list.
 <a href="#email_domains_python" style="color: inherit; text-decoration: inherit;">email_<wbr>domains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1702,7 +1746,7 @@ full list.
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1722,7 +1766,7 @@ full list.
 <a href="#githubs_python" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludegithub">List[Access<wbr>Group<wbr>Exclude<wbr>Github<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludegithub">Sequence[Access<wbr>Group<wbr>Exclude<wbr>Github<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1732,7 +1776,7 @@ full list.
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1742,7 +1786,7 @@ full list.
 <a href="#gsuites_python" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludegsuite">List[Access<wbr>Group<wbr>Exclude<wbr>Gsuite<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludegsuite">Sequence[Access<wbr>Group<wbr>Exclude<wbr>Gsuite<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1752,7 +1796,7 @@ full list.
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1762,7 +1806,7 @@ full list.
 <a href="#oktas_python" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludeokta">List[Access<wbr>Group<wbr>Exclude<wbr>Okta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludeokta">Sequence[Access<wbr>Group<wbr>Exclude<wbr>Okta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1772,7 +1816,7 @@ full list.
 <a href="#samls_python" style="color: inherit; text-decoration: inherit;">samls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludesaml">List[Access<wbr>Group<wbr>Exclude<wbr>Saml<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludesaml">Sequence[Access<wbr>Group<wbr>Exclude<wbr>Saml<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1782,7 +1826,7 @@ full list.
 <a href="#service_tokens_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1813,8 +1857,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+        <span id="identityproviderid_csharp">
+<a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -1823,11 +1867,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_csharp">
-<a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
+        <span id="ids_csharp">
+<a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1840,8 +1884,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+        <span id="identityproviderid_go">
+<a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1850,11 +1894,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_go">
-<a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
+        <span id="ids_go">
+<a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1867,8 +1911,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+        <span id="identityproviderid_nodejs">
+<a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1877,11 +1921,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_nodejs">
-<a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="ids_nodejs">
+<a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1894,8 +1938,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1904,11 +1948,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identity_provider_id_python">
-<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
+        <span id="ids_python">
+<a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1958,6 +2002,16 @@ full list.
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_csharp">
+<a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1985,6 +2039,16 @@ full list.
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_go">
+<a href="#teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2014,6 +2078,16 @@ full list.
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_nodejs">
+<a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2042,6 +2116,16 @@ full list.
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_python">
+<a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2069,11 +2153,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_csharp">
-<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+        <span id="emails_csharp">
+<a href="#emails_csharp" style="color: inherit; text-decoration: inherit;">Emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2096,11 +2180,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_go">
-<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+        <span id="emails_go">
+<a href="#emails_go" style="color: inherit; text-decoration: inherit;">Emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2123,11 +2207,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_nodejs">
-<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+        <span id="emails_nodejs">
+<a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2150,11 +2234,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_python">
-<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
+        <span id="emails_python">
+<a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2205,11 +2289,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
@@ -2233,11 +2317,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
@@ -2261,11 +2345,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
@@ -2289,11 +2373,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
@@ -2501,6 +2585,16 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="authmethod_csharp">
+<a href="#authmethod_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="azures_csharp">
 <a href="#azures_csharp" style="color: inherit; text-decoration: inherit;">Azures</a>
 </span> 
@@ -2643,6 +2737,16 @@ full list.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authmethod_go">
+<a href="#authmethod_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2795,6 +2899,16 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="authmethod_nodejs">
+<a href="#authmethod_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="azures_nodejs">
 <a href="#azures_nodejs" style="color: inherit; text-decoration: inherit;">azures</a>
 </span> 
@@ -2942,11 +3056,21 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="auth_method_python">
+<a href="#auth_method_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="azures_python">
 <a href="#azures_python" style="color: inherit; text-decoration: inherit;">azures</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludeazure">List[Access<wbr>Group<wbr>Include<wbr>Azure<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupincludeazure">Sequence[Access<wbr>Group<wbr>Include<wbr>Azure<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2976,7 +3100,7 @@ full list.
 <a href="#email_domains_python" style="color: inherit; text-decoration: inherit;">email_<wbr>domains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2986,7 +3110,7 @@ full list.
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3006,7 +3130,7 @@ full list.
 <a href="#githubs_python" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludegithub">List[Access<wbr>Group<wbr>Include<wbr>Github<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupincludegithub">Sequence[Access<wbr>Group<wbr>Include<wbr>Github<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3016,7 +3140,7 @@ full list.
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3026,7 +3150,7 @@ full list.
 <a href="#gsuites_python" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludegsuite">List[Access<wbr>Group<wbr>Include<wbr>Gsuite<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupincludegsuite">Sequence[Access<wbr>Group<wbr>Include<wbr>Gsuite<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3036,7 +3160,7 @@ full list.
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3046,7 +3170,7 @@ full list.
 <a href="#oktas_python" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludeokta">List[Access<wbr>Group<wbr>Include<wbr>Okta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupincludeokta">Sequence[Access<wbr>Group<wbr>Include<wbr>Okta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3056,7 +3180,7 @@ full list.
 <a href="#samls_python" style="color: inherit; text-decoration: inherit;">samls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludesaml">List[Access<wbr>Group<wbr>Include<wbr>Saml<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupincludesaml">Sequence[Access<wbr>Group<wbr>Include<wbr>Saml<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3066,7 +3190,7 @@ full list.
 <a href="#service_tokens_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3097,8 +3221,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+        <span id="identityproviderid_csharp">
+<a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -3107,11 +3231,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_csharp">
-<a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
+        <span id="ids_csharp">
+<a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3124,8 +3248,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+        <span id="identityproviderid_go">
+<a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -3134,11 +3258,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_go">
-<a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
+        <span id="ids_go">
+<a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3151,8 +3275,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+        <span id="identityproviderid_nodejs">
+<a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -3161,11 +3285,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_nodejs">
-<a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="ids_nodejs">
+<a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3178,8 +3302,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3188,11 +3312,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identity_provider_id_python">
-<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
+        <span id="ids_python">
+<a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3242,6 +3366,16 @@ full list.
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_csharp">
+<a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3269,6 +3403,16 @@ full list.
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_go">
+<a href="#teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3298,6 +3442,16 @@ full list.
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_nodejs">
+<a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3326,6 +3480,16 @@ full list.
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_python">
+<a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3353,11 +3517,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_csharp">
-<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+        <span id="emails_csharp">
+<a href="#emails_csharp" style="color: inherit; text-decoration: inherit;">Emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3380,11 +3544,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_go">
-<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+        <span id="emails_go">
+<a href="#emails_go" style="color: inherit; text-decoration: inherit;">Emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3407,11 +3571,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_nodejs">
-<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+        <span id="emails_nodejs">
+<a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3434,11 +3598,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_python">
-<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
+        <span id="emails_python">
+<a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3489,11 +3653,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
@@ -3517,11 +3681,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
@@ -3545,11 +3709,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
@@ -3573,11 +3737,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
@@ -3785,6 +3949,16 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="authmethod_csharp">
+<a href="#authmethod_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="azures_csharp">
 <a href="#azures_csharp" style="color: inherit; text-decoration: inherit;">Azures</a>
 </span> 
@@ -3927,6 +4101,16 @@ full list.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authmethod_go">
+<a href="#authmethod_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4079,6 +4263,16 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="authmethod_nodejs">
+<a href="#authmethod_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="azures_nodejs">
 <a href="#azures_nodejs" style="color: inherit; text-decoration: inherit;">azures</a>
 </span> 
@@ -4226,11 +4420,21 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="auth_method_python">
+<a href="#auth_method_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="azures_python">
 <a href="#azures_python" style="color: inherit; text-decoration: inherit;">azures</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequireazure">List[Access<wbr>Group<wbr>Require<wbr>Azure<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgrouprequireazure">Sequence[Access<wbr>Group<wbr>Require<wbr>Azure<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4260,7 +4464,7 @@ full list.
 <a href="#email_domains_python" style="color: inherit; text-decoration: inherit;">email_<wbr>domains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4270,7 +4474,7 @@ full list.
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4290,7 +4494,7 @@ full list.
 <a href="#githubs_python" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequiregithub">List[Access<wbr>Group<wbr>Require<wbr>Github<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgrouprequiregithub">Sequence[Access<wbr>Group<wbr>Require<wbr>Github<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4300,7 +4504,7 @@ full list.
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4310,7 +4514,7 @@ full list.
 <a href="#gsuites_python" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequiregsuite">List[Access<wbr>Group<wbr>Require<wbr>Gsuite<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgrouprequiregsuite">Sequence[Access<wbr>Group<wbr>Require<wbr>Gsuite<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4320,7 +4524,7 @@ full list.
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4330,7 +4534,7 @@ full list.
 <a href="#oktas_python" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequireokta">List[Access<wbr>Group<wbr>Require<wbr>Okta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgrouprequireokta">Sequence[Access<wbr>Group<wbr>Require<wbr>Okta<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4340,7 +4544,7 @@ full list.
 <a href="#samls_python" style="color: inherit; text-decoration: inherit;">samls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequiresaml">List[Access<wbr>Group<wbr>Require<wbr>Saml<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgrouprequiresaml">Sequence[Access<wbr>Group<wbr>Require<wbr>Saml<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4350,7 +4554,7 @@ full list.
 <a href="#service_tokens_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4381,8 +4585,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+        <span id="identityproviderid_csharp">
+<a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -4391,11 +4595,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_csharp">
-<a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
+        <span id="ids_csharp">
+<a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4408,8 +4612,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+        <span id="identityproviderid_go">
+<a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -4418,11 +4622,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_go">
-<a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
+        <span id="ids_go">
+<a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4435,8 +4639,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+        <span id="identityproviderid_nodejs">
+<a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -4445,11 +4649,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityproviderid_nodejs">
-<a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
+        <span id="ids_nodejs">
+<a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4462,8 +4666,8 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+        <span id="identity_provider_id_python">
+<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4472,11 +4676,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identity_provider_id_python">
-<a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
+        <span id="ids_python">
+<a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4526,6 +4730,16 @@ full list.
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_csharp">
+<a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -4553,6 +4767,16 @@ full list.
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_go">
+<a href="#teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4582,6 +4806,16 @@ full list.
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_nodejs">
+<a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -4610,6 +4844,16 @@ full list.
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="teams_python">
+<a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -4637,11 +4881,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_csharp">
-<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+        <span id="emails_csharp">
+<a href="#emails_csharp" style="color: inherit; text-decoration: inherit;">Emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4664,11 +4908,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_go">
-<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+        <span id="emails_go">
+<a href="#emails_go" style="color: inherit; text-decoration: inherit;">Emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4691,11 +4935,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_nodejs">
-<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+        <span id="emails_nodejs">
+<a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4718,11 +4962,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="email_python">
-<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
+        <span id="emails_python">
+<a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4773,11 +5017,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
@@ -4801,11 +5045,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
@@ -4829,11 +5073,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>
@@ -4857,11 +5101,11 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd>

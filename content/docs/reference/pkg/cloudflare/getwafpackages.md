@@ -347,7 +347,7 @@ The following output properties are available:
 <a href="#packages_python" style="color: inherit; text-decoration: inherit;">packages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getwafpackagespackage">List[Get<wbr>Waf<wbr>Packages<wbr>Package]</a></span>
+        <span class="property-type"><a href="#getwafpackagespackage">Sequence[Get<wbr>Waf<wbr>Packages<wbr>Package]</a></span>
     </dt>
     <dd>{{% md %}}A map of WAF Rule Packages details. Full list below:
 {{% /md %}}</dd>

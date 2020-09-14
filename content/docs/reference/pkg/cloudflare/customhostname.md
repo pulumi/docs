@@ -119,7 +119,7 @@ const exampleHostname = new cloudflare.CustomHostname("example_hostname", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.CustomHostname">CustomHostname</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_origin_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssls</span><span class="p">:</span> <span class="nx">Optional[List[CustomHostnameSslArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.CustomHostname">CustomHostname</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_origin_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssls</span><span class="p">:</span> <span class="nx">Optional[Sequence[CustomHostnameSslArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -461,7 +461,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
 <a href="#ssls_python" style="color: inherit; text-decoration: inherit;">ssls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnamessl">List[Custom<wbr>Hostname<wbr>Ssl<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customhostnamessl">Sequence[Custom<wbr>Hostname<wbr>Ssl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
 {{% /md %}}</dd>
@@ -707,7 +707,7 @@ Get an existing CustomHostname resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_origin_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ownership_verification</span><span class="p">:</span> <span class="nx">Optional[CustomHostnameOwnershipVerificationArgs]</span> = None<span class="p">, </span><span class="nx">ownership_verification_http</span><span class="p">:</span> <span class="nx">Optional[CustomHostnameOwnershipVerificationHttpArgs]</span> = None<span class="p">, </span><span class="nx">ssls</span><span class="p">:</span> <span class="nx">Optional[List[CustomHostnameSslArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CustomHostname</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_origin_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ownership_verification</span><span class="p">:</span> <span class="nx">Optional[CustomHostnameOwnershipVerificationArgs]</span> = None<span class="p">, </span><span class="nx">ownership_verification_http</span><span class="p">:</span> <span class="nx">Optional[CustomHostnameOwnershipVerificationHttpArgs]</span> = None<span class="p">, </span><span class="nx">ssls</span><span class="p">:</span> <span class="nx">Optional[Sequence[CustomHostnameSslArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CustomHostname</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1112,7 +1112,7 @@ The following state arguments are supported:
 <a href="#state_ssls_python" style="color: inherit; text-decoration: inherit;">ssls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnamessl">List[Custom<wbr>Hostname<wbr>Ssl<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customhostnamessl">Sequence[Custom<wbr>Hostname<wbr>Ssl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
 {{% /md %}}</dd>
@@ -1879,7 +1879,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnamesslsetting">List[Custom<wbr>Hostname<wbr>Ssl<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customhostnamesslsetting">Sequence[Custom<wbr>Hostname<wbr>Ssl<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SSL/TLS settings for the certificate. See further notes below.
 {{% /md %}}</dd>
@@ -2103,7 +2103,7 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
 <a href="#ciphers_python" style="color: inherit; text-decoration: inherit;">ciphers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of SSL/TLS ciphers to associate with this certificate.
 {{% /md %}}</dd>

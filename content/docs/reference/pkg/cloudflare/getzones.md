@@ -409,7 +409,7 @@ The following output properties are available:
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getzoneszone">List[Get<wbr>Zones<wbr>Zone]</a></span>
+        <span class="property-type"><a href="#getzoneszone">Sequence[Get<wbr>Zones<wbr>Zone]</a></span>
     </dt>
     <dd>{{% md %}}A map of zone details. Full list below:
 {{% /md %}}</dd>

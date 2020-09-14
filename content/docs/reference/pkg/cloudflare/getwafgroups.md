@@ -413,7 +413,7 @@ The following output properties are available:
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getwafgroupsgroup">List[Get<wbr>Waf<wbr>Groups<wbr>Group]</a></span>
+        <span class="property-type"><a href="#getwafgroupsgroup">Sequence[Get<wbr>Waf<wbr>Groups<wbr>Group]</a></span>
     </dt>
     <dd>{{% md %}}A map of WAF Rule Groups details. Full list below:
 {{% /md %}}</dd>
@@ -916,7 +916,7 @@ The following output properties are available:
 <a href="#modified_rules_count_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>rules_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of modified rules in the WAF Rule Group
 {{% /md %}}</dd>
@@ -949,7 +949,7 @@ The following output properties are available:
 <a href="#rules_count_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of rules in the WAF Rule Group
 {{% /md %}}</dd>
