@@ -1,7 +1,7 @@
 
 ---
 title: "GetRemediationAtSubscription"
-title_tag: "Function GetRemediationAtSubscription | Module policyinsights/latest | Package azurerm"
+title_tag: "Function GetRemediationAtSubscription | Module policyinsights/latest | Package Azure RM"
 meta_desc: "Explore the GetRemediationAtSubscription function of the policyinsights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

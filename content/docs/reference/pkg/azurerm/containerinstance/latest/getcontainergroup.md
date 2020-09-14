@@ -1,7 +1,7 @@
 
 ---
 title: "GetContainerGroup"
-title_tag: "Function GetContainerGroup | Module containerinstance/latest | Package azurerm"
+title_tag: "Function GetContainerGroup | Module containerinstance/latest | Package Azure RM"
 meta_desc: "Explore the GetContainerGroup function of the containerinstance/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

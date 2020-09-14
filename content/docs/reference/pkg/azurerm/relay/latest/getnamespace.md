@@ -1,7 +1,7 @@
 
 ---
 title: "GetNamespace"
-title_tag: "Function GetNamespace | Module relay/latest | Package azurerm"
+title_tag: "Function GetNamespace | Module relay/latest | Package Azure RM"
 meta_desc: "Explore the GetNamespace function of the relay/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

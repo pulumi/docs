@@ -1,7 +1,7 @@
 
 ---
 title: "IntegrationAccountMap"
-title_tag: "Resource IntegrationAccountMap | Module logic/latest | Package azurerm"
+title_tag: "Resource IntegrationAccountMap | Module logic/latest | Package Azure RM"
 meta_desc: "Explore the IntegrationAccountMap resource of the logic/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The integration account map."
 ---
 

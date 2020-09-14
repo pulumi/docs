@@ -1,7 +1,7 @@
 
 ---
 title: "Task"
-title_tag: "Resource Task | Module containerregistry/latest | Package azurerm"
+title_tag: "Resource Task | Module containerregistry/latest | Package Azure RM"
 meta_desc: "Explore the Task resource of the containerregistry/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The task that has the ARM resource and task properties. "
 ---
 

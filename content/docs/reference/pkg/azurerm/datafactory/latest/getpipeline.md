@@ -1,7 +1,7 @@
 
 ---
 title: "GetPipeline"
-title_tag: "Function GetPipeline | Module datafactory/latest | Package azurerm"
+title_tag: "Function GetPipeline | Module datafactory/latest | Package Azure RM"
 meta_desc: "Explore the GetPipeline function of the datafactory/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

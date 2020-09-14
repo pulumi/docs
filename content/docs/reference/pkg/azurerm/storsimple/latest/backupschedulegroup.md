@@ -1,7 +1,7 @@
 
 ---
 title: "BackupScheduleGroup"
-title_tag: "Resource BackupScheduleGroup | Module storsimple/latest | Package azurerm"
+title_tag: "Resource BackupScheduleGroup | Module storsimple/latest | Package Azure RM"
 meta_desc: "Explore the BackupScheduleGroup resource of the storsimple/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The Backup Schedule Group"
 ---
 

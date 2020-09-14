@@ -1,7 +1,7 @@
 
 ---
 title: "ApplianceDefinition"
-title_tag: "Resource ApplianceDefinition | Module solutions/v20160901preview | Package azurerm"
+title_tag: "Resource ApplianceDefinition | Module solutions/v20160901preview | Package Azure RM"
 meta_desc: "Explore the ApplianceDefinition resource of the solutions/v20160901preview module, including examples, input properties, output properties, lookup functions, and supporting types. Information about appliance definition."
 ---
 

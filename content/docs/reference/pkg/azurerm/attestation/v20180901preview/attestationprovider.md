@@ -1,7 +1,7 @@
 
 ---
 title: "AttestationProvider"
-title_tag: "Resource AttestationProvider | Module attestation/v20180901preview | Package azurerm"
+title_tag: "Resource AttestationProvider | Module attestation/v20180901preview | Package Azure RM"
 meta_desc: "Explore the AttestationProvider resource of the attestation/v20180901preview module, including examples, input properties, output properties, lookup functions, and supporting types. Attestation service response message."
 ---
 

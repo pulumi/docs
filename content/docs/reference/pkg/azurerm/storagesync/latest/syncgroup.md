@@ -1,7 +1,7 @@
 
 ---
 title: "SyncGroup"
-title_tag: "Resource SyncGroup | Module storagesync/latest | Package azurerm"
+title_tag: "Resource SyncGroup | Module storagesync/latest | Package Azure RM"
 meta_desc: "Explore the SyncGroup resource of the storagesync/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Sync Group object."
 ---
 

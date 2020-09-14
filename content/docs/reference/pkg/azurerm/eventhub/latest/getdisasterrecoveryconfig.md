@@ -1,7 +1,7 @@
 
 ---
 title: "GetDisasterRecoveryConfig"
-title_tag: "Function GetDisasterRecoveryConfig | Module eventhub/latest | Package azurerm"
+title_tag: "Function GetDisasterRecoveryConfig | Module eventhub/latest | Package Azure RM"
 meta_desc: "Explore the GetDisasterRecoveryConfig function of the eventhub/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

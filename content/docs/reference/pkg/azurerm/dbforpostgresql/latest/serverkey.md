@@ -1,7 +1,7 @@
 
 ---
 title: "ServerKey"
-title_tag: "Resource ServerKey | Module dbforpostgresql/latest | Package azurerm"
+title_tag: "Resource ServerKey | Module dbforpostgresql/latest | Package Azure RM"
 meta_desc: "Explore the ServerKey resource of the dbforpostgresql/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A PostgreSQL Server key."
 ---
 

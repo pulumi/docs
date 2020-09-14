@@ -1,7 +1,7 @@
 
 ---
 title: "DeploymentAtSubscriptionScope"
-title_tag: "Resource DeploymentAtSubscriptionScope | Module resources/latest | Package azurerm"
+title_tag: "Resource DeploymentAtSubscriptionScope | Module resources/latest | Package Azure RM"
 meta_desc: "Explore the DeploymentAtSubscriptionScope resource of the resources/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Deployment information."
 ---
 

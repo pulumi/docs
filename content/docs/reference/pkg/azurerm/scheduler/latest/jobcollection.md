@@ -1,7 +1,7 @@
 
 ---
 title: "JobCollection"
-title_tag: "Resource JobCollection | Module scheduler/latest | Package azurerm"
+title_tag: "Resource JobCollection | Module scheduler/latest | Package Azure RM"
 meta_desc: "Explore the JobCollection resource of the scheduler/latest module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

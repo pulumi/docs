@@ -1,7 +1,7 @@
 
 ---
 title: "Incident"
-title_tag: "Resource Incident | Module operationalinsights/latest | Package azurerm"
+title_tag: "Resource Incident | Module operationalinsights/latest | Package Azure RM"
 meta_desc: "Explore the Incident resource of the operationalinsights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Represents an incident in Azure Security Insights."
 ---
 

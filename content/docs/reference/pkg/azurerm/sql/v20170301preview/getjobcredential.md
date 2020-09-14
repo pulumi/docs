@@ -1,7 +1,7 @@
 
 ---
 title: "GetJobCredential"
-title_tag: "Function GetJobCredential | Module sql/v20170301preview | Package azurerm"
+title_tag: "Function GetJobCredential | Module sql/v20170301preview | Package Azure RM"
 meta_desc: "Explore the GetJobCredential function of the sql/v20170301preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

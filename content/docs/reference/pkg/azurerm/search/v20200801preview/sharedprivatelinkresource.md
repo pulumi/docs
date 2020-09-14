@@ -1,7 +1,7 @@
 
 ---
 title: "SharedPrivateLinkResource"
-title_tag: "Resource SharedPrivateLinkResource | Module search/v20200801preview | Package azurerm"
+title_tag: "Resource SharedPrivateLinkResource | Module search/v20200801preview | Package Azure RM"
 meta_desc: "Explore the SharedPrivateLinkResource resource of the search/v20200801preview module, including examples, input properties, output properties, lookup functions, and supporting types. Describes a Shared Private Link Resource managed by the Azure Cognitive Search service."
 ---
 

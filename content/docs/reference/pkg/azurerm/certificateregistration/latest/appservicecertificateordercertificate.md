@@ -1,7 +1,7 @@
 
 ---
 title: "AppServiceCertificateOrderCertificate"
-title_tag: "Resource AppServiceCertificateOrderCertificate | Module certificateregistration/latest | Package azurerm"
+title_tag: "Resource AppServiceCertificateOrderCertificate | Module certificateregistration/latest | Package Azure RM"
 meta_desc: "Explore the AppServiceCertificateOrderCertificate resource of the certificateregistration/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Key Vault container ARM resource for a certificate that is purchased through Azure."
 ---
 

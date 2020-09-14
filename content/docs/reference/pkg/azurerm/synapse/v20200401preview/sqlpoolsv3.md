@@ -1,7 +1,7 @@
 
 ---
 title: "SqlPoolsV3"
-title_tag: "Resource SqlPoolsV3 | Module synapse/v20200401preview | Package azurerm"
+title_tag: "Resource SqlPoolsV3 | Module synapse/v20200401preview | Package Azure RM"
 meta_desc: "Explore the SqlPoolsV3 resource of the synapse/v20200401preview module, including examples, input properties, output properties, lookup functions, and supporting types. A sql pool resource."
 ---
 

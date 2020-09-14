@@ -1,7 +1,7 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module netapp/latest | Package azurerm"
+title_tag: "Resource Account | Module netapp/latest | Package Azure RM"
 meta_desc: "Explore the Account resource of the netapp/latest module, including examples, input properties, output properties, lookup functions, and supporting types. NetApp account resource"
 ---
 

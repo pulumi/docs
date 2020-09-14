@@ -1,7 +1,7 @@
 
 ---
 title: "InstancePool"
-title_tag: "Resource InstancePool | Module sql/v20180601preview | Package azurerm"
+title_tag: "Resource InstancePool | Module sql/v20180601preview | Package Azure RM"
 meta_desc: "Explore the InstancePool resource of the sql/v20180601preview module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure SQL instance pool."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Application"
-title_tag: "Resource Application | Module hdinsight/v20180601preview | Package azurerm"
+title_tag: "Resource Application | Module hdinsight/v20180601preview | Package Azure RM"
 meta_desc: "Explore the Application resource of the hdinsight/v20180601preview module, including examples, input properties, output properties, lookup functions, and supporting types. The HDInsight cluster application"
 ---
 

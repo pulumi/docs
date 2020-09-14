@@ -1,7 +1,7 @@
 
 ---
 title: "GetDatabase"
-title_tag: "Function GetDatabase | Module sql/v20190601preview | Package azurerm"
+title_tag: "Function GetDatabase | Module sql/v20190601preview | Package Azure RM"
 meta_desc: "Explore the GetDatabase function of the sql/v20190601preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

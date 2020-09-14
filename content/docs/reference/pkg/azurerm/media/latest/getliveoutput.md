@@ -1,7 +1,7 @@
 
 ---
 title: "GetLiveOutput"
-title_tag: "Function GetLiveOutput | Module media/latest | Package azurerm"
+title_tag: "Function GetLiveOutput | Module media/latest | Package Azure RM"
 meta_desc: "Explore the GetLiveOutput function of the media/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

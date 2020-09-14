@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module servicefabric/latest | Package azurerm"
+title_tag: "Resource Cluster | Module servicefabric/latest | Package Azure RM"
 meta_desc: "Explore the Cluster resource of the servicefabric/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The cluster resource"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetAgentPool"
-title_tag: "Function GetAgentPool | Module containerservice/latest | Package azurerm"
+title_tag: "Function GetAgentPool | Module containerservice/latest | Package Azure RM"
 meta_desc: "Explore the GetAgentPool function of the containerservice/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

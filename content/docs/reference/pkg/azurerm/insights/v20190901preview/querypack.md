@@ -1,7 +1,7 @@
 
 ---
 title: "QueryPack"
-title_tag: "Resource QueryPack | Module insights/v20190901preview | Package azurerm"
+title_tag: "Resource QueryPack | Module insights/v20190901preview | Package Azure RM"
 meta_desc: "Explore the QueryPack resource of the insights/v20190901preview module, including examples, input properties, output properties, lookup functions, and supporting types. An Log Analytics QueryPack definition."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Creator"
-title_tag: "Resource Creator | Module maps/v20200201preview | Package azurerm"
+title_tag: "Resource Creator | Module maps/v20200201preview | Package Azure RM"
 meta_desc: "Explore the Creator resource of the maps/v20200201preview module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure resource which represents Maps Creator product and provides ability to manage private location data."
 ---
 

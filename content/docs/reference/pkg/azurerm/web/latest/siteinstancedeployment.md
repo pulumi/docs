@@ -1,7 +1,7 @@
 
 ---
 title: "SiteInstanceDeployment"
-title_tag: "Resource SiteInstanceDeployment | Module web/latest | Package azurerm"
+title_tag: "Resource SiteInstanceDeployment | Module web/latest | Package Azure RM"
 meta_desc: "Explore the SiteInstanceDeployment resource of the web/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Represents user credentials used for publishing activity"
 ---
 

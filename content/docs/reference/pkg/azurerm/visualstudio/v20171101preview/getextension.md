@@ -1,7 +1,7 @@
 
 ---
 title: "GetExtension"
-title_tag: "Function GetExtension | Module visualstudio/v20171101preview | Package azurerm"
+title_tag: "Function GetExtension | Module visualstudio/v20171101preview | Package Azure RM"
 meta_desc: "Explore the GetExtension function of the visualstudio/v20171101preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

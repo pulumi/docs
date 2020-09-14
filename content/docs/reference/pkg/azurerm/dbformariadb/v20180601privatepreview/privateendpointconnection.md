@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateEndpointConnection"
-title_tag: "Resource PrivateEndpointConnection | Module dbformariadb/v20180601privatepreview | Package azurerm"
+title_tag: "Resource PrivateEndpointConnection | Module dbformariadb/v20180601privatepreview | Package Azure RM"
 meta_desc: "Explore the PrivateEndpointConnection resource of the dbformariadb/v20180601privatepreview module, including examples, input properties, output properties, lookup functions, and supporting types. A private endpoint connection"
 ---
 

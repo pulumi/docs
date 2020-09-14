@@ -1,7 +1,7 @@
 
 ---
 title: "GetOuContainer"
-title_tag: "Function GetOuContainer | Module aad/latest | Package azurerm"
+title_tag: "Function GetOuContainer | Module aad/latest | Package Azure RM"
 meta_desc: "Explore the GetOuContainer function of the aad/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

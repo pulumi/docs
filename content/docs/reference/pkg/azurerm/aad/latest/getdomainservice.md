@@ -1,7 +1,7 @@
 
 ---
 title: "GetDomainService"
-title_tag: "Function GetDomainService | Module aad/latest | Package azurerm"
+title_tag: "Function GetDomainService | Module aad/latest | Package Azure RM"
 meta_desc: "Explore the GetDomainService function of the aad/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

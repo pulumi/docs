@@ -1,7 +1,7 @@
 
 ---
 title: "NetworkInterfaceTapConfiguration"
-title_tag: "Resource NetworkInterfaceTapConfiguration | Module network/latest | Package azurerm"
+title_tag: "Resource NetworkInterfaceTapConfiguration | Module network/latest | Package Azure RM"
 meta_desc: "Explore the NetworkInterfaceTapConfiguration resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Tap configuration in a Network Interface."
 ---
 

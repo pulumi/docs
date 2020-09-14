@@ -1,7 +1,7 @@
 
 ---
 title: "RegistrationDefinition"
-title_tag: "Resource RegistrationDefinition | Module managedservices/latest | Package azurerm"
+title_tag: "Resource RegistrationDefinition | Module managedservices/latest | Package Azure RM"
 meta_desc: "Explore the RegistrationDefinition resource of the managedservices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Registration definition."
 ---
 

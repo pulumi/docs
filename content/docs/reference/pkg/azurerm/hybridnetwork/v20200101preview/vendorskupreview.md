@@ -1,7 +1,7 @@
 
 ---
 title: "VendorSkuPreview"
-title_tag: "Resource VendorSkuPreview | Module hybridnetwork/v20200101preview | Package azurerm"
+title_tag: "Resource VendorSkuPreview | Module hybridnetwork/v20200101preview | Package Azure RM"
 meta_desc: "Explore the VendorSkuPreview resource of the hybridnetwork/v20200101preview module, including examples, input properties, output properties, lookup functions, and supporting types. Customer subscription which can use a sku."
 ---
 

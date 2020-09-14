@@ -1,7 +1,7 @@
 
 ---
 title: "MigrationConfig"
-title_tag: "Resource MigrationConfig | Module servicebus/latest | Package azurerm"
+title_tag: "Resource MigrationConfig | Module servicebus/latest | Package Azure RM"
 meta_desc: "Explore the MigrationConfig resource of the servicebus/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Single item in List or Get Migration Config operation"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "App"
-title_tag: "Resource App | Module appplatform/latest | Package azurerm"
+title_tag: "Resource App | Module appplatform/latest | Package Azure RM"
 meta_desc: "Explore the App resource of the appplatform/latest module, including examples, input properties, output properties, lookup functions, and supporting types. App resource payload"
 ---
 

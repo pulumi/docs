@@ -1,7 +1,7 @@
 
 ---
 title: "WorkloadGroup"
-title_tag: "Resource WorkloadGroup | Module sql/v20190601preview | Package azurerm"
+title_tag: "Resource WorkloadGroup | Module sql/v20190601preview | Package Azure RM"
 meta_desc: "Explore the WorkloadGroup resource of the sql/v20190601preview module, including examples, input properties, output properties, lookup functions, and supporting types. Workload group operations for a data warehouse"
 ---
 

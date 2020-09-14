@@ -1,7 +1,7 @@
 
 ---
 title: "Suppression"
-title_tag: "Resource Suppression | Module advisor/latest | Package azurerm"
+title_tag: "Resource Suppression | Module advisor/latest | Package Azure RM"
 meta_desc: "Explore the Suppression resource of the advisor/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The details of the snoozed or dismissed rule; for example, the duration, name, and GUID associated with the rule."
 ---
 

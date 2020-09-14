@@ -1,7 +1,7 @@
 
 ---
 title: "ReplicationProtectionContainerMapping"
-title_tag: "Resource ReplicationProtectionContainerMapping | Module recoveryservices/latest | Package azurerm"
+title_tag: "Resource ReplicationProtectionContainerMapping | Module recoveryservices/latest | Package Azure RM"
 meta_desc: "Explore the ReplicationProtectionContainerMapping resource of the recoveryservices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Protection container mapping object."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ListWebAppPublishingCredentials"
-title_tag: "Function ListWebAppPublishingCredentials | Module web/latest | Package azurerm"
+title_tag: "Function ListWebAppPublishingCredentials | Module web/latest | Package Azure RM"
 meta_desc: "Explore the ListWebAppPublishingCredentials function of the web/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

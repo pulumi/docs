@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package azurerm"
-meta_desc: "Explore the Provider resource of the azurerm package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the AzureRM package."
+title_tag: "Resource Provider | Package Azure RM"
+meta_desc: "Explore the Provider resource of the Azure RM package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the AzureRM package."
 ---
 
 

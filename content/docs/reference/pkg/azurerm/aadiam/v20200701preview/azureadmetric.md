@@ -1,7 +1,7 @@
 
 ---
 title: "AzureADMetric"
-title_tag: "Resource AzureADMetric | Module aadiam/v20200701preview | Package azurerm"
+title_tag: "Resource AzureADMetric | Module aadiam/v20200701preview | Package Azure RM"
 meta_desc: "Explore the AzureADMetric resource of the aadiam/v20200701preview module, including examples, input properties, output properties, lookup functions, and supporting types. AzureADMetrics resource."
 ---
 

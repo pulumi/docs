@@ -1,7 +1,7 @@
 
 ---
 title: "GetDevice"
-title_tag: "Function GetDevice | Module databoxedge/latest | Package azurerm"
+title_tag: "Function GetDevice | Module databoxedge/latest | Package Azure RM"
 meta_desc: "Explore the GetDevice function of the databoxedge/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

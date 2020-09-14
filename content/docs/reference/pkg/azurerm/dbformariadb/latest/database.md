@@ -1,7 +1,7 @@
 
 ---
 title: "Database"
-title_tag: "Resource Database | Module dbformariadb/latest | Package azurerm"
+title_tag: "Resource Database | Module dbformariadb/latest | Package Azure RM"
 meta_desc: "Explore the Database resource of the dbformariadb/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a Database."
 ---
 

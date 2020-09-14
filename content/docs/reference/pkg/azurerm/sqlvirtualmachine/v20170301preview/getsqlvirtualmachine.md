@@ -1,7 +1,7 @@
 
 ---
 title: "GetSqlVirtualMachine"
-title_tag: "Function GetSqlVirtualMachine | Module sqlvirtualmachine/v20170301preview | Package azurerm"
+title_tag: "Function GetSqlVirtualMachine | Module sqlvirtualmachine/v20170301preview | Package Azure RM"
 meta_desc: "Explore the GetSqlVirtualMachine function of the sqlvirtualmachine/v20170301preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

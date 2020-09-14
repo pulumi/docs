@@ -1,7 +1,7 @@
 
 ---
 title: "RosettaNetProcessConfiguration"
-title_tag: "Resource RosettaNetProcessConfiguration | Module logic/latest | Package azurerm"
+title_tag: "Resource RosettaNetProcessConfiguration | Module logic/latest | Package Azure RM"
 meta_desc: "Explore the RosettaNetProcessConfiguration resource of the logic/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The integration account RosettaNet process configuration."
 ---
 

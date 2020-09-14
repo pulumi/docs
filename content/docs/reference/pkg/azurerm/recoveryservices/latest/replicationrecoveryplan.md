@@ -1,7 +1,7 @@
 
 ---
 title: "ReplicationRecoveryPlan"
-title_tag: "Resource ReplicationRecoveryPlan | Module recoveryservices/latest | Package azurerm"
+title_tag: "Resource ReplicationRecoveryPlan | Module recoveryservices/latest | Package Azure RM"
 meta_desc: "Explore the ReplicationRecoveryPlan resource of the recoveryservices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Recovery plan details."
 ---
 

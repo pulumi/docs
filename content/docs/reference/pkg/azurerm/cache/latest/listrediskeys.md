@@ -1,7 +1,7 @@
 
 ---
 title: "ListRedisKeys"
-title_tag: "Function ListRedisKeys | Module cache/latest | Package azurerm"
+title_tag: "Function ListRedisKeys | Module cache/latest | Package Azure RM"
 meta_desc: "Explore the ListRedisKeys function of the cache/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

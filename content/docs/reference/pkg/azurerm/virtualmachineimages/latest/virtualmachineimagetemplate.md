@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualMachineImageTemplate"
-title_tag: "Resource VirtualMachineImageTemplate | Module virtualmachineimages/latest | Package azurerm"
+title_tag: "Resource VirtualMachineImageTemplate | Module virtualmachineimages/latest | Package Azure RM"
 meta_desc: "Explore the VirtualMachineImageTemplate resource of the virtualmachineimages/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ListKeyByAutomationAccount"
-title_tag: "Function ListKeyByAutomationAccount | Module automation/latest | Package azurerm"
+title_tag: "Function ListKeyByAutomationAccount | Module automation/latest | Package Azure RM"
 meta_desc: "Explore the ListKeyByAutomationAccount function of the automation/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

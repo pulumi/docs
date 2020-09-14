@@ -1,7 +1,7 @@
 
 ---
 title: "FirewallPolicyRuleCollectionGroup"
-title_tag: "Resource FirewallPolicyRuleCollectionGroup | Module network/latest | Package azurerm"
+title_tag: "Resource FirewallPolicyRuleCollectionGroup | Module network/latest | Package Azure RM"
 meta_desc: "Explore the FirewallPolicyRuleCollectionGroup resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Rule Collection Group resource."
 ---
 

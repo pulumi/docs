@@ -1,7 +1,7 @@
 
 ---
 title: "WebApplicationFirewallPolicy"
-title_tag: "Resource WebApplicationFirewallPolicy | Module network/latest | Package azurerm"
+title_tag: "Resource WebApplicationFirewallPolicy | Module network/latest | Package Azure RM"
 meta_desc: "Explore the WebApplicationFirewallPolicy resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Defines web application firewall policy."
 ---
 

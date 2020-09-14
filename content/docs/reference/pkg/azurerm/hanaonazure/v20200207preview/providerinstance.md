@@ -1,7 +1,7 @@
 
 ---
 title: "ProviderInstance"
-title_tag: "Resource ProviderInstance | Module hanaonazure/v20200207preview | Package azurerm"
+title_tag: "Resource ProviderInstance | Module hanaonazure/v20200207preview | Package Azure RM"
 meta_desc: "Explore the ProviderInstance resource of the hanaonazure/v20200207preview module, including examples, input properties, output properties, lookup functions, and supporting types. A provider instance associated with a SAP monitor."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetSolution"
-title_tag: "Function GetSolution | Module migrate/v20180901preview | Package azurerm"
+title_tag: "Function GetSolution | Module migrate/v20180901preview | Package Azure RM"
 meta_desc: "Explore the GetSolution function of the migrate/v20180901preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

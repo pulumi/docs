@@ -1,7 +1,7 @@
 
 ---
 title: "TaskRun"
-title_tag: "Resource TaskRun | Module containerregistry/v20190601preview | Package azurerm"
+title_tag: "Resource TaskRun | Module containerregistry/v20190601preview | Package Azure RM"
 meta_desc: "Explore the TaskRun resource of the containerregistry/v20190601preview module, including examples, input properties, output properties, lookup functions, and supporting types. The task run that has the ARM resource and properties. "
 ---
 

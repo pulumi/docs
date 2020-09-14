@@ -1,7 +1,7 @@
 
 ---
 title: "EventHubAuthorizationRule"
-title_tag: "Resource EventHubAuthorizationRule | Module eventhub/latest | Package azurerm"
+title_tag: "Resource EventHubAuthorizationRule | Module eventhub/latest | Package Azure RM"
 meta_desc: "Explore the EventHubAuthorizationRule resource of the eventhub/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Single item in a List or Get AuthorizationRule operation"
 ---
 

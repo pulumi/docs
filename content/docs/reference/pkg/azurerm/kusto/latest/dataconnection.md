@@ -1,7 +1,7 @@
 
 ---
 title: "DataConnection"
-title_tag: "Resource DataConnection | Module kusto/latest | Package azurerm"
+title_tag: "Resource DataConnection | Module kusto/latest | Package Azure RM"
 meta_desc: "Explore the DataConnection resource of the kusto/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Class representing an data connection."
 ---
 

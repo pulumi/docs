@@ -1,7 +1,7 @@
 
 ---
 title: "Runbook"
-title_tag: "Resource Runbook | Module automation/latest | Package azurerm"
+title_tag: "Resource Runbook | Module automation/latest | Package Azure RM"
 meta_desc: "Explore the Runbook resource of the automation/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Definition of the runbook type."
 ---
 

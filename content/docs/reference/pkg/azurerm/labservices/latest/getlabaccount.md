@@ -1,7 +1,7 @@
 
 ---
 title: "GetLabAccount"
-title_tag: "Function GetLabAccount | Module labservices/latest | Package azurerm"
+title_tag: "Function GetLabAccount | Module labservices/latest | Package Azure RM"
 meta_desc: "Explore the GetLabAccount function of the labservices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

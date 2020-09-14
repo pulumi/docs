@@ -1,7 +1,7 @@
 
 ---
 title: "GetNamespaceIpFilterRule"
-title_tag: "Function GetNamespaceIpFilterRule | Module servicebus/v20180101preview | Package azurerm"
+title_tag: "Function GetNamespaceIpFilterRule | Module servicebus/v20180101preview | Package Azure RM"
 meta_desc: "Explore the GetNamespaceIpFilterRule function of the servicebus/v20180101preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

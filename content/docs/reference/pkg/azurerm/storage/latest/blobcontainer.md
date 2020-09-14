@@ -1,7 +1,7 @@
 
 ---
 title: "BlobContainer"
-title_tag: "Resource BlobContainer | Module storage/latest | Package azurerm"
+title_tag: "Resource BlobContainer | Module storage/latest | Package Azure RM"
 meta_desc: "Explore the BlobContainer resource of the storage/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Properties of the blob container, including Id, resource name, resource type, Etag."
 ---
 

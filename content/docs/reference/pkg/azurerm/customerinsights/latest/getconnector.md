@@ -1,7 +1,7 @@
 
 ---
 title: "GetConnector"
-title_tag: "Function GetConnector | Module customerinsights/latest | Package azurerm"
+title_tag: "Function GetConnector | Module customerinsights/latest | Package Azure RM"
 meta_desc: "Explore the GetConnector function of the customerinsights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

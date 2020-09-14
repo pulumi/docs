@@ -1,7 +1,7 @@
 
 ---
 title: "BackupPolicy"
-title_tag: "Resource BackupPolicy | Module netapp/latest | Package azurerm"
+title_tag: "Resource BackupPolicy | Module netapp/latest | Package Azure RM"
 meta_desc: "Explore the BackupPolicy resource of the netapp/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Backup policy information"
 ---
 

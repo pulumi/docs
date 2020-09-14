@@ -1,7 +1,7 @@
 
 ---
 title: "GetPrivateAtlase"
-title_tag: "Function GetPrivateAtlase | Module maps/v20200201preview | Package azurerm"
+title_tag: "Function GetPrivateAtlase | Module maps/v20200201preview | Package Azure RM"
 meta_desc: "Explore the GetPrivateAtlase function of the maps/v20200201preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

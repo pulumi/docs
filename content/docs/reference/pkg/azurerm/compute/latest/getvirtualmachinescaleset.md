@@ -1,7 +1,7 @@
 
 ---
 title: "GetVirtualMachineScaleSet"
-title_tag: "Function GetVirtualMachineScaleSet | Module compute/latest | Package azurerm"
+title_tag: "Function GetVirtualMachineScaleSet | Module compute/latest | Package Azure RM"
 meta_desc: "Explore the GetVirtualMachineScaleSet function of the compute/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

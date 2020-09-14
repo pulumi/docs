@@ -1,7 +1,7 @@
 
 ---
 title: "GetDatabaseAccount"
-title_tag: "Function GetDatabaseAccount | Module documentdb/v20200601preview | Package azurerm"
+title_tag: "Function GetDatabaseAccount | Module documentdb/v20200601preview | Package Azure RM"
 meta_desc: "Explore the GetDatabaseAccount function of the documentdb/v20200601preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

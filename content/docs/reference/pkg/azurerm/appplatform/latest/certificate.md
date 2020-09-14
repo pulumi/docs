@@ -1,7 +1,7 @@
 
 ---
 title: "Certificate"
-title_tag: "Resource Certificate | Module appplatform/latest | Package azurerm"
+title_tag: "Resource Certificate | Module appplatform/latest | Package Azure RM"
 meta_desc: "Explore the Certificate resource of the appplatform/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Certificate resource payload."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetCreator"
-title_tag: "Function GetCreator | Module maps/v20200201preview | Package azurerm"
+title_tag: "Function GetCreator | Module maps/v20200201preview | Package Azure RM"
 meta_desc: "Explore the GetCreator function of the maps/v20200201preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

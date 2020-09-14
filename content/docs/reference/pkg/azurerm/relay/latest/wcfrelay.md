@@ -1,7 +1,7 @@
 
 ---
 title: "WCFRelay"
-title_tag: "Resource WCFRelay | Module relay/latest | Package azurerm"
+title_tag: "Resource WCFRelay | Module relay/latest | Package Azure RM"
 meta_desc: "Explore the WCFRelay resource of the relay/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Description of the WCF relay resource."
 ---
 

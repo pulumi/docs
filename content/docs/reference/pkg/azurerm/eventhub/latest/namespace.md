@@ -1,7 +1,7 @@
 
 ---
 title: "Namespace"
-title_tag: "Resource Namespace | Module eventhub/latest | Package azurerm"
+title_tag: "Resource Namespace | Module eventhub/latest | Package Azure RM"
 meta_desc: "Explore the Namespace resource of the eventhub/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Single Namespace item in List or Get Operation"
 ---
 

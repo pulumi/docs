@@ -1,7 +1,7 @@
 
 ---
 title: "Device"
-title_tag: "Resource Device | Module databoxedge/latest | Package azurerm"
+title_tag: "Resource Device | Module databoxedge/latest | Package Azure RM"
 meta_desc: "Explore the Device resource of the databoxedge/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The Data Box Edge/Gateway device."
 ---
 

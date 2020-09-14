@@ -1,7 +1,7 @@
 
 ---
 title: "ApplicationDefinition"
-title_tag: "Resource ApplicationDefinition | Module solutions/latest | Package azurerm"
+title_tag: "Resource ApplicationDefinition | Module solutions/latest | Package Azure RM"
 meta_desc: "Explore the ApplicationDefinition resource of the solutions/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Information about managed application definition."
 ---
 

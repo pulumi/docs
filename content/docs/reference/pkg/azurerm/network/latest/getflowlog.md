@@ -1,7 +1,7 @@
 
 ---
 title: "GetFlowLog"
-title_tag: "Function GetFlowLog | Module network/latest | Package azurerm"
+title_tag: "Function GetFlowLog | Module network/latest | Package Azure RM"
 meta_desc: "Explore the GetFlowLog function of the network/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

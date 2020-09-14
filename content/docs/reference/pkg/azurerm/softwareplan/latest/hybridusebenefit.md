@@ -1,7 +1,7 @@
 
 ---
 title: "HybridUseBenefit"
-title_tag: "Resource HybridUseBenefit | Module softwareplan/latest | Package azurerm"
+title_tag: "Resource HybridUseBenefit | Module softwareplan/latest | Package Azure RM"
 meta_desc: "Explore the HybridUseBenefit resource of the softwareplan/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Response on GET of a hybrid use benefit"
 ---
 

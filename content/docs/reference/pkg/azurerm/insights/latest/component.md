@@ -1,7 +1,7 @@
 
 ---
 title: "Component"
-title_tag: "Resource Component | Module insights/latest | Package azurerm"
+title_tag: "Resource Component | Module insights/latest | Package Azure RM"
 meta_desc: "Explore the Component resource of the insights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. An Application Insights component definition."
 ---
 

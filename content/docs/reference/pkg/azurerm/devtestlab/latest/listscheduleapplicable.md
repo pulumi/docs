@@ -1,7 +1,7 @@
 
 ---
 title: "ListScheduleApplicable"
-title_tag: "Function ListScheduleApplicable | Module devtestlab/latest | Package azurerm"
+title_tag: "Function ListScheduleApplicable | Module devtestlab/latest | Package Azure RM"
 meta_desc: "Explore the ListScheduleApplicable function of the devtestlab/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

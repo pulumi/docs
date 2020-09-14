@@ -1,7 +1,7 @@
 
 ---
 title: "GetCertificate"
-title_tag: "Function GetCertificate | Module apimanagement/v20191201preview | Package azurerm"
+title_tag: "Function GetCertificate | Module apimanagement/v20191201preview | Package Azure RM"
 meta_desc: "Explore the GetCertificate function of the apimanagement/v20191201preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

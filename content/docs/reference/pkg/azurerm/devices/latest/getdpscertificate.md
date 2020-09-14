@@ -1,7 +1,7 @@
 
 ---
 title: "GetDpsCertificate"
-title_tag: "Function GetDpsCertificate | Module devices/latest | Package azurerm"
+title_tag: "Function GetDpsCertificate | Module devices/latest | Package Azure RM"
 meta_desc: "Explore the GetDpsCertificate function of the devices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

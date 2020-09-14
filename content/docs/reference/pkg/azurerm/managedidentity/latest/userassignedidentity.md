@@ -1,7 +1,7 @@
 
 ---
 title: "UserAssignedIdentity"
-title_tag: "Resource UserAssignedIdentity | Module managedidentity/latest | Package azurerm"
+title_tag: "Resource UserAssignedIdentity | Module managedidentity/latest | Package Azure RM"
 meta_desc: "Explore the UserAssignedIdentity resource of the managedidentity/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Describes an identity resource."
 ---
 

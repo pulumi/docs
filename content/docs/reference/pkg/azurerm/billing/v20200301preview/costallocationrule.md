@@ -1,7 +1,7 @@
 
 ---
 title: "CostAllocationRule"
-title_tag: "Resource CostAllocationRule | Module billing/v20200301preview | Package azurerm"
+title_tag: "Resource CostAllocationRule | Module billing/v20200301preview | Package Azure RM"
 meta_desc: "Explore the CostAllocationRule resource of the billing/v20200301preview module, including examples, input properties, output properties, lookup functions, and supporting types. The cost allocation rule model definition"
 ---
 

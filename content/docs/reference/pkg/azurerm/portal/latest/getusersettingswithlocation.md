@@ -1,7 +1,7 @@
 
 ---
 title: "GetUserSettingsWithLocation"
-title_tag: "Function GetUserSettingsWithLocation | Module portal/latest | Package azurerm"
+title_tag: "Function GetUserSettingsWithLocation | Module portal/latest | Package Azure RM"
 meta_desc: "Explore the GetUserSettingsWithLocation function of the portal/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

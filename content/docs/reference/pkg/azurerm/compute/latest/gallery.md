@@ -1,7 +1,7 @@
 
 ---
 title: "Gallery"
-title_tag: "Resource Gallery | Module compute/latest | Package azurerm"
+title_tag: "Resource Gallery | Module compute/latest | Package Azure RM"
 meta_desc: "Explore the Gallery resource of the compute/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Specifies information about the Shared Image Gallery that you want to create or update."
 ---
 

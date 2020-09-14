@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedDatabaseSensitivityLabel"
-title_tag: "Resource ManagedDatabaseSensitivityLabel | Module sql/v20180601preview | Package azurerm"
+title_tag: "Resource ManagedDatabaseSensitivityLabel | Module sql/v20180601preview | Package Azure RM"
 meta_desc: "Explore the ManagedDatabaseSensitivityLabel resource of the sql/v20180601preview module, including examples, input properties, output properties, lookup functions, and supporting types. A sensitivity label."
 ---
 

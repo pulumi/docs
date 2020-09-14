@@ -1,7 +1,7 @@
 
 ---
 title: "GetApplicationTypeVersion"
-title_tag: "Function GetApplicationTypeVersion | Module servicefabric/latest | Package azurerm"
+title_tag: "Function GetApplicationTypeVersion | Module servicefabric/latest | Package Azure RM"
 meta_desc: "Explore the GetApplicationTypeVersion function of the servicefabric/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

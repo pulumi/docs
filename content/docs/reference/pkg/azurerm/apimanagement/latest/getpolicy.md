@@ -1,7 +1,7 @@
 
 ---
 title: "GetPolicy"
-title_tag: "Function GetPolicy | Module apimanagement/latest | Package azurerm"
+title_tag: "Function GetPolicy | Module apimanagement/latest | Package Azure RM"
 meta_desc: "Explore the GetPolicy function of the apimanagement/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

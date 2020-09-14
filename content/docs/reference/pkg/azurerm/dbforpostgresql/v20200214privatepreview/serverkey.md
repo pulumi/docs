@@ -1,7 +1,7 @@
 
 ---
 title: "ServerKey"
-title_tag: "Resource ServerKey | Module dbforpostgresql/v20200214privatepreview | Package azurerm"
+title_tag: "Resource ServerKey | Module dbforpostgresql/v20200214privatepreview | Package Azure RM"
 meta_desc: "Explore the ServerKey resource of the dbforpostgresql/v20200214privatepreview module, including examples, input properties, output properties, lookup functions, and supporting types. A PostgreSQL Server key."
 ---
 

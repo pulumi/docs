@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedInstanceAzureADOnlyAuthentication"
-title_tag: "Resource ManagedInstanceAzureADOnlyAuthentication | Module sql/v20200202preview | Package azurerm"
+title_tag: "Resource ManagedInstanceAzureADOnlyAuthentication | Module sql/v20200202preview | Package Azure RM"
 meta_desc: "Explore the ManagedInstanceAzureADOnlyAuthentication resource of the sql/v20200202preview module, including examples, input properties, output properties, lookup functions, and supporting types. Azure Active Directory only authentication."
 ---
 

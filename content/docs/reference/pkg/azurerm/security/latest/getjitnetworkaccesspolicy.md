@@ -1,7 +1,7 @@
 
 ---
 title: "GetJitNetworkAccessPolicy"
-title_tag: "Function GetJitNetworkAccessPolicy | Module security/latest | Package azurerm"
+title_tag: "Function GetJitNetworkAccessPolicy | Module security/latest | Package Azure RM"
 meta_desc: "Explore the GetJitNetworkAccessPolicy function of the security/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

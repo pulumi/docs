@@ -1,7 +1,7 @@
 
 ---
 title: "ServerDetails"
-title_tag: "Resource ServerDetails | Module analysisservices/latest | Package azurerm"
+title_tag: "Resource ServerDetails | Module analysisservices/latest | Package Azure RM"
 meta_desc: "Explore the ServerDetails resource of the analysisservices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Represents an instance of an Analysis Services resource."
 ---
 

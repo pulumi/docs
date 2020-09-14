@@ -1,7 +1,7 @@
 
 ---
 title: "GetAppliance"
-title_tag: "Function GetAppliance | Module solutions/v20160901preview | Package azurerm"
+title_tag: "Function GetAppliance | Module solutions/v20160901preview | Package Azure RM"
 meta_desc: "Explore the GetAppliance function of the solutions/v20160901preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "WebAppHybridConnectionSlot"
-title_tag: "Resource WebAppHybridConnectionSlot | Module web/latest | Package azurerm"
+title_tag: "Resource WebAppHybridConnectionSlot | Module web/latest | Package Azure RM"
 meta_desc: "Explore the WebAppHybridConnectionSlot resource of the web/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Hybrid Connection contract. This is used to configure a Hybrid Connection."
 ---
 

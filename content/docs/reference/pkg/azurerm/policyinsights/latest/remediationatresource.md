@@ -1,7 +1,7 @@
 
 ---
 title: "RemediationAtResource"
-title_tag: "Resource RemediationAtResource | Module policyinsights/latest | Package azurerm"
+title_tag: "Resource RemediationAtResource | Module policyinsights/latest | Package Azure RM"
 meta_desc: "Explore the RemediationAtResource resource of the policyinsights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The remediation definition."
 ---
 

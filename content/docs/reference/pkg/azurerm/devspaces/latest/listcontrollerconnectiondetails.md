@@ -1,7 +1,7 @@
 
 ---
 title: "ListControllerConnectionDetails"
-title_tag: "Function ListControllerConnectionDetails | Module devspaces/latest | Package azurerm"
+title_tag: "Function ListControllerConnectionDetails | Module devspaces/latest | Package Azure RM"
 meta_desc: "Explore the ListControllerConnectionDetails function of the devspaces/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GuestDiagnosticsSetting"
-title_tag: "Resource GuestDiagnosticsSetting | Module insights/v20180601preview | Package azurerm"
+title_tag: "Resource GuestDiagnosticsSetting | Module insights/v20180601preview | Package Azure RM"
 meta_desc: "Explore the GuestDiagnosticsSetting resource of the insights/v20180601preview module, including examples, input properties, output properties, lookup functions, and supporting types. Virtual machine guest diagnostics settings resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetStorageTarget"
-title_tag: "Function GetStorageTarget | Module storagecache/latest | Package azurerm"
+title_tag: "Function GetStorageTarget | Module storagecache/latest | Package Azure RM"
 meta_desc: "Explore the GetStorageTarget function of the storagecache/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

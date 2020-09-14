@@ -1,7 +1,7 @@
 
 ---
 title: "LoadBalancer"
-title_tag: "Resource LoadBalancer | Module network/latest | Package azurerm"
+title_tag: "Resource LoadBalancer | Module network/latest | Package Azure RM"
 meta_desc: "Explore the LoadBalancer resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. LoadBalancer resource."
 ---
 

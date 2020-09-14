@@ -1,7 +1,7 @@
 
 ---
 title: "GuestConfigurationHCRPAssignment"
-title_tag: "Resource GuestConfigurationHCRPAssignment | Module hybridcompute/latest | Package azurerm"
+title_tag: "Resource GuestConfigurationHCRPAssignment | Module hybridcompute/latest | Package Azure RM"
 meta_desc: "Explore the GuestConfigurationHCRPAssignment resource of the hybridcompute/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Guest configuration assignment is an association between a machine and guest configuration."
 ---
 

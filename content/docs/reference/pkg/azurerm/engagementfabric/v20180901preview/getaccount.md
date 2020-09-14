@@ -1,7 +1,7 @@
 
 ---
 title: "GetAccount"
-title_tag: "Function GetAccount | Module engagementfabric/v20180901preview | Package azurerm"
+title_tag: "Function GetAccount | Module engagementfabric/v20180901preview | Package Azure RM"
 meta_desc: "Explore the GetAccount function of the engagementfabric/v20180901preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "RulesEngine"
-title_tag: "Resource RulesEngine | Module network/latest | Package azurerm"
+title_tag: "Resource RulesEngine | Module network/latest | Package Azure RM"
 meta_desc: "Explore the RulesEngine resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A rules engine configuration containing a list of rules that will run to modify the runtime behavior of the request and response."
 ---
 

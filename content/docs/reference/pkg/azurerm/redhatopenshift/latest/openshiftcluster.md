@@ -1,7 +1,7 @@
 
 ---
 title: "OpenShiftCluster"
-title_tag: "Resource OpenShiftCluster | Module redhatopenshift/latest | Package azurerm"
+title_tag: "Resource OpenShiftCluster | Module redhatopenshift/latest | Package Azure RM"
 meta_desc: "Explore the OpenShiftCluster resource of the redhatopenshift/latest module, including examples, input properties, output properties, lookup functions, and supporting types. OpenShiftCluster represents an Azure Red Hat OpenShift cluster."
 ---
 

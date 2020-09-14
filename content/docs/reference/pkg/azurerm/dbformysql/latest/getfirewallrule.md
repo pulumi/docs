@@ -1,7 +1,7 @@
 
 ---
 title: "GetFirewallRule"
-title_tag: "Function GetFirewallRule | Module dbformysql/latest | Package azurerm"
+title_tag: "Function GetFirewallRule | Module dbformysql/latest | Package Azure RM"
 meta_desc: "Explore the GetFirewallRule function of the dbformysql/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

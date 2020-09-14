@@ -1,7 +1,7 @@
 
 ---
 title: "GetSharedPrivateLinkResource"
-title_tag: "Function GetSharedPrivateLinkResource | Module search/v20200801preview | Package azurerm"
+title_tag: "Function GetSharedPrivateLinkResource | Module search/v20200801preview | Package Azure RM"
 meta_desc: "Explore the GetSharedPrivateLinkResource function of the search/v20200801preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

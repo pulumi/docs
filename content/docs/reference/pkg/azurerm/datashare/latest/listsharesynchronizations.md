@@ -1,7 +1,7 @@
 
 ---
 title: "ListShareSynchronizations"
-title_tag: "Function ListShareSynchronizations | Module datashare/latest | Package azurerm"
+title_tag: "Function ListShareSynchronizations | Module datashare/latest | Package Azure RM"
 meta_desc: "Explore the ListShareSynchronizations function of the datashare/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

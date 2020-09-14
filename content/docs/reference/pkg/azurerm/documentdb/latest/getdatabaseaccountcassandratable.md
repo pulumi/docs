@@ -1,7 +1,7 @@
 
 ---
 title: "GetDatabaseAccountCassandraTable"
-title_tag: "Function GetDatabaseAccountCassandraTable | Module documentdb/latest | Package azurerm"
+title_tag: "Function GetDatabaseAccountCassandraTable | Module documentdb/latest | Package Azure RM"
 meta_desc: "Explore the GetDatabaseAccountCassandraTable function of the documentdb/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

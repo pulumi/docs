@@ -1,7 +1,7 @@
 
 ---
 title: "GetServer"
-title_tag: "Function GetServer | Module dbformysql/v20171201preview | Package azurerm"
+title_tag: "Function GetServer | Module dbformysql/v20171201preview | Package Azure RM"
 meta_desc: "Explore the GetServer function of the dbformysql/v20171201preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

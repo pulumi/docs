@@ -1,7 +1,7 @@
 
 ---
 title: "EventChannel"
-title_tag: "Resource EventChannel | Module eventgrid/v20200401preview | Package azurerm"
+title_tag: "Resource EventChannel | Module eventgrid/v20200401preview | Package Azure RM"
 meta_desc: "Explore the EventChannel resource of the eventgrid/v20200401preview module, including examples, input properties, output properties, lookup functions, and supporting types. Event Channel."
 ---
 

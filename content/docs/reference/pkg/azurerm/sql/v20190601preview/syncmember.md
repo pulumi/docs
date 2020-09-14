@@ -1,7 +1,7 @@
 
 ---
 title: "SyncMember"
-title_tag: "Resource SyncMember | Module sql/v20190601preview | Package azurerm"
+title_tag: "Resource SyncMember | Module sql/v20190601preview | Package Azure RM"
 meta_desc: "Explore the SyncMember resource of the sql/v20190601preview module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure SQL Database sync member."
 ---
 

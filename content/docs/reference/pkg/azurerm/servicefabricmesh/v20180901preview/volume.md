@@ -1,7 +1,7 @@
 
 ---
 title: "Volume"
-title_tag: "Resource Volume | Module servicefabricmesh/v20180901preview | Package azurerm"
+title_tag: "Resource Volume | Module servicefabricmesh/v20180901preview | Package Azure RM"
 meta_desc: "Explore the Volume resource of the servicefabricmesh/v20180901preview module, including examples, input properties, output properties, lookup functions, and supporting types. This type describes a volume resource."
 ---
 

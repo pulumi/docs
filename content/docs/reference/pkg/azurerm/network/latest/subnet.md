@@ -1,7 +1,7 @@
 
 ---
 title: "Subnet"
-title_tag: "Resource Subnet | Module network/latest | Package azurerm"
+title_tag: "Resource Subnet | Module network/latest | Package Azure RM"
 meta_desc: "Explore the Subnet resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Subnet in a virtual network resource."
 ---
 

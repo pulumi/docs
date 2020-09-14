@@ -1,7 +1,7 @@
 
 ---
 title: "Server"
-title_tag: "Resource Server | Module dbformysql/v20200701privatepreview | Package azurerm"
+title_tag: "Resource Server | Module dbformysql/v20200701privatepreview | Package Azure RM"
 meta_desc: "Explore the Server resource of the dbformysql/v20200701privatepreview module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a server."
 ---
 

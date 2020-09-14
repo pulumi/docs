@@ -1,7 +1,7 @@
 
 ---
 title: "ActionRuleByName"
-title_tag: "Resource ActionRuleByName | Module alertsmanagement/v20190505preview | Package azurerm"
+title_tag: "Resource ActionRuleByName | Module alertsmanagement/v20190505preview | Package Azure RM"
 meta_desc: "Explore the ActionRuleByName resource of the alertsmanagement/v20190505preview module, including examples, input properties, output properties, lookup functions, and supporting types. Action rule object containing target scope, conditions and suppression logic"
 ---
 

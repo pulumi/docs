@@ -1,7 +1,7 @@
 
 ---
 title: "GetProtectionContainer"
-title_tag: "Function GetProtectionContainer | Module recoveryservices/latest | Package azurerm"
+title_tag: "Function GetProtectionContainer | Module recoveryservices/latest | Package Azure RM"
 meta_desc: "Explore the GetProtectionContainer function of the recoveryservices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

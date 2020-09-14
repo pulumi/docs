@@ -1,7 +1,7 @@
 
 ---
 title: "ScopeAssignment"
-title_tag: "Resource ScopeAssignment | Module managednetwork/v20190601preview | Package azurerm"
+title_tag: "Resource ScopeAssignment | Module managednetwork/v20190601preview | Package Azure RM"
 meta_desc: "Explore the ScopeAssignment resource of the managednetwork/v20190601preview module, including examples, input properties, output properties, lookup functions, and supporting types. The Managed Network resource"
 ---
 

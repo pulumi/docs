@@ -1,7 +1,7 @@
 
 ---
 title: "GetSqlPoolsV3"
-title_tag: "Function GetSqlPoolsV3 | Module synapse/v20200401preview | Package azurerm"
+title_tag: "Function GetSqlPoolsV3 | Module synapse/v20200401preview | Package Azure RM"
 meta_desc: "Explore the GetSqlPoolsV3 function of the synapse/v20200401preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

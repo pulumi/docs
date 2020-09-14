@@ -1,7 +1,7 @@
 
 ---
 title: "MachineExtension"
-title_tag: "Resource MachineExtension | Module hybridcompute/latest | Package azurerm"
+title_tag: "Resource MachineExtension | Module hybridcompute/latest | Package Azure RM"
 meta_desc: "Explore the MachineExtension resource of the hybridcompute/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Describes a Machine Extension."
 ---
 

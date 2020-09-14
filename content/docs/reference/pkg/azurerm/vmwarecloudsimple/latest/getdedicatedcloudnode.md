@@ -1,7 +1,7 @@
 
 ---
 title: "GetDedicatedCloudNode"
-title_tag: "Function GetDedicatedCloudNode | Module vmwarecloudsimple/latest | Package azurerm"
+title_tag: "Function GetDedicatedCloudNode | Module vmwarecloudsimple/latest | Package Azure RM"
 meta_desc: "Explore the GetDedicatedCloudNode function of the vmwarecloudsimple/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

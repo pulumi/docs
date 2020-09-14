@@ -1,7 +1,7 @@
 
 ---
 title: "GetChannel"
-title_tag: "Function GetChannel | Module botservice/latest | Package azurerm"
+title_tag: "Function GetChannel | Module botservice/latest | Package Azure RM"
 meta_desc: "Explore the GetChannel function of the botservice/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

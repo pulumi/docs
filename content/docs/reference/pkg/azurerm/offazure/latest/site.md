@@ -1,7 +1,7 @@
 
 ---
 title: "Site"
-title_tag: "Resource Site | Module offazure/latest | Package azurerm"
+title_tag: "Resource Site | Module offazure/latest | Package Azure RM"
 meta_desc: "Explore the Site resource of the offazure/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Site REST Resource."
 ---
 

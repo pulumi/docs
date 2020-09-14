@@ -1,7 +1,7 @@
 
 ---
 title: "RemoteRenderingAccount"
-title_tag: "Resource RemoteRenderingAccount | Module mixedreality/v20200406preview | Package azurerm"
+title_tag: "Resource RemoteRenderingAccount | Module mixedreality/v20200406preview | Package Azure RM"
 meta_desc: "Explore the RemoteRenderingAccount resource of the mixedreality/v20200406preview module, including examples, input properties, output properties, lookup functions, and supporting types. RemoteRenderingAccount Response."
 ---
 

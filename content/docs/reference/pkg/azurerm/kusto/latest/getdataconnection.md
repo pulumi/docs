@@ -1,7 +1,7 @@
 
 ---
 title: "GetDataConnection"
-title_tag: "Function GetDataConnection | Module kusto/latest | Package azurerm"
+title_tag: "Function GetDataConnection | Module kusto/latest | Package Azure RM"
 meta_desc: "Explore the GetDataConnection function of the kusto/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

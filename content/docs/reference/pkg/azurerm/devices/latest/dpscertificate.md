@@ -1,7 +1,7 @@
 
 ---
 title: "DpsCertificate"
-title_tag: "Resource DpsCertificate | Module devices/latest | Package azurerm"
+title_tag: "Resource DpsCertificate | Module devices/latest | Package Azure RM"
 meta_desc: "Explore the DpsCertificate resource of the devices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The X509 Certificate."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetprivateLinkForAzureAd"
-title_tag: "Function GetprivateLinkForAzureAd | Module aadiam/v20200301preview | Package azurerm"
+title_tag: "Function GetprivateLinkForAzureAd | Module aadiam/v20200301preview | Package Azure RM"
 meta_desc: "Explore the GetprivateLinkForAzureAd function of the aadiam/v20200301preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

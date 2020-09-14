@@ -1,7 +1,7 @@
 
 ---
 title: "NetworkWatcher"
-title_tag: "Resource NetworkWatcher | Module network/latest | Package azurerm"
+title_tag: "Resource NetworkWatcher | Module network/latest | Package Azure RM"
 meta_desc: "Explore the NetworkWatcher resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Network watcher in a resource group."
 ---
 

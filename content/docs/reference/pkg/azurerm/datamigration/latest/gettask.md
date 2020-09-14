@@ -1,7 +1,7 @@
 
 ---
 title: "GetTask"
-title_tag: "Function GetTask | Module datamigration/latest | Package azurerm"
+title_tag: "Function GetTask | Module datamigration/latest | Package Azure RM"
 meta_desc: "Explore the GetTask function of the datamigration/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

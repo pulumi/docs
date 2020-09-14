@@ -1,7 +1,7 @@
 
 ---
 title: "IoTSpace"
-title_tag: "Resource IoTSpace | Module iotspaces/v20171001preview | Package azurerm"
+title_tag: "Resource IoTSpace | Module iotspaces/v20171001preview | Package Azure RM"
 meta_desc: "Explore the IoTSpace resource of the iotspaces/v20171001preview module, including examples, input properties, output properties, lookup functions, and supporting types. The description of the IoTSpaces service."
 ---
 

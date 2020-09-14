@@ -1,7 +1,7 @@
 
 ---
 title: "App"
-title_tag: "Resource App | Module iotcentral/latest | Package azurerm"
+title_tag: "Resource App | Module iotcentral/latest | Package Azure RM"
 meta_desc: "Explore the App resource of the iotcentral/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The IoT Central application."
 ---
 

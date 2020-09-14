@@ -1,7 +1,7 @@
 
 ---
 title: "Environment"
-title_tag: "Resource Environment | Module timeseriesinsights/latest | Package azurerm"
+title_tag: "Resource Environment | Module timeseriesinsights/latest | Package Azure RM"
 meta_desc: "Explore the Environment resource of the timeseriesinsights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource."
 ---
 

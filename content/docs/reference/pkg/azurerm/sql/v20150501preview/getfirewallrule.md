@@ -1,7 +1,7 @@
 
 ---
 title: "GetFirewallRule"
-title_tag: "Function GetFirewallRule | Module sql/v20150501preview | Package azurerm"
+title_tag: "Function GetFirewallRule | Module sql/v20150501preview | Package Azure RM"
 meta_desc: "Explore the GetFirewallRule function of the sql/v20150501preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

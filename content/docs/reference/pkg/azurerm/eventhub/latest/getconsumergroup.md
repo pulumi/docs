@@ -1,7 +1,7 @@
 
 ---
 title: "GetConsumerGroup"
-title_tag: "Function GetConsumerGroup | Module eventhub/latest | Package azurerm"
+title_tag: "Function GetConsumerGroup | Module eventhub/latest | Package Azure RM"
 meta_desc: "Explore the GetConsumerGroup function of the eventhub/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetControllerDetails"
-title_tag: "Function GetControllerDetails | Module delegatednetwork/v20200808preview | Package azurerm"
+title_tag: "Function GetControllerDetails | Module delegatednetwork/v20200808preview | Package Azure RM"
 meta_desc: "Explore the GetControllerDetails function of the delegatednetwork/v20200808preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

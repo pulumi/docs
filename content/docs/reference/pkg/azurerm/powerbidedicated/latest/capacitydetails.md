@@ -1,7 +1,7 @@
 
 ---
 title: "CapacityDetails"
-title_tag: "Resource CapacityDetails | Module powerbidedicated/latest | Package azurerm"
+title_tag: "Resource CapacityDetails | Module powerbidedicated/latest | Package Azure RM"
 meta_desc: "Explore the CapacityDetails resource of the powerbidedicated/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Represents an instance of a Dedicated Capacity resource."
 ---
 

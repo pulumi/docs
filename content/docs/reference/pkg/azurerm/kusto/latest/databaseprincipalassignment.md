@@ -1,7 +1,7 @@
 
 ---
 title: "DatabasePrincipalAssignment"
-title_tag: "Resource DatabasePrincipalAssignment | Module kusto/latest | Package azurerm"
+title_tag: "Resource DatabasePrincipalAssignment | Module kusto/latest | Package Azure RM"
 meta_desc: "Explore the DatabasePrincipalAssignment resource of the kusto/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Class representing a database principal assignment."
 ---
 

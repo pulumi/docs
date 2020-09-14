@@ -1,7 +1,7 @@
 
 ---
 title: "AlertRule"
-title_tag: "Resource AlertRule | Module insights/latest | Package azurerm"
+title_tag: "Resource AlertRule | Module insights/latest | Package Azure RM"
 meta_desc: "Explore the AlertRule resource of the insights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The alert rule resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "FirewallRule"
-title_tag: "Resource FirewallRule | Module datalakeanalytics/latest | Package azurerm"
+title_tag: "Resource FirewallRule | Module datalakeanalytics/latest | Package Azure RM"
 meta_desc: "Explore the FirewallRule resource of the datalakeanalytics/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Data Lake Analytics firewall rule information."
 ---
 

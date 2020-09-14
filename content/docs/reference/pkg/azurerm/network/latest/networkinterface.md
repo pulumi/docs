@@ -1,7 +1,7 @@
 
 ---
 title: "NetworkInterface"
-title_tag: "Resource NetworkInterface | Module network/latest | Package azurerm"
+title_tag: "Resource NetworkInterface | Module network/latest | Package Azure RM"
 meta_desc: "Explore the NetworkInterface resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A network interface in a resource group."
 ---
 

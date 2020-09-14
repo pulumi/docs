@@ -1,7 +1,7 @@
 
 ---
 title: "GetDisk"
-title_tag: "Function GetDisk | Module compute/latest | Package azurerm"
+title_tag: "Function GetDisk | Module compute/latest | Package Azure RM"
 meta_desc: "Explore the GetDisk function of the compute/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "AppServicePlanRouteForVnet"
-title_tag: "Resource AppServicePlanRouteForVnet | Module web/latest | Package azurerm"
+title_tag: "Resource AppServicePlanRouteForVnet | Module web/latest | Package Azure RM"
 meta_desc: "Explore the AppServicePlanRouteForVnet resource of the web/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Virtual Network route contract used to pass routing information for a Virtual Network."
 ---
 

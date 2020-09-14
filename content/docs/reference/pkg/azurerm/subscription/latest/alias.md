@@ -1,7 +1,7 @@
 
 ---
 title: "Alias"
-title_tag: "Resource Alias | Module subscription/latest | Package azurerm"
+title_tag: "Resource Alias | Module subscription/latest | Package Azure RM"
 meta_desc: "Explore the Alias resource of the subscription/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Subscription Information with the alias."
 ---
 

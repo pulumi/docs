@@ -1,7 +1,7 @@
 
 ---
 title: "GetLinkedService"
-title_tag: "Function GetLinkedService | Module machinelearningservices/v20200901preview | Package azurerm"
+title_tag: "Function GetLinkedService | Module machinelearningservices/v20200901preview | Package Azure RM"
 meta_desc: "Explore the GetLinkedService function of the machinelearningservices/v20200901preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

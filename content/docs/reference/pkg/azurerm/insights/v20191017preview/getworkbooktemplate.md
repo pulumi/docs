@@ -1,7 +1,7 @@
 
 ---
 title: "GetWorkbookTemplate"
-title_tag: "Function GetWorkbookTemplate | Module insights/v20191017preview | Package azurerm"
+title_tag: "Function GetWorkbookTemplate | Module insights/v20191017preview | Package Azure RM"
 meta_desc: "Explore the GetWorkbookTemplate function of the insights/v20191017preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "CustomDomain"
-title_tag: "Resource CustomDomain | Module cdn/latest | Package azurerm"
+title_tag: "Resource CustomDomain | Module cdn/latest | Package Azure RM"
 meta_desc: "Explore the CustomDomain resource of the cdn/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Friendly domain name mapping to the endpoint hostname that the customer provides for branding purposes, e.g. www.contoso.com."
 ---
 

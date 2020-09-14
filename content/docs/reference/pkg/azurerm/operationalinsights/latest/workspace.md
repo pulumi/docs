@@ -1,7 +1,7 @@
 
 ---
 title: "Workspace"
-title_tag: "Resource Workspace | Module operationalinsights/latest | Package azurerm"
+title_tag: "Resource Workspace | Module operationalinsights/latest | Package Azure RM"
 meta_desc: "Explore the Workspace resource of the operationalinsights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The top level Workspace resource container."
 ---
 

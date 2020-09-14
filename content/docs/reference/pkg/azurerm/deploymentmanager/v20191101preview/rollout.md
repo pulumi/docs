@@ -1,7 +1,7 @@
 
 ---
 title: "Rollout"
-title_tag: "Resource Rollout | Module deploymentmanager/v20191101preview | Package azurerm"
+title_tag: "Resource Rollout | Module deploymentmanager/v20191101preview | Package Azure RM"
 meta_desc: "Explore the Rollout resource of the deploymentmanager/v20191101preview module, including examples, input properties, output properties, lookup functions, and supporting types. Defines the PUT rollout request body."
 ---
 

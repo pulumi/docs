@@ -1,7 +1,7 @@
 
 ---
 title: "GetCloudConnector"
-title_tag: "Function GetCloudConnector | Module costmanagement/v20190301preview | Package azurerm"
+title_tag: "Function GetCloudConnector | Module costmanagement/v20190301preview | Package Azure RM"
 meta_desc: "Explore the GetCloudConnector function of the costmanagement/v20190301preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

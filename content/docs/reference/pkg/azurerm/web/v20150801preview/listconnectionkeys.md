@@ -1,7 +1,7 @@
 
 ---
 title: "ListConnectionKeys"
-title_tag: "Function ListConnectionKeys | Module web/v20150801preview | Package azurerm"
+title_tag: "Function ListConnectionKeys | Module web/v20150801preview | Package Azure RM"
 meta_desc: "Explore the ListConnectionKeys function of the web/v20150801preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

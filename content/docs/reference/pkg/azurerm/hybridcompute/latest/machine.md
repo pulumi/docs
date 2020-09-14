@@ -1,7 +1,7 @@
 
 ---
 title: "Machine"
-title_tag: "Resource Machine | Module hybridcompute/latest | Package azurerm"
+title_tag: "Resource Machine | Module hybridcompute/latest | Package Azure RM"
 meta_desc: "Explore the Machine resource of the hybridcompute/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Describes a hybrid machine."
 ---
 

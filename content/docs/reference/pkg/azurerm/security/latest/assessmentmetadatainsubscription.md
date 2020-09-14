@@ -1,7 +1,7 @@
 
 ---
 title: "AssessmentMetadataInSubscription"
-title_tag: "Resource AssessmentMetadataInSubscription | Module security/latest | Package azurerm"
+title_tag: "Resource AssessmentMetadataInSubscription | Module security/latest | Package Azure RM"
 meta_desc: "Explore the AssessmentMetadataInSubscription resource of the security/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Security assessment metadata"
 ---
 

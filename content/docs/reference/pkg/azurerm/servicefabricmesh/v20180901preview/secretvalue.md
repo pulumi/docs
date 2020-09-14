@@ -1,7 +1,7 @@
 
 ---
 title: "SecretValue"
-title_tag: "Resource SecretValue | Module servicefabricmesh/v20180901preview | Package azurerm"
+title_tag: "Resource SecretValue | Module servicefabricmesh/v20180901preview | Package Azure RM"
 meta_desc: "Explore the SecretValue resource of the servicefabricmesh/v20180901preview module, including examples, input properties, output properties, lookup functions, and supporting types. This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value."
 ---
 

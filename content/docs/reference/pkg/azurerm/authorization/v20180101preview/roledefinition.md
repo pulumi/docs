@@ -1,7 +1,7 @@
 
 ---
 title: "RoleDefinition"
-title_tag: "Resource RoleDefinition | Module authorization/v20180101preview | Package azurerm"
+title_tag: "Resource RoleDefinition | Module authorization/v20180101preview | Package Azure RM"
 meta_desc: "Explore the RoleDefinition resource of the authorization/v20180101preview module, including examples, input properties, output properties, lookup functions, and supporting types. Role definition."
 ---
 

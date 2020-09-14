@@ -1,7 +1,7 @@
 
 ---
 title: "GetHyperVSite"
-title_tag: "Function GetHyperVSite | Module offazure/latest | Package azurerm"
+title_tag: "Function GetHyperVSite | Module offazure/latest | Package Azure RM"
 meta_desc: "Explore the GetHyperVSite function of the offazure/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Output"
-title_tag: "Resource Output | Module streamanalytics/v20170401preview | Package azurerm"
+title_tag: "Resource Output | Module streamanalytics/v20170401preview | Package Azure RM"
 meta_desc: "Explore the Output resource of the streamanalytics/v20170401preview module, including examples, input properties, output properties, lookup functions, and supporting types. An output object, containing all information associated with the named output. All outputs are contained under a streaming job."
 ---
 

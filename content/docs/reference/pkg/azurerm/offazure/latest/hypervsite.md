@@ -1,7 +1,7 @@
 
 ---
 title: "HyperVSite"
-title_tag: "Resource HyperVSite | Module offazure/latest | Package azurerm"
+title_tag: "Resource HyperVSite | Module offazure/latest | Package Azure RM"
 meta_desc: "Explore the HyperVSite resource of the offazure/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Site REST Resource."
 ---
 

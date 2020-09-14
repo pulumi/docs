@@ -1,7 +1,7 @@
 
 ---
 title: "CloudConnector"
-title_tag: "Resource CloudConnector | Module costmanagement/v20190301preview | Package azurerm"
+title_tag: "Resource CloudConnector | Module costmanagement/v20190301preview | Package Azure RM"
 meta_desc: "Explore the CloudConnector resource of the costmanagement/v20190301preview module, including examples, input properties, output properties, lookup functions, and supporting types. The Connector model definition"
 ---
 

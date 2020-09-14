@@ -1,7 +1,7 @@
 
 ---
 title: "PartnerTopicEventSubscription"
-title_tag: "Resource PartnerTopicEventSubscription | Module eventgrid/v20200401preview | Package azurerm"
+title_tag: "Resource PartnerTopicEventSubscription | Module eventgrid/v20200401preview | Package Azure RM"
 meta_desc: "Explore the PartnerTopicEventSubscription resource of the eventgrid/v20200401preview module, including examples, input properties, output properties, lookup functions, and supporting types. Event Subscription"
 ---
 

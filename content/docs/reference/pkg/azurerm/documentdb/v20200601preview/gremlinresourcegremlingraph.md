@@ -1,7 +1,7 @@
 
 ---
 title: "GremlinResourceGremlinGraph"
-title_tag: "Resource GremlinResourceGremlinGraph | Module documentdb/v20200601preview | Package azurerm"
+title_tag: "Resource GremlinResourceGremlinGraph | Module documentdb/v20200601preview | Package Azure RM"
 meta_desc: "Explore the GremlinResourceGremlinGraph resource of the documentdb/v20200601preview module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB Gremlin graph."
 ---
 

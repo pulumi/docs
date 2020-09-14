@@ -1,7 +1,7 @@
 
 ---
 title: "GetMultipleActivationKey"
-title_tag: "Function GetMultipleActivationKey | Module windowsesu/v20190916preview | Package azurerm"
+title_tag: "Function GetMultipleActivationKey | Module windowsesu/v20190916preview | Package Azure RM"
 meta_desc: "Explore the GetMultipleActivationKey function of the windowsesu/v20190916preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

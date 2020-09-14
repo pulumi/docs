@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateEndpoint"
-title_tag: "Resource PrivateEndpoint | Module streamanalytics/v20200301preview | Package azurerm"
+title_tag: "Resource PrivateEndpoint | Module streamanalytics/v20200301preview | Package Azure RM"
 meta_desc: "Explore the PrivateEndpoint resource of the streamanalytics/v20200301preview module, including examples, input properties, output properties, lookup functions, and supporting types. Complete information about the private endpoint."
 ---
 

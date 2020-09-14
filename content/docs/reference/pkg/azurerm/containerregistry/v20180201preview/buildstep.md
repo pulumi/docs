@@ -1,7 +1,7 @@
 
 ---
 title: "BuildStep"
-title_tag: "Resource BuildStep | Module containerregistry/v20180201preview | Package azurerm"
+title_tag: "Resource BuildStep | Module containerregistry/v20180201preview | Package Azure RM"
 meta_desc: "Explore the BuildStep resource of the containerregistry/v20180201preview module, including examples, input properties, output properties, lookup functions, and supporting types. Build step resource properties"
 ---
 

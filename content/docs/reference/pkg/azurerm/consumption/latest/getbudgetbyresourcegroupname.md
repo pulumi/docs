@@ -1,7 +1,7 @@
 
 ---
 title: "GetBudgetByResourceGroupName"
-title_tag: "Function GetBudgetByResourceGroupName | Module consumption/latest | Package azurerm"
+title_tag: "Function GetBudgetByResourceGroupName | Module consumption/latest | Package Azure RM"
 meta_desc: "Explore the GetBudgetByResourceGroupName function of the consumption/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

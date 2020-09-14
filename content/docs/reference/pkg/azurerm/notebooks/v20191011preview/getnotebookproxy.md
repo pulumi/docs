@@ -1,7 +1,7 @@
 
 ---
 title: "GetNotebookProxy"
-title_tag: "Function GetNotebookProxy | Module notebooks/v20191011preview | Package azurerm"
+title_tag: "Function GetNotebookProxy | Module notebooks/v20191011preview | Package Azure RM"
 meta_desc: "Explore the GetNotebookProxy function of the notebooks/v20191011preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

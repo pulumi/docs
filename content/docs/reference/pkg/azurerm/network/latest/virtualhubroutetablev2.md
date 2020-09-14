@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualHubRouteTableV2"
-title_tag: "Resource VirtualHubRouteTableV2 | Module network/latest | Package azurerm"
+title_tag: "Resource VirtualHubRouteTableV2 | Module network/latest | Package Azure RM"
 meta_desc: "Explore the VirtualHubRouteTableV2 resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. VirtualHubRouteTableV2 Resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetWebAppSourceControlSlot"
-title_tag: "Function GetWebAppSourceControlSlot | Module web/latest | Package azurerm"
+title_tag: "Function GetWebAppSourceControlSlot | Module web/latest | Package Azure RM"
 meta_desc: "Explore the GetWebAppSourceControlSlot function of the web/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

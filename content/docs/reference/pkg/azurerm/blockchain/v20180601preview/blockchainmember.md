@@ -1,7 +1,7 @@
 
 ---
 title: "BlockchainMember"
-title_tag: "Resource BlockchainMember | Module blockchain/v20180601preview | Package azurerm"
+title_tag: "Resource BlockchainMember | Module blockchain/v20180601preview | Package Azure RM"
 meta_desc: "Explore the BlockchainMember resource of the blockchain/v20180601preview module, including examples, input properties, output properties, lookup functions, and supporting types. Payload of the blockchain member which is exposed in the request/response of the resource provider."
 ---
 

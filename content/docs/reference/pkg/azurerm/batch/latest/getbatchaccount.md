@@ -1,7 +1,7 @@
 
 ---
 title: "GetBatchAccount"
-title_tag: "Function GetBatchAccount | Module batch/latest | Package azurerm"
+title_tag: "Function GetBatchAccount | Module batch/latest | Package Azure RM"
 meta_desc: "Explore the GetBatchAccount function of the batch/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

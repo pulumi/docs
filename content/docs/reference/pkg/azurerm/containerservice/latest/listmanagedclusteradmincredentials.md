@@ -1,7 +1,7 @@
 
 ---
 title: "ListManagedClusterAdminCredentials"
-title_tag: "Function ListManagedClusterAdminCredentials | Module containerservice/latest | Package azurerm"
+title_tag: "Function ListManagedClusterAdminCredentials | Module containerservice/latest | Package Azure RM"
 meta_desc: "Explore the ListManagedClusterAdminCredentials function of the containerservice/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Function"
-title_tag: "Resource Function | Module streamanalytics/latest | Package azurerm"
+title_tag: "Resource Function | Module streamanalytics/latest | Package Azure RM"
 meta_desc: "Explore the Function resource of the streamanalytics/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A function object, containing all information associated with the named function. All functions are contained under a streaming job."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "SoftwareUpdateConfigurationByName"
-title_tag: "Resource SoftwareUpdateConfigurationByName | Module automation/v20170515preview | Package azurerm"
+title_tag: "Resource SoftwareUpdateConfigurationByName | Module automation/v20170515preview | Package Azure RM"
 meta_desc: "Explore the SoftwareUpdateConfigurationByName resource of the automation/v20170515preview module, including examples, input properties, output properties, lookup functions, and supporting types. Software update configuration properties."
 ---
 

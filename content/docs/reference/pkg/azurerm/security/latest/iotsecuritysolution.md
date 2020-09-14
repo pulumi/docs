@@ -1,7 +1,7 @@
 
 ---
 title: "IotSecuritySolution"
-title_tag: "Resource IotSecuritySolution | Module security/latest | Package azurerm"
+title_tag: "Resource IotSecuritySolution | Module security/latest | Package Azure RM"
 meta_desc: "Explore the IotSecuritySolution resource of the security/latest module, including examples, input properties, output properties, lookup functions, and supporting types. IoT Security solution configuration and resource information."
 ---
 

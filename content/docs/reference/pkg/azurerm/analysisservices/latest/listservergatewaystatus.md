@@ -1,7 +1,7 @@
 
 ---
 title: "ListServerGatewayStatus"
-title_tag: "Function ListServerGatewayStatus | Module analysisservices/latest | Package azurerm"
+title_tag: "Function ListServerGatewayStatus | Module analysisservices/latest | Package Azure RM"
 meta_desc: "Explore the ListServerGatewayStatus function of the analysisservices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

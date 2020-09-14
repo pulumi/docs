@@ -1,7 +1,7 @@
 
 ---
 title: "GetApplication"
-title_tag: "Function GetApplication | Module desktopvirtualization/v20191210preview | Package azurerm"
+title_tag: "Function GetApplication | Module desktopvirtualization/v20191210preview | Package Azure RM"
 meta_desc: "Explore the GetApplication function of the desktopvirtualization/v20191210preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

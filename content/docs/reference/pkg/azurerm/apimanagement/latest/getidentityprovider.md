@@ -1,7 +1,7 @@
 
 ---
 title: "GetIdentityProvider"
-title_tag: "Function GetIdentityProvider | Module apimanagement/latest | Package azurerm"
+title_tag: "Function GetIdentityProvider | Module apimanagement/latest | Package Azure RM"
 meta_desc: "Explore the GetIdentityProvider function of the apimanagement/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

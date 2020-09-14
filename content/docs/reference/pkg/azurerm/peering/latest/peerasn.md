@@ -1,7 +1,7 @@
 
 ---
 title: "PeerAsn"
-title_tag: "Resource PeerAsn | Module peering/latest | Package azurerm"
+title_tag: "Resource PeerAsn | Module peering/latest | Package Azure RM"
 meta_desc: "Explore the PeerAsn resource of the peering/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The essential information related to the peer&#39;s ASN."
 ---
 

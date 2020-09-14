@@ -1,7 +1,7 @@
 
 ---
 title: "HyperVCollector"
-title_tag: "Resource HyperVCollector | Module migrate/latest | Package azurerm"
+title_tag: "Resource HyperVCollector | Module migrate/latest | Package Azure RM"
 meta_desc: "Explore the HyperVCollector resource of the migrate/latest module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

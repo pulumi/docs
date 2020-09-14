@@ -1,7 +1,7 @@
 
 ---
 title: "ListAdminKey"
-title_tag: "Function ListAdminKey | Module search/latest | Package azurerm"
+title_tag: "Function ListAdminKey | Module search/latest | Package Azure RM"
 meta_desc: "Explore the ListAdminKey function of the search/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

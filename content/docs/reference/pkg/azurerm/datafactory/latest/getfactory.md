@@ -1,7 +1,7 @@
 
 ---
 title: "GetFactory"
-title_tag: "Function GetFactory | Module datafactory/latest | Package azurerm"
+title_tag: "Function GetFactory | Module datafactory/latest | Package Azure RM"
 meta_desc: "Explore the GetFactory function of the datafactory/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

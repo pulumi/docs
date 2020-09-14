@@ -1,7 +1,7 @@
 
 ---
 title: "ExportConfiguration"
-title_tag: "Resource ExportConfiguration | Module insights/latest | Package azurerm"
+title_tag: "Resource ExportConfiguration | Module insights/latest | Package Azure RM"
 meta_desc: "Explore the ExportConfiguration resource of the insights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Properties that define a Continuous Export configuration."
 ---
 

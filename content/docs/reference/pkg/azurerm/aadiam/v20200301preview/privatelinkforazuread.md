@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateLinkForAzureAd"
-title_tag: "Resource PrivateLinkForAzureAd | Module aadiam/v20200301preview | Package azurerm"
+title_tag: "Resource PrivateLinkForAzureAd | Module aadiam/v20200301preview | Package Azure RM"
 meta_desc: "Explore the PrivateLinkForAzureAd resource of the aadiam/v20200301preview module, including examples, input properties, output properties, lookup functions, and supporting types. PrivateLink Policy configuration object."
 ---
 

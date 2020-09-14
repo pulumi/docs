@@ -1,7 +1,7 @@
 
 ---
 title: "GetRemediationAtResource"
-title_tag: "Function GetRemediationAtResource | Module policyinsights/latest | Package azurerm"
+title_tag: "Function GetRemediationAtResource | Module policyinsights/latest | Package Azure RM"
 meta_desc: "Explore the GetRemediationAtResource function of the policyinsights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

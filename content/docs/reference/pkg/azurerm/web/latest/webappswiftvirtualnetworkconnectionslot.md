@@ -1,7 +1,7 @@
 
 ---
 title: "WebAppSwiftVirtualNetworkConnectionSlot"
-title_tag: "Resource WebAppSwiftVirtualNetworkConnectionSlot | Module web/latest | Package azurerm"
+title_tag: "Resource WebAppSwiftVirtualNetworkConnectionSlot | Module web/latest | Package Azure RM"
 meta_desc: "Explore the WebAppSwiftVirtualNetworkConnectionSlot resource of the web/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Swift Virtual Network Contract. This is used to enable the new Swift way of doing virtual network integration."
 ---
 

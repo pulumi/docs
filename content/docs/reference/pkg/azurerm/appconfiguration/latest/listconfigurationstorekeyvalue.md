@@ -1,7 +1,7 @@
 
 ---
 title: "ListConfigurationStoreKeyValue"
-title_tag: "Function ListConfigurationStoreKeyValue | Module appconfiguration/latest | Package azurerm"
+title_tag: "Function ListConfigurationStoreKeyValue | Module appconfiguration/latest | Package Azure RM"
 meta_desc: "Explore the ListConfigurationStoreKeyValue function of the appconfiguration/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

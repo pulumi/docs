@@ -1,7 +1,7 @@
 
 ---
 title: "GetSubscription"
-title_tag: "Function GetSubscription | Module servicebus/latest | Package azurerm"
+title_tag: "Function GetSubscription | Module servicebus/latest | Package Azure RM"
 meta_desc: "Explore the GetSubscription function of the servicebus/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

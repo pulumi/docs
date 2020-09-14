@@ -1,7 +1,7 @@
 
 ---
 title: "GetSubscriptionDiagnosticSetting"
-title_tag: "Function GetSubscriptionDiagnosticSetting | Module insights/v20170501preview | Package azurerm"
+title_tag: "Function GetSubscriptionDiagnosticSetting | Module insights/v20170501preview | Package Azure RM"
 meta_desc: "Explore the GetSubscriptionDiagnosticSetting function of the insights/v20170501preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

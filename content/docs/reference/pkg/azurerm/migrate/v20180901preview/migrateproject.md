@@ -1,7 +1,7 @@
 
 ---
 title: "MigrateProject"
-title_tag: "Resource MigrateProject | Module migrate/v20180901preview | Package azurerm"
+title_tag: "Resource MigrateProject | Module migrate/v20180901preview | Package Azure RM"
 meta_desc: "Explore the MigrateProject resource of the migrate/v20180901preview module, including examples, input properties, output properties, lookup functions, and supporting types. Migrate Project REST Resource."
 ---
 

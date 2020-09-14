@@ -1,7 +1,7 @@
 
 ---
 title: "ListBatchAccountKeys"
-title_tag: "Function ListBatchAccountKeys | Module batch/latest | Package azurerm"
+title_tag: "Function ListBatchAccountKeys | Module batch/latest | Package Azure RM"
 meta_desc: "Explore the ListBatchAccountKeys function of the batch/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

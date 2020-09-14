@@ -1,7 +1,7 @@
 
 ---
 title: "GetEventSource"
-title_tag: "Function GetEventSource | Module timeseriesinsights/latest | Package azurerm"
+title_tag: "Function GetEventSource | Module timeseriesinsights/latest | Package Azure RM"
 meta_desc: "Explore the GetEventSource function of the timeseriesinsights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "HierarchySetting"
-title_tag: "Resource HierarchySetting | Module management/latest | Package azurerm"
+title_tag: "Resource HierarchySetting | Module management/latest | Package Azure RM"
 meta_desc: "Explore the HierarchySetting resource of the management/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Settings defined at the Management Group scope."
 ---
 

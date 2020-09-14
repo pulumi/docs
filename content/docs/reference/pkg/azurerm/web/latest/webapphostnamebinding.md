@@ -1,7 +1,7 @@
 
 ---
 title: "WebAppHostNameBinding"
-title_tag: "Resource WebAppHostNameBinding | Module web/latest | Package azurerm"
+title_tag: "Resource WebAppHostNameBinding | Module web/latest | Package Azure RM"
 meta_desc: "Explore the WebAppHostNameBinding resource of the web/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A hostname binding object."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Environment"
-title_tag: "Resource Environment | Module devtestlab/latest | Package azurerm"
+title_tag: "Resource Environment | Module devtestlab/latest | Package Azure RM"
 meta_desc: "Explore the Environment resource of the devtestlab/latest module, including examples, input properties, output properties, lookup functions, and supporting types. An environment, which is essentially an ARM template deployment."
 ---
 

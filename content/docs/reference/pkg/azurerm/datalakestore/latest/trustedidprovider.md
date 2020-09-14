@@ -1,7 +1,7 @@
 
 ---
 title: "TrustedIdProvider"
-title_tag: "Resource TrustedIdProvider | Module datalakestore/latest | Package azurerm"
+title_tag: "Resource TrustedIdProvider | Module datalakestore/latest | Package Azure RM"
 meta_desc: "Explore the TrustedIdProvider resource of the datalakestore/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Data Lake Store trusted identity provider information."
 ---
 

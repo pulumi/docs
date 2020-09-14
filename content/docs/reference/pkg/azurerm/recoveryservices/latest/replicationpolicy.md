@@ -1,7 +1,7 @@
 
 ---
 title: "ReplicationPolicy"
-title_tag: "Resource ReplicationPolicy | Module recoveryservices/latest | Package azurerm"
+title_tag: "Resource ReplicationPolicy | Module recoveryservices/latest | Package Azure RM"
 meta_desc: "Explore the ReplicationPolicy resource of the recoveryservices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Protection profile details."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetJobTargetGroup"
-title_tag: "Function GetJobTargetGroup | Module sql/v20170301preview | Package azurerm"
+title_tag: "Function GetJobTargetGroup | Module sql/v20170301preview | Package Azure RM"
 meta_desc: "Explore the GetJobTargetGroup function of the sql/v20170301preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

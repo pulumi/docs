@@ -1,7 +1,7 @@
 
 ---
 title: "SynchronizationSetting"
-title_tag: "Resource SynchronizationSetting | Module datashare/latest | Package azurerm"
+title_tag: "Resource SynchronizationSetting | Module datashare/latest | Package Azure RM"
 meta_desc: "Explore the SynchronizationSetting resource of the datashare/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A Synchronization Setting data transfer object."
 ---
 

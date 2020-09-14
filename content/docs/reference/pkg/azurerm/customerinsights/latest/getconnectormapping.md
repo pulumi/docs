@@ -1,7 +1,7 @@
 
 ---
 title: "GetConnectorMapping"
-title_tag: "Function GetConnectorMapping | Module customerinsights/latest | Package azurerm"
+title_tag: "Function GetConnectorMapping | Module customerinsights/latest | Package Azure RM"
 meta_desc: "Explore the GetConnectorMapping function of the customerinsights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

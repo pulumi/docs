@@ -1,7 +1,7 @@
 
 ---
 title: "GetSite"
-title_tag: "Function GetSite | Module offazure/latest | Package azurerm"
+title_tag: "Function GetSite | Module offazure/latest | Package Azure RM"
 meta_desc: "Explore the GetSite function of the offazure/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

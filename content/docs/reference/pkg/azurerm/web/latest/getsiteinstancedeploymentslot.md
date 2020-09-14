@@ -1,7 +1,7 @@
 
 ---
 title: "GetSiteInstanceDeploymentSlot"
-title_tag: "Function GetSiteInstanceDeploymentSlot | Module web/latest | Package azurerm"
+title_tag: "Function GetSiteInstanceDeploymentSlot | Module web/latest | Package Azure RM"
 meta_desc: "Explore the GetSiteInstanceDeploymentSlot function of the web/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

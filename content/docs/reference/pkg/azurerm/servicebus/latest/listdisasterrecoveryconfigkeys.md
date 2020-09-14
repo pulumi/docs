@@ -1,7 +1,7 @@
 
 ---
 title: "ListDisasterRecoveryConfigKeys"
-title_tag: "Function ListDisasterRecoveryConfigKeys | Module servicebus/latest | Package azurerm"
+title_tag: "Function ListDisasterRecoveryConfigKeys | Module servicebus/latest | Package Azure RM"
 meta_desc: "Explore the ListDisasterRecoveryConfigKeys function of the servicebus/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

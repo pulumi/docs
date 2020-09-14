@@ -1,7 +1,7 @@
 
 ---
 title: "GetHealthAlert"
-title_tag: "Function GetHealthAlert | Module alertsmanagement/v20200804preview | Package azurerm"
+title_tag: "Function GetHealthAlert | Module alertsmanagement/v20200804preview | Package Azure RM"
 meta_desc: "Explore the GetHealthAlert function of the alertsmanagement/v20200804preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

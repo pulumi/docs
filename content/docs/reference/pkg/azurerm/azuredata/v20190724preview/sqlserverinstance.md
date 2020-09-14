@@ -1,7 +1,7 @@
 
 ---
 title: "SqlServerInstance"
-title_tag: "Resource SqlServerInstance | Module azuredata/v20190724preview | Package azurerm"
+title_tag: "Resource SqlServerInstance | Module azuredata/v20190724preview | Package Azure RM"
 meta_desc: "Explore the SqlServerInstance resource of the azuredata/v20190724preview module, including examples, input properties, output properties, lookup functions, and supporting types. A SqlServerInstance."
 ---
 

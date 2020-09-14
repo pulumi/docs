@@ -1,7 +1,7 @@
 
 ---
 title: "TenantConfiguration"
-title_tag: "Resource TenantConfiguration | Module portal/v20200901preview | Package azurerm"
+title_tag: "Resource TenantConfiguration | Module portal/v20200901preview | Package Azure RM"
 meta_desc: "Explore the TenantConfiguration resource of the portal/v20200901preview module, including examples, input properties, output properties, lookup functions, and supporting types. Tenant configuration."
 ---
 

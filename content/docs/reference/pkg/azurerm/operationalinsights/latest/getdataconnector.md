@@ -1,7 +1,7 @@
 
 ---
 title: "GetDataConnector"
-title_tag: "Function GetDataConnector | Module operationalinsights/latest | Package azurerm"
+title_tag: "Function GetDataConnector | Module operationalinsights/latest | Package Azure RM"
 meta_desc: "Explore the GetDataConnector function of the operationalinsights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

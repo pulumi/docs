@@ -1,7 +1,7 @@
 
 ---
 title: "DiskAccess"
-title_tag: "Resource DiskAccess | Module compute/latest | Package azurerm"
+title_tag: "Resource DiskAccess | Module compute/latest | Package Azure RM"
 meta_desc: "Explore the DiskAccess resource of the compute/latest module, including examples, input properties, output properties, lookup functions, and supporting types. disk access resource."
 ---
 

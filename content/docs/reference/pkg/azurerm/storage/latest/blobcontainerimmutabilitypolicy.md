@@ -1,7 +1,7 @@
 
 ---
 title: "BlobContainerImmutabilityPolicy"
-title_tag: "Resource BlobContainerImmutabilityPolicy | Module storage/latest | Package azurerm"
+title_tag: "Resource BlobContainerImmutabilityPolicy | Module storage/latest | Package Azure RM"
 meta_desc: "Explore the BlobContainerImmutabilityPolicy resource of the storage/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The ImmutabilityPolicy property of a blob container, including Id, resource name, resource type, Etag."
 ---
 

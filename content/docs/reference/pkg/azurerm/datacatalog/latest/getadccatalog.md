@@ -1,7 +1,7 @@
 
 ---
 title: "GetADCCatalog"
-title_tag: "Function GetADCCatalog | Module datacatalog/latest | Package azurerm"
+title_tag: "Function GetADCCatalog | Module datacatalog/latest | Package Azure RM"
 meta_desc: "Explore the GetADCCatalog function of the datacatalog/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

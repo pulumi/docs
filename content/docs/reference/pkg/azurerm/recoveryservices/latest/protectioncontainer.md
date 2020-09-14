@@ -1,7 +1,7 @@
 
 ---
 title: "ProtectionContainer"
-title_tag: "Resource ProtectionContainer | Module recoveryservices/latest | Package azurerm"
+title_tag: "Resource ProtectionContainer | Module recoveryservices/latest | Package Azure RM"
 meta_desc: "Explore the ProtectionContainer resource of the recoveryservices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Base class for container with backup items. Containers with specific workloads are derived from this class."
 ---
 

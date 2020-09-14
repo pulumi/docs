@@ -1,7 +1,7 @@
 
 ---
 title: "Application"
-title_tag: "Resource Application | Module solutions/v20200821preview | Package azurerm"
+title_tag: "Resource Application | Module solutions/v20200821preview | Package Azure RM"
 meta_desc: "Explore the Application resource of the solutions/v20200821preview module, including examples, input properties, output properties, lookup functions, and supporting types. Information about managed application."
 ---
 

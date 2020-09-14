@@ -1,7 +1,7 @@
 
 ---
 title: "GetController"
-title_tag: "Function GetController | Module devspaces/latest | Package azurerm"
+title_tag: "Function GetController | Module devspaces/latest | Package Azure RM"
 meta_desc: "Explore the GetController function of the devspaces/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

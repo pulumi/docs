@@ -1,7 +1,7 @@
 
 ---
 title: "ConfigurationStore"
-title_tag: "Resource ConfigurationStore | Module appconfiguration/latest | Package azurerm"
+title_tag: "Resource ConfigurationStore | Module appconfiguration/latest | Package Azure RM"
 meta_desc: "Explore the ConfigurationStore resource of the appconfiguration/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The configuration store along with all resource properties. The Configuration Store will have all information to begin utilizing it."
 ---
 

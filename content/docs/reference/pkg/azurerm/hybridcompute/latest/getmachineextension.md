@@ -1,7 +1,7 @@
 
 ---
 title: "GetMachineExtension"
-title_tag: "Function GetMachineExtension | Module hybridcompute/latest | Package azurerm"
+title_tag: "Function GetMachineExtension | Module hybridcompute/latest | Package Azure RM"
 meta_desc: "Explore the GetMachineExtension function of the hybridcompute/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetPrivateLinkScopedResource"
-title_tag: "Function GetPrivateLinkScopedResource | Module hybridcompute/v20200815preview | Package azurerm"
+title_tag: "Function GetPrivateLinkScopedResource | Module hybridcompute/v20200815preview | Package Azure RM"
 meta_desc: "Explore the GetPrivateLinkScopedResource function of the hybridcompute/v20200815preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

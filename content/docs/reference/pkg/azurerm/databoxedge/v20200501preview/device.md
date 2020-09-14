@@ -1,7 +1,7 @@
 
 ---
 title: "Device"
-title_tag: "Resource Device | Module databoxedge/v20200501preview | Package azurerm"
+title_tag: "Resource Device | Module databoxedge/v20200501preview | Package Azure RM"
 meta_desc: "Explore the Device resource of the databoxedge/v20200501preview module, including examples, input properties, output properties, lookup functions, and supporting types. The Data Box Edge/Gateway device."
 ---
 

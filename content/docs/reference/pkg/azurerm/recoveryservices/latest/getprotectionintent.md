@@ -1,7 +1,7 @@
 
 ---
 title: "GetProtectionIntent"
-title_tag: "Function GetProtectionIntent | Module recoveryservices/latest | Package azurerm"
+title_tag: "Function GetProtectionIntent | Module recoveryservices/latest | Package Azure RM"
 meta_desc: "Explore the GetProtectionIntent function of the recoveryservices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

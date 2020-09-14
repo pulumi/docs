@@ -1,7 +1,7 @@
 
 ---
 title: "ListDomainRecommendations"
-title_tag: "Function ListDomainRecommendations | Module domainregistration/latest | Package azurerm"
+title_tag: "Function ListDomainRecommendations | Module domainregistration/latest | Package Azure RM"
 meta_desc: "Explore the ListDomainRecommendations function of the domainregistration/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

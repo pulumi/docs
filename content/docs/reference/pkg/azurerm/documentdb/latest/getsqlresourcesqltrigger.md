@@ -1,7 +1,7 @@
 
 ---
 title: "GetSqlResourceSqlTrigger"
-title_tag: "Function GetSqlResourceSqlTrigger | Module documentdb/latest | Package azurerm"
+title_tag: "Function GetSqlResourceSqlTrigger | Module documentdb/latest | Package Azure RM"
 meta_desc: "Explore the GetSqlResourceSqlTrigger function of the documentdb/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

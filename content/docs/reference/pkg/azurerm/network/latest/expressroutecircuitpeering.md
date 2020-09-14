@@ -1,7 +1,7 @@
 
 ---
 title: "ExpressRouteCircuitPeering"
-title_tag: "Resource ExpressRouteCircuitPeering | Module network/latest | Package azurerm"
+title_tag: "Resource ExpressRouteCircuitPeering | Module network/latest | Package Azure RM"
 meta_desc: "Explore the ExpressRouteCircuitPeering resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Peering in an ExpressRouteCircuit resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetJob"
-title_tag: "Function GetJob | Module batchai/latest | Package azurerm"
+title_tag: "Function GetJob | Module batchai/latest | Package Azure RM"
 meta_desc: "Explore the GetJob function of the batchai/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

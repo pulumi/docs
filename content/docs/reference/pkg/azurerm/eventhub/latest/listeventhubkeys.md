@@ -1,7 +1,7 @@
 
 ---
 title: "ListEventHubKeys"
-title_tag: "Function ListEventHubKeys | Module eventhub/latest | Package azurerm"
+title_tag: "Function ListEventHubKeys | Module eventhub/latest | Package Azure RM"
 meta_desc: "Explore the ListEventHubKeys function of the eventhub/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

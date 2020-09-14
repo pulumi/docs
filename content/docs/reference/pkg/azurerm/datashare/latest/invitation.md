@@ -1,7 +1,7 @@
 
 ---
 title: "Invitation"
-title_tag: "Resource Invitation | Module datashare/latest | Package azurerm"
+title_tag: "Resource Invitation | Module datashare/latest | Package Azure RM"
 meta_desc: "Explore the Invitation resource of the datashare/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A Invitation data transfer object."
 ---
 

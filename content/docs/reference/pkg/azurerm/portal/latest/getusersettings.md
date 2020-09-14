@@ -1,7 +1,7 @@
 
 ---
 title: "GetUserSettings"
-title_tag: "Function GetUserSettings | Module portal/latest | Package azurerm"
+title_tag: "Function GetUserSettings | Module portal/latest | Package Azure RM"
 meta_desc: "Explore the GetUserSettings function of the portal/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "LinkedWorkspace"
-title_tag: "Resource LinkedWorkspace | Module machinelearningservices/latest | Package azurerm"
+title_tag: "Resource LinkedWorkspace | Module machinelearningservices/latest | Package Azure RM"
 meta_desc: "Explore the LinkedWorkspace resource of the machinelearningservices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Linked workspace."
 ---
 

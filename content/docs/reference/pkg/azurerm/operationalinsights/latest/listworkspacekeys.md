@@ -1,7 +1,7 @@
 
 ---
 title: "ListWorkspaceKeys"
-title_tag: "Function ListWorkspaceKeys | Module operationalinsights/latest | Package azurerm"
+title_tag: "Function ListWorkspaceKeys | Module operationalinsights/latest | Package Azure RM"
 meta_desc: "Explore the ListWorkspaceKeys function of the operationalinsights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

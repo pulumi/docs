@@ -1,7 +1,7 @@
 
 ---
 title: "LocalNetworkGateway"
-title_tag: "Resource LocalNetworkGateway | Module network/latest | Package azurerm"
+title_tag: "Resource LocalNetworkGateway | Module network/latest | Package Azure RM"
 meta_desc: "Explore the LocalNetworkGateway resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A common class for general resource information."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ScheduledQueryRule"
-title_tag: "Resource ScheduledQueryRule | Module insights/v20200501preview | Package azurerm"
+title_tag: "Resource ScheduledQueryRule | Module insights/v20200501preview | Package Azure RM"
 meta_desc: "Explore the ScheduledQueryRule resource of the insights/v20200501preview module, including examples, input properties, output properties, lookup functions, and supporting types. The scheduled query rule resource."
 ---
 

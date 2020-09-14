@@ -1,7 +1,7 @@
 
 ---
 title: "DedicatedHsm"
-title_tag: "Resource DedicatedHsm | Module hardwaresecuritymodules/v20181031preview | Package azurerm"
+title_tag: "Resource DedicatedHsm | Module hardwaresecuritymodules/v20181031preview | Package Azure RM"
 meta_desc: "Explore the DedicatedHsm resource of the hardwaresecuritymodules/v20181031preview module, including examples, input properties, output properties, lookup functions, and supporting types. Resource information with extended details."
 ---
 

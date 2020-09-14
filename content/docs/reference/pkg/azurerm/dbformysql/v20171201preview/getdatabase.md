@@ -1,7 +1,7 @@
 
 ---
 title: "GetDatabase"
-title_tag: "Function GetDatabase | Module dbformysql/v20171201preview | Package azurerm"
+title_tag: "Function GetDatabase | Module dbformysql/v20171201preview | Package Azure RM"
 meta_desc: "Explore the GetDatabase function of the dbformysql/v20171201preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

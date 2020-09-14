@@ -1,7 +1,7 @@
 
 ---
 title: "ManagementLockByScope"
-title_tag: "Resource ManagementLockByScope | Module authorization/latest | Package azurerm"
+title_tag: "Resource ManagementLockByScope | Module authorization/latest | Package Azure RM"
 meta_desc: "Explore the ManagementLockByScope resource of the authorization/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The lock information."
 ---
 

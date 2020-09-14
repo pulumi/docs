@@ -1,7 +1,7 @@
 
 ---
 title: "Namespace"
-title_tag: "Resource Namespace | Module notificationhubs/latest | Package azurerm"
+title_tag: "Resource Namespace | Module notificationhubs/latest | Package Azure RM"
 meta_desc: "Explore the Namespace resource of the notificationhubs/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Description of a Namespace resource."
 ---
 

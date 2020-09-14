@@ -1,7 +1,7 @@
 
 ---
 title: "GetServiceTask"
-title_tag: "Function GetServiceTask | Module datamigration/v20180715preview | Package azurerm"
+title_tag: "Function GetServiceTask | Module datamigration/v20180715preview | Package Azure RM"
 meta_desc: "Explore the GetServiceTask function of the datamigration/v20180715preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

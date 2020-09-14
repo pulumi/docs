@@ -1,7 +1,7 @@
 
 ---
 title: "GetArtifact"
-title_tag: "Function GetArtifact | Module management/v20171111preview | Package azurerm"
+title_tag: "Function GetArtifact | Module management/v20171111preview | Package Azure RM"
 meta_desc: "Explore the GetArtifact function of the management/v20171111preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ListWorkspaceCollectionAccessKeys"
-title_tag: "Function ListWorkspaceCollectionAccessKeys | Module powerbi/latest | Package azurerm"
+title_tag: "Function ListWorkspaceCollectionAccessKeys | Module powerbi/latest | Package Azure RM"
 meta_desc: "Explore the ListWorkspaceCollectionAccessKeys function of the powerbi/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

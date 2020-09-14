@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateDnsZoneGroup"
-title_tag: "Resource PrivateDnsZoneGroup | Module network/latest | Package azurerm"
+title_tag: "Resource PrivateDnsZoneGroup | Module network/latest | Package Azure RM"
 meta_desc: "Explore the PrivateDnsZoneGroup resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Private dns zone group resource."
 ---
 

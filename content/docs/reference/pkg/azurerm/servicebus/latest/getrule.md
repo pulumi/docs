@@ -1,7 +1,7 @@
 
 ---
 title: "GetRule"
-title_tag: "Function GetRule | Module servicebus/latest | Package azurerm"
+title_tag: "Function GetRule | Module servicebus/latest | Package Azure RM"
 meta_desc: "Explore the GetRule function of the servicebus/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "JobTargetGroup"
-title_tag: "Resource JobTargetGroup | Module sql/v20170301preview | Package azurerm"
+title_tag: "Resource JobTargetGroup | Module sql/v20170301preview | Package Azure RM"
 meta_desc: "Explore the JobTargetGroup resource of the sql/v20170301preview module, including examples, input properties, output properties, lookup functions, and supporting types. A group of job targets."
 ---
 

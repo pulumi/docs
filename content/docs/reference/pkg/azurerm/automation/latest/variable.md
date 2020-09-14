@@ -1,7 +1,7 @@
 
 ---
 title: "Variable"
-title_tag: "Resource Variable | Module automation/latest | Package azurerm"
+title_tag: "Resource Variable | Module automation/latest | Package Azure RM"
 meta_desc: "Explore the Variable resource of the automation/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Definition of the variable."
 ---
 

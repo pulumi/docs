@@ -1,7 +1,7 @@
 
 ---
 title: "SecurityPartnerProvider"
-title_tag: "Resource SecurityPartnerProvider | Module network/latest | Package azurerm"
+title_tag: "Resource SecurityPartnerProvider | Module network/latest | Package Azure RM"
 meta_desc: "Explore the SecurityPartnerProvider resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Security Partner Provider resource."
 ---
 

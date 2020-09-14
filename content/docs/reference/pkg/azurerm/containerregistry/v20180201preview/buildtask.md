@@ -1,7 +1,7 @@
 
 ---
 title: "BuildTask"
-title_tag: "Resource BuildTask | Module containerregistry/v20180201preview | Package azurerm"
+title_tag: "Resource BuildTask | Module containerregistry/v20180201preview | Package Azure RM"
 meta_desc: "Explore the BuildTask resource of the containerregistry/v20180201preview module, including examples, input properties, output properties, lookup functions, and supporting types. The build task that has the resource properties and all build items. The build task will have all information to schedule a build against it."
 ---
 

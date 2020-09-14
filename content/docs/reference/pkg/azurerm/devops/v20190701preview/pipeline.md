@@ -1,7 +1,7 @@
 
 ---
 title: "Pipeline"
-title_tag: "Resource Pipeline | Module devops/v20190701preview | Package azurerm"
+title_tag: "Resource Pipeline | Module devops/v20190701preview | Package Azure RM"
 meta_desc: "Explore the Pipeline resource of the devops/v20190701preview module, including examples, input properties, output properties, lookup functions, and supporting types. Azure DevOps Pipeline used to configure Continuous Integration (CI) &amp; Continuous Delivery (CD) for Azure resources."
 ---
 

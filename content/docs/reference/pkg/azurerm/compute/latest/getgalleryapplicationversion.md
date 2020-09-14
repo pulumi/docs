@@ -1,7 +1,7 @@
 
 ---
 title: "GetGalleryApplicationVersion"
-title_tag: "Function GetGalleryApplicationVersion | Module compute/latest | Package azurerm"
+title_tag: "Function GetGalleryApplicationVersion | Module compute/latest | Package Azure RM"
 meta_desc: "Explore the GetGalleryApplicationVersion function of the compute/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

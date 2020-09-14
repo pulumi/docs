@@ -1,7 +1,7 @@
 
 ---
 title: "GetTrustedIdProvider"
-title_tag: "Function GetTrustedIdProvider | Module datalakestore/latest | Package azurerm"
+title_tag: "Function GetTrustedIdProvider | Module datalakestore/latest | Package Azure RM"
 meta_desc: "Explore the GetTrustedIdProvider function of the datalakestore/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

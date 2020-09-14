@@ -1,6 +1,6 @@
 ---
-title: "azurerm"
-title_tag: "Package azurerm"
+title: "Azure RM"
+title_tag: "Package Azure RM"
 meta_desc: "A Pulumi package for creating and managing Azure resources."
 menu:
     reference:

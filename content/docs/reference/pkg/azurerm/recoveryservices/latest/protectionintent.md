@@ -1,7 +1,7 @@
 
 ---
 title: "ProtectionIntent"
-title_tag: "Resource ProtectionIntent | Module recoveryservices/latest | Package azurerm"
+title_tag: "Resource ProtectionIntent | Module recoveryservices/latest | Package Azure RM"
 meta_desc: "Explore the ProtectionIntent resource of the recoveryservices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Base class for backup ProtectionIntent."
 ---
 

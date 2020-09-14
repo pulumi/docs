@@ -1,7 +1,7 @@
 
 ---
 title: "GetEventHubConnection"
-title_tag: "Function GetEventHubConnection | Module kusto/v20180907preview | Package azurerm"
+title_tag: "Function GetEventHubConnection | Module kusto/v20180907preview | Package Azure RM"
 meta_desc: "Explore the GetEventHubConnection function of the kusto/v20180907preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

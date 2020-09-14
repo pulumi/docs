@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualNetworkRule"
-title_tag: "Resource VirtualNetworkRule | Module sql/v20150501preview | Package azurerm"
+title_tag: "Resource VirtualNetworkRule | Module sql/v20150501preview | Package Azure RM"
 meta_desc: "Explore the VirtualNetworkRule resource of the sql/v20150501preview module, including examples, input properties, output properties, lookup functions, and supporting types. A virtual network rule."
 ---
 

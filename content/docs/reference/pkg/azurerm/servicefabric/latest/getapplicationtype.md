@@ -1,7 +1,7 @@
 
 ---
 title: "GetApplicationType"
-title_tag: "Function GetApplicationType | Module servicefabric/latest | Package azurerm"
+title_tag: "Function GetApplicationType | Module servicefabric/latest | Package Azure RM"
 meta_desc: "Explore the GetApplicationType function of the servicefabric/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

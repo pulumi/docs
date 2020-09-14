@@ -1,7 +1,7 @@
 
 ---
 title: "GetManagementLockAtSubscriptionLevel"
-title_tag: "Function GetManagementLockAtSubscriptionLevel | Module authorization/latest | Package azurerm"
+title_tag: "Function GetManagementLockAtSubscriptionLevel | Module authorization/latest | Package Azure RM"
 meta_desc: "Explore the GetManagementLockAtSubscriptionLevel function of the authorization/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetHybridUseBenefit"
-title_tag: "Function GetHybridUseBenefit | Module softwareplan/latest | Package azurerm"
+title_tag: "Function GetHybridUseBenefit | Module softwareplan/latest | Package Azure RM"
 meta_desc: "Explore the GetHybridUseBenefit function of the softwareplan/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

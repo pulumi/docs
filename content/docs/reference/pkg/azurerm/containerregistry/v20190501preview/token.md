@@ -1,7 +1,7 @@
 
 ---
 title: "Token"
-title_tag: "Resource Token | Module containerregistry/v20190501preview | Package azurerm"
+title_tag: "Resource Token | Module containerregistry/v20190501preview | Package Azure RM"
 meta_desc: "Explore the Token resource of the containerregistry/v20190501preview module, including examples, input properties, output properties, lookup functions, and supporting types. An object that represents a token for a container registry."
 ---
 

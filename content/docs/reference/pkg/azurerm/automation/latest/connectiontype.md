@@ -1,7 +1,7 @@
 
 ---
 title: "ConnectionType"
-title_tag: "Resource ConnectionType | Module automation/latest | Package azurerm"
+title_tag: "Resource ConnectionType | Module automation/latest | Package Azure RM"
 meta_desc: "Explore the ConnectionType resource of the automation/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Definition of the connection type."
 ---
 

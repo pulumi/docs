@@ -1,7 +1,7 @@
 
 ---
 title: "GetOperationalizationCluster"
-title_tag: "Function GetOperationalizationCluster | Module machinelearningcompute/v20170801preview | Package azurerm"
+title_tag: "Function GetOperationalizationCluster | Module machinelearningcompute/v20170801preview | Package Azure RM"
 meta_desc: "Explore the GetOperationalizationCluster function of the machinelearningcompute/v20170801preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

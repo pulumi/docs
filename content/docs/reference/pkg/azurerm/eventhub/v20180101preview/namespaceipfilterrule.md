@@ -1,7 +1,7 @@
 
 ---
 title: "NamespaceIpFilterRule"
-title_tag: "Resource NamespaceIpFilterRule | Module eventhub/v20180101preview | Package azurerm"
+title_tag: "Resource NamespaceIpFilterRule | Module eventhub/v20180101preview | Package Azure RM"
 meta_desc: "Explore the NamespaceIpFilterRule resource of the eventhub/v20180101preview module, including examples, input properties, output properties, lookup functions, and supporting types. Single item in a List or Get IpFilterRules operation"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "SourceControlConfiguration"
-title_tag: "Resource SourceControlConfiguration | Module kubernetesconfiguration/v20191101preview | Package azurerm"
+title_tag: "Resource SourceControlConfiguration | Module kubernetesconfiguration/v20191101preview | Package Azure RM"
 meta_desc: "Explore the SourceControlConfiguration resource of the kubernetesconfiguration/v20191101preview module, including examples, input properties, output properties, lookup functions, and supporting types. The SourceControl Configuration object."
 ---
 

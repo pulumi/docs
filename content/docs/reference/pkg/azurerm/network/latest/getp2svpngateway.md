@@ -1,7 +1,7 @@
 
 ---
 title: "GetP2sVpnGateway"
-title_tag: "Function GetP2sVpnGateway | Module network/latest | Package azurerm"
+title_tag: "Function GetP2sVpnGateway | Module network/latest | Package Azure RM"
 meta_desc: "Explore the GetP2sVpnGateway function of the network/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

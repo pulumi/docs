@@ -1,7 +1,7 @@
 
 ---
 title: "Experiment"
-title_tag: "Resource Experiment | Module network/latest | Package azurerm"
+title_tag: "Resource Experiment | Module network/latest | Package Azure RM"
 meta_desc: "Explore the Experiment resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Defines the properties of an Experiment"
 ---
 

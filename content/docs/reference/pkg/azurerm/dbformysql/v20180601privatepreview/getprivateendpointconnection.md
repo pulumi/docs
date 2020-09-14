@@ -1,7 +1,7 @@
 
 ---
 title: "GetPrivateEndpointConnection"
-title_tag: "Function GetPrivateEndpointConnection | Module dbformysql/v20180601privatepreview | Package azurerm"
+title_tag: "Function GetPrivateEndpointConnection | Module dbformysql/v20180601privatepreview | Package Azure RM"
 meta_desc: "Explore the GetPrivateEndpointConnection function of the dbformysql/v20180601privatepreview module, including examples, input properties, output properties, and supporting types. "
 ---
 

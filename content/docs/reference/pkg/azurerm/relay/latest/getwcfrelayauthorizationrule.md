@@ -1,7 +1,7 @@
 
 ---
 title: "GetWCFRelayAuthorizationRule"
-title_tag: "Function GetWCFRelayAuthorizationRule | Module relay/latest | Package azurerm"
+title_tag: "Function GetWCFRelayAuthorizationRule | Module relay/latest | Package Azure RM"
 meta_desc: "Explore the GetWCFRelayAuthorizationRule function of the relay/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

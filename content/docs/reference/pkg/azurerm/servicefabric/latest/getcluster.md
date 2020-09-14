@@ -1,7 +1,7 @@
 
 ---
 title: "GetCluster"
-title_tag: "Function GetCluster | Module servicefabric/latest | Package azurerm"
+title_tag: "Function GetCluster | Module servicefabric/latest | Package Azure RM"
 meta_desc: "Explore the GetCluster function of the servicefabric/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module eventhub/v20180101preview | Package azurerm"
+title_tag: "Resource Cluster | Module eventhub/v20180101preview | Package Azure RM"
 meta_desc: "Explore the Cluster resource of the eventhub/v20180101preview module, including examples, input properties, output properties, lookup functions, and supporting types. Single Event Hubs Cluster resource in List or Get operations."
 ---
 

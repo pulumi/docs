@@ -1,7 +1,7 @@
 
 ---
 title: "ReferenceDataSet"
-title_tag: "Resource ReferenceDataSet | Module timeseriesinsights/latest | Package azurerm"
+title_tag: "Resource ReferenceDataSet | Module timeseriesinsights/latest | Package Azure RM"
 meta_desc: "Explore the ReferenceDataSet resource of the timeseriesinsights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A reference data set provides metadata about the events in an environment. Metadata in the reference data set will be joined with events as they are read from event sources. The metadata that makes up the reference data set is uploaded or modified through the Time Series Insights data plane APIs."
 ---
 

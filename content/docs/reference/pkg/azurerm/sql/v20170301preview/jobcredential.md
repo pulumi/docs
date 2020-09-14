@@ -1,7 +1,7 @@
 
 ---
 title: "JobCredential"
-title_tag: "Resource JobCredential | Module sql/v20170301preview | Package azurerm"
+title_tag: "Resource JobCredential | Module sql/v20170301preview | Package Azure RM"
 meta_desc: "Explore the JobCredential resource of the sql/v20170301preview module, including examples, input properties, output properties, lookup functions, and supporting types. A stored credential that can be used by a job to connect to target databases."
 ---
 

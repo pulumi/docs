@@ -1,7 +1,7 @@
 
 ---
 title: "EventSource"
-title_tag: "Resource EventSource | Module timeseriesinsights/latest | Package azurerm"
+title_tag: "Resource EventSource | Module timeseriesinsights/latest | Package Azure RM"
 meta_desc: "Explore the EventSource resource of the timeseriesinsights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source"
 ---
 

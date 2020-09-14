@@ -1,7 +1,7 @@
 
 ---
 title: "GetConfigurationProfilePreference"
-title_tag: "Function GetConfigurationProfilePreference | Module automanage/v20200630preview | Package azurerm"
+title_tag: "Function GetConfigurationProfilePreference | Module automanage/v20200630preview | Package Azure RM"
 meta_desc: "Explore the GetConfigurationProfilePreference function of the automanage/v20200630preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

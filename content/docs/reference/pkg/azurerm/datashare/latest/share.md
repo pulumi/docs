@@ -1,7 +1,7 @@
 
 ---
 title: "Share"
-title_tag: "Resource Share | Module datashare/latest | Package azurerm"
+title_tag: "Resource Share | Module datashare/latest | Package Azure RM"
 meta_desc: "Explore the Share resource of the datashare/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A share data transfer object."
 ---
 

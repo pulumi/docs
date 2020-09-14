@@ -1,7 +1,7 @@
 
 ---
 title: "P2sVpnGateway"
-title_tag: "Resource P2sVpnGateway | Module network/latest | Package azurerm"
+title_tag: "Resource P2sVpnGateway | Module network/latest | Package Azure RM"
 meta_desc: "Explore the P2sVpnGateway resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. P2SVpnGateway Resource."
 ---
 

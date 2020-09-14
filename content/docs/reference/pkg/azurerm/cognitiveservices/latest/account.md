@@ -1,7 +1,7 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module cognitiveservices/latest | Package azurerm"
+title_tag: "Resource Account | Module cognitiveservices/latest | Package Azure RM"
 meta_desc: "Explore the Account resource of the cognitiveservices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Cognitive Services Account is an Azure resource representing the provisioned account, its type, location and SKU."
 ---
 

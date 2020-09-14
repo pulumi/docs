@@ -1,7 +1,7 @@
 
 ---
 title: "GetDatabaseAccountTable"
-title_tag: "Function GetDatabaseAccountTable | Module documentdb/latest | Package azurerm"
+title_tag: "Function GetDatabaseAccountTable | Module documentdb/latest | Package Azure RM"
 meta_desc: "Explore the GetDatabaseAccountTable function of the documentdb/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

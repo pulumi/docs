@@ -1,7 +1,7 @@
 
 ---
 title: "ListRemediationDeploymentsAtSubscription"
-title_tag: "Function ListRemediationDeploymentsAtSubscription | Module policyinsights/latest | Package azurerm"
+title_tag: "Function ListRemediationDeploymentsAtSubscription | Module policyinsights/latest | Package Azure RM"
 meta_desc: "Explore the ListRemediationDeploymentsAtSubscription function of the policyinsights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

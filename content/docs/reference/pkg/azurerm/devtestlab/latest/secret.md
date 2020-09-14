@@ -1,7 +1,7 @@
 
 ---
 title: "Secret"
-title_tag: "Resource Secret | Module devtestlab/latest | Package azurerm"
+title_tag: "Resource Secret | Module devtestlab/latest | Package Azure RM"
 meta_desc: "Explore the Secret resource of the devtestlab/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A secret."
 ---
 

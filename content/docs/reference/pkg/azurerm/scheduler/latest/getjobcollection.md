@@ -1,7 +1,7 @@
 
 ---
 title: "GetJobCollection"
-title_tag: "Function GetJobCollection | Module scheduler/latest | Package azurerm"
+title_tag: "Function GetJobCollection | Module scheduler/latest | Package Azure RM"
 meta_desc: "Explore the GetJobCollection function of the scheduler/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetDeviceSecurityGroup"
-title_tag: "Function GetDeviceSecurityGroup | Module security/latest | Package azurerm"
+title_tag: "Function GetDeviceSecurityGroup | Module security/latest | Package Azure RM"
 meta_desc: "Explore the GetDeviceSecurityGroup function of the security/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

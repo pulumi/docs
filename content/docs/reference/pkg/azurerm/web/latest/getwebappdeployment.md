@@ -1,7 +1,7 @@
 
 ---
 title: "GetWebAppDeployment"
-title_tag: "Function GetWebAppDeployment | Module web/latest | Package azurerm"
+title_tag: "Function GetWebAppDeployment | Module web/latest | Package Azure RM"
 meta_desc: "Explore the GetWebAppDeployment function of the web/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

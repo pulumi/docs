@@ -1,7 +1,7 @@
 
 ---
 title: "ProductSetting"
-title_tag: "Resource ProductSetting | Module securityinsights/v20190101preview | Package azurerm"
+title_tag: "Resource ProductSetting | Module securityinsights/v20190101preview | Package Azure RM"
 meta_desc: "Explore the ProductSetting resource of the securityinsights/v20190101preview module, including examples, input properties, output properties, lookup functions, and supporting types. The Setting."
 ---
 

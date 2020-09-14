@@ -1,7 +1,7 @@
 
 ---
 title: "GetBlobContainer"
-title_tag: "Function GetBlobContainer | Module storage/v20200801preview | Package azurerm"
+title_tag: "Function GetBlobContainer | Module storage/v20200801preview | Package Azure RM"
 meta_desc: "Explore the GetBlobContainer function of the storage/v20200801preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

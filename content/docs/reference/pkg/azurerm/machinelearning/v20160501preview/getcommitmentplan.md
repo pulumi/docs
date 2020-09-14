@@ -1,7 +1,7 @@
 
 ---
 title: "GetCommitmentPlan"
-title_tag: "Function GetCommitmentPlan | Module machinelearning/v20160501preview | Package azurerm"
+title_tag: "Function GetCommitmentPlan | Module machinelearning/v20160501preview | Package Azure RM"
 meta_desc: "Explore the GetCommitmentPlan function of the machinelearning/v20160501preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

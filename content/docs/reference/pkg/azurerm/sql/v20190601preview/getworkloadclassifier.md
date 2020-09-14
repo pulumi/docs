@@ -1,7 +1,7 @@
 
 ---
 title: "GetWorkloadClassifier"
-title_tag: "Function GetWorkloadClassifier | Module sql/v20190601preview | Package azurerm"
+title_tag: "Function GetWorkloadClassifier | Module sql/v20190601preview | Package Azure RM"
 meta_desc: "Explore the GetWorkloadClassifier function of the sql/v20190601preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

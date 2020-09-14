@@ -1,7 +1,7 @@
 
 ---
 title: "ListBuildStepBuildArguments"
-title_tag: "Function ListBuildStepBuildArguments | Module containerregistry/v20180201preview | Package azurerm"
+title_tag: "Function ListBuildStepBuildArguments | Module containerregistry/v20180201preview | Package Azure RM"
 meta_desc: "Explore the ListBuildStepBuildArguments function of the containerregistry/v20180201preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

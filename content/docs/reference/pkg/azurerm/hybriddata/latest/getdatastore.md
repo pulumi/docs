@@ -1,7 +1,7 @@
 
 ---
 title: "GetDataStore"
-title_tag: "Function GetDataStore | Module hybriddata/latest | Package azurerm"
+title_tag: "Function GetDataStore | Module hybriddata/latest | Package Azure RM"
 meta_desc: "Explore the GetDataStore function of the hybriddata/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

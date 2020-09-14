@@ -1,7 +1,7 @@
 
 ---
 title: "ActionGroup"
-title_tag: "Resource ActionGroup | Module insights/latest | Package azurerm"
+title_tag: "Resource ActionGroup | Module insights/latest | Package Azure RM"
 meta_desc: "Explore the ActionGroup resource of the insights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. An action group resource."
 ---
 

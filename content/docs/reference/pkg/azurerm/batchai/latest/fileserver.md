@@ -1,7 +1,7 @@
 
 ---
 title: "FileServer"
-title_tag: "Resource FileServer | Module batchai/latest | Package azurerm"
+title_tag: "Resource FileServer | Module batchai/latest | Package Azure RM"
 meta_desc: "Explore the FileServer resource of the batchai/latest module, including examples, input properties, output properties, lookup functions, and supporting types. File Server information."
 ---
 

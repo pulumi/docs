@@ -1,7 +1,7 @@
 
 ---
 title: "GetApplicationDefinition"
-title_tag: "Function GetApplicationDefinition | Module solutions/v20200821preview | Package azurerm"
+title_tag: "Function GetApplicationDefinition | Module solutions/v20200821preview | Package Azure RM"
 meta_desc: "Explore the GetApplicationDefinition function of the solutions/v20200821preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

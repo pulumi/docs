@@ -1,7 +1,7 @@
 
 ---
 title: "SqlResourceSqlUserDefinedFunction"
-title_tag: "Resource SqlResourceSqlUserDefinedFunction | Module documentdb/v20200601preview | Package azurerm"
+title_tag: "Resource SqlResourceSqlUserDefinedFunction | Module documentdb/v20200601preview | Package Azure RM"
 meta_desc: "Explore the SqlResourceSqlUserDefinedFunction resource of the documentdb/v20200601preview module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB userDefinedFunction."
 ---
 

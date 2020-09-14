@@ -1,7 +1,7 @@
 
 ---
 title: "ApplicationGateway"
-title_tag: "Resource ApplicationGateway | Module network/latest | Package azurerm"
+title_tag: "Resource ApplicationGateway | Module network/latest | Package Azure RM"
 meta_desc: "Explore the ApplicationGateway resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Application gateway resource."
 ---
 

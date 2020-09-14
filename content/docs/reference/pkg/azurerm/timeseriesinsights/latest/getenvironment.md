@@ -1,7 +1,7 @@
 
 ---
 title: "GetEnvironment"
-title_tag: "Function GetEnvironment | Module timeseriesinsights/latest | Package azurerm"
+title_tag: "Function GetEnvironment | Module timeseriesinsights/latest | Package Azure RM"
 meta_desc: "Explore the GetEnvironment function of the timeseriesinsights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

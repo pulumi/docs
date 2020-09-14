@@ -1,7 +1,7 @@
 
 ---
 title: "GetRole"
-title_tag: "Function GetRole | Module databoxedge/latest | Package azurerm"
+title_tag: "Function GetRole | Module databoxedge/latest | Package Azure RM"
 meta_desc: "Explore the GetRole function of the databoxedge/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

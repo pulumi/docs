@@ -1,7 +1,7 @@
 
 ---
 title: "Service"
-title_tag: "Resource Service | Module healthcareapis/latest | Package azurerm"
+title_tag: "Resource Service | Module healthcareapis/latest | Package Azure RM"
 meta_desc: "Explore the Service resource of the healthcareapis/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The description of the service."
 ---
 

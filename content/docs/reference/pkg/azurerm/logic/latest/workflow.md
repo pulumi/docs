@@ -1,7 +1,7 @@
 
 ---
 title: "Workflow"
-title_tag: "Resource Workflow | Module logic/latest | Package azurerm"
+title_tag: "Resource Workflow | Module logic/latest | Package Azure RM"
 meta_desc: "Explore the Workflow resource of the logic/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The workflow type."
 ---
 

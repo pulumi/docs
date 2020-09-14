@@ -1,7 +1,7 @@
 
 ---
 title: "ListWebAppAuthSettingsSlot"
-title_tag: "Function ListWebAppAuthSettingsSlot | Module web/latest | Package azurerm"
+title_tag: "Function ListWebAppAuthSettingsSlot | Module web/latest | Package Azure RM"
 meta_desc: "Explore the ListWebAppAuthSettingsSlot function of the web/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

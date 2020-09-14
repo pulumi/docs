@@ -1,7 +1,7 @@
 
 ---
 title: "GetIotDpsResource"
-title_tag: "Function GetIotDpsResource | Module devices/latest | Package azurerm"
+title_tag: "Function GetIotDpsResource | Module devices/latest | Package Azure RM"
 meta_desc: "Explore the GetIotDpsResource function of the devices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

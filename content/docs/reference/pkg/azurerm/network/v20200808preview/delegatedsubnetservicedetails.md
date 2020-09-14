@@ -1,7 +1,7 @@
 
 ---
 title: "DelegatedSubnetServiceDetails"
-title_tag: "Resource DelegatedSubnetServiceDetails | Module network/v20200808preview | Package azurerm"
+title_tag: "Resource DelegatedSubnetServiceDetails | Module network/v20200808preview | Package Azure RM"
 meta_desc: "Explore the DelegatedSubnetServiceDetails resource of the network/v20200808preview module, including examples, input properties, output properties, lookup functions, and supporting types. Delegated subnet details"
 ---
 

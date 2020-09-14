@@ -1,7 +1,7 @@
 
 ---
 title: "GetQueryPack"
-title_tag: "Function GetQueryPack | Module insights/v20190901preview | Package azurerm"
+title_tag: "Function GetQueryPack | Module insights/v20190901preview | Package Azure RM"
 meta_desc: "Explore the GetQueryPack function of the insights/v20190901preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

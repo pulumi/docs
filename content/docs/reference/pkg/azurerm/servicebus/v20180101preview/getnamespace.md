@@ -1,7 +1,7 @@
 
 ---
 title: "GetNamespace"
-title_tag: "Function GetNamespace | Module servicebus/v20180101preview | Package azurerm"
+title_tag: "Function GetNamespace | Module servicebus/v20180101preview | Package Azure RM"
 meta_desc: "Explore the GetNamespace function of the servicebus/v20180101preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

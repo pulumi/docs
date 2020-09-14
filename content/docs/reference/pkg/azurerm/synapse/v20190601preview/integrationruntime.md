@@ -1,7 +1,7 @@
 
 ---
 title: "IntegrationRuntime"
-title_tag: "Resource IntegrationRuntime | Module synapse/v20190601preview | Package azurerm"
+title_tag: "Resource IntegrationRuntime | Module synapse/v20190601preview | Package Azure RM"
 meta_desc: "Explore the IntegrationRuntime resource of the synapse/v20190601preview module, including examples, input properties, output properties, lookup functions, and supporting types. Integration runtime resource type."
 ---
 

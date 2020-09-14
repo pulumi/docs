@@ -1,7 +1,7 @@
 
 ---
 title: "GetWebAppSwiftVirtualNetworkConnectionSlot"
-title_tag: "Function GetWebAppSwiftVirtualNetworkConnectionSlot | Module web/latest | Package azurerm"
+title_tag: "Function GetWebAppSwiftVirtualNetworkConnectionSlot | Module web/latest | Package Azure RM"
 meta_desc: "Explore the GetWebAppSwiftVirtualNetworkConnectionSlot function of the web/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

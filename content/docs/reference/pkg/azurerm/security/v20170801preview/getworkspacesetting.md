@@ -1,7 +1,7 @@
 
 ---
 title: "GetWorkspaceSetting"
-title_tag: "Function GetWorkspaceSetting | Module security/v20170801preview | Package azurerm"
+title_tag: "Function GetWorkspaceSetting | Module security/v20170801preview | Package Azure RM"
 meta_desc: "Explore the GetWorkspaceSetting function of the security/v20170801preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ListTaskDetails"
-title_tag: "Function ListTaskDetails | Module containerregistry/v20190601preview | Package azurerm"
+title_tag: "Function ListTaskDetails | Module containerregistry/v20190601preview | Package Azure RM"
 meta_desc: "Explore the ListTaskDetails function of the containerregistry/v20190601preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

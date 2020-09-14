@@ -1,7 +1,7 @@
 
 ---
 title: "Role"
-title_tag: "Resource Role | Module databoxedge/latest | Package azurerm"
+title_tag: "Resource Role | Module databoxedge/latest | Package Azure RM"
 meta_desc: "Explore the Role resource of the databoxedge/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Compute role."
 ---
 

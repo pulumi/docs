@@ -1,7 +1,7 @@
 
 ---
 title: "WebService"
-title_tag: "Resource WebService | Module machinelearning/latest | Package azurerm"
+title_tag: "Resource WebService | Module machinelearning/latest | Package Azure RM"
 meta_desc: "Explore the WebService resource of the machinelearning/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Instance of an Azure ML web service resource."
 ---
 

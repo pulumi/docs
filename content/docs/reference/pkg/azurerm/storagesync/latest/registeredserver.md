@@ -1,7 +1,7 @@
 
 ---
 title: "RegisteredServer"
-title_tag: "Resource RegisteredServer | Module storagesync/latest | Package azurerm"
+title_tag: "Resource RegisteredServer | Module storagesync/latest | Package Azure RM"
 meta_desc: "Explore the RegisteredServer resource of the storagesync/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Registered Server resource."
 ---
 

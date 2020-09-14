@@ -1,7 +1,7 @@
 
 ---
 title: "GetWorkspace"
-title_tag: "Function GetWorkspace | Module synapse/v20190601preview | Package azurerm"
+title_tag: "Function GetWorkspace | Module synapse/v20190601preview | Package Azure RM"
 meta_desc: "Explore the GetWorkspace function of the synapse/v20190601preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ListWebAppMetadataSlot"
-title_tag: "Function ListWebAppMetadataSlot | Module web/latest | Package azurerm"
+title_tag: "Function ListWebAppMetadataSlot | Module web/latest | Package Azure RM"
 meta_desc: "Explore the ListWebAppMetadataSlot function of the web/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

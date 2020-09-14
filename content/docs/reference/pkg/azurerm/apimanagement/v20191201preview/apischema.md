@@ -1,7 +1,7 @@
 
 ---
 title: "ApiSchema"
-title_tag: "Resource ApiSchema | Module apimanagement/v20191201preview | Package azurerm"
+title_tag: "Resource ApiSchema | Module apimanagement/v20191201preview | Package Azure RM"
 meta_desc: "Explore the ApiSchema resource of the apimanagement/v20191201preview module, including examples, input properties, output properties, lookup functions, and supporting types. Schema Contract details."
 ---
 

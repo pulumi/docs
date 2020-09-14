@@ -1,7 +1,7 @@
 
 ---
 title: "ListClusterStreamingJobs"
-title_tag: "Function ListClusterStreamingJobs | Module streamanalytics/v20200301preview | Package azurerm"
+title_tag: "Function ListClusterStreamingJobs | Module streamanalytics/v20200301preview | Package Azure RM"
 meta_desc: "Explore the ListClusterStreamingJobs function of the streamanalytics/v20200301preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

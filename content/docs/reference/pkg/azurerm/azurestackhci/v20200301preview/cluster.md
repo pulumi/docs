@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module azurestackhci/v20200301preview | Package azurerm"
+title_tag: "Resource Cluster | Module azurestackhci/v20200301preview | Package Azure RM"
 meta_desc: "Explore the Cluster resource of the azurestackhci/v20200301preview module, including examples, input properties, output properties, lookup functions, and supporting types. Cluster details."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetIntegrationServiceEnvironmentManagedApi"
-title_tag: "Function GetIntegrationServiceEnvironmentManagedApi | Module logic/latest | Package azurerm"
+title_tag: "Function GetIntegrationServiceEnvironmentManagedApi | Module logic/latest | Package Azure RM"
 meta_desc: "Explore the GetIntegrationServiceEnvironmentManagedApi function of the logic/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

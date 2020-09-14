@@ -1,7 +1,7 @@
 
 ---
 title: "GetDigitalTwin"
-title_tag: "Function GetDigitalTwin | Module digitaltwins/v20200301preview | Package azurerm"
+title_tag: "Function GetDigitalTwin | Module digitaltwins/v20200301preview | Package Azure RM"
 meta_desc: "Explore the GetDigitalTwin function of the digitaltwins/v20200301preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

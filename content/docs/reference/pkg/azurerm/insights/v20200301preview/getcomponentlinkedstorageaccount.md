@@ -1,7 +1,7 @@
 
 ---
 title: "GetComponentLinkedStorageAccount"
-title_tag: "Function GetComponentLinkedStorageAccount | Module insights/v20200301preview | Package azurerm"
+title_tag: "Function GetComponentLinkedStorageAccount | Module insights/v20200301preview | Package Azure RM"
 meta_desc: "Explore the GetComponentLinkedStorageAccount function of the insights/v20200301preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

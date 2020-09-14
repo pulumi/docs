@@ -1,7 +1,7 @@
 
 ---
 title: "GetHyperVCollector"
-title_tag: "Function GetHyperVCollector | Module migrate/latest | Package azurerm"
+title_tag: "Function GetHyperVCollector | Module migrate/latest | Package Azure RM"
 meta_desc: "Explore the GetHyperVCollector function of the migrate/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

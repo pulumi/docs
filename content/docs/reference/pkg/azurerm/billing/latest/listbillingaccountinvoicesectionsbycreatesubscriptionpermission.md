@@ -1,7 +1,7 @@
 
 ---
 title: "ListBillingAccountInvoiceSectionsByCreateSubscriptionPermission"
-title_tag: "Function ListBillingAccountInvoiceSectionsByCreateSubscriptionPermission | Module billing/latest | Package azurerm"
+title_tag: "Function ListBillingAccountInvoiceSectionsByCreateSubscriptionPermission | Module billing/latest | Package Azure RM"
 meta_desc: "Explore the ListBillingAccountInvoiceSectionsByCreateSubscriptionPermission function of the billing/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

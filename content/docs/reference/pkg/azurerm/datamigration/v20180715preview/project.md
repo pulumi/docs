@@ -1,7 +1,7 @@
 
 ---
 title: "Project"
-title_tag: "Resource Project | Module datamigration/v20180715preview | Package azurerm"
+title_tag: "Resource Project | Module datamigration/v20180715preview | Package Azure RM"
 meta_desc: "Explore the Project resource of the datamigration/v20180715preview module, including examples, input properties, output properties, lookup functions, and supporting types. A project resource"
 ---
 

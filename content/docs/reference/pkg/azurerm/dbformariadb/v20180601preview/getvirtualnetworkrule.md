@@ -1,7 +1,7 @@
 
 ---
 title: "GetVirtualNetworkRule"
-title_tag: "Function GetVirtualNetworkRule | Module dbformariadb/v20180601preview | Package azurerm"
+title_tag: "Function GetVirtualNetworkRule | Module dbformariadb/v20180601preview | Package Azure RM"
 meta_desc: "Explore the GetVirtualNetworkRule function of the dbformariadb/v20180601preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

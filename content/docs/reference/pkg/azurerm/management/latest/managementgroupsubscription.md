@@ -1,7 +1,7 @@
 
 ---
 title: "ManagementGroupSubscription"
-title_tag: "Resource ManagementGroupSubscription | Module management/latest | Package azurerm"
+title_tag: "Resource ManagementGroupSubscription | Module management/latest | Package Azure RM"
 meta_desc: "Explore the ManagementGroupSubscription resource of the management/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The details of subscription under management group."
 ---
 

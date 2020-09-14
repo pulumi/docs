@@ -1,7 +1,7 @@
 
 ---
 title: "GetToken"
-title_tag: "Function GetToken | Module containerregistry/v20190501preview | Package azurerm"
+title_tag: "Function GetToken | Module containerregistry/v20190501preview | Package Azure RM"
 meta_desc: "Explore the GetToken function of the containerregistry/v20190501preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

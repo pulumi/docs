@@ -1,7 +1,7 @@
 
 ---
 title: "GetCostAllocationRule"
-title_tag: "Function GetCostAllocationRule | Module billing/v20200301preview | Package azurerm"
+title_tag: "Function GetCostAllocationRule | Module billing/v20200301preview | Package Azure RM"
 meta_desc: "Explore the GetCostAllocationRule function of the billing/v20200301preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

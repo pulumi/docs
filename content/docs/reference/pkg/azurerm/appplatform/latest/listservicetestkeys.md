@@ -1,7 +1,7 @@
 
 ---
 title: "ListServiceTestKeys"
-title_tag: "Function ListServiceTestKeys | Module appplatform/latest | Package azurerm"
+title_tag: "Function ListServiceTestKeys | Module appplatform/latest | Package Azure RM"
 meta_desc: "Explore the ListServiceTestKeys function of the appplatform/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

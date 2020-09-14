@@ -1,7 +1,7 @@
 
 ---
 title: "ListWorkflowAccessKeySecretKeys"
-title_tag: "Function ListWorkflowAccessKeySecretKeys | Module logic/v20150201preview | Package azurerm"
+title_tag: "Function ListWorkflowAccessKeySecretKeys | Module logic/v20150201preview | Package Azure RM"
 meta_desc: "Explore the ListWorkflowAccessKeySecretKeys function of the logic/v20150201preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

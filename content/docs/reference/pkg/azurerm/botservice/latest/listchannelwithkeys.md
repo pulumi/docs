@@ -1,7 +1,7 @@
 
 ---
 title: "ListChannelWithKeys"
-title_tag: "Function ListChannelWithKeys | Module botservice/latest | Package azurerm"
+title_tag: "Function ListChannelWithKeys | Module botservice/latest | Package Azure RM"
 meta_desc: "Explore the ListChannelWithKeys function of the botservice/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetBillingRoleAssignmentByDepartment"
-title_tag: "Function GetBillingRoleAssignmentByDepartment | Module billing/v20191001preview | Package azurerm"
+title_tag: "Function GetBillingRoleAssignmentByDepartment | Module billing/v20191001preview | Package Azure RM"
 meta_desc: "Explore the GetBillingRoleAssignmentByDepartment function of the billing/v20191001preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

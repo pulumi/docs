@@ -1,7 +1,7 @@
 
 ---
 title: "Factory"
-title_tag: "Resource Factory | Module datafactory/latest | Package azurerm"
+title_tag: "Resource Factory | Module datafactory/latest | Package Azure RM"
 meta_desc: "Explore the Factory resource of the datafactory/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Factory resource type."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetPrivateEndpointConnection"
-title_tag: "Function GetPrivateEndpointConnection | Module synapse/v20190601preview | Package azurerm"
+title_tag: "Function GetPrivateEndpointConnection | Module synapse/v20190601preview | Package Azure RM"
 meta_desc: "Explore the GetPrivateEndpointConnection function of the synapse/v20190601preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

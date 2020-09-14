@@ -1,7 +1,7 @@
 
 ---
 title: "WebAppVnetConnectionSlot"
-title_tag: "Resource WebAppVnetConnectionSlot | Module web/latest | Package azurerm"
+title_tag: "Resource WebAppVnetConnectionSlot | Module web/latest | Package Azure RM"
 meta_desc: "Explore the WebAppVnetConnectionSlot resource of the web/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Virtual Network information contract."
 ---
 

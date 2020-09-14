@@ -1,7 +1,7 @@
 
 ---
 title: "GetServerKey"
-title_tag: "Function GetServerKey | Module dbformysql/v20200101privatepreview | Package azurerm"
+title_tag: "Function GetServerKey | Module dbformysql/v20200101privatepreview | Package Azure RM"
 meta_desc: "Explore the GetServerKey function of the dbformysql/v20200101privatepreview module, including examples, input properties, output properties, and supporting types. "
 ---
 

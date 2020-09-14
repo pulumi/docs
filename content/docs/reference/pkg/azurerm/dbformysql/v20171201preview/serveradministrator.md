@@ -1,7 +1,7 @@
 
 ---
 title: "ServerAdministrator"
-title_tag: "Resource ServerAdministrator | Module dbformysql/v20171201preview | Package azurerm"
+title_tag: "Resource ServerAdministrator | Module dbformysql/v20171201preview | Package Azure RM"
 meta_desc: "Explore the ServerAdministrator resource of the dbformysql/v20171201preview module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a and external administrator to be created."
 ---
 

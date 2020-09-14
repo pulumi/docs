@@ -1,7 +1,7 @@
 
 ---
 title: "GetProductPolicy"
-title_tag: "Function GetProductPolicy | Module apimanagement/v20191201preview | Package azurerm"
+title_tag: "Function GetProductPolicy | Module apimanagement/v20191201preview | Package Azure RM"
 meta_desc: "Explore the GetProductPolicy function of the apimanagement/v20191201preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

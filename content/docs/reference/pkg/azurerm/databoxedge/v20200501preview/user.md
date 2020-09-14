@@ -1,7 +1,7 @@
 
 ---
 title: "User"
-title_tag: "Resource User | Module databoxedge/v20200501preview | Package azurerm"
+title_tag: "Resource User | Module databoxedge/v20200501preview | Package Azure RM"
 meta_desc: "Explore the User resource of the databoxedge/v20200501preview module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a user who has access to one or more shares on the Data Box Edge/Gateway device."
 ---
 

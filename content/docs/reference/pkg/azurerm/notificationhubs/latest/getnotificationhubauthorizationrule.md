@@ -1,7 +1,7 @@
 
 ---
 title: "GetNotificationHubAuthorizationRule"
-title_tag: "Function GetNotificationHubAuthorizationRule | Module notificationhubs/latest | Package azurerm"
+title_tag: "Function GetNotificationHubAuthorizationRule | Module notificationhubs/latest | Package Azure RM"
 meta_desc: "Explore the GetNotificationHubAuthorizationRule function of the notificationhubs/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

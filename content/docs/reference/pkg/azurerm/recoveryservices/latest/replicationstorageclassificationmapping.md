@@ -1,7 +1,7 @@
 
 ---
 title: "ReplicationStorageClassificationMapping"
-title_tag: "Resource ReplicationStorageClassificationMapping | Module recoveryservices/latest | Package azurerm"
+title_tag: "Resource ReplicationStorageClassificationMapping | Module recoveryservices/latest | Package Azure RM"
 meta_desc: "Explore the ReplicationStorageClassificationMapping resource of the recoveryservices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Storage mapping object."
 ---
 

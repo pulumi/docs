@@ -1,7 +1,7 @@
 
 ---
 title: "WebAppSourceControlSlot"
-title_tag: "Resource WebAppSourceControlSlot | Module web/latest | Package azurerm"
+title_tag: "Resource WebAppSourceControlSlot | Module web/latest | Package Azure RM"
 meta_desc: "Explore the WebAppSourceControlSlot resource of the web/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Source control configuration for an app."
 ---
 

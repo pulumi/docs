@@ -1,7 +1,7 @@
 
 ---
 title: "GetRosettaNetProcessConfiguration"
-title_tag: "Function GetRosettaNetProcessConfiguration | Module logic/latest | Package azurerm"
+title_tag: "Function GetRosettaNetProcessConfiguration | Module logic/latest | Package Azure RM"
 meta_desc: "Explore the GetRosettaNetProcessConfiguration function of the logic/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

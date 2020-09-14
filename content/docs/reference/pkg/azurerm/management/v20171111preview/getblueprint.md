@@ -1,7 +1,7 @@
 
 ---
 title: "GetBlueprint"
-title_tag: "Function GetBlueprint | Module management/v20171111preview | Package azurerm"
+title_tag: "Function GetBlueprint | Module management/v20171111preview | Package Azure RM"
 meta_desc: "Explore the GetBlueprint function of the management/v20171111preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

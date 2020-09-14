@@ -1,7 +1,7 @@
 
 ---
 title: "GetEventSubscription"
-title_tag: "Function GetEventSubscription | Module eventgrid/latest | Package azurerm"
+title_tag: "Function GetEventSubscription | Module eventgrid/latest | Package Azure RM"
 meta_desc: "Explore the GetEventSubscription function of the eventgrid/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

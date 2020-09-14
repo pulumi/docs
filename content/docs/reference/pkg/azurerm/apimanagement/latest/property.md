@@ -1,7 +1,7 @@
 
 ---
 title: "Property"
-title_tag: "Resource Property | Module apimanagement/latest | Package azurerm"
+title_tag: "Resource Property | Module apimanagement/latest | Package Azure RM"
 meta_desc: "Explore the Property resource of the apimanagement/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Property details."
 ---
 

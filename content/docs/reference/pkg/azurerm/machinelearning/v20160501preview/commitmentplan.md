@@ -1,7 +1,7 @@
 
 ---
 title: "CommitmentPlan"
-title_tag: "Resource CommitmentPlan | Module machinelearning/v20160501preview | Package azurerm"
+title_tag: "Resource CommitmentPlan | Module machinelearning/v20160501preview | Package Azure RM"
 meta_desc: "Explore the CommitmentPlan resource of the machinelearning/v20160501preview module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure ML commitment plan resource."
 ---
 

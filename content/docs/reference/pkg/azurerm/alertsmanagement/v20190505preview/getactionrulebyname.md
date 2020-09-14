@@ -1,7 +1,7 @@
 
 ---
 title: "GetActionRuleByName"
-title_tag: "Function GetActionRuleByName | Module alertsmanagement/v20190505preview | Package azurerm"
+title_tag: "Function GetActionRuleByName | Module alertsmanagement/v20190505preview | Package Azure RM"
 meta_desc: "Explore the GetActionRuleByName function of the alertsmanagement/v20190505preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

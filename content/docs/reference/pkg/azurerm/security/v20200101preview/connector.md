@@ -1,7 +1,7 @@
 
 ---
 title: "Connector"
-title_tag: "Resource Connector | Module security/v20200101preview | Package azurerm"
+title_tag: "Resource Connector | Module security/v20200101preview | Package Azure RM"
 meta_desc: "Explore the Connector resource of the security/v20200101preview module, including examples, input properties, output properties, lookup functions, and supporting types. The connector setting"
 ---
 

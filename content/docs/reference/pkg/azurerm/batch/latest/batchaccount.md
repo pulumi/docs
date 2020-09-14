@@ -1,7 +1,7 @@
 
 ---
 title: "BatchAccount"
-title_tag: "Resource BatchAccount | Module batch/latest | Package azurerm"
+title_tag: "Resource BatchAccount | Module batch/latest | Package Azure RM"
 meta_desc: "Explore the BatchAccount resource of the batch/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Contains information about an Azure Batch account."
 ---
 

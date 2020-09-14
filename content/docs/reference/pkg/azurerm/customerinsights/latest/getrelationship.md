@@ -1,7 +1,7 @@
 
 ---
 title: "GetRelationship"
-title_tag: "Function GetRelationship | Module customerinsights/latest | Package azurerm"
+title_tag: "Function GetRelationship | Module customerinsights/latest | Package Azure RM"
 meta_desc: "Explore the GetRelationship function of the customerinsights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

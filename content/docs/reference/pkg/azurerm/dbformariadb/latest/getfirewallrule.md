@@ -1,7 +1,7 @@
 
 ---
 title: "GetFirewallRule"
-title_tag: "Function GetFirewallRule | Module dbformariadb/latest | Package azurerm"
+title_tag: "Function GetFirewallRule | Module dbformariadb/latest | Package Azure RM"
 meta_desc: "Explore the GetFirewallRule function of the dbformariadb/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

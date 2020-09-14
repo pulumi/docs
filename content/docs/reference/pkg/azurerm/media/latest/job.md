@@ -1,7 +1,7 @@
 
 ---
 title: "Job"
-title_tag: "Resource Job | Module media/latest | Package azurerm"
+title_tag: "Resource Job | Module media/latest | Package Azure RM"
 meta_desc: "Explore the Job resource of the media/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A Job resource type. The progress and state can be obtained by polling a Job or subscribing to events using EventGrid."
 ---
 

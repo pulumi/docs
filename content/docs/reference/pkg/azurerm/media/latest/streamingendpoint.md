@@ -1,7 +1,7 @@
 
 ---
 title: "StreamingEndpoint"
-title_tag: "Resource StreamingEndpoint | Module media/latest | Package azurerm"
+title_tag: "Resource StreamingEndpoint | Module media/latest | Package Azure RM"
 meta_desc: "Explore the StreamingEndpoint resource of the media/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The StreamingEndpoint."
 ---
 

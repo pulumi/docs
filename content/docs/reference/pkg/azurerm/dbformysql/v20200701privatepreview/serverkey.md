@@ -1,7 +1,7 @@
 
 ---
 title: "ServerKey"
-title_tag: "Resource ServerKey | Module dbformysql/v20200701privatepreview | Package azurerm"
+title_tag: "Resource ServerKey | Module dbformysql/v20200701privatepreview | Package Azure RM"
 meta_desc: "Explore the ServerKey resource of the dbformysql/v20200701privatepreview module, including examples, input properties, output properties, lookup functions, and supporting types. A MySQL Server key."
 ---
 

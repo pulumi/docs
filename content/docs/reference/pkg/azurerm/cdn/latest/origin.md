@@ -1,7 +1,7 @@
 
 ---
 title: "Origin"
-title_tag: "Resource Origin | Module cdn/latest | Package azurerm"
+title_tag: "Resource Origin | Module cdn/latest | Package Azure RM"
 meta_desc: "Explore the Origin resource of the cdn/latest module, including examples, input properties, output properties, lookup functions, and supporting types. CDN origin is the source of the content being delivered via CDN. When the edge nodes represented by an endpoint do not have the requested content cached, they attempt to fetch it from one or more of the configured origins."
 ---
 

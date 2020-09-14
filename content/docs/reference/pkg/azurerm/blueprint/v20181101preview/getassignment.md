@@ -1,7 +1,7 @@
 
 ---
 title: "GetAssignment"
-title_tag: "Function GetAssignment | Module blueprint/v20181101preview | Package azurerm"
+title_tag: "Function GetAssignment | Module blueprint/v20181101preview | Package Azure RM"
 meta_desc: "Explore the GetAssignment function of the blueprint/v20181101preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

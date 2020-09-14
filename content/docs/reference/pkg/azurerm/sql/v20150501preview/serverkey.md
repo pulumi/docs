@@ -1,7 +1,7 @@
 
 ---
 title: "ServerKey"
-title_tag: "Resource ServerKey | Module sql/v20150501preview | Package azurerm"
+title_tag: "Resource ServerKey | Module sql/v20150501preview | Package Azure RM"
 meta_desc: "Explore the ServerKey resource of the sql/v20150501preview module, including examples, input properties, output properties, lookup functions, and supporting types. A server key."
 ---
 

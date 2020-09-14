@@ -1,7 +1,7 @@
 
 ---
 title: "GetDedicatedHostGroup"
-title_tag: "Function GetDedicatedHostGroup | Module compute/latest | Package azurerm"
+title_tag: "Function GetDedicatedHostGroup | Module compute/latest | Package Azure RM"
 meta_desc: "Explore the GetDedicatedHostGroup function of the compute/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

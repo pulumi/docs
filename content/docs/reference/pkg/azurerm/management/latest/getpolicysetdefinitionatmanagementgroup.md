@@ -1,7 +1,7 @@
 
 ---
 title: "GetPolicySetDefinitionAtManagementGroup"
-title_tag: "Function GetPolicySetDefinitionAtManagementGroup | Module management/latest | Package azurerm"
+title_tag: "Function GetPolicySetDefinitionAtManagementGroup | Module management/latest | Package Azure RM"
 meta_desc: "Explore the GetPolicySetDefinitionAtManagementGroup function of the management/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

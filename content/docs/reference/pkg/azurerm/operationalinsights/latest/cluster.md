@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module operationalinsights/latest | Package azurerm"
+title_tag: "Resource Cluster | Module operationalinsights/latest | Package Azure RM"
 meta_desc: "Explore the Cluster resource of the operationalinsights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The top level Log Analytics cluster resource container."
 ---
 

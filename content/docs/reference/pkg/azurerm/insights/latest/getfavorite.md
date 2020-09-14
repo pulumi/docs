@@ -1,7 +1,7 @@
 
 ---
 title: "GetFavorite"
-title_tag: "Function GetFavorite | Module insights/latest | Package azurerm"
+title_tag: "Function GetFavorite | Module insights/latest | Package Azure RM"
 meta_desc: "Explore the GetFavorite function of the insights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

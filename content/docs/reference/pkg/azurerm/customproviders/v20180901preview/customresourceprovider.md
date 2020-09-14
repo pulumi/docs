@@ -1,7 +1,7 @@
 
 ---
 title: "CustomResourceProvider"
-title_tag: "Resource CustomResourceProvider | Module customproviders/v20180901preview | Package azurerm"
+title_tag: "Resource CustomResourceProvider | Module customproviders/v20180901preview | Package Azure RM"
 meta_desc: "Explore the CustomResourceProvider resource of the customproviders/v20180901preview module, including examples, input properties, output properties, lookup functions, and supporting types. A manifest file that defines the custom resource provider resources."
 ---
 

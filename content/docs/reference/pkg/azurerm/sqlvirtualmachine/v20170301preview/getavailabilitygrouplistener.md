@@ -1,7 +1,7 @@
 
 ---
 title: "GetAvailabilityGroupListener"
-title_tag: "Function GetAvailabilityGroupListener | Module sqlvirtualmachine/v20170301preview | Package azurerm"
+title_tag: "Function GetAvailabilityGroupListener | Module sqlvirtualmachine/v20170301preview | Package Azure RM"
 meta_desc: "Explore the GetAvailabilityGroupListener function of the sqlvirtualmachine/v20170301preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

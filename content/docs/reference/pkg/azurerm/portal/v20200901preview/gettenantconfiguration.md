@@ -1,7 +1,7 @@
 
 ---
 title: "GetTenantConfiguration"
-title_tag: "Function GetTenantConfiguration | Module portal/v20200901preview | Package azurerm"
+title_tag: "Function GetTenantConfiguration | Module portal/v20200901preview | Package Azure RM"
 meta_desc: "Explore the GetTenantConfiguration function of the portal/v20200901preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

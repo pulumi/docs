@@ -1,7 +1,7 @@
 
 ---
 title: "GetVault"
-title_tag: "Function GetVault | Module recoveryservices/latest | Package azurerm"
+title_tag: "Function GetVault | Module recoveryservices/latest | Package Azure RM"
 meta_desc: "Explore the GetVault function of the recoveryservices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

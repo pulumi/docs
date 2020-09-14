@@ -1,7 +1,7 @@
 
 ---
 title: "ADCCatalog"
-title_tag: "Resource ADCCatalog | Module datacatalog/latest | Package azurerm"
+title_tag: "Resource ADCCatalog | Module datacatalog/latest | Package Azure RM"
 meta_desc: "Explore the ADCCatalog resource of the datacatalog/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Azure Data Catalog."
 ---
 

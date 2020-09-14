@@ -1,7 +1,7 @@
 
 ---
 title: "ListLocationConsortiums"
-title_tag: "Function ListLocationConsortiums | Module blockchain/v20180601preview | Package azurerm"
+title_tag: "Function ListLocationConsortiums | Module blockchain/v20180601preview | Package Azure RM"
 meta_desc: "Explore the ListLocationConsortiums function of the blockchain/v20180601preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

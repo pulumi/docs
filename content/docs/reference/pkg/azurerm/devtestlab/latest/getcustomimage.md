@@ -1,7 +1,7 @@
 
 ---
 title: "GetCustomImage"
-title_tag: "Function GetCustomImage | Module devtestlab/latest | Package azurerm"
+title_tag: "Function GetCustomImage | Module devtestlab/latest | Package Azure RM"
 meta_desc: "Explore the GetCustomImage function of the devtestlab/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

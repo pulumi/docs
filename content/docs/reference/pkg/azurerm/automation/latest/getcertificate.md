@@ -1,7 +1,7 @@
 
 ---
 title: "GetCertificate"
-title_tag: "Function GetCertificate | Module automation/latest | Package azurerm"
+title_tag: "Function GetCertificate | Module automation/latest | Package Azure RM"
 meta_desc: "Explore the GetCertificate function of the automation/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

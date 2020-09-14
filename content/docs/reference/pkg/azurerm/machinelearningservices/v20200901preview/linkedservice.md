@@ -1,7 +1,7 @@
 
 ---
 title: "LinkedService"
-title_tag: "Resource LinkedService | Module machinelearningservices/v20200901preview | Package azurerm"
+title_tag: "Resource LinkedService | Module machinelearningservices/v20200901preview | Package Azure RM"
 meta_desc: "Explore the LinkedService resource of the machinelearningservices/v20200901preview module, including examples, input properties, output properties, lookup functions, and supporting types. Linked service."
 ---
 

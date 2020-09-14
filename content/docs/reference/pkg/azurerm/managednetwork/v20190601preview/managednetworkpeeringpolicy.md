@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedNetworkPeeringPolicy"
-title_tag: "Resource ManagedNetworkPeeringPolicy | Module managednetwork/v20190601preview | Package azurerm"
+title_tag: "Resource ManagedNetworkPeeringPolicy | Module managednetwork/v20190601preview | Package Azure RM"
 meta_desc: "Explore the ManagedNetworkPeeringPolicy resource of the managednetwork/v20190601preview module, including examples, input properties, output properties, lookup functions, and supporting types. The Managed Network Peering Policy resource"
 ---
 

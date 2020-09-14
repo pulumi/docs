@@ -1,7 +1,7 @@
 
 ---
 title: "GetStorageAccount"
-title_tag: "Function GetStorageAccount | Module databoxedge/v20200501preview | Package azurerm"
+title_tag: "Function GetStorageAccount | Module databoxedge/v20200501preview | Package Azure RM"
 meta_desc: "Explore the GetStorageAccount function of the databoxedge/v20200501preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Vault"
-title_tag: "Resource Vault | Module recoveryservices/latest | Package azurerm"
+title_tag: "Resource Vault | Module recoveryservices/latest | Package Azure RM"
 meta_desc: "Explore the Vault resource of the recoveryservices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Resource information, as returned by the resource provider."
 ---
 

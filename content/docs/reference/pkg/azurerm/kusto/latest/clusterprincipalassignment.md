@@ -1,7 +1,7 @@
 
 ---
 title: "ClusterPrincipalAssignment"
-title_tag: "Resource ClusterPrincipalAssignment | Module kusto/latest | Package azurerm"
+title_tag: "Resource ClusterPrincipalAssignment | Module kusto/latest | Package Azure RM"
 meta_desc: "Explore the ClusterPrincipalAssignment resource of the kusto/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Class representing a cluster principal assignment."
 ---
 

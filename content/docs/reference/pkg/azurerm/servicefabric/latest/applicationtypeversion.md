@@ -1,7 +1,7 @@
 
 ---
 title: "ApplicationTypeVersion"
-title_tag: "Resource ApplicationTypeVersion | Module servicefabric/latest | Package azurerm"
+title_tag: "Resource ApplicationTypeVersion | Module servicefabric/latest | Package Azure RM"
 meta_desc: "Explore the ApplicationTypeVersion resource of the servicefabric/latest module, including examples, input properties, output properties, lookup functions, and supporting types. An application type version resource for the specified application type name resource."
 ---
 

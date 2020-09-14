@@ -1,7 +1,7 @@
 
 ---
 title: "LabAccount"
-title_tag: "Resource LabAccount | Module labservices/latest | Package azurerm"
+title_tag: "Resource LabAccount | Module labservices/latest | Package Azure RM"
 meta_desc: "Explore the LabAccount resource of the labservices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a lab account."
 ---
 

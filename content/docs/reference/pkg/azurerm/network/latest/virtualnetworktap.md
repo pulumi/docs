@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualNetworkTap"
-title_tag: "Resource VirtualNetworkTap | Module network/latest | Package azurerm"
+title_tag: "Resource VirtualNetworkTap | Module network/latest | Package Azure RM"
 meta_desc: "Explore the VirtualNetworkTap resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Virtual Network Tap resource."
 ---
 

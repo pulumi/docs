@@ -1,7 +1,7 @@
 
 ---
 title: "BillingRoleAssignmentByEnrollmentAccount"
-title_tag: "Resource BillingRoleAssignmentByEnrollmentAccount | Module billing/v20191001preview | Package azurerm"
+title_tag: "Resource BillingRoleAssignmentByEnrollmentAccount | Module billing/v20191001preview | Package Azure RM"
 meta_desc: "Explore the BillingRoleAssignmentByEnrollmentAccount resource of the billing/v20191001preview module, including examples, input properties, output properties, lookup functions, and supporting types. The role assignment"
 ---
 

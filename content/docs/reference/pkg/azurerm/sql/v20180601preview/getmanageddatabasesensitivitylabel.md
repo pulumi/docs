@@ -1,7 +1,7 @@
 
 ---
 title: "GetManagedDatabaseSensitivityLabel"
-title_tag: "Function GetManagedDatabaseSensitivityLabel | Module sql/v20180601preview | Package azurerm"
+title_tag: "Function GetManagedDatabaseSensitivityLabel | Module sql/v20180601preview | Package Azure RM"
 meta_desc: "Explore the GetManagedDatabaseSensitivityLabel function of the sql/v20180601preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

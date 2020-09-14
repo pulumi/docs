@@ -1,7 +1,7 @@
 
 ---
 title: "Deployment"
-title_tag: "Resource Deployment | Module resources/latest | Package azurerm"
+title_tag: "Resource Deployment | Module resources/latest | Package Azure RM"
 meta_desc: "Explore the Deployment resource of the resources/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Deployment information."
 ---
 

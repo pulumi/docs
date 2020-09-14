@@ -1,7 +1,7 @@
 
 ---
 title: "ApiOperation"
-title_tag: "Resource ApiOperation | Module apimanagement/latest | Package azurerm"
+title_tag: "Resource ApiOperation | Module apimanagement/latest | Package Azure RM"
 meta_desc: "Explore the ApiOperation resource of the apimanagement/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Api Operation details."
 ---
 

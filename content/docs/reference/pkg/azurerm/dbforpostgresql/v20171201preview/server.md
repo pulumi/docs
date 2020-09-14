@@ -1,7 +1,7 @@
 
 ---
 title: "Server"
-title_tag: "Resource Server | Module dbforpostgresql/v20171201preview | Package azurerm"
+title_tag: "Resource Server | Module dbforpostgresql/v20171201preview | Package Azure RM"
 meta_desc: "Explore the Server resource of the dbforpostgresql/v20171201preview module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a server."
 ---
 

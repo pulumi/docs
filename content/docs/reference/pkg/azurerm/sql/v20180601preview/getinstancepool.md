@@ -1,7 +1,7 @@
 
 ---
 title: "GetInstancePool"
-title_tag: "Function GetInstancePool | Module sql/v20180601preview | Package azurerm"
+title_tag: "Function GetInstancePool | Module sql/v20180601preview | Package Azure RM"
 meta_desc: "Explore the GetInstancePool function of the sql/v20180601preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

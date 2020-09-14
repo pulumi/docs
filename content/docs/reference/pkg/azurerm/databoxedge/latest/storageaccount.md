@@ -1,7 +1,7 @@
 
 ---
 title: "StorageAccount"
-title_tag: "Resource StorageAccount | Module databoxedge/latest | Package azurerm"
+title_tag: "Resource StorageAccount | Module databoxedge/latest | Package Azure RM"
 meta_desc: "Explore the StorageAccount resource of the databoxedge/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a Storage Account on the  Data Box Edge/Gateway device."
 ---
 

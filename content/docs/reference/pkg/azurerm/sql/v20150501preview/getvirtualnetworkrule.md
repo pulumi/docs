@@ -1,7 +1,7 @@
 
 ---
 title: "GetVirtualNetworkRule"
-title_tag: "Function GetVirtualNetworkRule | Module sql/v20150501preview | Package azurerm"
+title_tag: "Function GetVirtualNetworkRule | Module sql/v20150501preview | Package Azure RM"
 meta_desc: "Explore the GetVirtualNetworkRule function of the sql/v20150501preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

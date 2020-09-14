@@ -1,7 +1,7 @@
 
 ---
 title: "GetWorkspace"
-title_tag: "Function GetWorkspace | Module machinelearningservices/v20200901preview | Package azurerm"
+title_tag: "Function GetWorkspace | Module machinelearningservices/v20200901preview | Package Azure RM"
 meta_desc: "Explore the GetWorkspace function of the machinelearningservices/v20200901preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

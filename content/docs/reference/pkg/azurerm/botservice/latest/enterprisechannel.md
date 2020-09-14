@@ -1,7 +1,7 @@
 
 ---
 title: "EnterpriseChannel"
-title_tag: "Resource EnterpriseChannel | Module botservice/latest | Package azurerm"
+title_tag: "Resource EnterpriseChannel | Module botservice/latest | Package Azure RM"
 meta_desc: "Explore the EnterpriseChannel resource of the botservice/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Enterprise Channel resource definition"
 ---
 

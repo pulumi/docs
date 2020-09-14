@@ -1,7 +1,7 @@
 
 ---
 title: "ScopeMap"
-title_tag: "Resource ScopeMap | Module containerregistry/v20190501preview | Package azurerm"
+title_tag: "Resource ScopeMap | Module containerregistry/v20190501preview | Package Azure RM"
 meta_desc: "Explore the ScopeMap resource of the containerregistry/v20190501preview module, including examples, input properties, output properties, lookup functions, and supporting types. An object that represents a scope map for a container registry."
 ---
 

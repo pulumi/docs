@@ -1,7 +1,7 @@
 
 ---
 title: "GetIotHubResource"
-title_tag: "Function GetIotHubResource | Module devices/latest | Package azurerm"
+title_tag: "Function GetIotHubResource | Module devices/latest | Package Azure RM"
 meta_desc: "Explore the GetIotHubResource function of the devices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

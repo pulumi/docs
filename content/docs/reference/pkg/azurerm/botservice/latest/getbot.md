@@ -1,7 +1,7 @@
 
 ---
 title: "GetBot"
-title_tag: "Function GetBot | Module botservice/latest | Package azurerm"
+title_tag: "Function GetBot | Module botservice/latest | Package Azure RM"
 meta_desc: "Explore the GetBot function of the botservice/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetRoleAssignment"
-title_tag: "Function GetRoleAssignment | Module authorization/v20200401preview | Package azurerm"
+title_tag: "Function GetRoleAssignment | Module authorization/v20200401preview | Package Azure RM"
 meta_desc: "Explore the GetRoleAssignment function of the authorization/v20200401preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

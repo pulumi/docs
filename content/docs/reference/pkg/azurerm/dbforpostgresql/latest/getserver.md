@@ -1,7 +1,7 @@
 
 ---
 title: "GetServer"
-title_tag: "Function GetServer | Module dbforpostgresql/latest | Package azurerm"
+title_tag: "Function GetServer | Module dbforpostgresql/latest | Package Azure RM"
 meta_desc: "Explore the GetServer function of the dbforpostgresql/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "AppServicePlan"
-title_tag: "Resource AppServicePlan | Module web/latest | Package azurerm"
+title_tag: "Resource AppServicePlan | Module web/latest | Package Azure RM"
 meta_desc: "Explore the AppServicePlan resource of the web/latest module, including examples, input properties, output properties, lookup functions, and supporting types. App Service plan."
 ---
 

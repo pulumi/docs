@@ -1,7 +1,7 @@
 
 ---
 title: "GetApplication"
-title_tag: "Function GetApplication | Module hdinsight/v20180601preview | Package azurerm"
+title_tag: "Function GetApplication | Module hdinsight/v20180601preview | Package Azure RM"
 meta_desc: "Explore the GetApplication function of the hdinsight/v20180601preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

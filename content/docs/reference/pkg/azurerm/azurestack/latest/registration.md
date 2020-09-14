@@ -1,7 +1,7 @@
 
 ---
 title: "Registration"
-title_tag: "Resource Registration | Module azurestack/latest | Package azurerm"
+title_tag: "Resource Registration | Module azurestack/latest | Package Azure RM"
 meta_desc: "Explore the Registration resource of the azurestack/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Registration information."
 ---
 

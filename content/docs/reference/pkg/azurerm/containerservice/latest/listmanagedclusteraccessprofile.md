@@ -1,7 +1,7 @@
 
 ---
 title: "ListManagedClusterAccessProfile"
-title_tag: "Function ListManagedClusterAccessProfile | Module containerservice/latest | Package azurerm"
+title_tag: "Function ListManagedClusterAccessProfile | Module containerservice/latest | Package Azure RM"
 meta_desc: "Explore the ListManagedClusterAccessProfile function of the containerservice/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetApp"
-title_tag: "Function GetApp | Module iotcentral/latest | Package azurerm"
+title_tag: "Function GetApp | Module iotcentral/latest | Package Azure RM"
 meta_desc: "Explore the GetApp function of the iotcentral/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetTagByApi"
-title_tag: "Function GetTagByApi | Module apimanagement/latest | Package azurerm"
+title_tag: "Function GetTagByApi | Module apimanagement/latest | Package Azure RM"
 meta_desc: "Explore the GetTagByApi function of the apimanagement/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

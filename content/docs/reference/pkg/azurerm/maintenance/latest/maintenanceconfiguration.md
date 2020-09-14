@@ -1,7 +1,7 @@
 
 ---
 title: "MaintenanceConfiguration"
-title_tag: "Resource MaintenanceConfiguration | Module maintenance/latest | Package azurerm"
+title_tag: "Resource MaintenanceConfiguration | Module maintenance/latest | Package Azure RM"
 meta_desc: "Explore the MaintenanceConfiguration resource of the maintenance/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Maintenance configuration record type"
 ---
 

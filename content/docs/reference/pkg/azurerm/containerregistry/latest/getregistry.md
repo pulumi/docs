@@ -1,7 +1,7 @@
 
 ---
 title: "GetRegistry"
-title_tag: "Function GetRegistry | Module containerregistry/latest | Package azurerm"
+title_tag: "Function GetRegistry | Module containerregistry/latest | Package Azure RM"
 meta_desc: "Explore the GetRegistry function of the containerregistry/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

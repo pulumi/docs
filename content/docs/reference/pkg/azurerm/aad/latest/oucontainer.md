@@ -1,7 +1,7 @@
 
 ---
 title: "OuContainer"
-title_tag: "Resource OuContainer | Module aad/latest | Package azurerm"
+title_tag: "Resource OuContainer | Module aad/latest | Package Azure RM"
 meta_desc: "Explore the OuContainer resource of the aad/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Resource for OuContainer."
 ---
 

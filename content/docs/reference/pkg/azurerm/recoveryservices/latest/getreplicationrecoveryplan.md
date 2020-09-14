@@ -1,7 +1,7 @@
 
 ---
 title: "GetReplicationRecoveryPlan"
-title_tag: "Function GetReplicationRecoveryPlan | Module recoveryservices/latest | Package azurerm"
+title_tag: "Function GetReplicationRecoveryPlan | Module recoveryservices/latest | Package Azure RM"
 meta_desc: "Explore the GetReplicationRecoveryPlan function of the recoveryservices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

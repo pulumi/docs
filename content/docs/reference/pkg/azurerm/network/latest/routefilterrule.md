@@ -1,7 +1,7 @@
 
 ---
 title: "RouteFilterRule"
-title_tag: "Resource RouteFilterRule | Module network/latest | Package azurerm"
+title_tag: "Resource RouteFilterRule | Module network/latest | Package Azure RM"
 meta_desc: "Explore the RouteFilterRule resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Route Filter Rule Resource."
 ---
 

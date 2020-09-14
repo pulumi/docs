@@ -1,7 +1,7 @@
 
 ---
 title: "GetLab"
-title_tag: "Function GetLab | Module labservices/latest | Package azurerm"
+title_tag: "Function GetLab | Module labservices/latest | Package Azure RM"
 meta_desc: "Explore the GetLab function of the labservices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

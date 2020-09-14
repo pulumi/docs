@@ -1,7 +1,7 @@
 
 ---
 title: "Bot"
-title_tag: "Resource Bot | Module botservice/latest | Package azurerm"
+title_tag: "Resource Bot | Module botservice/latest | Package Azure RM"
 meta_desc: "Explore the Bot resource of the botservice/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Bot resource definition"
 ---
 

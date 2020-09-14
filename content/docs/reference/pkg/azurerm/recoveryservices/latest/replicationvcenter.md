@@ -1,7 +1,7 @@
 
 ---
 title: "ReplicationvCenter"
-title_tag: "Resource ReplicationvCenter | Module recoveryservices/latest | Package azurerm"
+title_tag: "Resource ReplicationvCenter | Module recoveryservices/latest | Package Azure RM"
 meta_desc: "Explore the ReplicationvCenter resource of the recoveryservices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. vCenter definition."
 ---
 

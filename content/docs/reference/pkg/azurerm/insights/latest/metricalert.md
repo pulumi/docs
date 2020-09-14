@@ -1,7 +1,7 @@
 
 ---
 title: "MetricAlert"
-title_tag: "Resource MetricAlert | Module insights/latest | Package azurerm"
+title_tag: "Resource MetricAlert | Module insights/latest | Package Azure RM"
 meta_desc: "Explore the MetricAlert resource of the insights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The metric alert resource."
 ---
 

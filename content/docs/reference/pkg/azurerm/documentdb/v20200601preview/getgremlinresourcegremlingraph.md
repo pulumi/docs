@@ -1,7 +1,7 @@
 
 ---
 title: "GetGremlinResourceGremlinGraph"
-title_tag: "Function GetGremlinResourceGremlinGraph | Module documentdb/v20200601preview | Package azurerm"
+title_tag: "Function GetGremlinResourceGremlinGraph | Module documentdb/v20200601preview | Package Azure RM"
 meta_desc: "Explore the GetGremlinResourceGremlinGraph function of the documentdb/v20200601preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

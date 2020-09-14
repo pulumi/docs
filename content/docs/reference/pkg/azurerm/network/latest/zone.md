@@ -1,7 +1,7 @@
 
 ---
 title: "Zone"
-title_tag: "Resource Zone | Module network/latest | Package azurerm"
+title_tag: "Resource Zone | Module network/latest | Package Azure RM"
 meta_desc: "Explore the Zone resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Describes a DNS zone."
 ---
 

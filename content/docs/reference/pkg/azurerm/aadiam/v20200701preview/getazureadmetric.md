@@ -1,7 +1,7 @@
 
 ---
 title: "GetazureADMetric"
-title_tag: "Function GetazureADMetric | Module aadiam/v20200701preview | Package azurerm"
+title_tag: "Function GetazureADMetric | Module aadiam/v20200701preview | Package Azure RM"
 meta_desc: "Explore the GetazureADMetric function of the aadiam/v20200701preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

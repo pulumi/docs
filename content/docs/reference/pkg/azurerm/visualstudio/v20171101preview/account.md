@@ -1,7 +1,7 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module visualstudio/v20171101preview | Package azurerm"
+title_tag: "Resource Account | Module visualstudio/v20171101preview | Package Azure RM"
 meta_desc: "Explore the Account resource of the visualstudio/v20171101preview module, including examples, input properties, output properties, lookup functions, and supporting types. The response to an account resource GET request."
 ---
 

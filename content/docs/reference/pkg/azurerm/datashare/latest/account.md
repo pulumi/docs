@@ -1,7 +1,7 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module datashare/latest | Package azurerm"
+title_tag: "Resource Account | Module datashare/latest | Package Azure RM"
 meta_desc: "Explore the Account resource of the datashare/latest module, including examples, input properties, output properties, lookup functions, and supporting types. An account data transfer object."
 ---
 

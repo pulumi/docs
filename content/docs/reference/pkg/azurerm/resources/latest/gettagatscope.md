@@ -1,7 +1,7 @@
 
 ---
 title: "GetTagAtScope"
-title_tag: "Function GetTagAtScope | Module resources/latest | Package azurerm"
+title_tag: "Function GetTagAtScope | Module resources/latest | Package Azure RM"
 meta_desc: "Explore the GetTagAtScope function of the resources/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

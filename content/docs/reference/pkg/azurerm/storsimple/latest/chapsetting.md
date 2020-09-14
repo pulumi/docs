@@ -1,7 +1,7 @@
 
 ---
 title: "ChapSetting"
-title_tag: "Resource ChapSetting | Module storsimple/latest | Package azurerm"
+title_tag: "Resource ChapSetting | Module storsimple/latest | Package Azure RM"
 meta_desc: "Explore the ChapSetting resource of the storsimple/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Challenge-Handshake Authentication Protocol (CHAP) setting"
 ---
 

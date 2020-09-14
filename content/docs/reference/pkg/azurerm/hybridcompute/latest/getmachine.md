@@ -1,7 +1,7 @@
 
 ---
 title: "GetMachine"
-title_tag: "Function GetMachine | Module hybridcompute/latest | Package azurerm"
+title_tag: "Function GetMachine | Module hybridcompute/latest | Package Azure RM"
 meta_desc: "Explore the GetMachine function of the hybridcompute/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

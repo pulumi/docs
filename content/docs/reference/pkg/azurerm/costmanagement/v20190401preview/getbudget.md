@@ -1,7 +1,7 @@
 
 ---
 title: "GetBudget"
-title_tag: "Function GetBudget | Module costmanagement/v20190401preview | Package azurerm"
+title_tag: "Function GetBudget | Module costmanagement/v20190401preview | Package Azure RM"
 meta_desc: "Explore the GetBudget function of the costmanagement/v20190401preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

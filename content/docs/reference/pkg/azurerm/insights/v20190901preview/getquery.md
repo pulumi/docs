@@ -1,7 +1,7 @@
 
 ---
 title: "GetQuery"
-title_tag: "Function GetQuery | Module insights/v20190901preview | Package azurerm"
+title_tag: "Function GetQuery | Module insights/v20190901preview | Package Azure RM"
 meta_desc: "Explore the GetQuery function of the insights/v20190901preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

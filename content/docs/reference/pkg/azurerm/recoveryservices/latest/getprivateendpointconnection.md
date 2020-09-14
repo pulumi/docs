@@ -1,7 +1,7 @@
 
 ---
 title: "GetPrivateEndpointConnection"
-title_tag: "Function GetPrivateEndpointConnection | Module recoveryservices/latest | Package azurerm"
+title_tag: "Function GetPrivateEndpointConnection | Module recoveryservices/latest | Package Azure RM"
 meta_desc: "Explore the GetPrivateEndpointConnection function of the recoveryservices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

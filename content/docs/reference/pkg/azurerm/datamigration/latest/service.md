@@ -1,7 +1,7 @@
 
 ---
 title: "Service"
-title_tag: "Resource Service | Module datamigration/latest | Package azurerm"
+title_tag: "Resource Service | Module datamigration/latest | Package Azure RM"
 meta_desc: "Explore the Service resource of the datamigration/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A Database Migration Service resource"
 ---
 

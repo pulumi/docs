@@ -1,7 +1,7 @@
 
 ---
 title: "Subscription"
-title_tag: "Resource Subscription | Module apimanagement/latest | Package azurerm"
+title_tag: "Resource Subscription | Module apimanagement/latest | Package Azure RM"
 meta_desc: "Explore the Subscription resource of the apimanagement/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Subscription details."
 ---
 

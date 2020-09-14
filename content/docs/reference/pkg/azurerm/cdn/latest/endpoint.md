@@ -1,7 +1,7 @@
 
 ---
 title: "Endpoint"
-title_tag: "Resource Endpoint | Module cdn/latest | Package azurerm"
+title_tag: "Resource Endpoint | Module cdn/latest | Package Azure RM"
 meta_desc: "Explore the Endpoint resource of the cdn/latest module, including examples, input properties, output properties, lookup functions, and supporting types. CDN endpoint is the entity within a CDN profile containing configuration information such as origin, protocol, content caching and delivery behavior. The CDN endpoint uses the URL format &lt;endpointname&gt;.azureedge.net."
 ---
 

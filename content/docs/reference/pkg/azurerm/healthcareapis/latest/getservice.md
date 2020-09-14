@@ -1,7 +1,7 @@
 
 ---
 title: "GetService"
-title_tag: "Function GetService | Module healthcareapis/latest | Package azurerm"
+title_tag: "Function GetService | Module healthcareapis/latest | Package Azure RM"
 meta_desc: "Explore the GetService function of the healthcareapis/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

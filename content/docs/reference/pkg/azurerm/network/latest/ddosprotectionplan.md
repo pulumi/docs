@@ -1,7 +1,7 @@
 
 ---
 title: "DdosProtectionPlan"
-title_tag: "Resource DdosProtectionPlan | Module network/latest | Package azurerm"
+title_tag: "Resource DdosProtectionPlan | Module network/latest | Package Azure RM"
 meta_desc: "Explore the DdosProtectionPlan resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A DDoS protection plan in a resource group."
 ---
 

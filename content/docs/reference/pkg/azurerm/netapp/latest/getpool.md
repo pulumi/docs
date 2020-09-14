@@ -1,7 +1,7 @@
 
 ---
 title: "GetPool"
-title_tag: "Function GetPool | Module netapp/latest | Package azurerm"
+title_tag: "Function GetPool | Module netapp/latest | Package Azure RM"
 meta_desc: "Explore the GetPool function of the netapp/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

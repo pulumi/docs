@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedInstanceKey"
-title_tag: "Resource ManagedInstanceKey | Module sql/v20171001preview | Package azurerm"
+title_tag: "Resource ManagedInstanceKey | Module sql/v20171001preview | Package Azure RM"
 meta_desc: "Explore the ManagedInstanceKey resource of the sql/v20171001preview module, including examples, input properties, output properties, lookup functions, and supporting types. A managed instance key."
 ---
 

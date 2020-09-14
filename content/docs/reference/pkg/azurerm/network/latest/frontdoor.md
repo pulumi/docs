@@ -1,7 +1,7 @@
 
 ---
 title: "FrontDoor"
-title_tag: "Resource FrontDoor | Module network/latest | Package azurerm"
+title_tag: "Resource FrontDoor | Module network/latest | Package Azure RM"
 meta_desc: "Explore the FrontDoor resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Front Door represents a collection of backend endpoints to route traffic to along with rules that specify how traffic is sent there."
 ---
 

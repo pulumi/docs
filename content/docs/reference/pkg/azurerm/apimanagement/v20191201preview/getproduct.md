@@ -1,7 +1,7 @@
 
 ---
 title: "GetProduct"
-title_tag: "Function GetProduct | Module apimanagement/v20191201preview | Package azurerm"
+title_tag: "Function GetProduct | Module apimanagement/v20191201preview | Package Azure RM"
 meta_desc: "Explore the GetProduct function of the apimanagement/v20191201preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

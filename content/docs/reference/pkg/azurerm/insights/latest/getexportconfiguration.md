@@ -1,7 +1,7 @@
 
 ---
 title: "GetExportConfiguration"
-title_tag: "Function GetExportConfiguration | Module insights/latest | Package azurerm"
+title_tag: "Function GetExportConfiguration | Module insights/latest | Package Azure RM"
 meta_desc: "Explore the GetExportConfiguration function of the insights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

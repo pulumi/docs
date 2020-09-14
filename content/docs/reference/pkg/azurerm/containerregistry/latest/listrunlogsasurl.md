@@ -1,7 +1,7 @@
 
 ---
 title: "ListRunLogSasUrl"
-title_tag: "Function ListRunLogSasUrl | Module containerregistry/latest | Package azurerm"
+title_tag: "Function ListRunLogSasUrl | Module containerregistry/latest | Package Azure RM"
 meta_desc: "Explore the ListRunLogSasUrl function of the containerregistry/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

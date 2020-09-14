@@ -1,7 +1,7 @@
 
 ---
 title: "Logger"
-title_tag: "Resource Logger | Module apimanagement/latest | Package azurerm"
+title_tag: "Resource Logger | Module apimanagement/latest | Package Azure RM"
 meta_desc: "Explore the Logger resource of the apimanagement/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Logger details."
 ---
 

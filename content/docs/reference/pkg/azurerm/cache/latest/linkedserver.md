@@ -1,7 +1,7 @@
 
 ---
 title: "LinkedServer"
-title_tag: "Resource LinkedServer | Module cache/latest | Package azurerm"
+title_tag: "Resource LinkedServer | Module cache/latest | Package Azure RM"
 meta_desc: "Explore the LinkedServer resource of the cache/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Response to put/get linked server (with properties) for Redis cache."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "JobDefinition"
-title_tag: "Resource JobDefinition | Module hybriddata/latest | Package azurerm"
+title_tag: "Resource JobDefinition | Module hybriddata/latest | Package Azure RM"
 meta_desc: "Explore the JobDefinition resource of the hybriddata/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Job Definition."
 ---
 

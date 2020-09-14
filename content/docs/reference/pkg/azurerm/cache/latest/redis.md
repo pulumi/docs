@@ -1,7 +1,7 @@
 
 ---
 title: "Redis"
-title_tag: "Resource Redis | Module cache/latest | Package azurerm"
+title_tag: "Resource Redis | Module cache/latest | Package Azure RM"
 meta_desc: "Explore the Redis resource of the cache/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A single Redis item in List or Get Operation."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "AutomationAccount"
-title_tag: "Resource AutomationAccount | Module automation/latest | Package azurerm"
+title_tag: "Resource AutomationAccount | Module automation/latest | Package Azure RM"
 meta_desc: "Explore the AutomationAccount resource of the automation/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Definition of the automation account type."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetNamedValue"
-title_tag: "Function GetNamedValue | Module apimanagement/latest | Package azurerm"
+title_tag: "Function GetNamedValue | Module apimanagement/latest | Package Azure RM"
 meta_desc: "Explore the GetNamedValue function of the apimanagement/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

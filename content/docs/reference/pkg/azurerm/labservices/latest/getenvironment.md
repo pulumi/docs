@@ -1,7 +1,7 @@
 
 ---
 title: "GetEnvironment"
-title_tag: "Function GetEnvironment | Module labservices/latest | Package azurerm"
+title_tag: "Function GetEnvironment | Module labservices/latest | Package Azure RM"
 meta_desc: "Explore the GetEnvironment function of the labservices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

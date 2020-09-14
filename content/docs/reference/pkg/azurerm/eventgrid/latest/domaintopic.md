@@ -1,7 +1,7 @@
 
 ---
 title: "DomainTopic"
-title_tag: "Resource DomainTopic | Module eventgrid/latest | Package azurerm"
+title_tag: "Resource DomainTopic | Module eventgrid/latest | Package Azure RM"
 meta_desc: "Explore the DomainTopic resource of the eventgrid/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Domain Topic."
 ---
 

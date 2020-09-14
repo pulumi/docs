@@ -1,7 +1,7 @@
 
 ---
 title: "GetGuestDiagnosticsSettingsAssociation"
-title_tag: "Function GetGuestDiagnosticsSettingsAssociation | Module insights/v20180601preview | Package azurerm"
+title_tag: "Function GetGuestDiagnosticsSettingsAssociation | Module insights/v20180601preview | Package Azure RM"
 meta_desc: "Explore the GetGuestDiagnosticsSettingsAssociation function of the insights/v20180601preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

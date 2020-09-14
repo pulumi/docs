@@ -1,7 +1,7 @@
 
 ---
 title: "DisasterRecoveryConfig"
-title_tag: "Resource DisasterRecoveryConfig | Module servicebus/latest | Package azurerm"
+title_tag: "Resource DisasterRecoveryConfig | Module servicebus/latest | Package Azure RM"
 meta_desc: "Explore the DisasterRecoveryConfig resource of the servicebus/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Single item in List or Get Alias(Disaster Recovery configuration) operation"
 ---
 

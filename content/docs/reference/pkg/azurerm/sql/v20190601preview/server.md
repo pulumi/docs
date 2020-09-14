@@ -1,7 +1,7 @@
 
 ---
 title: "Server"
-title_tag: "Resource Server | Module sql/v20190601preview | Package azurerm"
+title_tag: "Resource Server | Module sql/v20190601preview | Package Azure RM"
 meta_desc: "Explore the Server resource of the sql/v20190601preview module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure SQL Database server."
 ---
 

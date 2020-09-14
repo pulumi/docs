@@ -1,7 +1,7 @@
 
 ---
 title: "ListConnectionConsentLinks"
-title_tag: "Function ListConnectionConsentLinks | Module web/latest | Package azurerm"
+title_tag: "Function ListConnectionConsentLinks | Module web/latest | Package Azure RM"
 meta_desc: "Explore the ListConnectionConsentLinks function of the web/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

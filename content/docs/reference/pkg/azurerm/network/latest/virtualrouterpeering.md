@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualRouterPeering"
-title_tag: "Resource VirtualRouterPeering | Module network/latest | Package azurerm"
+title_tag: "Resource VirtualRouterPeering | Module network/latest | Package Azure RM"
 meta_desc: "Explore the VirtualRouterPeering resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Virtual Router Peering resource."
 ---
 

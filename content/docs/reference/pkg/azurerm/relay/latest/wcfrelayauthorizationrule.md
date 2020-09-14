@@ -1,7 +1,7 @@
 
 ---
 title: "WCFRelayAuthorizationRule"
-title_tag: "Resource WCFRelayAuthorizationRule | Module relay/latest | Package azurerm"
+title_tag: "Resource WCFRelayAuthorizationRule | Module relay/latest | Package Azure RM"
 meta_desc: "Explore the WCFRelayAuthorizationRule resource of the relay/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Description of a namespace authorization rule."
 ---
 

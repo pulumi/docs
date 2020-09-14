@@ -1,7 +1,7 @@
 
 ---
 title: "ListTopLevelDomainAgreements"
-title_tag: "Function ListTopLevelDomainAgreements | Module domainregistration/latest | Package azurerm"
+title_tag: "Function ListTopLevelDomainAgreements | Module domainregistration/latest | Package Azure RM"
 meta_desc: "Explore the ListTopLevelDomainAgreements function of the domainregistration/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

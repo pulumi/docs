@@ -1,7 +1,7 @@
 
 ---
 title: "Authorization"
-title_tag: "Resource Authorization | Module avs/latest | Package azurerm"
+title_tag: "Resource Authorization | Module avs/latest | Package Azure RM"
 meta_desc: "Explore the Authorization resource of the avs/latest module, including examples, input properties, output properties, lookup functions, and supporting types. ExpressRoute Circuit Authorization"
 ---
 

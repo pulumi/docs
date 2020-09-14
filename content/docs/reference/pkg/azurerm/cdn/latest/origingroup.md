@@ -1,7 +1,7 @@
 
 ---
 title: "OriginGroup"
-title_tag: "Resource OriginGroup | Module cdn/latest | Package azurerm"
+title_tag: "Resource OriginGroup | Module cdn/latest | Package Azure RM"
 meta_desc: "Explore the OriginGroup resource of the cdn/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Origin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "IotHubResource"
-title_tag: "Resource IotHubResource | Module devices/latest | Package azurerm"
+title_tag: "Resource IotHubResource | Module devices/latest | Package Azure RM"
 meta_desc: "Explore the IotHubResource resource of the devices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The description of the IoT hub."
 ---
 

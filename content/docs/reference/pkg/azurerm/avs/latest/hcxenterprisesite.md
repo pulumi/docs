@@ -1,7 +1,7 @@
 
 ---
 title: "HcxEnterpriseSite"
-title_tag: "Resource HcxEnterpriseSite | Module avs/latest | Package azurerm"
+title_tag: "Resource HcxEnterpriseSite | Module avs/latest | Package Azure RM"
 meta_desc: "Explore the HcxEnterpriseSite resource of the avs/latest module, including examples, input properties, output properties, lookup functions, and supporting types. An HCX Enterprise Site resource"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "MyWorkbook"
-title_tag: "Resource MyWorkbook | Module insights/latest | Package azurerm"
+title_tag: "Resource MyWorkbook | Module insights/latest | Package Azure RM"
 meta_desc: "Explore the MyWorkbook resource of the insights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. An Application Insights private workbook definition."
 ---
 

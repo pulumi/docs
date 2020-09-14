@@ -1,7 +1,7 @@
 
 ---
 title: "GetConnector"
-title_tag: "Function GetConnector | Module costmanagement/v20180801preview | Package azurerm"
+title_tag: "Function GetConnector | Module costmanagement/v20180801preview | Package Azure RM"
 meta_desc: "Explore the GetConnector function of the costmanagement/v20180801preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

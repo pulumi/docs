@@ -1,7 +1,7 @@
 
 ---
 title: "Cache"
-title_tag: "Resource Cache | Module storagecache/latest | Package azurerm"
+title_tag: "Resource Cache | Module storagecache/latest | Package Azure RM"
 meta_desc: "Explore the Cache resource of the storagecache/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A Cache instance. Follows Azure Resource Manager standards: https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/resource-api-reference.md"
 ---
 

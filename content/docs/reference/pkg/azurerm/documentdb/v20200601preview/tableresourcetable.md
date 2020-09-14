@@ -1,7 +1,7 @@
 
 ---
 title: "TableResourceTable"
-title_tag: "Resource TableResourceTable | Module documentdb/v20200601preview | Package azurerm"
+title_tag: "Resource TableResourceTable | Module documentdb/v20200601preview | Package Azure RM"
 meta_desc: "Explore the TableResourceTable resource of the documentdb/v20200601preview module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB Table."
 ---
 

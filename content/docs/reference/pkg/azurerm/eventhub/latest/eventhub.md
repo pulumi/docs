@@ -1,7 +1,7 @@
 
 ---
 title: "EventHub"
-title_tag: "Resource EventHub | Module eventhub/latest | Package azurerm"
+title_tag: "Resource EventHub | Module eventhub/latest | Package Azure RM"
 meta_desc: "Explore the EventHub resource of the eventhub/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Single item in List or Get Event Hub operation"
 ---
 

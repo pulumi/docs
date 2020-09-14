@@ -1,7 +1,7 @@
 
 ---
 title: "PostgresInstance"
-title_tag: "Resource PostgresInstance | Module azuredata/v20190724preview | Package azurerm"
+title_tag: "Resource PostgresInstance | Module azuredata/v20190724preview | Package Azure RM"
 meta_desc: "Explore the PostgresInstance resource of the azuredata/v20190724preview module, including examples, input properties, output properties, lookup functions, and supporting types. A Postgres Instance."
 ---
 

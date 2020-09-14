@@ -1,7 +1,7 @@
 
 ---
 title: "ListRemediationDeploymentsAtResource"
-title_tag: "Function ListRemediationDeploymentsAtResource | Module policyinsights/latest | Package azurerm"
+title_tag: "Function ListRemediationDeploymentsAtResource | Module policyinsights/latest | Package Azure RM"
 meta_desc: "Explore the ListRemediationDeploymentsAtResource function of the policyinsights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

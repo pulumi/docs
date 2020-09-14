@@ -1,7 +1,7 @@
 
 ---
 title: "GetDiskAccess"
-title_tag: "Function GetDiskAccess | Module compute/latest | Package azurerm"
+title_tag: "Function GetDiskAccess | Module compute/latest | Package Azure RM"
 meta_desc: "Explore the GetDiskAccess function of the compute/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

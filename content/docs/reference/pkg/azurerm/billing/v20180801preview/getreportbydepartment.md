@@ -1,7 +1,7 @@
 
 ---
 title: "GetReportByDepartment"
-title_tag: "Function GetReportByDepartment | Module billing/v20180801preview | Package azurerm"
+title_tag: "Function GetReportByDepartment | Module billing/v20180801preview | Package Azure RM"
 meta_desc: "Explore the GetReportByDepartment function of the billing/v20180801preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

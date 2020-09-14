@@ -1,7 +1,7 @@
 
 ---
 title: "GetRegistrationAssignment"
-title_tag: "Function GetRegistrationAssignment | Module managedservices/v20200201preview | Package azurerm"
+title_tag: "Function GetRegistrationAssignment | Module managedservices/v20200201preview | Package Azure RM"
 meta_desc: "Explore the GetRegistrationAssignment function of the managedservices/v20200201preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

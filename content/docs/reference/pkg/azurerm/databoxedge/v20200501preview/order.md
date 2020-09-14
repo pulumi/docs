@@ -1,7 +1,7 @@
 
 ---
 title: "Order"
-title_tag: "Resource Order | Module databoxedge/v20200501preview | Package azurerm"
+title_tag: "Resource Order | Module databoxedge/v20200501preview | Package Azure RM"
 meta_desc: "Explore the Order resource of the databoxedge/v20200501preview module, including examples, input properties, output properties, lookup functions, and supporting types. The order details."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedInstanceAdministrator"
-title_tag: "Resource ManagedInstanceAdministrator | Module sql/v20170301preview | Package azurerm"
+title_tag: "Resource ManagedInstanceAdministrator | Module sql/v20170301preview | Package Azure RM"
 meta_desc: "Explore the ManagedInstanceAdministrator resource of the sql/v20170301preview module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure SQL managed instance administrator."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetWebAppSourceControl"
-title_tag: "Function GetWebAppSourceControl | Module web/latest | Package azurerm"
+title_tag: "Function GetWebAppSourceControl | Module web/latest | Package Azure RM"
 meta_desc: "Explore the GetWebAppSourceControl function of the web/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

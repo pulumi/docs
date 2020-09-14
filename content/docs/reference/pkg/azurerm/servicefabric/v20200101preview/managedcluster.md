@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedCluster"
-title_tag: "Resource ManagedCluster | Module servicefabric/v20200101preview | Package azurerm"
+title_tag: "Resource ManagedCluster | Module servicefabric/v20200101preview | Package Azure RM"
 meta_desc: "Explore the ManagedCluster resource of the servicefabric/v20200101preview module, including examples, input properties, output properties, lookup functions, and supporting types. The manged cluster resource"
 ---
 

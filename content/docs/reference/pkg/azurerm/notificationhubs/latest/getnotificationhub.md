@@ -1,7 +1,7 @@
 
 ---
 title: "GetNotificationHub"
-title_tag: "Function GetNotificationHub | Module notificationhubs/latest | Package azurerm"
+title_tag: "Function GetNotificationHub | Module notificationhubs/latest | Package Azure RM"
 meta_desc: "Explore the GetNotificationHub function of the notificationhubs/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetCluster"
-title_tag: "Function GetCluster | Module kusto/latest | Package azurerm"
+title_tag: "Function GetCluster | Module kusto/latest | Package Azure RM"
 meta_desc: "Explore the GetCluster function of the kusto/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

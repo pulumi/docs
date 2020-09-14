@@ -1,7 +1,7 @@
 
 ---
 title: "PatchSchedule"
-title_tag: "Resource PatchSchedule | Module cache/latest | Package azurerm"
+title_tag: "Resource PatchSchedule | Module cache/latest | Package Azure RM"
 meta_desc: "Explore the PatchSchedule resource of the cache/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Response to put/get patch schedules for Redis cache."
 ---
 

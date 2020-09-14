@@ -1,7 +1,7 @@
 
 ---
 title: "GetWebService"
-title_tag: "Function GetWebService | Module machinelearning/latest | Package azurerm"
+title_tag: "Function GetWebService | Module machinelearning/latest | Package Azure RM"
 meta_desc: "Explore the GetWebService function of the machinelearning/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

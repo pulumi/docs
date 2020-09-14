@@ -1,7 +1,7 @@
 
 ---
 title: "EnterpriseKnowledgeGraph"
-title_tag: "Resource EnterpriseKnowledgeGraph | Module enterpriseknowledgegraph/latest | Package azurerm"
+title_tag: "Resource EnterpriseKnowledgeGraph | Module enterpriseknowledgegraph/latest | Package Azure RM"
 meta_desc: "Explore the EnterpriseKnowledgeGraph resource of the enterpriseknowledgegraph/latest module, including examples, input properties, output properties, lookup functions, and supporting types. EnterpriseKnowledgeGraph resource definition"
 ---
 

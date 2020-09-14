@@ -1,7 +1,7 @@
 
 ---
 title: "GetTopicAuthorizationRule"
-title_tag: "Function GetTopicAuthorizationRule | Module servicebus/latest | Package azurerm"
+title_tag: "Function GetTopicAuthorizationRule | Module servicebus/latest | Package Azure RM"
 meta_desc: "Explore the GetTopicAuthorizationRule function of the servicebus/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

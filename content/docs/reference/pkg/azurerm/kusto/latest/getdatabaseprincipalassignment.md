@@ -1,7 +1,7 @@
 
 ---
 title: "GetDatabasePrincipalAssignment"
-title_tag: "Function GetDatabasePrincipalAssignment | Module kusto/latest | Package azurerm"
+title_tag: "Function GetDatabasePrincipalAssignment | Module kusto/latest | Package Azure RM"
 meta_desc: "Explore the GetDatabasePrincipalAssignment function of the kusto/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

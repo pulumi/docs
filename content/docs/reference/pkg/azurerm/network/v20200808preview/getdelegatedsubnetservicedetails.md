@@ -1,7 +1,7 @@
 
 ---
 title: "GetDelegatedSubnetServiceDetails"
-title_tag: "Function GetDelegatedSubnetServiceDetails | Module network/v20200808preview | Package azurerm"
+title_tag: "Function GetDelegatedSubnetServiceDetails | Module network/v20200808preview | Package Azure RM"
 meta_desc: "Explore the GetDelegatedSubnetServiceDetails function of the network/v20200808preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

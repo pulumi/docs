@@ -1,7 +1,7 @@
 
 ---
 title: "GetCache"
-title_tag: "Function GetCache | Module storagecache/latest | Package azurerm"
+title_tag: "Function GetCache | Module storagecache/latest | Package Azure RM"
 meta_desc: "Explore the GetCache function of the storagecache/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ElasticPool"
-title_tag: "Resource ElasticPool | Module sql/latest | Package azurerm"
+title_tag: "Resource ElasticPool | Module sql/latest | Package Azure RM"
 meta_desc: "Explore the ElasticPool resource of the sql/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a database elastic pool."
 ---
 

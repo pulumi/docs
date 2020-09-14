@@ -1,7 +1,7 @@
 
 ---
 title: "GetVirtualMachine"
-title_tag: "Function GetVirtualMachine | Module vmwarecloudsimple/latest | Package azurerm"
+title_tag: "Function GetVirtualMachine | Module vmwarecloudsimple/latest | Package Azure RM"
 meta_desc: "Explore the GetVirtualMachine function of the vmwarecloudsimple/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

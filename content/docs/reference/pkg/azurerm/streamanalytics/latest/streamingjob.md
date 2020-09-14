@@ -1,7 +1,7 @@
 
 ---
 title: "StreamingJob"
-title_tag: "Resource StreamingJob | Module streamanalytics/latest | Package azurerm"
+title_tag: "Resource StreamingJob | Module streamanalytics/latest | Package Azure RM"
 meta_desc: "Explore the StreamingJob resource of the streamanalytics/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A streaming job object, containing all information associated with the named streaming job."
 ---
 

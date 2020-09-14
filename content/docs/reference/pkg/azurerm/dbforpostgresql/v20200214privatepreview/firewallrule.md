@@ -1,7 +1,7 @@
 
 ---
 title: "FirewallRule"
-title_tag: "Resource FirewallRule | Module dbforpostgresql/v20200214privatepreview | Package azurerm"
+title_tag: "Resource FirewallRule | Module dbforpostgresql/v20200214privatepreview | Package Azure RM"
 meta_desc: "Explore the FirewallRule resource of the dbforpostgresql/v20200214privatepreview module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a server firewall rule."
 ---
 

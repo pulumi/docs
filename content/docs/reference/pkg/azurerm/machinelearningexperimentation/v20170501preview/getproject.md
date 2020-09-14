@@ -1,7 +1,7 @@
 
 ---
 title: "GetProject"
-title_tag: "Function GetProject | Module machinelearningexperimentation/v20170501preview | Package azurerm"
+title_tag: "Function GetProject | Module machinelearningexperimentation/v20170501preview | Package Azure RM"
 meta_desc: "Explore the GetProject function of the machinelearningexperimentation/v20170501preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

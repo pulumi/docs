@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateEndpointConnection"
-title_tag: "Resource PrivateEndpointConnection | Module search/latest | Package azurerm"
+title_tag: "Resource PrivateEndpointConnection | Module search/latest | Package Azure RM"
 meta_desc: "Explore the PrivateEndpointConnection resource of the search/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Describes an existing Private Endpoint connection to the Azure Cognitive Search service."
 ---
 

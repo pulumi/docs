@@ -1,7 +1,7 @@
 
 ---
 title: "GetQueue"
-title_tag: "Function GetQueue | Module servicebus/latest | Package azurerm"
+title_tag: "Function GetQueue | Module servicebus/latest | Package Azure RM"
 meta_desc: "Explore the GetQueue function of the servicebus/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

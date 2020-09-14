@@ -1,7 +1,7 @@
 
 ---
 title: "TagAtScope"
-title_tag: "Resource TagAtScope | Module resources/latest | Package azurerm"
+title_tag: "Resource TagAtScope | Module resources/latest | Package Azure RM"
 meta_desc: "Explore the TagAtScope resource of the resources/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Wrapper resource for tags API requests and responses."
 ---
 

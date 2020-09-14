@@ -1,7 +1,7 @@
 
 ---
 title: "NamespaceAuthorizationRule"
-title_tag: "Resource NamespaceAuthorizationRule | Module eventhub/latest | Package azurerm"
+title_tag: "Resource NamespaceAuthorizationRule | Module eventhub/latest | Package Azure RM"
 meta_desc: "Explore the NamespaceAuthorizationRule resource of the eventhub/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Single item in a List or Get AuthorizationRule operation"
 ---
 

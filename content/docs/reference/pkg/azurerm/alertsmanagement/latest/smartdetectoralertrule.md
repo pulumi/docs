@@ -1,7 +1,7 @@
 
 ---
 title: "SmartDetectorAlertRule"
-title_tag: "Resource SmartDetectorAlertRule | Module alertsmanagement/latest | Package azurerm"
+title_tag: "Resource SmartDetectorAlertRule | Module alertsmanagement/latest | Package Azure RM"
 meta_desc: "Explore the SmartDetectorAlertRule resource of the alertsmanagement/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The alert rule information"
 ---
 

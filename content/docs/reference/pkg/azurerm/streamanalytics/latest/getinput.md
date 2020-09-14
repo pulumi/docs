@@ -1,7 +1,7 @@
 
 ---
 title: "GetInput"
-title_tag: "Function GetInput | Module streamanalytics/latest | Package azurerm"
+title_tag: "Function GetInput | Module streamanalytics/latest | Package Azure RM"
 meta_desc: "Explore the GetInput function of the streamanalytics/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

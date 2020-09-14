@@ -1,7 +1,7 @@
 
 ---
 title: "DpsCertificate"
-title_tag: "Resource DpsCertificate | Module devices/v20200901preview | Package azurerm"
+title_tag: "Resource DpsCertificate | Module devices/v20200901preview | Package Azure RM"
 meta_desc: "Explore the DpsCertificate resource of the devices/v20200901preview module, including examples, input properties, output properties, lookup functions, and supporting types. The X509 Certificate."
 ---
 

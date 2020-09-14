@@ -1,7 +1,7 @@
 
 ---
 title: "ApiManagementService"
-title_tag: "Resource ApiManagementService | Module apimanagement/latest | Package azurerm"
+title_tag: "Resource ApiManagementService | Module apimanagement/latest | Package Azure RM"
 meta_desc: "Explore the ApiManagementService resource of the apimanagement/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A single API Management service resource in List or Get response."
 ---
 

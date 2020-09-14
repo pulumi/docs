@@ -1,7 +1,7 @@
 
 ---
 title: "DedicatedCloudNode"
-title_tag: "Resource DedicatedCloudNode | Module vmwarecloudsimple/latest | Package azurerm"
+title_tag: "Resource DedicatedCloudNode | Module vmwarecloudsimple/latest | Package Azure RM"
 meta_desc: "Explore the DedicatedCloudNode resource of the vmwarecloudsimple/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Dedicated cloud node model"
 ---
 

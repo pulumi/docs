@@ -1,7 +1,7 @@
 
 ---
 title: "PublicIPAddress"
-title_tag: "Resource PublicIPAddress | Module network/latest | Package azurerm"
+title_tag: "Resource PublicIPAddress | Module network/latest | Package Azure RM"
 meta_desc: "Explore the PublicIPAddress resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Public IP address resource."
 ---
 

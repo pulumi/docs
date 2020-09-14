@@ -1,7 +1,7 @@
 
 ---
 title: "ListJobCredentials"
-title_tag: "Function ListJobCredentials | Module databox/latest | Package azurerm"
+title_tag: "Function ListJobCredentials | Module databox/latest | Package Azure RM"
 meta_desc: "Explore the ListJobCredentials function of the databox/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

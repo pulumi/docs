@@ -1,7 +1,7 @@
 
 ---
 title: "Certificate"
-title_tag: "Resource Certificate | Module batch/latest | Package azurerm"
+title_tag: "Resource Certificate | Module batch/latest | Package Azure RM"
 meta_desc: "Explore the Certificate resource of the batch/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Contains information about a certificate."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "DataSource"
-title_tag: "Resource DataSource | Module operationalinsights/latest | Package azurerm"
+title_tag: "Resource DataSource | Module operationalinsights/latest | Package Azure RM"
 meta_desc: "Explore the DataSource resource of the operationalinsights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Datasources under OMS Workspace."
 ---
 

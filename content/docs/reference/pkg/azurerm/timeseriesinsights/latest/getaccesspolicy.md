@@ -1,7 +1,7 @@
 
 ---
 title: "GetAccessPolicy"
-title_tag: "Function GetAccessPolicy | Module timeseriesinsights/latest | Package azurerm"
+title_tag: "Function GetAccessPolicy | Module timeseriesinsights/latest | Package Azure RM"
 meta_desc: "Explore the GetAccessPolicy function of the timeseriesinsights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

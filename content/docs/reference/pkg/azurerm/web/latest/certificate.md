@@ -1,7 +1,7 @@
 
 ---
 title: "Certificate"
-title_tag: "Resource Certificate | Module web/latest | Package azurerm"
+title_tag: "Resource Certificate | Module web/latest | Package Azure RM"
 meta_desc: "Explore the Certificate resource of the web/latest module, including examples, input properties, output properties, lookup functions, and supporting types. SSL certificate for an app."
 ---
 

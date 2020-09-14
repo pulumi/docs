@@ -1,7 +1,7 @@
 
 ---
 title: "WorkloadClassifier"
-title_tag: "Resource WorkloadClassifier | Module sql/v20190601preview | Package azurerm"
+title_tag: "Resource WorkloadClassifier | Module sql/v20190601preview | Package Azure RM"
 meta_desc: "Explore the WorkloadClassifier resource of the sql/v20190601preview module, including examples, input properties, output properties, lookup functions, and supporting types. Workload classifier operations for a data warehouse"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "LoadBalancerBackendAddressPool"
-title_tag: "Resource LoadBalancerBackendAddressPool | Module network/latest | Package azurerm"
+title_tag: "Resource LoadBalancerBackendAddressPool | Module network/latest | Package Azure RM"
 meta_desc: "Explore the LoadBalancerBackendAddressPool resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Pool of backend IP addresses."
 ---
 

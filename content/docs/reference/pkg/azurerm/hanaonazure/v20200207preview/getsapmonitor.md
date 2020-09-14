@@ -1,7 +1,7 @@
 
 ---
 title: "GetSapMonitor"
-title_tag: "Function GetSapMonitor | Module hanaonazure/v20200207preview | Package azurerm"
+title_tag: "Function GetSapMonitor | Module hanaonazure/v20200207preview | Package Azure RM"
 meta_desc: "Explore the GetSapMonitor function of the hanaonazure/v20200207preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

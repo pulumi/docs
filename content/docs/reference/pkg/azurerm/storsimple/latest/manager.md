@@ -1,7 +1,7 @@
 
 ---
 title: "Manager"
-title_tag: "Resource Manager | Module storsimple/latest | Package azurerm"
+title_tag: "Resource Manager | Module storsimple/latest | Package Azure RM"
 meta_desc: "Explore the Manager resource of the storsimple/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The StorSimple Manager."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Network"
-title_tag: "Resource Network | Module servicefabricmesh/v20180901preview | Package azurerm"
+title_tag: "Resource Network | Module servicefabricmesh/v20180901preview | Package Azure RM"
 meta_desc: "Explore the Network resource of the servicefabricmesh/v20180901preview module, including examples, input properties, output properties, lookup functions, and supporting types. This type describes a network resource."
 ---
 

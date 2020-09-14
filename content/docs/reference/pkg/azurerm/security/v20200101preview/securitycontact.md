@@ -1,7 +1,7 @@
 
 ---
 title: "SecurityContact"
-title_tag: "Resource SecurityContact | Module security/v20200101preview | Package azurerm"
+title_tag: "Resource SecurityContact | Module security/v20200101preview | Package Azure RM"
 meta_desc: "Explore the SecurityContact resource of the security/v20200101preview module, including examples, input properties, output properties, lookup functions, and supporting types. Contact details and configurations for notifications coming from Azure Security Center."
 ---
 

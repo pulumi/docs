@@ -1,7 +1,7 @@
 
 ---
 title: "JitRequest"
-title_tag: "Resource JitRequest | Module solutions/v20200821preview | Package azurerm"
+title_tag: "Resource JitRequest | Module solutions/v20200821preview | Package Azure RM"
 meta_desc: "Explore the JitRequest resource of the solutions/v20200821preview module, including examples, input properties, output properties, lookup functions, and supporting types. Information about JIT request definition."
 ---
 

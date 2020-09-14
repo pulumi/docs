@@ -1,7 +1,7 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module engagementfabric/v20180901preview | Package azurerm"
+title_tag: "Resource Account | Module engagementfabric/v20180901preview | Package Azure RM"
 meta_desc: "Explore the Account resource of the engagementfabric/v20180901preview module, including examples, input properties, output properties, lookup functions, and supporting types. The EngagementFabric account"
 ---
 

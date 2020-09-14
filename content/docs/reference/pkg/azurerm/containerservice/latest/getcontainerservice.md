@@ -1,7 +1,7 @@
 
 ---
 title: "GetContainerService"
-title_tag: "Function GetContainerService | Module containerservice/latest | Package azurerm"
+title_tag: "Function GetContainerService | Module containerservice/latest | Package Azure RM"
 meta_desc: "Explore the GetContainerService function of the containerservice/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

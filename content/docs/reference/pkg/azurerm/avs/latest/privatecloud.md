@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateCloud"
-title_tag: "Resource PrivateCloud | Module avs/latest | Package azurerm"
+title_tag: "Resource PrivateCloud | Module avs/latest | Package Azure RM"
 meta_desc: "Explore the PrivateCloud resource of the avs/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A private cloud resource"
 ---
 

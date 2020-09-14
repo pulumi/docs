@@ -1,7 +1,7 @@
 
 ---
 title: "GetRoleAssignment"
-title_tag: "Function GetRoleAssignment | Module customerinsights/latest | Package azurerm"
+title_tag: "Function GetRoleAssignment | Module customerinsights/latest | Package Azure RM"
 meta_desc: "Explore the GetRoleAssignment function of the customerinsights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "SpatialAnchorsAccount"
-title_tag: "Resource SpatialAnchorsAccount | Module mixedreality/latest | Package azurerm"
+title_tag: "Resource SpatialAnchorsAccount | Module mixedreality/latest | Package Azure RM"
 meta_desc: "Explore the SpatialAnchorsAccount resource of the mixedreality/latest module, including examples, input properties, output properties, lookup functions, and supporting types. SpatialAnchorsAccount Response."
 ---
 

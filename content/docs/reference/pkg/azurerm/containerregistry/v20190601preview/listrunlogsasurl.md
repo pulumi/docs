@@ -1,7 +1,7 @@
 
 ---
 title: "ListRunLogSasUrl"
-title_tag: "Function ListRunLogSasUrl | Module containerregistry/v20190601preview | Package azurerm"
+title_tag: "Function ListRunLogSasUrl | Module containerregistry/v20190601preview | Package Azure RM"
 meta_desc: "Explore the ListRunLogSasUrl function of the containerregistry/v20190601preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

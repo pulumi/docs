@@ -1,7 +1,7 @@
 
 ---
 title: "Topic"
-title_tag: "Resource Topic | Module servicebus/latest | Package azurerm"
+title_tag: "Resource Topic | Module servicebus/latest | Package Azure RM"
 meta_desc: "Explore the Topic resource of the servicebus/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Description of topic resource."
 ---
 

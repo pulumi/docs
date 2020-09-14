@@ -1,7 +1,7 @@
 
 ---
 title: "ListOpenShiftClusterCredentials"
-title_tag: "Function ListOpenShiftClusterCredentials | Module redhatopenshift/latest | Package azurerm"
+title_tag: "Function ListOpenShiftClusterCredentials | Module redhatopenshift/latest | Package Azure RM"
 meta_desc: "Explore the ListOpenShiftClusterCredentials function of the redhatopenshift/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

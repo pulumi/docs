@@ -1,7 +1,7 @@
 
 ---
 title: "Service"
-title_tag: "Resource Service | Module search/latest | Package azurerm"
+title_tag: "Resource Service | Module search/latest | Package Azure RM"
 meta_desc: "Explore the Service resource of the search/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Describes an Azure Cognitive Search service and its current state."
 ---
 

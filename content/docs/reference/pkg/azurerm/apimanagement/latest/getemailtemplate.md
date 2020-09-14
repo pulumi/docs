@@ -1,7 +1,7 @@
 
 ---
 title: "GetEmailTemplate"
-title_tag: "Function GetEmailTemplate | Module apimanagement/latest | Package azurerm"
+title_tag: "Function GetEmailTemplate | Module apimanagement/latest | Package Azure RM"
 meta_desc: "Explore the GetEmailTemplate function of the apimanagement/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

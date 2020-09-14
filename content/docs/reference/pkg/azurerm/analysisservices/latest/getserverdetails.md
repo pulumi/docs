@@ -1,7 +1,7 @@
 
 ---
 title: "GetServerDetails"
-title_tag: "Function GetServerDetails | Module analysisservices/latest | Package azurerm"
+title_tag: "Function GetServerDetails | Module analysisservices/latest | Package Azure RM"
 meta_desc: "Explore the GetServerDetails function of the analysisservices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

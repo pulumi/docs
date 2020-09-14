@@ -1,7 +1,7 @@
 
 ---
 title: "GetSecretValue"
-title_tag: "Function GetSecretValue | Module servicefabricmesh/v20180901preview | Package azurerm"
+title_tag: "Function GetSecretValue | Module servicefabricmesh/v20180901preview | Package Azure RM"
 meta_desc: "Explore the GetSecretValue function of the servicefabricmesh/v20180901preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ContainerGroup"
-title_tag: "Resource ContainerGroup | Module containerinstance/latest | Package azurerm"
+title_tag: "Resource ContainerGroup | Module containerinstance/latest | Package Azure RM"
 meta_desc: "Explore the ContainerGroup resource of the containerinstance/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A container group."
 ---
 

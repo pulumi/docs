@@ -1,7 +1,7 @@
 
 ---
 title: "ListSignalRKeys"
-title_tag: "Function ListSignalRKeys | Module signalrservice/latest | Package azurerm"
+title_tag: "Function ListSignalRKeys | Module signalrservice/latest | Package Azure RM"
 meta_desc: "Explore the ListSignalRKeys function of the signalrservice/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

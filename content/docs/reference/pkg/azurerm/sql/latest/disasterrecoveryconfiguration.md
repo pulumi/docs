@@ -1,7 +1,7 @@
 
 ---
 title: "DisasterRecoveryConfiguration"
-title_tag: "Resource DisasterRecoveryConfiguration | Module sql/latest | Package azurerm"
+title_tag: "Resource DisasterRecoveryConfiguration | Module sql/latest | Package Azure RM"
 meta_desc: "Explore the DisasterRecoveryConfiguration resource of the sql/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a disaster recovery configuration."
 ---
 

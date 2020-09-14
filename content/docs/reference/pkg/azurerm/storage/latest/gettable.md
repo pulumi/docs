@@ -1,7 +1,7 @@
 
 ---
 title: "GetTable"
-title_tag: "Function GetTable | Module storage/latest | Package azurerm"
+title_tag: "Function GetTable | Module storage/latest | Package Azure RM"
 meta_desc: "Explore the GetTable function of the storage/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

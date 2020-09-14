@@ -1,7 +1,7 @@
 
 ---
 title: "CloudEndpoint"
-title_tag: "Resource CloudEndpoint | Module storagesync/latest | Package azurerm"
+title_tag: "Resource CloudEndpoint | Module storagesync/latest | Package Azure RM"
 meta_desc: "Explore the CloudEndpoint resource of the storagesync/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Cloud Endpoint object."
 ---
 

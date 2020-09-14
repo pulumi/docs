@@ -1,7 +1,7 @@
 
 ---
 title: "Dataset"
-title_tag: "Resource Dataset | Module datafactory/latest | Package azurerm"
+title_tag: "Resource Dataset | Module datafactory/latest | Package Azure RM"
 meta_desc: "Explore the Dataset resource of the datafactory/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Dataset resource type."
 ---
 

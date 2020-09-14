@@ -1,7 +1,7 @@
 
 ---
 title: "SyncGroup"
-title_tag: "Resource SyncGroup | Module sql/v20190601preview | Package azurerm"
+title_tag: "Resource SyncGroup | Module sql/v20190601preview | Package Azure RM"
 meta_desc: "Explore the SyncGroup resource of the sql/v20190601preview module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure SQL Database sync group."
 ---
 

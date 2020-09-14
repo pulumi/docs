@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateEndpointConnection"
-title_tag: "Resource PrivateEndpointConnection | Module storage/v20200801preview | Package azurerm"
+title_tag: "Resource PrivateEndpointConnection | Module storage/v20200801preview | Package Azure RM"
 meta_desc: "Explore the PrivateEndpointConnection resource of the storage/v20200801preview module, including examples, input properties, output properties, lookup functions, and supporting types. The Private Endpoint Connection resource."
 ---
 

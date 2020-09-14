@@ -1,7 +1,7 @@
 
 ---
 title: "OperationalizationCluster"
-title_tag: "Resource OperationalizationCluster | Module machinelearningcompute/v20170801preview | Package azurerm"
+title_tag: "Resource OperationalizationCluster | Module machinelearningcompute/v20170801preview | Package Azure RM"
 meta_desc: "Explore the OperationalizationCluster resource of the machinelearningcompute/v20170801preview module, including examples, input properties, output properties, lookup functions, and supporting types. Instance of an Azure ML Operationalization Cluster resource."
 ---
 

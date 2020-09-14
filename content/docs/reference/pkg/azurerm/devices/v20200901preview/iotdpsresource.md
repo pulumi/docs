@@ -1,7 +1,7 @@
 
 ---
 title: "IotDpsResource"
-title_tag: "Resource IotDpsResource | Module devices/v20200901preview | Package azurerm"
+title_tag: "Resource IotDpsResource | Module devices/v20200901preview | Package Azure RM"
 meta_desc: "Explore the IotDpsResource resource of the devices/v20200901preview module, including examples, input properties, output properties, lookup functions, and supporting types. The description of the provisioning service."
 ---
 

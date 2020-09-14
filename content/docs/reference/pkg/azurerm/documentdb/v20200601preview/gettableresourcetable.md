@@ -1,7 +1,7 @@
 
 ---
 title: "GetTableResourceTable"
-title_tag: "Function GetTableResourceTable | Module documentdb/v20200601preview | Package azurerm"
+title_tag: "Function GetTableResourceTable | Module documentdb/v20200601preview | Package Azure RM"
 meta_desc: "Explore the GetTableResourceTable function of the documentdb/v20200601preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "AccountFilter"
-title_tag: "Resource AccountFilter | Module media/latest | Package azurerm"
+title_tag: "Resource AccountFilter | Module media/latest | Package Azure RM"
 meta_desc: "Explore the AccountFilter resource of the media/latest module, including examples, input properties, output properties, lookup functions, and supporting types. An Account Filter."
 ---
 

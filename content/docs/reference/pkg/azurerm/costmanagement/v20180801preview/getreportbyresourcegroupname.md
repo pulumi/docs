@@ -1,7 +1,7 @@
 
 ---
 title: "GetReportByResourceGroupName"
-title_tag: "Function GetReportByResourceGroupName | Module costmanagement/v20180801preview | Package azurerm"
+title_tag: "Function GetReportByResourceGroupName | Module costmanagement/v20180801preview | Package Azure RM"
 meta_desc: "Explore the GetReportByResourceGroupName function of the costmanagement/v20180801preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

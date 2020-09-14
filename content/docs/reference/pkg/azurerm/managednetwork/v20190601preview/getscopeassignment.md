@@ -1,7 +1,7 @@
 
 ---
 title: "GetScopeAssignment"
-title_tag: "Function GetScopeAssignment | Module managednetwork/v20190601preview | Package azurerm"
+title_tag: "Function GetScopeAssignment | Module managednetwork/v20190601preview | Package Azure RM"
 meta_desc: "Explore the GetScopeAssignment function of the managednetwork/v20190601preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

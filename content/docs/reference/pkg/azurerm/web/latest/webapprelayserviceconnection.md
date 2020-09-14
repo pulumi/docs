@@ -1,7 +1,7 @@
 
 ---
 title: "WebAppRelayServiceConnection"
-title_tag: "Resource WebAppRelayServiceConnection | Module web/latest | Package azurerm"
+title_tag: "Resource WebAppRelayServiceConnection | Module web/latest | Package Azure RM"
 meta_desc: "Explore the WebAppRelayServiceConnection resource of the web/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Hybrid Connection for an App Service app."
 ---
 

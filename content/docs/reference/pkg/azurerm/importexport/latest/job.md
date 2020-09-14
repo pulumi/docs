@@ -1,7 +1,7 @@
 
 ---
 title: "Job"
-title_tag: "Resource Job | Module importexport/latest | Package azurerm"
+title_tag: "Resource Job | Module importexport/latest | Package Azure RM"
 meta_desc: "Explore the Job resource of the importexport/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Contains the job information."
 ---
 

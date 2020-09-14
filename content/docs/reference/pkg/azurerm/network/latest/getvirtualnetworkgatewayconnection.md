@@ -1,7 +1,7 @@
 
 ---
 title: "GetVirtualNetworkGatewayConnection"
-title_tag: "Function GetVirtualNetworkGatewayConnection | Module network/latest | Package azurerm"
+title_tag: "Function GetVirtualNetworkGatewayConnection | Module network/latest | Package Azure RM"
 meta_desc: "Explore the GetVirtualNetworkGatewayConnection function of the network/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

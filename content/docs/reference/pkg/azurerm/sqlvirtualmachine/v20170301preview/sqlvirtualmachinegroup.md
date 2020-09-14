@@ -1,7 +1,7 @@
 
 ---
 title: "SqlVirtualMachineGroup"
-title_tag: "Resource SqlVirtualMachineGroup | Module sqlvirtualmachine/v20170301preview | Package azurerm"
+title_tag: "Resource SqlVirtualMachineGroup | Module sqlvirtualmachine/v20170301preview | Package Azure RM"
 meta_desc: "Explore the SqlVirtualMachineGroup resource of the sqlvirtualmachine/v20170301preview module, including examples, input properties, output properties, lookup functions, and supporting types. A SQL virtual machine group."
 ---
 

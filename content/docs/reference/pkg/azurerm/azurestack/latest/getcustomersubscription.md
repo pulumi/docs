@@ -1,7 +1,7 @@
 
 ---
 title: "GetCustomerSubscription"
-title_tag: "Function GetCustomerSubscription | Module azurestack/latest | Package azurerm"
+title_tag: "Function GetCustomerSubscription | Module azurestack/latest | Package Azure RM"
 meta_desc: "Explore the GetCustomerSubscription function of the azurestack/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

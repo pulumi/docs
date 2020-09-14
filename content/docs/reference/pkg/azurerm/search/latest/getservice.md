@@ -1,7 +1,7 @@
 
 ---
 title: "GetService"
-title_tag: "Function GetService | Module search/latest | Package azurerm"
+title_tag: "Function GetService | Module search/latest | Package Azure RM"
 meta_desc: "Explore the GetService function of the search/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

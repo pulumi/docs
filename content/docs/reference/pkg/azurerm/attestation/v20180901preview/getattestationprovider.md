@@ -1,7 +1,7 @@
 
 ---
 title: "GetAttestationProvider"
-title_tag: "Function GetAttestationProvider | Module attestation/v20180901preview | Package azurerm"
+title_tag: "Function GetAttestationProvider | Module attestation/v20180901preview | Package Azure RM"
 meta_desc: "Explore the GetAttestationProvider function of the attestation/v20180901preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

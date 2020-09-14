@@ -1,7 +1,7 @@
 
 ---
 title: "SyncAgent"
-title_tag: "Resource SyncAgent | Module sql/v20150501preview | Package azurerm"
+title_tag: "Resource SyncAgent | Module sql/v20150501preview | Package Azure RM"
 meta_desc: "Explore the SyncAgent resource of the sql/v20150501preview module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure SQL Database sync agent."
 ---
 

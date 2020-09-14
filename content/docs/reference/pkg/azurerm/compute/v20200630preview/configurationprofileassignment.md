@@ -1,7 +1,7 @@
 
 ---
 title: "ConfigurationProfileAssignment"
-title_tag: "Resource ConfigurationProfileAssignment | Module compute/v20200630preview | Package azurerm"
+title_tag: "Resource ConfigurationProfileAssignment | Module compute/v20200630preview | Package Azure RM"
 meta_desc: "Explore the ConfigurationProfileAssignment resource of the compute/v20200630preview module, including examples, input properties, output properties, lookup functions, and supporting types. Configuration profile assignment is an association between a VM and automanage profile configuration."
 ---
 

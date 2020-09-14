@@ -1,7 +1,7 @@
 
 ---
 title: "GetSignalR"
-title_tag: "Function GetSignalR | Module signalrservice/v20200701preview | Package azurerm"
+title_tag: "Function GetSignalR | Module signalrservice/v20200701preview | Package Azure RM"
 meta_desc: "Explore the GetSignalR function of the signalrservice/v20200701preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

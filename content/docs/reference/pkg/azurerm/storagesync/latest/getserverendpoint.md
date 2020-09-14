@@ -1,7 +1,7 @@
 
 ---
 title: "GetServerEndpoint"
-title_tag: "Function GetServerEndpoint | Module storagesync/latest | Package azurerm"
+title_tag: "Function GetServerEndpoint | Module storagesync/latest | Package Azure RM"
 meta_desc: "Explore the GetServerEndpoint function of the storagesync/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

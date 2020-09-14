@@ -1,7 +1,7 @@
 
 ---
 title: "AlertsSuppressionRule"
-title_tag: "Resource AlertsSuppressionRule | Module security/v20190101preview | Package azurerm"
+title_tag: "Resource AlertsSuppressionRule | Module security/v20190101preview | Package Azure RM"
 meta_desc: "Explore the AlertsSuppressionRule resource of the security/v20190101preview module, including examples, input properties, output properties, lookup functions, and supporting types. Describes the suppression rule"
 ---
 

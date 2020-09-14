@@ -1,7 +1,7 @@
 
 ---
 title: "GetManagementLockAtResourceLevel"
-title_tag: "Function GetManagementLockAtResourceLevel | Module authorization/latest | Package azurerm"
+title_tag: "Function GetManagementLockAtResourceLevel | Module authorization/latest | Package Azure RM"
 meta_desc: "Explore the GetManagementLockAtResourceLevel function of the authorization/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

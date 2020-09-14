@@ -1,7 +1,7 @@
 
 ---
 title: "GetMoveCollection"
-title_tag: "Function GetMoveCollection | Module migrate/v20191001preview | Package azurerm"
+title_tag: "Function GetMoveCollection | Module migrate/v20191001preview | Package Azure RM"
 meta_desc: "Explore the GetMoveCollection function of the migrate/v20191001preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

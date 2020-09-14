@@ -1,7 +1,7 @@
 
 ---
 title: "ArtifactSource"
-title_tag: "Resource ArtifactSource | Module deploymentmanager/v20191101preview | Package azurerm"
+title_tag: "Resource ArtifactSource | Module deploymentmanager/v20191101preview | Package Azure RM"
 meta_desc: "Explore the ArtifactSource resource of the deploymentmanager/v20191101preview module, including examples, input properties, output properties, lookup functions, and supporting types. The resource that defines the source location where the artifacts are located."
 ---
 

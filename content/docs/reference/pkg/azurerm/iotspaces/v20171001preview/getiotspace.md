@@ -1,7 +1,7 @@
 
 ---
 title: "GetIoTSpace"
-title_tag: "Function GetIoTSpace | Module iotspaces/v20171001preview | Package azurerm"
+title_tag: "Function GetIoTSpace | Module iotspaces/v20171001preview | Package Azure RM"
 meta_desc: "Explore the GetIoTSpace function of the iotspaces/v20171001preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

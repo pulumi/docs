@@ -1,7 +1,7 @@
 
 ---
 title: "AssetFilter"
-title_tag: "Resource AssetFilter | Module media/latest | Package azurerm"
+title_tag: "Resource AssetFilter | Module media/latest | Package Azure RM"
 meta_desc: "Explore the AssetFilter resource of the media/latest module, including examples, input properties, output properties, lookup functions, and supporting types. An Asset Filter."
 ---
 

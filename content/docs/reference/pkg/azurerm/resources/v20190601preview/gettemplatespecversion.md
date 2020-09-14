@@ -1,7 +1,7 @@
 
 ---
 title: "GetTemplateSpecVersion"
-title_tag: "Function GetTemplateSpecVersion | Module resources/v20190601preview | Package azurerm"
+title_tag: "Function GetTemplateSpecVersion | Module resources/v20190601preview | Package Azure RM"
 meta_desc: "Explore the GetTemplateSpecVersion function of the resources/v20190601preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetIscsiDisk"
-title_tag: "Function GetIscsiDisk | Module storsimple/latest | Package azurerm"
+title_tag: "Function GetIscsiDisk | Module storsimple/latest | Package Azure RM"
 meta_desc: "Explore the GetIscsiDisk function of the storsimple/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

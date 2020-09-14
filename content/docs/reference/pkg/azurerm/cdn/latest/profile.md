@@ -1,7 +1,7 @@
 
 ---
 title: "Profile"
-title_tag: "Resource Profile | Module cdn/latest | Package azurerm"
+title_tag: "Resource Profile | Module cdn/latest | Package Azure RM"
 meta_desc: "Explore the Profile resource of the cdn/latest module, including examples, input properties, output properties, lookup functions, and supporting types. CDN profile is a logical grouping of endpoints that share the same settings, such as CDN provider and pricing tier."
 ---
 

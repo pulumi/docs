@@ -1,7 +1,7 @@
 
 ---
 title: "GetHcxEnterpriseSite"
-title_tag: "Function GetHcxEnterpriseSite | Module avs/latest | Package azurerm"
+title_tag: "Function GetHcxEnterpriseSite | Module avs/latest | Package Azure RM"
 meta_desc: "Explore the GetHcxEnterpriseSite function of the avs/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

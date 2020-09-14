@@ -1,7 +1,7 @@
 
 ---
 title: "GetCustomDomain"
-title_tag: "Function GetCustomDomain | Module appplatform/latest | Package azurerm"
+title_tag: "Function GetCustomDomain | Module appplatform/latest | Package Azure RM"
 meta_desc: "Explore the GetCustomDomain function of the appplatform/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

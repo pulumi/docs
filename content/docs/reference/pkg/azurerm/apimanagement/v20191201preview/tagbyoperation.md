@@ -1,7 +1,7 @@
 
 ---
 title: "TagByOperation"
-title_tag: "Resource TagByOperation | Module apimanagement/v20191201preview | Package azurerm"
+title_tag: "Resource TagByOperation | Module apimanagement/v20191201preview | Package Azure RM"
 meta_desc: "Explore the TagByOperation resource of the apimanagement/v20191201preview module, including examples, input properties, output properties, lookup functions, and supporting types. Tag Contract details."
 ---
 

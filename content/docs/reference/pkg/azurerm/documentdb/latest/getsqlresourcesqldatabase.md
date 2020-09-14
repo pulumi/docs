@@ -1,7 +1,7 @@
 
 ---
 title: "GetSqlResourceSqlDatabase"
-title_tag: "Function GetSqlResourceSqlDatabase | Module documentdb/latest | Package azurerm"
+title_tag: "Function GetSqlResourceSqlDatabase | Module documentdb/latest | Package Azure RM"
 meta_desc: "Explore the GetSqlResourceSqlDatabase function of the documentdb/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

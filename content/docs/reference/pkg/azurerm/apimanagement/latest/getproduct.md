@@ -1,7 +1,7 @@
 
 ---
 title: "GetProduct"
-title_tag: "Function GetProduct | Module apimanagement/latest | Package azurerm"
+title_tag: "Function GetProduct | Module apimanagement/latest | Package Azure RM"
 meta_desc: "Explore the GetProduct function of the apimanagement/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

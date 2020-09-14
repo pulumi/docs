@@ -1,7 +1,7 @@
 
 ---
 title: "GetMaintenanceConfiguration"
-title_tag: "Function GetMaintenanceConfiguration | Module maintenance/latest | Package azurerm"
+title_tag: "Function GetMaintenanceConfiguration | Module maintenance/latest | Package Azure RM"
 meta_desc: "Explore the GetMaintenanceConfiguration function of the maintenance/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ReportConfig"
-title_tag: "Resource ReportConfig | Module costmanagement/latest | Package azurerm"
+title_tag: "Resource ReportConfig | Module costmanagement/latest | Package Azure RM"
 meta_desc: "Explore the ReportConfig resource of the costmanagement/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A report config resource."
 ---
 

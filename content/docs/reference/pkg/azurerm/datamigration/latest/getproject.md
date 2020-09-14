@@ -1,7 +1,7 @@
 
 ---
 title: "GetProject"
-title_tag: "Function GetProject | Module datamigration/latest | Package azurerm"
+title_tag: "Function GetProject | Module datamigration/latest | Package Azure RM"
 meta_desc: "Explore the GetProject function of the datamigration/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

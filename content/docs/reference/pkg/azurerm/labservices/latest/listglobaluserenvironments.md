@@ -1,7 +1,7 @@
 
 ---
 title: "ListGlobalUserEnvironments"
-title_tag: "Function ListGlobalUserEnvironments | Module labservices/latest | Package azurerm"
+title_tag: "Function ListGlobalUserEnvironments | Module labservices/latest | Package Azure RM"
 meta_desc: "Explore the ListGlobalUserEnvironments function of the labservices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

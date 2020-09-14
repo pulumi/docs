@@ -1,7 +1,7 @@
 
 ---
 title: "ServiceTask"
-title_tag: "Resource ServiceTask | Module datamigration/v20180715preview | Package azurerm"
+title_tag: "Resource ServiceTask | Module datamigration/v20180715preview | Package Azure RM"
 meta_desc: "Explore the ServiceTask resource of the datamigration/v20180715preview module, including examples, input properties, output properties, lookup functions, and supporting types. A task resource"
 ---
 

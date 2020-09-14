@@ -1,7 +1,7 @@
 
 ---
 title: "ComponentLinkedStorageAccount"
-title_tag: "Resource ComponentLinkedStorageAccount | Module insights/v20200301preview | Package azurerm"
+title_tag: "Resource ComponentLinkedStorageAccount | Module insights/v20200301preview | Package Azure RM"
 meta_desc: "Explore the ComponentLinkedStorageAccount resource of the insights/v20200301preview module, including examples, input properties, output properties, lookup functions, and supporting types. An Application Insights component linked storage accounts"
 ---
 

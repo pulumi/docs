@@ -1,7 +1,7 @@
 
 ---
 title: "GetManagedInstanceAzureADOnlyAuthentication"
-title_tag: "Function GetManagedInstanceAzureADOnlyAuthentication | Module sql/v20200202preview | Package azurerm"
+title_tag: "Function GetManagedInstanceAzureADOnlyAuthentication | Module sql/v20200202preview | Package Azure RM"
 meta_desc: "Explore the GetManagedInstanceAzureADOnlyAuthentication function of the sql/v20200202preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "WorkspaceCollection"
-title_tag: "Resource WorkspaceCollection | Module powerbi/latest | Package azurerm"
+title_tag: "Resource WorkspaceCollection | Module powerbi/latest | Package Azure RM"
 meta_desc: "Explore the WorkspaceCollection resource of the powerbi/latest module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

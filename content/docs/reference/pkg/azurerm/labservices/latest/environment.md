@@ -1,7 +1,7 @@
 
 ---
 title: "Environment"
-title_tag: "Resource Environment | Module labservices/latest | Package azurerm"
+title_tag: "Resource Environment | Module labservices/latest | Package Azure RM"
 meta_desc: "Explore the Environment resource of the labservices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Represents an environment instance"
 ---
 

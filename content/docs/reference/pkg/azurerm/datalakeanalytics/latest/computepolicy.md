@@ -1,7 +1,7 @@
 
 ---
 title: "ComputePolicy"
-title_tag: "Resource ComputePolicy | Module datalakeanalytics/latest | Package azurerm"
+title_tag: "Resource ComputePolicy | Module datalakeanalytics/latest | Package Azure RM"
 meta_desc: "Explore the ComputePolicy resource of the datalakeanalytics/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Data Lake Analytics compute policy information."
 ---
 

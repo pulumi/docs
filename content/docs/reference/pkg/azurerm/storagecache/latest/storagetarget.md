@@ -1,7 +1,7 @@
 
 ---
 title: "StorageTarget"
-title_tag: "Resource StorageTarget | Module storagecache/latest | Package azurerm"
+title_tag: "Resource StorageTarget | Module storagecache/latest | Package Azure RM"
 meta_desc: "Explore the StorageTarget resource of the storagecache/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Type of the Storage Target."
 ---
 

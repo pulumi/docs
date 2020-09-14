@@ -1,7 +1,7 @@
 
 ---
 title: "BandwidthSetting"
-title_tag: "Resource BandwidthSetting | Module storsimple/latest | Package azurerm"
+title_tag: "Resource BandwidthSetting | Module storsimple/latest | Package Azure RM"
 meta_desc: "Explore the BandwidthSetting resource of the storsimple/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The bandwidth setting."
 ---
 

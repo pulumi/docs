@@ -1,7 +1,7 @@
 
 ---
 title: "ProtectionPolicy"
-title_tag: "Resource ProtectionPolicy | Module recoveryservices/latest | Package azurerm"
+title_tag: "Resource ProtectionPolicy | Module recoveryservices/latest | Package Azure RM"
 meta_desc: "Explore the ProtectionPolicy resource of the recoveryservices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The base class for backup policy. Workload-specific backup policies are derived from this class."
 ---
 

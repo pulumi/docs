@@ -1,7 +1,7 @@
 
 ---
 title: "GetCloudEndpoint"
-title_tag: "Function GetCloudEndpoint | Module storagesync/latest | Package azurerm"
+title_tag: "Function GetCloudEndpoint | Module storagesync/latest | Package Azure RM"
 meta_desc: "Explore the GetCloudEndpoint function of the storagesync/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

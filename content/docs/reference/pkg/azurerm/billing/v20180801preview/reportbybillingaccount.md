@@ -1,7 +1,7 @@
 
 ---
 title: "ReportByBillingAccount"
-title_tag: "Resource ReportByBillingAccount | Module billing/v20180801preview | Package azurerm"
+title_tag: "Resource ReportByBillingAccount | Module billing/v20180801preview | Package Azure RM"
 meta_desc: "Explore the ReportByBillingAccount resource of the billing/v20180801preview module, including examples, input properties, output properties, lookup functions, and supporting types. A report resource."
 ---
 

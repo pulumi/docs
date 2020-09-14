@@ -1,7 +1,7 @@
 
 ---
 title: "GetProviderInstance"
-title_tag: "Function GetProviderInstance | Module hanaonazure/v20200207preview | Package azurerm"
+title_tag: "Function GetProviderInstance | Module hanaonazure/v20200207preview | Package Azure RM"
 meta_desc: "Explore the GetProviderInstance function of the hanaonazure/v20200207preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

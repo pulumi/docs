@@ -1,7 +1,7 @@
 
 ---
 title: "GetIpGroup"
-title_tag: "Function GetIpGroup | Module network/latest | Package azurerm"
+title_tag: "Function GetIpGroup | Module network/latest | Package Azure RM"
 meta_desc: "Explore the GetIpGroup function of the network/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetVirtualHubRouteTableV2"
-title_tag: "Function GetVirtualHubRouteTableV2 | Module network/latest | Package azurerm"
+title_tag: "Function GetVirtualHubRouteTableV2 | Module network/latest | Package Azure RM"
 meta_desc: "Explore the GetVirtualHubRouteTableV2 function of the network/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

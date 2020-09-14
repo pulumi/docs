@@ -1,7 +1,7 @@
 
 ---
 title: "GetBuildStep"
-title_tag: "Function GetBuildStep | Module containerregistry/v20180201preview | Package azurerm"
+title_tag: "Function GetBuildStep | Module containerregistry/v20180201preview | Package Azure RM"
 meta_desc: "Explore the GetBuildStep function of the containerregistry/v20180201preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

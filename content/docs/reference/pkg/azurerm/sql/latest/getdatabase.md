@@ -1,7 +1,7 @@
 
 ---
 title: "GetDatabase"
-title_tag: "Function GetDatabase | Module sql/latest | Package azurerm"
+title_tag: "Function GetDatabase | Module sql/latest | Package Azure RM"
 meta_desc: "Explore the GetDatabase function of the sql/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "IotHubResourceEventHubConsumerGroup"
-title_tag: "Resource IotHubResourceEventHubConsumerGroup | Module devices/latest | Package azurerm"
+title_tag: "Resource IotHubResourceEventHubConsumerGroup | Module devices/latest | Package Azure RM"
 meta_desc: "Explore the IotHubResourceEventHubConsumerGroup resource of the devices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The properties of the EventHubConsumerGroupInfo object."
 ---
 

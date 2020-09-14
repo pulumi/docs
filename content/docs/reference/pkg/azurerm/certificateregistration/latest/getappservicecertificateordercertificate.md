@@ -1,7 +1,7 @@
 
 ---
 title: "GetAppServiceCertificateOrderCertificate"
-title_tag: "Function GetAppServiceCertificateOrderCertificate | Module certificateregistration/latest | Package azurerm"
+title_tag: "Function GetAppServiceCertificateOrderCertificate | Module certificateregistration/latest | Package Azure RM"
 meta_desc: "Explore the GetAppServiceCertificateOrderCertificate function of the certificateregistration/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

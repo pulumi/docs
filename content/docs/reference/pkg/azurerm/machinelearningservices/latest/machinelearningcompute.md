@@ -1,7 +1,7 @@
 
 ---
 title: "MachineLearningCompute"
-title_tag: "Resource MachineLearningCompute | Module machinelearningservices/latest | Package azurerm"
+title_tag: "Resource MachineLearningCompute | Module machinelearningservices/latest | Package Azure RM"
 meta_desc: "Explore the MachineLearningCompute resource of the machinelearningservices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Machine Learning compute object wrapped into ARM resource envelope."
 ---
 

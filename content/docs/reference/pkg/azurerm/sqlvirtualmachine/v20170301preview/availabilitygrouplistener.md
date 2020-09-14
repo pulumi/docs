@@ -1,7 +1,7 @@
 
 ---
 title: "AvailabilityGroupListener"
-title_tag: "Resource AvailabilityGroupListener | Module sqlvirtualmachine/v20170301preview | Package azurerm"
+title_tag: "Resource AvailabilityGroupListener | Module sqlvirtualmachine/v20170301preview | Package Azure RM"
 meta_desc: "Explore the AvailabilityGroupListener resource of the sqlvirtualmachine/v20170301preview module, including examples, input properties, output properties, lookup functions, and supporting types. A SQL Server availability group listener."
 ---
 

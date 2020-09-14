@@ -1,7 +1,7 @@
 
 ---
 title: "Table"
-title_tag: "Resource Table | Module storage/latest | Package azurerm"
+title_tag: "Resource Table | Module storage/latest | Package Azure RM"
 meta_desc: "Explore the Table resource of the storage/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Properties of the table, including Id, resource name, resource type."
 ---
 

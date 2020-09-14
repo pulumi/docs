@@ -1,7 +1,7 @@
 
 ---
 title: "ServiceEndpointPolicyDefinition"
-title_tag: "Resource ServiceEndpointPolicyDefinition | Module network/latest | Package azurerm"
+title_tag: "Resource ServiceEndpointPolicyDefinition | Module network/latest | Package Azure RM"
 meta_desc: "Explore the ServiceEndpointPolicyDefinition resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Service Endpoint policy definitions."
 ---
 

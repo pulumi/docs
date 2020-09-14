@@ -1,7 +1,7 @@
 
 ---
 title: "IoMAMPolicyByName"
-title_tag: "Resource IoMAMPolicyByName | Module intune/v20150114privatepreview | Package azurerm"
+title_tag: "Resource IoMAMPolicyByName | Module intune/v20150114privatepreview | Package Azure RM"
 meta_desc: "Explore the IoMAMPolicyByName resource of the intune/v20150114privatepreview module, including examples, input properties, output properties, lookup functions, and supporting types. iOS Policy entity for Intune MAM."
 ---
 

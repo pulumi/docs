@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateEndpointConnection"
-title_tag: "Resource PrivateEndpointConnection | Module automation/v20200113preview | Package azurerm"
+title_tag: "Resource PrivateEndpointConnection | Module automation/v20200113preview | Package Azure RM"
 meta_desc: "Explore the PrivateEndpointConnection resource of the automation/v20200113preview module, including examples, input properties, output properties, lookup functions, and supporting types. A private endpoint connection"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Favorite"
-title_tag: "Resource Favorite | Module insights/latest | Package azurerm"
+title_tag: "Resource Favorite | Module insights/latest | Package Azure RM"
 meta_desc: "Explore the Favorite resource of the insights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Properties that define a favorite that is associated to an Application Insights component."
 ---
 

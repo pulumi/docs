@@ -1,7 +1,7 @@
 
 ---
 title: "WebAppDeployment"
-title_tag: "Resource WebAppDeployment | Module web/latest | Package azurerm"
+title_tag: "Resource WebAppDeployment | Module web/latest | Package Azure RM"
 meta_desc: "Explore the WebAppDeployment resource of the web/latest module, including examples, input properties, output properties, lookup functions, and supporting types. User credentials used for publishing activity."
 ---
 

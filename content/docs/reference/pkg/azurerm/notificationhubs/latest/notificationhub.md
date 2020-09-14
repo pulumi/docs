@@ -1,7 +1,7 @@
 
 ---
 title: "NotificationHub"
-title_tag: "Resource NotificationHub | Module notificationhubs/latest | Package azurerm"
+title_tag: "Resource NotificationHub | Module notificationhubs/latest | Package Azure RM"
 meta_desc: "Explore the NotificationHub resource of the notificationhubs/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Description of a NotificationHub Resource."
 ---
 

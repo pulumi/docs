@@ -1,7 +1,7 @@
 
 ---
 title: "GetAssociation"
-title_tag: "Function GetAssociation | Module customproviders/v20180901preview | Package azurerm"
+title_tag: "Function GetAssociation | Module customproviders/v20180901preview | Package Azure RM"
 meta_desc: "Explore the GetAssociation function of the customproviders/v20180901preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

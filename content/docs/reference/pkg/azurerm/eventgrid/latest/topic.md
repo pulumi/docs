@@ -1,7 +1,7 @@
 
 ---
 title: "Topic"
-title_tag: "Resource Topic | Module eventgrid/latest | Package azurerm"
+title_tag: "Resource Topic | Module eventgrid/latest | Package Azure RM"
 meta_desc: "Explore the Topic resource of the eventgrid/latest module, including examples, input properties, output properties, lookup functions, and supporting types. EventGrid Topic"
 ---
 

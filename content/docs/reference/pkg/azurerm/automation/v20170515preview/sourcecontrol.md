@@ -1,7 +1,7 @@
 
 ---
 title: "SourceControl"
-title_tag: "Resource SourceControl | Module automation/v20170515preview | Package azurerm"
+title_tag: "Resource SourceControl | Module automation/v20170515preview | Package Azure RM"
 meta_desc: "Explore the SourceControl resource of the automation/v20170515preview module, including examples, input properties, output properties, lookup functions, and supporting types. Definition of the source control."
 ---
 

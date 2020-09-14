@@ -1,7 +1,7 @@
 
 ---
 title: "GetManagedCluster"
-title_tag: "Function GetManagedCluster | Module servicefabric/v20200101preview | Package azurerm"
+title_tag: "Function GetManagedCluster | Module servicefabric/v20200101preview | Package Azure RM"
 meta_desc: "Explore the GetManagedCluster function of the servicefabric/v20200101preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

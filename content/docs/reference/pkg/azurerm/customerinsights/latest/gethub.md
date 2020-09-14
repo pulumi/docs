@@ -1,7 +1,7 @@
 
 ---
 title: "GetHub"
-title_tag: "Function GetHub | Module customerinsights/latest | Package azurerm"
+title_tag: "Function GetHub | Module customerinsights/latest | Package Azure RM"
 meta_desc: "Explore the GetHub function of the customerinsights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

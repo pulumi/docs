@@ -1,7 +1,7 @@
 
 ---
 title: "ListEASubscriptionListMigrationDatePost"
-title_tag: "Function ListEASubscriptionListMigrationDatePost | Module insights/latest | Package azurerm"
+title_tag: "Function ListEASubscriptionListMigrationDatePost | Module insights/latest | Package Azure RM"
 meta_desc: "Explore the ListEASubscriptionListMigrationDatePost function of the insights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

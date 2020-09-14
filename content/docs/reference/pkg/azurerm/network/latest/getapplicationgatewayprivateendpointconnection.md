@@ -1,7 +1,7 @@
 
 ---
 title: "GetApplicationGatewayPrivateEndpointConnection"
-title_tag: "Function GetApplicationGatewayPrivateEndpointConnection | Module network/latest | Package azurerm"
+title_tag: "Function GetApplicationGatewayPrivateEndpointConnection | Module network/latest | Package Azure RM"
 meta_desc: "Explore the GetApplicationGatewayPrivateEndpointConnection function of the network/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

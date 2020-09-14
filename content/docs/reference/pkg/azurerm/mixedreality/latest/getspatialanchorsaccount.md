@@ -1,7 +1,7 @@
 
 ---
 title: "GetSpatialAnchorsAccount"
-title_tag: "Function GetSpatialAnchorsAccount | Module mixedreality/latest | Package azurerm"
+title_tag: "Function GetSpatialAnchorsAccount | Module mixedreality/latest | Package Azure RM"
 meta_desc: "Explore the GetSpatialAnchorsAccount function of the mixedreality/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

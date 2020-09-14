@@ -1,7 +1,7 @@
 
 ---
 title: "ManagementLockAtResourceGroupLevel"
-title_tag: "Resource ManagementLockAtResourceGroupLevel | Module authorization/latest | Package azurerm"
+title_tag: "Resource ManagementLockAtResourceGroupLevel | Module authorization/latest | Package Azure RM"
 meta_desc: "Explore the ManagementLockAtResourceGroupLevel resource of the authorization/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The lock information."
 ---
 

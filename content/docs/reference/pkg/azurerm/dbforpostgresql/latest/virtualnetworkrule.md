@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualNetworkRule"
-title_tag: "Resource VirtualNetworkRule | Module dbforpostgresql/latest | Package azurerm"
+title_tag: "Resource VirtualNetworkRule | Module dbforpostgresql/latest | Package Azure RM"
 meta_desc: "Explore the VirtualNetworkRule resource of the dbforpostgresql/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A virtual network rule."
 ---
 

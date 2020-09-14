@@ -1,7 +1,7 @@
 
 ---
 title: "ReplicationFabric"
-title_tag: "Resource ReplicationFabric | Module recoveryservices/latest | Package azurerm"
+title_tag: "Resource ReplicationFabric | Module recoveryservices/latest | Package Azure RM"
 meta_desc: "Explore the ReplicationFabric resource of the recoveryservices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Fabric definition."
 ---
 

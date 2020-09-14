@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module kusto/latest | Package azurerm"
+title_tag: "Resource Cluster | Module kusto/latest | Package Azure RM"
 meta_desc: "Explore the Cluster resource of the kusto/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Class representing a Kusto cluster."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Application"
-title_tag: "Resource Application | Module desktopvirtualization/v20191210preview | Package azurerm"
+title_tag: "Resource Application | Module desktopvirtualization/v20191210preview | Package Azure RM"
 meta_desc: "Explore the Application resource of the desktopvirtualization/v20191210preview module, including examples, input properties, output properties, lookup functions, and supporting types. Schema for Application properties."
 ---
 

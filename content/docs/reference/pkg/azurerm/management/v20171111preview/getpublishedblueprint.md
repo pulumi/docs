@@ -1,7 +1,7 @@
 
 ---
 title: "GetPublishedBlueprint"
-title_tag: "Function GetPublishedBlueprint | Module management/v20171111preview | Package azurerm"
+title_tag: "Function GetPublishedBlueprint | Module management/v20171111preview | Package Azure RM"
 meta_desc: "Explore the GetPublishedBlueprint function of the management/v20171111preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

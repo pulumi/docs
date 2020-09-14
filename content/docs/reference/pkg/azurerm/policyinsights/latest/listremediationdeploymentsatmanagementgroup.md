@@ -1,7 +1,7 @@
 
 ---
 title: "ListRemediationDeploymentsAtManagementGroup"
-title_tag: "Function ListRemediationDeploymentsAtManagementGroup | Module policyinsights/latest | Package azurerm"
+title_tag: "Function ListRemediationDeploymentsAtManagementGroup | Module policyinsights/latest | Package Azure RM"
 meta_desc: "Explore the ListRemediationDeploymentsAtManagementGroup function of the policyinsights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

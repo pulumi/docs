@@ -1,7 +1,7 @@
 
 ---
 title: "GetManagementConfiguration"
-title_tag: "Function GetManagementConfiguration | Module operationsmanagement/v20151101preview | Package azurerm"
+title_tag: "Function GetManagementConfiguration | Module operationsmanagement/v20151101preview | Package Azure RM"
 meta_desc: "Explore the GetManagementConfiguration function of the operationsmanagement/v20151101preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

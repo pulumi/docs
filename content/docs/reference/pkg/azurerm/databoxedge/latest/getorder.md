@@ -1,7 +1,7 @@
 
 ---
 title: "GetOrder"
-title_tag: "Function GetOrder | Module databoxedge/latest | Package azurerm"
+title_tag: "Function GetOrder | Module databoxedge/latest | Package Azure RM"
 meta_desc: "Explore the GetOrder function of the databoxedge/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

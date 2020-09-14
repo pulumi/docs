@@ -1,7 +1,7 @@
 
 ---
 title: "HybridConnection"
-title_tag: "Resource HybridConnection | Module relay/latest | Package azurerm"
+title_tag: "Resource HybridConnection | Module relay/latest | Package Azure RM"
 meta_desc: "Explore the HybridConnection resource of the relay/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Description of hybrid connection resource."
 ---
 

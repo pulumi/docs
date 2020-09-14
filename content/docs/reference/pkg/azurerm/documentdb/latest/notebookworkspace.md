@@ -1,7 +1,7 @@
 
 ---
 title: "NotebookWorkspace"
-title_tag: "Resource NotebookWorkspace | Module documentdb/latest | Package azurerm"
+title_tag: "Resource NotebookWorkspace | Module documentdb/latest | Package Azure RM"
 meta_desc: "Explore the NotebookWorkspace resource of the documentdb/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A notebook workspace resource"
 ---
 

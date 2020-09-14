@@ -1,7 +1,7 @@
 
 ---
 title: "ListWebhookEvents"
-title_tag: "Function ListWebhookEvents | Module containerregistry/latest | Package azurerm"
+title_tag: "Function ListWebhookEvents | Module containerregistry/latest | Package Azure RM"
 meta_desc: "Explore the ListWebhookEvents function of the containerregistry/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

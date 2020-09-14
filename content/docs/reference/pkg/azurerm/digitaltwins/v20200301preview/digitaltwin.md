@@ -1,7 +1,7 @@
 
 ---
 title: "DigitalTwin"
-title_tag: "Resource DigitalTwin | Module digitaltwins/v20200301preview | Package azurerm"
+title_tag: "Resource DigitalTwin | Module digitaltwins/v20200301preview | Package Azure RM"
 meta_desc: "Explore the DigitalTwin resource of the digitaltwins/v20200301preview module, including examples, input properties, output properties, lookup functions, and supporting types. The description of the DigitalTwins service."
 ---
 

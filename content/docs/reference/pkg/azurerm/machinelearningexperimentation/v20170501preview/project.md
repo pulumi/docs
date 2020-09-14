@@ -1,7 +1,7 @@
 
 ---
 title: "Project"
-title_tag: "Resource Project | Module machinelearningexperimentation/v20170501preview | Package azurerm"
+title_tag: "Resource Project | Module machinelearningexperimentation/v20170501preview | Package Azure RM"
 meta_desc: "Explore the Project resource of the machinelearningexperimentation/v20170501preview module, including examples, input properties, output properties, lookup functions, and supporting types. An object that represents a machine learning project."
 ---
 

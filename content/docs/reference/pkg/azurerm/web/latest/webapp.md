@@ -1,7 +1,7 @@
 
 ---
 title: "WebApp"
-title_tag: "Resource WebApp | Module web/latest | Package azurerm"
+title_tag: "Resource WebApp | Module web/latest | Package Azure RM"
 meta_desc: "Explore the WebApp resource of the web/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A web app, a mobile app backend, or an API app."
 ---
 

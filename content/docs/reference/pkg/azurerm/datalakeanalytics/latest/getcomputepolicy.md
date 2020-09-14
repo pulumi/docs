@@ -1,7 +1,7 @@
 
 ---
 title: "GetComputePolicy"
-title_tag: "Function GetComputePolicy | Module datalakeanalytics/latest | Package azurerm"
+title_tag: "Function GetComputePolicy | Module datalakeanalytics/latest | Package Azure RM"
 meta_desc: "Explore the GetComputePolicy function of the datalakeanalytics/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

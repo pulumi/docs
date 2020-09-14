@@ -1,7 +1,7 @@
 
 ---
 title: "DataStore"
-title_tag: "Resource DataStore | Module hybriddata/latest | Package azurerm"
+title_tag: "Resource DataStore | Module hybriddata/latest | Package Azure RM"
 meta_desc: "Explore the DataStore resource of the hybriddata/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Data store."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GalleryApplication"
-title_tag: "Resource GalleryApplication | Module compute/latest | Package azurerm"
+title_tag: "Resource GalleryApplication | Module compute/latest | Package Azure RM"
 meta_desc: "Explore the GalleryApplication resource of the compute/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Specifies information about the gallery Application Definition that you want to create or update."
 ---
 

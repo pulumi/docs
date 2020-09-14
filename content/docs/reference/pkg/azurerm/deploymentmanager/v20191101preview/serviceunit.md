@@ -1,7 +1,7 @@
 
 ---
 title: "ServiceUnit"
-title_tag: "Resource ServiceUnit | Module deploymentmanager/v20191101preview | Package azurerm"
+title_tag: "Resource ServiceUnit | Module deploymentmanager/v20191101preview | Package Azure RM"
 meta_desc: "Explore the ServiceUnit resource of the deploymentmanager/v20191101preview module, including examples, input properties, output properties, lookup functions, and supporting types. Represents the response of a service unit resource."
 ---
 

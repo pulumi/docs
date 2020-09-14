@@ -1,7 +1,7 @@
 
 ---
 title: "ListAccountKeys"
-title_tag: "Function ListAccountKeys | Module cognitiveservices/latest | Package azurerm"
+title_tag: "Function ListAccountKeys | Module cognitiveservices/latest | Package Azure RM"
 meta_desc: "Explore the ListAccountKeys function of the cognitiveservices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

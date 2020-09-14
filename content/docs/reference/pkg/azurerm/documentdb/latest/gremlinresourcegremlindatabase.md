@@ -1,7 +1,7 @@
 
 ---
 title: "GremlinResourceGremlinDatabase"
-title_tag: "Resource GremlinResourceGremlinDatabase | Module documentdb/latest | Package azurerm"
+title_tag: "Resource GremlinResourceGremlinDatabase | Module documentdb/latest | Package Azure RM"
 meta_desc: "Explore the GremlinResourceGremlinDatabase resource of the documentdb/latest module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB Gremlin database."
 ---
 

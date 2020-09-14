@@ -1,7 +1,7 @@
 
 ---
 title: "GetVirtualNetworkRule"
-title_tag: "Function GetVirtualNetworkRule | Module datalakestore/latest | Package azurerm"
+title_tag: "Function GetVirtualNetworkRule | Module datalakestore/latest | Package Azure RM"
 meta_desc: "Explore the GetVirtualNetworkRule function of the datalakestore/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

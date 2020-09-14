@@ -1,7 +1,7 @@
 
 ---
 title: "GetRegisteredServer"
-title_tag: "Function GetRegisteredServer | Module storagesync/latest | Package azurerm"
+title_tag: "Function GetRegisteredServer | Module storagesync/latest | Package Azure RM"
 meta_desc: "Explore the GetRegisteredServer function of the storagesync/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

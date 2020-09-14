@@ -1,7 +1,7 @@
 
 ---
 title: "GetWorkbook"
-title_tag: "Function GetWorkbook | Module insights/v20180617preview | Package azurerm"
+title_tag: "Function GetWorkbook | Module insights/v20180617preview | Package Azure RM"
 meta_desc: "Explore the GetWorkbook function of the insights/v20180617preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ExpressRouteGateway"
-title_tag: "Resource ExpressRouteGateway | Module network/latest | Package azurerm"
+title_tag: "Resource ExpressRouteGateway | Module network/latest | Package Azure RM"
 meta_desc: "Explore the ExpressRouteGateway resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. ExpressRoute gateway resource."
 ---
 

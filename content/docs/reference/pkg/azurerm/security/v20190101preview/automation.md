@@ -1,7 +1,7 @@
 
 ---
 title: "Automation"
-title_tag: "Resource Automation | Module security/v20190101preview | Package azurerm"
+title_tag: "Resource Automation | Module security/v20190101preview | Package Azure RM"
 meta_desc: "Explore the Automation resource of the security/v20190101preview module, including examples, input properties, output properties, lookup functions, and supporting types. The security automation resource."
 ---
 

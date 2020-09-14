@@ -1,7 +1,7 @@
 
 ---
 title: "Dashboard"
-title_tag: "Resource Dashboard | Module portal/v20200901preview | Package azurerm"
+title_tag: "Resource Dashboard | Module portal/v20200901preview | Package Azure RM"
 meta_desc: "Explore the Dashboard resource of the portal/v20200901preview module, including examples, input properties, output properties, lookup functions, and supporting types. The shared dashboard resource definition."
 ---
 

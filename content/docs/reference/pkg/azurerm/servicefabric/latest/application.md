@@ -1,7 +1,7 @@
 
 ---
 title: "Application"
-title_tag: "Resource Application | Module servicefabric/latest | Package azurerm"
+title_tag: "Resource Application | Module servicefabric/latest | Package Azure RM"
 meta_desc: "Explore the Application resource of the servicefabric/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The application resource."
 ---
 

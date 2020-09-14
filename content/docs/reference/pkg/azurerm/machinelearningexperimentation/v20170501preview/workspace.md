@@ -1,7 +1,7 @@
 
 ---
 title: "Workspace"
-title_tag: "Resource Workspace | Module machinelearningexperimentation/v20170501preview | Package azurerm"
+title_tag: "Resource Workspace | Module machinelearningexperimentation/v20170501preview | Package Azure RM"
 meta_desc: "Explore the Workspace resource of the machinelearningexperimentation/v20170501preview module, including examples, input properties, output properties, lookup functions, and supporting types. An object that represents a machine learning team account workspace."
 ---
 

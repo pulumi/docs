@@ -1,7 +1,7 @@
 
 ---
 title: "Rule"
-title_tag: "Resource Rule | Module servicebus/latest | Package azurerm"
+title_tag: "Resource Rule | Module servicebus/latest | Package Azure RM"
 meta_desc: "Explore the Rule resource of the servicebus/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Description of Rule Resource."
 ---
 

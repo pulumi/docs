@@ -1,7 +1,7 @@
 
 ---
 title: "MediaGraph"
-title_tag: "Resource MediaGraph | Module media/v20200201preview | Package azurerm"
+title_tag: "Resource MediaGraph | Module media/v20200201preview | Package Azure RM"
 meta_desc: "Explore the MediaGraph resource of the media/v20200201preview module, including examples, input properties, output properties, lookup functions, and supporting types. The Media Graph."
 ---
 

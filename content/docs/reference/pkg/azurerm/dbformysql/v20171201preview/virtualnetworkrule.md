@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualNetworkRule"
-title_tag: "Resource VirtualNetworkRule | Module dbformysql/v20171201preview | Package azurerm"
+title_tag: "Resource VirtualNetworkRule | Module dbformysql/v20171201preview | Package Azure RM"
 meta_desc: "Explore the VirtualNetworkRule resource of the dbformysql/v20171201preview module, including examples, input properties, output properties, lookup functions, and supporting types. A virtual network rule."
 ---
 

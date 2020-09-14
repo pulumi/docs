@@ -1,7 +1,7 @@
 
 ---
 title: "VNetPeering"
-title_tag: "Resource VNetPeering | Module databricks/latest | Package azurerm"
+title_tag: "Resource VNetPeering | Module databricks/latest | Package Azure RM"
 meta_desc: "Explore the VNetPeering resource of the databricks/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Peerings in a VirtualNetwork resource"
 ---
 

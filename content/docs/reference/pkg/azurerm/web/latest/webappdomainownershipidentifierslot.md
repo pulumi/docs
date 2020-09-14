@@ -1,7 +1,7 @@
 
 ---
 title: "WebAppDomainOwnershipIdentifierSlot"
-title_tag: "Resource WebAppDomainOwnershipIdentifierSlot | Module web/latest | Package azurerm"
+title_tag: "Resource WebAppDomainOwnershipIdentifierSlot | Module web/latest | Package Azure RM"
 meta_desc: "Explore the WebAppDomainOwnershipIdentifierSlot resource of the web/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A domain specific resource identifier."
 ---
 

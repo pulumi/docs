@@ -1,7 +1,7 @@
 
 ---
 title: "ListBotConnectionWithSecrets"
-title_tag: "Function ListBotConnectionWithSecrets | Module botservice/latest | Package azurerm"
+title_tag: "Function ListBotConnectionWithSecrets | Module botservice/latest | Package Azure RM"
 meta_desc: "Explore the ListBotConnectionWithSecrets function of the botservice/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

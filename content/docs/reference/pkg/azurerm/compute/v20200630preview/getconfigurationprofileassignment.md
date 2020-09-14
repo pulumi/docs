@@ -1,7 +1,7 @@
 
 ---
 title: "GetConfigurationProfileAssignment"
-title_tag: "Function GetConfigurationProfileAssignment | Module compute/v20200630preview | Package azurerm"
+title_tag: "Function GetConfigurationProfileAssignment | Module compute/v20200630preview | Package Azure RM"
 meta_desc: "Explore the GetConfigurationProfileAssignment function of the compute/v20200630preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

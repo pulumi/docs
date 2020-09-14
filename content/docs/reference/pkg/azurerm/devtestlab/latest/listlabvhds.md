@@ -1,7 +1,7 @@
 
 ---
 title: "ListLabVhds"
-title_tag: "Function ListLabVhds | Module devtestlab/latest | Package azurerm"
+title_tag: "Function ListLabVhds | Module devtestlab/latest | Package Azure RM"
 meta_desc: "Explore the ListLabVhds function of the devtestlab/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

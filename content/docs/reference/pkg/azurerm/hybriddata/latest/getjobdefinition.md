@@ -1,7 +1,7 @@
 
 ---
 title: "GetJobDefinition"
-title_tag: "Function GetJobDefinition | Module hybriddata/latest | Package azurerm"
+title_tag: "Function GetJobDefinition | Module hybriddata/latest | Package Azure RM"
 meta_desc: "Explore the GetJobDefinition function of the hybriddata/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

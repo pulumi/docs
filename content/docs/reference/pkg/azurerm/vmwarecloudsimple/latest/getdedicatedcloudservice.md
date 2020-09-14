@@ -1,7 +1,7 @@
 
 ---
 title: "GetDedicatedCloudService"
-title_tag: "Function GetDedicatedCloudService | Module vmwarecloudsimple/latest | Package azurerm"
+title_tag: "Function GetDedicatedCloudService | Module vmwarecloudsimple/latest | Package Azure RM"
 meta_desc: "Explore the GetDedicatedCloudService function of the vmwarecloudsimple/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

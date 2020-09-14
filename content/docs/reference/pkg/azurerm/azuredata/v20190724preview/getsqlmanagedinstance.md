@@ -1,7 +1,7 @@
 
 ---
 title: "GetSqlManagedInstance"
-title_tag: "Function GetSqlManagedInstance | Module azuredata/v20190724preview | Package azurerm"
+title_tag: "Function GetSqlManagedInstance | Module azuredata/v20190724preview | Package Azure RM"
 meta_desc: "Explore the GetSqlManagedInstance function of the azuredata/v20190724preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ListNotificationHubKeys"
-title_tag: "Function ListNotificationHubKeys | Module notificationhubs/latest | Package azurerm"
+title_tag: "Function ListNotificationHubKeys | Module notificationhubs/latest | Package Azure RM"
 meta_desc: "Explore the ListNotificationHubKeys function of the notificationhubs/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

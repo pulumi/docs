@@ -1,7 +1,7 @@
 
 ---
 title: "SshPublicKey"
-title_tag: "Resource SshPublicKey | Module compute/latest | Package azurerm"
+title_tag: "Resource SshPublicKey | Module compute/latest | Package Azure RM"
 meta_desc: "Explore the SshPublicKey resource of the compute/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Specifies information about the SSH public key."
 ---
 

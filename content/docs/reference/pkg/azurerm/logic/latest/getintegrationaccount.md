@@ -1,7 +1,7 @@
 
 ---
 title: "GetIntegrationAccount"
-title_tag: "Function GetIntegrationAccount | Module logic/latest | Package azurerm"
+title_tag: "Function GetIntegrationAccount | Module logic/latest | Package Azure RM"
 meta_desc: "Explore the GetIntegrationAccount function of the logic/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

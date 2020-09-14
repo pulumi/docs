@@ -1,7 +1,7 @@
 
 ---
 title: "GetNetworkSecurityGroup"
-title_tag: "Function GetNetworkSecurityGroup | Module network/latest | Package azurerm"
+title_tag: "Function GetNetworkSecurityGroup | Module network/latest | Package Azure RM"
 meta_desc: "Explore the GetNetworkSecurityGroup function of the network/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

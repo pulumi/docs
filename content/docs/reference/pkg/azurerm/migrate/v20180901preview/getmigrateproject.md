@@ -1,7 +1,7 @@
 
 ---
 title: "GetMigrateProject"
-title_tag: "Function GetMigrateProject | Module migrate/v20180901preview | Package azurerm"
+title_tag: "Function GetMigrateProject | Module migrate/v20180901preview | Package Azure RM"
 meta_desc: "Explore the GetMigrateProject function of the migrate/v20180901preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "WebAppInstanceFunctionSlot"
-title_tag: "Resource WebAppInstanceFunctionSlot | Module web/latest | Package azurerm"
+title_tag: "Resource WebAppInstanceFunctionSlot | Module web/latest | Package Azure RM"
 meta_desc: "Explore the WebAppInstanceFunctionSlot resource of the web/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Function information."
 ---
 

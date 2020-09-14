@@ -1,7 +1,7 @@
 
 ---
 title: "LogProfile"
-title_tag: "Resource LogProfile | Module insights/latest | Package azurerm"
+title_tag: "Resource LogProfile | Module insights/latest | Package Azure RM"
 meta_desc: "Explore the LogProfile resource of the insights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The log profile resource."
 ---
 

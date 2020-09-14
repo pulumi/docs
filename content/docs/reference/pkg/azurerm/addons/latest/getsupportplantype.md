@@ -1,7 +1,7 @@
 
 ---
 title: "GetSupportPlanType"
-title_tag: "Function GetSupportPlanType | Module addons/latest | Package azurerm"
+title_tag: "Function GetSupportPlanType | Module addons/latest | Package Azure RM"
 meta_desc: "Explore the GetSupportPlanType function of the addons/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

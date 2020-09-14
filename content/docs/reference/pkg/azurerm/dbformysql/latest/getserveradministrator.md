@@ -1,7 +1,7 @@
 
 ---
 title: "GetServerAdministrator"
-title_tag: "Function GetServerAdministrator | Module dbformysql/latest | Package azurerm"
+title_tag: "Function GetServerAdministrator | Module dbformysql/latest | Package Azure RM"
 meta_desc: "Explore the GetServerAdministrator function of the dbformysql/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

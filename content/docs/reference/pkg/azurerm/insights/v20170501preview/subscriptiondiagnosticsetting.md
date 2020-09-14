@@ -1,7 +1,7 @@
 
 ---
 title: "SubscriptionDiagnosticSetting"
-title_tag: "Resource SubscriptionDiagnosticSetting | Module insights/v20170501preview | Package azurerm"
+title_tag: "Resource SubscriptionDiagnosticSetting | Module insights/v20170501preview | Package Azure RM"
 meta_desc: "Explore the SubscriptionDiagnosticSetting resource of the insights/v20170501preview module, including examples, input properties, output properties, lookup functions, and supporting types. The subscription diagnostic setting resource."
 ---
 

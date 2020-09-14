@@ -1,7 +1,7 @@
 
 ---
 title: "GetGuestUsage"
-title_tag: "Function GetGuestUsage | Module azureactivedirectory/v20200501preview | Package azurerm"
+title_tag: "Function GetGuestUsage | Module azureactivedirectory/v20200501preview | Package Azure RM"
 meta_desc: "Explore the GetGuestUsage function of the azureactivedirectory/v20200501preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetAccount"
-title_tag: "Function GetAccount | Module machinelearningexperimentation/v20170501preview | Package azurerm"
+title_tag: "Function GetAccount | Module machinelearningexperimentation/v20170501preview | Package Azure RM"
 meta_desc: "Explore the GetAccount function of the machinelearningexperimentation/v20170501preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

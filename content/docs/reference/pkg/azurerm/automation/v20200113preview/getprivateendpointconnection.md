@@ -1,7 +1,7 @@
 
 ---
 title: "GetPrivateEndpointConnection"
-title_tag: "Function GetPrivateEndpointConnection | Module automation/v20200113preview | Package azurerm"
+title_tag: "Function GetPrivateEndpointConnection | Module automation/v20200113preview | Package Azure RM"
 meta_desc: "Explore the GetPrivateEndpointConnection function of the automation/v20200113preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

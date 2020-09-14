@@ -1,7 +1,7 @@
 
 ---
 title: "GetBudget"
-title_tag: "Function GetBudget | Module consumption/latest | Package azurerm"
+title_tag: "Function GetBudget | Module consumption/latest | Package Azure RM"
 meta_desc: "Explore the GetBudget function of the consumption/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

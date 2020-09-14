@@ -1,7 +1,7 @@
 
 ---
 title: "GetElasticPool"
-title_tag: "Function GetElasticPool | Module sql/latest | Package azurerm"
+title_tag: "Function GetElasticPool | Module sql/latest | Package Azure RM"
 meta_desc: "Explore the GetElasticPool function of the sql/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

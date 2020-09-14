@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateLinkScopedResource"
-title_tag: "Resource PrivateLinkScopedResource | Module hybridcompute/v20200815preview | Package azurerm"
+title_tag: "Resource PrivateLinkScopedResource | Module hybridcompute/v20200815preview | Package Azure RM"
 meta_desc: "Explore the PrivateLinkScopedResource resource of the hybridcompute/v20200815preview module, including examples, input properties, output properties, lookup functions, and supporting types. A private link scoped resource"
 ---
 

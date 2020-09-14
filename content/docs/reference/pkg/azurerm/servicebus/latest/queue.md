@@ -1,7 +1,7 @@
 
 ---
 title: "Queue"
-title_tag: "Resource Queue | Module servicebus/latest | Package azurerm"
+title_tag: "Resource Queue | Module servicebus/latest | Package Azure RM"
 meta_desc: "Explore the Queue resource of the servicebus/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Description of queue Resource."
 ---
 

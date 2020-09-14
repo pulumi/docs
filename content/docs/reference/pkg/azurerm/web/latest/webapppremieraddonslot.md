@@ -1,7 +1,7 @@
 
 ---
 title: "WebAppPremierAddOnSlot"
-title_tag: "Resource WebAppPremierAddOnSlot | Module web/latest | Package azurerm"
+title_tag: "Resource WebAppPremierAddOnSlot | Module web/latest | Package Azure RM"
 meta_desc: "Explore the WebAppPremierAddOnSlot resource of the web/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Premier add-on."
 ---
 

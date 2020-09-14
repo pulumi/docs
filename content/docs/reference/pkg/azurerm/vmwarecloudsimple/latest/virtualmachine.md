@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualMachine"
-title_tag: "Resource VirtualMachine | Module vmwarecloudsimple/latest | Package azurerm"
+title_tag: "Resource VirtualMachine | Module vmwarecloudsimple/latest | Package Azure RM"
 meta_desc: "Explore the VirtualMachine resource of the vmwarecloudsimple/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Virtual machine model"
 ---
 

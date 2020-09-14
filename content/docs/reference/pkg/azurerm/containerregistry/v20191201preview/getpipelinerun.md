@@ -1,7 +1,7 @@
 
 ---
 title: "GetPipelineRun"
-title_tag: "Function GetPipelineRun | Module containerregistry/v20191201preview | Package azurerm"
+title_tag: "Function GetPipelineRun | Module containerregistry/v20191201preview | Package Azure RM"
 meta_desc: "Explore the GetPipelineRun function of the containerregistry/v20191201preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

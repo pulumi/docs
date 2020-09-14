@@ -1,7 +1,7 @@
 
 ---
 title: "GetSmartDetectorAlertRule"
-title_tag: "Function GetSmartDetectorAlertRule | Module alertsmanagement/latest | Package azurerm"
+title_tag: "Function GetSmartDetectorAlertRule | Module alertsmanagement/latest | Package Azure RM"
 meta_desc: "Explore the GetSmartDetectorAlertRule function of the alertsmanagement/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

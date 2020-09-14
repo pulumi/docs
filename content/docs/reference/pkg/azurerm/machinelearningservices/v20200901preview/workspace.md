@@ -1,7 +1,7 @@
 
 ---
 title: "Workspace"
-title_tag: "Resource Workspace | Module machinelearningservices/v20200901preview | Package azurerm"
+title_tag: "Resource Workspace | Module machinelearningservices/v20200901preview | Package Azure RM"
 meta_desc: "Explore the Workspace resource of the machinelearningservices/v20200901preview module, including examples, input properties, output properties, lookup functions, and supporting types. An object that represents a machine learning workspace."
 ---
 

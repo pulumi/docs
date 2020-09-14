@@ -1,7 +1,7 @@
 
 ---
 title: "GetServer"
-title_tag: "Function GetServer | Module dbformariadb/latest | Package azurerm"
+title_tag: "Function GetServer | Module dbformariadb/latest | Package Azure RM"
 meta_desc: "Explore the GetServer function of the dbformariadb/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

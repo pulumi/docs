@@ -1,7 +1,7 @@
 
 ---
 title: "AzureFirewall"
-title_tag: "Resource AzureFirewall | Module network/latest | Package azurerm"
+title_tag: "Resource AzureFirewall | Module network/latest | Package Azure RM"
 meta_desc: "Explore the AzureFirewall resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Azure Firewall resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "DomainService"
-title_tag: "Resource DomainService | Module aad/latest | Package azurerm"
+title_tag: "Resource DomainService | Module aad/latest | Package Azure RM"
 meta_desc: "Explore the DomainService resource of the aad/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Domain service."
 ---
 

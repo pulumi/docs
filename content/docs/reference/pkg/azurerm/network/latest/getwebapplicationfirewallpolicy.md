@@ -1,7 +1,7 @@
 
 ---
 title: "GetWebApplicationFirewallPolicy"
-title_tag: "Function GetWebApplicationFirewallPolicy | Module network/latest | Package azurerm"
+title_tag: "Function GetWebApplicationFirewallPolicy | Module network/latest | Package Azure RM"
 meta_desc: "Explore the GetWebApplicationFirewallPolicy function of the network/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetReferenceDataSet"
-title_tag: "Function GetReferenceDataSet | Module timeseriesinsights/latest | Package azurerm"
+title_tag: "Function GetReferenceDataSet | Module timeseriesinsights/latest | Package Azure RM"
 meta_desc: "Explore the GetReferenceDataSet function of the timeseriesinsights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

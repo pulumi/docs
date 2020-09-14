@@ -1,7 +1,7 @@
 
 ---
 title: "DeploymentAtManagementGroupScope"
-title_tag: "Resource DeploymentAtManagementGroupScope | Module management/latest | Package azurerm"
+title_tag: "Resource DeploymentAtManagementGroupScope | Module management/latest | Package Azure RM"
 meta_desc: "Explore the DeploymentAtManagementGroupScope resource of the management/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Deployment information."
 ---
 

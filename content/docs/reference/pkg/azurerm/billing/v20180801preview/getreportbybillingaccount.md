@@ -1,7 +1,7 @@
 
 ---
 title: "GetReportByBillingAccount"
-title_tag: "Function GetReportByBillingAccount | Module billing/v20180801preview | Package azurerm"
+title_tag: "Function GetReportByBillingAccount | Module billing/v20180801preview | Package Azure RM"
 meta_desc: "Explore the GetReportByBillingAccount function of the billing/v20180801preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

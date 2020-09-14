@@ -1,7 +1,7 @@
 
 ---
 title: "ManagementPolicy"
-title_tag: "Resource ManagementPolicy | Module storage/latest | Package azurerm"
+title_tag: "Resource ManagementPolicy | Module storage/latest | Package Azure RM"
 meta_desc: "Explore the ManagementPolicy resource of the storage/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The Get Storage Account ManagementPolicies operation response."
 ---
 

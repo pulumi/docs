@@ -1,7 +1,7 @@
 
 ---
 title: "GetCluster"
-title_tag: "Function GetCluster | Module eventhub/v20180101preview | Package azurerm"
+title_tag: "Function GetCluster | Module eventhub/v20180101preview | Package Azure RM"
 meta_desc: "Explore the GetCluster function of the eventhub/v20180101preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "NetworkSecurityGroup"
-title_tag: "Resource NetworkSecurityGroup | Module network/latest | Package azurerm"
+title_tag: "Resource NetworkSecurityGroup | Module network/latest | Package Azure RM"
 meta_desc: "Explore the NetworkSecurityGroup resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. NetworkSecurityGroup resource."
 ---
 

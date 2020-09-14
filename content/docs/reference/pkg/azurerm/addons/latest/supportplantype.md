@@ -1,7 +1,7 @@
 
 ---
 title: "SupportPlanType"
-title_tag: "Resource SupportPlanType | Module addons/latest | Package azurerm"
+title_tag: "Resource SupportPlanType | Module addons/latest | Package Azure RM"
 meta_desc: "Explore the SupportPlanType resource of the addons/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The status of the Canonical support plan."
 ---
 

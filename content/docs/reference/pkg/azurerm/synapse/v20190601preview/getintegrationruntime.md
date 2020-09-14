@@ -1,7 +1,7 @@
 
 ---
 title: "GetIntegrationRuntime"
-title_tag: "Function GetIntegrationRuntime | Module synapse/v20190601preview | Package azurerm"
+title_tag: "Function GetIntegrationRuntime | Module synapse/v20190601preview | Package Azure RM"
 meta_desc: "Explore the GetIntegrationRuntime function of the synapse/v20190601preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ServerAzureADAdministrator"
-title_tag: "Resource ServerAzureADAdministrator | Module sql/latest | Package azurerm"
+title_tag: "Resource ServerAzureADAdministrator | Module sql/latest | Package Azure RM"
 meta_desc: "Explore the ServerAzureADAdministrator resource of the sql/latest module, including examples, input properties, output properties, lookup functions, and supporting types. An server Active Directory Administrator."
 ---
 

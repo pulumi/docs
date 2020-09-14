@@ -1,7 +1,7 @@
 
 ---
 title: "Peering"
-title_tag: "Resource Peering | Module peering/latest | Package azurerm"
+title_tag: "Resource Peering | Module peering/latest | Package Azure RM"
 meta_desc: "Explore the Peering resource of the peering/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Peering is a logical representation of a set of connections to the Microsoft Cloud Edge at a location."
 ---
 

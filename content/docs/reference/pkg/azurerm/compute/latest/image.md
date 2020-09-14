@@ -1,7 +1,7 @@
 
 ---
 title: "Image"
-title_tag: "Resource Image | Module compute/latest | Package azurerm"
+title_tag: "Resource Image | Module compute/latest | Package Azure RM"
 meta_desc: "Explore the Image resource of the compute/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist."
 ---
 

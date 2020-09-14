@@ -1,7 +1,7 @@
 
 ---
 title: "GetConsole"
-title_tag: "Function GetConsole | Module portal/latest | Package azurerm"
+title_tag: "Function GetConsole | Module portal/latest | Package Azure RM"
 meta_desc: "Explore the GetConsole function of the portal/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

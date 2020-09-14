@@ -1,7 +1,7 @@
 
 ---
 title: "GetFirewallRule"
-title_tag: "Function GetFirewallRule | Module dbforpostgresql/v20200214privatepreview | Package azurerm"
+title_tag: "Function GetFirewallRule | Module dbforpostgresql/v20200214privatepreview | Package Azure RM"
 meta_desc: "Explore the GetFirewallRule function of the dbforpostgresql/v20200214privatepreview module, including examples, input properties, output properties, and supporting types. "
 ---
 

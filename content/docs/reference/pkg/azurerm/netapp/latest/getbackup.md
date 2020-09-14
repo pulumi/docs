@@ -1,7 +1,7 @@
 
 ---
 title: "GetBackup"
-title_tag: "Function GetBackup | Module netapp/latest | Package azurerm"
+title_tag: "Function GetBackup | Module netapp/latest | Package Azure RM"
 meta_desc: "Explore the GetBackup function of the netapp/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "PolicyDefinitionAtManagementGroup"
-title_tag: "Resource PolicyDefinitionAtManagementGroup | Module management/latest | Package azurerm"
+title_tag: "Resource PolicyDefinitionAtManagementGroup | Module management/latest | Package Azure RM"
 meta_desc: "Explore the PolicyDefinitionAtManagementGroup resource of the management/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The policy definition."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetServerKey"
-title_tag: "Function GetServerKey | Module sql/v20150501preview | Package azurerm"
+title_tag: "Function GetServerKey | Module sql/v20150501preview | Package Azure RM"
 meta_desc: "Explore the GetServerKey function of the sql/v20150501preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

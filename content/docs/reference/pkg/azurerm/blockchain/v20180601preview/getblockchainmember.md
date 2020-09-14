@@ -1,7 +1,7 @@
 
 ---
 title: "GetBlockchainMember"
-title_tag: "Function GetBlockchainMember | Module blockchain/v20180601preview | Package azurerm"
+title_tag: "Function GetBlockchainMember | Module blockchain/v20180601preview | Package Azure RM"
 meta_desc: "Explore the GetBlockchainMember function of the blockchain/v20180601preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

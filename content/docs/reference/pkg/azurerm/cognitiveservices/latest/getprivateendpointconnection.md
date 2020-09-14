@@ -1,7 +1,7 @@
 
 ---
 title: "GetPrivateEndpointConnection"
-title_tag: "Function GetPrivateEndpointConnection | Module cognitiveservices/latest | Package azurerm"
+title_tag: "Function GetPrivateEndpointConnection | Module cognitiveservices/latest | Package Azure RM"
 meta_desc: "Explore the GetPrivateEndpointConnection function of the cognitiveservices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

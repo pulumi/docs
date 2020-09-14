@@ -1,7 +1,7 @@
 
 ---
 title: "GetLiveEvent"
-title_tag: "Function GetLiveEvent | Module media/latest | Package azurerm"
+title_tag: "Function GetLiveEvent | Module media/latest | Package Azure RM"
 meta_desc: "Explore the GetLiveEvent function of the media/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

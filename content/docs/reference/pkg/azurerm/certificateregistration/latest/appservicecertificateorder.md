@@ -1,7 +1,7 @@
 
 ---
 title: "AppServiceCertificateOrder"
-title_tag: "Resource AppServiceCertificateOrder | Module certificateregistration/latest | Package azurerm"
+title_tag: "Resource AppServiceCertificateOrder | Module certificateregistration/latest | Package Azure RM"
 meta_desc: "Explore the AppServiceCertificateOrder resource of the certificateregistration/latest module, including examples, input properties, output properties, lookup functions, and supporting types. SSL certificate purchase order."
 ---
 

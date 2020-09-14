@@ -1,7 +1,7 @@
 
 ---
 title: "GetRemoteRenderingAccount"
-title_tag: "Function GetRemoteRenderingAccount | Module mixedreality/v20200406preview | Package azurerm"
+title_tag: "Function GetRemoteRenderingAccount | Module mixedreality/v20200406preview | Package Azure RM"
 meta_desc: "Explore the GetRemoteRenderingAccount function of the mixedreality/v20200406preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

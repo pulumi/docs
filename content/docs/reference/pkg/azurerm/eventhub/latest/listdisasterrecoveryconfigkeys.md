@@ -1,7 +1,7 @@
 
 ---
 title: "ListDisasterRecoveryConfigKeys"
-title_tag: "Function ListDisasterRecoveryConfigKeys | Module eventhub/latest | Package azurerm"
+title_tag: "Function ListDisasterRecoveryConfigKeys | Module eventhub/latest | Package Azure RM"
 meta_desc: "Explore the ListDisasterRecoveryConfigKeys function of the eventhub/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

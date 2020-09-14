@@ -1,7 +1,7 @@
 
 ---
 title: "IotDpsResourcePrivateEndpointConnection"
-title_tag: "Resource IotDpsResourcePrivateEndpointConnection | Module devices/v20200901preview | Package azurerm"
+title_tag: "Resource IotDpsResourcePrivateEndpointConnection | Module devices/v20200901preview | Package Azure RM"
 meta_desc: "Explore the IotDpsResourcePrivateEndpointConnection resource of the devices/v20200901preview module, including examples, input properties, output properties, lookup functions, and supporting types. The private endpoint connection of a provisioning service"
 ---
 

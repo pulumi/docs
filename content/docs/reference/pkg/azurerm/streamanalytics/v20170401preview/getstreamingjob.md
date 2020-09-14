@@ -1,7 +1,7 @@
 
 ---
 title: "GetStreamingJob"
-title_tag: "Function GetStreamingJob | Module streamanalytics/v20170401preview | Package azurerm"
+title_tag: "Function GetStreamingJob | Module streamanalytics/v20170401preview | Package Azure RM"
 meta_desc: "Explore the GetStreamingJob function of the streamanalytics/v20170401preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

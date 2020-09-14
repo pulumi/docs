@@ -1,7 +1,7 @@
 
 ---
 title: "ManagementGroup"
-title_tag: "Resource ManagementGroup | Module management/latest | Package azurerm"
+title_tag: "Resource ManagementGroup | Module management/latest | Package Azure RM"
 meta_desc: "Explore the ManagementGroup resource of the management/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The management group details."
 ---
 

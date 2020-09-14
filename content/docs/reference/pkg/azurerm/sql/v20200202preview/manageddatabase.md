@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedDatabase"
-title_tag: "Resource ManagedDatabase | Module sql/v20200202preview | Package azurerm"
+title_tag: "Resource ManagedDatabase | Module sql/v20200202preview | Package Azure RM"
 meta_desc: "Explore the ManagedDatabase resource of the sql/v20200202preview module, including examples, input properties, output properties, lookup functions, and supporting types. A managed database resource."
 ---
 

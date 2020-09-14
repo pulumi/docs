@@ -1,7 +1,7 @@
 
 ---
 title: "GetStorageInsightConfig"
-title_tag: "Function GetStorageInsightConfig | Module operationalinsights/latest | Package azurerm"
+title_tag: "Function GetStorageInsightConfig | Module operationalinsights/latest | Package Azure RM"
 meta_desc: "Explore the GetStorageInsightConfig function of the operationalinsights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

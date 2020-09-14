@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateEndpointConnection"
-title_tag: "Resource PrivateEndpointConnection | Module relay/v20180101preview | Package azurerm"
+title_tag: "Resource PrivateEndpointConnection | Module relay/v20180101preview | Package Azure RM"
 meta_desc: "Explore the PrivateEndpointConnection resource of the relay/v20180101preview module, including examples, input properties, output properties, lookup functions, and supporting types. Private endpoint connection resource."
 ---
 

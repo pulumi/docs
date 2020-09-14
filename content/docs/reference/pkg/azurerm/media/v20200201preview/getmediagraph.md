@@ -1,7 +1,7 @@
 
 ---
 title: "GetMediaGraph"
-title_tag: "Function GetMediaGraph | Module media/v20200201preview | Package azurerm"
+title_tag: "Function GetMediaGraph | Module media/v20200201preview | Package Azure RM"
 meta_desc: "Explore the GetMediaGraph function of the media/v20200201preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

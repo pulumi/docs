@@ -1,7 +1,7 @@
 
 ---
 title: "GetLinkedWorkspace"
-title_tag: "Function GetLinkedWorkspace | Module machinelearningservices/v20200515preview | Package azurerm"
+title_tag: "Function GetLinkedWorkspace | Module machinelearningservices/v20200515preview | Package Azure RM"
 meta_desc: "Explore the GetLinkedWorkspace function of the machinelearningservices/v20200515preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

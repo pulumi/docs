@@ -1,7 +1,7 @@
 
 ---
 title: "ScheduledQueryRule"
-title_tag: "Resource ScheduledQueryRule | Module insights/latest | Package azurerm"
+title_tag: "Resource ScheduledQueryRule | Module insights/latest | Package Azure RM"
 meta_desc: "Explore the ScheduledQueryRule resource of the insights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The Log Search Rule resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Trigger"
-title_tag: "Resource Trigger | Module datashare/latest | Package azurerm"
+title_tag: "Resource Trigger | Module datashare/latest | Package Azure RM"
 meta_desc: "Explore the Trigger resource of the datashare/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A Trigger data transfer object."
 ---
 

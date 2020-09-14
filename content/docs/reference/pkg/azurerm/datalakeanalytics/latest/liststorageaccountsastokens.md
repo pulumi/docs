@@ -1,7 +1,7 @@
 
 ---
 title: "ListStorageAccountSasTokens"
-title_tag: "Function ListStorageAccountSasTokens | Module datalakeanalytics/latest | Package azurerm"
+title_tag: "Function ListStorageAccountSasTokens | Module datalakeanalytics/latest | Package Azure RM"
 meta_desc: "Explore the ListStorageAccountSasTokens function of the datalakeanalytics/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

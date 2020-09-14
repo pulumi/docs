@@ -1,7 +1,7 @@
 
 ---
 title: "GetRegistrationDefinition"
-title_tag: "Function GetRegistrationDefinition | Module managedservices/latest | Package azurerm"
+title_tag: "Function GetRegistrationDefinition | Module managedservices/latest | Package Azure RM"
 meta_desc: "Explore the GetRegistrationDefinition function of the managedservices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

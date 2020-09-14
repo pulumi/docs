@@ -1,7 +1,7 @@
 
 ---
 title: "ListWebAppBackupConfiguration"
-title_tag: "Function ListWebAppBackupConfiguration | Module web/latest | Package azurerm"
+title_tag: "Function ListWebAppBackupConfiguration | Module web/latest | Package Azure RM"
 meta_desc: "Explore the ListWebAppBackupConfiguration function of the web/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Partner"
-title_tag: "Resource Partner | Module managementpartner/latest | Package azurerm"
+title_tag: "Resource Partner | Module managementpartner/latest | Package Azure RM"
 meta_desc: "Explore the Partner resource of the managementpartner/latest module, including examples, input properties, output properties, lookup functions, and supporting types. this is the management partner operations response"
 ---
 

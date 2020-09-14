@@ -1,7 +1,7 @@
 
 ---
 title: "GraphQuery"
-title_tag: "Resource GraphQuery | Module resourcegraph/v20200401preview | Package azurerm"
+title_tag: "Resource GraphQuery | Module resourcegraph/v20200401preview | Package Azure RM"
 meta_desc: "Explore the GraphQuery resource of the resourcegraph/v20200401preview module, including examples, input properties, output properties, lookup functions, and supporting types. Graph Query entity definition."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Api"
-title_tag: "Resource Api | Module apimanagement/v20191201preview | Package azurerm"
+title_tag: "Resource Api | Module apimanagement/v20191201preview | Package Azure RM"
 meta_desc: "Explore the Api resource of the apimanagement/v20191201preview module, including examples, input properties, output properties, lookup functions, and supporting types. Api details."
 ---
 

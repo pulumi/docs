@@ -1,7 +1,7 @@
 
 ---
 title: "Application"
-title_tag: "Resource Application | Module batch/latest | Package azurerm"
+title_tag: "Resource Application | Module batch/latest | Package Azure RM"
 meta_desc: "Explore the Application resource of the batch/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Contains information about an application in a Batch account."
 ---
 

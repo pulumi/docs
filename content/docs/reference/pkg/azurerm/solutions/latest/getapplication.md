@@ -1,7 +1,7 @@
 
 ---
 title: "GetApplication"
-title_tag: "Function GetApplication | Module solutions/latest | Package azurerm"
+title_tag: "Function GetApplication | Module solutions/latest | Package Azure RM"
 meta_desc: "Explore the GetApplication function of the solutions/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

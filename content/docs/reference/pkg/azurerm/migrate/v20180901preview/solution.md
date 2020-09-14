@@ -1,7 +1,7 @@
 
 ---
 title: "Solution"
-title_tag: "Resource Solution | Module migrate/v20180901preview | Package azurerm"
+title_tag: "Resource Solution | Module migrate/v20180901preview | Package Azure RM"
 meta_desc: "Explore the Solution resource of the migrate/v20180901preview module, including examples, input properties, output properties, lookup functions, and supporting types. Solution REST Resource."
 ---
 

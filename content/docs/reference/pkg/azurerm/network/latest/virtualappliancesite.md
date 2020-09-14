@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualApplianceSite"
-title_tag: "Resource VirtualApplianceSite | Module network/latest | Package azurerm"
+title_tag: "Resource VirtualApplianceSite | Module network/latest | Package Azure RM"
 meta_desc: "Explore the VirtualApplianceSite resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Virtual Appliance Site resource."
 ---
 

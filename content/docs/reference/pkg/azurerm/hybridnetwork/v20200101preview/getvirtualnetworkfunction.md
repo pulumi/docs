@@ -1,7 +1,7 @@
 
 ---
 title: "GetVirtualNetworkFunction"
-title_tag: "Function GetVirtualNetworkFunction | Module hybridnetwork/v20200101preview | Package azurerm"
+title_tag: "Function GetVirtualNetworkFunction | Module hybridnetwork/v20200101preview | Package Azure RM"
 meta_desc: "Explore the GetVirtualNetworkFunction function of the hybridnetwork/v20200101preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

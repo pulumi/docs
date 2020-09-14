@@ -1,7 +1,7 @@
 
 ---
 title: "DiagnosticSetting"
-title_tag: "Resource DiagnosticSetting | Module insights/v20170501preview | Package azurerm"
+title_tag: "Resource DiagnosticSetting | Module insights/v20170501preview | Package Azure RM"
 meta_desc: "Explore the DiagnosticSetting resource of the insights/v20170501preview module, including examples, input properties, output properties, lookup functions, and supporting types. The diagnostic setting resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Namespace"
-title_tag: "Resource Namespace | Module servicebus/v20180101preview | Package azurerm"
+title_tag: "Resource Namespace | Module servicebus/v20180101preview | Package Azure RM"
 meta_desc: "Explore the Namespace resource of the servicebus/v20180101preview module, including examples, input properties, output properties, lookup functions, and supporting types. Description of a namespace resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ListClusterRemoteLoginInformation"
-title_tag: "Function ListClusterRemoteLoginInformation | Module batchai/latest | Package azurerm"
+title_tag: "Function ListClusterRemoteLoginInformation | Module batchai/latest | Package Azure RM"
 meta_desc: "Explore the ListClusterRemoteLoginInformation function of the batchai/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

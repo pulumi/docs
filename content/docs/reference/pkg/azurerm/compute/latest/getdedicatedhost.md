@@ -1,7 +1,7 @@
 
 ---
 title: "GetDedicatedHost"
-title_tag: "Function GetDedicatedHost | Module compute/latest | Package azurerm"
+title_tag: "Function GetDedicatedHost | Module compute/latest | Package Azure RM"
 meta_desc: "Explore the GetDedicatedHost function of the compute/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "SqlDatabase"
-title_tag: "Resource SqlDatabase | Module synapse/v20200401preview | Package azurerm"
+title_tag: "Resource SqlDatabase | Module synapse/v20200401preview | Package Azure RM"
 meta_desc: "Explore the SqlDatabase resource of the synapse/v20200401preview module, including examples, input properties, output properties, lookup functions, and supporting types. A sql database resource."
 ---
 

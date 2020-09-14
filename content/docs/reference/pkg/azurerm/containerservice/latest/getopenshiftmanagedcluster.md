@@ -1,7 +1,7 @@
 
 ---
 title: "GetOpenShiftManagedCluster"
-title_tag: "Function GetOpenShiftManagedCluster | Module containerservice/latest | Package azurerm"
+title_tag: "Function GetOpenShiftManagedCluster | Module containerservice/latest | Package Azure RM"
 meta_desc: "Explore the GetOpenShiftManagedCluster function of the containerservice/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

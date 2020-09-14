@@ -1,7 +1,7 @@
 
 ---
 title: "DomainOwnershipIdentifier"
-title_tag: "Resource DomainOwnershipIdentifier | Module domainregistration/latest | Package azurerm"
+title_tag: "Resource DomainOwnershipIdentifier | Module domainregistration/latest | Package Azure RM"
 meta_desc: "Explore the DomainOwnershipIdentifier resource of the domainregistration/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Domain ownership Identifier."
 ---
 

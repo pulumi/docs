@@ -1,7 +1,7 @@
 
 ---
 title: "GetSignalRPrivateEndpointConnection"
-title_tag: "Function GetSignalRPrivateEndpointConnection | Module signalrservice/v20200701preview | Package azurerm"
+title_tag: "Function GetSignalRPrivateEndpointConnection | Module signalrservice/v20200701preview | Package Azure RM"
 meta_desc: "Explore the GetSignalRPrivateEndpointConnection function of the signalrservice/v20200701preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

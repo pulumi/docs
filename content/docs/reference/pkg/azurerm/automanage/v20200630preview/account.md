@@ -1,7 +1,7 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module automanage/v20200630preview | Package azurerm"
+title_tag: "Resource Account | Module automanage/v20200630preview | Package Azure RM"
 meta_desc: "Explore the Account resource of the automanage/v20200630preview module, including examples, input properties, output properties, lookup functions, and supporting types. Definition of the Automanage account."
 ---
 

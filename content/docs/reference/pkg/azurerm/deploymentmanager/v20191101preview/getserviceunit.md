@@ -1,7 +1,7 @@
 
 ---
 title: "GetServiceUnit"
-title_tag: "Function GetServiceUnit | Module deploymentmanager/v20191101preview | Package azurerm"
+title_tag: "Function GetServiceUnit | Module deploymentmanager/v20191101preview | Package Azure RM"
 meta_desc: "Explore the GetServiceUnit function of the deploymentmanager/v20191101preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

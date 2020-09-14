@@ -1,7 +1,7 @@
 
 ---
 title: "GetMachineGroup"
-title_tag: "Function GetMachineGroup | Module operationalinsights/v20151101preview | Package azurerm"
+title_tag: "Function GetMachineGroup | Module operationalinsights/v20151101preview | Package Azure RM"
 meta_desc: "Explore the GetMachineGroup function of the operationalinsights/v20151101preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetComponent"
-title_tag: "Function GetComponent | Module insights/latest | Package azurerm"
+title_tag: "Function GetComponent | Module insights/latest | Package Azure RM"
 meta_desc: "Explore the GetComponent function of the insights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

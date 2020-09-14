@@ -1,7 +1,7 @@
 
 ---
 title: "SavedSearch"
-title_tag: "Resource SavedSearch | Module operationalinsights/latest | Package azurerm"
+title_tag: "Resource SavedSearch | Module operationalinsights/latest | Package Azure RM"
 meta_desc: "Explore the SavedSearch resource of the operationalinsights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Value object for saved search results."
 ---
 

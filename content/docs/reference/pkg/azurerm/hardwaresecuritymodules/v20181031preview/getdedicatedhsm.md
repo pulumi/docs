@@ -1,7 +1,7 @@
 
 ---
 title: "GetDedicatedHsm"
-title_tag: "Function GetDedicatedHsm | Module hardwaresecuritymodules/v20181031preview | Package azurerm"
+title_tag: "Function GetDedicatedHsm | Module hardwaresecuritymodules/v20181031preview | Package Azure RM"
 meta_desc: "Explore the GetDedicatedHsm function of the hardwaresecuritymodules/v20181031preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

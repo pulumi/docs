@@ -1,7 +1,7 @@
 
 ---
 title: "LinkedStorageAccount"
-title_tag: "Resource LinkedStorageAccount | Module operationalinsights/latest | Package azurerm"
+title_tag: "Resource LinkedStorageAccount | Module operationalinsights/latest | Package Azure RM"
 meta_desc: "Explore the LinkedStorageAccount resource of the operationalinsights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Linked storage accounts top level resource container."
 ---
 

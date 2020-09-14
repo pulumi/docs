@@ -1,7 +1,7 @@
 
 ---
 title: "ListStaticSiteSecrets"
-title_tag: "Function ListStaticSiteSecrets | Module web/latest | Package azurerm"
+title_tag: "Function ListStaticSiteSecrets | Module web/latest | Package Azure RM"
 meta_desc: "Explore the ListStaticSiteSecrets function of the web/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

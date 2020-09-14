@@ -1,7 +1,7 @@
 
 ---
 title: "GetWebAppRelayServiceConnectionSlot"
-title_tag: "Function GetWebAppRelayServiceConnectionSlot | Module web/latest | Package azurerm"
+title_tag: "Function GetWebAppRelayServiceConnectionSlot | Module web/latest | Package Azure RM"
 meta_desc: "Explore the GetWebAppRelayServiceConnectionSlot function of the web/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Namespace"
-title_tag: "Resource Namespace | Module relay/latest | Package azurerm"
+title_tag: "Resource Namespace | Module relay/latest | Package Azure RM"
 meta_desc: "Explore the Namespace resource of the relay/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Description of a namespace resource."
 ---
 

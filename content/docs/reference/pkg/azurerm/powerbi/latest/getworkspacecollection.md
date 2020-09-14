@@ -1,7 +1,7 @@
 
 ---
 title: "GetWorkspaceCollection"
-title_tag: "Function GetWorkspaceCollection | Module powerbi/latest | Package azurerm"
+title_tag: "Function GetWorkspaceCollection | Module powerbi/latest | Package Azure RM"
 meta_desc: "Explore the GetWorkspaceCollection function of the powerbi/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetPolicyDefinition"
-title_tag: "Function GetPolicyDefinition | Module authorization/latest | Package azurerm"
+title_tag: "Function GetPolicyDefinition | Module authorization/latest | Package Azure RM"
 meta_desc: "Explore the GetPolicyDefinition function of the authorization/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

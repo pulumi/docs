@@ -1,7 +1,7 @@
 
 ---
 title: "DiagnosticSetting"
-title_tag: "Resource DiagnosticSetting | Module aadiam/latest | Package azurerm"
+title_tag: "Resource DiagnosticSetting | Module aadiam/latest | Package Azure RM"
 meta_desc: "Explore the DiagnosticSetting resource of the aadiam/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The diagnostic setting resource."
 ---
 

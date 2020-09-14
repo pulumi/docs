@@ -1,7 +1,7 @@
 
 ---
 title: "AppServiceEnvironment"
-title_tag: "Resource AppServiceEnvironment | Module web/latest | Package azurerm"
+title_tag: "Resource AppServiceEnvironment | Module web/latest | Package Azure RM"
 meta_desc: "Explore the AppServiceEnvironment resource of the web/latest module, including examples, input properties, output properties, lookup functions, and supporting types. App Service Environment ARM resource."
 ---
 

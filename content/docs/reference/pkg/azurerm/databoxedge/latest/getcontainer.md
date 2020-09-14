@@ -1,7 +1,7 @@
 
 ---
 title: "GetContainer"
-title_tag: "Function GetContainer | Module databoxedge/latest | Package azurerm"
+title_tag: "Function GetContainer | Module databoxedge/latest | Package Azure RM"
 meta_desc: "Explore the GetContainer function of the databoxedge/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

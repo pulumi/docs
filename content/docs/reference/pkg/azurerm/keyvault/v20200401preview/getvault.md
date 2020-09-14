@@ -1,7 +1,7 @@
 
 ---
 title: "GetVault"
-title_tag: "Function GetVault | Module keyvault/v20200401preview | Package azurerm"
+title_tag: "Function GetVault | Module keyvault/v20200401preview | Package Azure RM"
 meta_desc: "Explore the GetVault function of the keyvault/v20200401preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

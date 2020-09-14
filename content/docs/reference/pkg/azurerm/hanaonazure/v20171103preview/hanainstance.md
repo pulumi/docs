@@ -1,7 +1,7 @@
 
 ---
 title: "HanaInstance"
-title_tag: "Resource HanaInstance | Module hanaonazure/v20171103preview | Package azurerm"
+title_tag: "Resource HanaInstance | Module hanaonazure/v20171103preview | Package Azure RM"
 meta_desc: "Explore the HanaInstance resource of the hanaonazure/v20171103preview module, including examples, input properties, output properties, lookup functions, and supporting types. HANA instance info on Azure (ARM properties and HANA properties)"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetApplicationPackage"
-title_tag: "Function GetApplicationPackage | Module batch/latest | Package azurerm"
+title_tag: "Function GetApplicationPackage | Module batch/latest | Package Azure RM"
 meta_desc: "Explore the GetApplicationPackage function of the batch/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

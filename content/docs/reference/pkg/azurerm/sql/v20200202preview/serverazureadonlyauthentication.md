@@ -1,7 +1,7 @@
 
 ---
 title: "ServerAzureADOnlyAuthentication"
-title_tag: "Resource ServerAzureADOnlyAuthentication | Module sql/v20200202preview | Package azurerm"
+title_tag: "Resource ServerAzureADOnlyAuthentication | Module sql/v20200202preview | Package Azure RM"
 meta_desc: "Explore the ServerAzureADOnlyAuthentication resource of the sql/v20200202preview module, including examples, input properties, output properties, lookup functions, and supporting types. Azure Active Directory only authentication."
 ---
 

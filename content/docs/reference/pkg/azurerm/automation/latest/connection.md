@@ -1,7 +1,7 @@
 
 ---
 title: "Connection"
-title_tag: "Resource Connection | Module automation/latest | Package azurerm"
+title_tag: "Resource Connection | Module automation/latest | Package Azure RM"
 meta_desc: "Explore the Connection resource of the automation/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Definition of the connection."
 ---
 

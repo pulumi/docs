@@ -1,7 +1,7 @@
 
 ---
 title: "DataManager"
-title_tag: "Resource DataManager | Module hybriddata/latest | Package azurerm"
+title_tag: "Resource DataManager | Module hybriddata/latest | Package Azure RM"
 meta_desc: "Explore the DataManager resource of the hybriddata/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The DataManager resource."
 ---
 

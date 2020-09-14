@@ -1,7 +1,7 @@
 
 ---
 title: "IncidentRelation"
-title_tag: "Resource IncidentRelation | Module securityinsights/v20190101preview | Package azurerm"
+title_tag: "Resource IncidentRelation | Module securityinsights/v20190101preview | Package Azure RM"
 meta_desc: "Explore the IncidentRelation resource of the securityinsights/v20190101preview module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a relation between two resources"
 ---
 

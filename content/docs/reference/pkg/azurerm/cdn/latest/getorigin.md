@@ -1,7 +1,7 @@
 
 ---
 title: "GetOrigin"
-title_tag: "Function GetOrigin | Module cdn/latest | Package azurerm"
+title_tag: "Function GetOrigin | Module cdn/latest | Package Azure RM"
 meta_desc: "Explore the GetOrigin function of the cdn/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

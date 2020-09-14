@@ -1,7 +1,7 @@
 
 ---
 title: "IntegrationAccountSchema"
-title_tag: "Resource IntegrationAccountSchema | Module logic/latest | Package azurerm"
+title_tag: "Resource IntegrationAccountSchema | Module logic/latest | Package Azure RM"
 meta_desc: "Explore the IntegrationAccountSchema resource of the logic/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The integration account schema."
 ---
 

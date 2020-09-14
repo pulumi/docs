@@ -1,7 +1,7 @@
 
 ---
 title: "ListWorkspaceKeys"
-title_tag: "Function ListWorkspaceKeys | Module machinelearningservices/v20200901preview | Package azurerm"
+title_tag: "Function ListWorkspaceKeys | Module machinelearningservices/v20200901preview | Package Azure RM"
 meta_desc: "Explore the ListWorkspaceKeys function of the machinelearningservices/v20200901preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

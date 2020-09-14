@@ -1,7 +1,7 @@
 
 ---
 title: "ListIotDpsResourceKeys"
-title_tag: "Function ListIotDpsResourceKeys | Module devices/latest | Package azurerm"
+title_tag: "Function ListIotDpsResourceKeys | Module devices/latest | Package Azure RM"
 meta_desc: "Explore the ListIotDpsResourceKeys function of the devices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

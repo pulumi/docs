@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateAtlase"
-title_tag: "Resource PrivateAtlase | Module maps/v20200201preview | Package azurerm"
+title_tag: "Resource PrivateAtlase | Module maps/v20200201preview | Package Azure RM"
 meta_desc: "Explore the PrivateAtlase resource of the maps/v20200201preview module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure resource which represents which will provision the ability to create private location data."
 ---
 

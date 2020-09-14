@@ -1,7 +1,7 @@
 
 ---
 title: "Input"
-title_tag: "Resource Input | Module streamanalytics/latest | Package azurerm"
+title_tag: "Resource Input | Module streamanalytics/latest | Package Azure RM"
 meta_desc: "Explore the Input resource of the streamanalytics/latest module, including examples, input properties, output properties, lookup functions, and supporting types. An input object, containing all information associated with the named input. All inputs are contained under a streaming job."
 ---
 

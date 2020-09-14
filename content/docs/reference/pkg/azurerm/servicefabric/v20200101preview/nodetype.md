@@ -1,7 +1,7 @@
 
 ---
 title: "NodeType"
-title_tag: "Resource NodeType | Module servicefabric/v20200101preview | Package azurerm"
+title_tag: "Resource NodeType | Module servicefabric/v20200101preview | Package Azure RM"
 meta_desc: "Explore the NodeType resource of the servicefabric/v20200101preview module, including examples, input properties, output properties, lookup functions, and supporting types. Describes a node type in the cluster, each node type represents sub set of nodes in the cluster."
 ---
 

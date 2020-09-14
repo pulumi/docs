@@ -1,7 +1,7 @@
 
 ---
 title: "RelationshipLink"
-title_tag: "Resource RelationshipLink | Module customerinsights/latest | Package azurerm"
+title_tag: "Resource RelationshipLink | Module customerinsights/latest | Package Azure RM"
 meta_desc: "Explore the RelationshipLink resource of the customerinsights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The relationship link resource format."
 ---
 

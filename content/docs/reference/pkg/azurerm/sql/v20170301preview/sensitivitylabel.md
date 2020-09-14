@@ -1,7 +1,7 @@
 
 ---
 title: "SensitivityLabel"
-title_tag: "Resource SensitivityLabel | Module sql/v20170301preview | Package azurerm"
+title_tag: "Resource SensitivityLabel | Module sql/v20170301preview | Package Azure RM"
 meta_desc: "Explore the SensitivityLabel resource of the sql/v20170301preview module, including examples, input properties, output properties, lookup functions, and supporting types. A sensitivity label."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "SapMonitor"
-title_tag: "Resource SapMonitor | Module hanaonazure/v20200207preview | Package azurerm"
+title_tag: "Resource SapMonitor | Module hanaonazure/v20200207preview | Package Azure RM"
 meta_desc: "Explore the SapMonitor resource of the hanaonazure/v20200207preview module, including examples, input properties, output properties, lookup functions, and supporting types. SAP monitor info on Azure (ARM properties and SAP monitor properties)"
 ---
 

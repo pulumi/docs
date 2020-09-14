@@ -1,7 +1,7 @@
 
 ---
 title: "Budget"
-title_tag: "Resource Budget | Module consumption/latest | Package azurerm"
+title_tag: "Resource Budget | Module consumption/latest | Package Azure RM"
 meta_desc: "Explore the Budget resource of the consumption/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A budget resource."
 ---
 

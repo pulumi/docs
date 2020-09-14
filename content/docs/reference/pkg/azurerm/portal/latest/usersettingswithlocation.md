@@ -1,7 +1,7 @@
 
 ---
 title: "UserSettingsWithLocation"
-title_tag: "Resource UserSettingsWithLocation | Module portal/latest | Package azurerm"
+title_tag: "Resource UserSettingsWithLocation | Module portal/latest | Package Azure RM"
 meta_desc: "Explore the UserSettingsWithLocation resource of the portal/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Response to get user settings"
 ---
 

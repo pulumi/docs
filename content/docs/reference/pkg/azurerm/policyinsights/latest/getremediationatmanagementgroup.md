@@ -1,7 +1,7 @@
 
 ---
 title: "GetRemediationAtManagementGroup"
-title_tag: "Function GetRemediationAtManagementGroup | Module policyinsights/latest | Package azurerm"
+title_tag: "Function GetRemediationAtManagementGroup | Module policyinsights/latest | Package Azure RM"
 meta_desc: "Explore the GetRemediationAtManagementGroup function of the policyinsights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

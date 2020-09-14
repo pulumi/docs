@@ -1,7 +1,7 @@
 
 ---
 title: "GetDataCollectionRuleAssociation"
-title_tag: "Function GetDataCollectionRuleAssociation | Module insights/v20191101preview | Package azurerm"
+title_tag: "Function GetDataCollectionRuleAssociation | Module insights/v20191101preview | Package Azure RM"
 meta_desc: "Explore the GetDataCollectionRuleAssociation function of the insights/v20191101preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

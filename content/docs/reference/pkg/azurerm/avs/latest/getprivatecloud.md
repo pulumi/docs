@@ -1,7 +1,7 @@
 
 ---
 title: "GetPrivateCloud"
-title_tag: "Function GetPrivateCloud | Module avs/latest | Package azurerm"
+title_tag: "Function GetPrivateCloud | Module avs/latest | Package Azure RM"
 meta_desc: "Explore the GetPrivateCloud function of the avs/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

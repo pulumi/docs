@@ -1,7 +1,7 @@
 
 ---
 title: "Formula"
-title_tag: "Resource Formula | Module devtestlab/latest | Package azurerm"
+title_tag: "Resource Formula | Module devtestlab/latest | Package Azure RM"
 meta_desc: "Explore the Formula resource of the devtestlab/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A formula for creating a VM, specifying an image base and other parameters"
 ---
 

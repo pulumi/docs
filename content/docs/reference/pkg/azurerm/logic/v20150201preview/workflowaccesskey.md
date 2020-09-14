@@ -1,7 +1,7 @@
 
 ---
 title: "WorkflowAccessKey"
-title_tag: "Resource WorkflowAccessKey | Module logic/v20150201preview | Package azurerm"
+title_tag: "Resource WorkflowAccessKey | Module logic/v20150201preview | Package Azure RM"
 meta_desc: "Explore the WorkflowAccessKey resource of the logic/v20150201preview module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

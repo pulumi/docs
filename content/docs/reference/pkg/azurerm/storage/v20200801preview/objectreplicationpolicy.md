@@ -1,7 +1,7 @@
 
 ---
 title: "ObjectReplicationPolicy"
-title_tag: "Resource ObjectReplicationPolicy | Module storage/v20200801preview | Package azurerm"
+title_tag: "Resource ObjectReplicationPolicy | Module storage/v20200801preview | Package Azure RM"
 meta_desc: "Explore the ObjectReplicationPolicy resource of the storage/v20200801preview module, including examples, input properties, output properties, lookup functions, and supporting types. The replication policy between two storage accounts. Multiple rules can be defined in one policy."
 ---
 

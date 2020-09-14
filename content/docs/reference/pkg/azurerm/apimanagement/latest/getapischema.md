@@ -1,7 +1,7 @@
 
 ---
 title: "GetApiSchema"
-title_tag: "Function GetApiSchema | Module apimanagement/latest | Package azurerm"
+title_tag: "Function GetApiSchema | Module apimanagement/latest | Package Azure RM"
 meta_desc: "Explore the GetApiSchema function of the apimanagement/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

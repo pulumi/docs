@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateLinkHub"
-title_tag: "Resource PrivateLinkHub | Module synapse/v20190601preview | Package azurerm"
+title_tag: "Resource PrivateLinkHub | Module synapse/v20190601preview | Package Azure RM"
 meta_desc: "Explore the PrivateLinkHub resource of the synapse/v20190601preview module, including examples, input properties, output properties, lookup functions, and supporting types. A privateLinkHub"
 ---
 

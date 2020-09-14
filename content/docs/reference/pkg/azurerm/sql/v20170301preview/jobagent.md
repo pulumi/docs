@@ -1,7 +1,7 @@
 
 ---
 title: "JobAgent"
-title_tag: "Resource JobAgent | Module sql/v20170301preview | Package azurerm"
+title_tag: "Resource JobAgent | Module sql/v20170301preview | Package Azure RM"
 meta_desc: "Explore the JobAgent resource of the sql/v20170301preview module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure SQL job agent."
 ---
 

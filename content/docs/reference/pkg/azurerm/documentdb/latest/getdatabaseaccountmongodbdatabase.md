@@ -1,7 +1,7 @@
 
 ---
 title: "GetDatabaseAccountMongoDBDatabase"
-title_tag: "Function GetDatabaseAccountMongoDBDatabase | Module documentdb/latest | Package azurerm"
+title_tag: "Function GetDatabaseAccountMongoDBDatabase | Module documentdb/latest | Package Azure RM"
 meta_desc: "Explore the GetDatabaseAccountMongoDBDatabase function of the documentdb/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

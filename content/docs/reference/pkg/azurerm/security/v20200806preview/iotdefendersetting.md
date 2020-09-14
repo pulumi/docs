@@ -1,7 +1,7 @@
 
 ---
 title: "IotDefenderSetting"
-title_tag: "Resource IotDefenderSetting | Module security/v20200806preview | Package azurerm"
+title_tag: "Resource IotDefenderSetting | Module security/v20200806preview | Package Azure RM"
 meta_desc: "Explore the IotDefenderSetting resource of the security/v20200806preview module, including examples, input properties, output properties, lookup functions, and supporting types. IoT Defender settings"
 ---
 

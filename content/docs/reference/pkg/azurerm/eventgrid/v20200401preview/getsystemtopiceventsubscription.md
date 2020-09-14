@@ -1,7 +1,7 @@
 
 ---
 title: "GetSystemTopicEventSubscription"
-title_tag: "Function GetSystemTopicEventSubscription | Module eventgrid/v20200401preview | Package azurerm"
+title_tag: "Function GetSystemTopicEventSubscription | Module eventgrid/v20200401preview | Package Azure RM"
 meta_desc: "Explore the GetSystemTopicEventSubscription function of the eventgrid/v20200401preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

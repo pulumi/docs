@@ -1,7 +1,7 @@
 
 ---
 title: "Server"
-title_tag: "Resource Server | Module dbformysql/latest | Package azurerm"
+title_tag: "Resource Server | Module dbformysql/latest | Package Azure RM"
 meta_desc: "Explore the Server resource of the dbformysql/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a server."
 ---
 

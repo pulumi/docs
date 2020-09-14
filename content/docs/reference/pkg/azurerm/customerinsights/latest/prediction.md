@@ -1,7 +1,7 @@
 
 ---
 title: "Prediction"
-title_tag: "Resource Prediction | Module customerinsights/latest | Package azurerm"
+title_tag: "Resource Prediction | Module customerinsights/latest | Package Azure RM"
 meta_desc: "Explore the Prediction resource of the customerinsights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The prediction resource format."
 ---
 

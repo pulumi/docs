@@ -1,7 +1,7 @@
 
 ---
 title: "GetCassandraResourceCassandraTable"
-title_tag: "Function GetCassandraResourceCassandraTable | Module documentdb/latest | Package azurerm"
+title_tag: "Function GetCassandraResourceCassandraTable | Module documentdb/latest | Package Azure RM"
 meta_desc: "Explore the GetCassandraResourceCassandraTable function of the documentdb/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

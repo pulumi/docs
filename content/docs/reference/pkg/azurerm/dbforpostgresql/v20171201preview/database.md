@@ -1,7 +1,7 @@
 
 ---
 title: "Database"
-title_tag: "Resource Database | Module dbforpostgresql/v20171201preview | Package azurerm"
+title_tag: "Resource Database | Module dbforpostgresql/v20171201preview | Package Azure RM"
 meta_desc: "Explore the Database resource of the dbforpostgresql/v20171201preview module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a Database."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GuestConfigurationAssignment"
-title_tag: "Resource GuestConfigurationAssignment | Module compute/latest | Package azurerm"
+title_tag: "Resource GuestConfigurationAssignment | Module compute/latest | Package Azure RM"
 meta_desc: "Explore the GuestConfigurationAssignment resource of the compute/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Guest configuration assignment is an association between a machine and guest configuration."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualMachineScaleSet"
-title_tag: "Resource VirtualMachineScaleSet | Module compute/latest | Package azurerm"
+title_tag: "Resource VirtualMachineScaleSet | Module compute/latest | Package Azure RM"
 meta_desc: "Explore the VirtualMachineScaleSet resource of the compute/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Describes a Virtual Machine Scale Set."
 ---
 

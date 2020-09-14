@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualNetwork"
-title_tag: "Resource VirtualNetwork | Module devtestlab/latest | Package azurerm"
+title_tag: "Resource VirtualNetwork | Module devtestlab/latest | Package Azure RM"
 meta_desc: "Explore the VirtualNetwork resource of the devtestlab/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A virtual network."
 ---
 

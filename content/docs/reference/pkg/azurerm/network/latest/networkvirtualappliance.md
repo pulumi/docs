@@ -1,7 +1,7 @@
 
 ---
 title: "NetworkVirtualAppliance"
-title_tag: "Resource NetworkVirtualAppliance | Module network/latest | Package azurerm"
+title_tag: "Resource NetworkVirtualAppliance | Module network/latest | Package Azure RM"
 meta_desc: "Explore the NetworkVirtualAppliance resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. NetworkVirtualAppliance Resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "OpenShiftManagedCluster"
-title_tag: "Resource OpenShiftManagedCluster | Module containerservice/v20191027preview | Package azurerm"
+title_tag: "Resource OpenShiftManagedCluster | Module containerservice/v20191027preview | Package Azure RM"
 meta_desc: "Explore the OpenShiftManagedCluster resource of the containerservice/v20191027preview module, including examples, input properties, output properties, lookup functions, and supporting types. OpenShift Managed cluster."
 ---
 

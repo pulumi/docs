@@ -1,7 +1,7 @@
 
 ---
 title: "ListAccountChannelTypes"
-title_tag: "Function ListAccountChannelTypes | Module engagementfabric/v20180901preview | Package azurerm"
+title_tag: "Function ListAccountChannelTypes | Module engagementfabric/v20180901preview | Package Azure RM"
 meta_desc: "Explore the ListAccountChannelTypes function of the engagementfabric/v20180901preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

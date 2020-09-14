@@ -1,7 +1,7 @@
 
 ---
 title: "Workspace"
-title_tag: "Resource Workspace | Module databricks/latest | Package azurerm"
+title_tag: "Resource Workspace | Module databricks/latest | Package Azure RM"
 meta_desc: "Explore the Workspace resource of the databricks/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Information about workspace."
 ---
 

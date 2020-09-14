@@ -1,7 +1,7 @@
 
 ---
 title: "GetManagementAssociation"
-title_tag: "Function GetManagementAssociation | Module operationsmanagement/v20151101preview | Package azurerm"
+title_tag: "Function GetManagementAssociation | Module operationsmanagement/v20151101preview | Package Azure RM"
 meta_desc: "Explore the GetManagementAssociation function of the operationsmanagement/v20151101preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

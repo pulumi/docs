@@ -1,7 +1,7 @@
 
 ---
 title: "GetDiagnosticSetting"
-title_tag: "Function GetDiagnosticSetting | Module insights/v20170501preview | Package azurerm"
+title_tag: "Function GetDiagnosticSetting | Module insights/v20170501preview | Package Azure RM"
 meta_desc: "Explore the GetDiagnosticSetting function of the insights/v20170501preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

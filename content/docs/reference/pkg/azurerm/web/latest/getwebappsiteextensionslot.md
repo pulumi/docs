@@ -1,7 +1,7 @@
 
 ---
 title: "GetWebAppSiteExtensionSlot"
-title_tag: "Function GetWebAppSiteExtensionSlot | Module web/latest | Package azurerm"
+title_tag: "Function GetWebAppSiteExtensionSlot | Module web/latest | Package Azure RM"
 meta_desc: "Explore the GetWebAppSiteExtensionSlot function of the web/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

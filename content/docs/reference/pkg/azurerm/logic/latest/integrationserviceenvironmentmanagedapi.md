@@ -1,7 +1,7 @@
 
 ---
 title: "IntegrationServiceEnvironmentManagedApi"
-title_tag: "Resource IntegrationServiceEnvironmentManagedApi | Module logic/latest | Package azurerm"
+title_tag: "Resource IntegrationServiceEnvironmentManagedApi | Module logic/latest | Package Azure RM"
 meta_desc: "Explore the IntegrationServiceEnvironmentManagedApi resource of the logic/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The managed api definition."
 ---
 

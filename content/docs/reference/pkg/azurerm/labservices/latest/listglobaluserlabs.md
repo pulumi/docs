@@ -1,7 +1,7 @@
 
 ---
 title: "ListGlobalUserLabs"
-title_tag: "Function ListGlobalUserLabs | Module labservices/latest | Package azurerm"
+title_tag: "Function ListGlobalUserLabs | Module labservices/latest | Package Azure RM"
 meta_desc: "Explore the ListGlobalUserLabs function of the labservices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

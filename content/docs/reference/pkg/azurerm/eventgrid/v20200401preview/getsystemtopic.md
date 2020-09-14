@@ -1,7 +1,7 @@
 
 ---
 title: "GetSystemTopic"
-title_tag: "Function GetSystemTopic | Module eventgrid/v20200401preview | Package azurerm"
+title_tag: "Function GetSystemTopic | Module eventgrid/v20200401preview | Package Azure RM"
 meta_desc: "Explore the GetSystemTopic function of the eventgrid/v20200401preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

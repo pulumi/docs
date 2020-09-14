@@ -1,7 +1,7 @@
 
 ---
 title: "ConfigurationProfile"
-title_tag: "Resource ConfigurationProfile | Module changeanalysis/v20200401preview | Package azurerm"
+title_tag: "Resource ConfigurationProfile | Module changeanalysis/v20200401preview | Package Azure RM"
 meta_desc: "Explore the ConfigurationProfile resource of the changeanalysis/v20200401preview module, including examples, input properties, output properties, lookup functions, and supporting types. A profile object that contains change analysis configuration, such as notification settings, for this subscription"
 ---
 

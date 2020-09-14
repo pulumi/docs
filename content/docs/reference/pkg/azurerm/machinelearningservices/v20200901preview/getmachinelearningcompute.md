@@ -1,7 +1,7 @@
 
 ---
 title: "GetMachineLearningCompute"
-title_tag: "Function GetMachineLearningCompute | Module machinelearningservices/v20200901preview | Package azurerm"
+title_tag: "Function GetMachineLearningCompute | Module machinelearningservices/v20200901preview | Package Azure RM"
 meta_desc: "Explore the GetMachineLearningCompute function of the machinelearningservices/v20200901preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

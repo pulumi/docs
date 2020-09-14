@@ -1,7 +1,7 @@
 
 ---
 title: "MachineLearningService"
-title_tag: "Resource MachineLearningService | Module machinelearningservices/v20200901preview | Package azurerm"
+title_tag: "Resource MachineLearningService | Module machinelearningservices/v20200901preview | Package Azure RM"
 meta_desc: "Explore the MachineLearningService resource of the machinelearningservices/v20200901preview module, including examples, input properties, output properties, lookup functions, and supporting types. Machine Learning service object wrapped into ARM resource envelope."
 ---
 

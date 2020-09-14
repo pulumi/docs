@@ -1,7 +1,7 @@
 
 ---
 title: "GetBackend"
-title_tag: "Function GetBackend | Module apimanagement/latest | Package azurerm"
+title_tag: "Function GetBackend | Module apimanagement/latest | Package Azure RM"
 meta_desc: "Explore the GetBackend function of the apimanagement/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

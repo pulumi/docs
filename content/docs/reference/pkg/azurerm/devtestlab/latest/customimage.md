@@ -1,7 +1,7 @@
 
 ---
 title: "CustomImage"
-title_tag: "Resource CustomImage | Module devtestlab/latest | Package azurerm"
+title_tag: "Resource CustomImage | Module devtestlab/latest | Package Azure RM"
 meta_desc: "Explore the CustomImage resource of the devtestlab/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A custom image."
 ---
 

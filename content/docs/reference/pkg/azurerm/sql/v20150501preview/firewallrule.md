@@ -1,7 +1,7 @@
 
 ---
 title: "FirewallRule"
-title_tag: "Resource FirewallRule | Module sql/v20150501preview | Package azurerm"
+title_tag: "Resource FirewallRule | Module sql/v20150501preview | Package Azure RM"
 meta_desc: "Explore the FirewallRule resource of the sql/v20150501preview module, including examples, input properties, output properties, lookup functions, and supporting types. A server firewall rule."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ListDatabasePrincipals"
-title_tag: "Function ListDatabasePrincipals | Module kusto/latest | Package azurerm"
+title_tag: "Function ListDatabasePrincipals | Module kusto/latest | Package Azure RM"
 meta_desc: "Explore the ListDatabasePrincipals function of the kusto/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

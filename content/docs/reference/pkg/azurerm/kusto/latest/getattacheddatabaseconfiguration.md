@@ -1,7 +1,7 @@
 
 ---
 title: "GetAttachedDatabaseConfiguration"
-title_tag: "Function GetAttachedDatabaseConfiguration | Module kusto/latest | Package azurerm"
+title_tag: "Function GetAttachedDatabaseConfiguration | Module kusto/latest | Package Azure RM"
 meta_desc: "Explore the GetAttachedDatabaseConfiguration function of the kusto/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

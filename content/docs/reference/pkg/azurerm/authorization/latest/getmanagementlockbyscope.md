@@ -1,7 +1,7 @@
 
 ---
 title: "GetManagementLockByScope"
-title_tag: "Function GetManagementLockByScope | Module authorization/latest | Package azurerm"
+title_tag: "Function GetManagementLockByScope | Module authorization/latest | Package Azure RM"
 meta_desc: "Explore the GetManagementLockByScope function of the authorization/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetConfigurationStore"
-title_tag: "Function GetConfigurationStore | Module appconfiguration/latest | Package azurerm"
+title_tag: "Function GetConfigurationStore | Module appconfiguration/latest | Package Azure RM"
 meta_desc: "Explore the GetConfigurationStore function of the appconfiguration/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

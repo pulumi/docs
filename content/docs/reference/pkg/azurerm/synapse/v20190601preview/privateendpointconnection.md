@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateEndpointConnection"
-title_tag: "Resource PrivateEndpointConnection | Module synapse/v20190601preview | Package azurerm"
+title_tag: "Resource PrivateEndpointConnection | Module synapse/v20190601preview | Package Azure RM"
 meta_desc: "Explore the PrivateEndpointConnection resource of the synapse/v20190601preview module, including examples, input properties, output properties, lookup functions, and supporting types. A private endpoint connection"
 ---
 

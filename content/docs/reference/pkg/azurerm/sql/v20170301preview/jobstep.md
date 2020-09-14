@@ -1,7 +1,7 @@
 
 ---
 title: "JobStep"
-title_tag: "Resource JobStep | Module sql/v20170301preview | Package azurerm"
+title_tag: "Resource JobStep | Module sql/v20170301preview | Package Azure RM"
 meta_desc: "Explore the JobStep resource of the sql/v20170301preview module, including examples, input properties, output properties, lookup functions, and supporting types. A job step."
 ---
 

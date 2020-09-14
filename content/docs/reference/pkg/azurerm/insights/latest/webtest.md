@@ -1,7 +1,7 @@
 
 ---
 title: "WebTest"
-title_tag: "Resource WebTest | Module insights/latest | Package azurerm"
+title_tag: "Resource WebTest | Module insights/latest | Package Azure RM"
 meta_desc: "Explore the WebTest resource of the insights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. An Application Insights web test definition."
 ---
 

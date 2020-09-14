@@ -1,7 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module hdinsight/v20180601preview | Package azurerm"
+title_tag: "Resource Cluster | Module hdinsight/v20180601preview | Package Azure RM"
 meta_desc: "Explore the Cluster resource of the hdinsight/v20180601preview module, including examples, input properties, output properties, lookup functions, and supporting types. The HDInsight cluster."
 ---
 

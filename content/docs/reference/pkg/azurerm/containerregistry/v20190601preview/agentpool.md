@@ -1,7 +1,7 @@
 
 ---
 title: "AgentPool"
-title_tag: "Resource AgentPool | Module containerregistry/v20190601preview | Package azurerm"
+title_tag: "Resource AgentPool | Module containerregistry/v20190601preview | Package Azure RM"
 meta_desc: "Explore the AgentPool resource of the containerregistry/v20190601preview module, including examples, input properties, output properties, lookup functions, and supporting types. The agentpool that has the ARM resource and properties. "
 ---
 

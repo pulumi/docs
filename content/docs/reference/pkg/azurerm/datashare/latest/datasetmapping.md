@@ -1,7 +1,7 @@
 
 ---
 title: "DataSetMapping"
-title_tag: "Resource DataSetMapping | Module datashare/latest | Package azurerm"
+title_tag: "Resource DataSetMapping | Module datashare/latest | Package Azure RM"
 meta_desc: "Explore the DataSetMapping resource of the datashare/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A data set mapping data transfer object."
 ---
 

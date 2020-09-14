@@ -1,7 +1,7 @@
 
 ---
 title: "MultipleActivationKey"
-title_tag: "Resource MultipleActivationKey | Module windowsesu/v20190916preview | Package azurerm"
+title_tag: "Resource MultipleActivationKey | Module windowsesu/v20190916preview | Package Azure RM"
 meta_desc: "Explore the MultipleActivationKey resource of the windowsesu/v20190916preview module, including examples, input properties, output properties, lookup functions, and supporting types. MAK key details."
 ---
 

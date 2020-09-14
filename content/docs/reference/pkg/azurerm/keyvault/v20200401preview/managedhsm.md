@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedHsm"
-title_tag: "Resource ManagedHsm | Module keyvault/v20200401preview | Package azurerm"
+title_tag: "Resource ManagedHsm | Module keyvault/v20200401preview | Package Azure RM"
 meta_desc: "Explore the ManagedHsm resource of the keyvault/v20200401preview module, including examples, input properties, output properties, lookup functions, and supporting types. Resource information with extended details."
 ---
 

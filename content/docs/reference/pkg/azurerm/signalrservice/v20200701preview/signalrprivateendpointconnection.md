@@ -1,7 +1,7 @@
 
 ---
 title: "SignalRPrivateEndpointConnection"
-title_tag: "Resource SignalRPrivateEndpointConnection | Module signalrservice/v20200701preview | Package azurerm"
+title_tag: "Resource SignalRPrivateEndpointConnection | Module signalrservice/v20200701preview | Package Azure RM"
 meta_desc: "Explore the SignalRPrivateEndpointConnection resource of the signalrservice/v20200701preview module, including examples, input properties, output properties, lookup functions, and supporting types. A private endpoint connection to SignalR resource"
 ---
 

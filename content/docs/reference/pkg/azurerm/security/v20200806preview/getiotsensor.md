@@ -1,7 +1,7 @@
 
 ---
 title: "GetIotSensor"
-title_tag: "Function GetIotSensor | Module security/v20200806preview | Package azurerm"
+title_tag: "Function GetIotSensor | Module security/v20200806preview | Package Azure RM"
 meta_desc: "Explore the GetIotSensor function of the security/v20200806preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Domain"
-title_tag: "Resource Domain | Module domainregistration/latest | Package azurerm"
+title_tag: "Resource Domain | Module domainregistration/latest | Package Azure RM"
 meta_desc: "Explore the Domain resource of the domainregistration/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Information about a domain."
 ---
 

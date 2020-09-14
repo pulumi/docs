@@ -1,7 +1,7 @@
 
 ---
 title: "GetP2sVpnServerConfiguration"
-title_tag: "Function GetP2sVpnServerConfiguration | Module network/latest | Package azurerm"
+title_tag: "Function GetP2sVpnServerConfiguration | Module network/latest | Package Azure RM"
 meta_desc: "Explore the GetP2sVpnServerConfiguration function of the network/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

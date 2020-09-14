@@ -1,7 +1,7 @@
 
 ---
 title: "GetProtectionPolicy"
-title_tag: "Function GetProtectionPolicy | Module recoveryservices/latest | Package azurerm"
+title_tag: "Function GetProtectionPolicy | Module recoveryservices/latest | Package Azure RM"
 meta_desc: "Explore the GetProtectionPolicy function of the recoveryservices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

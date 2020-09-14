@@ -1,7 +1,7 @@
 
 ---
 title: "GetVolume"
-title_tag: "Function GetVolume | Module storsimple/latest | Package azurerm"
+title_tag: "Function GetVolume | Module storsimple/latest | Package Azure RM"
 meta_desc: "Explore the GetVolume function of the storsimple/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

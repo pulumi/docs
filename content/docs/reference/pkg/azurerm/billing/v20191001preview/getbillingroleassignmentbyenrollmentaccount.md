@@ -1,7 +1,7 @@
 
 ---
 title: "GetBillingRoleAssignmentByEnrollmentAccount"
-title_tag: "Function GetBillingRoleAssignmentByEnrollmentAccount | Module billing/v20191001preview | Package azurerm"
+title_tag: "Function GetBillingRoleAssignmentByEnrollmentAccount | Module billing/v20191001preview | Package Azure RM"
 meta_desc: "Explore the GetBillingRoleAssignmentByEnrollmentAccount function of the billing/v20191001preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

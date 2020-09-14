@@ -1,7 +1,7 @@
 
 ---
 title: "GuestUsage"
-title_tag: "Resource GuestUsage | Module azureactivedirectory/v20200501preview | Package azurerm"
+title_tag: "Resource GuestUsage | Module azureactivedirectory/v20200501preview | Package Azure RM"
 meta_desc: "Explore the GuestUsage resource of the azureactivedirectory/v20200501preview module, including examples, input properties, output properties, lookup functions, and supporting types. Guest Usages Resource"
 ---
 

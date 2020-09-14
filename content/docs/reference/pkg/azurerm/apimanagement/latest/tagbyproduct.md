@@ -1,7 +1,7 @@
 
 ---
 title: "TagByProduct"
-title_tag: "Resource TagByProduct | Module apimanagement/latest | Package azurerm"
+title_tag: "Resource TagByProduct | Module apimanagement/latest | Package Azure RM"
 meta_desc: "Explore the TagByProduct resource of the apimanagement/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Tag Contract details."
 ---
 

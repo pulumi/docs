@@ -1,7 +1,7 @@
 
 ---
 title: "IntegrationRuntime"
-title_tag: "Resource IntegrationRuntime | Module datafactory/latest | Package azurerm"
+title_tag: "Resource IntegrationRuntime | Module datafactory/latest | Package Azure RM"
 meta_desc: "Explore the IntegrationRuntime resource of the datafactory/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Integration runtime resource type."
 ---
 

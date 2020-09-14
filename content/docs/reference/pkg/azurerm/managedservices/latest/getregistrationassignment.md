@@ -1,7 +1,7 @@
 
 ---
 title: "GetRegistrationAssignment"
-title_tag: "Function GetRegistrationAssignment | Module managedservices/latest | Package azurerm"
+title_tag: "Function GetRegistrationAssignment | Module managedservices/latest | Package Azure RM"
 meta_desc: "Explore the GetRegistrationAssignment function of the managedservices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

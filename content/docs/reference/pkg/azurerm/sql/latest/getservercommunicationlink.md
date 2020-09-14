@@ -1,7 +1,7 @@
 
 ---
 title: "GetServerCommunicationLink"
-title_tag: "Function GetServerCommunicationLink | Module sql/latest | Package azurerm"
+title_tag: "Function GetServerCommunicationLink | Module sql/latest | Package Azure RM"
 meta_desc: "Explore the GetServerCommunicationLink function of the sql/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

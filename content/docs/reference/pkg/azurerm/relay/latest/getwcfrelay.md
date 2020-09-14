@@ -1,7 +1,7 @@
 
 ---
 title: "GetWCFRelay"
-title_tag: "Function GetWCFRelay | Module relay/latest | Package azurerm"
+title_tag: "Function GetWCFRelay | Module relay/latest | Package Azure RM"
 meta_desc: "Explore the GetWCFRelay function of the relay/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

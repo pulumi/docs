@@ -1,7 +1,7 @@
 
 ---
 title: "GetPrivateStoreOffer"
-title_tag: "Function GetPrivateStoreOffer | Module marketplace/latest | Package azurerm"
+title_tag: "Function GetPrivateStoreOffer | Module marketplace/latest | Package Azure RM"
 meta_desc: "Explore the GetPrivateStoreOffer function of the marketplace/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

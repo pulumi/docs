@@ -1,7 +1,7 @@
 
 ---
 title: "GetAssessment"
-title_tag: "Function GetAssessment | Module security/latest | Package azurerm"
+title_tag: "Function GetAssessment | Module security/latest | Package Azure RM"
 meta_desc: "Explore the GetAssessment function of the security/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

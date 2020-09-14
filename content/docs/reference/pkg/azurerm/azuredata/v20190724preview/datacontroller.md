@@ -1,7 +1,7 @@
 
 ---
 title: "DataController"
-title_tag: "Resource DataController | Module azuredata/v20190724preview | Package azurerm"
+title_tag: "Resource DataController | Module azuredata/v20190724preview | Package Azure RM"
 meta_desc: "Explore the DataController resource of the azuredata/v20190724preview module, including examples, input properties, output properties, lookup functions, and supporting types. Data controller resource"
 ---
 

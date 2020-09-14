@@ -1,7 +1,7 @@
 
 ---
 title: "Controller"
-title_tag: "Resource Controller | Module devspaces/latest | Package azurerm"
+title_tag: "Resource Controller | Module devspaces/latest | Package Azure RM"
 meta_desc: "Explore the Controller resource of the devspaces/latest module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 

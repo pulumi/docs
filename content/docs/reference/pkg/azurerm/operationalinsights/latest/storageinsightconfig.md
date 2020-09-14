@@ -1,7 +1,7 @@
 
 ---
 title: "StorageInsightConfig"
-title_tag: "Resource StorageInsightConfig | Module operationalinsights/latest | Package azurerm"
+title_tag: "Resource StorageInsightConfig | Module operationalinsights/latest | Package Azure RM"
 meta_desc: "Explore the StorageInsightConfig resource of the operationalinsights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The top level storage insight resource container."
 ---
 

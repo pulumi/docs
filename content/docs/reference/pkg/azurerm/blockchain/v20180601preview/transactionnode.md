@@ -1,7 +1,7 @@
 
 ---
 title: "TransactionNode"
-title_tag: "Resource TransactionNode | Module blockchain/v20180601preview | Package azurerm"
+title_tag: "Resource TransactionNode | Module blockchain/v20180601preview | Package Azure RM"
 meta_desc: "Explore the TransactionNode resource of the blockchain/v20180601preview module, including examples, input properties, output properties, lookup functions, and supporting types. Payload of the transaction node which is the request/response of the resource provider."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "MoveCollection"
-title_tag: "Resource MoveCollection | Module migrate/v20191001preview | Package azurerm"
+title_tag: "Resource MoveCollection | Module migrate/v20191001preview | Package Azure RM"
 meta_desc: "Explore the MoveCollection resource of the migrate/v20191001preview module, including examples, input properties, output properties, lookup functions, and supporting types. Define the move collection."
 ---
 

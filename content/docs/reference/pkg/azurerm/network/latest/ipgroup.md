@@ -1,7 +1,7 @@
 
 ---
 title: "IpGroup"
-title_tag: "Resource IpGroup | Module network/latest | Package azurerm"
+title_tag: "Resource IpGroup | Module network/latest | Package Azure RM"
 meta_desc: "Explore the IpGroup resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The IpGroups resource information."
 ---
 

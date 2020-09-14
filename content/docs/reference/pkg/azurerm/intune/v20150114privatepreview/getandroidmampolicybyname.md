@@ -1,7 +1,7 @@
 
 ---
 title: "GetAndroidMAMPolicyByName"
-title_tag: "Function GetAndroidMAMPolicyByName | Module intune/v20150114privatepreview | Package azurerm"
+title_tag: "Function GetAndroidMAMPolicyByName | Module intune/v20150114privatepreview | Package Azure RM"
 meta_desc: "Explore the GetAndroidMAMPolicyByName function of the intune/v20150114privatepreview module, including examples, input properties, output properties, and supporting types. "
 ---
 

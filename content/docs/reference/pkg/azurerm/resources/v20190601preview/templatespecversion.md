@@ -1,7 +1,7 @@
 
 ---
 title: "TemplateSpecVersion"
-title_tag: "Resource TemplateSpecVersion | Module resources/v20190601preview | Package azurerm"
+title_tag: "Resource TemplateSpecVersion | Module resources/v20190601preview | Package Azure RM"
 meta_desc: "Explore the TemplateSpecVersion resource of the resources/v20190601preview module, including examples, input properties, output properties, lookup functions, and supporting types. Template Spec Version object."
 ---
 

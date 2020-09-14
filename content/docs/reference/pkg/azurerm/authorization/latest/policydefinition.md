@@ -1,7 +1,7 @@
 
 ---
 title: "PolicyDefinition"
-title_tag: "Resource PolicyDefinition | Module authorization/latest | Package azurerm"
+title_tag: "Resource PolicyDefinition | Module authorization/latest | Package Azure RM"
 meta_desc: "Explore the PolicyDefinition resource of the authorization/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The policy definition."
 ---
 

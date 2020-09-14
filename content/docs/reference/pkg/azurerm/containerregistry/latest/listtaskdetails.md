@@ -1,7 +1,7 @@
 
 ---
 title: "ListTaskDetails"
-title_tag: "Function ListTaskDetails | Module containerregistry/latest | Package azurerm"
+title_tag: "Function ListTaskDetails | Module containerregistry/latest | Package Azure RM"
 meta_desc: "Explore the ListTaskDetails function of the containerregistry/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

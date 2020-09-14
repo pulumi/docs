@@ -1,7 +1,7 @@
 
 ---
 title: "ListPrivateCloudAdminCredentials"
-title_tag: "Function ListPrivateCloudAdminCredentials | Module avs/latest | Package azurerm"
+title_tag: "Function ListPrivateCloudAdminCredentials | Module avs/latest | Package Azure RM"
 meta_desc: "Explore the ListPrivateCloudAdminCredentials function of the avs/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

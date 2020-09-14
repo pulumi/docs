@@ -1,7 +1,7 @@
 
 ---
 title: "Link"
-title_tag: "Resource Link | Module customerinsights/latest | Package azurerm"
+title_tag: "Resource Link | Module customerinsights/latest | Package Azure RM"
 meta_desc: "Explore the Link resource of the customerinsights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The link resource format."
 ---
 

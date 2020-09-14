@@ -1,7 +1,7 @@
 
 ---
 title: "GetNodeType"
-title_tag: "Function GetNodeType | Module servicefabric/v20200101preview | Package azurerm"
+title_tag: "Function GetNodeType | Module servicefabric/v20200101preview | Package Azure RM"
 meta_desc: "Explore the GetNodeType function of the servicefabric/v20200101preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

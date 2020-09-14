@@ -1,7 +1,7 @@
 
 ---
 title: "NotebookProxy"
-title_tag: "Resource NotebookProxy | Module notebooks/v20191011preview | Package azurerm"
+title_tag: "Resource NotebookProxy | Module notebooks/v20191011preview | Package Azure RM"
 meta_desc: "Explore the NotebookProxy resource of the notebooks/v20191011preview module, including examples, input properties, output properties, lookup functions, and supporting types. A NotebookProxy resource."
 ---
 

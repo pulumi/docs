@@ -1,7 +1,7 @@
 
 ---
 title: "GetSyncGroup"
-title_tag: "Function GetSyncGroup | Module storagesync/latest | Package azurerm"
+title_tag: "Function GetSyncGroup | Module storagesync/latest | Package Azure RM"
 meta_desc: "Explore the GetSyncGroup function of the storagesync/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

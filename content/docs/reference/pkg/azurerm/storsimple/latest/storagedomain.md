@@ -1,7 +1,7 @@
 
 ---
 title: "StorageDomain"
-title_tag: "Resource StorageDomain | Module storsimple/latest | Package azurerm"
+title_tag: "Resource StorageDomain | Module storsimple/latest | Package Azure RM"
 meta_desc: "Explore the StorageDomain resource of the storsimple/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The storage domain."
 ---
 

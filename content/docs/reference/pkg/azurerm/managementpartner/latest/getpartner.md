@@ -1,7 +1,7 @@
 
 ---
 title: "GetPartner"
-title_tag: "Function GetPartner | Module managementpartner/latest | Package azurerm"
+title_tag: "Function GetPartner | Module managementpartner/latest | Package Azure RM"
 meta_desc: "Explore the GetPartner function of the managementpartner/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

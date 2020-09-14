@@ -1,7 +1,7 @@
 
 ---
 title: "GetSourceControlConfiguration"
-title_tag: "Function GetSourceControlConfiguration | Module kubernetesconfiguration/v20191101preview | Package azurerm"
+title_tag: "Function GetSourceControlConfiguration | Module kubernetesconfiguration/v20191101preview | Package Azure RM"
 meta_desc: "Explore the GetSourceControlConfiguration function of the kubernetesconfiguration/v20191101preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

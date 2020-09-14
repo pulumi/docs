@@ -1,7 +1,7 @@
 
 ---
 title: "EnvironmentSetting"
-title_tag: "Resource EnvironmentSetting | Module labservices/latest | Package azurerm"
+title_tag: "Resource EnvironmentSetting | Module labservices/latest | Package Azure RM"
 meta_desc: "Explore the EnvironmentSetting resource of the labservices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Represents settings of an environment, from which environment instances would be created"
 ---
 

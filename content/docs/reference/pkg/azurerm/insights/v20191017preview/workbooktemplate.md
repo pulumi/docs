@@ -1,7 +1,7 @@
 
 ---
 title: "WorkbookTemplate"
-title_tag: "Resource WorkbookTemplate | Module insights/v20191017preview | Package azurerm"
+title_tag: "Resource WorkbookTemplate | Module insights/v20191017preview | Package Azure RM"
 meta_desc: "Explore the WorkbookTemplate resource of the insights/v20191017preview module, including examples, input properties, output properties, lookup functions, and supporting types. An Application Insights workbook template definition."
 ---
 

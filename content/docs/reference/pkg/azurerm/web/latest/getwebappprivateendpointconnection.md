@@ -1,7 +1,7 @@
 
 ---
 title: "GetWebAppPrivateEndpointConnection"
-title_tag: "Function GetWebAppPrivateEndpointConnection | Module web/latest | Package azurerm"
+title_tag: "Function GetWebAppPrivateEndpointConnection | Module web/latest | Package Azure RM"
 meta_desc: "Explore the GetWebAppPrivateEndpointConnection function of the web/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

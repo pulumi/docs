@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateStoreOffer"
-title_tag: "Resource PrivateStoreOffer | Module marketplace/latest | Package azurerm"
+title_tag: "Resource PrivateStoreOffer | Module marketplace/latest | Package Azure RM"
 meta_desc: "Explore the PrivateStoreOffer resource of the marketplace/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The privateStore offer data structure."
 ---
 

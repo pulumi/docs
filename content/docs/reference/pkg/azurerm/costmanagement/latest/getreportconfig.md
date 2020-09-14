@@ -1,7 +1,7 @@
 
 ---
 title: "GetReportConfig"
-title_tag: "Function GetReportConfig | Module costmanagement/latest | Package azurerm"
+title_tag: "Function GetReportConfig | Module costmanagement/latest | Package Azure RM"
 meta_desc: "Explore the GetReportConfig function of the costmanagement/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

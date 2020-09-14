@@ -1,7 +1,7 @@
 
 ---
 title: "AndroidMAMPolicyByName"
-title_tag: "Resource AndroidMAMPolicyByName | Module intune/v20150114privatepreview | Package azurerm"
+title_tag: "Resource AndroidMAMPolicyByName | Module intune/v20150114privatepreview | Package Azure RM"
 meta_desc: "Explore the AndroidMAMPolicyByName resource of the intune/v20150114privatepreview module, including examples, input properties, output properties, lookup functions, and supporting types. Android Policy entity for Intune MAM."
 ---
 

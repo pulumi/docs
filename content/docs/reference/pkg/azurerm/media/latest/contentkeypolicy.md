@@ -1,7 +1,7 @@
 
 ---
 title: "ContentKeyPolicy"
-title_tag: "Resource ContentKeyPolicy | Module media/latest | Package azurerm"
+title_tag: "Resource ContentKeyPolicy | Module media/latest | Package Azure RM"
 meta_desc: "Explore the ContentKeyPolicy resource of the media/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A Content Key Policy resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetDomain"
-title_tag: "Function GetDomain | Module domainregistration/latest | Package azurerm"
+title_tag: "Function GetDomain | Module domainregistration/latest | Package Azure RM"
 meta_desc: "Explore the GetDomain function of the domainregistration/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

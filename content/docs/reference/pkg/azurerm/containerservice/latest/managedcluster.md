@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedCluster"
-title_tag: "Resource ManagedCluster | Module containerservice/latest | Package azurerm"
+title_tag: "Resource ManagedCluster | Module containerservice/latest | Package Azure RM"
 meta_desc: "Explore the ManagedCluster resource of the containerservice/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Managed cluster."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetRoleDefinition"
-title_tag: "Function GetRoleDefinition | Module authorization/latest | Package azurerm"
+title_tag: "Function GetRoleDefinition | Module authorization/latest | Package Azure RM"
 meta_desc: "Explore the GetRoleDefinition function of the authorization/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

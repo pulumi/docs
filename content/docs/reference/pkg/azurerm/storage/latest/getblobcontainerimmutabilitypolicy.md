@@ -1,7 +1,7 @@
 
 ---
 title: "GetBlobContainerImmutabilityPolicy"
-title_tag: "Function GetBlobContainerImmutabilityPolicy | Module storage/latest | Package azurerm"
+title_tag: "Function GetBlobContainerImmutabilityPolicy | Module storage/latest | Package Azure RM"
 meta_desc: "Explore the GetBlobContainerImmutabilityPolicy function of the storage/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

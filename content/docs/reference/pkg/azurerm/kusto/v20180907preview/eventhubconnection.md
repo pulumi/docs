@@ -1,7 +1,7 @@
 
 ---
 title: "EventHubConnection"
-title_tag: "Resource EventHubConnection | Module kusto/v20180907preview | Package azurerm"
+title_tag: "Resource EventHubConnection | Module kusto/v20180907preview | Package Azure RM"
 meta_desc: "Explore the EventHubConnection resource of the kusto/v20180907preview module, including examples, input properties, output properties, lookup functions, and supporting types. Class representing an event hub connection."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Report"
-title_tag: "Resource Report | Module costmanagement/v20180801preview | Package azurerm"
+title_tag: "Resource Report | Module costmanagement/v20180801preview | Package Azure RM"
 meta_desc: "Explore the Report resource of the costmanagement/v20180801preview module, including examples, input properties, output properties, lookup functions, and supporting types. A report resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetvNetPeering"
-title_tag: "Function GetvNetPeering | Module databricks/latest | Package azurerm"
+title_tag: "Function GetvNetPeering | Module databricks/latest | Package Azure RM"
 meta_desc: "Explore the GetvNetPeering function of the databricks/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

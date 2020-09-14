@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedInstance"
-title_tag: "Resource ManagedInstance | Module sql/v20200202preview | Package azurerm"
+title_tag: "Resource ManagedInstance | Module sql/v20200202preview | Package Azure RM"
 meta_desc: "Explore the ManagedInstance resource of the sql/v20200202preview module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure SQL managed instance."
 ---
 

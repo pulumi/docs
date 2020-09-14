@@ -1,7 +1,7 @@
 
 ---
 title: "Backend"
-title_tag: "Resource Backend | Module apimanagement/latest | Package azurerm"
+title_tag: "Resource Backend | Module apimanagement/latest | Package Azure RM"
 meta_desc: "Explore the Backend resource of the apimanagement/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Backend details."
 ---
 

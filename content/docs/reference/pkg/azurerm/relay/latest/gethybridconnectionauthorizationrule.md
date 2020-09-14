@@ -1,7 +1,7 @@
 
 ---
 title: "GetHybridConnectionAuthorizationRule"
-title_tag: "Function GetHybridConnectionAuthorizationRule | Module relay/latest | Package azurerm"
+title_tag: "Function GetHybridConnectionAuthorizationRule | Module relay/latest | Package Azure RM"
 meta_desc: "Explore the GetHybridConnectionAuthorizationRule function of the relay/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

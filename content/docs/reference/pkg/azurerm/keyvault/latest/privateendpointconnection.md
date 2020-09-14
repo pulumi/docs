@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateEndpointConnection"
-title_tag: "Resource PrivateEndpointConnection | Module keyvault/latest | Package azurerm"
+title_tag: "Resource PrivateEndpointConnection | Module keyvault/latest | Package Azure RM"
 meta_desc: "Explore the PrivateEndpointConnection resource of the keyvault/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Private endpoint connection resource."
 ---
 

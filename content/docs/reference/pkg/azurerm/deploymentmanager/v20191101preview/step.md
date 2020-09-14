@@ -1,7 +1,7 @@
 
 ---
 title: "Step"
-title_tag: "Resource Step | Module deploymentmanager/v20191101preview | Package azurerm"
+title_tag: "Resource Step | Module deploymentmanager/v20191101preview | Package Azure RM"
 meta_desc: "Explore the Step resource of the deploymentmanager/v20191101preview module, including examples, input properties, output properties, lookup functions, and supporting types. The resource representation of a rollout step."
 ---
 

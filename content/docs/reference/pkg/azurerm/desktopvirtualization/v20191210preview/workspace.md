@@ -1,7 +1,7 @@
 
 ---
 title: "Workspace"
-title_tag: "Resource Workspace | Module desktopvirtualization/v20191210preview | Package azurerm"
+title_tag: "Resource Workspace | Module desktopvirtualization/v20191210preview | Package Azure RM"
 meta_desc: "Explore the Workspace resource of the desktopvirtualization/v20191210preview module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a Workspace definition."
 ---
 

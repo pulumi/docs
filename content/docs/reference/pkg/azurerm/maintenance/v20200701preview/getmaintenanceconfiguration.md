@@ -1,7 +1,7 @@
 
 ---
 title: "GetMaintenanceConfiguration"
-title_tag: "Function GetMaintenanceConfiguration | Module maintenance/v20200701preview | Package azurerm"
+title_tag: "Function GetMaintenanceConfiguration | Module maintenance/v20200701preview | Package Azure RM"
 meta_desc: "Explore the GetMaintenanceConfiguration function of the maintenance/v20200701preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "PublishedBlueprint"
-title_tag: "Resource PublishedBlueprint | Module management/v20171111preview | Package azurerm"
+title_tag: "Resource PublishedBlueprint | Module management/v20171111preview | Package Azure RM"
 meta_desc: "Explore the PublishedBlueprint resource of the management/v20171111preview module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a published Blueprint."
 ---
 

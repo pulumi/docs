@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateLinkScopedResource"
-title_tag: "Resource PrivateLinkScopedResource | Module insights/v20191017preview | Package azurerm"
+title_tag: "Resource PrivateLinkScopedResource | Module insights/v20191017preview | Package Azure RM"
 meta_desc: "Explore the PrivateLinkScopedResource resource of the insights/v20191017preview module, including examples, input properties, output properties, lookup functions, and supporting types. A private link scoped resource"
 ---
 

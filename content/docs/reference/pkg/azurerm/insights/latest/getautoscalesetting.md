@@ -1,7 +1,7 @@
 
 ---
 title: "GetAutoscaleSetting"
-title_tag: "Function GetAutoscaleSetting | Module insights/latest | Package azurerm"
+title_tag: "Function GetAutoscaleSetting | Module insights/latest | Package Azure RM"
 meta_desc: "Explore the GetAutoscaleSetting function of the insights/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

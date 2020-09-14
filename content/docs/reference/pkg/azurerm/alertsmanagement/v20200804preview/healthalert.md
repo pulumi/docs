@@ -1,7 +1,7 @@
 
 ---
 title: "HealthAlert"
-title_tag: "Resource HealthAlert | Module alertsmanagement/v20200804preview | Package azurerm"
+title_tag: "Resource HealthAlert | Module alertsmanagement/v20200804preview | Package Azure RM"
 meta_desc: "Explore the HealthAlert resource of the alertsmanagement/v20200804preview module, including examples, input properties, output properties, lookup functions, and supporting types. The health alert resource."
 ---
 

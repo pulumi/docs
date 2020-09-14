@@ -1,7 +1,7 @@
 
 ---
 title: "GetLinkedServer"
-title_tag: "Function GetLinkedServer | Module cache/latest | Package azurerm"
+title_tag: "Function GetLinkedServer | Module cache/latest | Package Azure RM"
 meta_desc: "Explore the GetLinkedServer function of the cache/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

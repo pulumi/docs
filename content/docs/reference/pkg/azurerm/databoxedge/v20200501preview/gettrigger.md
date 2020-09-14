@@ -1,7 +1,7 @@
 
 ---
 title: "GetTrigger"
-title_tag: "Function GetTrigger | Module databoxedge/v20200501preview | Package azurerm"
+title_tag: "Function GetTrigger | Module databoxedge/v20200501preview | Package Azure RM"
 meta_desc: "Explore the GetTrigger function of the databoxedge/v20200501preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

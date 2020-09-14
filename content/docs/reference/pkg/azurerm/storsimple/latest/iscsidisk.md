@@ -1,7 +1,7 @@
 
 ---
 title: "IscsiDisk"
-title_tag: "Resource IscsiDisk | Module storsimple/latest | Package azurerm"
+title_tag: "Resource IscsiDisk | Module storsimple/latest | Package Azure RM"
 meta_desc: "Explore the IscsiDisk resource of the storsimple/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The iSCSI disk."
 ---
 

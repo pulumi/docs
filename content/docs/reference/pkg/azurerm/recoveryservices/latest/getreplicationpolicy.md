@@ -1,7 +1,7 @@
 
 ---
 title: "GetReplicationPolicy"
-title_tag: "Function GetReplicationPolicy | Module recoveryservices/latest | Package azurerm"
+title_tag: "Function GetReplicationPolicy | Module recoveryservices/latest | Package Azure RM"
 meta_desc: "Explore the GetReplicationPolicy function of the recoveryservices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

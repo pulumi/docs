@@ -1,7 +1,7 @@
 
 ---
 title: "DataCollectionRule"
-title_tag: "Resource DataCollectionRule | Module insights/v20191101preview | Package azurerm"
+title_tag: "Resource DataCollectionRule | Module insights/v20191101preview | Package Azure RM"
 meta_desc: "Explore the DataCollectionRule resource of the insights/v20191101preview module, including examples, input properties, output properties, lookup functions, and supporting types. Definition of ARM tracked top level resource."
 ---
 

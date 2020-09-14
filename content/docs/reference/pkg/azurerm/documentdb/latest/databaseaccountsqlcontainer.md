@@ -1,7 +1,7 @@
 
 ---
 title: "DatabaseAccountSqlContainer"
-title_tag: "Resource DatabaseAccountSqlContainer | Module documentdb/latest | Package azurerm"
+title_tag: "Resource DatabaseAccountSqlContainer | Module documentdb/latest | Package Azure RM"
 meta_desc: "Explore the DatabaseAccountSqlContainer resource of the documentdb/latest module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB container."
 ---
 

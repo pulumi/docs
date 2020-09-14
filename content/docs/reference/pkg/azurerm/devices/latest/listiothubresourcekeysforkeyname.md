@@ -1,7 +1,7 @@
 
 ---
 title: "ListIotHubResourceKeysForKeyName"
-title_tag: "Function ListIotHubResourceKeysForKeyName | Module devices/latest | Package azurerm"
+title_tag: "Function ListIotHubResourceKeysForKeyName | Module devices/latest | Package Azure RM"
 meta_desc: "Explore the ListIotHubResourceKeysForKeyName function of the devices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

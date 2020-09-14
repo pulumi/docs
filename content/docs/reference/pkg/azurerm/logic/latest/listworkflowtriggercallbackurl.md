@@ -1,7 +1,7 @@
 
 ---
 title: "ListWorkflowTriggerCallbackUrl"
-title_tag: "Function ListWorkflowTriggerCallbackUrl | Module logic/latest | Package azurerm"
+title_tag: "Function ListWorkflowTriggerCallbackUrl | Module logic/latest | Package Azure RM"
 meta_desc: "Explore the ListWorkflowTriggerCallbackUrl function of the logic/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

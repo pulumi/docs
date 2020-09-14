@@ -1,7 +1,7 @@
 
 ---
 title: "MachineGroup"
-title_tag: "Resource MachineGroup | Module operationalinsights/v20151101preview | Package azurerm"
+title_tag: "Resource MachineGroup | Module operationalinsights/v20151101preview | Package Azure RM"
 meta_desc: "Explore the MachineGroup resource of the operationalinsights/v20151101preview module, including examples, input properties, output properties, lookup functions, and supporting types. A user-defined logical grouping of machines."
 ---
 

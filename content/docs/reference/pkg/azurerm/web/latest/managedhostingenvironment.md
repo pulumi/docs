@@ -1,7 +1,7 @@
 
 ---
 title: "ManagedHostingEnvironment"
-title_tag: "Resource ManagedHostingEnvironment | Module web/latest | Package azurerm"
+title_tag: "Resource ManagedHostingEnvironment | Module web/latest | Package Azure RM"
 meta_desc: "Explore the ManagedHostingEnvironment resource of the web/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Description of an hostingEnvironment (App Service Environment)"
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "SqlResourceSqlContainer"
-title_tag: "Resource SqlResourceSqlContainer | Module documentdb/latest | Package azurerm"
+title_tag: "Resource SqlResourceSqlContainer | Module documentdb/latest | Package Azure RM"
 meta_desc: "Explore the SqlResourceSqlContainer resource of the documentdb/latest module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure Cosmos DB container."
 ---
 

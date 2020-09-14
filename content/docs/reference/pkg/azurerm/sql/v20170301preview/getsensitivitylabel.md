@@ -1,7 +1,7 @@
 
 ---
 title: "GetSensitivityLabel"
-title_tag: "Function GetSensitivityLabel | Module sql/v20170301preview | Package azurerm"
+title_tag: "Function GetSensitivityLabel | Module sql/v20170301preview | Package Azure RM"
 meta_desc: "Explore the GetSensitivityLabel function of the sql/v20170301preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

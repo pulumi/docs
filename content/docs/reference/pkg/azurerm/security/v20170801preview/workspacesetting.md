@@ -1,7 +1,7 @@
 
 ---
 title: "WorkspaceSetting"
-title_tag: "Resource WorkspaceSetting | Module security/v20170801preview | Package azurerm"
+title_tag: "Resource WorkspaceSetting | Module security/v20170801preview | Package Azure RM"
 meta_desc: "Explore the WorkspaceSetting resource of the security/v20170801preview module, including examples, input properties, output properties, lookup functions, and supporting types. Configures where to store the OMS agent data for workspaces under a scope"
 ---
 

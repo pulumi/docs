@@ -1,7 +1,7 @@
 
 ---
 title: "GetPipeline"
-title_tag: "Function GetPipeline | Module devops/v20190701preview | Package azurerm"
+title_tag: "Function GetPipeline | Module devops/v20190701preview | Package Azure RM"
 meta_desc: "Explore the GetPipeline function of the devops/v20190701preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

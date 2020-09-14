@@ -1,7 +1,7 @@
 
 ---
 title: "FirewallRule"
-title_tag: "Resource FirewallRule | Module dbformariadb/v20180601preview | Package azurerm"
+title_tag: "Resource FirewallRule | Module dbformariadb/v20180601preview | Package Azure RM"
 meta_desc: "Explore the FirewallRule resource of the dbformariadb/v20180601preview module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a server firewall rule."
 ---
 

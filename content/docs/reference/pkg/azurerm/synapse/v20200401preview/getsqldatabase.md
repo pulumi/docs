@@ -1,7 +1,7 @@
 
 ---
 title: "GetSqlDatabase"
-title_tag: "Function GetSqlDatabase | Module synapse/v20200401preview | Package azurerm"
+title_tag: "Function GetSqlDatabase | Module synapse/v20200401preview | Package Azure RM"
 meta_desc: "Explore the GetSqlDatabase function of the synapse/v20200401preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

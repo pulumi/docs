@@ -1,7 +1,7 @@
 
 ---
 title: "GetCapacityDetails"
-title_tag: "Function GetCapacityDetails | Module powerbidedicated/latest | Package azurerm"
+title_tag: "Function GetCapacityDetails | Module powerbidedicated/latest | Package Azure RM"
 meta_desc: "Explore the GetCapacityDetails function of the powerbidedicated/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

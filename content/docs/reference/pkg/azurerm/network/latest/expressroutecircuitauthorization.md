@@ -1,7 +1,7 @@
 
 ---
 title: "ExpressRouteCircuitAuthorization"
-title_tag: "Resource ExpressRouteCircuitAuthorization | Module network/latest | Package azurerm"
+title_tag: "Resource ExpressRouteCircuitAuthorization | Module network/latest | Package Azure RM"
 meta_desc: "Explore the ExpressRouteCircuitAuthorization resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Authorization in an ExpressRouteCircuit resource."
 ---
 

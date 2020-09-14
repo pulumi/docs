@@ -1,7 +1,7 @@
 
 ---
 title: "Role"
-title_tag: "Resource Role | Module databoxedge/v20200501preview | Package azurerm"
+title_tag: "Resource Role | Module databoxedge/v20200501preview | Package Azure RM"
 meta_desc: "Explore the Role resource of the databoxedge/v20200501preview module, including examples, input properties, output properties, lookup functions, and supporting types. Compute role."
 ---
 

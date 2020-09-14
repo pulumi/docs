@@ -1,7 +1,7 @@
 
 ---
 title: "Container"
-title_tag: "Resource Container | Module databoxedge/latest | Package azurerm"
+title_tag: "Resource Container | Module databoxedge/latest | Package Azure RM"
 meta_desc: "Explore the Container resource of the databoxedge/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a container on the  Data Box Edge/Gateway device."
 ---
 

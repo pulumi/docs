@@ -1,7 +1,7 @@
 
 ---
 title: "GetSqlServer"
-title_tag: "Function GetSqlServer | Module azuredata/v20190724preview | Package azurerm"
+title_tag: "Function GetSqlServer | Module azuredata/v20190724preview | Package Azure RM"
 meta_desc: "Explore the GetSqlServer function of the azuredata/v20190724preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

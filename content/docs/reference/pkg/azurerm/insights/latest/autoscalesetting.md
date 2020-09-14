@@ -1,7 +1,7 @@
 
 ---
 title: "AutoscaleSetting"
-title_tag: "Resource AutoscaleSetting | Module insights/latest | Package azurerm"
+title_tag: "Resource AutoscaleSetting | Module insights/latest | Package Azure RM"
 meta_desc: "Explore the AutoscaleSetting resource of the insights/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The autoscale setting resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ListProductDetails"
-title_tag: "Function ListProductDetails | Module azurestack/latest | Package azurerm"
+title_tag: "Function ListProductDetails | Module azurestack/latest | Package Azure RM"
 meta_desc: "Explore the ListProductDetails function of the azurestack/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

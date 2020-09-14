@@ -1,7 +1,7 @@
 
 ---
 title: "ResourceGroup"
-title_tag: "Resource ResourceGroup | Module resources/latest | Package azurerm"
+title_tag: "Resource ResourceGroup | Module resources/latest | Package Azure RM"
 meta_desc: "Explore the ResourceGroup resource of the resources/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Resource group information."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ListAssetStreamingLocators"
-title_tag: "Function ListAssetStreamingLocators | Module media/latest | Package azurerm"
+title_tag: "Function ListAssetStreamingLocators | Module media/latest | Package Azure RM"
 meta_desc: "Explore the ListAssetStreamingLocators function of the media/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "Vault"
-title_tag: "Resource Vault | Module keyvault/latest | Package azurerm"
+title_tag: "Resource Vault | Module keyvault/latest | Package Azure RM"
 meta_desc: "Explore the Vault resource of the keyvault/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Resource information with extended details."
 ---
 

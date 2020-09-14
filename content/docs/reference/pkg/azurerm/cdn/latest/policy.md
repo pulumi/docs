@@ -1,7 +1,7 @@
 
 ---
 title: "Policy"
-title_tag: "Resource Policy | Module cdn/latest | Package azurerm"
+title_tag: "Resource Policy | Module cdn/latest | Package Azure RM"
 meta_desc: "Explore the Policy resource of the cdn/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Defines web application firewall policy for Azure CDN."
 ---
 

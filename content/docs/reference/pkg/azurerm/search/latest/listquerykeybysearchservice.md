@@ -1,7 +1,7 @@
 
 ---
 title: "ListQueryKeyBySearchService"
-title_tag: "Function ListQueryKeyBySearchService | Module search/latest | Package azurerm"
+title_tag: "Function ListQueryKeyBySearchService | Module search/latest | Package Azure RM"
 meta_desc: "Explore the ListQueryKeyBySearchService function of the search/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

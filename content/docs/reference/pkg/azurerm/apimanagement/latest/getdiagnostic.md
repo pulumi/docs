@@ -1,7 +1,7 @@
 
 ---
 title: "GetDiagnostic"
-title_tag: "Function GetDiagnostic | Module apimanagement/latest | Package azurerm"
+title_tag: "Function GetDiagnostic | Module apimanagement/latest | Package Azure RM"
 meta_desc: "Explore the GetDiagnostic function of the apimanagement/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

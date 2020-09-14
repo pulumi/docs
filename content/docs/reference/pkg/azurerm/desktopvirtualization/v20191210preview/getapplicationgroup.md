@@ -1,7 +1,7 @@
 
 ---
 title: "GetApplicationGroup"
-title_tag: "Function GetApplicationGroup | Module desktopvirtualization/v20191210preview | Package azurerm"
+title_tag: "Function GetApplicationGroup | Module desktopvirtualization/v20191210preview | Package Azure RM"
 meta_desc: "Explore the GetApplicationGroup function of the desktopvirtualization/v20191210preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

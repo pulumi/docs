@@ -1,7 +1,7 @@
 
 ---
 title: "RegistrationAssignment"
-title_tag: "Resource RegistrationAssignment | Module managedservices/v20200201preview | Package azurerm"
+title_tag: "Resource RegistrationAssignment | Module managedservices/v20200201preview | Package Azure RM"
 meta_desc: "Explore the RegistrationAssignment resource of the managedservices/v20200201preview module, including examples, input properties, output properties, lookup functions, and supporting types. Registration assignment."
 ---
 

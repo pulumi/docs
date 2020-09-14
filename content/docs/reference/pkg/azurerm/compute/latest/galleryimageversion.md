@@ -1,7 +1,7 @@
 
 ---
 title: "GalleryImageVersion"
-title_tag: "Resource GalleryImageVersion | Module compute/latest | Package azurerm"
+title_tag: "Resource GalleryImageVersion | Module compute/latest | Package Azure RM"
 meta_desc: "Explore the GalleryImageVersion resource of the compute/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Specifies information about the gallery image version that you want to create or update."
 ---
 

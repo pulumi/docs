@@ -1,7 +1,7 @@
 
 ---
 title: "GetPatchSchedule"
-title_tag: "Function GetPatchSchedule | Module cache/latest | Package azurerm"
+title_tag: "Function GetPatchSchedule | Module cache/latest | Package Azure RM"
 meta_desc: "Explore the GetPatchSchedule function of the cache/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

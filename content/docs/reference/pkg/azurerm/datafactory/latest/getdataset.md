@@ -1,7 +1,7 @@
 
 ---
 title: "GetDataset"
-title_tag: "Function GetDataset | Module datafactory/latest | Package azurerm"
+title_tag: "Function GetDataset | Module datafactory/latest | Package Azure RM"
 meta_desc: "Explore the GetDataset function of the datafactory/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

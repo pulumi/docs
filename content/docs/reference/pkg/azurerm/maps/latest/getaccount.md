@@ -1,7 +1,7 @@
 
 ---
 title: "GetAccount"
-title_tag: "Function GetAccount | Module maps/latest | Package azurerm"
+title_tag: "Function GetAccount | Module maps/latest | Package Azure RM"
 meta_desc: "Explore the GetAccount function of the maps/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

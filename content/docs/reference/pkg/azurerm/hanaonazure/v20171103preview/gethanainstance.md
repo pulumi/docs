@@ -1,7 +1,7 @@
 
 ---
 title: "GetHanaInstance"
-title_tag: "Function GetHanaInstance | Module hanaonazure/v20171103preview | Package azurerm"
+title_tag: "Function GetHanaInstance | Module hanaonazure/v20171103preview | Package Azure RM"
 meta_desc: "Explore the GetHanaInstance function of the hanaonazure/v20171103preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

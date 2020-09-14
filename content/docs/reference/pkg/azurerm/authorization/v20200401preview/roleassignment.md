@@ -1,7 +1,7 @@
 
 ---
 title: "RoleAssignment"
-title_tag: "Resource RoleAssignment | Module authorization/v20200401preview | Package azurerm"
+title_tag: "Resource RoleAssignment | Module authorization/v20200401preview | Package Azure RM"
 meta_desc: "Explore the RoleAssignment resource of the authorization/v20200401preview module, including examples, input properties, output properties, lookup functions, and supporting types. Role Assignments"
 ---
 

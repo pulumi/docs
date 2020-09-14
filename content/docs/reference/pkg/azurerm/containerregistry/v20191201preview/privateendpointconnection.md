@@ -1,7 +1,7 @@
 
 ---
 title: "PrivateEndpointConnection"
-title_tag: "Resource PrivateEndpointConnection | Module containerregistry/v20191201preview | Package azurerm"
+title_tag: "Resource PrivateEndpointConnection | Module containerregistry/v20191201preview | Package Azure RM"
 meta_desc: "Explore the PrivateEndpointConnection resource of the containerregistry/v20191201preview module, including examples, input properties, output properties, lookup functions, and supporting types. An object that represents a private endpoint connection for a container registry."
 ---
 

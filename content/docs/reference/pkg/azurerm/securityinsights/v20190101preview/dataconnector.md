@@ -1,7 +1,7 @@
 
 ---
 title: "DataConnector"
-title_tag: "Resource DataConnector | Module securityinsights/v20190101preview | Package azurerm"
+title_tag: "Resource DataConnector | Module securityinsights/v20190101preview | Package Azure RM"
 meta_desc: "Explore the DataConnector resource of the securityinsights/v20190101preview module, including examples, input properties, output properties, lookup functions, and supporting types. Data connector."
 ---
 

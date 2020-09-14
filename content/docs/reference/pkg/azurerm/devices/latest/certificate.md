@@ -1,7 +1,7 @@
 
 ---
 title: "Certificate"
-title_tag: "Resource Certificate | Module devices/latest | Package azurerm"
+title_tag: "Resource Certificate | Module devices/latest | Package Azure RM"
 meta_desc: "Explore the Certificate resource of the devices/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The X509 Certificate."
 ---
 

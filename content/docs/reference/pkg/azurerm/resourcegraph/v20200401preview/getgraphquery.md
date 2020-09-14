@@ -1,7 +1,7 @@
 
 ---
 title: "GetGraphQuery"
-title_tag: "Function GetGraphQuery | Module resourcegraph/v20200401preview | Package azurerm"
+title_tag: "Function GetGraphQuery | Module resourcegraph/v20200401preview | Package Azure RM"
 meta_desc: "Explore the GetGraphQuery function of the resourcegraph/v20200401preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

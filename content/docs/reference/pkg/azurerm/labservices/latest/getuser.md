@@ -1,7 +1,7 @@
 
 ---
 title: "GetUser"
-title_tag: "Function GetUser | Module labservices/latest | Package azurerm"
+title_tag: "Function GetUser | Module labservices/latest | Package Azure RM"
 meta_desc: "Explore the GetUser function of the labservices/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

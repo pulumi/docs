@@ -1,7 +1,7 @@
 
 ---
 title: "VirtualMachineSchedule"
-title_tag: "Resource VirtualMachineSchedule | Module devtestlab/latest | Package azurerm"
+title_tag: "Resource VirtualMachineSchedule | Module devtestlab/latest | Package Azure RM"
 meta_desc: "Explore the VirtualMachineSchedule resource of the devtestlab/latest module, including examples, input properties, output properties, lookup functions, and supporting types. A schedule."
 ---
 

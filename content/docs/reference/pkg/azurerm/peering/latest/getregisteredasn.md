@@ -1,7 +1,7 @@
 
 ---
 title: "GetRegisteredAsn"
-title_tag: "Function GetRegisteredAsn | Module peering/latest | Package azurerm"
+title_tag: "Function GetRegisteredAsn | Module peering/latest | Package Azure RM"
 meta_desc: "Explore the GetRegisteredAsn function of the peering/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

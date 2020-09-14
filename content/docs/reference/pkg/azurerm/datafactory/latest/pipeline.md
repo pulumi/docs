@@ -1,7 +1,7 @@
 
 ---
 title: "Pipeline"
-title_tag: "Resource Pipeline | Module datafactory/latest | Package azurerm"
+title_tag: "Resource Pipeline | Module datafactory/latest | Package Azure RM"
 meta_desc: "Explore the Pipeline resource of the datafactory/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Pipeline resource type."
 ---
 

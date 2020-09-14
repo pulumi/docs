@@ -1,7 +1,7 @@
 
 ---
 title: "Vendor"
-title_tag: "Resource Vendor | Module hybridnetwork/v20200101preview | Package azurerm"
+title_tag: "Resource Vendor | Module hybridnetwork/v20200101preview | Package Azure RM"
 meta_desc: "Explore the Vendor resource of the hybridnetwork/v20200101preview module, including examples, input properties, output properties, lookup functions, and supporting types. Vendor resource."
 ---
 

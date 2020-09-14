@@ -1,7 +1,7 @@
 
 ---
 title: "GetApplication"
-title_tag: "Function GetApplication | Module solutions/v20200821preview | Package azurerm"
+title_tag: "Function GetApplication | Module solutions/v20200821preview | Package Azure RM"
 meta_desc: "Explore the GetApplication function of the solutions/v20200821preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

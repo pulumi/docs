@@ -1,7 +1,7 @@
 
 ---
 title: "WebAppVnetConnection"
-title_tag: "Resource WebAppVnetConnection | Module web/latest | Package azurerm"
+title_tag: "Resource WebAppVnetConnection | Module web/latest | Package Azure RM"
 meta_desc: "Explore the WebAppVnetConnection resource of the web/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Virtual Network information contract."
 ---
 

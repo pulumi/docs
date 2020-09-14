@@ -1,7 +1,7 @@
 
 ---
 title: "Query"
-title_tag: "Resource Query | Module insights/v20190901preview | Package azurerm"
+title_tag: "Resource Query | Module insights/v20190901preview | Package Azure RM"
 meta_desc: "Explore the Query resource of the insights/v20190901preview module, including examples, input properties, output properties, lookup functions, and supporting types. A Log Analytics QueryPack-Query definition."
 ---
 

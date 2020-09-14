@@ -1,7 +1,7 @@
 
 ---
 title: "DedicatedHostGroup"
-title_tag: "Resource DedicatedHostGroup | Module compute/latest | Package azurerm"
+title_tag: "Resource DedicatedHostGroup | Module compute/latest | Package Azure RM"
 meta_desc: "Explore the DedicatedHostGroup resource of the compute/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Specifies information about the dedicated host group that the dedicated hosts should be assigned to. &lt;br&gt;&lt;br&gt; Currently, a dedicated host can only be added to a dedicated host group at creation time. An existing dedicated host cannot be added to another dedicated host group."
 ---
 

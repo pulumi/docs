@@ -1,7 +1,7 @@
 
 ---
 title: "FileShare"
-title_tag: "Resource FileShare | Module storsimple/latest | Package azurerm"
+title_tag: "Resource FileShare | Module storsimple/latest | Package Azure RM"
 meta_desc: "Explore the FileShare resource of the storsimple/latest module, including examples, input properties, output properties, lookup functions, and supporting types. The File Share."
 ---
 

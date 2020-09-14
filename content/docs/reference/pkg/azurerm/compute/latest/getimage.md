@@ -1,7 +1,7 @@
 
 ---
 title: "GetImage"
-title_tag: "Function GetImage | Module compute/latest | Package azurerm"
+title_tag: "Function GetImage | Module compute/latest | Package Azure RM"
 meta_desc: "Explore the GetImage function of the compute/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

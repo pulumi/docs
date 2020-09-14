@@ -1,7 +1,7 @@
 
 ---
 title: "Webhook"
-title_tag: "Resource Webhook | Module containerregistry/latest | Package azurerm"
+title_tag: "Resource Webhook | Module containerregistry/latest | Package Azure RM"
 meta_desc: "Explore the Webhook resource of the containerregistry/latest module, including examples, input properties, output properties, lookup functions, and supporting types. An object that represents a webhook for a container registry."
 ---
 

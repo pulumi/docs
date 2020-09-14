@@ -1,7 +1,7 @@
 
 ---
 title: "ReportByResourceGroupName"
-title_tag: "Resource ReportByResourceGroupName | Module costmanagement/v20180801preview | Package azurerm"
+title_tag: "Resource ReportByResourceGroupName | Module costmanagement/v20180801preview | Package Azure RM"
 meta_desc: "Explore the ReportByResourceGroupName resource of the costmanagement/v20180801preview module, including examples, input properties, output properties, lookup functions, and supporting types. A report resource."
 ---
 

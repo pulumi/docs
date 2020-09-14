@@ -1,7 +1,7 @@
 
 ---
 title: "GetCaseRelation"
-title_tag: "Function GetCaseRelation | Module securityinsights/v20190101preview | Package azurerm"
+title_tag: "Function GetCaseRelation | Module securityinsights/v20190101preview | Package Azure RM"
 meta_desc: "Explore the GetCaseRelation function of the securityinsights/v20190101preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "InstanceFailoverGroup"
-title_tag: "Resource InstanceFailoverGroup | Module sql/v20171001preview | Package azurerm"
+title_tag: "Resource InstanceFailoverGroup | Module sql/v20171001preview | Package Azure RM"
 meta_desc: "Explore the InstanceFailoverGroup resource of the sql/v20171001preview module, including examples, input properties, output properties, lookup functions, and supporting types. An instance failover group."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "StorageAccount"
-title_tag: "Resource StorageAccount | Module storage/v20200801preview | Package azurerm"
+title_tag: "Resource StorageAccount | Module storage/v20200801preview | Package Azure RM"
 meta_desc: "Explore the StorageAccount resource of the storage/v20200801preview module, including examples, input properties, output properties, lookup functions, and supporting types. The storage account."
 ---
 

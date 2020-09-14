@@ -1,7 +1,7 @@
 
 ---
 title: "GetSoftwareUpdateConfigurationByName"
-title_tag: "Function GetSoftwareUpdateConfigurationByName | Module automation/v20170515preview | Package azurerm"
+title_tag: "Function GetSoftwareUpdateConfigurationByName | Module automation/v20170515preview | Package Azure RM"
 meta_desc: "Explore the GetSoftwareUpdateConfigurationByName function of the automation/v20170515preview module, including examples, input properties, output properties, and supporting types. "
 ---
 

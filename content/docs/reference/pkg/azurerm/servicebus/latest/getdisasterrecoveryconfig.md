@@ -1,7 +1,7 @@
 
 ---
 title: "GetDisasterRecoveryConfig"
-title_tag: "Function GetDisasterRecoveryConfig | Module servicebus/latest | Package azurerm"
+title_tag: "Function GetDisasterRecoveryConfig | Module servicebus/latest | Package Azure RM"
 meta_desc: "Explore the GetDisasterRecoveryConfig function of the servicebus/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "GetSqlResourceSqlContainer"
-title_tag: "Function GetSqlResourceSqlContainer | Module documentdb/latest | Package azurerm"
+title_tag: "Function GetSqlResourceSqlContainer | Module documentdb/latest | Package Azure RM"
 meta_desc: "Explore the GetSqlResourceSqlContainer function of the documentdb/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 

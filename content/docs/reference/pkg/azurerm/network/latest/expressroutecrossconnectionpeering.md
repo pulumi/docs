@@ -1,7 +1,7 @@
 
 ---
 title: "ExpressRouteCrossConnectionPeering"
-title_tag: "Resource ExpressRouteCrossConnectionPeering | Module network/latest | Package azurerm"
+title_tag: "Resource ExpressRouteCrossConnectionPeering | Module network/latest | Package Azure RM"
 meta_desc: "Explore the ExpressRouteCrossConnectionPeering resource of the network/latest module, including examples, input properties, output properties, lookup functions, and supporting types. Peering in an ExpressRoute Cross Connection resource."
 ---
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ListNamespaceKeys"
-title_tag: "Function ListNamespaceKeys | Module notificationhubs/latest | Package azurerm"
+title_tag: "Function ListNamespaceKeys | Module notificationhubs/latest | Package Azure RM"
 meta_desc: "Explore the ListNamespaceKeys function of the notificationhubs/latest module, including examples, input properties, output properties, and supporting types. "
 ---
 
