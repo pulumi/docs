@@ -156,7 +156,6 @@ import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/awsx";
 import * as eks from "@pulumi/eks";
 import * as k8s from "@pulumi/kubernetes";
-import * as postgresql from "@pulumi/postgresql";
 import * as pulumi from "@pulumi/pulumi";
 
 const config = new pulumi.Config();
