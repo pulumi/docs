@@ -23,7 +23,7 @@ Provides a Rancher v2 Cluster resource. This can be used to create Clusters for 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAksConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_auth_endpoint</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAuthEndpointArgs]</span> = None<span class="p">, </span><span class="nx">cluster_monitoring_input</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterMonitoringInputArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_answers</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTemplateAnswersArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_template_questions</span><span class="p">:</span> <span class="nx">Optional[List[ClusterClusterTemplateQuestionArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_template_revision_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_pod_security_policy_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_agent_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_auth_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">docker_root_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterEksConfigArgs]</span> = None<span class="p">, </span><span class="nx">enable_cluster_alerting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cluster_istio</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cluster_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_network_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterGkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">k3s_config</span><span class="p">:</span> <span class="nx">Optional[ClusterK3sConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterRkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">scheduled_cluster_scan</span><span class="p">:</span> <span class="nx">Optional[ClusterScheduledClusterScanArgs]</span> = None<span class="p">, </span><span class="nx">windows_prefered_cluster</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAksConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_auth_endpoint</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAuthEndpointArgs]</span> = None<span class="p">, </span><span class="nx">cluster_monitoring_input</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterMonitoringInputArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_answers</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTemplateAnswersArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_template_questions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClusterTemplateQuestionArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_template_revision_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_pod_security_policy_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_agent_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_auth_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">docker_root_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterEksConfigArgs]</span> = None<span class="p">, </span><span class="nx">enable_cluster_alerting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cluster_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_network_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterGkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">k3s_config</span><span class="p">:</span> <span class="nx">Optional[ClusterK3sConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterRkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">scheduled_cluster_scan</span><span class="p">:</span> <span class="nx">Optional[ClusterScheduledClusterScanArgs]</span> = None<span class="p">, </span><span class="nx">windows_prefered_cluster</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -373,17 +373,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enableclusteristio_csharp">
-<a href="#enableclusteristio_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cluster<wbr>Istio</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Enable built-in cluster istio. Just for Rancher v2.3.x and above (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="enableclustermonitoring_csharp">
 <a href="#enableclustermonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cluster<wbr>Monitoring</a>
 </span> 
@@ -662,17 +651,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable built-in cluster alerting (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="enableclusteristio_go">
-<a href="#enableclusteristio_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cluster<wbr>Istio</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Enable built-in cluster istio. Just for Rancher v2.3.x and above (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -959,17 +937,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enableclusteristio_nodejs">
-<a href="#enableclusteristio_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cluster<wbr>Istio</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}Enable built-in cluster istio. Just for Rancher v2.3.x and above (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="enableclustermonitoring_nodejs">
 <a href="#enableclustermonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cluster<wbr>Monitoring</a>
 </span> 
@@ -1146,7 +1113,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cluster_template_questions_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>template_<wbr>questions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclustertemplatequestion">List[Cluster<wbr>Cluster<wbr>Template<wbr>Question<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterclustertemplatequestion">Sequence[Cluster<wbr>Cluster<wbr>Template<wbr>Question<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cluster template questions. Just for Rancher v2.3.x and above (list)
 {{% /md %}}</dd>
@@ -1248,17 +1215,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable built-in cluster alerting (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="enable_cluster_istio_python">
-<a href="#enable_cluster_istio_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cluster_<wbr>istio</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Enable built-in cluster istio. Just for Rancher v2.3.x and above (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1400,6 +1356,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}(Computed) Default project ID for the cluster (string)
 {{% /md %}}</dd>
 
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="enableclusteristio_csharp">
+<a href="#enableclusteristio_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cluster<wbr>Istio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Deploy istio on `system` project and `istio-system` namespace, using rancher2.App resource instead. See above example.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deploy istio using rancher2_app resource instead{{% /md %}}</p></dd>
+
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1409,6 +1376,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="istioenabled_csharp">
+<a href="#istioenabled_csharp" style="color: inherit; text-decoration: inherit;">Istio<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) Is istio enabled at cluster? Just for Rancher v2.3.x and above (bool)
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1461,6 +1439,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}(Computed) Default project ID for the cluster (string)
 {{% /md %}}</dd>
 
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="enableclusteristio_go">
+<a href="#enableclusteristio_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cluster<wbr>Istio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Deploy istio on `system` project and `istio-system` namespace, using rancher2.App resource instead. See above example.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deploy istio using rancher2_app resource instead{{% /md %}}</p></dd>
+
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -1470,6 +1459,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="istioenabled_go">
+<a href="#istioenabled_go" style="color: inherit; text-decoration: inherit;">Istio<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) Is istio enabled at cluster? Just for Rancher v2.3.x and above (bool)
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1522,6 +1522,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}(Computed) Default project ID for the cluster (string)
 {{% /md %}}</dd>
 
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="enableclusteristio_nodejs">
+<a href="#enableclusteristio_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cluster<wbr>Istio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Deploy istio on `system` project and `istio-system` namespace, using rancher2.App resource instead. See above example.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deploy istio using rancher2_app resource instead{{% /md %}}</p></dd>
+
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1531,6 +1542,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="istioenabled_nodejs">
+<a href="#istioenabled_nodejs" style="color: inherit; text-decoration: inherit;">istio<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) Is istio enabled at cluster? Just for Rancher v2.3.x and above (bool)
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1583,6 +1605,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}(Computed) Default project ID for the cluster (string)
 {{% /md %}}</dd>
 
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="enable_cluster_istio_python">
+<a href="#enable_cluster_istio_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cluster_<wbr>istio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Deploy istio on `system` project and `istio-system` namespace, using rancher2.App resource instead. See above example.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deploy istio using rancher2_app resource instead{{% /md %}}</p></dd>
+
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -1592,6 +1625,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="istio_enabled_python">
+<a href="#istio_enabled_python" style="color: inherit; text-decoration: inherit;">istio_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) Is istio enabled at cluster? Just for Rancher v2.3.x and above (bool)
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1635,7 +1679,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAksConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_auth_endpoint</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAuthEndpointArgs]</span> = None<span class="p">, </span><span class="nx">cluster_monitoring_input</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterMonitoringInputArgs]</span> = None<span class="p">, </span><span class="nx">cluster_registration_token</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterRegistrationTokenArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_answers</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTemplateAnswersArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_template_questions</span><span class="p">:</span> <span class="nx">Optional[List[ClusterClusterTemplateQuestionArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_template_revision_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_pod_security_policy_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_agent_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_auth_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">docker_root_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterEksConfigArgs]</span> = None<span class="p">, </span><span class="nx">enable_cluster_alerting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cluster_istio</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cluster_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_network_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterGkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">k3s_config</span><span class="p">:</span> <span class="nx">Optional[ClusterK3sConfigArgs]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterRkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">scheduled_cluster_scan</span><span class="p">:</span> <span class="nx">Optional[ClusterScheduledClusterScanArgs]</span> = None<span class="p">, </span><span class="nx">system_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">windows_prefered_cluster</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAksConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_auth_endpoint</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAuthEndpointArgs]</span> = None<span class="p">, </span><span class="nx">cluster_monitoring_input</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterMonitoringInputArgs]</span> = None<span class="p">, </span><span class="nx">cluster_registration_token</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterRegistrationTokenArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_answers</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTemplateAnswersArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_template_questions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClusterTemplateQuestionArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_template_revision_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_pod_security_policy_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_agent_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_auth_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">docker_root_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterEksConfigArgs]</span> = None<span class="p">, </span><span class="nx">enable_cluster_alerting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cluster_istio</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cluster_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_network_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterGkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">istio_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">k3s_config</span><span class="p">:</span> <span class="nx">Optional[ClusterK3sConfigArgs]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterRkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">scheduled_cluster_scan</span><span class="p">:</span> <span class="nx">Optional[ClusterScheduledClusterScanArgs]</span> = None<span class="p">, </span><span class="nx">system_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">windows_prefered_cluster</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1947,16 +1991,16 @@ The following state arguments are supported:
     <dd>{{% md %}}Enable built-in cluster alerting (bool)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_enableclusteristio_csharp">
 <a href="#state_enableclusteristio_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cluster<wbr>Istio</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster istio. Just for Rancher v2.3.x and above (bool)
-{{% /md %}}</dd>
+    <dd>{{% md %}}Deploy istio on `system` project and `istio-system` namespace, using rancher2.App resource instead. See above example.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deploy istio using rancher2_app resource instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1989,6 +2033,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#clustergkeconfig">Cluster<wbr>Gke<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_istioenabled_csharp">
+<a href="#state_istioenabled_csharp" style="color: inherit; text-decoration: inherit;">Istio<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) Is istio enabled at cluster? Just for Rancher v2.3.x and above (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2284,16 +2339,16 @@ The following state arguments are supported:
     <dd>{{% md %}}Enable built-in cluster alerting (bool)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_enableclusteristio_go">
 <a href="#state_enableclusteristio_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cluster<wbr>Istio</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster istio. Just for Rancher v2.3.x and above (bool)
-{{% /md %}}</dd>
+    <dd>{{% md %}}Deploy istio on `system` project and `istio-system` namespace, using rancher2.App resource instead. See above example.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deploy istio using rancher2_app resource instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2326,6 +2381,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#clustergkeconfig">Cluster<wbr>Gke<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_istioenabled_go">
+<a href="#state_istioenabled_go" style="color: inherit; text-decoration: inherit;">Istio<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) Is istio enabled at cluster? Just for Rancher v2.3.x and above (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2621,16 +2687,16 @@ The following state arguments are supported:
     <dd>{{% md %}}Enable built-in cluster alerting (bool)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_enableclusteristio_nodejs">
 <a href="#state_enableclusteristio_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cluster<wbr>Istio</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster istio. Just for Rancher v2.3.x and above (bool)
-{{% /md %}}</dd>
+    <dd>{{% md %}}Deploy istio on `system` project and `istio-system` namespace, using rancher2.App resource instead. See above example.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deploy istio using rancher2_app resource instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2663,6 +2729,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#clustergkeconfig">Cluster<wbr>Gke<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_istioenabled_nodejs">
+<a href="#state_istioenabled_nodejs" style="color: inherit; text-decoration: inherit;">istio<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) Is istio enabled at cluster? Just for Rancher v2.3.x and above (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2843,7 +2920,7 @@ The following state arguments are supported:
 <a href="#state_cluster_template_questions_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>template_<wbr>questions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclustertemplatequestion">List[Cluster<wbr>Cluster<wbr>Template<wbr>Question<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterclustertemplatequestion">Sequence[Cluster<wbr>Cluster<wbr>Template<wbr>Question<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cluster template questions. Just for Rancher v2.3.x and above (list)
 {{% /md %}}</dd>
@@ -2958,16 +3035,16 @@ The following state arguments are supported:
     <dd>{{% md %}}Enable built-in cluster alerting (bool)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_enable_cluster_istio_python">
 <a href="#state_enable_cluster_istio_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cluster_<wbr>istio</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enable built-in cluster istio. Just for Rancher v2.3.x and above (bool)
-{{% /md %}}</dd>
+    <dd>{{% md %}}Deploy istio on `system` project and `istio-system` namespace, using rancher2.App resource instead. See above example.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deploy istio using rancher2_app resource instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3000,6 +3077,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#clustergkeconfig">Cluster<wbr>Gke<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_istio_enabled_python">
+<a href="#state_istio_enabled_python" style="color: inherit; text-decoration: inherit;">istio_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) Is istio enabled at cluster? Just for Rancher v2.3.x and above (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4558,7 +4646,7 @@ The following state arguments are supported:
 <a href="#agent_os_disk_size_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>os_<wbr>disk_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}GB size to be used to specify the disk for every machine in the agent pool. If you specify 0, it will apply the default according to the \"agent vm size\" specified. Default `0` (int)
 {{% /md %}}</dd>
@@ -4624,7 +4712,7 @@ The following state arguments are supported:
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of machines (VMs) in the agent pool. Allowed values must be in the range of 1 to 100 (inclusive). Default `1` (int)
 {{% /md %}}</dd>
@@ -4712,7 +4800,7 @@ The following state arguments are supported:
 <a href="#max_pods_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of pods that can run on a node. Default `110` (int)
 {{% /md %}}</dd>
@@ -6715,7 +6803,7 @@ The following state arguments are supported:
 <a href="#desired_nodes_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The desired number of worker nodes. Just for Rancher v2.3.x and above. Default `3` (int)
 {{% /md %}}</dd>
@@ -6748,7 +6836,7 @@ The following state arguments are supported:
 <a href="#maximum_nodes_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of worker nodes. Default `3` (int)
 {{% /md %}}</dd>
@@ -6759,7 +6847,7 @@ The following state arguments are supported:
 <a href="#minimum_nodes_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of worker nodes. Default `1` (int)
 {{% /md %}}</dd>
@@ -6770,7 +6858,7 @@ The following state arguments are supported:
 <a href="#node_volume_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The volume size for each node. Default `20` (int)
 {{% /md %}}</dd>
@@ -6792,7 +6880,7 @@ The following state arguments are supported:
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of security groups to use for the cluster. If it's not specified Rancher will create a new security group (list)
 {{% /md %}}</dd>
@@ -6825,7 +6913,7 @@ The following state arguments are supported:
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of subnets in the virtual network to use. If it's not specified Rancher will create 3 news subnets (list)
 {{% /md %}}</dd>
@@ -8760,7 +8848,7 @@ The following state arguments are supported:
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Locations for GKE cluster (list)
 {{% /md %}}</dd>
@@ -8848,7 +8936,7 @@ The following state arguments are supported:
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available on all of the node VMs under the default service account (list)
 {{% /md %}}</dd>
@@ -8903,7 +8991,7 @@ The following state arguments are supported:
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the disk attached to each node. Default `100` (int)
 {{% /md %}}</dd>
@@ -9111,7 +9199,7 @@ The following state arguments are supported:
 <a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of local SSD disks to be attached to the node. Default `0` (int)
 {{% /md %}}</dd>
@@ -9122,7 +9210,7 @@ The following state arguments are supported:
 <a href="#master_authorized_network_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">master_<wbr>authorized_<wbr>network_<wbr>cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Define up to 10 external networks that could access Kubernetes master through HTTPS (list)
 {{% /md %}}</dd>
@@ -9133,7 +9221,7 @@ The following state arguments are supported:
 <a href="#max_node_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= minNodeCount. There has to enough quota to scale up the cluster. Default `0` (int)
 {{% /md %}}</dd>
@@ -9144,7 +9232,7 @@ The following state arguments are supported:
 <a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimmum number of nodes in the NodePool. Must be >= 1 and <= maxNodeCount. Default `0` (int)
 {{% /md %}}</dd>
@@ -9155,7 +9243,7 @@ The following state arguments are supported:
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Node count for GKE cluster. Default `3` (int)
 {{% /md %}}</dd>
@@ -9199,7 +9287,7 @@ The following state arguments are supported:
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Kubernetes taints to be applied to each node (list)
 {{% /md %}}</dd>
@@ -9566,7 +9654,7 @@ The following state arguments are supported:
 <a href="#server_concurrency_python" style="color: inherit; text-decoration: inherit;">server_<wbr>concurrency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Server concurrency. Default: `1` (int)
 {{% /md %}}</dd>
@@ -9577,7 +9665,7 @@ The following state arguments are supported:
 <a href="#worker_concurrency_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>concurrency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Worker concurrency. Default: `1` (int)
 {{% /md %}}</dd>
@@ -10327,7 +10415,7 @@ The following state arguments are supported:
 <a href="#addon_job_timeout_python" style="color: inherit; text-decoration: inherit;">addon_<wbr>job_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Duration in seconds of addon job (int)
 {{% /md %}}</dd>
@@ -10349,7 +10437,7 @@ The following state arguments are supported:
 <a href="#addons_includes_python" style="color: inherit; text-decoration: inherit;">addons_<wbr>includes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Addons yaml manifests to deploy on RKE cluster (list)
 {{% /md %}}</dd>
@@ -10470,7 +10558,7 @@ The following state arguments are supported:
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfignode">List[Cluster<wbr>Rke<wbr>Config<wbr>Node<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterrkeconfignode">Sequence[Cluster<wbr>Rke<wbr>Config<wbr>Node<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}RKE cluster nodes (list)
 {{% /md %}}</dd>
@@ -10492,7 +10580,7 @@ The following state arguments are supported:
 <a href="#private_registries_python" style="color: inherit; text-decoration: inherit;">private_<wbr>registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigprivateregistry">List[Cluster<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigprivateregistry">Sequence[Cluster<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}private registries for docker images (list)
 {{% /md %}}</dd>
@@ -10670,7 +10758,7 @@ The following state arguments are supported:
 <a href="#sans_python" style="color: inherit; text-decoration: inherit;">sans</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}RKE sans for authentication ([]string)
 {{% /md %}}</dd>
@@ -11569,7 +11657,7 @@ The following state arguments are supported:
 <a href="#service_overrides_python" style="color: inherit; text-decoration: inherit;">service_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigcloudproviderawscloudproviderserviceoverride">List[Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigcloudproviderawscloudproviderserviceoverride">Sequence[Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd>
@@ -13467,7 +13555,7 @@ The following state arguments are supported:
 <a href="#cloud_provider_backoff_duration_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>backoff_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd>
@@ -13478,7 +13566,7 @@ The following state arguments are supported:
 <a href="#cloud_provider_backoff_exponent_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>backoff_<wbr>exponent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd>
@@ -13489,7 +13577,7 @@ The following state arguments are supported:
 <a href="#cloud_provider_backoff_jitter_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>backoff_<wbr>jitter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd>
@@ -13500,7 +13588,7 @@ The following state arguments are supported:
 <a href="#cloud_provider_backoff_retries_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>backoff_<wbr>retries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd>
@@ -13522,7 +13610,7 @@ The following state arguments are supported:
 <a href="#cloud_provider_rate_limit_bucket_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>rate_<wbr>limit_<wbr>bucket</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd>
@@ -13533,7 +13621,7 @@ The following state arguments are supported:
 <a href="#cloud_provider_rate_limit_qps_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>rate_<wbr>limit_<wbr>qps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd>
@@ -13566,7 +13654,7 @@ The following state arguments are supported:
 <a href="#maximum_load_balancer_rule_count_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>load_<wbr>balancer_<wbr>rule_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd>
@@ -15114,7 +15202,7 @@ The following state arguments are supported:
 <a href="#monitor_max_retries_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>max_<wbr>retries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Default 5 (int)
 {{% /md %}}</dd>
@@ -15270,7 +15358,7 @@ The following state arguments are supported:
 <a href="#request_timeout_python" style="color: inherit; text-decoration: inherit;">request_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd>
@@ -15593,7 +15681,7 @@ The following state arguments are supported:
 <a href="#virtual_centers_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>centers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrkeconfigcloudprovidervspherecloudprovidervirtualcenter">List[Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterrkeconfigcloudprovidervspherecloudprovidervirtualcenter">Sequence[Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(List)
 {{% /md %}}</dd>
@@ -16026,7 +16114,7 @@ The following state arguments are supported:
 <a href="#soap_roundtrip_count_python" style="color: inherit; text-decoration: inherit;">soap_<wbr>roundtrip_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd>
@@ -16437,7 +16525,7 @@ The following state arguments are supported:
 <a href="#soap_roundtrip_count_python" style="color: inherit; text-decoration: inherit;">soap_<wbr>roundtrip_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd>
@@ -16958,7 +17046,7 @@ The following state arguments are supported:
 <a href="#reverse_cidrs_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>cidrs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}DNS add-on reverse cidr  (list)
 {{% /md %}}</dd>
@@ -16969,7 +17057,7 @@ The following state arguments are supported:
 <a href="#upstream_nameservers_python" style="color: inherit; text-decoration: inherit;">upstream_<wbr>nameservers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}DNS add-on upstream nameservers  (list)
 {{% /md %}}</dd>
@@ -17624,7 +17712,7 @@ The following state arguments are supported:
 <a href="#replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}RKE monitoring replicas (int)
 {{% /md %}}</dd>
@@ -17892,7 +17980,7 @@ The following state arguments are supported:
 <a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Monitoring deployment rolling update max surge. Default: `1` (int)
 {{% /md %}}</dd>
@@ -17903,7 +17991,7 @@ The following state arguments are supported:
 <a href="#max_unavailable_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Monitoring deployment rolling update max unavailable. Default: `1` (int)
 {{% /md %}}</dd>
@@ -18224,7 +18312,7 @@ The following state arguments are supported:
 <a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Network provider MTU. Default `0` (int)
 {{% /md %}}</dd>
@@ -19081,7 +19169,7 @@ The following state arguments are supported:
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Roles for the node. `controlplane`, `etcd` and `worker` are supported. (list)
 {{% /md %}}</dd>
@@ -20319,7 +20407,7 @@ The following state arguments are supported:
 <a href="#external_urls_python" style="color: inherit; text-decoration: inherit;">external_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}External urls for etcd service (list)
 {{% /md %}}</dd>
@@ -20341,7 +20429,7 @@ The following state arguments are supported:
 <a href="#extra_binds_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>binds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Extra binds for scheduler service (list)
 {{% /md %}}</dd>
@@ -20352,7 +20440,7 @@ The following state arguments are supported:
 <a href="#extra_envs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>envs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Extra environment for scheduler service (list)
 {{% /md %}}</dd>
@@ -20363,7 +20451,7 @@ The following state arguments are supported:
 <a href="#gid_python" style="color: inherit; text-decoration: inherit;">gid</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Etcd service GID. Default: `0`. For Rancher v2.3.x or above (int)
 {{% /md %}}</dd>
@@ -20429,7 +20517,7 @@ The following state arguments are supported:
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Etcd service UID. Default: `0`. For Rancher v2.3.x or above (int)
 {{% /md %}}</dd>
@@ -20662,7 +20750,7 @@ The following state arguments are supported:
 <a href="#interval_hours_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Interval hours for etcd backup. Default `12` (int)
 {{% /md %}}</dd>
@@ -20673,7 +20761,7 @@ The following state arguments are supported:
 <a href="#retention_python" style="color: inherit; text-decoration: inherit;">retention</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Retention for etcd backup. Default `6` (int)
 {{% /md %}}</dd>
@@ -21557,7 +21645,7 @@ The following state arguments are supported:
 <a href="#extra_binds_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>binds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Extra binds for scheduler service (list)
 {{% /md %}}</dd>
@@ -21568,7 +21656,7 @@ The following state arguments are supported:
 <a href="#extra_envs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>envs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Extra environment for scheduler service (list)
 {{% /md %}}</dd>
@@ -21661,7 +21749,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfigserviceskubeapiauditlogconfiguration">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Event rate limit configuration. (map)
+    <dd>{{% md %}}Event rate limit configuration yaml encoded definition. `apiVersion` and `kind: Configuration"` fields are required in the yaml. Ex. `"apiVersion: eventratelimit.admission.k8s.io/v1alpha1\nkind: Configuration\nlimits:\n- type: Server\n  burst: 35000\n  qps: 6000\n"` [More info](https://rancher.com/docs/rke/latest/en/config-options/rate-limiting/) (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -21690,7 +21778,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfigserviceskubeapiauditlogconfiguration">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Event rate limit configuration. (map)
+    <dd>{{% md %}}Event rate limit configuration yaml encoded definition. `apiVersion` and `kind: Configuration"` fields are required in the yaml. Ex. `"apiVersion: eventratelimit.admission.k8s.io/v1alpha1\nkind: Configuration\nlimits:\n- type: Server\n  burst: 35000\n  qps: 6000\n"` [More info](https://rancher.com/docs/rke/latest/en/config-options/rate-limiting/) (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -21719,7 +21807,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfigserviceskubeapiauditlogconfiguration">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Event rate limit configuration. (map)
+    <dd>{{% md %}}Event rate limit configuration yaml encoded definition. `apiVersion` and `kind: Configuration"` fields are required in the yaml. Ex. `"apiVersion: eventratelimit.admission.k8s.io/v1alpha1\nkind: Configuration\nlimits:\n- type: Server\n  burst: 35000\n  qps: 6000\n"` [More info](https://rancher.com/docs/rke/latest/en/config-options/rate-limiting/) (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -21748,7 +21836,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfigserviceskubeapiauditlogconfiguration">Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Event rate limit configuration. (map)
+    <dd>{{% md %}}Event rate limit configuration yaml encoded definition. `apiVersion` and `kind: Configuration"` fields are required in the yaml. Ex. `"apiVersion: eventratelimit.admission.k8s.io/v1alpha1\nkind: Configuration\nlimits:\n- type: Server\n  burst: 35000\n  qps: 6000\n"` [More info](https://rancher.com/docs/rke/latest/en/config-options/rate-limiting/) (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -22023,7 +22111,7 @@ The following state arguments are supported:
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Audit log max age. Default: `30` (int)
 {{% /md %}}</dd>
@@ -22034,7 +22122,7 @@ The following state arguments are supported:
 <a href="#max_backup_python" style="color: inherit; text-decoration: inherit;">max_<wbr>backup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Audit log max backup. Default: `10` (int)
 {{% /md %}}</dd>
@@ -22045,7 +22133,7 @@ The following state arguments are supported:
 <a href="#max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Audit log max size. Default: `100` (int)
 {{% /md %}}</dd>
@@ -22103,9 +22191,9 @@ The following state arguments are supported:
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Event rate limit configuration. (map)
+    <dd>{{% md %}}Event rate limit configuration yaml encoded definition. `apiVersion` and `kind: Configuration"` fields are required in the yaml. Ex. `"apiVersion: eventratelimit.admission.k8s.io/v1alpha1\nkind: Configuration\nlimits:\n- type: Server\n  burst: 35000\n  qps: 6000\n"` [More info](https://rancher.com/docs/rke/latest/en/config-options/rate-limiting/) (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -22132,9 +22220,9 @@ The following state arguments are supported:
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Event rate limit configuration. (map)
+    <dd>{{% md %}}Event rate limit configuration yaml encoded definition. `apiVersion` and `kind: Configuration"` fields are required in the yaml. Ex. `"apiVersion: eventratelimit.admission.k8s.io/v1alpha1\nkind: Configuration\nlimits:\n- type: Server\n  burst: 35000\n  qps: 6000\n"` [More info](https://rancher.com/docs/rke/latest/en/config-options/rate-limiting/) (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -22161,9 +22249,9 @@ The following state arguments are supported:
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Event rate limit configuration. (map)
+    <dd>{{% md %}}Event rate limit configuration yaml encoded definition. `apiVersion` and `kind: Configuration"` fields are required in the yaml. Ex. `"apiVersion: eventratelimit.admission.k8s.io/v1alpha1\nkind: Configuration\nlimits:\n- type: Server\n  burst: 35000\n  qps: 6000\n"` [More info](https://rancher.com/docs/rke/latest/en/config-options/rate-limiting/) (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -22190,9 +22278,9 @@ The following state arguments are supported:
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Event rate limit configuration. (map)
+    <dd>{{% md %}}Event rate limit configuration yaml encoded definition. `apiVersion` and `kind: Configuration"` fields are required in the yaml. Ex. `"apiVersion: eventratelimit.admission.k8s.io/v1alpha1\nkind: Configuration\nlimits:\n- type: Server\n  burst: 35000\n  qps: 6000\n"` [More info](https://rancher.com/docs/rke/latest/en/config-options/rate-limiting/) (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -22237,9 +22325,9 @@ The following state arguments are supported:
 <a href="#customconfig_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Secrets encryption configuration. (map)
+    <dd>{{% md %}}Secrets encryption yaml encoded custom configuration. `"apiVersion"` and `"kind":"EncryptionConfiguration"` fields are required in the yaml. Ex. `apiVersion: apiserver.config.k8s.io/v1\nkind: EncryptionConfiguration\nresources:\n- resources:\n  - secrets\n  providers:\n  - aescbc:\n      keys:\n      - name: k-fw5hn\n        secret: RTczRjFDODMwQzAyMDVBREU4NDJBMUZFNDhCNzM5N0I=\n    identity: {}\n` [More info](https://rancher.com/docs/rke/latest/en/config-options/secrets-encryption/) (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -22266,9 +22354,9 @@ The following state arguments are supported:
 <a href="#customconfig_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Secrets encryption configuration. (map)
+    <dd>{{% md %}}Secrets encryption yaml encoded custom configuration. `"apiVersion"` and `"kind":"EncryptionConfiguration"` fields are required in the yaml. Ex. `apiVersion: apiserver.config.k8s.io/v1\nkind: EncryptionConfiguration\nresources:\n- resources:\n  - secrets\n  providers:\n  - aescbc:\n      keys:\n      - name: k-fw5hn\n        secret: RTczRjFDODMwQzAyMDVBREU4NDJBMUZFNDhCNzM5N0I=\n    identity: {}\n` [More info](https://rancher.com/docs/rke/latest/en/config-options/secrets-encryption/) (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -22295,9 +22383,9 @@ The following state arguments are supported:
 <a href="#customconfig_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Secrets encryption configuration. (map)
+    <dd>{{% md %}}Secrets encryption yaml encoded custom configuration. `"apiVersion"` and `"kind":"EncryptionConfiguration"` fields are required in the yaml. Ex. `apiVersion: apiserver.config.k8s.io/v1\nkind: EncryptionConfiguration\nresources:\n- resources:\n  - secrets\n  providers:\n  - aescbc:\n      keys:\n      - name: k-fw5hn\n        secret: RTczRjFDODMwQzAyMDVBREU4NDJBMUZFNDhCNzM5N0I=\n    identity: {}\n` [More info](https://rancher.com/docs/rke/latest/en/config-options/secrets-encryption/) (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -22324,9 +22412,9 @@ The following state arguments are supported:
 <a href="#custom_config_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Secrets encryption configuration. (map)
+    <dd>{{% md %}}Secrets encryption yaml encoded custom configuration. `"apiVersion"` and `"kind":"EncryptionConfiguration"` fields are required in the yaml. Ex. `apiVersion: apiserver.config.k8s.io/v1\nkind: EncryptionConfiguration\nresources:\n- resources:\n  - secrets\n  providers:\n  - aescbc:\n      keys:\n      - name: k-fw5hn\n        secret: RTczRjFDODMwQzAyMDVBREU4NDJBMUZFNDhCNzM5N0I=\n    identity: {}\n` [More info](https://rancher.com/docs/rke/latest/en/config-options/secrets-encryption/) (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -22612,7 +22700,7 @@ The following state arguments are supported:
 <a href="#extra_binds_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>binds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Extra binds for scheduler service (list)
 {{% /md %}}</dd>
@@ -22623,7 +22711,7 @@ The following state arguments are supported:
 <a href="#extra_envs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>envs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Extra environment for scheduler service (list)
 {{% /md %}}</dd>
@@ -23032,7 +23120,7 @@ The following state arguments are supported:
 <a href="#extra_binds_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>binds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Extra binds for scheduler service (list)
 {{% /md %}}</dd>
@@ -23043,7 +23131,7 @@ The following state arguments are supported:
 <a href="#extra_envs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>envs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Extra environment for scheduler service (list)
 {{% /md %}}</dd>
@@ -23287,7 +23375,7 @@ The following state arguments are supported:
 <a href="#extra_binds_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>binds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Extra binds for scheduler service (list)
 {{% /md %}}</dd>
@@ -23298,7 +23386,7 @@ The following state arguments are supported:
 <a href="#extra_envs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>envs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Extra environment for scheduler service (list)
 {{% /md %}}</dd>
@@ -23509,7 +23597,7 @@ The following state arguments are supported:
 <a href="#extra_binds_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>binds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Extra binds for scheduler service (list)
 {{% /md %}}</dd>
@@ -23520,7 +23608,7 @@ The following state arguments are supported:
 <a href="#extra_envs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>envs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Extra environment for scheduler service (list)
 {{% /md %}}</dd>
@@ -23997,7 +24085,7 @@ The following state arguments are supported:
 <a href="#grace_period_python" style="color: inherit; text-decoration: inherit;">grace_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}RKE node drain grace period. Default: `-1` (int)
 {{% /md %}}</dd>
@@ -24019,7 +24107,7 @@ The following state arguments are supported:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}RKE node drain timeout. Default: `60` (int)
 {{% /md %}}</dd>
@@ -24542,7 +24630,7 @@ The following state arguments are supported:
 <a href="#override_skips_python" style="color: inherit; text-decoration: inherit;">override_<wbr>skips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Override skip (string)
 {{% /md %}}</dd>
@@ -24687,7 +24775,7 @@ The following state arguments are supported:
 <a href="#retention_python" style="color: inherit; text-decoration: inherit;">retention</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Retention for etcd backup. Default `6` (int)
 {{% /md %}}</dd>
@@ -24710,6 +24798,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
+	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
 </dl>
 

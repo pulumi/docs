@@ -740,7 +740,7 @@ The following output properties are available:
 <a href="#answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmulticlusterappanswer">List[Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Answer]</a></span>
+        <span class="property-type"><a href="#getmulticlusterappanswer">Sequence[Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Answer]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app answers (list)
 {{% /md %}}</dd>
@@ -784,7 +784,7 @@ The following output properties are available:
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmulticlusterappmember">List[Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Member]</a></span>
+        <span class="property-type"><a href="#getmulticlusterappmember">Sequence[Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Member]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app members (list)
 {{% /md %}}</dd>
@@ -805,7 +805,7 @@ The following output properties are available:
 <a href="#revision_history_limit_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>history_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app revision history limit (int)
 {{% /md %}}</dd>
@@ -827,7 +827,7 @@ The following output properties are available:
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app roles (list)
 {{% /md %}}</dd>
@@ -838,7 +838,7 @@ The following output properties are available:
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmulticlusterapptarget">List[Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Target]</a></span>
+        <span class="property-type"><a href="#getmulticlusterapptarget">Sequence[Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Target]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app target projects (list)
 {{% /md %}}</dd>
@@ -882,7 +882,7 @@ The following output properties are available:
 <a href="#upgrade_strategies_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>strategies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmulticlusterappupgradestrategy">List[Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy]</a></span>
+        <span class="property-type"><a href="#getmulticlusterappupgradestrategy">Sequence[Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app upgrade strategy (list)
 {{% /md %}}</dd>
@@ -1629,7 +1629,7 @@ The following output properties are available:
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1639,7 +1639,7 @@ The following output properties are available:
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1661,6 +1661,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
+	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
 </dl>
 

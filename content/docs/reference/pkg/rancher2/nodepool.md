@@ -46,15 +46,17 @@ const foo_custom = new rancher2.Cluster("foo-custom", {
     },
 });
 // Create a new rancher2 Cloud Credential
-const fooCloudCredential = new rancher2.CloudCredential("foo", {
+const fooCloudCredential = new rancher2.CloudCredential("fooCloudCredential", {
+    description: "Terraform cloudCredential acceptance test",
     amazonec2CredentialConfig: {
         accessKey: "XXXXXXXXXXXXXXXXXXXX",
         secretKey: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     },
-    description: "Terraform cloudCredential acceptance test",
 });
 // Create a new rancher2 Node Template
-const fooNodeTemplate = new rancher2.NodeTemplate("foo", {
+const fooNodeTemplate = new rancher2.NodeTemplate("fooNodeTemplate", {
+    description: "foo test",
+    cloudCredentialId: fooCloudCredential.id,
     amazonec2Config: {
         ami: "<AMI_ID>",
         region: "<REGION>",
@@ -63,17 +65,15 @@ const fooNodeTemplate = new rancher2.NodeTemplate("foo", {
         vpcId: "<VPC_ID>",
         zone: "<ZONE>",
     },
-    cloudCredentialId: fooCloudCredential.id,
-    description: "foo test",
 });
 // Create a new rancher2 Node Pool
-const fooNodePool = new rancher2.NodePool("foo", {
+const fooNodePool = new rancher2.NodePool("fooNodePool", {
     clusterId: foo_custom.id,
-    controlPlane: true,
-    etcd: true,
     hostnamePrefix: "foo-cluster-0",
     nodeTemplateId: fooNodeTemplate.id,
     quantity: 1,
+    controlPlane: true,
+    etcd: true,
     worker: true,
 });
 ```
@@ -92,7 +92,7 @@ const fooNodePool = new rancher2.NodePool("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.NodePool">NodePool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">control_plane</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">delete_not_ready_after_secs</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">etcd</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hostname_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_taints</span><span class="p">:</span> <span class="nx">Optional[List[NodePoolNodeTaintArgs]]</span> = None<span class="p">, </span><span class="nx">node_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">quantity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">worker</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.NodePool">NodePool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">control_plane</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">delete_not_ready_after_secs</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">etcd</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hostname_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodePoolNodeTaintArgs]]</span> = None<span class="p">, </span><span class="nx">node_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">quantity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -742,7 +742,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#delete_not_ready_after_secs_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>not_<wbr>ready_<wbr>after_<wbr>secs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Delete not ready node after secs. For Rancher v2.3.3 or above. Default `0` (int)
 {{% /md %}}</dd>
@@ -786,7 +786,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodetaint">List[Node<wbr>Pool<wbr>Node<wbr>Taint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodepoolnodetaint">Sequence[Node<wbr>Pool<wbr>Node<wbr>Taint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
 {{% /md %}}</dd>
@@ -797,7 +797,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#quantity_python" style="color: inherit; text-decoration: inherit;">quantity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes to create on Node Pool. Default `1`. Only values >= 1 allowed (int)
 {{% /md %}}</dd>
@@ -912,7 +912,7 @@ Get an existing NodePool resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">control_plane</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">delete_not_ready_after_secs</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">etcd</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hostname_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_taints</span><span class="p">:</span> <span class="nx">Optional[List[NodePoolNodeTaintArgs]]</span> = None<span class="p">, </span><span class="nx">node_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">quantity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">worker</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> NodePool</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">control_plane</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">delete_not_ready_after_secs</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">etcd</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hostname_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodePoolNodeTaintArgs]]</span> = None<span class="p">, </span><span class="nx">node_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">quantity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> NodePool</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1482,7 +1482,7 @@ The following state arguments are supported:
 <a href="#state_delete_not_ready_after_secs_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>not_<wbr>ready_<wbr>after_<wbr>secs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Delete not ready node after secs. For Rancher v2.3.3 or above. Default `0` (int)
 {{% /md %}}</dd>
@@ -1537,7 +1537,7 @@ The following state arguments are supported:
 <a href="#state_node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodetaint">List[Node<wbr>Pool<wbr>Node<wbr>Taint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodepoolnodetaint">Sequence[Node<wbr>Pool<wbr>Node<wbr>Taint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
 {{% /md %}}</dd>
@@ -1559,7 +1559,7 @@ The following state arguments are supported:
 <a href="#state_quantity_python" style="color: inherit; text-decoration: inherit;">quantity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes to create on Node Pool. Default `1`. Only values >= 1 allowed (int)
 {{% /md %}}</dd>
@@ -1823,6 +1823,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
+	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
 </dl>
 

@@ -80,10 +80,10 @@ foo = rancher2.get_namespace(name="foo",
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
-const foo = rancher2_cluster_foo_custom.defaultProjectId.apply(defaultProjectId => rancher2.getNamespace({
+const foo = rancher2.getNamespace({
     name: "foo",
-    projectId: defaultProjectId,
-}, { async: true }));
+    projectId: rancher2_cluster["foo-custom"].default_project_id,
+});
 ```
 
 {{% /example %}}
@@ -1505,6 +1505,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
+	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
 </dl>
 

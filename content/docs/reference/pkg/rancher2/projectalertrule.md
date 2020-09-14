@@ -30,6 +30,22 @@ class MyStack : Stack
         var fooProject = new Rancher2.Project("fooProject", new Rancher2.ProjectArgs
         {
             ClusterId = "<cluster_id>",
+            Description = "Terraform project ",
+            ResourceQuota = new Rancher2.Inputs.ProjectResourceQuotaArgs
+            {
+                ProjectLimit = new Rancher2.Inputs.ProjectResourceQuotaProjectLimitArgs
+                {
+                    LimitsCpu = "2000m",
+                    LimitsMemory = "2000Mi",
+                    RequestsStorage = "2Gi",
+                },
+                NamespaceDefaultLimit = new Rancher2.Inputs.ProjectResourceQuotaNamespaceDefaultLimitArgs
+                {
+                    LimitsCpu = "500m",
+                    LimitsMemory = "500Mi",
+                    RequestsStorage = "1Gi",
+                },
+            },
             ContainerResourceLimit = new Rancher2.Inputs.ProjectContainerResourceLimitArgs
             {
                 LimitsCpu = "20m",
@@ -37,37 +53,21 @@ class MyStack : Stack
                 RequestsCpu = "1m",
                 RequestsMemory = "1Mi",
             },
-            Description = "Terraform project ",
-            ResourceQuota = new Rancher2.Inputs.ProjectResourceQuotaArgs
-            {
-                NamespaceDefaultLimit = new Rancher2.Inputs.ProjectResourceQuotaNamespaceDefaultLimitArgs
-                {
-                    LimitsCpu = "500m",
-                    LimitsMemory = "500Mi",
-                    RequestsStorage = "1Gi",
-                },
-                ProjectLimit = new Rancher2.Inputs.ProjectResourceQuotaProjectLimitArgs
-                {
-                    LimitsCpu = "2000m",
-                    LimitsMemory = "2000Mi",
-                    RequestsStorage = "2Gi",
-                },
-            },
         });
         // Create a new Rancher2 Project Alert Group
         var fooProjectAlertGroup = new Rancher2.ProjectAlertGroup("fooProjectAlertGroup", new Rancher2.ProjectAlertGroupArgs
         {
             Description = "Terraform project alert group",
-            GroupIntervalSeconds = 300,
             ProjectId = fooProject.Id,
+            GroupIntervalSeconds = 300,
             RepeatIntervalSeconds = 3600,
         });
         // Create a new Rancher2 Project Alert Rule
         var fooProjectAlertRule = new Rancher2.ProjectAlertRule("fooProjectAlertRule", new Rancher2.ProjectAlertRuleArgs
         {
+            ProjectId = fooProjectAlertGroup.ProjectId,
             GroupId = fooProjectAlertGroup.Id,
             GroupIntervalSeconds = 600,
-            ProjectId = fooProjectAlertGroup.ProjectId,
             RepeatIntervalSeconds = 6000,
         });
     }
@@ -89,25 +89,25 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		fooProject, err := rancher2.NewProject(ctx, "fooProject", &rancher2.ProjectArgs{
-			ClusterId: pulumi.String("<cluster_id>"),
-			ContainerResourceLimit: &rancher2.ProjectContainerResourceLimitArgs{
-				LimitsCpu:      pulumi.String("20m"),
-				LimitsMemory:   pulumi.String("20Mi"),
-				RequestsCpu:    pulumi.String("1m"),
-				RequestsMemory: pulumi.String("1Mi"),
-			},
+			ClusterId:   pulumi.String("<cluster_id>"),
 			Description: pulumi.String("Terraform project "),
 			ResourceQuota: &rancher2.ProjectResourceQuotaArgs{
-				NamespaceDefaultLimit: &rancher2.ProjectResourceQuotaNamespaceDefaultLimitArgs{
-					LimitsCpu:       pulumi.String("500m"),
-					LimitsMemory:    pulumi.String("500Mi"),
-					RequestsStorage: pulumi.String("1Gi"),
-				},
 				ProjectLimit: &rancher2.ProjectResourceQuotaProjectLimitArgs{
 					LimitsCpu:       pulumi.String("2000m"),
 					LimitsMemory:    pulumi.String("2000Mi"),
 					RequestsStorage: pulumi.String("2Gi"),
 				},
+				NamespaceDefaultLimit: &rancher2.ProjectResourceQuotaNamespaceDefaultLimitArgs{
+					LimitsCpu:       pulumi.String("500m"),
+					LimitsMemory:    pulumi.String("500Mi"),
+					RequestsStorage: pulumi.String("1Gi"),
+				},
+			},
+			ContainerResourceLimit: &rancher2.ProjectContainerResourceLimitArgs{
+				LimitsCpu:      pulumi.String("20m"),
+				LimitsMemory:   pulumi.String("20Mi"),
+				RequestsCpu:    pulumi.String("1m"),
+				RequestsMemory: pulumi.String("1Mi"),
 			},
 		})
 		if err != nil {
@@ -115,17 +115,17 @@ func main() {
 		}
 		fooProjectAlertGroup, err := rancher2.NewProjectAlertGroup(ctx, "fooProjectAlertGroup", &rancher2.ProjectAlertGroupArgs{
 			Description:           pulumi.String("Terraform project alert group"),
-			GroupIntervalSeconds:  pulumi.Int(300),
 			ProjectId:             fooProject.ID(),
+			GroupIntervalSeconds:  pulumi.Int(300),
 			RepeatIntervalSeconds: pulumi.Int(3600),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = rancher2.NewProjectAlertRule(ctx, "fooProjectAlertRule", &rancher2.ProjectAlertRuleArgs{
+			ProjectId:             fooProjectAlertGroup.ProjectId,
 			GroupId:               fooProjectAlertGroup.ID(),
 			GroupIntervalSeconds:  pulumi.Int(600),
-			ProjectId:             fooProjectAlertGroup.ProjectId,
 			RepeatIntervalSeconds: pulumi.Int(6000),
 		})
 		if err != nil {
@@ -146,36 +146,36 @@ import pulumi_rancher2 as rancher2
 # Create a new Rancher2 Project
 foo_project = rancher2.Project("fooProject",
     cluster_id="<cluster_id>",
-    container_resource_limit=rancher2.ProjectContainerResourceLimitArgs(
-        limits_cpu="20m",
-        limits_memory="20Mi",
-        requests_cpu="1m",
-        requests_memory="1Mi",
-    ),
     description="Terraform project ",
     resource_quota=rancher2.ProjectResourceQuotaArgs(
-        namespace_default_limit=rancher2.ProjectResourceQuotaNamespaceDefaultLimitArgs(
-            limits_cpu="500m",
-            limits_memory="500Mi",
-            requests_storage="1Gi",
-        ),
         project_limit=rancher2.ProjectResourceQuotaProjectLimitArgs(
             limits_cpu="2000m",
             limits_memory="2000Mi",
             requests_storage="2Gi",
         ),
+        namespace_default_limit=rancher2.ProjectResourceQuotaNamespaceDefaultLimitArgs(
+            limits_cpu="500m",
+            limits_memory="500Mi",
+            requests_storage="1Gi",
+        ),
+    ),
+    container_resource_limit=rancher2.ProjectContainerResourceLimitArgs(
+        limits_cpu="20m",
+        limits_memory="20Mi",
+        requests_cpu="1m",
+        requests_memory="1Mi",
     ))
 # Create a new Rancher2 Project Alert Group
 foo_project_alert_group = rancher2.ProjectAlertGroup("fooProjectAlertGroup",
     description="Terraform project alert group",
-    group_interval_seconds=300,
     project_id=foo_project.id,
+    group_interval_seconds=300,
     repeat_interval_seconds=3600)
 # Create a new Rancher2 Project Alert Rule
 foo_project_alert_rule = rancher2.ProjectAlertRule("fooProjectAlertRule",
+    project_id=foo_project_alert_group.project_id,
     group_id=foo_project_alert_group.id,
     group_interval_seconds=600,
-    project_id=foo_project_alert_group.project_id,
     repeat_interval_seconds=6000)
 ```
 
@@ -188,40 +188,40 @@ import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
 // Create a new Rancher2 Project
-const fooProject = new rancher2.Project("foo", {
+const fooProject = new rancher2.Project("fooProject", {
     clusterId: "<cluster_id>",
+    description: "Terraform project ",
+    resourceQuota: {
+        projectLimit: {
+            limitsCpu: "2000m",
+            limitsMemory: "2000Mi",
+            requestsStorage: "2Gi",
+        },
+        namespaceDefaultLimit: {
+            limitsCpu: "500m",
+            limitsMemory: "500Mi",
+            requestsStorage: "1Gi",
+        },
+    },
     containerResourceLimit: {
         limitsCpu: "20m",
         limitsMemory: "20Mi",
         requestsCpu: "1m",
         requestsMemory: "1Mi",
     },
-    description: "Terraform project ",
-    resourceQuota: {
-        namespaceDefaultLimit: {
-            limitsCpu: "500m",
-            limitsMemory: "500Mi",
-            requestsStorage: "1Gi",
-        },
-        projectLimit: {
-            limitsCpu: "2000m",
-            limitsMemory: "2000Mi",
-            requestsStorage: "2Gi",
-        },
-    },
 });
 // Create a new Rancher2 Project Alert Group
-const fooProjectAlertGroup = new rancher2.ProjectAlertGroup("foo", {
+const fooProjectAlertGroup = new rancher2.ProjectAlertGroup("fooProjectAlertGroup", {
     description: "Terraform project alert group",
-    groupIntervalSeconds: 300,
     projectId: fooProject.id,
+    groupIntervalSeconds: 300,
     repeatIntervalSeconds: 3600,
 });
 // Create a new Rancher2 Project Alert Rule
-const fooProjectAlertRule = new rancher2.ProjectAlertRule("foo", {
+const fooProjectAlertRule = new rancher2.ProjectAlertRule("fooProjectAlertRule", {
+    projectId: fooProjectAlertGroup.projectId,
     groupId: fooProjectAlertGroup.id,
     groupIntervalSeconds: 600,
-    projectId: fooProjectAlertGroup.projectId,
     repeatIntervalSeconds: 6000,
 });
 ```
@@ -240,7 +240,7 @@ const fooProjectAlertRule = new rancher2.ProjectAlertRule("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.ProjectAlertRule">ProjectAlertRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">group_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">inherited</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">metric_rule</span><span class="p">:</span> <span class="nx">Optional[ProjectAlertRuleMetricRuleArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_rule</span><span class="p">:</span> <span class="nx">Optional[ProjectAlertRulePodRuleArgs]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repeat_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workload_rule</span><span class="p">:</span> <span class="nx">Optional[ProjectAlertRuleWorkloadRuleArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.ProjectAlertRule">ProjectAlertRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">group_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">inherited</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">metric_rule</span><span class="p">:</span> <span class="nx">Optional[ProjectAlertRuleMetricRuleArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_rule</span><span class="p">:</span> <span class="nx">Optional[ProjectAlertRulePodRuleArgs]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repeat_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workload_rule</span><span class="p">:</span> <span class="nx">Optional[ProjectAlertRuleWorkloadRuleArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -901,7 +901,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#group_interval_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -912,7 +912,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#group_wait_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>wait_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -978,7 +978,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#repeat_interval_seconds_python" style="color: inherit; text-decoration: inherit;">repeat_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
 {{% /md %}}</dd>
@@ -1104,7 +1104,7 @@ Get an existing ProjectAlertRule resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">group_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">inherited</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">metric_rule</span><span class="p">:</span> <span class="nx">Optional[ProjectAlertRuleMetricRuleArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_rule</span><span class="p">:</span> <span class="nx">Optional[ProjectAlertRulePodRuleArgs]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repeat_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workload_rule</span><span class="p">:</span> <span class="nx">Optional[ProjectAlertRuleWorkloadRuleArgs]</span> = None<span class="p">) -&gt;</span> ProjectAlertRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">group_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">inherited</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">metric_rule</span><span class="p">:</span> <span class="nx">Optional[ProjectAlertRuleMetricRuleArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_rule</span><span class="p">:</span> <span class="nx">Optional[ProjectAlertRulePodRuleArgs]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repeat_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workload_rule</span><span class="p">:</span> <span class="nx">Optional[ProjectAlertRuleWorkloadRuleArgs]</span> = None<span class="p">) -&gt;</span> ProjectAlertRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1696,7 +1696,7 @@ The following state arguments are supported:
 <a href="#state_group_interval_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -1707,7 +1707,7 @@ The following state arguments are supported:
 <a href="#state_group_wait_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>wait_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -1784,7 +1784,7 @@ The following state arguments are supported:
 <a href="#state_repeat_interval_seconds_python" style="color: inherit; text-decoration: inherit;">repeat_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
 {{% /md %}}</dd>
@@ -2291,7 +2291,7 @@ The following state arguments are supported:
 <a href="#restart_interval_seconds_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Pod rule restart interval seconds. Default: `300` (int)
 {{% /md %}}</dd>
@@ -2302,7 +2302,7 @@ The following state arguments are supported:
 <a href="#restart_times_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>times</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Pod rule restart times. Default: `3`  (int)
 {{% /md %}}</dd>
@@ -2458,7 +2458,7 @@ The following state arguments are supported:
 <a href="#available_percentage_python" style="color: inherit; text-decoration: inherit;">available_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Workload rule available percentage. Default: `70` (int)
 {{% /md %}}</dd>
@@ -2503,6 +2503,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
+	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
 </dl>
 

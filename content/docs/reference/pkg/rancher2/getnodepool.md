@@ -80,10 +80,10 @@ foo = rancher2.get_node_pool(cluster_id=rancher2_cluster["foo-custom"]["id"],
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
-const foo = rancher2_cluster_foo_custom.id.apply(id => rancher2.getNodePool({
-    clusterId: id,
+const foo = rancher2.getNodePool({
+    clusterId: rancher2_cluster["foo-custom"].id,
     name: "foo",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}
@@ -781,7 +781,7 @@ The following output properties are available:
 <a href="#delete_not_ready_after_secs_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>not_<wbr>ready_<wbr>after_<wbr>secs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Delete not ready node after secs. Default `0` (int)
 {{% /md %}}</dd>
@@ -846,7 +846,7 @@ The following output properties are available:
 <a href="#node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodepoolnodetaint">List[Get<wbr>Node<wbr>Pool<wbr>Node<wbr>Taint]</a></span>
+        <span class="property-type"><a href="#getnodepoolnodetaint">Sequence[Get<wbr>Node<wbr>Pool<wbr>Node<wbr>Taint]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Node taints (List)
 {{% /md %}}</dd>
@@ -867,7 +867,7 @@ The following output properties are available:
 <a href="#quantity_python" style="color: inherit; text-decoration: inherit;">quantity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The number of nodes to create on Node Pool (int)
 {{% /md %}}</dd>
@@ -1113,6 +1113,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
+	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
 </dl>
 
