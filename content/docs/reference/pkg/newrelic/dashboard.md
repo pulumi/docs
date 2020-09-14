@@ -65,6 +65,383 @@ The optional filter block supports the following arguments:
   * `event_types` - (Optional) A list of event types to enable filtering for.
   * `attributes` - (Optional) A list of attributes belonging to the specified event types to enable filtering for.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create A New Relic Dashboard
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myApplication = Output.Create(NewRelic.GetEntity.InvokeAsync(new NewRelic.GetEntityArgs
+        {
+            Name = "My Application",
+            Type = "APPLICATION",
+            Domain = "APM",
+        }));
+        var exampledash = new NewRelic.Dashboard("exampledash", new NewRelic.DashboardArgs
+        {
+            Title = "New Relic Terraform Example",
+            Filter = new NewRelic.Inputs.DashboardFilterArgs
+            {
+                EventTypes = 
+                {
+                    "Transaction",
+                },
+                Attributes = 
+                {
+                    "appName",
+                    "name",
+                },
+            },
+            Widgets = 
+            {
+                new NewRelic.Inputs.DashboardWidgetArgs
+                {
+                    Title = "Requests per minute",
+                    Visualization = "billboard",
+                    Nrql = "SELECT rate(count(*), 1 minute) FROM Transaction",
+                    Row = 1,
+                    Column = 1,
+                },
+                new NewRelic.Inputs.DashboardWidgetArgs
+                {
+                    Title = "Error rate",
+                    Visualization = "gauge",
+                    Nrql = "SELECT percentage(count(*), WHERE error IS True) FROM Transaction",
+                    ThresholdRed = 2.5,
+                    Row = 1,
+                    Column = 2,
+                },
+                new NewRelic.Inputs.DashboardWidgetArgs
+                {
+                    Title = "Average transaction duration, by application",
+                    Visualization = "facet_bar_chart",
+                    Nrql = "SELECT average(duration) FROM Transaction FACET appName",
+                    Row = 1,
+                    Column = 3,
+                },
+                new NewRelic.Inputs.DashboardWidgetArgs
+                {
+                    Title = "Apdex, top 5 by host",
+                    Duration = 1800000,
+                    Visualization = "metric_line_chart",
+                    EntityIds = 
+                    {
+                        myApplication.Apply(myApplication => myApplication.ApplicationId),
+                    },
+                    Metrics = 
+                    {
+                        new NewRelic.Inputs.DashboardWidgetMetricArgs
+                        {
+                            Name = "Apdex",
+                            Values = 
+                            {
+                                "score",
+                            },
+                        },
+                    },
+                    Facet = "host",
+                    Limit = 5,
+                    OrderBy = "score",
+                    Row = 2,
+                    Column = 1,
+                },
+                new NewRelic.Inputs.DashboardWidgetArgs
+                {
+                    Title = "Requests per minute, by transaction",
+                    Visualization = "facet_table",
+                    Nrql = "SELECT rate(count(*), 1 minute) FROM Transaction FACET name",
+                    Row = 2,
+                    Column = 2,
+                },
+                new NewRelic.Inputs.DashboardWidgetArgs
+                {
+                    Title = "Dashboard Note",
+                    Visualization = "markdown",
+                    Source = @"### Helpful Links
+
+* [New Relic One](https://one.newrelic.com)
+* [Developer Portal](https://developer.newrelic.com)",
+                    Row = 2,
+                    Column = 3,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "APPLICATION"
+		opt1 := "APM"
+		myApplication, err := newrelic.GetEntity(ctx, &newrelic.GetEntityArgs{
+			Name:   "My Application",
+			Type:   &opt0,
+			Domain: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = newrelic.NewDashboard(ctx, "exampledash", &newrelic.DashboardArgs{
+			Title: pulumi.String("New Relic Terraform Example"),
+			Filter: &newrelic.DashboardFilterArgs{
+				EventTypes: pulumi.StringArray{
+					pulumi.String("Transaction"),
+				},
+				Attributes: pulumi.StringArray{
+					pulumi.String("appName"),
+					pulumi.String("name"),
+				},
+			},
+			Widgets: newrelic.DashboardWidgetArray{
+				&newrelic.DashboardWidgetArgs{
+					Title:         pulumi.String("Requests per minute"),
+					Visualization: pulumi.String("billboard"),
+					Nrql:          pulumi.String("SELECT rate(count(*), 1 minute) FROM Transaction"),
+					Row:           pulumi.Int(1),
+					Column:        pulumi.Int(1),
+				},
+				&newrelic.DashboardWidgetArgs{
+					Title:         pulumi.String("Error rate"),
+					Visualization: pulumi.String("gauge"),
+					Nrql:          pulumi.String("SELECT percentage(count(*), WHERE error IS True) FROM Transaction"),
+					ThresholdRed:  pulumi.Float64(2.5),
+					Row:           pulumi.Int(1),
+					Column:        pulumi.Int(2),
+				},
+				&newrelic.DashboardWidgetArgs{
+					Title:         pulumi.String("Average transaction duration, by application"),
+					Visualization: pulumi.String("facet_bar_chart"),
+					Nrql:          pulumi.String("SELECT average(duration) FROM Transaction FACET appName"),
+					Row:           pulumi.Int(1),
+					Column:        pulumi.Int(3),
+				},
+				&newrelic.DashboardWidgetArgs{
+					Title:         pulumi.String("Apdex, top 5 by host"),
+					Duration:      pulumi.Int(1800000),
+					Visualization: pulumi.String("metric_line_chart"),
+					EntityIds: pulumi.IntArray{
+						pulumi.Int(myApplication.ApplicationId),
+					},
+					Metrics: newrelic.DashboardWidgetMetricArray{
+						&newrelic.DashboardWidgetMetricArgs{
+							Name: pulumi.String("Apdex"),
+							Values: pulumi.StringArray{
+								pulumi.String("score"),
+							},
+						},
+					},
+					Facet:   pulumi.String("host"),
+					Limit:   pulumi.Int(5),
+					OrderBy: pulumi.String("score"),
+					Row:     pulumi.Int(2),
+					Column:  pulumi.Int(1),
+				},
+				&newrelic.DashboardWidgetArgs{
+					Title:         pulumi.String("Requests per minute, by transaction"),
+					Visualization: pulumi.String("facet_table"),
+					Nrql:          pulumi.String("SELECT rate(count(*), 1 minute) FROM Transaction FACET name"),
+					Row:           pulumi.Int(2),
+					Column:        pulumi.Int(2),
+				},
+				&newrelic.DashboardWidgetArgs{
+					Title:         pulumi.String("Dashboard Note"),
+					Visualization: pulumi.String("markdown"),
+					Source:        pulumi.String("### Helpful Links\n\n* [New Relic One](https://one.newrelic.com)\n* [Developer Portal](https://developer.newrelic.com)"),
+					Row:           pulumi.Int(2),
+					Column:        pulumi.Int(3),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+my_application = newrelic.get_entity(name="My Application",
+    type="APPLICATION",
+    domain="APM")
+exampledash = newrelic.Dashboard("exampledash",
+    title="New Relic Terraform Example",
+    filter=newrelic.DashboardFilterArgs(
+        event_types=["Transaction"],
+        attributes=[
+            "appName",
+            "name",
+        ],
+    ),
+    widgets=[
+        newrelic.DashboardWidgetArgs(
+            title="Requests per minute",
+            visualization="billboard",
+            nrql="SELECT rate(count(*), 1 minute) FROM Transaction",
+            row=1,
+            column=1,
+        ),
+        newrelic.DashboardWidgetArgs(
+            title="Error rate",
+            visualization="gauge",
+            nrql="SELECT percentage(count(*), WHERE error IS True) FROM Transaction",
+            threshold_red=2.5,
+            row=1,
+            column=2,
+        ),
+        newrelic.DashboardWidgetArgs(
+            title="Average transaction duration, by application",
+            visualization="facet_bar_chart",
+            nrql="SELECT average(duration) FROM Transaction FACET appName",
+            row=1,
+            column=3,
+        ),
+        newrelic.DashboardWidgetArgs(
+            title="Apdex, top 5 by host",
+            duration=1800000,
+            visualization="metric_line_chart",
+            entity_ids=[my_application.application_id],
+            metrics=[newrelic.DashboardWidgetMetricArgs(
+                name="Apdex",
+                values=["score"],
+            )],
+            facet="host",
+            limit=5,
+            order_by="score",
+            row=2,
+            column=1,
+        ),
+        newrelic.DashboardWidgetArgs(
+            title="Requests per minute, by transaction",
+            visualization="facet_table",
+            nrql="SELECT rate(count(*), 1 minute) FROM Transaction FACET name",
+            row=2,
+            column=2,
+        ),
+        newrelic.DashboardWidgetArgs(
+            title="Dashboard Note",
+            visualization="markdown",
+            source="""### Helpful Links
+
+* [New Relic One](https://one.newrelic.com)
+* [Developer Portal](https://developer.newrelic.com)""",
+            row=2,
+            column=3,
+        ),
+    ])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const myApplication = newrelic.getEntity({
+    name: "My Application",
+    type: "APPLICATION",
+    domain: "APM",
+});
+const exampledash = new newrelic.Dashboard("exampledash", {
+    title: "New Relic Terraform Example",
+    filter: {
+        eventTypes: ["Transaction"],
+        attributes: [
+            "appName",
+            "name",
+        ],
+    },
+    widgets: [
+        {
+            title: "Requests per minute",
+            visualization: "billboard",
+            nrql: "SELECT rate(count(*), 1 minute) FROM Transaction",
+            row: 1,
+            column: 1,
+        },
+        {
+            title: "Error rate",
+            visualization: "gauge",
+            nrql: "SELECT percentage(count(*), WHERE error IS True) FROM Transaction",
+            thresholdRed: 2.5,
+            row: 1,
+            column: 2,
+        },
+        {
+            title: "Average transaction duration, by application",
+            visualization: "facet_bar_chart",
+            nrql: "SELECT average(duration) FROM Transaction FACET appName",
+            row: 1,
+            column: 3,
+        },
+        {
+            title: "Apdex, top 5 by host",
+            duration: 1800000,
+            visualization: "metric_line_chart",
+            entityIds: [myApplication.then(myApplication => myApplication.applicationId)],
+            metrics: [{
+                name: "Apdex",
+                values: ["score"],
+            }],
+            facet: "host",
+            limit: 5,
+            orderBy: "score",
+            row: 2,
+            column: 1,
+        },
+        {
+            title: "Requests per minute, by transaction",
+            visualization: "facet_table",
+            nrql: "SELECT rate(count(*), 1 minute) FROM Transaction FACET name",
+            row: 2,
+            column: 2,
+        },
+        {
+            title: "Dashboard Note",
+            visualization: "markdown",
+            source: `### Helpful Links
+
+* [New Relic One](https://one.newrelic.com)
+* [Developer Portal](https://developer.newrelic.com)`,
+            row: 2,
+            column: 3,
+        },
+    ],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Dashboard Resource {#create}
@@ -76,7 +453,7 @@ The optional filter block supports the following arguments:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.Dashboard">Dashboard</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">editable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[DashboardFilterArgs]</span> = None<span class="p">, </span><span class="nx">grid_column_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">icon</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">widgets</span><span class="p">:</span> <span class="nx">Optional[List[DashboardWidgetArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.Dashboard">Dashboard</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">editable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[DashboardFilterArgs]</span> = None<span class="p">, </span><span class="nx">grid_column_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">icon</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">widgets</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardWidgetArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -539,7 +916,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#grid_column_count_python" style="color: inherit; text-decoration: inherit;">grid_<wbr>column_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of columns to use when organizing and displaying widgets. New Relic One supports a 3 column grid and a 12 column grid. New Relic Insights supports a 3 column grid.
 {{% /md %}}</dd>
@@ -572,7 +949,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#widgets_python" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardwidget">List[Dashboard<wbr>Widget<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardwidget">Sequence[Dashboard<wbr>Widget<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.
 {{% /md %}}</dd>
@@ -720,7 +1097,7 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dashboard_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">editable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[DashboardFilterArgs]</span> = None<span class="p">, </span><span class="nx">grid_column_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">icon</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">widgets</span><span class="p">:</span> <span class="nx">Optional[List[DashboardWidgetArgs]]</span> = None<span class="p">) -&gt;</span> Dashboard</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dashboard_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">editable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[DashboardFilterArgs]</span> = None<span class="p">, </span><span class="nx">grid_column_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">icon</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">widgets</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardWidgetArgs]]</span> = None<span class="p">) -&gt;</span> Dashboard</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1158,7 +1535,7 @@ The following state arguments are supported:
 <a href="#state_grid_column_count_python" style="color: inherit; text-decoration: inherit;">grid_<wbr>column_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of columns to use when organizing and displaying widgets. New Relic One supports a 3 column grid and a 12 column grid. New Relic Insights supports a 3 column grid.
 {{% /md %}}</dd>
@@ -1202,7 +1579,7 @@ The following state arguments are supported:
 <a href="#state_widgets_python" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardwidget">List[Dashboard<wbr>Widget<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardwidget">Sequence[Dashboard<wbr>Widget<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.
 {{% /md %}}</dd>
@@ -1327,7 +1704,7 @@ The following state arguments are supported:
 <a href="#event_types_python" style="color: inherit; text-decoration: inherit;">event_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1337,7 +1714,7 @@ The following state arguments are supported:
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2056,7 +2433,7 @@ The following state arguments are supported:
 <a href="#column_python" style="color: inherit; text-decoration: inherit;">column</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2066,7 +2443,7 @@ The following state arguments are supported:
 <a href="#row_python" style="color: inherit; text-decoration: inherit;">row</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2097,7 +2474,7 @@ The following state arguments are supported:
 <a href="#compare_withs_python" style="color: inherit; text-decoration: inherit;">compare_<wbr>withs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardwidgetcomparewith">List[Dashboard<wbr>Widget<wbr>Compare<wbr>With<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardwidgetcomparewith">Sequence[Dashboard<wbr>Widget<wbr>Compare<wbr>With<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2107,7 +2484,7 @@ The following state arguments are supported:
 <a href="#drilldown_dashboard_id_python" style="color: inherit; text-decoration: inherit;">drilldown_<wbr>dashboard_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2117,7 +2494,7 @@ The following state arguments are supported:
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2127,7 +2504,7 @@ The following state arguments are supported:
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2137,7 +2514,7 @@ The following state arguments are supported:
 <a href="#entity_ids_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2157,7 +2534,7 @@ The following state arguments are supported:
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2167,7 +2544,7 @@ The following state arguments are supported:
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2177,7 +2554,7 @@ The following state arguments are supported:
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardwidgetmetric">List[Dashboard<wbr>Widget<wbr>Metric<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardwidgetmetric">Sequence[Dashboard<wbr>Widget<wbr>Metric<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2257,7 +2634,7 @@ The following state arguments are supported:
 <a href="#widget_id_python" style="color: inherit; text-decoration: inherit;">widget_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2267,7 +2644,7 @@ The following state arguments are supported:
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2725,7 +3102,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

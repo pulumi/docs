@@ -40,26 +40,26 @@ class MyStack : Stack
         var fooAlertPolicy = new NewRelic.AlertPolicy("fooAlertPolicy", new NewRelic.AlertPolicyArgs
         {
         });
-        var fooAlertCondition = new NewRelic.AlertCondition("fooAlertCondition", new NewRelic.AlertConditionArgs
+        var fooNrqlAlertCondition = new NewRelic.NrqlAlertCondition("fooNrqlAlertCondition", new NewRelic.NrqlAlertConditionArgs
         {
             PolicyId = fooAlertPolicy.Id,
-            Type = "apm_app_metric",
-            Entities = 
-            {
-                data.Newrelic_application.App.Application_id,
-            },
-            Metric = "apdex",
+            Type = "static",
+            Description = "Alert when transactions are taking too long",
             RunbookUrl = "https://www.example.com",
-            Terms = 
+            Enabled = true,
+            ValueFunction = "single_value",
+            ViolationTimeLimit = "one_hour",
+            Nrql = new NewRelic.Inputs.NrqlAlertConditionNrqlArgs
             {
-                new NewRelic.Inputs.AlertConditionTermArgs
-                {
-                    Duration = 5,
-                    Operator = "below",
-                    Priority = "critical",
-                    Threshold = 0.75,
-                    TimeFunction = "all",
-                },
+                Query = app.Apply(app => $"SELECT average(duration) FROM Transaction where appName = '{app.Name}'"),
+                EvaluationOffset = 3,
+            },
+            Critical = new NewRelic.Inputs.NrqlAlertConditionCriticalArgs
+            {
+                Operator = "above",
+                Threshold = 5.5,
+                ThresholdDuration = 300,
+                ThresholdOccurrences = "ALL",
             },
         });
     }
@@ -74,6 +74,8 @@ class MyStack : Stack
 package main
 
 import (
+	"fmt"
+
 	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
@@ -82,7 +84,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "APM"
 		opt1 := "APPLICATION"
-		_, err := newrelic.GetEntity(ctx, &newrelic.GetEntityArgs{
+		app, err := newrelic.GetEntity(ctx, &newrelic.GetEntityArgs{
 			Name:   "my-app",
 			Domain: &opt0,
 			Type:   &opt1,
@@ -98,22 +100,23 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = newrelic.NewAlertCondition(ctx, "fooAlertCondition", &newrelic.AlertConditionArgs{
-			PolicyId: fooAlertPolicy.ID(),
-			Type:     pulumi.String("apm_app_metric"),
-			Entities: pulumi.IntArray{
-				pulumi.Any(data.Newrelic_application.App.Application_id),
+		_, err = newrelic.NewNrqlAlertCondition(ctx, "fooNrqlAlertCondition", &newrelic.NrqlAlertConditionArgs{
+			PolicyId:           fooAlertPolicy.ID(),
+			Type:               pulumi.String("static"),
+			Description:        pulumi.String("Alert when transactions are taking too long"),
+			RunbookUrl:         pulumi.String("https://www.example.com"),
+			Enabled:            pulumi.Bool(true),
+			ValueFunction:      pulumi.String("single_value"),
+			ViolationTimeLimit: pulumi.String("one_hour"),
+			Nrql: &newrelic.NrqlAlertConditionNrqlArgs{
+				Query:            pulumi.String(fmt.Sprintf("%v%v%v", "SELECT average(duration) FROM Transaction where appName = '", app.Name, "'")),
+				EvaluationOffset: pulumi.Int(3),
 			},
-			Metric:     pulumi.String("apdex"),
-			RunbookUrl: pulumi.String("https://www.example.com"),
-			Terms: newrelic.AlertConditionTermArray{
-				&newrelic.AlertConditionTermArgs{
-					Duration:     pulumi.Int(5),
-					Operator:     pulumi.String("below"),
-					Priority:     pulumi.String("critical"),
-					Threshold:    pulumi.Float64(0.75),
-					TimeFunction: pulumi.String("all"),
-				},
+			Critical: &newrelic.NrqlAlertConditionCriticalArgs{
+				Operator:             pulumi.String("above"),
+				Threshold:            pulumi.Float64(5.5),
+				ThresholdDuration:    pulumi.Int(300),
+				ThresholdOccurrences: pulumi.String("ALL"),
 			},
 		})
 		if err != nil {
@@ -139,19 +142,24 @@ app = newrelic.get_entity(name="my-app",
         value="my-tag-value",
     ))
 foo_alert_policy = newrelic.AlertPolicy("fooAlertPolicy")
-foo_alert_condition = newrelic.AlertCondition("fooAlertCondition",
+foo_nrql_alert_condition = newrelic.NrqlAlertCondition("fooNrqlAlertCondition",
     policy_id=foo_alert_policy.id,
-    type="apm_app_metric",
-    entities=[data["newrelic_application"]["app"]["application_id"]],
-    metric="apdex",
+    type="static",
+    description="Alert when transactions are taking too long",
     runbook_url="https://www.example.com",
-    terms=[newrelic.AlertConditionTermArgs(
-        duration=5,
-        operator="below",
-        priority="critical",
-        threshold=0.75,
-        time_function="all",
-    )])
+    enabled=True,
+    value_function="single_value",
+    violation_time_limit="one_hour",
+    nrql=newrelic.NrqlAlertConditionNrqlArgs(
+        query=f"SELECT average(duration) FROM Transaction where appName = '{app.name}'",
+        evaluation_offset=3,
+    ),
+    critical=newrelic.NrqlAlertConditionCriticalArgs(
+        operator="above",
+        threshold=5.5,
+        threshold_duration=300,
+        threshold_occurrences="ALL",
+    ))
 ```
 
 {{% /example %}}
@@ -172,19 +180,24 @@ const app = newrelic.getEntity({
     },
 });
 const fooAlertPolicy = new newrelic.AlertPolicy("fooAlertPolicy", {});
-const fooAlertCondition = new newrelic.AlertCondition("fooAlertCondition", {
+const fooNrqlAlertCondition = new newrelic.NrqlAlertCondition("fooNrqlAlertCondition", {
     policyId: fooAlertPolicy.id,
-    type: "apm_app_metric",
-    entities: [data.newrelic_application.app.application_id],
-    metric: "apdex",
+    type: "static",
+    description: "Alert when transactions are taking too long",
     runbookUrl: "https://www.example.com",
-    terms: [{
-        duration: 5,
-        operator: "below",
-        priority: "critical",
-        threshold: "0.75",
-        timeFunction: "all",
-    }],
+    enabled: true,
+    valueFunction: "single_value",
+    violationTimeLimit: "one_hour",
+    nrql: {
+        query: app.then(app => `SELECT average(duration) FROM Transaction where appName = '${app.name}'`),
+        evaluationOffset: 3,
+    },
+    critical: {
+        operator: "above",
+        threshold: 5.5,
+        thresholdDuration: 300,
+        thresholdOccurrences: "ALL",
+    },
 });
 ```
 
@@ -721,7 +734,7 @@ The following output properties are available:
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The New Relic account ID associated with this entity.
 {{% /md %}}</dd>
@@ -732,7 +745,7 @@ The following output properties are available:
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The domain-specific application ID of the entity. Only returned for APM and Browser applications.
 {{% /md %}}</dd>

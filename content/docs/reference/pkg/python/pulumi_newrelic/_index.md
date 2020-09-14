@@ -214,7 +214,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">foo_alert_condition</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">AlertCondition</span><span class="p">(</span><span class="s2">&quot;fooAlertCondition&quot;</span><span class="p">,</span>
     <span class="n">policy_id</span><span class="o">=</span><span class="n">foo_alert_policy</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;apm_app_metric&quot;</span><span class="p">,</span>
-    <span class="n">entities</span><span class="o">=</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;newrelic_application&quot;</span><span class="p">][</span><span class="s2">&quot;app&quot;</span><span class="p">][</span><span class="s2">&quot;application_id&quot;</span><span class="p">]],</span>
+    <span class="n">entities</span><span class="o">=</span><span class="p">[</span><span class="n">app</span><span class="o">.</span><span class="n">application_id</span><span class="p">],</span>
     <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;apdex&quot;</span><span class="p">,</span>
     <span class="n">runbook_url</span><span class="o">=</span><span class="s2">&quot;https://www.example.com&quot;</span><span class="p">,</span>
     <span class="n">condition_scope</span><span class="o">=</span><span class="s2">&quot;application&quot;</span><span class="p">,</span>
@@ -1110,7 +1110,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Apdex, top 5 by host&quot;</span><span class="p">,</span>
             <span class="n">duration</span><span class="o">=</span><span class="mi">1800000</span><span class="p">,</span>
             <span class="n">visualization</span><span class="o">=</span><span class="s2">&quot;metric_line_chart&quot;</span><span class="p">,</span>
-            <span class="n">entity_ids</span><span class="o">=</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;newrelic_application&quot;</span><span class="p">][</span><span class="s2">&quot;my_application&quot;</span><span class="p">][</span><span class="s2">&quot;application_id&quot;</span><span class="p">]],</span>
+            <span class="n">entity_ids</span><span class="o">=</span><span class="p">[</span><span class="n">my_application</span><span class="o">.</span><span class="n">application_id</span><span class="p">],</span>
             <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">newrelic</span><span class="o">.</span><span class="n">DashboardWidgetMetricArgs</span><span class="p">(</span>
                 <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Apdex&quot;</span><span class="p">,</span>
                 <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;score&quot;</span><span class="p">],</span>
@@ -2392,19 +2392,24 @@ required.</p>
         <span class="n">value</span><span class="o">=</span><span class="s2">&quot;my-tag-value&quot;</span><span class="p">,</span>
     <span class="p">))</span>
 <span class="n">foo_alert_policy</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">AlertPolicy</span><span class="p">(</span><span class="s2">&quot;fooAlertPolicy&quot;</span><span class="p">)</span>
-<span class="n">foo_alert_condition</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">AlertCondition</span><span class="p">(</span><span class="s2">&quot;fooAlertCondition&quot;</span><span class="p">,</span>
+<span class="n">foo_nrql_alert_condition</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">NrqlAlertCondition</span><span class="p">(</span><span class="s2">&quot;fooNrqlAlertCondition&quot;</span><span class="p">,</span>
     <span class="n">policy_id</span><span class="o">=</span><span class="n">foo_alert_policy</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;apm_app_metric&quot;</span><span class="p">,</span>
-    <span class="n">entities</span><span class="o">=</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;newrelic_application&quot;</span><span class="p">][</span><span class="s2">&quot;app&quot;</span><span class="p">][</span><span class="s2">&quot;application_id&quot;</span><span class="p">]],</span>
-    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;apdex&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;static&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Alert when transactions are taking too long&quot;</span><span class="p">,</span>
     <span class="n">runbook_url</span><span class="o">=</span><span class="s2">&quot;https://www.example.com&quot;</span><span class="p">,</span>
-    <span class="n">terms</span><span class="o">=</span><span class="p">[</span><span class="n">newrelic</span><span class="o">.</span><span class="n">AlertConditionTermArgs</span><span class="p">(</span>
-        <span class="n">duration</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
-        <span class="n">operator</span><span class="o">=</span><span class="s2">&quot;below&quot;</span><span class="p">,</span>
-        <span class="n">priority</span><span class="o">=</span><span class="s2">&quot;critical&quot;</span><span class="p">,</span>
-        <span class="n">threshold</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span>
-        <span class="n">time_function</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">,</span>
-    <span class="p">)])</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">value_function</span><span class="o">=</span><span class="s2">&quot;single_value&quot;</span><span class="p">,</span>
+    <span class="n">violation_time_limit</span><span class="o">=</span><span class="s2">&quot;one_hour&quot;</span><span class="p">,</span>
+    <span class="n">nrql</span><span class="o">=</span><span class="n">newrelic</span><span class="o">.</span><span class="n">NrqlAlertConditionNrqlArgs</span><span class="p">(</span>
+        <span class="n">query</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;SELECT average(duration) FROM Transaction where appName = &#39;</span><span class="si">{</span><span class="n">app</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">,</span>
+        <span class="n">evaluation_offset</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="n">critical</span><span class="o">=</span><span class="n">newrelic</span><span class="o">.</span><span class="n">NrqlAlertConditionCriticalArgs</span><span class="p">(</span>
+        <span class="n">operator</span><span class="o">=</span><span class="s2">&quot;above&quot;</span><span class="p">,</span>
+        <span class="n">threshold</span><span class="o">=</span><span class="mf">5.5</span><span class="p">,</span>
+        <span class="n">threshold_duration</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+        <span class="n">threshold_occurrences</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span>
+    <span class="p">))</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

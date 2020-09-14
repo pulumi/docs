@@ -396,7 +396,7 @@ The following output properties are available:
 <a href="#policy_ids_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}A list of policy IDs associated with the alert channel.
 {{% /md %}}</dd>

@@ -84,6 +84,201 @@ const foo = new newrelic.AlertPolicy("foo", {
 
 {{% /example %}}
 
+### Provision multiple notification channels and add those channels to a policy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Provision a Slack notification channel.
+        var slackChannel = new NewRelic.AlertChannel("slackChannel", new NewRelic.AlertChannelArgs
+        {
+            Type = "slack",
+            Config = new NewRelic.Inputs.AlertChannelConfigArgs
+            {
+                Url = "https://hooks.slack.com/services/xxxxxxx/yyyyyyyy",
+                Channel = "example-alerts-channel",
+            },
+        });
+        // Provision an email notification channel.
+        var emailChannel = new NewRelic.AlertChannel("emailChannel", new NewRelic.AlertChannelArgs
+        {
+            Type = "email",
+            Config = new NewRelic.Inputs.AlertChannelConfigArgs
+            {
+                Recipients = "example@testing.com",
+                IncludeJsonAttachment = "1",
+            },
+        });
+        // Provision the alert policy.
+        var policyWithChannels = new NewRelic.AlertPolicy("policyWithChannels", new NewRelic.AlertPolicyArgs
+        {
+            IncidentPreference = "PER_CONDITION",
+            ChannelIds = 
+            {
+                slackChannel.Id,
+                emailChannel.Id,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+# Provision a Slack notification channel.
+slack_channel = newrelic.AlertChannel("slackChannel",
+    type="slack",
+    config=newrelic.AlertChannelConfigArgs(
+        url="https://hooks.slack.com/services/xxxxxxx/yyyyyyyy",
+        channel="example-alerts-channel",
+    ))
+# Provision an email notification channel.
+email_channel = newrelic.AlertChannel("emailChannel",
+    type="email",
+    config=newrelic.AlertChannelConfigArgs(
+        recipients="example@testing.com",
+        include_json_attachment="1",
+    ))
+# Provision the alert policy.
+policy_with_channels = newrelic.AlertPolicy("policyWithChannels",
+    incident_preference="PER_CONDITION",
+    channel_ids=[
+        slack_channel.id,
+        email_channel.id,
+    ])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+// Provision a Slack notification channel.
+const slackChannel = new newrelic.AlertChannel("slackChannel", {
+    type: "slack",
+    config: {
+        url: "https://hooks.slack.com/services/xxxxxxx/yyyyyyyy",
+        channel: "example-alerts-channel",
+    },
+});
+// Provision an email notification channel.
+const emailChannel = new newrelic.AlertChannel("emailChannel", {
+    type: "email",
+    config: {
+        recipients: "example@testing.com",
+        includeJsonAttachment: "1",
+    },
+});
+// Provision the alert policy.
+const policyWithChannels = new newrelic.AlertPolicy("policyWithChannels", {
+    incidentPreference: "PER_CONDITION",
+    channelIds: [
+        slackChannel.id,
+        emailChannel.id,
+    ],
+});
+```
+
+{{% /example %}}
+
+### Reference existing notification channels and add those channel to a policy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var slackChannel = Output.Create(NewRelic.GetAlertChannel.InvokeAsync(new NewRelic.GetAlertChannelArgs
+        {
+            Name = "slack-channel-notification",
+        }));
+        var emailChannel = Output.Create(NewRelic.GetAlertChannel.InvokeAsync(new NewRelic.GetAlertChannelArgs
+        {
+            Name = "test@example.com",
+        }));
+        // Provision the alert policy.
+        var policyWithChannels = new NewRelic.AlertPolicy("policyWithChannels", new NewRelic.AlertPolicyArgs
+        {
+            IncidentPreference = "PER_CONDITION",
+            ChannelIds = 
+            {
+                slackChannel.Apply(slackChannel => slackChannel.Id),
+                emailChannel.Apply(emailChannel => emailChannel.Id),
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+slack_channel = newrelic.get_alert_channel(name="slack-channel-notification")
+email_channel = newrelic.get_alert_channel(name="test@example.com")
+# Provision the alert policy.
+policy_with_channels = newrelic.AlertPolicy("policyWithChannels",
+    incident_preference="PER_CONDITION",
+    channel_ids=[
+        slack_channel.id,
+        email_channel.id,
+    ])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const slackChannel = newrelic.getAlertChannel({
+    name: "slack-channel-notification",
+});
+const emailChannel = newrelic.getAlertChannel({
+    name: "test@example.com",
+});
+// Provision the alert policy.
+const policyWithChannels = new newrelic.AlertPolicy("policyWithChannels", {
+    incidentPreference: "PER_CONDITION",
+    channelIds: [
+        slackChannel.then(slackChannel => slackChannel.id),
+        emailChannel.then(emailChannel => emailChannel.id),
+    ],
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -96,7 +291,7 @@ const foo = new newrelic.AlertPolicy("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.AlertPolicy">AlertPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">channel_ids</span><span class="p">:</span> <span class="nx">Optional[List[float]]</span> = None<span class="p">, </span><span class="nx">incident_preference</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.AlertPolicy">AlertPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">channel_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">incident_preference</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -427,7 +622,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The New Relic account ID to operate on.  This allows the user to override the `account_id` attribute set on the provider. Defaults to the environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd>
@@ -438,7 +633,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#channel_ids_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs _cannot_ be imported.
 {{% /md %}}</dd>
@@ -564,7 +759,7 @@ Get an existing AlertPolicy resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">channel_ids</span><span class="p">:</span> <span class="nx">Optional[List[float]]</span> = None<span class="p">, </span><span class="nx">incident_preference</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AlertPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">channel_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">incident_preference</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AlertPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -837,7 +1032,7 @@ The following state arguments are supported:
 <a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The New Relic account ID to operate on.  This allows the user to override the `account_id` attribute set on the provider. Defaults to the environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd>
@@ -848,7 +1043,7 @@ The following state arguments are supported:
 <a href="#state_channel_ids_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs _cannot_ be imported.
 {{% /md %}}</dd>

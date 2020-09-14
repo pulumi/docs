@@ -12,6 +12,96 @@ meta_desc: "Explore the AlertChannel resource of the New Relic package, includin
 
 Use this resource to create and manage New Relic alert policies.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new NewRelic.AlertChannel("foo", new NewRelic.AlertChannelArgs
+        {
+            Config = new NewRelic.Inputs.AlertChannelConfigArgs
+            {
+                IncludeJsonAttachment = "1",
+                Recipients = "foo@example.com",
+            },
+            Type = "email",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := newrelic.NewAlertChannel(ctx, "foo", &newrelic.AlertChannelArgs{
+			Config: &newrelic.AlertChannelConfigArgs{
+				IncludeJsonAttachment: pulumi.String("1"),
+				Recipients:            pulumi.String("foo@example.com"),
+			},
+			Type: pulumi.String("email"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.AlertChannel("foo",
+    config=newrelic.AlertChannelConfigArgs(
+        include_json_attachment="1",
+        recipients="foo@example.com",
+    ),
+    type="email")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const foo = new newrelic.AlertChannel("foo", {
+    config: {
+        includeJsonAttachment: "1",
+        recipients: "foo@example.com",
+    },
+    type: "email",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AlertChannel Resource {#create}
