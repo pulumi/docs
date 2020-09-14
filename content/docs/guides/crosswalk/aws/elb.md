@@ -110,53 +110,57 @@ Here is an example that creates an EC2 instance per availability zone, running a
 ```typescript
 import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/awsx";
+import * as pulumi from "@pulumi/pulumi";
 
-// Create a security group to open ingress to our load balancer on port 80, and egress out of the VPC.
-const vpc = awsx.ec2.Vpc.getDefault();
-const sg = new awsx.ec2.SecurityGroup("web-sg", {
-    vpc,
-    // 1) Open ingress traffic to your load balancer. Explicitly needed for NLB, but not ALB:
-    // ingress: [{ protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: [ "0.0.0.0/0" ] }],
-    // 2) Open egress traffic from your EC2 instance to your load balancer (for health checks).
-    egress: [{ protocol: "-1", fromPort: 0, toPort: 0, cidrBlocks: [ "0.0.0.0/0" ] }],
-});
+export = async () => {
+  const config = new pulumi.Config("aws");
+  const providerOpts = { provider: new aws.Provider("prov", { region: <aws.Region>config.require("region") }) };
+  // Create a security group to open ingress to our load balancer on port 80, and egress out of the VPC.
+  const vpc = awsx.ec2.Vpc.getDefault();
+  const sg = new awsx.ec2.SecurityGroup("web-sg", {
+      vpc,
+      // 1) Open ingress traffic to your load balancer. Explicitly needed for NLB, but not ALB:
+      // ingress: [{ protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: [ "0.0.0.0/0" ] }],
+      // 2) Open egress traffic from your EC2 instance to your load balancer (for health checks).
+      egress: [{ protocol: "-1", fromPort: 0, toPort: 0, cidrBlocks: [ "0.0.0.0/0" ] }],
+  });
 
-// Creates an ALB associated with the default VPC for this region and listen on port 80.
-// 3) Be sure to pass in our explicit SecurityGroup created above so that traffic may flow.
-const alb = new awsx.lb.ApplicationLoadBalancer("web-traffic", { securityGroups: [ sg ] });
-const listener = nlb.createListener("web-listener", { port: 80 });
+  // Creates an ALB associated with the default VPC for this region and listen on port 80.
+  // 3) Be sure to pass in our explicit SecurityGroup created above so that traffic may flow.
+  const alb = new awsx.lb.ApplicationLoadBalancer("web-traffic", { securityGroups: [ sg ] });
+  const listener = alb.createListener("web-listener", { port: 80 });
+  const publicIps: pulumi.Output<string>[] = [];
+  const subnets = await vpc.publicSubnets;
 
-// For each subnet, and each subnet/zone, create a VM and a listener.
-for (let i = 0; i < vpc.publicSubnets.length; i++) {
-    // 4) Create the instance in the same VPC, passing in the security group with egress rule.
-    const vm = new aws.ec2.Instance(`web-${i}`, {
-        ami: aws.getAmi({
-            filters: [
-                { name: "name", values: [ "ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*" ] },
-                { name: "virtualization-type", values: [ "hvm" ] },
-            ],
-            mostRecent: true,
-            owners: [ "099720109477" ], // Canonical
-        }).then(ami => ami.id),
-        instanceType: "t2.micro",
-        subnetId: vpc.publicSubnets[i].subnet.id,
-        availabilityZone: vpc.publicSubnets[i].subnet.availabilityZone,
-        vpcSecurityGroupIds: nlb.securityGroups.map(sg => sg.securityGroup.id),
-        userData: `#!/bin/bash
-echo "Hello World, from Server ${i+1}!" > index.html
-nohup python -m SimpleHTTPServer 80 &`,
-    });
+  // For each subnet, and each subnet/zone, create a VM and a listener.
+  for (let i = 0; i < subnets.length; i++) {
+      // 4) Create the instance in the same VPC, passing in the security group with egress rule.
+      const vm = new aws.ec2.Instance(`web-${i}`, {
+          ami: aws.getAmi({
+              filters: [
+                  { name: "name", values: [ "ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*" ] },
+                  { name: "virtualization-type", values: [ "hvm" ] },
+              ],
+              mostRecent: true,
+              owners: [ "099720109477" ], // Canonical
+          }).then(ami => ami.id),
+          instanceType: "t2.micro",
+          subnetId: subnets[i].subnet.id,
+          availabilityZone: subnets[i].subnet.availabilityZone,
+          vpcSecurityGroupIds: alb.securityGroups.map(sg => sg.securityGroup.id),
+          userData: `#!/bin/bash
+  echo "Hello World, from Server ${i+1}!" > index.html
+  nohup python -m SimpleHTTPServer 80 &`,
+        }, providerOpts);
+        publicIps.push(vm.publicIp);
+        // 5) Attach your load balancer's target group the target EC2 instance(s).
+        alb.attachTarget("target-" + i, vm);
+      };
+  }
 
-    // 5) Attach your load balancer's target group the target EC2 instance(s).
-    const attach = new aws.lb.TargetGroupAttachment(`web-nlb-vm-${i}`, {
-        targetId: vm.privateIp,
-        targetGroupArn: nlb.targetGroups[0].targetGroup.arn,
-        availabilityZone: vm.availabilityZone,
-    });
-}
-
-// Export the resulting URL so that it's easy to access.
-export const endpoint = listener.endpoint.hostname;
+  // Export the resulting URL so that it's easy to access.
+  export const endpoint = listener.endpoint.hostname;
+};
 ```
 
 After deploying this using `pulumi up`, we will have a fully functional endpoint:
