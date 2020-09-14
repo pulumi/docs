@@ -149,7 +149,7 @@ const pool = new Pool({
 module.exports = pool;
 ```
 
-With our Dynamic Provider, server, client, and database in place, we can focus on the infrastructure. We start with importing libraries and describing the application's configuration options.
+With our server, client, and database in place, we can focus on the infrastructure. We start with importing libraries and describing the application's configuration options.
 
 ```typescript
 import * as aws from "@pulumi/aws";
@@ -158,7 +158,6 @@ import * as eks from "@pulumi/eks";
 import * as k8s from "@pulumi/kubernetes";
 import * as postgresql from "@pulumi/postgresql";
 import * as pulumi from "@pulumi/pulumi";
-import { Schema } from "./postgresql_dynamic_provider";
 
 const config = new pulumi.Config();
 const sqlAdminName = config.require("sql-admin-name");
