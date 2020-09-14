@@ -12,122 +12,6 @@ meta_desc: "Explore the WorkerScript resource of the Cloudflare package, includi
 
 Provides a Cloudflare worker script resource. In order for a script to be active, you'll also need to setup a `cloudflare.WorkerRoute`. *NOTE:*  This resource uses the Cloudflare account APIs. This requires setting the `CLOUDFLARE_ACCOUNT_ID` environment variable or `account_id` provider argument.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using System.IO;
-using Pulumi;
-using Cloudflare = Pulumi.Cloudflare;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myNamespace = new Cloudflare.WorkersKvNamespace("myNamespace", new Cloudflare.WorkersKvNamespaceArgs
-        {
-            Title = "example",
-        });
-        // Sets the script with the name "script_1"
-        var myScript = new Cloudflare.WorkerScript("myScript", new Cloudflare.WorkerScriptArgs
-        {
-            Name = "script_1",
-            Content = File.ReadAllText("script.js"),
-            KvNamespaceBindings = 
-            {
-                new Cloudflare.Inputs.WorkerScriptKvNamespaceBindingArgs
-                {
-                    Name = "MY_EXAMPLE_KV_NAMESPACE",
-                    NamespaceId = myNamespace.Id,
-                },
-            },
-            PlainTextBindings = 
-            {
-                new Cloudflare.Inputs.WorkerScriptPlainTextBindingArgs
-                {
-                    Name = "MY_EXAMPLE_PLAIN_TEXT",
-                    Text = "foobar",
-                },
-            },
-            SecretTextBindings = 
-            {
-                new Cloudflare.Inputs.WorkerScriptSecretTextBindingArgs
-                {
-                    Name = "MY_EXAMPLE_SECRET_TEXT",
-                    Text = @var.Secret_foo_value,
-                },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_cloudflare as cloudflare
-
-my_namespace = cloudflare.WorkersKvNamespace("myNamespace", title="example")
-# Sets the script with the name "script_1"
-my_script = cloudflare.WorkerScript("myScript",
-    name="script_1",
-    content=(lambda path: open(path).read())("script.js"),
-    kv_namespace_bindings=[cloudflare.WorkerScriptKvNamespaceBindingArgs(
-        name="MY_EXAMPLE_KV_NAMESPACE",
-        namespace_id=my_namespace.id,
-    )],
-    plain_text_bindings=[cloudflare.WorkerScriptPlainTextBindingArgs(
-        name="MY_EXAMPLE_PLAIN_TEXT",
-        text="foobar",
-    )],
-    secret_text_bindings=[cloudflare.WorkerScriptSecretTextBindingArgs(
-        name="MY_EXAMPLE_SECRET_TEXT",
-        text=var["secret_foo_value"],
-    )])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as cloudflare from "@pulumi/cloudflare";
-import * from "fs";
-
-const myNamespace = new cloudflare.WorkersKvNamespace("myNamespace", {title: "example"});
-// Sets the script with the name "script_1"
-const myScript = new cloudflare.WorkerScript("myScript", {
-    name: "script_1",
-    content: fs.readFileSync("script.js"),
-    kvNamespaceBindings: [{
-        name: "MY_EXAMPLE_KV_NAMESPACE",
-        namespaceId: myNamespace.id,
-    }],
-    plainTextBindings: [{
-        name: "MY_EXAMPLE_PLAIN_TEXT",
-        text: "foobar",
-    }],
-    secretTextBindings: [{
-        name: "MY_EXAMPLE_SECRET_TEXT",
-        text: _var.secret_foo_value,
-    }],
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a WorkerScript Resource {#create}
@@ -139,7 +23,7 @@ const myScript = new cloudflare.WorkerScript("myScript", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.WorkerScript">WorkerScript</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kv_namespace_bindings</span><span class="p">:</span> <span class="nx">Optional[List[WorkerScriptKvNamespaceBindingArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plain_text_bindings</span><span class="p">:</span> <span class="nx">Optional[List[WorkerScriptPlainTextBindingArgs]]</span> = None<span class="p">, </span><span class="nx">secret_text_bindings</span><span class="p">:</span> <span class="nx">Optional[List[WorkerScriptSecretTextBindingArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.WorkerScript">WorkerScript</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kv_namespace_bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkerScriptKvNamespaceBindingArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plain_text_bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkerScriptPlainTextBindingArgs]]</span> = None<span class="p">, </span><span class="nx">secret_text_bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkerScriptSecretTextBindingArgs]]</span> = None<span class="p">, </span><span class="nx">webassembly_bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkerScriptWebassemblyBindingArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -363,6 +247,16 @@ The WorkerScript resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webassemblybindings_csharp">
+<a href="#webassemblybindings_csharp" style="color: inherit; text-decoration: inherit;">Webassembly<wbr>Bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptwebassemblybinding">List&lt;Worker<wbr>Script<wbr>Webassembly<wbr>Binding<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -419,6 +313,16 @@ The WorkerScript resource accepts the following [input]({{< relref "/docs/intro/
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerscriptsecrettextbinding">[]Worker<wbr>Script<wbr>Secret<wbr>Text<wbr>Binding</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webassemblybindings_go">
+<a href="#webassemblybindings_go" style="color: inherit; text-decoration: inherit;">Webassembly<wbr>Bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptwebassemblybinding">[]Worker<wbr>Script<wbr>Webassembly<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -481,6 +385,16 @@ The WorkerScript resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webassemblybindings_nodejs">
+<a href="#webassemblybindings_nodejs" style="color: inherit; text-decoration: inherit;">webassembly<wbr>Bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptwebassemblybinding">Worker<wbr>Script<wbr>Webassembly<wbr>Binding[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -516,7 +430,7 @@ The WorkerScript resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#kv_namespace_bindings_python" style="color: inherit; text-decoration: inherit;">kv_<wbr>namespace_<wbr>bindings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerscriptkvnamespacebinding">List[Worker<wbr>Script<wbr>Kv<wbr>Namespace<wbr>Binding<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workerscriptkvnamespacebinding">Sequence[Worker<wbr>Script<wbr>Kv<wbr>Namespace<wbr>Binding<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -526,7 +440,7 @@ The WorkerScript resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#plain_text_bindings_python" style="color: inherit; text-decoration: inherit;">plain_<wbr>text_<wbr>bindings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerscriptplaintextbinding">List[Worker<wbr>Script<wbr>Plain<wbr>Text<wbr>Binding<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workerscriptplaintextbinding">Sequence[Worker<wbr>Script<wbr>Plain<wbr>Text<wbr>Binding<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -536,7 +450,17 @@ The WorkerScript resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#secret_text_bindings_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>text_<wbr>bindings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerscriptsecrettextbinding">List[Worker<wbr>Script<wbr>Secret<wbr>Text<wbr>Binding<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workerscriptsecrettextbinding">Sequence[Worker<wbr>Script<wbr>Secret<wbr>Text<wbr>Binding<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webassembly_bindings_python">
+<a href="#webassembly_bindings_python" style="color: inherit; text-decoration: inherit;">webassembly_<wbr>bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptwebassemblybinding">Sequence[Worker<wbr>Script<wbr>Webassembly<wbr>Binding<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -639,7 +563,7 @@ Get an existing WorkerScript resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kv_namespace_bindings</span><span class="p">:</span> <span class="nx">Optional[List[WorkerScriptKvNamespaceBindingArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plain_text_bindings</span><span class="p">:</span> <span class="nx">Optional[List[WorkerScriptPlainTextBindingArgs]]</span> = None<span class="p">, </span><span class="nx">secret_text_bindings</span><span class="p">:</span> <span class="nx">Optional[List[WorkerScriptSecretTextBindingArgs]]</span> = None<span class="p">) -&gt;</span> WorkerScript</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kv_namespace_bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkerScriptKvNamespaceBindingArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plain_text_bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkerScriptPlainTextBindingArgs]]</span> = None<span class="p">, </span><span class="nx">secret_text_bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkerScriptSecretTextBindingArgs]]</span> = None<span class="p">, </span><span class="nx">webassembly_bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkerScriptWebassemblyBindingArgs]]</span> = None<span class="p">) -&gt;</span> WorkerScript</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -805,6 +729,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_webassemblybindings_csharp">
+<a href="#state_webassemblybindings_csharp" style="color: inherit; text-decoration: inherit;">Webassembly<wbr>Bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptwebassemblybinding">List&lt;Worker<wbr>Script<wbr>Webassembly<wbr>Binding<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -861,6 +795,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerscriptsecrettextbinding">[]Worker<wbr>Script<wbr>Secret<wbr>Text<wbr>Binding</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_webassemblybindings_go">
+<a href="#state_webassemblybindings_go" style="color: inherit; text-decoration: inherit;">Webassembly<wbr>Bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptwebassemblybinding">[]Worker<wbr>Script<wbr>Webassembly<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -923,6 +867,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_webassemblybindings_nodejs">
+<a href="#state_webassemblybindings_nodejs" style="color: inherit; text-decoration: inherit;">webassembly<wbr>Bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptwebassemblybinding">Worker<wbr>Script<wbr>Webassembly<wbr>Binding[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -947,7 +901,7 @@ The following state arguments are supported:
 <a href="#state_kv_namespace_bindings_python" style="color: inherit; text-decoration: inherit;">kv_<wbr>namespace_<wbr>bindings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerscriptkvnamespacebinding">List[Worker<wbr>Script<wbr>Kv<wbr>Namespace<wbr>Binding<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workerscriptkvnamespacebinding">Sequence[Worker<wbr>Script<wbr>Kv<wbr>Namespace<wbr>Binding<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -968,7 +922,7 @@ The following state arguments are supported:
 <a href="#state_plain_text_bindings_python" style="color: inherit; text-decoration: inherit;">plain_<wbr>text_<wbr>bindings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerscriptplaintextbinding">List[Worker<wbr>Script<wbr>Plain<wbr>Text<wbr>Binding<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workerscriptplaintextbinding">Sequence[Worker<wbr>Script<wbr>Plain<wbr>Text<wbr>Binding<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -978,7 +932,17 @@ The following state arguments are supported:
 <a href="#state_secret_text_bindings_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>text_<wbr>bindings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerscriptsecrettextbinding">List[Worker<wbr>Script<wbr>Secret<wbr>Text<wbr>Binding<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workerscriptsecrettextbinding">Sequence[Worker<wbr>Script<wbr>Secret<wbr>Text<wbr>Binding<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_webassembly_bindings_python">
+<a href="#state_webassembly_bindings_python" style="color: inherit; text-decoration: inherit;">webassembly_<wbr>bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptwebassemblybinding">Sequence[Worker<wbr>Script<wbr>Webassembly<wbr>Binding<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1386,6 +1350,140 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The secret text you want to store.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="workerscriptwebassemblybinding">Worker<wbr>Script<wbr>Webassembly<wbr>Binding</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#WorkerScriptWebassemblyBinding">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#WorkerScriptWebassemblyBinding">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#WorkerScriptWebassemblyBindingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#WorkerScriptWebassemblyBindingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Inputs.WorkerScriptWebassemblyBindingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Outputs.WorkerScriptWebassemblyBinding.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="module_csharp">
+<a href="#module_csharp" style="color: inherit; text-decoration: inherit;">Module</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The base64 encoded wasm module you want to store.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="module_go">
+<a href="#module_go" style="color: inherit; text-decoration: inherit;">Module</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The base64 encoded wasm module you want to store.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="module_nodejs">
+<a href="#module_nodejs" style="color: inherit; text-decoration: inherit;">module</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The base64 encoded wasm module you want to store.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="module_python">
+<a href="#module_python" style="color: inherit; text-decoration: inherit;">module</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The base64 encoded wasm module you want to store.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
 {{% /md %}}</dd>
 
 </dl>

@@ -230,7 +230,7 @@ const bar = new cloudflare.LoadBalancer("bar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.LoadBalancer">LoadBalancer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_pool_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fallback_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pop_pools</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancerPopPoolArgs]]</span> = None<span class="p">, </span><span class="nx">proxied</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region_pools</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancerRegionPoolArgs]]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">steering_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.LoadBalancer">LoadBalancer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_pool_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fallback_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pop_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerPopPoolArgs]]</span> = None<span class="p">, </span><span class="nx">proxied</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerRegionPoolArgs]]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">steering_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -825,7 +825,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#default_pool_ids_python" style="color: inherit; text-decoration: inherit;">default_<wbr>pool_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of pool IDs ordered by their failover priority. Used whenever region/pop pools are not defined.
 {{% /md %}}</dd>
@@ -891,7 +891,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#pop_pools_python" style="color: inherit; text-decoration: inherit;">pop_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerpoppool">List[Load<wbr>Balancer<wbr>Pop<wbr>Pool<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancerpoppool">Sequence[Load<wbr>Balancer<wbr>Pop<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of Cloudflare Point-of-Presence (PoP) identifiers to a list of pool IDs (ordered by their failover priority) for the PoP (datacenter). This feature is only available to enterprise customers. Fields documented below.
 {{% /md %}}</dd>
@@ -913,7 +913,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#region_pools_python" style="color: inherit; text-decoration: inherit;">region_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerregionpool">List[Load<wbr>Balancer<wbr>Region<wbr>Pool<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancerregionpool">Sequence[Load<wbr>Balancer<wbr>Region<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of region/country codes to a list of pool IDs (ordered by their failover priority) for the given region. Fields documented below.
 {{% /md %}}</dd>
@@ -946,7 +946,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time to live (TTL) of this load balancer's DNS `name`. Conflicts with `proxied` - this cannot be set for proxied load balancers. Default is `30`.
 {{% /md %}}</dd>
@@ -1138,7 +1138,7 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">created_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_pool_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fallback_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">modified_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pop_pools</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancerPopPoolArgs]]</span> = None<span class="p">, </span><span class="nx">proxied</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region_pools</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancerRegionPoolArgs]]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">steering_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LoadBalancer</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">created_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_pool_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fallback_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">modified_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pop_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerPopPoolArgs]]</span> = None<span class="p">, </span><span class="nx">proxied</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerRegionPoolArgs]]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">steering_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LoadBalancer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1752,7 +1752,7 @@ The following state arguments are supported:
 <a href="#state_default_pool_ids_python" style="color: inherit; text-decoration: inherit;">default_<wbr>pool_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of pool IDs ordered by their failover priority. Used whenever region/pop pools are not defined.
 {{% /md %}}</dd>
@@ -1818,7 +1818,7 @@ The following state arguments are supported:
 <a href="#state_pop_pools_python" style="color: inherit; text-decoration: inherit;">pop_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerpoppool">List[Load<wbr>Balancer<wbr>Pop<wbr>Pool<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancerpoppool">Sequence[Load<wbr>Balancer<wbr>Pop<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of Cloudflare Point-of-Presence (PoP) identifiers to a list of pool IDs (ordered by their failover priority) for the PoP (datacenter). This feature is only available to enterprise customers. Fields documented below.
 {{% /md %}}</dd>
@@ -1840,7 +1840,7 @@ The following state arguments are supported:
 <a href="#state_region_pools_python" style="color: inherit; text-decoration: inherit;">region_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerregionpool">List[Load<wbr>Balancer<wbr>Region<wbr>Pool<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancerregionpool">Sequence[Load<wbr>Balancer<wbr>Region<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of region/country codes to a list of pool IDs (ordered by their failover priority) for the given region. Fields documented below.
 {{% /md %}}</dd>
@@ -1873,7 +1873,7 @@ The following state arguments are supported:
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time to live (TTL) of this load balancer's DNS `name`. Conflicts with `proxied` - this cannot be set for proxied load balancers. Default is `30`.
 {{% /md %}}</dd>
@@ -2015,7 +2015,7 @@ The following state arguments are supported:
 <a href="#pool_ids_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of pool IDs in failover priority to use for traffic reaching the given PoP.
 {{% /md %}}</dd>
@@ -2149,7 +2149,7 @@ The following state arguments are supported:
 <a href="#pool_ids_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of pool IDs in failover priority to use for traffic reaching the given PoP.
 {{% /md %}}</dd>

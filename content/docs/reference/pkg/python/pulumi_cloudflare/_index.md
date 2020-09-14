@@ -231,8 +231,11 @@ all tokens to be granted. Example: <code class="docutils literal notranslate"><s
 requests. Example: <code class="docutils literal notranslate"><span class="pre">everyone</span> <span class="pre">=</span> <span class="pre">true</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> - (Optional) Whether to use mTLS certificate authentication.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">common_name</span></code> - (Optional) Use a certificate common name to authenticate with.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auth_method</span></code> - (Optional) A string identifying the authentication
+method code. The list of codes are listed here: <a class="reference external" href="https://tools.ietf.org/html/rfc8176#section-2">https://tools.ietf.org/html/rfc8176#section-2</a>.
+Custom values are also supported.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gsuite</span></code> - (Optional) Use GSuite as the authentication mechanism. Example:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">github</span></code> - (Optional) Use a GitHub team as the <code class="docutils literal notranslate"><span class="pre">include</span></code> condition. Example:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">github</span></code> - (Optional) Use a GitHub organization as the <code class="docutils literal notranslate"><span class="pre">include</span></code> condition. Example:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">azure</span></code> - (Optional) Use Azure AD as the <code class="docutils literal notranslate"><span class="pre">include</span></code> condition. Example:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">okta</span></code> - (Optional) Use Okta as the <code class="docutils literal notranslate"><span class="pre">include</span></code> condition. Example:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">saml</span></code> - (Optional) Use an external SAML setup as the <code class="docutils literal notranslate"><span class="pre">include</span></code> condition.
@@ -531,12 +534,12 @@ particular resource.</p>
 associated with.</p></li>
 <li><p><strong>decision</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the action Access will take if the policy matches the user.
 Allowed values: <code class="docutils literal notranslate"><span class="pre">allow</span></code>, <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">non_identity</span></code>, <code class="docutils literal notranslate"><span class="pre">bypass</span></code></p></li>
-<li><p><strong>excludes</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'AccessPolicyExcludeArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A series of access conditions, see <a class="reference external" href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p></li>
-<li><p><strong>includes</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'AccessPolicyIncludeArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – <p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p>
+<li><p><strong>excludes</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'AccessPolicyExcludeArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A series of access conditions, see <a class="reference external" href="https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions">Access Groups</a>.</p></li>
+<li><p><strong>includes</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'AccessPolicyIncludeArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – <p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions">Access Groups</a>.</p>
 </p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Friendly name of the Access Application.</p></li>
 <li><p><strong>precedence</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The unique precedence for policies on a single application. Integer.</p></li>
-<li><p><strong>requires</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'AccessPolicyRequireArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – <p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p>
+<li><p><strong>requires</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'AccessPolicyRequireArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – <p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions">Access Groups</a>.</p>
 </p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone to which the access rule should be
 added.</p></li>
@@ -558,13 +561,13 @@ properties used to qualify the lookup.</p>
 associated with.</p></li>
 <li><p><strong>decision</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the action Access will take if the policy matches the user.
 Allowed values: <code class="docutils literal notranslate"><span class="pre">allow</span></code>, <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">non_identity</span></code>, <code class="docutils literal notranslate"><span class="pre">bypass</span></code></p></li>
-<li><p><strong>excludes</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'AccessPolicyExcludeArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – <p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p>
+<li><p><strong>excludes</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'AccessPolicyExcludeArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – <p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions">Access Groups</a>.</p>
 </p></li>
-<li><p><strong>includes</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'AccessPolicyIncludeArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – <p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p>
+<li><p><strong>includes</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'AccessPolicyIncludeArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – <p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions">Access Groups</a>.</p>
 </p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Friendly name of the Access Application.</p></li>
 <li><p><strong>precedence</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The unique precedence for policies on a single application. Integer.</p></li>
-<li><p><strong>requires</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'AccessPolicyRequireArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – <p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p>
+<li><p><strong>requires</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'AccessPolicyRequireArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – <p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions">Access Groups</a>.</p>
 </p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone to which the access rule should be
 added.</p></li>
@@ -590,13 +593,13 @@ Allowed values: <code class="docutils literal notranslate"><span class="pre">all
 <dl class="py method">
 <dt id="pulumi_cloudflare.AccessPolicy.excludes">
 <em class="property">property </em><code class="sig-name descname">excludes</code><a class="headerlink" href="#pulumi_cloudflare.AccessPolicy.excludes" title="Permalink to this definition">¶</a></dt>
-<dd><p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p>
+<dd><p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions">Access Groups</a>.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_cloudflare.AccessPolicy.includes">
 <em class="property">property </em><code class="sig-name descname">includes</code><a class="headerlink" href="#pulumi_cloudflare.AccessPolicy.includes" title="Permalink to this definition">¶</a></dt>
-<dd><p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p>
+<dd><p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions">Access Groups</a>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -614,7 +617,7 @@ Allowed values: <code class="docutils literal notranslate"><span class="pre">all
 <dl class="py method">
 <dt id="pulumi_cloudflare.AccessPolicy.requires">
 <em class="property">property </em><code class="sig-name descname">requires</code><a class="headerlink" href="#pulumi_cloudflare.AccessPolicy.requires" title="Permalink to this definition">¶</a></dt>
-<dd><p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p>
+<dd><p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions">Access Groups</a>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1411,6 +1414,160 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_cloudflare.ByoIpPrefix.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ByoIpPrefix.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_cloudflare.CertificatePack">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">CertificatePack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_authority</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudflare_branding</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hosts</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validation_method</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validity_days</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.CertificatePack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a CertificatePack resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] certificate_authority: Which certificate</p>
+<blockquote>
+<div><p>authority to issue the certificate pack. Allowed values: <code class="docutils literal notranslate"><span class="pre">&quot;digicert&quot;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&quot;lets_encrypt&quot;</span></code>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cloudflare_branding</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to include
+Cloudflare branding. This will add <code class="docutils literal notranslate"><span class="pre">sni.cloudflaressl.com</span></code> as the Common Name
+if set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>hosts</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – List of hostnames to provision the certificate pack for.
+Note: If using Let’s Encrypt, you cannot use individual subdomains and only a
+wildcard for subdomain is available.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Certificate pack configuration type.
+Allowed values: <code class="docutils literal notranslate"><span class="pre">&quot;custom&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;dedicated_custom&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;advanced&quot;</span></code>.</p></li>
+<li><p><strong>validation_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Which validation method to
+use in order to prove domain ownership. Allowed values: <code class="docutils literal notranslate"><span class="pre">&quot;txt&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;http&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;email&quot;</span></code>.</p></li>
+<li><p><strong>validity_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – How long the certificate is valid
+for. Note: If using Let’s Encrypt, this value can only be 90 days.
+Allowed values: 14, 30, 90, 365.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone to which the certificate pack should be added.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_cloudflare.CertificatePack.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_authority</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudflare_branding</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hosts</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validation_method</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validity_days</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_cloudflare.certificate_pack.CertificatePack<a class="headerlink" href="#pulumi_cloudflare.CertificatePack.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing CertificatePack resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>certificate_authority</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Which certificate
+authority to issue the certificate pack. Allowed values: <code class="docutils literal notranslate"><span class="pre">&quot;digicert&quot;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&quot;lets_encrypt&quot;</span></code>.</p></li>
+<li><p><strong>cloudflare_branding</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to include
+Cloudflare branding. This will add <code class="docutils literal notranslate"><span class="pre">sni.cloudflaressl.com</span></code> as the Common Name
+if set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>hosts</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – List of hostnames to provision the certificate pack for.
+Note: If using Let’s Encrypt, you cannot use individual subdomains and only a
+wildcard for subdomain is available.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Certificate pack configuration type.
+Allowed values: <code class="docutils literal notranslate"><span class="pre">&quot;custom&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;dedicated_custom&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;advanced&quot;</span></code>.</p></li>
+<li><p><strong>validation_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Which validation method to
+use in order to prove domain ownership. Allowed values: <code class="docutils literal notranslate"><span class="pre">&quot;txt&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;http&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;email&quot;</span></code>.</p></li>
+<li><p><strong>validity_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – How long the certificate is valid
+for. Note: If using Let’s Encrypt, this value can only be 90 days.
+Allowed values: 14, 30, 90, 365.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone to which the certificate pack should be added.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.CertificatePack.certificate_authority">
+<em class="property">property </em><code class="sig-name descname">certificate_authority</code><a class="headerlink" href="#pulumi_cloudflare.CertificatePack.certificate_authority" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which certificate
+authority to issue the certificate pack. Allowed values: <code class="docutils literal notranslate"><span class="pre">&quot;digicert&quot;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&quot;lets_encrypt&quot;</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.CertificatePack.cloudflare_branding">
+<em class="property">property </em><code class="sig-name descname">cloudflare_branding</code><a class="headerlink" href="#pulumi_cloudflare.CertificatePack.cloudflare_branding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not to include
+Cloudflare branding. This will add <code class="docutils literal notranslate"><span class="pre">sni.cloudflaressl.com</span></code> as the Common Name
+if set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.CertificatePack.hosts">
+<em class="property">property </em><code class="sig-name descname">hosts</code><a class="headerlink" href="#pulumi_cloudflare.CertificatePack.hosts" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of hostnames to provision the certificate pack for.
+Note: If using Let’s Encrypt, you cannot use individual subdomains and only a
+wildcard for subdomain is available.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.CertificatePack.type">
+<em class="property">property </em><code class="sig-name descname">type</code><a class="headerlink" href="#pulumi_cloudflare.CertificatePack.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Certificate pack configuration type.
+Allowed values: <code class="docutils literal notranslate"><span class="pre">&quot;custom&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;dedicated_custom&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;advanced&quot;</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.CertificatePack.validation_method">
+<em class="property">property </em><code class="sig-name descname">validation_method</code><a class="headerlink" href="#pulumi_cloudflare.CertificatePack.validation_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which validation method to
+use in order to prove domain ownership. Allowed values: <code class="docutils literal notranslate"><span class="pre">&quot;txt&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;http&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;email&quot;</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.CertificatePack.validity_days">
+<em class="property">property </em><code class="sig-name descname">validity_days</code><a class="headerlink" href="#pulumi_cloudflare.CertificatePack.validity_days" title="Permalink to this definition">¶</a></dt>
+<dd><p>How long the certificate is valid
+for. Note: If using Let’s Encrypt, this value can only be 90 days.
+Allowed values: 14, 30, 90, 365.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.CertificatePack.zone_id">
+<em class="property">property </em><code class="sig-name descname">zone_id</code><a class="headerlink" href="#pulumi_cloudflare.CertificatePack.zone_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DNS zone to which the certificate pack should be added.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.CertificatePack.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.CertificatePack.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.CertificatePack.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.CertificatePack.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -5017,30 +5174,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_cloudflare.WorkerScript">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WorkerScript</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kv_namespace_bindings</span><span class="p">:</span> <span class="n">Union[List[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plain_text_bindings</span><span class="p">:</span> <span class="n">Union[List[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_text_bindings</span><span class="p">:</span> <span class="n">Union[List[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerScript" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WorkerScript</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kv_namespace_bindings</span><span class="p">:</span> <span class="n">Union[List[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plain_text_bindings</span><span class="p">:</span> <span class="n">Union[List[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_text_bindings</span><span class="p">:</span> <span class="n">Union[List[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">webassembly_bindings</span><span class="p">:</span> <span class="n">Union[List[Union[WorkerScriptWebassemblyBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptWebassemblyBindingArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[WorkerScriptWebassemblyBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptWebassemblyBindingArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerScript" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare worker script resource. In order for a script to be active, you’ll also need to setup a <code class="docutils literal notranslate"><span class="pre">WorkerRoute</span></code>. <em>NOTE:</em>  This resource uses the Cloudflare account APIs. This requires setting the <code class="docutils literal notranslate"><span class="pre">CLOUDFLARE_ACCOUNT_ID</span></code> environment variable or <code class="docutils literal notranslate"><span class="pre">account_id</span></code> provider argument.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
-
-<span class="n">my_namespace</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">WorkersKvNamespace</span><span class="p">(</span><span class="s2">&quot;myNamespace&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
-<span class="c1"># Sets the script with the name &quot;script_1&quot;</span>
-<span class="n">my_script</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">WorkerScript</span><span class="p">(</span><span class="s2">&quot;myScript&quot;</span><span class="p">,</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;script_1&quot;</span><span class="p">,</span>
-    <span class="n">content</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;script.js&quot;</span><span class="p">),</span>
-    <span class="n">kv_namespace_bindings</span><span class="o">=</span><span class="p">[</span><span class="n">cloudflare</span><span class="o">.</span><span class="n">WorkerScriptKvNamespaceBindingArgs</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MY_EXAMPLE_KV_NAMESPACE&quot;</span><span class="p">,</span>
-        <span class="n">namespace_id</span><span class="o">=</span><span class="n">my_namespace</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="p">)],</span>
-    <span class="n">plain_text_bindings</span><span class="o">=</span><span class="p">[</span><span class="n">cloudflare</span><span class="o">.</span><span class="n">WorkerScriptPlainTextBindingArgs</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MY_EXAMPLE_PLAIN_TEXT&quot;</span><span class="p">,</span>
-        <span class="n">text</span><span class="o">=</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
-    <span class="p">)],</span>
-    <span class="n">secret_text_bindings</span><span class="o">=</span><span class="p">[</span><span class="n">cloudflare</span><span class="o">.</span><span class="n">WorkerScriptSecretTextBindingArgs</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MY_EXAMPLE_SECRET_TEXT&quot;</span><span class="p">,</span>
-        <span class="n">text</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;secret_foo_value&quot;</span><span class="p">],</span>
-    <span class="p">)])</span>
-</pre></div>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5053,7 +5188,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <dl class="py method">
 <dt id="pulumi_cloudflare.WorkerScript.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kv_namespace_bindings</span><span class="p">:</span> <span class="n">Union[List[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plain_text_bindings</span><span class="p">:</span> <span class="n">Union[List[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_text_bindings</span><span class="p">:</span> <span class="n">Union[List[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_cloudflare.worker_script.WorkerScript<a class="headerlink" href="#pulumi_cloudflare.WorkerScript.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kv_namespace_bindings</span><span class="p">:</span> <span class="n">Union[List[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plain_text_bindings</span><span class="p">:</span> <span class="n">Union[List[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_text_bindings</span><span class="p">:</span> <span class="n">Union[List[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">webassembly_bindings</span><span class="p">:</span> <span class="n">Union[List[Union[WorkerScriptWebassemblyBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptWebassemblyBindingArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[WorkerScriptWebassemblyBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptWebassemblyBindingArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_cloudflare.worker_script.WorkerScript<a class="headerlink" href="#pulumi_cloudflare.WorkerScript.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing WorkerScript resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">

@@ -12,6 +12,208 @@ meta_desc: "Explore the RateLimit resource of the Cloudflare package, including 
 
 Provides a Cloudflare rate limit resource for a given zone. This can be used to limit the traffic you receive zone-wide, or matching more specific types of requests/responses.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Cloudflare.RateLimit("example", new Cloudflare.RateLimitArgs
+        {
+            ZoneId = @var.Cloudflare_zone_id,
+            Threshold = 2000,
+            Period = 2,
+            Match = new Cloudflare.Inputs.RateLimitMatchArgs
+            {
+                Request = new Cloudflare.Inputs.RateLimitMatchRequestArgs
+                {
+                    UrlPattern = $"{@var.Cloudflare_zone}/*",
+                    Schemes = 
+                    {
+                        "HTTP",
+                        "HTTPS",
+                    },
+                    Methods = 
+                    {
+                        "GET",
+                        "POST",
+                        "PUT",
+                        "DELETE",
+                        "PATCH",
+                        "HEAD",
+                    },
+                },
+                Response = new Cloudflare.Inputs.RateLimitMatchResponseArgs
+                {
+                    Statuses = 
+                    {
+                        200,
+                        201,
+                        202,
+                        301,
+                        429,
+                    },
+                    OriginTraffic = false,
+                },
+            },
+            Action = new Cloudflare.Inputs.RateLimitActionArgs
+            {
+                Mode = "simulate",
+                Timeout = 43200,
+                Response = new Cloudflare.Inputs.RateLimitActionResponseArgs
+                {
+                    ContentType = "text/plain",
+                    Body = "custom response body",
+                },
+            },
+            Correlate = new Cloudflare.Inputs.RateLimitCorrelateArgs
+            {
+                By = "nat",
+            },
+            Disabled = false,
+            Description = "example rate limit for a zone",
+            BypassUrlPatterns = 
+            {
+                $"{@var.Cloudflare_zone}/bypass1",
+                $"{@var.Cloudflare_zone}/bypass2",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+example = cloudflare.RateLimit("example",
+    zone_id=var["cloudflare_zone_id"],
+    threshold=2000,
+    period=2,
+    match=cloudflare.RateLimitMatchArgs(
+        request=cloudflare.RateLimitMatchRequestArgs(
+            url_pattern=f"{var['cloudflare_zone']}/*",
+            schemes=[
+                "HTTP",
+                "HTTPS",
+            ],
+            methods=[
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE",
+                "PATCH",
+                "HEAD",
+            ],
+        ),
+        response=cloudflare.RateLimitMatchResponseArgs(
+            statuses=[
+                200,
+                201,
+                202,
+                301,
+                429,
+            ],
+            origin_traffic=False,
+        ),
+    ),
+    action=cloudflare.RateLimitActionArgs(
+        mode="simulate",
+        timeout=43200,
+        response=cloudflare.RateLimitActionResponseArgs(
+            content_type="text/plain",
+            body="custom response body",
+        ),
+    ),
+    correlate=cloudflare.RateLimitCorrelateArgs(
+        by="nat",
+    ),
+    disabled=False,
+    description="example rate limit for a zone",
+    bypass_url_patterns=[
+        f"{var['cloudflare_zone']}/bypass1",
+        f"{var['cloudflare_zone']}/bypass2",
+    ])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const example = new cloudflare.RateLimit("example", {
+    zoneId: _var.cloudflare_zone_id,
+    threshold: 2000,
+    period: 2,
+    match: {
+        request: {
+            urlPattern: `${_var.cloudflare_zone}/*`,
+            schemes: [
+                "HTTP",
+                "HTTPS",
+            ],
+            methods: [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE",
+                "PATCH",
+                "HEAD",
+            ],
+        },
+        response: {
+            statuses: [
+                200,
+                201,
+                202,
+                301,
+                429,
+            ],
+            originTraffic: false,
+        },
+    },
+    action: {
+        mode: "simulate",
+        timeout: 43200,
+        response: {
+            contentType: "text/plain",
+            body: "custom response body",
+        },
+    },
+    correlate: {
+        by: "nat",
+    },
+    disabled: false,
+    description: "example rate limit for a zone",
+    bypassUrlPatterns: [
+        `${_var.cloudflare_zone}/bypass1`,
+        `${_var.cloudflare_zone}/bypass2`,
+    ],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RateLimit Resource {#create}
@@ -23,7 +225,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.RateLimit">RateLimit</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[RateLimitActionArgs]</span> = None<span class="p">, </span><span class="nx">bypass_url_patterns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">correlate</span><span class="p">:</span> <span class="nx">Optional[RateLimitCorrelateArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">match</span><span class="p">:</span> <span class="nx">Optional[RateLimitMatchArgs]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.RateLimit">RateLimit</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[RateLimitActionArgs]</span> = None<span class="p">, </span><span class="nx">bypass_url_patterns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">correlate</span><span class="p">:</span> <span class="nx">Optional[RateLimitCorrelateArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">match</span><span class="p">:</span> <span class="nx">Optional[RateLimitMatchArgs]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -530,7 +732,7 @@ The RateLimit resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time in seconds to count matching traffic. If the count exceeds threshold within this period the action will be performed (min: 1, max: 86,400).
 {{% /md %}}</dd>
@@ -541,7 +743,7 @@ The RateLimit resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The threshold that triggers the rate limit mitigations, combine with period. i.e. threshold per period (min: 2, max: 1,000,000).
 {{% /md %}}</dd>
@@ -563,7 +765,7 @@ The RateLimit resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#bypass_url_patterns_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>url_<wbr>patterns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}URLs matching the patterns specified here will be excluded from rate limiting.
 {{% /md %}}</dd>
@@ -711,7 +913,7 @@ Get an existing RateLimit resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[RateLimitActionArgs]</span> = None<span class="p">, </span><span class="nx">bypass_url_patterns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">correlate</span><span class="p">:</span> <span class="nx">Optional[RateLimitCorrelateArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">match</span><span class="p">:</span> <span class="nx">Optional[RateLimitMatchArgs]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RateLimit</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[RateLimitActionArgs]</span> = None<span class="p">, </span><span class="nx">bypass_url_patterns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">correlate</span><span class="p">:</span> <span class="nx">Optional[RateLimitCorrelateArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">match</span><span class="p">:</span> <span class="nx">Optional[RateLimitMatchArgs]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RateLimit</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1160,7 +1362,7 @@ The following state arguments are supported:
 <a href="#state_bypass_url_patterns_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>url_<wbr>patterns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}URLs matching the patterns specified here will be excluded from rate limiting.
 {{% /md %}}</dd>
@@ -1215,7 +1417,7 @@ The following state arguments are supported:
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time in seconds to count matching traffic. If the count exceeds threshold within this period the action will be performed (min: 1, max: 86,400).
 {{% /md %}}</dd>
@@ -1226,7 +1428,7 @@ The following state arguments are supported:
 <a href="#state_threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The threshold that triggers the rate limit mitigations, combine with period. i.e. threshold per period (min: 2, max: 1,000,000).
 {{% /md %}}</dd>
@@ -1423,7 +1625,7 @@ The following state arguments are supported:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time in seconds as an integer to perform the mitigation action. This field is required if the `mode` is either `simulate` or `ban`. Must be the same or greater than the period (min: 1, max: 86400).
 {{% /md %}}</dd>
@@ -1937,7 +2139,7 @@ The following state arguments are supported:
 <a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}HTTP Methods, can be a subset ['POST','PUT'] or all ['\_ALL\_']. Default: ['\_ALL\_'].
 {{% /md %}}</dd>
@@ -1948,7 +2150,7 @@ The following state arguments are supported:
 <a href="#schemes_python" style="color: inherit; text-decoration: inherit;">schemes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}HTTP Schemes, can be one ['HTTPS'], both ['HTTP','HTTPS'] or all ['\_ALL\_'].  Default: ['\_ALL\_'].
 {{% /md %}}</dd>
@@ -2093,7 +2295,7 @@ The following state arguments are supported:
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}HTTP Status codes, can be one [403], many [401,403] or indicate all by not providing this value.
 {{% /md %}}</dd>

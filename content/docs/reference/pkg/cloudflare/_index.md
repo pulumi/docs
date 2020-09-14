@@ -25,6 +25,7 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
     <li><a href="authenticatedoriginpulls" title="AuthenticatedOriginPulls"><span class="symbol resource"></span>AuthenticatedOriginPulls</a></li>
     <li><a href="authenticatedoriginpullscertificate" title="AuthenticatedOriginPullsCertificate"><span class="symbol resource"></span>AuthenticatedOriginPullsCertificate</a></li>
     <li><a href="byoipprefix" title="ByoIpPrefix"><span class="symbol resource"></span>ByoIpPrefix</a></li>
+    <li><a href="certificatepack" title="CertificatePack"><span class="symbol resource"></span>CertificatePack</a></li>
     <li><a href="customhostname" title="CustomHostname"><span class="symbol resource"></span>CustomHostname</a></li>
     <li><a href="customhostnamefallbackorigin" title="CustomHostnameFallbackOrigin"><span class="symbol resource"></span>CustomHostnameFallbackOrigin</a></li>
     <li><a href="custompages" title="CustomPages"><span class="symbol resource"></span>CustomPages</a></li>
@@ -76,7 +77,7 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 	<dt>Version</dt>
-	<dd>2.5.0</dd>
+	<dd>2.6.0</dd>
 </dl>
 
 

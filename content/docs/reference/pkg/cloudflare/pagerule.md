@@ -153,7 +153,7 @@ const foobar = new cloudflare.PageRule("foobar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.PageRule">PageRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[PageRuleActionsArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.PageRule">PageRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[PageRuleActionsArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -550,7 +550,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of the page rule among others for this target, the higher the number the higher the priority as per [API documentation](https://api.cloudflare.com/#page-rules-for-a-zone-create-page-rule).
 {{% /md %}}</dd>
@@ -665,7 +665,7 @@ Get an existing PageRule resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[PageRuleActionsArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PageRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[PageRuleActionsArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PageRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -982,7 +982,7 @@ The following state arguments are supported:
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of the page rule among others for this target, the higher the number the higher the priority as per [API documentation](https://api.cloudflare.com/#page-rules-for-a-zone-create-page-rule).
 {{% /md %}}</dd>
@@ -2422,7 +2422,7 @@ The following state arguments are supported:
 <a href="#cache_ttl_by_statuses_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>ttl_<wbr>by_<wbr>statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachettlbystatus">List[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Ttl<wbr>By<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pageruleactionscachettlbystatus">Sequence[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Ttl<wbr>By<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set cache TTL based on the response status from the origin web server. Can be specified multiple times. See below for full description.
 {{% /md %}}</dd>
@@ -2477,7 +2477,7 @@ The following state arguments are supported:
 <a href="#edge_cache_ttl_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>cache_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Time To Live for the edge cache.
 {{% /md %}}</dd>
@@ -2543,7 +2543,7 @@ The following state arguments are supported:
 <a href="#minifies_python" style="color: inherit; text-decoration: inherit;">minifies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionsminify">List[Page<wbr>Rule<wbr>Actions<wbr>Minify<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pageruleactionsminify">Sequence[Page<wbr>Rule<wbr>Actions<wbr>Minify<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for HTML, CSS and JS minification. See below for full list of options.
 {{% /md %}}</dd>
@@ -3086,7 +3086,7 @@ The following state arguments are supported:
 <a href="#check_presences_python" style="color: inherit; text-decoration: inherit;">check_<wbr>presences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Check for presence of specified HTTP headers, without including their actual values.
 {{% /md %}}</dd>
@@ -3097,7 +3097,7 @@ The following state arguments are supported:
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
 {{% /md %}}</dd>
@@ -3253,7 +3253,7 @@ The following state arguments are supported:
 <a href="#check_presences_python" style="color: inherit; text-decoration: inherit;">check_<wbr>presences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Check for presence of specified HTTP headers, without including their actual values.
 {{% /md %}}</dd>
@@ -3264,7 +3264,7 @@ The following state arguments are supported:
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Exclude these query string parameters from Cache Key.
 {{% /md %}}</dd>
@@ -3275,7 +3275,7 @@ The following state arguments are supported:
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
 {{% /md %}}</dd>
@@ -3521,7 +3521,7 @@ The following state arguments are supported:
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Exclude these query string parameters from Cache Key.
 {{% /md %}}</dd>
@@ -3543,7 +3543,7 @@ The following state arguments are supported:
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
 {{% /md %}}</dd>
@@ -3858,7 +3858,7 @@ The following state arguments are supported:
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Duration a resource lives in the Cloudflare cache.
 * positive number - cache for specified duration in seconds
@@ -3982,7 +3982,7 @@ The following state arguments are supported:
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The status code to use for the redirection.
 {{% /md %}}</dd>
