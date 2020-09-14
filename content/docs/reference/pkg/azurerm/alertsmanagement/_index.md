@@ -12,7 +12,8 @@ meta_desc: ""
 <h2 id="modules">Modules</h2>
 <ul class="api">
     <li><a href="latest/" title="latest"><span class="symbol module"></span>latest</a></li>
-    <li><a href="preview/" title="preview"><span class="symbol module"></span>preview</a></li>
+    <li><a href="v20190505preview/" title="v20190505preview"><span class="symbol module"></span>v20190505preview</a></li>
+    <li><a href="v20200804preview/" title="v20200804preview"><span class="symbol module"></span>v20200804preview</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

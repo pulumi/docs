@@ -12,7 +12,7 @@ meta_desc: ""
 <h2 id="modules">Modules</h2>
 <ul class="api">
     <li><a href="latest/" title="latest"><span class="symbol module"></span>latest</a></li>
-    <li><a href="preview/" title="preview"><span class="symbol module"></span>preview</a></li>
+    <li><a href="v20150801preview/" title="v20150801preview"><span class="symbol module"></span>v20150801preview</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

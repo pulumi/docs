@@ -12,7 +12,9 @@ meta_desc: ""
 <h2 id="modules">Modules</h2>
 <ul class="api">
     <li><a href="latest/" title="latest"><span class="symbol module"></span>latest</a></li>
-    <li><a href="preview/" title="preview"><span class="symbol module"></span>preview</a></li>
+    <li><a href="v20180601preview/" title="v20180601preview"><span class="symbol module"></span>v20180601preview</a></li>
+    <li><a href="v20180601privatepreview/" title="v20180601privatepreview"><span class="symbol module"></span>v20180601privatepreview</a></li>
+    <li><a href="v20200101privatepreview/" title="v20200101privatepreview"><span class="symbol module"></span>v20200101privatepreview</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
