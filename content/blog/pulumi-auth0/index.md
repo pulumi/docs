@@ -2,7 +2,7 @@
 title: "Pulumi Auth0"
 date: 2020-09-22
 draft: true
-meta_desc: "Authentocation with the Pulumi Auth0 provider"
+meta_desc: " Simplifying authentication to APIs with the Pulumi Auth0 provider"
 meta_image: credijusto.png
 authors:
     - sophia-parafina
