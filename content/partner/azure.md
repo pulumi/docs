@@ -3,7 +3,7 @@ title: Cloud Engineering on Azure
 layout: azure
 url: /azure
 
-meta_desc: Infrastructure as code on the Azure cloud with Pulumi for huge productivity gains and a unified programming model for developers and operators.
+meta_desc: Cloud Engineering on the Azure cloud with Pulumi for huge productivity gains and a unified programming model for developers and operators.
 
 hero:
     title: Cloud Engineering on Azure
@@ -135,19 +135,19 @@ detail_sections:
           description: Use Pulumi to ensure secret data is encrypted in transit, at rest, and physically anywhere it gets stored. Bring your own preferred cloud encryption provider or use Pulumi's native secrets provider.
           icon: fa-key
 
-        - title: Convience Functions
+        - title: Convenience Functions
           description: The provider also contains functions to retrieve keys, secrets, and connection strings from all resources that expose them.
           icon: fa-people-carry
 
   - title: Always Up To Date
     description: |
-        The provider is designed to be always up- to- date with additions and changes
+        The provider is designed to be always up to date with additions and changes
         to Azure APIs.
     cta: Learn More
     cta_url: "/docs/guides/crosswalk/kubernetes"
     items:
         - title: Auto Generated
-          description: We generate Pulumi SDKs for `azurerm` automatically from Azure API specifications published by Microsoft. An automated pipeline can releases updated resources within hours after any current API specifications are merged.
+          description: We generate Pulumi SDKs for `azurerm` automatically from Azure API specifications published by Microsoft. An automated pipeline releases updated resources within hours after any current API specifications are merged.
           icon: fa-sun
 
         - title: Familiar Concepts
