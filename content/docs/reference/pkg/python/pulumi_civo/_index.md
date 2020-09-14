@@ -179,7 +179,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="c1"># Create a new domain record</span>
 <span class="n">www</span> <span class="o">=</span> <span class="n">civo</span><span class="o">.</span><span class="n">DnsDomainRecord</span><span class="p">(</span><span class="s2">&quot;www&quot;</span><span class="p">,</span>
     <span class="n">domain_id</span><span class="o">=</span><span class="n">civo_dns_domain_name</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
-    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;a&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
     <span class="n">value</span><span class="o">=</span><span class="n">civo_instance</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;public_ip&quot;</span><span class="p">],</span>
     <span class="n">ttl</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
     <span class="n">opts</span><span class="o">=</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span>
@@ -197,7 +197,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The portion before the domain name (e.g. www) or an &#64; for the apex/root domain (you cannot use an A record with an amex/root domain)</p></li>
 <li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Useful for MX records only, the priority mail should be attempted it (defaults to 10)</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – How long caching DNS servers should cache this record for, in seconds (the minimum is 600 and the default if unspecified is 600)</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The choice of record type from a, cname, mx or txt</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The choice of record type from A, CNAME, MX, SRV or TXT</p></li>
 <li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address (A or MX), hostname (CNAME or MX) or text value (TXT) to serve for this record</p></li>
 </ul>
 </dd>
@@ -219,7 +219,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The portion before the domain name (e.g. www) or an &#64; for the apex/root domain (you cannot use an A record with an amex/root domain)</p></li>
 <li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Useful for MX records only, the priority mail should be attempted it (defaults to 10)</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – How long caching DNS servers should cache this record for, in seconds (the minimum is 600 and the default if unspecified is 600)</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The choice of record type from a, cname, mx or txt</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The choice of record type from A, CNAME, MX, SRV or TXT</p></li>
 <li><p><strong>updated_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date when it was updated in UTC format</p></li>
 <li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address (A or MX), hostname (CNAME or MX) or text value (TXT) to serve for this record</p></li>
 </ul>
@@ -266,7 +266,7 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_civo.DnsDomainRecord.type">
 <em class="property">property </em><code class="sig-name descname">type</code><a class="headerlink" href="#pulumi_civo.DnsDomainRecord.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The choice of record type from a, cname, mx or txt</p>
+<dd><p>The choice of record type from A, CNAME, MX, SRV or TXT</p>
 </dd></dl>
 
 <dl class="py method">
@@ -599,7 +599,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py method">
 <dt id="pulumi_civo.GetDnsDomainRecordResult.type">
 <em class="property">property </em><code class="sig-name descname">type</code><a class="headerlink" href="#pulumi_civo.GetDnsDomainRecordResult.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The choice of record type from a, cname, mx or txt</p>
+<dd><p>The choice of record type from A, CNAME, MX, SRV or TXT</p>
 </dd></dl>
 
 <dl class="py method">

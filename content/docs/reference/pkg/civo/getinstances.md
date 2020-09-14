@@ -24,7 +24,7 @@ meta_desc: "Explore the GetInstances function of the civo package, including exa
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetInstancesFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[List[GetInstancesSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstancesFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstancesSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -148,7 +148,7 @@ The `sort` block is documented below.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancesfilter">List[Get<wbr>Instances<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancesfilter">Sequence[Get<wbr>Instances<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
@@ -160,7 +160,7 @@ The `filter` block is documented below.
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancessort">List[Get<wbr>Instances<wbr>Sort<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancessort">Sequence[Get<wbr>Instances<wbr>Sort<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
@@ -350,7 +350,7 @@ The following output properties are available:
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancesinstance">List[Get<wbr>Instances<wbr>Instance]</a></span>
+        <span class="property-type"><a href="#getinstancesinstance">Sequence[Get<wbr>Instances<wbr>Instance]</a></span>
     </dt>
     <dd>{{% md %}}A list of Instances satisfying any `filter` and `sort` criteria. Each instance has the following attributes:
 {{% /md %}}</dd>
@@ -361,7 +361,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancesfilter">List[Get<wbr>Instances<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getinstancesfilter">Sequence[Get<wbr>Instances<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -371,7 +371,7 @@ The following output properties are available:
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancessort">List[Get<wbr>Instances<wbr>Sort]</a></span>
+        <span class="property-type"><a href="#getinstancessort">Sequence[Get<wbr>Instances<wbr>Sort]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -517,7 +517,7 @@ where the `key` field takes on one or more of the values provided here.
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves Instances
 where the `key` field takes on one or more of the values provided here.
@@ -1268,7 +1268,7 @@ where the `key` field takes on one or more of the values provided here.
 <a href="#cpu_cores_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cores</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total cpu of the inatance.
 {{% /md %}}</dd>
@@ -1290,7 +1290,7 @@ where the `key` field takes on one or more of the values provided here.
 <a href="#disk_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the disk.
 {{% /md %}}</dd>
@@ -1411,7 +1411,7 @@ where the `key` field takes on one or more of the values provided here.
 <a href="#ram_mb_python" style="color: inherit; text-decoration: inherit;">ram_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total ram of the instance.
 {{% /md %}}</dd>
@@ -1477,7 +1477,7 @@ where the `key` field takes on one or more of the values provided here.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An optional list of tags
 {{% /md %}}</dd>

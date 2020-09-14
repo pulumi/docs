@@ -636,7 +636,7 @@ The following output properties are available:
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancerbackend">List[Get<wbr>Load<wbr>Balancer<wbr>Backend]</a></span>
+        <span class="property-type"><a href="#getloadbalancerbackend">Sequence[Get<wbr>Load<wbr>Balancer<wbr>Backend]</a></span>
     </dt>
     <dd>{{% md %}}A list of backend instances
 {{% /md %}}</dd>
@@ -647,7 +647,7 @@ The following output properties are available:
 <a href="#fail_timeout_python" style="color: inherit; text-decoration: inherit;">fail_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The wait time until the backend is marked as a failure
 {{% /md %}}</dd>
@@ -680,7 +680,7 @@ The following output properties are available:
 <a href="#max_conns_python" style="color: inherit; text-decoration: inherit;">max_<wbr>conns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How many concurrent connections can each backend handle
 {{% /md %}}</dd>
@@ -691,7 +691,7 @@ The following output properties are available:
 <a href="#max_request_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>request_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max request size set in the configuration
 {{% /md %}}</dd>
@@ -713,7 +713,7 @@ The following output properties are available:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port set in the configuration.
 {{% /md %}}</dd>
@@ -941,7 +941,7 @@ The following output properties are available:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port set in the configuration.
 {{% /md %}}</dd>
