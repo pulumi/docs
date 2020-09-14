@@ -1,6 +1,6 @@
 ---
 title: "Migrating a cloud application to Kubernetes"
-date: 2020-09-11
+date: 2020-09-14
 meta_desc: Using Pulumi to integrate applications with Kubernetes and allow for on-demand scalability of cloud architecture and freedom of design.
 meta_image: meta.png
 authors: ["vova-ivanov"]
@@ -279,7 +279,7 @@ const postgresqlAddress = databasesideListener.spec.clusterIP;
 });
 ```
 
-Now, all that remains is deploying the client and server containers to Kubernetes. Since the PERN application already deployed them as docker containers, it doesn't take much effort to reconfigure it for Kubernetes. Unlike the database, these components can safely be opened up to the internet using a service with a Load Balancer type.
+Now, all that remains is deploying the client and server containers to Kubernetes. Since the PERN application already deployed them as docker containers, it doesn't take much effort to reconfigure it for Kubernetes. Unlike the database, these components can safely be open to the Internet using a service with a Load Balancer type.
 
 We'll first set up the server deployment:
 
@@ -384,7 +384,7 @@ export const kubeConfig = eksCluster.kubeconfig;
 export const URL = clientsideListener.status.loadBalancer.ingress[0].hostname;
 ```
 
-In this example, we demonstrated the benefits that Kubernetes offers, and showed how to use Pulumi to deploy an application to Kubernetes hosted on AWS. Although it might seem uneccessary to use such a system for only a single voting app, the advantages of running your project in the form of containerized services quickly becomes apparent as your application grows in size.
+In this example, we demonstrated the benefits Kubernetes offers and showed how to use Pulumi to deploy an application to Kubernetes hosted on AWS. Although it might seem unnecessary to use such a system for only a single voting app, the advantages of running your project in the form of containerized services become apparent as your application grows in size.
 
 Next week, we'll explore applications using the MERN stack: MongoDB, Express, React, and NodeJS.
 
