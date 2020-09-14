@@ -12,98 +12,6 @@ meta_desc: "Explore the App resource of the appplatform/latest module, including
 
 App resource payload
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Apps_CreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var app = new AzureRM.AppPlatform.Latest.App("app", new AzureRM.AppPlatform.Latest.AppArgs
-        {
-            AppName = "myapp",
-            Location = "eastus",
-            ResourceGroupName = "myResourceGroup",
-            ServiceName = "myservice",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	appplatform "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/appplatform/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := appplatform.NewApp(ctx, "app", &appplatform.AppArgs{
-			AppName:           pulumi.String("myapp"),
-			Location:          pulumi.String("eastus"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			ServiceName:       pulumi.String("myservice"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-app = azurerm.appplatform.latest.App("app",
-    app_name="myapp",
-    location="eastus",
-    resource_group_name="myResourceGroup",
-    service_name="myservice")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const app = new azurerm.appplatform.latest.App("app", {
-    appName: "myapp",
-    location: "eastus",
-    resourceGroupName: "myResourceGroup",
-    serviceName: "myservice",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a App Resource {#create}
@@ -1862,7 +1770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the persistent disk in GB{{% /md %}}</dd>
 
@@ -2008,7 +1916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#used_in_gb_python" style="color: inherit; text-decoration: inherit;">used_<wbr>in_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the used persistent disk in GB{{% /md %}}</dd>
 
@@ -2028,7 +1936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the persistent disk in GB{{% /md %}}</dd>
 
@@ -2154,7 +2062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the temporary disk in GB{{% /md %}}</dd>
 
@@ -2280,7 +2188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the temporary disk in GB{{% /md %}}</dd>
 

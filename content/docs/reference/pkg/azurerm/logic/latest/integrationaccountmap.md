@@ -12,269 +12,6 @@ meta_desc: "Explore the IntegrationAccountMap resource of the logic/latest modul
 
 The integration account map.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update a map
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var integrationAccountMap = new AzureRM.Logic.Latest.IntegrationAccountMap("integrationAccountMap", new AzureRM.Logic.Latest.IntegrationAccountMapArgs
-        {
-            Content = @"<?xml version=""1.0"" encoding=""UTF-16""?>
-<xsl:stylesheet xmlns:xsl=""http://www.w3.org/1999/XSL/Transform"" xmlns:msxsl=""urn:schemas-microsoft-com:xslt"" xmlns:var=""http://schemas.microsoft.com/BizTalk/2003/var"" exclude-result-prefixes=""msxsl var s0 userCSharp"" version=""1.0"" xmlns:ns0=""http://BizTalk_Server_Project4.StringFunctoidsDestinationSchema"" xmlns:s0=""http://BizTalk_Server_Project4.StringFunctoidsSourceSchema"" xmlns:userCSharp=""http://schemas.microsoft.com/BizTalk/2003/userCSharp"">
-  <xsl:import href=""http://btsfunctoids.blob.core.windows.net/functoids/functoids.xslt"" />
-  <xsl:output omit-xml-declaration=""yes"" method=""xml"" version=""1.0"" />
-  <xsl:template match=""/"">
-    <xsl:apply-templates select=""/s0:Root"" />
-  </xsl:template>
-  <xsl:template match=""/s0:Root"">
-    <xsl:variable name=""var:v1"" select=""userCSharp:StringFind(string(StringFindSource/text()) , &quot;SearchString&quot;)"" />
-    <xsl:variable name=""var:v2"" select=""userCSharp:StringLeft(string(StringLeftSource/text()) , &quot;2&quot;)"" />
-    <xsl:variable name=""var:v3"" select=""userCSharp:StringRight(string(StringRightSource/text()) , &quot;2&quot;)"" />
-    <xsl:variable name=""var:v4"" select=""userCSharp:StringUpperCase(string(UppercaseSource/text()))"" />
-    <xsl:variable name=""var:v5"" select=""userCSharp:StringLowerCase(string(LowercaseSource/text()))"" />
-    <xsl:variable name=""var:v6"" select=""userCSharp:StringSize(string(SizeSource/text()))"" />
-    <xsl:variable name=""var:v7"" select=""userCSharp:StringSubstring(string(StringExtractSource/text()) , &quot;0&quot; , &quot;2&quot;)"" />
-    <xsl:variable name=""var:v8"" select=""userCSharp:StringConcat(string(StringConcatSource/text()))"" />
-    <xsl:variable name=""var:v9"" select=""userCSharp:StringTrimLeft(string(StringLeftTrimSource/text()))"" />
-    <xsl:variable name=""var:v10"" select=""userCSharp:StringTrimRight(string(StringRightTrimSource/text()))"" />
-    <ns0:Root>
-      <StringFindDestination>
-        <xsl:value-of select=""$var:v1"" />
-      </StringFindDestination>
-      <StringLeftDestination>
-        <xsl:value-of select=""$var:v2"" />
-      </StringLeftDestination>
-      <StringRightDestination>
-        <xsl:value-of select=""$var:v3"" />
-      </StringRightDestination>
-      <UppercaseDestination>
-        <xsl:value-of select=""$var:v4"" />
-      </UppercaseDestination>
-      <LowercaseDestination>
-        <xsl:value-of select=""$var:v5"" />
-      </LowercaseDestination>
-      <SizeDestination>
-        <xsl:value-of select=""$var:v6"" />
-      </SizeDestination>
-      <StringExtractDestination>
-        <xsl:value-of select=""$var:v7"" />
-      </StringExtractDestination>
-      <StringConcatDestination>
-        <xsl:value-of select=""$var:v8"" />
-      </StringConcatDestination>
-      <StringLeftTrimDestination>
-        <xsl:value-of select=""$var:v9"" />
-      </StringLeftTrimDestination>
-      <StringRightTrimDestination>
-        <xsl:value-of select=""$var:v10"" />
-      </StringRightTrimDestination>
-    </ns0:Root>
-  </xsl:template>
-</xsl:stylesheet>",
-            ContentType = "application/xml",
-            IntegrationAccountName = "testIntegrationAccount",
-            Location = "westus",
-            MapName = "testMap",
-            MapType = "Xslt",
-            Metadata = ,
-            ResourceGroupName = "testResourceGroup",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	"fmt"
-
-	logic "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := logic.NewIntegrationAccountMap(ctx, "integrationAccountMap", &logic.IntegrationAccountMapArgs{
-			Content: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "<?xml version=\"1.0\" encoding=\"UTF-16\"?>\n<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" xmlns:msxsl=\"urn:schemas-microsoft-com:xslt\" xmlns:var=\"http://schemas.microsoft.com/BizTalk/2003/var\" exclude-result-prefixes=\"msxsl var s0 userCSharp\" version=\"1.0\" xmlns:ns0=\"http://BizTalk_Server_Project4.StringFunctoidsDestinationSchema\" xmlns:s0=\"http://BizTalk_Server_Project4.StringFunctoidsSourceSchema\" xmlns:userCSharp=\"http://schemas.microsoft.com/BizTalk/2003/userCSharp\">\n  <xsl:import href=\"http://btsfunctoids.blob.core.windows.net/functoids/functoids.xslt\" />\n  <xsl:output omit-xml-declaration=\"yes\" method=\"xml\" version=\"1.0\" />\n  <xsl:template match=\"/\">\n    <xsl:apply-templates select=\"/s0:Root\" />\n  </xsl:template>\n  <xsl:template match=\"/s0:Root\">\n    <xsl:variable name=\"var:v1\" select=\"userCSharp:StringFind(string(StringFindSource/text()) , &quot;SearchString&quot;)\" />\n    <xsl:variable name=\"var:v2\" select=\"userCSharp:StringLeft(string(StringLeftSource/text()) , &quot;2&quot;)\" />\n    <xsl:variable name=\"var:v3\" select=\"userCSharp:StringRight(string(StringRightSource/text()) , &quot;2&quot;)\" />\n    <xsl:variable name=\"var:v4\" select=\"userCSharp:StringUpperCase(string(UppercaseSource/text()))\" />\n    <xsl:variable name=\"var:v5\" select=\"userCSharp:StringLowerCase(string(LowercaseSource/text()))\" />\n    <xsl:variable name=\"var:v6\" select=\"userCSharp:StringSize(string(SizeSource/text()))\" />\n    <xsl:variable name=\"var:v7\" select=\"userCSharp:StringSubstring(string(StringExtractSource/text()) , &quot;0&quot; , &quot;2&quot;)\" />\n    <xsl:variable name=\"var:v8\" select=\"userCSharp:StringConcat(string(StringConcatSource/text()))\" />\n    <xsl:variable name=\"var:v9\" select=\"userCSharp:StringTrimLeft(string(StringLeftTrimSource/text()))\" />\n    <xsl:variable name=\"var:v10\" select=\"userCSharp:StringTrimRight(string(StringRightTrimSource/text()))\" />\n    <ns0:Root>\n      <StringFindDestination>\n        <xsl:value-of select=\"", "$", "var:v1\" />\n      </StringFindDestination>\n      <StringLeftDestination>\n        <xsl:value-of select=\"", "$", "var:v2\" />\n      </StringLeftDestination>\n      <StringRightDestination>\n        <xsl:value-of select=\"", "$", "var:v3\" />\n      </StringRightDestination>\n      <UppercaseDestination>\n        <xsl:value-of select=\"", "$", "var:v4\" />\n      </UppercaseDestination>\n      <LowercaseDestination>\n        <xsl:value-of select=\"", "$", "var:v5\" />\n      </LowercaseDestination>\n      <SizeDestination>\n        <xsl:value-of select=\"", "$", "var:v6\" />\n      </SizeDestination>\n      <StringExtractDestination>\n        <xsl:value-of select=\"", "$", "var:v7\" />\n      </StringExtractDestination>\n      <StringConcatDestination>\n        <xsl:value-of select=\"", "$", "var:v8\" />\n      </StringConcatDestination>\n      <StringLeftTrimDestination>\n        <xsl:value-of select=\"", "$", "var:v9\" />\n      </StringLeftTrimDestination>\n      <StringRightTrimDestination>\n        <xsl:value-of select=\"", "$", "var:v10\" />\n      </StringRightTrimDestination>\n    </ns0:Root>\n  </xsl:template>\n</xsl:stylesheet>")),
-			ContentType:            pulumi.String("application/xml"),
-			IntegrationAccountName: pulumi.String("testIntegrationAccount"),
-			Location:               pulumi.String("westus"),
-			MapName:                pulumi.String("testMap"),
-			MapType:                pulumi.String("Xslt"),
-			Metadata:               nil,
-			ResourceGroupName:      pulumi.String("testResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-integration_account_map = azurerm.logic.latest.IntegrationAccountMap("integrationAccountMap",
-    content="""<?xml version="1.0" encoding="UTF-16"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:var="http://schemas.microsoft.com/BizTalk/2003/var" exclude-result-prefixes="msxsl var s0 userCSharp" version="1.0" xmlns:ns0="http://BizTalk_Server_Project4.StringFunctoidsDestinationSchema" xmlns:s0="http://BizTalk_Server_Project4.StringFunctoidsSourceSchema" xmlns:userCSharp="http://schemas.microsoft.com/BizTalk/2003/userCSharp">
-  <xsl:import href="http://btsfunctoids.blob.core.windows.net/functoids/functoids.xslt" />
-  <xsl:output omit-xml-declaration="yes" method="xml" version="1.0" />
-  <xsl:template match="/">
-    <xsl:apply-templates select="/s0:Root" />
-  </xsl:template>
-  <xsl:template match="/s0:Root">
-    <xsl:variable name="var:v1" select="userCSharp:StringFind(string(StringFindSource/text()) , &quot;SearchString&quot;)" />
-    <xsl:variable name="var:v2" select="userCSharp:StringLeft(string(StringLeftSource/text()) , &quot;2&quot;)" />
-    <xsl:variable name="var:v3" select="userCSharp:StringRight(string(StringRightSource/text()) , &quot;2&quot;)" />
-    <xsl:variable name="var:v4" select="userCSharp:StringUpperCase(string(UppercaseSource/text()))" />
-    <xsl:variable name="var:v5" select="userCSharp:StringLowerCase(string(LowercaseSource/text()))" />
-    <xsl:variable name="var:v6" select="userCSharp:StringSize(string(SizeSource/text()))" />
-    <xsl:variable name="var:v7" select="userCSharp:StringSubstring(string(StringExtractSource/text()) , &quot;0&quot; , &quot;2&quot;)" />
-    <xsl:variable name="var:v8" select="userCSharp:StringConcat(string(StringConcatSource/text()))" />
-    <xsl:variable name="var:v9" select="userCSharp:StringTrimLeft(string(StringLeftTrimSource/text()))" />
-    <xsl:variable name="var:v10" select="userCSharp:StringTrimRight(string(StringRightTrimSource/text()))" />
-    <ns0:Root>
-      <StringFindDestination>
-        <xsl:value-of select="$var:v1" />
-      </StringFindDestination>
-      <StringLeftDestination>
-        <xsl:value-of select="$var:v2" />
-      </StringLeftDestination>
-      <StringRightDestination>
-        <xsl:value-of select="$var:v3" />
-      </StringRightDestination>
-      <UppercaseDestination>
-        <xsl:value-of select="$var:v4" />
-      </UppercaseDestination>
-      <LowercaseDestination>
-        <xsl:value-of select="$var:v5" />
-      </LowercaseDestination>
-      <SizeDestination>
-        <xsl:value-of select="$var:v6" />
-      </SizeDestination>
-      <StringExtractDestination>
-        <xsl:value-of select="$var:v7" />
-      </StringExtractDestination>
-      <StringConcatDestination>
-        <xsl:value-of select="$var:v8" />
-      </StringConcatDestination>
-      <StringLeftTrimDestination>
-        <xsl:value-of select="$var:v9" />
-      </StringLeftTrimDestination>
-      <StringRightTrimDestination>
-        <xsl:value-of select="$var:v10" />
-      </StringRightTrimDestination>
-    </ns0:Root>
-  </xsl:template>
-</xsl:stylesheet>""",
-    content_type="application/xml",
-    integration_account_name="testIntegrationAccount",
-    location="westus",
-    map_name="testMap",
-    map_type="Xslt",
-    metadata={},
-    resource_group_name="testResourceGroup")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const integrationAccountMap = new azurerm.logic.latest.IntegrationAccountMap("integrationAccountMap", {
-    content: `<?xml version="1.0" encoding="UTF-16"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:var="http://schemas.microsoft.com/BizTalk/2003/var" exclude-result-prefixes="msxsl var s0 userCSharp" version="1.0" xmlns:ns0="http://BizTalk_Server_Project4.StringFunctoidsDestinationSchema" xmlns:s0="http://BizTalk_Server_Project4.StringFunctoidsSourceSchema" xmlns:userCSharp="http://schemas.microsoft.com/BizTalk/2003/userCSharp">
-  <xsl:import href="http://btsfunctoids.blob.core.windows.net/functoids/functoids.xslt" />
-  <xsl:output omit-xml-declaration="yes" method="xml" version="1.0" />
-  <xsl:template match="/">
-    <xsl:apply-templates select="/s0:Root" />
-  </xsl:template>
-  <xsl:template match="/s0:Root">
-    <xsl:variable name="var:v1" select="userCSharp:StringFind(string(StringFindSource/text()) , &quot;SearchString&quot;)" />
-    <xsl:variable name="var:v2" select="userCSharp:StringLeft(string(StringLeftSource/text()) , &quot;2&quot;)" />
-    <xsl:variable name="var:v3" select="userCSharp:StringRight(string(StringRightSource/text()) , &quot;2&quot;)" />
-    <xsl:variable name="var:v4" select="userCSharp:StringUpperCase(string(UppercaseSource/text()))" />
-    <xsl:variable name="var:v5" select="userCSharp:StringLowerCase(string(LowercaseSource/text()))" />
-    <xsl:variable name="var:v6" select="userCSharp:StringSize(string(SizeSource/text()))" />
-    <xsl:variable name="var:v7" select="userCSharp:StringSubstring(string(StringExtractSource/text()) , &quot;0&quot; , &quot;2&quot;)" />
-    <xsl:variable name="var:v8" select="userCSharp:StringConcat(string(StringConcatSource/text()))" />
-    <xsl:variable name="var:v9" select="userCSharp:StringTrimLeft(string(StringLeftTrimSource/text()))" />
-    <xsl:variable name="var:v10" select="userCSharp:StringTrimRight(string(StringRightTrimSource/text()))" />
-    <ns0:Root>
-      <StringFindDestination>
-        <xsl:value-of select="$var:v1" />
-      </StringFindDestination>
-      <StringLeftDestination>
-        <xsl:value-of select="$var:v2" />
-      </StringLeftDestination>
-      <StringRightDestination>
-        <xsl:value-of select="$var:v3" />
-      </StringRightDestination>
-      <UppercaseDestination>
-        <xsl:value-of select="$var:v4" />
-      </UppercaseDestination>
-      <LowercaseDestination>
-        <xsl:value-of select="$var:v5" />
-      </LowercaseDestination>
-      <SizeDestination>
-        <xsl:value-of select="$var:v6" />
-      </SizeDestination>
-      <StringExtractDestination>
-        <xsl:value-of select="$var:v7" />
-      </StringExtractDestination>
-      <StringConcatDestination>
-        <xsl:value-of select="$var:v8" />
-      </StringConcatDestination>
-      <StringLeftTrimDestination>
-        <xsl:value-of select="$var:v9" />
-      </StringLeftTrimDestination>
-      <StringRightTrimDestination>
-        <xsl:value-of select="$var:v10" />
-      </StringRightTrimDestination>
-    </ns0:Root>
-  </xsl:template>
-</xsl:stylesheet>`,
-    contentType: "application/xml",
-    integrationAccountName: "testIntegrationAccount",
-    location: "westus",
-    mapName: "testMap",
-    mapType: "Xslt",
-    metadata: {},
-    resourceGroupName: "testResourceGroup",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a IntegrationAccountMap Resource {#create}
@@ -1505,7 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_size_python" style="color: inherit; text-decoration: inherit;">content_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The content size.{{% /md %}}</dd>
 

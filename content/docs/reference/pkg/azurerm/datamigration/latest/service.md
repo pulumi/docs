@@ -12,111 +12,6 @@ meta_desc: "Explore the Service resource of the datamigration/latest module, inc
 
 A Database Migration Service resource
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Services_CreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var service = new AzureRM.DataMigration.Latest.Service("service", new AzureRM.DataMigration.Latest.ServiceArgs
-        {
-            GroupName = "DmsSdkRg",
-            Location = "southcentralus",
-            ServiceName = "DmsSdkService",
-            Sku = new AzureRM.DataMigration.Latest.Inputs.ServiceSkuArgs
-            {
-                Name = "Basic_1vCore",
-            },
-            VirtualSubnetId = "/subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkTestNetwork/providers/Microsoft.Network/virtualNetworks/DmsSdkTestNetwork/subnets/default",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	datamigration "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/datamigration/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datamigration.NewService(ctx, "service", &datamigration.ServiceArgs{
-			GroupName:   pulumi.String("DmsSdkRg"),
-			Location:    pulumi.String("southcentralus"),
-			ServiceName: pulumi.String("DmsSdkService"),
-			Sku: &datamigration.ServiceSkuArgs{
-				Name: pulumi.String("Basic_1vCore"),
-			},
-			VirtualSubnetId: pulumi.String("/subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkTestNetwork/providers/Microsoft.Network/virtualNetworks/DmsSdkTestNetwork/subnets/default"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-service = azurerm.datamigration.latest.Service("service",
-    group_name="DmsSdkRg",
-    location="southcentralus",
-    service_name="DmsSdkService",
-    sku={
-        "name": "Basic_1vCore",
-    },
-    virtual_subnet_id="/subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkTestNetwork/providers/Microsoft.Network/virtualNetworks/DmsSdkTestNetwork/subnets/default")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const service = new azurerm.datamigration.latest.Service("service", {
-    groupName: "DmsSdkRg",
-    location: "southcentralus",
-    serviceName: "DmsSdkService",
-    sku: {
-        name: "Basic_1vCore",
-    },
-    virtualSubnetId: "/subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkTestNetwork/providers/Microsoft.Network/virtualNetworks/DmsSdkTestNetwork/subnets/default",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Service Resource {#create}
@@ -1091,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The capacity of the SKU, if it supports scaling{{% /md %}}</dd>
 
@@ -1337,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The capacity of the SKU, if it supports scaling{{% /md %}}</dd>
 

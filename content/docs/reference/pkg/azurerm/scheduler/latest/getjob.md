@@ -2037,7 +2037,7 @@ The following output properties are available:
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the maximum number of times that the job should run.{{% /md %}}</dd>
 
@@ -2067,7 +2067,7 @@ The following output properties are available:
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the interval between retries.{{% /md %}}</dd>
 
@@ -2203,7 +2203,7 @@ The following output properties are available:
 <a href="#occurrence_python" style="color: inherit; text-decoration: inherit;">occurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the occurrence. Must be between -5 and 5.{{% /md %}}</dd>
 
@@ -2655,7 +2655,7 @@ The following output properties are available:
 <a href="#execution_count_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets the number of times this job has executed.{{% /md %}}</dd>
 
@@ -2665,7 +2665,7 @@ The following output properties are available:
 <a href="#failure_count_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets the number of times this job has failed.{{% /md %}}</dd>
 
@@ -2675,7 +2675,7 @@ The following output properties are available:
 <a href="#faulted_count_python" style="color: inherit; text-decoration: inherit;">faulted_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets the number of faulted occurrences (occurrences that were retried and failed as many times as the retry policy states).{{% /md %}}</dd>
 
@@ -3047,7 +3047,7 @@ The following output properties are available:
 <a href="#retry_count_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the number of times a retry should be attempted.{{% /md %}}</dd>
 

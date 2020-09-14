@@ -12,239 +12,6 @@ meta_desc: "Explore the FrontDoor resource of the network/latest module, includi
 
 Front Door represents a collection of backend endpoints to route traffic to along with rules that specify how traffic is sent there.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update specific Front Door
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var frontDoor = new AzureRM.Network.Latest.FrontDoor("frontDoor", new AzureRM.Network.Latest.FrontDoorArgs
-        {
-            BackendPools = 
-            {
-                new AzureRM.Network.Latest.Inputs.BackendPoolArgs
-                {
-                    Name = "backendPool1",
-                },
-            },
-            BackendPoolsSettings = new AzureRM.Network.Latest.Inputs.BackendPoolsSettingsArgs
-            {
-                EnforceCertificateNameCheck = "Enabled",
-                SendRecvTimeoutSeconds = 60,
-            },
-            EnabledState = "Enabled",
-            FrontDoorName = "frontDoor1",
-            FrontendEndpoints = 
-            {
-                new AzureRM.Network.Latest.Inputs.FrontendEndpointArgs
-                {
-                    Name = "frontendEndpoint1",
-                },
-                new AzureRM.Network.Latest.Inputs.FrontendEndpointArgs
-                {
-                    Name = "default",
-                },
-            },
-            HealthProbeSettings = 
-            {
-                new AzureRM.Network.Latest.Inputs.HealthProbeSettingsModelArgs
-                {
-                    Name = "healthProbeSettings1",
-                },
-            },
-            LoadBalancingSettings = 
-            {
-                new AzureRM.Network.Latest.Inputs.LoadBalancingSettingsModelArgs
-                {
-                    Name = "loadBalancingSettings1",
-                },
-            },
-            Location = "westus",
-            ResourceGroupName = "rg1",
-            RoutingRules = 
-            {
-                new AzureRM.Network.Latest.Inputs.RoutingRuleArgs
-                {
-                    Name = "routingRule1",
-                },
-            },
-            Tags = 
-            {
-                { "tag1", "value1" },
-                { "tag2", "value2" },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewFrontDoor(ctx, "frontDoor", &network.FrontDoorArgs{
-			BackendPools: network.BackendPoolArray{
-				&network.BackendPoolArgs{
-					Name: pulumi.String("backendPool1"),
-				},
-			},
-			BackendPoolsSettings: &network.BackendPoolsSettingsArgs{
-				EnforceCertificateNameCheck: pulumi.String("Enabled"),
-				SendRecvTimeoutSeconds:      pulumi.Int(60),
-			},
-			EnabledState:  pulumi.String("Enabled"),
-			FrontDoorName: pulumi.String("frontDoor1"),
-			FrontendEndpoints: network.FrontendEndpointArray{
-				&network.FrontendEndpointArgs{
-					Name: pulumi.String("frontendEndpoint1"),
-				},
-				&network.FrontendEndpointArgs{
-					Name: pulumi.String("default"),
-				},
-			},
-			HealthProbeSettings: network.HealthProbeSettingsModelArray{
-				&network.HealthProbeSettingsModelArgs{
-					Name: pulumi.String("healthProbeSettings1"),
-				},
-			},
-			LoadBalancingSettings: network.LoadBalancingSettingsModelArray{
-				&network.LoadBalancingSettingsModelArgs{
-					Name: pulumi.String("loadBalancingSettings1"),
-				},
-			},
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("rg1"),
-			RoutingRules: network.RoutingRuleArray{
-				&network.RoutingRuleArgs{
-					Name: pulumi.String("routingRule1"),
-				},
-			},
-			Tags: pulumi.StringMap{
-				"tag1": pulumi.String("value1"),
-				"tag2": pulumi.String("value2"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-front_door = azurerm.network.latest.FrontDoor("frontDoor",
-    backend_pools=[{
-        "name": "backendPool1",
-    }],
-    backend_pools_settings={
-        "enforceCertificateNameCheck": "Enabled",
-        "sendRecvTimeoutSeconds": 60,
-    },
-    enabled_state="Enabled",
-    front_door_name="frontDoor1",
-    frontend_endpoints=[
-        {
-            "name": "frontendEndpoint1",
-        },
-        {
-            "name": "default",
-        },
-    ],
-    health_probe_settings=[{
-        "name": "healthProbeSettings1",
-    }],
-    load_balancing_settings=[{
-        "name": "loadBalancingSettings1",
-    }],
-    location="westus",
-    resource_group_name="rg1",
-    routing_rules=[{
-        "name": "routingRule1",
-    }],
-    tags={
-        "tag1": "value1",
-        "tag2": "value2",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const frontDoor = new azurerm.network.latest.FrontDoor("frontDoor", {
-    backendPools: [{
-        name: "backendPool1",
-    }],
-    backendPoolsSettings: {
-        enforceCertificateNameCheck: "Enabled",
-        sendRecvTimeoutSeconds: 60,
-    },
-    enabledState: "Enabled",
-    frontDoorName: "frontDoor1",
-    frontendEndpoints: [
-        {
-            name: "frontendEndpoint1",
-        },
-        {
-            name: "default",
-        },
-    ],
-    healthProbeSettings: [{
-        name: "healthProbeSettings1",
-    }],
-    loadBalancingSettings: [{
-        name: "loadBalancingSettings1",
-    }],
-    location: "westus",
-    resourceGroupName: "rg1",
-    routingRules: [{
-        name: "routingRule1",
-    }],
-    tags: {
-        tag1: "value1",
-        tag2: "value2",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a FrontDoor Resource {#create}
@@ -1709,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTP TCP port number. Must be between 1 and 65535.{{% /md %}}</dd>
 
@@ -1719,7 +1486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTPS TCP port number. Must be between 1 and 65535.{{% /md %}}</dd>
 
@@ -1729,7 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.{{% /md %}}</dd>
 
@@ -1779,7 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Weight of this endpoint for load balancing purposes.{{% /md %}}</dd>
 
@@ -2517,7 +2284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_recv_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">send_<wbr>recv_<wbr>timeout_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Send and receive timeout on forwarding request to the backend. When timeout is reached, the request fails and returns.{{% /md %}}</dd>
 
@@ -2643,7 +2410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_recv_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">send_<wbr>recv_<wbr>timeout_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Send and receive timeout on forwarding request to the backend. When timeout is reached, the request fails and returns.{{% /md %}}</dd>
 
@@ -3099,7 +2866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTP TCP port number. Must be between 1 and 65535.{{% /md %}}</dd>
 
@@ -3109,7 +2876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTPS TCP port number. Must be between 1 and 65535.{{% /md %}}</dd>
 
@@ -3119,7 +2886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.{{% /md %}}</dd>
 
@@ -3169,7 +2936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Weight of this endpoint for load balancing purposes.{{% /md %}}</dd>
 
@@ -4635,7 +4402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessionaffinityttlseconds_python" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>Ttl<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.{{% /md %}}</dd>
 
@@ -5121,7 +4888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessionaffinityttlseconds_python" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>Ttl<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.{{% /md %}}</dd>
 
@@ -5795,7 +5562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds between health probes.{{% /md %}}</dd>
 
@@ -6201,7 +5968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds between health probes.{{% /md %}}</dd>
 
@@ -6563,7 +6330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionallatencymilliseconds_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Latency<wbr>Milliseconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The additional latency in milliseconds for probes to fall into the lowest latency bucket{{% /md %}}</dd>
 
@@ -6603,7 +6370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplesize_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of samples to consider for load balancing decisions{{% /md %}}</dd>
 
@@ -6613,7 +6380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successfulsamplesrequired_python" style="color: inherit; text-decoration: inherit;">successful<wbr>Samples<wbr>Required</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of samples within the sample period that must succeed{{% /md %}}</dd>
 
@@ -6889,7 +6656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionallatencymilliseconds_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Latency<wbr>Milliseconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The additional latency in milliseconds for probes to fall into the lowest latency bucket{{% /md %}}</dd>
 
@@ -6929,7 +6696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplesize_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of samples to consider for load balancing decisions{{% /md %}}</dd>
 
@@ -6939,7 +6706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successfulsamplesrequired_python" style="color: inherit; text-decoration: inherit;">successful<wbr>Samples<wbr>Required</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of samples within the sample period that must succeed{{% /md %}}</dd>
 
@@ -9539,7 +9306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A priority assigned to this rule. {{% /md %}}</dd>
 

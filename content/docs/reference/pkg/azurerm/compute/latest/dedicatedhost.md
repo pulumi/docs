@@ -12,128 +12,6 @@ meta_desc: "Explore the DedicatedHost resource of the compute/latest module, inc
 
 Specifies information about the Dedicated host.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update a dedicated host .
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var dedicatedHost = new AzureRM.Compute.Latest.DedicatedHost("dedicatedHost", new AzureRM.Compute.Latest.DedicatedHostArgs
-        {
-            HostGroupName = "myDedicatedHostGroup",
-            HostName = "myDedicatedHost",
-            Location = "westus",
-            PlatformFaultDomain = 1,
-            ResourceGroupName = "myResourceGroup",
-            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
-            {
-                Name = "DSv3-Type1",
-            },
-            Tags = 
-            {
-                { "department", "HR" },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	compute "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := compute.NewDedicatedHost(ctx, "dedicatedHost", &compute.DedicatedHostArgs{
-			HostGroupName:       pulumi.String("myDedicatedHostGroup"),
-			HostName:            pulumi.String("myDedicatedHost"),
-			Location:            pulumi.String("westus"),
-			PlatformFaultDomain: pulumi.Int(1),
-			ResourceGroupName:   pulumi.String("myResourceGroup"),
-			Sku: &compute.SkuArgs{
-				Name: pulumi.String("DSv3-Type1"),
-			},
-			Tags: pulumi.StringMap{
-				"department": pulumi.String("HR"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-dedicated_host = azurerm.compute.latest.DedicatedHost("dedicatedHost",
-    host_group_name="myDedicatedHostGroup",
-    host_name="myDedicatedHost",
-    location="westus",
-    platform_fault_domain=1,
-    resource_group_name="myResourceGroup",
-    sku={
-        "name": "DSv3-Type1",
-    },
-    tags={
-        "department": "HR",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const dedicatedHost = new azurerm.compute.latest.DedicatedHost("dedicatedHost", {
-    hostGroupName: "myDedicatedHostGroup",
-    hostName: "myDedicatedHost",
-    location: "westus",
-    platformFaultDomain: 1,
-    resourceGroupName: "myResourceGroup",
-    sku: {
-        name: "DSv3-Type1",
-    },
-    tags: {
-        department: "HR",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a DedicatedHost Resource {#create}
@@ -145,7 +23,7 @@ const dedicatedHost = new azurerm.compute.latest.DedicatedHost("dedicatedHost", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/compute/latest/#pulumi_azurerm.compute/latest.DedicatedHost">DedicatedHost</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_replace_on_failure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform_fault_domain</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/compute/latest/#pulumi_azurerm.compute/latest.DedicatedHost">DedicatedHost</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_replace_on_failure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform_fault_domain</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -684,7 +562,7 @@ The DedicatedHost resource accepts the following [input]({{< relref "/docs/intro
 <a href="#platform_fault_domain_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>fault_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Fault domain of the dedicated host within a dedicated host group.{{% /md %}}</dd>
 
@@ -1832,7 +1710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the number of virtual machines in the scale set.{{% /md %}}</dd>
 
@@ -1998,7 +1876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the number of virtual machines in the scale set.{{% /md %}}</dd>
 

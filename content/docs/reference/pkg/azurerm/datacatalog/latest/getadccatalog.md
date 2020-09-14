@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Azure data catalog units.{{% /md %}}</dd>
 

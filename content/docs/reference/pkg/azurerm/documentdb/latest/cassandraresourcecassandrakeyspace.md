@@ -12,119 +12,6 @@ meta_desc: "Explore the CassandraResourceCassandraKeyspace resource of the docum
 
 An Azure Cosmos DB Cassandra keyspace.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### CosmosDBCassandraKeyspaceCreateUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var cassandraResourceCassandraKeyspace = new AzureRM.DocumentDB.Latest.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace", new AzureRM.DocumentDB.Latest.CassandraResourceCassandraKeyspaceArgs
-        {
-            AccountName = "ddb1",
-            KeyspaceName = "keyspaceName",
-            Location = "West US",
-            Options = ,
-            Resource = new AzureRM.DocumentDB.Latest.Inputs.CassandraKeyspaceResourceArgs
-            {
-                Id = "keyspaceName",
-            },
-            ResourceGroupName = "rg1",
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/documentdb/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewCassandraResourceCassandraKeyspace(ctx, "cassandraResourceCassandraKeyspace", &documentdb.CassandraResourceCassandraKeyspaceArgs{
-			AccountName:  pulumi.String("ddb1"),
-			KeyspaceName: pulumi.String("keyspaceName"),
-			Location:     pulumi.String("West US"),
-			Options:      nil,
-			Resource: &documentdb.CassandraKeyspaceResourceArgs{
-				Id: pulumi.String("keyspaceName"),
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			Tags:              nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-cassandra_resource_cassandra_keyspace = azurerm.documentdb.latest.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace",
-    account_name="ddb1",
-    keyspace_name="keyspaceName",
-    location="West US",
-    options={},
-    resource={
-        "id": "keyspaceName",
-    },
-    resource_group_name="rg1",
-    tags={})
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const cassandraResourceCassandraKeyspace = new azurerm.documentdb.latest.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace", {
-    accountName: "ddb1",
-    keyspaceName: "keyspaceName",
-    location: "West US",
-    options: {},
-    resource: {
-        id: "keyspaceName",
-    },
-    resourceGroupName: "rg1",
-    tags: {},
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a CassandraResourceCassandraKeyspace Resource {#create}
@@ -859,7 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
 
@@ -945,7 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
 
@@ -1071,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.{{% /md %}}</dd>
 
@@ -1489,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd>
 

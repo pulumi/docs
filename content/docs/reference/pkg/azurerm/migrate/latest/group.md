@@ -12,98 +12,6 @@ meta_desc: "Explore the Group resource of the migrate/latest module, including e
 
 A group created in a Migration project.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Groups_Create
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var @group = new AzureRM.Migrate.Latest.Group("group", new AzureRM.Migrate.Latest.GroupArgs
-        {
-            ETag = "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
-            GroupName = "Group2",
-            ProjectName = "abgoyalWEselfhostb72bproject",
-            ResourceGroupName = "abgoyal-westEurope",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	migrate "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := migrate.NewGroup(ctx, "group", &migrate.GroupArgs{
-			ETag:              pulumi.String("\"1e000c2c-0000-0d00-0000-5cdaa4190000\""),
-			GroupName:         pulumi.String("Group2"),
-			ProjectName:       pulumi.String("abgoyalWEselfhostb72bproject"),
-			ResourceGroupName: pulumi.String("abgoyal-westEurope"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-group = azurerm.migrate.latest.Group("group",
-    e_tag="\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
-    group_name="Group2",
-    project_name="abgoyalWEselfhostb72bproject",
-    resource_group_name="abgoyal-westEurope")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const group = new azurerm.migrate.latest.Group("group", {
-    eTag: "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
-    groupName: "Group2",
-    projectName: "abgoyalWEselfhostb72bproject",
-    resourceGroupName: "abgoyal-westEurope",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Group Resource {#create}
@@ -948,7 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_count_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of machines part of this group.{{% /md %}}</dd>
 

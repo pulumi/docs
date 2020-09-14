@@ -859,7 +859,7 @@ The following output properties are available:
 <a href="#incident_number_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A sequential number{{% /md %}}</dd>
 
@@ -1251,7 +1251,7 @@ The following output properties are available:
 <a href="#alerts_count_python" style="color: inherit; text-decoration: inherit;">alerts_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of alerts in the incident{{% /md %}}</dd>
 
@@ -1261,7 +1261,7 @@ The following output properties are available:
 <a href="#bookmarks_count_python" style="color: inherit; text-decoration: inherit;">bookmarks_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of bookmarks in the incident{{% /md %}}</dd>
 
@@ -1271,7 +1271,7 @@ The following output properties are available:
 <a href="#comments_count_python" style="color: inherit; text-decoration: inherit;">comments_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of comments in the incident{{% /md %}}</dd>
 
@@ -1393,16 +1393,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="labelname_python">
-<a href="#labelname_python" style="color: inherit; text-decoration: inherit;">label<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the label{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="labeltype_python">
 <a href="#labeltype_python" style="color: inherit; text-decoration: inherit;">label<wbr>Type</a>
 </span> 
@@ -1410,6 +1400,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the label{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="label_name_python">
+<a href="#label_name_python" style="color: inherit; text-decoration: inherit;">label_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the label{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

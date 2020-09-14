@@ -12,435 +12,6 @@ meta_desc: "Explore the ConnectionMonitor resource of the network/latest module,
 
 Information about the connection monitor.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create connection monitor V1
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var connectionMonitor = new AzureRM.Network.Latest.ConnectionMonitor("connectionMonitor", new AzureRM.Network.Latest.ConnectionMonitorArgs
-        {
-            ConnectionMonitorName = "cm1",
-            Destination = new AzureRM.Network.Latest.Inputs.ConnectionMonitorDestinationArgs
-            {
-                Address = "bing.com",
-                Port = 80,
-            },
-            MonitoringIntervalInSeconds = 60,
-            NetworkWatcherName = "nw1",
-            ResourceGroupName = "rg1",
-            Source = new AzureRM.Network.Latest.Inputs.ConnectionMonitorSourceArgs
-            {
-                ResourceId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewConnectionMonitor(ctx, "connectionMonitor", &network.ConnectionMonitorArgs{
-			ConnectionMonitorName: pulumi.String("cm1"),
-			Destination: &network.ConnectionMonitorDestinationArgs{
-				Address: pulumi.String("bing.com"),
-				Port:    pulumi.Int(80),
-			},
-			MonitoringIntervalInSeconds: pulumi.Int(60),
-			NetworkWatcherName:          pulumi.String("nw1"),
-			ResourceGroupName:           pulumi.String("rg1"),
-			Source: &network.ConnectionMonitorSourceArgs{
-				ResourceId: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-connection_monitor = azurerm.network.latest.ConnectionMonitor("connectionMonitor",
-    connection_monitor_name="cm1",
-    destination={
-        "address": "bing.com",
-        "port": 80,
-    },
-    monitoring_interval_in_seconds=60,
-    network_watcher_name="nw1",
-    resource_group_name="rg1",
-    source={
-        "resourceId": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const connectionMonitor = new azurerm.network.latest.ConnectionMonitor("connectionMonitor", {
-    connectionMonitorName: "cm1",
-    destination: {
-        address: "bing.com",
-        port: 80,
-    },
-    monitoringIntervalInSeconds: 60,
-    networkWatcherName: "nw1",
-    resourceGroupName: "rg1",
-    source: {
-        resourceId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1",
-    },
-});
-
-```
-
-{{% /example %}}
-
-### Create connection monitor V2
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var connectionMonitor = new AzureRM.Network.Latest.ConnectionMonitor("connectionMonitor", new AzureRM.Network.Latest.ConnectionMonitorArgs
-        {
-            ConnectionMonitorName = "cm1",
-            Endpoints = 
-            {
-                new AzureRM.Network.Latest.Inputs.ConnectionMonitorEndpointArgs
-                {
-                    Name = "vm1",
-                    ResourceId = "/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/NwRgIrinaCentralUSEUAP/providers/Microsoft.Compute/virtualMachines/vm1",
-                },
-                new AzureRM.Network.Latest.Inputs.ConnectionMonitorEndpointArgs
-                {
-                    Filter = new AzureRM.Network.Latest.Inputs.ConnectionMonitorEndpointFilterArgs
-                    {
-                        Items = 
-                        {
-                            new AzureRM.Network.Latest.Inputs.ConnectionMonitorEndpointFilterItemArgs
-                            {
-                                Address = "npmuser",
-                                Type = "AgentAddress",
-                            },
-                        },
-                        Type = "Include",
-                    },
-                    Name = "CanaryWorkspaceVamshi",
-                    ResourceId = "/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/vasamudrRG/providers/Microsoft.OperationalInsights/workspaces/vasamudrWorkspace",
-                },
-                new AzureRM.Network.Latest.Inputs.ConnectionMonitorEndpointArgs
-                {
-                    Address = "bing.com",
-                    Name = "bing",
-                },
-                new AzureRM.Network.Latest.Inputs.ConnectionMonitorEndpointArgs
-                {
-                    Address = "google.com",
-                    Name = "google",
-                },
-            },
-            NetworkWatcherName = "nw1",
-            Outputs = {},
-            ResourceGroupName = "rg1",
-            TestConfigurations = 
-            {
-                new AzureRM.Network.Latest.Inputs.ConnectionMonitorTestConfigurationArgs
-                {
-                    Name = "testConfig1",
-                    Protocol = "Tcp",
-                    TcpConfiguration = new AzureRM.Network.Latest.Inputs.ConnectionMonitorTcpConfigurationArgs
-                    {
-                        DisableTraceRoute = false,
-                        Port = 80,
-                    },
-                    TestFrequencySec = 60,
-                },
-            },
-            TestGroups = 
-            {
-                new AzureRM.Network.Latest.Inputs.ConnectionMonitorTestGroupArgs
-                {
-                    Destinations = 
-                    {
-                        "bing",
-                        "google",
-                    },
-                    Disable = false,
-                    Name = "test1",
-                    Sources = 
-                    {
-                        "vm1",
-                        "CanaryWorkspaceVamshi",
-                    },
-                    TestConfigurations = 
-                    {
-                        "testConfig1",
-                    },
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewConnectionMonitor(ctx, "connectionMonitor", &network.ConnectionMonitorArgs{
-			ConnectionMonitorName: pulumi.String("cm1"),
-			Endpoints: network.ConnectionMonitorEndpointArray{
-				&network.ConnectionMonitorEndpointArgs{
-					Name:       pulumi.String("vm1"),
-					ResourceId: pulumi.String("/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/NwRgIrinaCentralUSEUAP/providers/Microsoft.Compute/virtualMachines/vm1"),
-				},
-				&network.ConnectionMonitorEndpointArgs{
-					Filter: &network.ConnectionMonitorEndpointFilterArgs{
-						Items: network.ConnectionMonitorEndpointFilterItemArray{
-							&network.ConnectionMonitorEndpointFilterItemArgs{
-								Address: pulumi.String("npmuser"),
-								Type:    pulumi.String("AgentAddress"),
-							},
-						},
-						Type: pulumi.String("Include"),
-					},
-					Name:       pulumi.String("CanaryWorkspaceVamshi"),
-					ResourceId: pulumi.String("/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/vasamudrRG/providers/Microsoft.OperationalInsights/workspaces/vasamudrWorkspace"),
-				},
-				&network.ConnectionMonitorEndpointArgs{
-					Address: pulumi.String("bing.com"),
-					Name:    pulumi.String("bing"),
-				},
-				&network.ConnectionMonitorEndpointArgs{
-					Address: pulumi.String("google.com"),
-					Name:    pulumi.String("google"),
-				},
-			},
-			NetworkWatcherName: pulumi.String("nw1"),
-			Outputs:            network.ConnectionMonitorOutputArray{},
-			ResourceGroupName:  pulumi.String("rg1"),
-			TestConfigurations: network.ConnectionMonitorTestConfigurationArray{
-				&network.ConnectionMonitorTestConfigurationArgs{
-					Name:     pulumi.String("testConfig1"),
-					Protocol: pulumi.String("Tcp"),
-					TcpConfiguration: &network.ConnectionMonitorTcpConfigurationArgs{
-						DisableTraceRoute: pulumi.Bool(false),
-						Port:              pulumi.Int(80),
-					},
-					TestFrequencySec: pulumi.Int(60),
-				},
-			},
-			TestGroups: network.ConnectionMonitorTestGroupArray{
-				&network.ConnectionMonitorTestGroupArgs{
-					Destinations: pulumi.StringArray{
-						pulumi.String("bing"),
-						pulumi.String("google"),
-					},
-					Disable: pulumi.Bool(false),
-					Name:    pulumi.String("test1"),
-					Sources: pulumi.StringArray{
-						pulumi.String("vm1"),
-						pulumi.String("CanaryWorkspaceVamshi"),
-					},
-					TestConfigurations: pulumi.StringArray{
-						pulumi.String("testConfig1"),
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-connection_monitor = azurerm.network.latest.ConnectionMonitor("connectionMonitor",
-    connection_monitor_name="cm1",
-    endpoints=[
-        {
-            "name": "vm1",
-            "resourceId": "/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/NwRgIrinaCentralUSEUAP/providers/Microsoft.Compute/virtualMachines/vm1",
-        },
-        {
-            "filter": {
-                "items": [{
-                    "address": "npmuser",
-                    "type": "AgentAddress",
-                }],
-                "type": "Include",
-            },
-            "name": "CanaryWorkspaceVamshi",
-            "resourceId": "/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/vasamudrRG/providers/Microsoft.OperationalInsights/workspaces/vasamudrWorkspace",
-        },
-        {
-            "address": "bing.com",
-            "name": "bing",
-        },
-        {
-            "address": "google.com",
-            "name": "google",
-        },
-    ],
-    network_watcher_name="nw1",
-    outputs=[],
-    resource_group_name="rg1",
-    test_configurations=[{
-        "name": "testConfig1",
-        "protocol": "Tcp",
-        "tcpConfiguration": {
-            "disableTraceRoute": False,
-            "port": 80,
-        },
-        "testFrequencySec": 60,
-    }],
-    test_groups=[{
-        "destinations": [
-            "bing",
-            "google",
-        ],
-        "disable": False,
-        "name": "test1",
-        "sources": [
-            "vm1",
-            "CanaryWorkspaceVamshi",
-        ],
-        "testConfigurations": ["testConfig1"],
-    }])
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const connectionMonitor = new azurerm.network.latest.ConnectionMonitor("connectionMonitor", {
-    connectionMonitorName: "cm1",
-    endpoints: [
-        {
-            name: "vm1",
-            resourceId: "/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/NwRgIrinaCentralUSEUAP/providers/Microsoft.Compute/virtualMachines/vm1",
-        },
-        {
-            filter: {
-                items: [{
-                    address: "npmuser",
-                    type: "AgentAddress",
-                }],
-                type: "Include",
-            },
-            name: "CanaryWorkspaceVamshi",
-            resourceId: "/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/vasamudrRG/providers/Microsoft.OperationalInsights/workspaces/vasamudrWorkspace",
-        },
-        {
-            address: "bing.com",
-            name: "bing",
-        },
-        {
-            address: "google.com",
-            name: "google",
-        },
-    ],
-    networkWatcherName: "nw1",
-    outputs: [],
-    resourceGroupName: "rg1",
-    testConfigurations: [{
-        name: "testConfig1",
-        protocol: "Tcp",
-        tcpConfiguration: {
-            disableTraceRoute: false,
-            port: 80,
-        },
-        testFrequencySec: 60,
-    }],
-    testGroups: [{
-        destinations: [
-            "bing",
-            "google",
-        ],
-        disable: false,
-        name: "test1",
-        sources: [
-            "vm1",
-            "CanaryWorkspaceVamshi",
-        ],
-        testConfigurations: ["testConfig1"],
-    }],
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ConnectionMonitor Resource {#create}
@@ -452,7 +23,7 @@ const connectionMonitor = new azurerm.network.latest.ConnectionMonitor("connecti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/network/latest/#pulumi_azurerm.network/latest.ConnectionMonitor">ConnectionMonitor</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_monitor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[Dict[ConnectionMonitorDestination]]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionMonitorEndpoint]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_interval_in_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionMonitorOutput]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Dict[ConnectionMonitorSource]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">test_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionMonitorTestConfiguration]]</span> = None<span class="p">, </span><span class="nx">test_groups</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionMonitorTestGroup]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/network/latest/#pulumi_azurerm.network/latest.ConnectionMonitor">ConnectionMonitor</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_monitor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[Dict[ConnectionMonitorDestination]]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionMonitorEndpoint]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_interval_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionMonitorOutput]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Dict[ConnectionMonitorSource]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">test_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionMonitorTestConfiguration]]</span> = None<span class="p">, </span><span class="nx">test_groups</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionMonitorTestGroup]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1141,7 +712,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#monitoring_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Monitoring interval in seconds.{{% /md %}}</dd>
 
@@ -1725,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The destination port used by connection monitor.{{% /md %}}</dd>
 
@@ -1891,7 +1462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The destination port used by connection monitor.{{% /md %}}</dd>
 
@@ -3737,7 +3308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port to connect to.{{% /md %}}</dd>
 
@@ -4023,7 +3594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port to connect to.{{% /md %}}</dd>
 
@@ -4603,7 +4174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The source port used by connection monitor.{{% /md %}}</dd>
 
@@ -4729,7 +4300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The source port used by connection monitor.{{% /md %}}</dd>
 
@@ -4845,7 +4416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checksfailedpercent_python" style="color: inherit; text-decoration: inherit;">checks<wbr>Failed<wbr>Percent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum percentage of failed checks permitted for a test to evaluate as successful.{{% /md %}}</dd>
 
@@ -4971,7 +4542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checksfailedpercent_python" style="color: inherit; text-decoration: inherit;">checks<wbr>Failed<wbr>Percent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum percentage of failed checks permitted for a test to evaluate as successful.{{% /md %}}</dd>
 
@@ -5147,7 +4718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port to connect to.{{% /md %}}</dd>
 
@@ -5313,7 +4884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port to connect to.{{% /md %}}</dd>
 
@@ -5679,7 +5250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testfrequencysec_python" style="color: inherit; text-decoration: inherit;">test<wbr>Frequency<wbr>Sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The frequency of test evaluation, in seconds.{{% /md %}}</dd>
 
@@ -6045,7 +5616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testfrequencysec_python" style="color: inherit; text-decoration: inherit;">test<wbr>Frequency<wbr>Sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The frequency of test evaluation, in seconds.{{% /md %}}</dd>
 

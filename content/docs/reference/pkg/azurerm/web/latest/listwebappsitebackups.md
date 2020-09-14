@@ -839,7 +839,7 @@ The following output properties are available:
 <a href="#backup_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Id of the backup.{{% /md %}}</dd>
 
@@ -949,7 +949,7 @@ The following output properties are available:
 <a href="#size_in_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the backup in bytes.{{% /md %}}</dd>
 
@@ -965,8 +965,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="storageaccounturl_python">
-<a href="#storageaccounturl_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Url</a>
+        <span id="storage_account_url_python">
+<a href="#storage_account_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -989,7 +989,7 @@ The following output properties are available:
 <a href="#websitesizeinbytes_python" style="color: inherit; text-decoration: inherit;">website<wbr>Size<wbr>In<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the original web app which has been backed up.{{% /md %}}</dd>
 
@@ -1174,8 +1174,8 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 
     <dt class="property-required"
             title="Required">
-        <span id="databasetype_python">
-<a href="#databasetype_python" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
+        <span id="database_type_python">
+<a href="#database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

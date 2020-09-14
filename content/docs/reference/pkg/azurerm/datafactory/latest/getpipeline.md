@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#concurrency_python" style="color: inherit; text-decoration: inherit;">concurrency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max number of concurrent runs for the pipeline.{{% /md %}}</dd>
 
@@ -1017,7 +1017,7 @@ The following output properties are available:
 <a href="#retryintervalinseconds_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Interval<wbr>In<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Interval between each retry attempt (in seconds). The default is 30 sec.{{% /md %}}</dd>
 
@@ -1229,8 +1229,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dependson_python">
-<a href="#dependson_python" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
+        <span id="depends_on_python">
+<a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#activitydependencyresponse">List[Activity<wbr>Dependency<wbr>Response]</a></span>
@@ -1495,8 +1495,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dependson_python">
-<a href="#dependson_python" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
+        <span id="depends_on_python">
+<a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#activitydependencyresponse">List[Activity<wbr>Dependency<wbr>Response]</a></span>

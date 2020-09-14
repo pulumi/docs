@@ -12,294 +12,6 @@ meta_desc: "Explore the AssetFilter resource of the media/latest module, includi
 
 An Asset Filter.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create an Asset Filter
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var assetFilter = new AzureRM.Media.Latest.AssetFilter("assetFilter", new AzureRM.Media.Latest.AssetFilterArgs
-        {
-            AccountName = "contosomedia",
-            AssetName = "ClimbingMountRainer",
-            FilterName = "newAssetFilter",
-            FirstQuality = new AzureRM.Media.Latest.Inputs.FirstQualityArgs
-            {
-                Bitrate = 128000,
-            },
-            PresentationTimeRange = new AzureRM.Media.Latest.Inputs.PresentationTimeRangeArgs
-            {
-                EndTimestamp = 170000000,
-                ForceEndTimestamp = false,
-                LiveBackoffDuration = 0,
-                PresentationWindowDuration = 9.223372036854776e+18,
-                StartTimestamp = 0,
-                Timescale = 10000000,
-            },
-            ResourceGroupName = "contoso",
-            Tracks = 
-            {
-                new AzureRM.Media.Latest.Inputs.FilterTrackSelectionArgs
-                {
-                    TrackSelections = 
-                    {
-                        new AzureRM.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
-                        {
-                            Operation = "Equal",
-                            Property = "Type",
-                            Value = "Audio",
-                        },
-                        new AzureRM.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
-                        {
-                            Operation = "NotEqual",
-                            Property = "Language",
-                            Value = "en",
-                        },
-                        new AzureRM.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
-                        {
-                            Operation = "NotEqual",
-                            Property = "FourCC",
-                            Value = "EC-3",
-                        },
-                    },
-                },
-                new AzureRM.Media.Latest.Inputs.FilterTrackSelectionArgs
-                {
-                    TrackSelections = 
-                    {
-                        new AzureRM.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
-                        {
-                            Operation = "Equal",
-                            Property = "Type",
-                            Value = "Video",
-                        },
-                        new AzureRM.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
-                        {
-                            Operation = "Equal",
-                            Property = "Bitrate",
-                            Value = "3000000-5000000",
-                        },
-                    },
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	media "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := media.NewAssetFilter(ctx, "assetFilter", &media.AssetFilterArgs{
-			AccountName: pulumi.String("contosomedia"),
-			AssetName:   pulumi.String("ClimbingMountRainer"),
-			FilterName:  pulumi.String("newAssetFilter"),
-			FirstQuality: &media.FirstQualityArgs{
-				Bitrate: pulumi.Int(128000),
-			},
-			PresentationTimeRange: &media.PresentationTimeRangeArgs{
-				EndTimestamp:               pulumi.Int(170000000),
-				ForceEndTimestamp:          pulumi.Bool(false),
-				LiveBackoffDuration:        pulumi.Int(0),
-				PresentationWindowDuration: pulumi.Int(9.223372036854776e+18),
-				StartTimestamp:             pulumi.Int(0),
-				Timescale:                  pulumi.Int(10000000),
-			},
-			ResourceGroupName: pulumi.String("contoso"),
-			Tracks: media.FilterTrackSelectionArray{
-				&media.FilterTrackSelectionArgs{
-					TrackSelections: media.FilterTrackPropertyConditionArray{
-						&media.FilterTrackPropertyConditionArgs{
-							Operation: pulumi.String("Equal"),
-							Property:  pulumi.String("Type"),
-							Value:     pulumi.String("Audio"),
-						},
-						&media.FilterTrackPropertyConditionArgs{
-							Operation: pulumi.String("NotEqual"),
-							Property:  pulumi.String("Language"),
-							Value:     pulumi.String("en"),
-						},
-						&media.FilterTrackPropertyConditionArgs{
-							Operation: pulumi.String("NotEqual"),
-							Property:  pulumi.String("FourCC"),
-							Value:     pulumi.String("EC-3"),
-						},
-					},
-				},
-				&media.FilterTrackSelectionArgs{
-					TrackSelections: media.FilterTrackPropertyConditionArray{
-						&media.FilterTrackPropertyConditionArgs{
-							Operation: pulumi.String("Equal"),
-							Property:  pulumi.String("Type"),
-							Value:     pulumi.String("Video"),
-						},
-						&media.FilterTrackPropertyConditionArgs{
-							Operation: pulumi.String("Equal"),
-							Property:  pulumi.String("Bitrate"),
-							Value:     pulumi.String("3000000-5000000"),
-						},
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-asset_filter = azurerm.media.latest.AssetFilter("assetFilter",
-    account_name="contosomedia",
-    asset_name="ClimbingMountRainer",
-    filter_name="newAssetFilter",
-    first_quality={
-        "bitrate": 128000,
-    },
-    presentation_time_range={
-        "endTimestamp": 170000000,
-        "forceEndTimestamp": False,
-        "liveBackoffDuration": 0,
-        "presentationWindowDuration": 9.223372036854776e+18,
-        "startTimestamp": 0,
-        "timescale": 10000000,
-    },
-    resource_group_name="contoso",
-    tracks=[
-        {
-            "trackSelections": [
-                {
-                    "operation": "Equal",
-                    "property": "Type",
-                    "value": "Audio",
-                },
-                {
-                    "operation": "NotEqual",
-                    "property": "Language",
-                    "value": "en",
-                },
-                {
-                    "operation": "NotEqual",
-                    "property": "FourCC",
-                    "value": "EC-3",
-                },
-            ],
-        },
-        {
-            "trackSelections": [
-                {
-                    "operation": "Equal",
-                    "property": "Type",
-                    "value": "Video",
-                },
-                {
-                    "operation": "Equal",
-                    "property": "Bitrate",
-                    "value": "3000000-5000000",
-                },
-            ],
-        },
-    ])
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const assetFilter = new azurerm.media.latest.AssetFilter("assetFilter", {
-    accountName: "contosomedia",
-    assetName: "ClimbingMountRainer",
-    filterName: "newAssetFilter",
-    firstQuality: {
-        bitrate: 128000,
-    },
-    presentationTimeRange: {
-        endTimestamp: 170000000,
-        forceEndTimestamp: false,
-        liveBackoffDuration: 0,
-        presentationWindowDuration: 9.223372036854776e+18,
-        startTimestamp: 0,
-        timescale: 10000000,
-    },
-    resourceGroupName: "contoso",
-    tracks: [
-        {
-            trackSelections: [
-                {
-                    operation: "Equal",
-                    property: "Type",
-                    value: "Audio",
-                },
-                {
-                    operation: "NotEqual",
-                    property: "Language",
-                    value: "en",
-                },
-                {
-                    operation: "NotEqual",
-                    property: "FourCC",
-                    value: "EC-3",
-                },
-            ],
-        },
-        {
-            trackSelections: [
-                {
-                    operation: "Equal",
-                    property: "Type",
-                    value: "Video",
-                },
-                {
-                    operation: "Equal",
-                    property: "Bitrate",
-                    value: "3000000-5000000",
-                },
-            ],
-        },
-    ],
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a AssetFilter Resource {#create}
@@ -1538,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The first quality bitrate.{{% /md %}}</dd>
 
@@ -1624,7 +1336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The first quality bitrate.{{% /md %}}</dd>
 
@@ -1860,7 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_timestamp_python" style="color: inherit; text-decoration: inherit;">end_<wbr>timestamp</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd>
 
@@ -1880,7 +1592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#live_backoff_duration_python" style="color: inherit; text-decoration: inherit;">live_<wbr>backoff_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd>
 
@@ -1890,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presentation_window_duration_python" style="color: inherit; text-decoration: inherit;">presentation_<wbr>window_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd>
 
@@ -1900,7 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_timestamp_python" style="color: inherit; text-decoration: inherit;">start_<wbr>timestamp</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd>
 
@@ -1910,7 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timescale_python" style="color: inherit; text-decoration: inherit;">timescale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd>
 
@@ -2146,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_timestamp_python" style="color: inherit; text-decoration: inherit;">end_<wbr>timestamp</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd>
 
@@ -2166,7 +1878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#live_backoff_duration_python" style="color: inherit; text-decoration: inherit;">live_<wbr>backoff_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd>
 
@@ -2176,7 +1888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presentation_window_duration_python" style="color: inherit; text-decoration: inherit;">presentation_<wbr>window_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd>
 
@@ -2186,7 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_timestamp_python" style="color: inherit; text-decoration: inherit;">start_<wbr>timestamp</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd>
 
@@ -2196,7 +1908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timescale_python" style="color: inherit; text-decoration: inherit;">timescale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd>
 

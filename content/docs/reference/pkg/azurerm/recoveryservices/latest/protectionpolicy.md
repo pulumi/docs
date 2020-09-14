@@ -846,7 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemscount_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of items associated with this policy.{{% /md %}}</dd>
 
@@ -862,8 +862,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schedulepolicy_python">
-<a href="#schedulepolicy_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
+        <span id="schedule_policy_python">
+<a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[Long<wbr>Term<wbr>Schedule<wbr>Policy] | Dict[Simple<wbr>Schedule<wbr>Policy]</span>
@@ -1012,7 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemscount_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of items associated with this policy.{{% /md %}}</dd>
 
@@ -1028,8 +1028,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schedulepolicy_python">
-<a href="#schedulepolicy_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
+        <span id="schedule_policy_python">
+<a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response] | Dict[Simple<wbr>Schedule<wbr>Policy<wbr>Response]</span>
@@ -1148,7 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemscount_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of items associated with this policy.{{% /md %}}</dd>
 
@@ -1274,7 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemscount_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of items associated with this policy.{{% /md %}}</dd>
 
@@ -1824,7 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_python" style="color: inherit; text-decoration: inherit;">date</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1950,7 +1950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_python" style="color: inherit; text-decoration: inherit;">date</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2610,7 +2610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemscount_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of items associated with this policy.{{% /md %}}</dd>
 
@@ -2626,8 +2626,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schedulepolicy_python">
-<a href="#schedulepolicy_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
+        <span id="schedule_policy_python">
+<a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[Long<wbr>Term<wbr>Schedule<wbr>Policy] | Dict[Simple<wbr>Schedule<wbr>Policy]</span>
@@ -2776,7 +2776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemscount_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of items associated with this policy.{{% /md %}}</dd>
 
@@ -2792,8 +2792,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schedulepolicy_python">
-<a href="#schedulepolicy_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
+        <span id="schedule_policy_python">
+<a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response] | Dict[Simple<wbr>Schedule<wbr>Policy<wbr>Response]</span>
@@ -3407,7 +3407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of the duration types. Retention duration is determined by the combining the Count times and durationType. 
    For example, if Count = 3 and durationType = Weeks, then the retention duration is three weeks.{{% /md %}}</dd>
@@ -3537,7 +3537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of the duration types. Retention duration is determined by the combining the Count times and durationType. 
    For example, if Count = 3 and durationType = Weeks, then the retention duration is three weeks.{{% /md %}}</dd>
@@ -3926,7 +3926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduleweeklyfrequency_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Weekly<wbr>Frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of times per week the schedule runs.{{% /md %}}</dd>
 
@@ -4132,7 +4132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduleweeklyfrequency_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Weekly<wbr>Frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of times per week the schedule runs.{{% /md %}}</dd>
 

@@ -1201,7 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stag_python" style="color: inherit; text-decoration: inherit;">stag</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The identifier of the circuit traffic. Outer tag for QinQ encapsulation.{{% /md %}}</dd>
 
@@ -3200,7 +3200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_asn_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Azure ASN.{{% /md %}}</dd>
 
@@ -3270,7 +3270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The peer ASN.{{% /md %}}</dd>
 
@@ -3370,7 +3370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID.{{% /md %}}</dd>
 
@@ -3596,7 +3596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customer_asn_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The CustomerASN of the peering.{{% /md %}}</dd>
 
@@ -3606,7 +3606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#legacy_mode_python" style="color: inherit; text-decoration: inherit;">legacy_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The legacy mode of the peering.{{% /md %}}</dd>
 
@@ -3882,7 +3882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customer_asn_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The CustomerASN of the peering.{{% /md %}}</dd>
 
@@ -3892,7 +3892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#legacy_mode_python" style="color: inherit; text-decoration: inherit;">legacy_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The legacy mode of the peering.{{% /md %}}</dd>
 
@@ -4728,7 +4728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_asn_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Azure ASN.{{% /md %}}</dd>
 
@@ -4808,7 +4808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The peer ASN.{{% /md %}}</dd>
 
@@ -4908,7 +4908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID.{{% /md %}}</dd>
 
@@ -5054,7 +5054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bandwidth_in_mbps_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>in_<wbr>mbps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The BandwidthInMbps.{{% /md %}}</dd>
 
@@ -5220,7 +5220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bandwidth_in_mbps_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>in_<wbr>mbps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The BandwidthInMbps.{{% /md %}}</dd>
 
@@ -5748,7 +5748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytes_in_python" style="color: inherit; text-decoration: inherit;">primarybytes_<wbr>in</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Primary BytesIn of the peering.{{% /md %}}</dd>
 
@@ -5758,7 +5758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytes_out_python" style="color: inherit; text-decoration: inherit;">primarybytes_<wbr>out</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The primary BytesOut of the peering.{{% /md %}}</dd>
 
@@ -5768,7 +5768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytes_in_python" style="color: inherit; text-decoration: inherit;">secondarybytes_<wbr>in</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The secondary BytesIn of the peering.{{% /md %}}</dd>
 
@@ -5778,7 +5778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytes_out_python" style="color: inherit; text-decoration: inherit;">secondarybytes_<wbr>out</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The secondary BytesOut of the peering.{{% /md %}}</dd>
 
@@ -5954,7 +5954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytes_in_python" style="color: inherit; text-decoration: inherit;">primarybytes_<wbr>in</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Primary BytesIn of the peering.{{% /md %}}</dd>
 
@@ -5964,7 +5964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytes_out_python" style="color: inherit; text-decoration: inherit;">primarybytes_<wbr>out</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The primary BytesOut of the peering.{{% /md %}}</dd>
 
@@ -5974,7 +5974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytes_in_python" style="color: inherit; text-decoration: inherit;">secondarybytes_<wbr>in</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The secondary BytesIn of the peering.{{% /md %}}</dd>
 
@@ -5984,7 +5984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytes_out_python" style="color: inherit; text-decoration: inherit;">secondarybytes_<wbr>out</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The secondary BytesOut of the peering.{{% /md %}}</dd>
 

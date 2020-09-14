@@ -12,106 +12,6 @@ meta_desc: "Explore the Project resource of the datamigration/latest module, inc
 
 A project resource
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Projects_CreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var project = new AzureRM.DataMigration.Latest.Project("project", new AzureRM.DataMigration.Latest.ProjectArgs
-        {
-            GroupName = "DmsSdkRg",
-            Location = "southcentralus",
-            ProjectName = "DmsSdkProject",
-            ServiceName = "DmsSdkService",
-            SourcePlatform = "SQL",
-            TargetPlatform = "SQLDB",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	datamigration "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/datamigration/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datamigration.NewProject(ctx, "project", &datamigration.ProjectArgs{
-			GroupName:      pulumi.String("DmsSdkRg"),
-			Location:       pulumi.String("southcentralus"),
-			ProjectName:    pulumi.String("DmsSdkProject"),
-			ServiceName:    pulumi.String("DmsSdkService"),
-			SourcePlatform: pulumi.String("SQL"),
-			TargetPlatform: pulumi.String("SQLDB"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-project = azurerm.datamigration.latest.Project("project",
-    group_name="DmsSdkRg",
-    location="southcentralus",
-    project_name="DmsSdkProject",
-    service_name="DmsSdkService",
-    source_platform="SQL",
-    target_platform="SQLDB")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const project = new azurerm.datamigration.latest.Project("project", {
-    groupName: "DmsSdkRg",
-    location: "southcentralus",
-    projectName: "DmsSdkProject",
-    serviceName: "DmsSdkService",
-    sourcePlatform: "SQL",
-    targetPlatform: "SQLDB",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Project Resource {#create}
@@ -1640,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port for Server{{% /md %}}</dd>
 
@@ -1846,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port for Server{{% /md %}}</dd>
 
@@ -2082,7 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port for Server{{% /md %}}</dd>
 
@@ -2328,7 +2228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port for Server{{% /md %}}</dd>
 

@@ -12,102 +12,6 @@ meta_desc: "Explore the VirtualHubBgpConnection resource of the network/latest m
 
 Virtual Appliance Site resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### VirtualHubRouteTableV2Put
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var virtualHubBgpConnection = new AzureRM.Network.Latest.VirtualHubBgpConnection("virtualHubBgpConnection", new AzureRM.Network.Latest.VirtualHubBgpConnectionArgs
-        {
-            ConnectionName = "conn1",
-            PeerAsn = 20000,
-            PeerIp = "192.168.1.5",
-            ResourceGroupName = "rg1",
-            VirtualHubName = "hub1",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewVirtualHubBgpConnection(ctx, "virtualHubBgpConnection", &network.VirtualHubBgpConnectionArgs{
-			ConnectionName:    pulumi.String("conn1"),
-			PeerAsn:           pulumi.Int(20000),
-			PeerIp:            pulumi.String("192.168.1.5"),
-			ResourceGroupName: pulumi.String("rg1"),
-			VirtualHubName:    pulumi.String("hub1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-virtual_hub_bgp_connection = azurerm.network.latest.VirtualHubBgpConnection("virtualHubBgpConnection",
-    connection_name="conn1",
-    peer_asn=20000,
-    peer_ip="192.168.1.5",
-    resource_group_name="rg1",
-    virtual_hub_name="hub1")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const virtualHubBgpConnection = new azurerm.network.latest.VirtualHubBgpConnection("virtualHubBgpConnection", {
-    connectionName: "conn1",
-    peerAsn: 20000,
-    peerIp: "192.168.1.5",
-    resourceGroupName: "rg1",
-    virtualHubName: "hub1",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a VirtualHubBgpConnection Resource {#create}
@@ -119,7 +23,7 @@ const virtualHubBgpConnection = new azurerm.network.latest.VirtualHubBgpConnecti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/network/latest/#pulumi_azurerm.network/latest.VirtualHubBgpConnection">VirtualHubBgpConnection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">peer_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/network/latest/#pulumi_azurerm.network/latest.VirtualHubBgpConnection">VirtualHubBgpConnection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">peer_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -578,7 +482,7 @@ The VirtualHubBgpConnection resource accepts the following [input]({{< relref "/
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Peer ASN.{{% /md %}}</dd>
 

@@ -12,161 +12,6 @@ meta_desc: "Explore the DscConfiguration resource of the automation/latest modul
 
 Definition of the configuration type.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or Update Configuration
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var dscConfiguration = new AzureRM.Automation.Latest.DscConfiguration("dscConfiguration", new AzureRM.Automation.Latest.DscConfigurationArgs
-        {
-            AutomationAccountName = "myAutomationAccount18",
-            ConfigurationName = "SetupServer",
-            Description = "sample configuration",
-            Location = "East US 2",
-            Name = "SetupServer",
-            ResourceGroupName = "rg",
-            Source = new AzureRM.Automation.Latest.Inputs.ContentSourceArgs
-            {
-                Hash = new AzureRM.Automation.Latest.Inputs.ContentHashArgs
-                {
-                    Algorithm = "sha256",
-                    Value = "A9E5DB56BA21513F61E0B3868816FDC6D4DF5131F5617D7FF0D769674BD5072F",
-                },
-                Type = "embeddedContent",
-                Value = @"Configuration SetupServer {
-    Node localhost {
-                               WindowsFeature IIS {
-                               Name = ""Web-Server"";
-            Ensure = ""Present""
-        }
-    }
-}",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	automation "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/automation/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := automation.NewDscConfiguration(ctx, "dscConfiguration", &automation.DscConfigurationArgs{
-			AutomationAccountName: pulumi.String("myAutomationAccount18"),
-			ConfigurationName:     pulumi.String("SetupServer"),
-			Description:           pulumi.String("sample configuration"),
-			Location:              pulumi.String("East US 2"),
-			Name:                  pulumi.String("SetupServer"),
-			ResourceGroupName:     pulumi.String("rg"),
-			Source: &automation.ContentSourceArgs{
-				Hash: &automation.ContentHashArgs{
-					Algorithm: pulumi.String("sha256"),
-					Value:     pulumi.String("A9E5DB56BA21513F61E0B3868816FDC6D4DF5131F5617D7FF0D769674BD5072F"),
-				},
-				Type: pulumi.String("embeddedContent"),
-				Value: pulumi.String("Configuration SetupServer {\n    Node localhost {\n                               WindowsFeature IIS {\n                               Name = \"Web-Server\";\n            Ensure = \"Present\"\n        }\n    }\n}"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-dsc_configuration = azurerm.automation.latest.DscConfiguration("dscConfiguration",
-    automation_account_name="myAutomationAccount18",
-    configuration_name="SetupServer",
-    description="sample configuration",
-    location="East US 2",
-    name="SetupServer",
-    resource_group_name="rg",
-    source={
-        "hash": {
-            "algorithm": "sha256",
-            "value": "A9E5DB56BA21513F61E0B3868816FDC6D4DF5131F5617D7FF0D769674BD5072F",
-        },
-        "type": "embeddedContent",
-        "value": """Configuration SetupServer {
-    Node localhost {
-                               WindowsFeature IIS {
-                               Name = "Web-Server";
-            Ensure = "Present"
-        }
-    }
-}""",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const dscConfiguration = new azurerm.automation.latest.DscConfiguration("dscConfiguration", {
-    automationAccountName: "myAutomationAccount18",
-    configurationName: "SetupServer",
-    description: "sample configuration",
-    location: "East US 2",
-    name: "SetupServer",
-    resourceGroupName: "rg",
-    source: {
-        hash: {
-            algorithm: "sha256",
-            value: "A9E5DB56BA21513F61E0B3868816FDC6D4DF5131F5617D7FF0D769674BD5072F",
-        },
-        type: "embeddedContent",
-        value: `Configuration SetupServer {
-    Node localhost {
-                               WindowsFeature IIS {
-                               Name = "Web-Server";
-            Ensure = "Present"
-        }
-    }
-}`,
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a DscConfiguration Resource {#create}
@@ -1166,7 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#job_count_python" style="color: inherit; text-decoration: inherit;">job_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job count of the configuration.{{% /md %}}</dd>
 
@@ -1186,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_configuration_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>configuration_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets the number of compiled node configurations.{{% /md %}}</dd>
 
@@ -2075,7 +1920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Get or sets the position of the parameter.{{% /md %}}</dd>
 
@@ -2281,7 +2126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Get or sets the position of the parameter.{{% /md %}}</dd>
 

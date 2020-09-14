@@ -12,315 +12,6 @@ meta_desc: "Explore the Snapshot resource of the compute/latest module, includin
 
 Snapshot resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create a snapshot by importing an unmanaged blob from a different subscription.
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var snapshot = new AzureRM.Compute.Latest.Snapshot("snapshot", new AzureRM.Compute.Latest.SnapshotArgs
-        {
-            CreationData = new AzureRM.Compute.Latest.Inputs.CreationDataArgs
-            {
-                CreateOption = "Import",
-                SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
-                StorageAccountId = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
-            },
-            Location = "West US",
-            ResourceGroupName = "myResourceGroup",
-            SnapshotName = "mySnapshot1",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	compute "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := compute.NewSnapshot(ctx, "snapshot", &compute.SnapshotArgs{
-			CreationData: &compute.CreationDataArgs{
-				CreateOption:     pulumi.String("Import"),
-				SourceUri:        pulumi.String("https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd"),
-				StorageAccountId: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount"),
-			},
-			Location:          pulumi.String("West US"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			SnapshotName:      pulumi.String("mySnapshot1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-snapshot = azurerm.compute.latest.Snapshot("snapshot",
-    creation_data={
-        "createOption": "Import",
-        "sourceUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
-        "storageAccountId": "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
-    },
-    location="West US",
-    resource_group_name="myResourceGroup",
-    snapshot_name="mySnapshot1")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const snapshot = new azurerm.compute.latest.Snapshot("snapshot", {
-    creationData: {
-        createOption: "Import",
-        sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
-        storageAccountId: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
-    },
-    location: "West US",
-    resourceGroupName: "myResourceGroup",
-    snapshotName: "mySnapshot1",
-});
-
-```
-
-{{% /example %}}
-
-### Create a snapshot by importing an unmanaged blob from the same subscription.
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var snapshot = new AzureRM.Compute.Latest.Snapshot("snapshot", new AzureRM.Compute.Latest.SnapshotArgs
-        {
-            CreationData = new AzureRM.Compute.Latest.Inputs.CreationDataArgs
-            {
-                CreateOption = "Import",
-                SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
-            },
-            Location = "West US",
-            ResourceGroupName = "myResourceGroup",
-            SnapshotName = "mySnapshot1",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	compute "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := compute.NewSnapshot(ctx, "snapshot", &compute.SnapshotArgs{
-			CreationData: &compute.CreationDataArgs{
-				CreateOption: pulumi.String("Import"),
-				SourceUri:    pulumi.String("https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd"),
-			},
-			Location:          pulumi.String("West US"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			SnapshotName:      pulumi.String("mySnapshot1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-snapshot = azurerm.compute.latest.Snapshot("snapshot",
-    creation_data={
-        "createOption": "Import",
-        "sourceUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
-    },
-    location="West US",
-    resource_group_name="myResourceGroup",
-    snapshot_name="mySnapshot1")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const snapshot = new azurerm.compute.latest.Snapshot("snapshot", {
-    creationData: {
-        createOption: "Import",
-        sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
-    },
-    location: "West US",
-    resourceGroupName: "myResourceGroup",
-    snapshotName: "mySnapshot1",
-});
-
-```
-
-{{% /example %}}
-
-### Create a snapshot from an existing snapshot in the same or a different subscription.
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var snapshot = new AzureRM.Compute.Latest.Snapshot("snapshot", new AzureRM.Compute.Latest.SnapshotArgs
-        {
-            CreationData = new AzureRM.Compute.Latest.Inputs.CreationDataArgs
-            {
-                CreateOption = "Copy",
-                SourceResourceId = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1",
-            },
-            Location = "West US",
-            ResourceGroupName = "myResourceGroup",
-            SnapshotName = "mySnapshot2",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	compute "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := compute.NewSnapshot(ctx, "snapshot", &compute.SnapshotArgs{
-			CreationData: &compute.CreationDataArgs{
-				CreateOption:     pulumi.String("Copy"),
-				SourceResourceId: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1"),
-			},
-			Location:          pulumi.String("West US"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			SnapshotName:      pulumi.String("mySnapshot2"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-snapshot = azurerm.compute.latest.Snapshot("snapshot",
-    creation_data={
-        "createOption": "Copy",
-        "sourceResourceId": "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1",
-    },
-    location="West US",
-    resource_group_name="myResourceGroup",
-    snapshot_name="mySnapshot2")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const snapshot = new azurerm.compute.latest.Snapshot("snapshot", {
-    creationData: {
-        createOption: "Copy",
-        sourceResourceId: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1",
-    },
-    location: "West US",
-    resourceGroupName: "myResourceGroup",
-    snapshotName: "mySnapshot2",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Snapshot Resource {#create}
@@ -332,7 +23,7 @@ const snapshot = new azurerm.compute.latest.Snapshot("snapshot", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/compute/latest/#pulumi_azurerm.compute/latest.Snapshot">Snapshot</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_data</span><span class="p">:</span> <span class="nx">Optional[Dict[CreationData]]</span> = None<span class="p">, </span><span class="nx">disk_access_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[Dict[Encryption]]</span> = None<span class="p">, </span><span class="nx">encryption_settings_collection</span><span class="p">:</span> <span class="nx">Optional[Dict[EncryptionSettingsCollection]]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incremental</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[SnapshotSku]]</span> = None<span class="p">, </span><span class="nx">snapshot_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/compute/latest/#pulumi_azurerm.compute/latest.Snapshot">Snapshot</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_data</span><span class="p">:</span> <span class="nx">Optional[Dict[CreationData]]</span> = None<span class="p">, </span><span class="nx">disk_access_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disk_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[Dict[Encryption]]</span> = None<span class="p">, </span><span class="nx">encryption_settings_collection</span><span class="p">:</span> <span class="nx">Optional[Dict[EncryptionSettingsCollection]]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incremental</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[SnapshotSku]]</span> = None<span class="p">, </span><span class="nx">snapshot_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1031,7 +722,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.{{% /md %}}</dd>
 
@@ -1410,7 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_bytes_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd>
 
@@ -1815,7 +1506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logical_sector_size_python" style="color: inherit; text-decoration: inherit;">logical_<wbr>sector_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.{{% /md %}}</dd>
 
@@ -1855,7 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upload_size_bytes_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 
@@ -2221,7 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logical_sector_size_python" style="color: inherit; text-decoration: inherit;">logical_<wbr>sector_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.{{% /md %}}</dd>
 
@@ -2261,7 +1952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upload_size_bytes_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 
@@ -3223,7 +2914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.{{% /md %}}</dd>
 
@@ -3349,7 +3040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.{{% /md %}}</dd>
 

@@ -701,7 +701,7 @@ The following output properties are available:
 <a href="#failedlocationcount_python" style="color: inherit; text-decoration: inherit;">failed<wbr>Location<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd>
 
@@ -1627,16 +1627,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourceprovidername_python">
-<a href="#resourceprovidername_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Provider<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span> 
@@ -1644,6 +1634,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}the resource group name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_provider_name_python">
+<a href="#resource_provider_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>provider_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

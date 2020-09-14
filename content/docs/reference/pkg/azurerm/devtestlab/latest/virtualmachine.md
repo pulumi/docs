@@ -12,176 +12,6 @@ meta_desc: "Explore the VirtualMachine resource of the devtestlab/latest module,
 
 A virtual machine.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### VirtualMachines_CreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var virtualMachine = new AzureRM.DevTestLab.Latest.VirtualMachine("virtualMachine", new AzureRM.DevTestLab.Latest.VirtualMachineArgs
-        {
-            AllowClaim = true,
-            DisallowPublicIpAddress = true,
-            GalleryImageReference = new AzureRM.DevTestLab.Latest.Inputs.GalleryImageReferenceArgs
-            {
-                Offer = "UbuntuServer",
-                OsType = "Linux",
-                Publisher = "Canonical",
-                Sku = "16.04-LTS",
-                Version = "Latest",
-            },
-            LabName = "{devtestlab-name}",
-            LabSubnetName = "{virtualnetwork-name}Subnet",
-            LabVirtualNetworkId = "/subscriptions/{subscription-id}/resourcegroups/myResourceGroup/providers/microsoft.devtestlab/labs/{devtestlab-name}/virtualnetworks/{virtualnetwork-name}",
-            Location = "{azure-location}",
-            Name = "{virtualmachine-name}",
-            OsType = "Linux",
-            Password = "{user-password}",
-            ResourceGroupName = "myResourceGroup",
-            Size = "Standard_A2_v2",
-            StorageType = "Standard",
-            Tags = 
-            {
-                { "MyTag", "MyValue" },
-            },
-            UserName = "{user-name}",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	devtestlab "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/devtestlab/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := devtestlab.NewVirtualMachine(ctx, "virtualMachine", &devtestlab.VirtualMachineArgs{
-			AllowClaim:              pulumi.Bool(true),
-			DisallowPublicIpAddress: pulumi.Bool(true),
-			GalleryImageReference: &devtestlab.GalleryImageReferenceArgs{
-				Offer:     pulumi.String("UbuntuServer"),
-				OsType:    pulumi.String("Linux"),
-				Publisher: pulumi.String("Canonical"),
-				Sku:       pulumi.String("16.04-LTS"),
-				Version:   pulumi.String("Latest"),
-			},
-			LabName:             pulumi.String("{devtestlab-name}"),
-			LabSubnetName:       pulumi.String("{virtualnetwork-name}Subnet"),
-			LabVirtualNetworkId: pulumi.String("/subscriptions/{subscription-id}/resourcegroups/myResourceGroup/providers/microsoft.devtestlab/labs/{devtestlab-name}/virtualnetworks/{virtualnetwork-name}"),
-			Location:            pulumi.String("{azure-location}"),
-			Name:                pulumi.String("{virtualmachine-name}"),
-			OsType:              pulumi.String("Linux"),
-			Password:            pulumi.String("{user-password}"),
-			ResourceGroupName:   pulumi.String("myResourceGroup"),
-			Size:                pulumi.String("Standard_A2_v2"),
-			StorageType:         pulumi.String("Standard"),
-			Tags: pulumi.StringMap{
-				"MyTag": pulumi.String("MyValue"),
-			},
-			UserName: pulumi.String("{user-name}"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-virtual_machine = azurerm.devtestlab.latest.VirtualMachine("virtualMachine",
-    allow_claim=True,
-    disallow_public_ip_address=True,
-    gallery_image_reference={
-        "offer": "UbuntuServer",
-        "osType": "Linux",
-        "publisher": "Canonical",
-        "sku": "16.04-LTS",
-        "version": "Latest",
-    },
-    lab_name="{devtestlab-name}",
-    lab_subnet_name="{virtualnetwork-name}Subnet",
-    lab_virtual_network_id="/subscriptions/{subscription-id}/resourcegroups/myResourceGroup/providers/microsoft.devtestlab/labs/{devtestlab-name}/virtualnetworks/{virtualnetwork-name}",
-    location="{azure-location}",
-    name="{virtualmachine-name}",
-    os_type="Linux",
-    password="{user-password}",
-    resource_group_name="myResourceGroup",
-    size="Standard_A2_v2",
-    storage_type="Standard",
-    tags={
-        "MyTag": "MyValue",
-    },
-    user_name="{user-name}")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const virtualMachine = new azurerm.devtestlab.latest.VirtualMachine("virtualMachine", {
-    allowClaim: true,
-    disallowPublicIpAddress: true,
-    galleryImageReference: {
-        offer: "UbuntuServer",
-        osType: "Linux",
-        publisher: "Canonical",
-        sku: "16.04-LTS",
-        version: "Latest",
-    },
-    labName: "{devtestlab-name}",
-    labSubnetName: "{virtualnetwork-name}Subnet",
-    labVirtualNetworkId: "/subscriptions/{subscription-id}/resourcegroups/myResourceGroup/providers/microsoft.devtestlab/labs/{devtestlab-name}/virtualnetworks/{virtualnetwork-name}",
-    location: "{azure-location}",
-    name: "{virtualmachine-name}",
-    osType: "Linux",
-    password: "{user-password}",
-    resourceGroupName: "myResourceGroup",
-    size: "Standard_A2_v2",
-    storageType: "Standard",
-    tags: {
-        MyTag: "MyValue",
-    },
-    userName: "{user-name}",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a VirtualMachine Resource {#create}
@@ -2582,7 +2412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifacts_applied_python" style="color: inherit; text-decoration: inherit;">artifacts_<wbr>applied</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were successfully applied.{{% /md %}}</dd>
 
@@ -2602,7 +2432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_artifacts_python" style="color: inherit; text-decoration: inherit;">total_<wbr>artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were tentatively applied.{{% /md %}}</dd>
 
@@ -2748,7 +2578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifacts_applied_python" style="color: inherit; text-decoration: inherit;">artifacts_<wbr>applied</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were successfully applied.{{% /md %}}</dd>
 
@@ -2768,7 +2598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_artifacts_python" style="color: inherit; text-decoration: inherit;">total_<wbr>artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were tentatively applied.{{% /md %}}</dd>
 
@@ -3828,7 +3658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gi_b_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gi_<wbr>b</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the disk to be attached in GibiBytes.{{% /md %}}</dd>
 
@@ -3994,7 +3824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gi_b_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gi_<wbr>b</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the disk to be attached in GibiBytes.{{% /md %}}</dd>
 
@@ -4180,7 +4010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gi_b_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gi_<wbr>b</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets data disk size in GiB.{{% /md %}}</dd>
 
@@ -5784,7 +5614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minute_python" style="color: inherit; text-decoration: inherit;">minute</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minutes of the hour the schedule will run.{{% /md %}}</dd>
 
@@ -5870,7 +5700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minute_python" style="color: inherit; text-decoration: inherit;">minute</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minutes of the hour the schedule will run.{{% /md %}}</dd>
 
@@ -6016,7 +5846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backend_port_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port to which the external traffic will be redirected.{{% /md %}}</dd>
 
@@ -6026,7 +5856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frontend_port_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.{{% /md %}}</dd>
 
@@ -6182,7 +6012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backend_port_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port to which the external traffic will be redirected.{{% /md %}}</dd>
 
@@ -6192,7 +6022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frontend_port_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.{{% /md %}}</dd>
 
@@ -7250,7 +7080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_in_minutes_python" style="color: inherit; text-decoration: inherit;">time_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time in minutes before event at which notification will be sent.{{% /md %}}</dd>
 
@@ -7496,7 +7326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_in_minutes_python" style="color: inherit; text-decoration: inherit;">time_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time in minutes before event at which notification will be sent.{{% /md %}}</dd>
 

@@ -12,161 +12,6 @@ meta_desc: "Explore the Redis resource of the cache/latest module, including exa
 
 A single Redis item in List or Get Operation.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### RedisCacheCreate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var redis = new AzureRM.Cache.Latest.Redis("redis", new AzureRM.Cache.Latest.RedisArgs
-        {
-            EnableNonSslPort = true,
-            Location = "West US",
-            MinimumTlsVersion = "1.2",
-            Name = "cache1",
-            RedisConfiguration = 
-            {
-                { "maxmemory-policy", "allkeys-lru" },
-            },
-            ReplicasPerMaster = 2,
-            ResourceGroupName = "rg1",
-            ShardCount = 2,
-            Sku = new AzureRM.Cache.Latest.Inputs.SkuArgs
-            {
-                Capacity = 1,
-                Family = "P",
-                Name = "Premium",
-            },
-            StaticIP = "192.168.0.5",
-            SubnetId = "/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1",
-            Zones = 
-            {
-                "1",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	cache "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cache/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cache.NewRedis(ctx, "redis", &cache.RedisArgs{
-			EnableNonSslPort:  pulumi.Bool(true),
-			Location:          pulumi.String("West US"),
-			MinimumTlsVersion: pulumi.String("1.2"),
-			Name:              pulumi.String("cache1"),
-			RedisConfiguration: pulumi.StringMap{
-				"maxmemory-policy": pulumi.String("allkeys-lru"),
-			},
-			ReplicasPerMaster: pulumi.Int(2),
-			ResourceGroupName: pulumi.String("rg1"),
-			ShardCount:        pulumi.Int(2),
-			Sku: &cache.SkuArgs{
-				Capacity: pulumi.Int(1),
-				Family:   pulumi.String("P"),
-				Name:     pulumi.String("Premium"),
-			},
-			StaticIP: pulumi.String("192.168.0.5"),
-			SubnetId: pulumi.String("/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1"),
-			Zones: pulumi.StringArray{
-				pulumi.String("1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-redis = azurerm.cache.latest.Redis("redis",
-    enable_non_ssl_port=True,
-    location="West US",
-    minimum_tls_version="1.2",
-    name="cache1",
-    redis_configuration={
-        "maxmemory-policy": "allkeys-lru",
-    },
-    replicas_per_master=2,
-    resource_group_name="rg1",
-    shard_count=2,
-    sku={
-        "capacity": 1,
-        "family": "P",
-        "name": "Premium",
-    },
-    static_ip="192.168.0.5",
-    subnet_id="/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1",
-    zones=["1"])
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const redis = new azurerm.cache.latest.Redis("redis", {
-    enableNonSslPort: true,
-    location: "West US",
-    minimumTlsVersion: "1.2",
-    name: "cache1",
-    redisConfiguration: {
-        "maxmemory-policy": "allkeys-lru",
-    },
-    replicasPerMaster: 2,
-    resourceGroupName: "rg1",
-    shardCount: 2,
-    sku: {
-        capacity: 1,
-        family: "P",
-        name: "Premium",
-    },
-    staticIP: "192.168.0.5",
-    subnetId: "/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1",
-    zones: ["1"],
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Redis Resource {#create}
@@ -178,7 +23,7 @@ const redis = new azurerm.cache.latest.Redis("redis", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/cache/latest/#pulumi_azurerm.cache/latest.Redis">Redis</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enable_non_ssl_port</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redis_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">replicas_per_master</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shard_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">static_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/cache/latest/#pulumi_azurerm.cache/latest.Redis">Redis</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enable_non_ssl_port</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redis_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">replicas_per_master</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shard_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">static_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -867,7 +712,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#replicas_per_master_python" style="color: inherit; text-decoration: inherit;">replicas_<wbr>per_<wbr>master</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of replicas to be created per master.{{% /md %}}</dd>
 
@@ -877,7 +722,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#shard_count_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of shards to be created on a Premium Cluster Cache.{{% /md %}}</dd>
 
@@ -1326,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Redis non-SSL port.{{% /md %}}</dd>
 
@@ -1356,7 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_port_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Redis SSL port.{{% /md %}}</dd>
 
@@ -1717,7 +1562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nonsslport_python" style="color: inherit; text-decoration: inherit;">non<wbr>Ssl<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If enableNonSslPort is true, provides Redis instance Non-SSL port.{{% /md %}}</dd>
 
@@ -1727,7 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shardid_python" style="color: inherit; text-decoration: inherit;">shard<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If clustering is enabled, the Shard ID of Redis Instance{{% /md %}}</dd>
 
@@ -1737,7 +1582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_port_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Redis instance SSL port.{{% /md %}}</dd>
 
@@ -1979,7 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4, 5).{{% /md %}}</dd>
 
@@ -2145,7 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4, 5).{{% /md %}}</dd>
 

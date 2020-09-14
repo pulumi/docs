@@ -12,98 +12,6 @@ meta_desc: "Explore the DisasterRecoveryConfig resource of the eventhub/latest m
 
 Single item in List or Get Alias(Disaster Recovery configuration) operation
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### EHAliasCreate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var disasterRecoveryConfig = new AzureRM.EventHub.Latest.DisasterRecoveryConfig("disasterRecoveryConfig", new AzureRM.EventHub.Latest.DisasterRecoveryConfigArgs
-        {
-            Alias = "sdk-DisasterRecovery-3814",
-            NamespaceName = "sdk-Namespace-8859",
-            PartnerNamespace = "sdk-Namespace-37",
-            ResourceGroupName = "exampleResourceGroup",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	eventhub "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventhub/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := eventhub.NewDisasterRecoveryConfig(ctx, "disasterRecoveryConfig", &eventhub.DisasterRecoveryConfigArgs{
-			Alias:             pulumi.String("sdk-DisasterRecovery-3814"),
-			NamespaceName:     pulumi.String("sdk-Namespace-8859"),
-			PartnerNamespace:  pulumi.String("sdk-Namespace-37"),
-			ResourceGroupName: pulumi.String("exampleResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-disaster_recovery_config = azurerm.eventhub.latest.DisasterRecoveryConfig("disasterRecoveryConfig",
-    alias="sdk-DisasterRecovery-3814",
-    namespace_name="sdk-Namespace-8859",
-    partner_namespace="sdk-Namespace-37",
-    resource_group_name="exampleResourceGroup")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const disasterRecoveryConfig = new azurerm.eventhub.latest.DisasterRecoveryConfig("disasterRecoveryConfig", {
-    alias: "sdk-DisasterRecovery-3814",
-    namespaceName: "sdk-Namespace-8859",
-    partnerNamespace: "sdk-Namespace-37",
-    resourceGroupName: "exampleResourceGroup",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a DisasterRecoveryConfig Resource {#create}
@@ -753,7 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pending_replication_operations_count_python" style="color: inherit; text-decoration: inherit;">pending_<wbr>replication_<wbr>operations_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of entities pending to be replicated.{{% /md %}}</dd>
 

@@ -12,126 +12,6 @@ meta_desc: "Explore the FileShare resource of the storsimple/latest module, incl
 
 The File Share.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### FileSharesCreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var fileShare = new AzureRM.StorSimple.Latest.FileShare("fileShare", new AzureRM.StorSimple.Latest.FileShareArgs
-        {
-            AdminUser = "fareast\\idcdlslb",
-            DataPolicy = "Tiered",
-            Description = "Demo FileShare for SDK Test Tiered",
-            DeviceName = "HSDK-4XY4FI2IVG",
-            FileServerName = "HSDK-4XY4FI2IVG",
-            ManagerName = "hAzureSDKOperations",
-            MonitoringStatus = "Enabled",
-            ProvisionedCapacityInBytes = 536870912000,
-            ResourceGroupName = "ResourceGroupForSDKTest",
-            ShareName = "Auto-TestFileShare1",
-            ShareStatus = "Online",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	storsimple "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storsimple/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storsimple.NewFileShare(ctx, "fileShare", &storsimple.FileShareArgs{
-			AdminUser:                  pulumi.String("fareast\\idcdlslb"),
-			DataPolicy:                 pulumi.String("Tiered"),
-			Description:                pulumi.String("Demo FileShare for SDK Test Tiered"),
-			DeviceName:                 pulumi.String("HSDK-4XY4FI2IVG"),
-			FileServerName:             pulumi.String("HSDK-4XY4FI2IVG"),
-			ManagerName:                pulumi.String("hAzureSDKOperations"),
-			MonitoringStatus:           pulumi.String("Enabled"),
-			ProvisionedCapacityInBytes: pulumi.Int(536870912000),
-			ResourceGroupName:          pulumi.String("ResourceGroupForSDKTest"),
-			ShareName:                  pulumi.String("Auto-TestFileShare1"),
-			ShareStatus:                pulumi.String("Online"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-file_share = azurerm.storsimple.latest.FileShare("fileShare",
-    admin_user="fareast\\idcdlslb",
-    data_policy="Tiered",
-    description="Demo FileShare for SDK Test Tiered",
-    device_name="HSDK-4XY4FI2IVG",
-    file_server_name="HSDK-4XY4FI2IVG",
-    manager_name="hAzureSDKOperations",
-    monitoring_status="Enabled",
-    provisioned_capacity_in_bytes=536870912000,
-    resource_group_name="ResourceGroupForSDKTest",
-    share_name="Auto-TestFileShare1",
-    share_status="Online")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const fileShare = new azurerm.storsimple.latest.FileShare("fileShare", {
-    adminUser: "fareast\\idcdlslb",
-    dataPolicy: "Tiered",
-    description: "Demo FileShare for SDK Test Tiered",
-    deviceName: "HSDK-4XY4FI2IVG",
-    fileServerName: "HSDK-4XY4FI2IVG",
-    managerName: "hAzureSDKOperations",
-    monitoringStatus: "Enabled",
-    provisionedCapacityInBytes: 536870912000,
-    resourceGroupName: "ResourceGroupForSDKTest",
-    shareName: "Auto-TestFileShare1",
-    shareStatus: "Online",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a FileShare Resource {#create}
@@ -143,7 +23,7 @@ const fileShare = new azurerm.storsimple.latest.FileShare("fileShare", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/storsimple/latest/#pulumi_azurerm.storsimple/latest.FileShare">FileShare</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioned_capacity_in_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/storsimple/latest/#pulumi_azurerm.storsimple/latest.FileShare">FileShare</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioned_capacity_in_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -732,7 +612,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#provisioned_capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>capacity_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The total provisioned capacity in Bytes{{% /md %}}</dd>
 
@@ -981,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_used_capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">local_<wbr>used_<wbr>capacity_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The local used capacity in Bytes.{{% /md %}}</dd>
 
@@ -1011,7 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#used_capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>capacity_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The used capacity in Bytes.{{% /md %}}</dd>
 

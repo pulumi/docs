@@ -12,136 +12,6 @@ meta_desc: "Explore the Relationship resource of the customerinsights/latest mod
 
 The relationship resource format.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Relationships_CreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var relationship = new AzureRM.CustomerInsights.Latest.Relationship("relationship", new AzureRM.CustomerInsights.Latest.RelationshipArgs
-        {
-            Cardinality = "OneToOne",
-            Description = 
-            {
-                { "en-us", "Relationship Description" },
-            },
-            DisplayName = 
-            {
-                { "en-us", "Relationship DisplayName" },
-            },
-            Fields = {},
-            HubName = "sdkTestHub",
-            ProfileType = "testProfile2326994",
-            RelatedProfileType = "testProfile2326994",
-            RelationshipName = "SomeRelationship",
-            ResourceGroupName = "TestHubRG",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	customerinsights "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/customerinsights/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := customerinsights.NewRelationship(ctx, "relationship", &customerinsights.RelationshipArgs{
-			Cardinality: pulumi.String("OneToOne"),
-			Description: pulumi.StringMap{
-				"en-us": pulumi.String("Relationship Description"),
-			},
-			DisplayName: pulumi.StringMap{
-				"en-us": pulumi.String("Relationship DisplayName"),
-			},
-			Fields:             customerinsights.PropertyDefinitionArray{},
-			HubName:            pulumi.String("sdkTestHub"),
-			ProfileType:        pulumi.String("testProfile2326994"),
-			RelatedProfileType: pulumi.String("testProfile2326994"),
-			RelationshipName:   pulumi.String("SomeRelationship"),
-			ResourceGroupName:  pulumi.String("TestHubRG"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-relationship = azurerm.customerinsights.latest.Relationship("relationship",
-    cardinality="OneToOne",
-    description={
-        "en-us": "Relationship Description",
-    },
-    display_name={
-        "en-us": "Relationship DisplayName",
-    },
-    fields=[],
-    hub_name="sdkTestHub",
-    profile_type="testProfile2326994",
-    related_profile_type="testProfile2326994",
-    relationship_name="SomeRelationship",
-    resource_group_name="TestHubRG")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const relationship = new azurerm.customerinsights.latest.Relationship("relationship", {
-    cardinality: "OneToOne",
-    description: {
-        "en-us": "Relationship Description",
-    },
-    displayName: {
-        "en-us": "Relationship DisplayName",
-    },
-    fields: [],
-    hubName: "sdkTestHub",
-    profileType: "testProfile2326994",
-    relatedProfileType: "testProfile2326994",
-    relationshipName: "SomeRelationship",
-    resourceGroupName: "TestHubRG",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Relationship Resource {#create}
@@ -1326,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The data source ID.{{% /md %}}</dd>
 
@@ -1356,7 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#precedence_python" style="color: inherit; text-decoration: inherit;">precedence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}the precedence value.{{% /md %}}</dd>
 
@@ -1482,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd>
 
@@ -1608,7 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd>
 
@@ -2234,7 +2104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxlength_python" style="color: inherit; text-decoration: inherit;">max<wbr>Length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd>
 
@@ -2920,7 +2790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxlength_python" style="color: inherit; text-decoration: inherit;">max<wbr>Length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd>
 

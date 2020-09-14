@@ -12,166 +12,6 @@ meta_desc: "Explore the GalleryApplicationVersion resource of the compute/latest
 
 Specifies information about the gallery Application Version that you want to create or update.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update a simple gallery Application Version.
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var galleryApplicationVersion = new AzureRM.Compute.Latest.GalleryApplicationVersion("galleryApplicationVersion", new AzureRM.Compute.Latest.GalleryApplicationVersionArgs
-        {
-            GalleryApplicationName = "myGalleryApplicationName",
-            GalleryApplicationVersionName = "1.0.0",
-            GalleryName = "myGalleryName",
-            Location = "West US",
-            PublishingProfile = new AzureRM.Compute.Latest.Inputs.GalleryApplicationVersionPublishingProfileArgs
-            {
-                EndOfLifeDate = "2019-07-01T07:00:00Z",
-                ReplicaCount = 1,
-                Source = new AzureRM.Compute.Latest.Inputs.UserArtifactSourceArgs
-                {
-                    FileName = "package.zip",
-                    MediaLink = "https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}",
-                },
-                StorageAccountType = "Standard_LRS",
-                TargetRegions = 
-                {
-                    new AzureRM.Compute.Latest.Inputs.TargetRegionArgs
-                    {
-                        Name = "West US",
-                        RegionalReplicaCount = 1,
-                        StorageAccountType = "Standard_LRS",
-                    },
-                },
-            },
-            ResourceGroupName = "myResourceGroup",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	compute "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := compute.NewGalleryApplicationVersion(ctx, "galleryApplicationVersion", &compute.GalleryApplicationVersionArgs{
-			GalleryApplicationName:        pulumi.String("myGalleryApplicationName"),
-			GalleryApplicationVersionName: pulumi.String("1.0.0"),
-			GalleryName:                   pulumi.String("myGalleryName"),
-			Location:                      pulumi.String("West US"),
-			PublishingProfile: &compute.GalleryApplicationVersionPublishingProfileArgs{
-				EndOfLifeDate: pulumi.String("2019-07-01T07:00:00Z"),
-				ReplicaCount:  pulumi.Int(1),
-				Source: &compute.UserArtifactSourceArgs{
-					FileName:  pulumi.String("package.zip"),
-					MediaLink: pulumi.String("https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}"),
-				},
-				StorageAccountType: pulumi.String("Standard_LRS"),
-				TargetRegions: compute.TargetRegionArray{
-					&compute.TargetRegionArgs{
-						Name:                 pulumi.String("West US"),
-						RegionalReplicaCount: pulumi.Int(1),
-						StorageAccountType:   pulumi.String("Standard_LRS"),
-					},
-				},
-			},
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-gallery_application_version = azurerm.compute.latest.GalleryApplicationVersion("galleryApplicationVersion",
-    gallery_application_name="myGalleryApplicationName",
-    gallery_application_version_name="1.0.0",
-    gallery_name="myGalleryName",
-    location="West US",
-    publishing_profile={
-        "endOfLifeDate": "2019-07-01T07:00:00Z",
-        "replicaCount": 1,
-        "source": {
-            "fileName": "package.zip",
-            "mediaLink": "https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}",
-        },
-        "storageAccountType": "Standard_LRS",
-        "targetRegions": [{
-            "name": "West US",
-            "regionalReplicaCount": 1,
-            "storageAccountType": "Standard_LRS",
-        }],
-    },
-    resource_group_name="myResourceGroup")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const galleryApplicationVersion = new azurerm.compute.latest.GalleryApplicationVersion("galleryApplicationVersion", {
-    galleryApplicationName: "myGalleryApplicationName",
-    galleryApplicationVersionName: "1.0.0",
-    galleryName: "myGalleryName",
-    location: "West US",
-    publishingProfile: {
-        endOfLifeDate: "2019-07-01T07:00:00Z",
-        replicaCount: 1,
-        source: {
-            fileName: "package.zip",
-            mediaLink: "https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}",
-        },
-        storageAccountType: "Standard_LRS",
-        targetRegions: [{
-            name: "West US",
-            regionalReplicaCount: 1,
-            storageAccountType: "Standard_LRS",
-        }],
-    },
-    resourceGroupName: "myResourceGroup",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a GalleryApplicationVersion Resource {#create}
@@ -1016,7 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
 
@@ -1142,7 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
 
@@ -1750,7 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replica_count_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd>
 
@@ -2156,7 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replica_count_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd>
 
@@ -2534,7 +2374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#progress_python" style="color: inherit; text-decoration: inherit;">progress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}It indicates progress of the replication job.{{% /md %}}</dd>
 
@@ -2876,7 +2716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regionalreplicacount_python" style="color: inherit; text-decoration: inherit;">regional<wbr>Replica<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd>
 
@@ -3082,7 +2922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regionalreplicacount_python" style="color: inherit; text-decoration: inherit;">regional<wbr>Replica<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd>
 

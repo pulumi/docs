@@ -12,127 +12,6 @@ meta_desc: "Explore the LiveOutput resource of the media/latest module, includin
 
 The Live Output.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create a LiveOutput
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var liveOutput = new AzureRM.Media.Latest.LiveOutput("liveOutput", new AzureRM.Media.Latest.LiveOutputArgs
-        {
-            AccountName = "slitestmedia10",
-            ArchiveWindowLength = "PT5M",
-            AssetName = "6f3264f5-a189-48b4-a29a-a40f22575212",
-            Description = "test live output 1",
-            Hls = new AzureRM.Media.Latest.Inputs.HlsArgs
-            {
-                FragmentsPerTsSegment = 5,
-            },
-            LiveEventName = "myLiveEvent1",
-            LiveOutputName = "myLiveOutput1",
-            ManifestName = "testmanifest",
-            ResourceGroupName = "mediaresources",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	media "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := media.NewLiveOutput(ctx, "liveOutput", &media.LiveOutputArgs{
-			AccountName:         pulumi.String("slitestmedia10"),
-			ArchiveWindowLength: pulumi.String("PT5M"),
-			AssetName:           pulumi.String("6f3264f5-a189-48b4-a29a-a40f22575212"),
-			Description:         pulumi.String("test live output 1"),
-			Hls: &media.HlsArgs{
-				FragmentsPerTsSegment: pulumi.Int(5),
-			},
-			LiveEventName:     pulumi.String("myLiveEvent1"),
-			LiveOutputName:    pulumi.String("myLiveOutput1"),
-			ManifestName:      pulumi.String("testmanifest"),
-			ResourceGroupName: pulumi.String("mediaresources"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-live_output = azurerm.media.latest.LiveOutput("liveOutput",
-    account_name="slitestmedia10",
-    archive_window_length="PT5M",
-    asset_name="6f3264f5-a189-48b4-a29a-a40f22575212",
-    description="test live output 1",
-    hls={
-        "fragmentsPerTsSegment": 5,
-    },
-    live_event_name="myLiveEvent1",
-    live_output_name="myLiveOutput1",
-    manifest_name="testmanifest",
-    resource_group_name="mediaresources")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const liveOutput = new azurerm.media.latest.LiveOutput("liveOutput", {
-    accountName: "slitestmedia10",
-    archiveWindowLength: "PT5M",
-    assetName: "6f3264f5-a189-48b4-a29a-a40f22575212",
-    description: "test live output 1",
-    hls: {
-        fragmentsPerTsSegment: 5,
-    },
-    liveEventName: "myLiveEvent1",
-    liveOutputName: "myLiveOutput1",
-    manifestName: "testmanifest",
-    resourceGroupName: "mediaresources",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a LiveOutput Resource {#create}
@@ -144,7 +23,7 @@ const liveOutput = new azurerm.media.latest.LiveOutput("liveOutput", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/media/latest/#pulumi_azurerm.media/latest.LiveOutput">LiveOutput</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">archive_window_length</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">asset_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hls</span><span class="p">:</span> <span class="nx">Optional[Dict[Hls]]</span> = None<span class="p">, </span><span class="nx">live_event_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">live_output_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manifest_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_snap_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/media/latest/#pulumi_azurerm.media/latest.LiveOutput">LiveOutput</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">archive_window_length</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">asset_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hls</span><span class="p">:</span> <span class="nx">Optional[Dict[Hls]]</span> = None<span class="p">, </span><span class="nx">live_event_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">live_output_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manifest_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_snap_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -733,7 +612,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#output_snap_time_python" style="color: inherit; text-decoration: inherit;">output_<wbr>snap_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The output snapshot time.{{% /md %}}</dd>
 
@@ -1147,7 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fragments_per_ts_segment_python" style="color: inherit; text-decoration: inherit;">fragments_<wbr>per_<wbr>ts_<wbr>segment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of fragments per HTTP Live Streaming (HLS) segment.{{% /md %}}</dd>
 
@@ -1233,7 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fragments_per_ts_segment_python" style="color: inherit; text-decoration: inherit;">fragments_<wbr>per_<wbr>ts_<wbr>segment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of fragments per HTTP Live Streaming (HLS) segment.{{% /md %}}</dd>
 

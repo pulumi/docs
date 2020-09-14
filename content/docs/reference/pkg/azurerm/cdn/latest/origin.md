@@ -12,138 +12,6 @@ meta_desc: "Explore the Origin resource of the cdn/latest module, including exam
 
 CDN origin is the source of the content being delivered via CDN. When the edge nodes represented by an endpoint do not have the requested content cached, they attempt to fetch it from one or more of the configured origins.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Origins_Create
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var origin = new AzureRM.Cdn.Latest.Origin("origin", new AzureRM.Cdn.Latest.OriginArgs
-        {
-            Enabled = true,
-            EndpointName = "endpoint1",
-            HostName = "www.someDomain.net",
-            HttpPort = 80,
-            HttpsPort = 443,
-            OriginHostHeader = "www.someDomain.net",
-            OriginName = "www-someDomain-net",
-            Priority = 1,
-            PrivateLinkApprovalMessage = "Please approve the connection request for this Private Link",
-            PrivateLinkLocation = "eastus",
-            PrivateLinkResourceId = "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1",
-            ProfileName = "profile1",
-            ResourceGroupName = "RG",
-            Weight = 50,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	cdn "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cdn.NewOrigin(ctx, "origin", &cdn.OriginArgs{
-			Enabled:                    pulumi.Bool(true),
-			EndpointName:               pulumi.String("endpoint1"),
-			HostName:                   pulumi.String("www.someDomain.net"),
-			HttpPort:                   pulumi.Int(80),
-			HttpsPort:                  pulumi.Int(443),
-			OriginHostHeader:           pulumi.String("www.someDomain.net"),
-			OriginName:                 pulumi.String("www-someDomain-net"),
-			Priority:                   pulumi.Int(1),
-			PrivateLinkApprovalMessage: pulumi.String("Please approve the connection request for this Private Link"),
-			PrivateLinkLocation:        pulumi.String("eastus"),
-			PrivateLinkResourceId:      pulumi.String("/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1"),
-			ProfileName:                pulumi.String("profile1"),
-			ResourceGroupName:          pulumi.String("RG"),
-			Weight:                     pulumi.Int(50),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-origin = azurerm.cdn.latest.Origin("origin",
-    enabled=True,
-    endpoint_name="endpoint1",
-    host_name="www.someDomain.net",
-    http_port=80,
-    https_port=443,
-    origin_host_header="www.someDomain.net",
-    origin_name="www-someDomain-net",
-    priority=1,
-    private_link_approval_message="Please approve the connection request for this Private Link",
-    private_link_location="eastus",
-    private_link_resource_id="/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1",
-    profile_name="profile1",
-    resource_group_name="RG",
-    weight=50)
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const origin = new azurerm.cdn.latest.Origin("origin", {
-    enabled: true,
-    endpointName: "endpoint1",
-    hostName: "www.someDomain.net",
-    httpPort: 80,
-    httpsPort: 443,
-    originHostHeader: "www.someDomain.net",
-    originName: "www-someDomain-net",
-    priority: 1,
-    privateLinkApprovalMessage: "Please approve the connection request for this Private Link",
-    privateLinkLocation: "eastus",
-    privateLinkResourceId: "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1",
-    profileName: "profile1",
-    resourceGroupName: "RG",
-    weight: 50,
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Origin Resource {#create}
@@ -155,7 +23,7 @@ const origin = new azurerm.cdn.latest.Origin("origin", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/cdn/latest/#pulumi_azurerm.cdn/latest.Origin">Origin</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">https_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">private_link_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_approval_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">weight</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/cdn/latest/#pulumi_azurerm.cdn/latest.Origin">Origin</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">https_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">private_link_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_approval_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">weight</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -864,7 +732,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The value of the HTTP port. Must be between 1 and 65535.{{% /md %}}</dd>
 
@@ -874,7 +742,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The value of the HTTPS port. Must be between 1 and 65535.{{% /md %}}</dd>
 
@@ -894,7 +762,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5{{% /md %}}</dd>
 
@@ -944,7 +812,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Weight of the origin in given origin group for load balancing. Must be between 1 and 1000{{% /md %}}</dd>
 

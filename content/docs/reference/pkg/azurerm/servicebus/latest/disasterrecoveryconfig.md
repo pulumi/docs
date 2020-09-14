@@ -12,102 +12,6 @@ meta_desc: "Explore the DisasterRecoveryConfig resource of the servicebus/latest
 
 Single item in List or Get Alias(Disaster Recovery configuration) operation
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### SBAliasCreate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var disasterRecoveryConfig = new AzureRM.ServiceBus.Latest.DisasterRecoveryConfig("disasterRecoveryConfig", new AzureRM.ServiceBus.Latest.DisasterRecoveryConfigArgs
-        {
-            Alias = "sdk-Namespace-8860",
-            AlternateName = "alternameforAlias-Namespace-8860",
-            NamespaceName = "sdk-Namespace-8860",
-            PartnerNamespace = "sdk-Namespace-37",
-            ResourceGroupName = "ardsouzatestRG",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	servicebus "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicebus/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := servicebus.NewDisasterRecoveryConfig(ctx, "disasterRecoveryConfig", &servicebus.DisasterRecoveryConfigArgs{
-			Alias:             pulumi.String("sdk-Namespace-8860"),
-			AlternateName:     pulumi.String("alternameforAlias-Namespace-8860"),
-			NamespaceName:     pulumi.String("sdk-Namespace-8860"),
-			PartnerNamespace:  pulumi.String("sdk-Namespace-37"),
-			ResourceGroupName: pulumi.String("ardsouzatestRG"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-disaster_recovery_config = azurerm.servicebus.latest.DisasterRecoveryConfig("disasterRecoveryConfig",
-    alias="sdk-Namespace-8860",
-    alternate_name="alternameforAlias-Namespace-8860",
-    namespace_name="sdk-Namespace-8860",
-    partner_namespace="sdk-Namespace-37",
-    resource_group_name="ardsouzatestRG")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const disasterRecoveryConfig = new azurerm.servicebus.latest.DisasterRecoveryConfig("disasterRecoveryConfig", {
-    alias: "sdk-Namespace-8860",
-    alternateName: "alternameforAlias-Namespace-8860",
-    namespaceName: "sdk-Namespace-8860",
-    partnerNamespace: "sdk-Namespace-37",
-    resourceGroupName: "ardsouzatestRG",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a DisasterRecoveryConfig Resource {#create}
@@ -757,7 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pending_replication_operations_count_python" style="color: inherit; text-decoration: inherit;">pending_<wbr>replication_<wbr>operations_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of entities pending to be replicated.{{% /md %}}</dd>
 

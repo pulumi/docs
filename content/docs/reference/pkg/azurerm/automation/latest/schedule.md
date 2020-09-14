@@ -12,91 +12,6 @@ meta_desc: "Explore the Schedule resource of the automation/latest module, inclu
 
 Definition of the schedule.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update a schedule
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var schedule = new AzureRM.Automation.Latest.Schedule("schedule", new AzureRM.Automation.Latest.ScheduleArgs
-        {
-            AdvancedSchedule = ,
-            AutomationAccountName = "myAutomationAccount33",
-            Description = "my description of schedule goes here",
-            ExpiryTime = "2017-04-01T17:28:57.2494819Z",
-            Frequency = "Hour",
-            Interval = 1,
-            Name = "mySchedule",
-            ResourceGroupName = "rg",
-            ScheduleName = "mySchedule",
-            StartTime = "2017-03-27T17:28:57.2494819Z",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-schedule = azurerm.automation.latest.Schedule("schedule",
-    advanced_schedule={},
-    automation_account_name="myAutomationAccount33",
-    description="my description of schedule goes here",
-    expiry_time="2017-04-01T17:28:57.2494819Z",
-    frequency="Hour",
-    interval=1,
-    name="mySchedule",
-    resource_group_name="rg",
-    schedule_name="mySchedule",
-    start_time="2017-03-27T17:28:57.2494819Z")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const schedule = new azurerm.automation.latest.Schedule("schedule", {
-    advancedSchedule: {},
-    automationAccountName: "myAutomationAccount33",
-    description: "my description of schedule goes here",
-    expiryTime: "2017-04-01T17:28:57.2494819Z",
-    frequency: "Hour",
-    interval: 1,
-    name: "mySchedule",
-    resourceGroupName: "rg",
-    scheduleName: "mySchedule",
-    startTime: "2017-03-27T17:28:57.2494819Z",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Schedule Resource {#create}
@@ -1437,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#occurrence_python" style="color: inherit; text-decoration: inherit;">occurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd>
 
@@ -1563,7 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#occurrence_python" style="color: inherit; text-decoration: inherit;">occurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd>
 

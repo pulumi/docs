@@ -12,124 +12,6 @@ meta_desc: "Explore the DedicatedHostGroup resource of the compute/latest module
 
 Specifies information about the dedicated host group that the dedicated hosts should be assigned to. <br><br> Currently, a dedicated host can only be added to a dedicated host group at creation time. An existing dedicated host cannot be added to another dedicated host group.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update a dedicated host group.
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var dedicatedHostGroup = new AzureRM.Compute.Latest.DedicatedHostGroup("dedicatedHostGroup", new AzureRM.Compute.Latest.DedicatedHostGroupArgs
-        {
-            HostGroupName = "myDedicatedHostGroup",
-            Location = "westus",
-            PlatformFaultDomainCount = 3,
-            ResourceGroupName = "myResourceGroup",
-            SupportAutomaticPlacement = true,
-            Tags = 
-            {
-                { "department", "finance" },
-            },
-            Zones = 
-            {
-                "1",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	compute "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := compute.NewDedicatedHostGroup(ctx, "dedicatedHostGroup", &compute.DedicatedHostGroupArgs{
-			HostGroupName:             pulumi.String("myDedicatedHostGroup"),
-			Location:                  pulumi.String("westus"),
-			PlatformFaultDomainCount:  pulumi.Int(3),
-			ResourceGroupName:         pulumi.String("myResourceGroup"),
-			SupportAutomaticPlacement: pulumi.Bool(true),
-			Tags: pulumi.StringMap{
-				"department": pulumi.String("finance"),
-			},
-			Zones: pulumi.StringArray{
-				pulumi.String("1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-dedicated_host_group = azurerm.compute.latest.DedicatedHostGroup("dedicatedHostGroup",
-    host_group_name="myDedicatedHostGroup",
-    location="westus",
-    platform_fault_domain_count=3,
-    resource_group_name="myResourceGroup",
-    support_automatic_placement=True,
-    tags={
-        "department": "finance",
-    },
-    zones=["1"])
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const dedicatedHostGroup = new azurerm.compute.latest.DedicatedHostGroup("dedicatedHostGroup", {
-    hostGroupName: "myDedicatedHostGroup",
-    location: "westus",
-    platformFaultDomainCount: 3,
-    resourceGroupName: "myResourceGroup",
-    supportAutomaticPlacement: true,
-    tags: {
-        department: "finance",
-    },
-    zones: ["1"],
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a DedicatedHostGroup Resource {#create}
@@ -141,7 +23,7 @@ const dedicatedHostGroup = new azurerm.compute.latest.DedicatedHostGroup("dedica
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/compute/latest/#pulumi_azurerm.compute/latest.DedicatedHostGroup">DedicatedHostGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">host_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform_fault_domain_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support_automatic_placement</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/compute/latest/#pulumi_azurerm.compute/latest.DedicatedHostGroup">DedicatedHostGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">host_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform_fault_domain_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support_automatic_placement</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -570,7 +452,7 @@ The DedicatedHostGroup resource accepts the following [input]({{< relref "/docs/
 <a href="#platform_fault_domain_count_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>fault_<wbr>domain_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of fault domains that the host group can span.{{% /md %}}</dd>
 

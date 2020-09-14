@@ -12,104 +12,6 @@ meta_desc: "Explore the MigrationConfig resource of the servicebus/latest module
 
 Single item in List or Get Migration Config operation
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### MigrationConfigurationsStartMigration
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var migrationConfig = new AzureRM.ServiceBus.Latest.MigrationConfig("migrationConfig", new AzureRM.ServiceBus.Latest.MigrationConfigArgs
-        {
-            ConfigName = "$default",
-            NamespaceName = "sdk-Namespace-41",
-            PostMigrationName = "sdk-PostMigration-5919",
-            ResourceGroupName = "ResourceGroup",
-            TargetNamespace = "/subscriptions/SubscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-4028",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	"fmt"
-
-	servicebus "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicebus/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := servicebus.NewMigrationConfig(ctx, "migrationConfig", &servicebus.MigrationConfigArgs{
-			ConfigName:        pulumi.String(fmt.Sprintf("%v%v", "$", "default")),
-			NamespaceName:     pulumi.String("sdk-Namespace-41"),
-			PostMigrationName: pulumi.String("sdk-PostMigration-5919"),
-			ResourceGroupName: pulumi.String("ResourceGroup"),
-			TargetNamespace:   pulumi.String("/subscriptions/SubscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-4028"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-migration_config = azurerm.servicebus.latest.MigrationConfig("migrationConfig",
-    config_name="$default",
-    namespace_name="sdk-Namespace-41",
-    post_migration_name="sdk-PostMigration-5919",
-    resource_group_name="ResourceGroup",
-    target_namespace="/subscriptions/SubscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-4028")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const migrationConfig = new azurerm.servicebus.latest.MigrationConfig("migrationConfig", {
-    configName: `$default`,
-    namespaceName: "sdk-Namespace-41",
-    postMigrationName: "sdk-PostMigration-5919",
-    resourceGroupName: "ResourceGroup",
-    targetNamespace: "/subscriptions/SubscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-4028",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a MigrationConfig Resource {#create}
@@ -769,7 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pending_replication_operations_count_python" style="color: inherit; text-decoration: inherit;">pending_<wbr>replication_<wbr>operations_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of entities pending to be replicated.{{% /md %}}</dd>
 

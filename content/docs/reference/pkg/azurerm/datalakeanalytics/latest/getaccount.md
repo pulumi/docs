@@ -1099,7 +1099,7 @@ The following output properties are available:
 <a href="#max_degree_of_parallelism_python" style="color: inherit; text-decoration: inherit;">max_<wbr>degree_<wbr>of_<wbr>parallelism</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum supported degree of parallelism for this account.{{% /md %}}</dd>
 
@@ -1109,7 +1109,7 @@ The following output properties are available:
 <a href="#max_degree_of_parallelism_per_job_python" style="color: inherit; text-decoration: inherit;">max_<wbr>degree_<wbr>of_<wbr>parallelism_<wbr>per_<wbr>job</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum supported degree of parallelism per job for this account.{{% /md %}}</dd>
 
@@ -1119,7 +1119,7 @@ The following output properties are available:
 <a href="#max_job_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>job_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum supported jobs running under the account at the same time.{{% /md %}}</dd>
 
@@ -1129,7 +1129,7 @@ The following output properties are available:
 <a href="#min_priority_per_job_python" style="color: inherit; text-decoration: inherit;">min_<wbr>priority_<wbr>per_<wbr>job</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum supported priority per job for this account.{{% /md %}}</dd>
 
@@ -1169,7 +1169,7 @@ The following output properties are available:
 <a href="#query_store_retention_python" style="color: inherit; text-decoration: inherit;">query_<wbr>store_<wbr>retention</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of days that job metadata is retained.{{% /md %}}</dd>
 
@@ -1199,7 +1199,7 @@ The following output properties are available:
 <a href="#system_max_degree_of_parallelism_python" style="color: inherit; text-decoration: inherit;">system_<wbr>max_<wbr>degree_<wbr>of_<wbr>parallelism</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.{{% /md %}}</dd>
 
@@ -1209,7 +1209,7 @@ The following output properties are available:
 <a href="#system_max_job_count_python" style="color: inherit; text-decoration: inherit;">system_<wbr>max_<wbr>job_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.{{% /md %}}</dd>
 
@@ -1511,7 +1511,7 @@ The following output properties are available:
 <a href="#max_degree_of_parallelism_per_job_python" style="color: inherit; text-decoration: inherit;">max_<wbr>degree_<wbr>of_<wbr>parallelism_<wbr>per_<wbr>job</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum degree of parallelism per job this user can use to submit jobs.{{% /md %}}</dd>
 
@@ -1521,7 +1521,7 @@ The following output properties are available:
 <a href="#min_priority_per_job_python" style="color: inherit; text-decoration: inherit;">min_<wbr>priority_<wbr>per_<wbr>job</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum priority per job this user can use to submit jobs.{{% /md %}}</dd>
 

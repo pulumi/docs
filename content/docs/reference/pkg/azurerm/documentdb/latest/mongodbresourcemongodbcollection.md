@@ -12,189 +12,6 @@ meta_desc: "Explore the MongoDBResourceMongoDBCollection resource of the documen
 
 An Azure Cosmos DB MongoDB collection.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### CosmosDBMongoDBCollectionCreateUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var mongoDBResourceMongoDBCollection = new AzureRM.DocumentDB.Latest.MongoDBResourceMongoDBCollection("mongoDBResourceMongoDBCollection", new AzureRM.DocumentDB.Latest.MongoDBResourceMongoDBCollectionArgs
-        {
-            AccountName = "ddb1",
-            CollectionName = "collectionName",
-            DatabaseName = "databaseName",
-            Location = "West US",
-            Options = ,
-            Resource = new AzureRM.DocumentDB.Latest.Inputs.MongoDBCollectionResourceArgs
-            {
-                AnalyticalStorageTtl = 500,
-                Id = "collectionName",
-                Indexes = 
-                {
-                    new AzureRM.DocumentDB.Latest.Inputs.MongoIndexArgs
-                    {
-                        Key = new AzureRM.DocumentDB.Latest.Inputs.MongoIndexKeysArgs
-                        {
-                            Keys = 
-                            {
-                                "testKey",
-                            },
-                        },
-                        Options = new AzureRM.DocumentDB.Latest.Inputs.MongoIndexOptionsArgs
-                        {
-                            ExpireAfterSeconds = 100,
-                            Unique = true,
-                        },
-                    },
-                },
-                ShardKey = 
-                {
-                    { "testKey", "Hash" },
-                },
-            },
-            ResourceGroupName = "rg1",
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/documentdb/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewMongoDBResourceMongoDBCollection(ctx, "mongoDBResourceMongoDBCollection", &documentdb.MongoDBResourceMongoDBCollectionArgs{
-			AccountName:    pulumi.String("ddb1"),
-			CollectionName: pulumi.String("collectionName"),
-			DatabaseName:   pulumi.String("databaseName"),
-			Location:       pulumi.String("West US"),
-			Options:        nil,
-			Resource: &documentdb.MongoDBCollectionResourceArgs{
-				AnalyticalStorageTtl: pulumi.Int(500),
-				Id:                   pulumi.String("collectionName"),
-				Indexes: documentdb.MongoIndexArray{
-					&documentdb.MongoIndexArgs{
-						Key: &documentdb.MongoIndexKeysArgs{
-							Keys: pulumi.StringArray{
-								pulumi.String("testKey"),
-							},
-						},
-						Options: &documentdb.MongoIndexOptionsArgs{
-							ExpireAfterSeconds: pulumi.Int(100),
-							Unique:             pulumi.Bool(true),
-						},
-					},
-				},
-				ShardKey: pulumi.StringMap{
-					"testKey": pulumi.String("Hash"),
-				},
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			Tags:              nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-mongo_db_resource_mongo_db_collection = azurerm.documentdb.latest.MongoDBResourceMongoDBCollection("mongoDBResourceMongoDBCollection",
-    account_name="ddb1",
-    collection_name="collectionName",
-    database_name="databaseName",
-    location="West US",
-    options={},
-    resource={
-        "analyticalStorageTtl": 500,
-        "id": "collectionName",
-        "indexes": [{
-            "key": {
-                "keys": ["testKey"],
-            },
-            "options": {
-                "expireAfterSeconds": 100,
-                "unique": True,
-            },
-        }],
-        "shardKey": {
-            "testKey": "Hash",
-        },
-    },
-    resource_group_name="rg1",
-    tags={})
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const mongoDBResourceMongoDBCollection = new azurerm.documentdb.latest.MongoDBResourceMongoDBCollection("mongoDBResourceMongoDBCollection", {
-    accountName: "ddb1",
-    collectionName: "collectionName",
-    databaseName: "databaseName",
-    location: "West US",
-    options: {},
-    resource: {
-        analyticalStorageTtl: 500,
-        id: "collectionName",
-        indexes: [{
-            key: {
-                keys: ["testKey"],
-            },
-            options: {
-                expireAfterSeconds: 100,
-                unique: true,
-            },
-        }],
-        shardKey: {
-            testKey: "Hash",
-        },
-    },
-    resourceGroupName: "rg1",
-    tags: {},
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a MongoDBResourceMongoDBCollection Resource {#create}
@@ -969,7 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
 
@@ -1055,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
 
@@ -1181,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd>
 
@@ -1307,7 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.{{% /md %}}</dd>
 
@@ -1613,7 +1430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analytical_storage_ttl_python" style="color: inherit; text-decoration: inherit;">analytical_<wbr>storage_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd>
 
@@ -1819,7 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analytical_storage_ttl_python" style="color: inherit; text-decoration: inherit;">analytical_<wbr>storage_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd>
 
@@ -2253,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expireafterseconds_python" style="color: inherit; text-decoration: inherit;">expire<wbr>After<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Expire after seconds{{% /md %}}</dd>
 
@@ -2379,7 +2196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expireafterseconds_python" style="color: inherit; text-decoration: inherit;">expire<wbr>After<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Expire after seconds{{% /md %}}</dd>
 

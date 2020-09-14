@@ -12,657 +12,6 @@ meta_desc: "Explore the Peering resource of the peering/latest module, including
 
 Peering is a logical representation of a set of connections to the Microsoft Cloud Edge at a location.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create a direct peering
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var peering = new AzureRM.Peering.Latest.Peering("peering", new AzureRM.Peering.Latest.PeeringArgs
-        {
-            Direct = new AzureRM.Peering.Latest.Inputs.PeeringPropertiesDirectArgs
-            {
-                Connections = 
-                {
-                    new AzureRM.Peering.Latest.Inputs.DirectConnectionArgs
-                    {
-                        BandwidthInMbps = 10000,
-                        BgpSession = new AzureRM.Peering.Latest.Inputs.BgpSessionArgs
-                        {
-                            MaxPrefixesAdvertisedV4 = 1000,
-                            MaxPrefixesAdvertisedV6 = 100,
-                            Md5AuthenticationKey = "test-md5-auth-key",
-                            SessionPrefixV4 = "192.168.0.0/31",
-                            SessionPrefixV6 = "fd00::0/127",
-                        },
-                        ConnectionIdentifier = "5F4CB5C7-6B43-4444-9338-9ABC72606C16",
-                        PeeringDBFacilityId = 99999,
-                        SessionAddressProvider = "Peer",
-                        UseForPeeringService = false,
-                    },
-                    new AzureRM.Peering.Latest.Inputs.DirectConnectionArgs
-                    {
-                        BandwidthInMbps = 10000,
-                        ConnectionIdentifier = "8AB00818-D533-4504-A25A-03A17F61201C",
-                        PeeringDBFacilityId = 99999,
-                        SessionAddressProvider = "Microsoft",
-                        UseForPeeringService = true,
-                    },
-                },
-                DirectPeeringType = "Edge",
-                PeerAsn = new AzureRM.Peering.Latest.Inputs.SubResourceArgs
-                {
-                    Id = "/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
-                },
-            },
-            Kind = "Direct",
-            Location = "eastus",
-            PeeringLocation = "peeringLocation0",
-            PeeringName = "peeringName",
-            ResourceGroupName = "rgName",
-            Sku = new AzureRM.Peering.Latest.Inputs.PeeringSkuArgs
-            {
-                Name = "Basic_Direct_Free",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	peering "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/peering/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := peering.NewPeering(ctx, "peering", &peering.PeeringArgs{
-			Direct: &peering.PeeringPropertiesDirectArgs{
-				Connections: peering.DirectConnectionArray{
-					&peering.DirectConnectionArgs{
-						BandwidthInMbps: pulumi.Int(10000),
-						BgpSession: &peering.BgpSessionArgs{
-							MaxPrefixesAdvertisedV4: pulumi.Int(1000),
-							MaxPrefixesAdvertisedV6: pulumi.Int(100),
-							Md5AuthenticationKey:    pulumi.String("test-md5-auth-key"),
-							SessionPrefixV4:         pulumi.String("192.168.0.0/31"),
-							SessionPrefixV6:         pulumi.String("fd00::0/127"),
-						},
-						ConnectionIdentifier:   pulumi.String("5F4CB5C7-6B43-4444-9338-9ABC72606C16"),
-						PeeringDBFacilityId:    pulumi.Int(99999),
-						SessionAddressProvider: pulumi.String("Peer"),
-						UseForPeeringService:   pulumi.Bool(false),
-					},
-					&peering.DirectConnectionArgs{
-						BandwidthInMbps:        pulumi.Int(10000),
-						ConnectionIdentifier:   pulumi.String("8AB00818-D533-4504-A25A-03A17F61201C"),
-						PeeringDBFacilityId:    pulumi.Int(99999),
-						SessionAddressProvider: pulumi.String("Microsoft"),
-						UseForPeeringService:   pulumi.Bool(true),
-					},
-				},
-				DirectPeeringType: pulumi.String("Edge"),
-				PeerAsn: &peering.SubResourceArgs{
-					Id: pulumi.String("/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1"),
-				},
-			},
-			Kind:              pulumi.String("Direct"),
-			Location:          pulumi.String("eastus"),
-			PeeringLocation:   pulumi.String("peeringLocation0"),
-			PeeringName:       pulumi.String("peeringName"),
-			ResourceGroupName: pulumi.String("rgName"),
-			Sku: &peering.PeeringSkuArgs{
-				Name: pulumi.String("Basic_Direct_Free"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-peering = azurerm.peering.latest.Peering("peering",
-    direct={
-        "connections": [
-            {
-                "bandwidthInMbps": 10000,
-                "bgpSession": {
-                    "maxPrefixesAdvertisedV4": 1000,
-                    "maxPrefixesAdvertisedV6": 100,
-                    "md5AuthenticationKey": "test-md5-auth-key",
-                    "sessionPrefixV4": "192.168.0.0/31",
-                    "sessionPrefixV6": "fd00::0/127",
-                },
-                "connectionIdentifier": "5F4CB5C7-6B43-4444-9338-9ABC72606C16",
-                "peeringDBFacilityId": 99999,
-                "sessionAddressProvider": "Peer",
-                "useForPeeringService": False,
-            },
-            {
-                "bandwidthInMbps": 10000,
-                "connectionIdentifier": "8AB00818-D533-4504-A25A-03A17F61201C",
-                "peeringDBFacilityId": 99999,
-                "sessionAddressProvider": "Microsoft",
-                "useForPeeringService": True,
-            },
-        ],
-        "directPeeringType": "Edge",
-        "peerAsn": {
-            "id": "/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
-        },
-    },
-    kind="Direct",
-    location="eastus",
-    peering_location="peeringLocation0",
-    peering_name="peeringName",
-    resource_group_name="rgName",
-    sku={
-        "name": "Basic_Direct_Free",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const peering = new azurerm.peering.latest.Peering("peering", {
-    direct: {
-        connections: [
-            {
-                bandwidthInMbps: 10000,
-                bgpSession: {
-                    maxPrefixesAdvertisedV4: 1000,
-                    maxPrefixesAdvertisedV6: 100,
-                    md5AuthenticationKey: "test-md5-auth-key",
-                    sessionPrefixV4: "192.168.0.0/31",
-                    sessionPrefixV6: "fd00::0/127",
-                },
-                connectionIdentifier: "5F4CB5C7-6B43-4444-9338-9ABC72606C16",
-                peeringDBFacilityId: 99999,
-                sessionAddressProvider: "Peer",
-                useForPeeringService: false,
-            },
-            {
-                bandwidthInMbps: 10000,
-                connectionIdentifier: "8AB00818-D533-4504-A25A-03A17F61201C",
-                peeringDBFacilityId: 99999,
-                sessionAddressProvider: "Microsoft",
-                useForPeeringService: true,
-            },
-        ],
-        directPeeringType: "Edge",
-        peerAsn: {
-            id: "/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
-        },
-    },
-    kind: "Direct",
-    location: "eastus",
-    peeringLocation: "peeringLocation0",
-    peeringName: "peeringName",
-    resourceGroupName: "rgName",
-    sku: {
-        name: "Basic_Direct_Free",
-    },
-});
-
-```
-
-{{% /example %}}
-
-### Create a peering with exchange route server
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var peering = new AzureRM.Peering.Latest.Peering("peering", new AzureRM.Peering.Latest.PeeringArgs
-        {
-            Direct = new AzureRM.Peering.Latest.Inputs.PeeringPropertiesDirectArgs
-            {
-                Connections = 
-                {
-                    new AzureRM.Peering.Latest.Inputs.DirectConnectionArgs
-                    {
-                        BandwidthInMbps = 10000,
-                        BgpSession = new AzureRM.Peering.Latest.Inputs.BgpSessionArgs
-                        {
-                            MaxPrefixesAdvertisedV4 = 1000,
-                            MaxPrefixesAdvertisedV6 = 100,
-                            MicrosoftSessionIPv4Address = "192.168.0.123",
-                            PeerSessionIPv4Address = "192.168.0.234",
-                            SessionPrefixV4 = "192.168.0.0/24",
-                        },
-                        ConnectionIdentifier = "5F4CB5C7-6B43-4444-9338-9ABC72606C16",
-                        PeeringDBFacilityId = 99999,
-                        SessionAddressProvider = "Peer",
-                        UseForPeeringService = true,
-                    },
-                },
-                DirectPeeringType = "IxRs",
-                PeerAsn = new AzureRM.Peering.Latest.Inputs.SubResourceArgs
-                {
-                    Id = "/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
-                },
-            },
-            Kind = "Direct",
-            Location = "eastus",
-            PeeringLocation = "peeringLocation0",
-            PeeringName = "peeringName",
-            ResourceGroupName = "rgName",
-            Sku = new AzureRM.Peering.Latest.Inputs.PeeringSkuArgs
-            {
-                Name = "Premium_Direct_Free",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	peering "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/peering/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := peering.NewPeering(ctx, "peering", &peering.PeeringArgs{
-			Direct: &peering.PeeringPropertiesDirectArgs{
-				Connections: peering.DirectConnectionArray{
-					&peering.DirectConnectionArgs{
-						BandwidthInMbps: pulumi.Int(10000),
-						BgpSession: &peering.BgpSessionArgs{
-							MaxPrefixesAdvertisedV4:     pulumi.Int(1000),
-							MaxPrefixesAdvertisedV6:     pulumi.Int(100),
-							MicrosoftSessionIPv4Address: pulumi.String("192.168.0.123"),
-							PeerSessionIPv4Address:      pulumi.String("192.168.0.234"),
-							SessionPrefixV4:             pulumi.String("192.168.0.0/24"),
-						},
-						ConnectionIdentifier:   pulumi.String("5F4CB5C7-6B43-4444-9338-9ABC72606C16"),
-						PeeringDBFacilityId:    pulumi.Int(99999),
-						SessionAddressProvider: pulumi.String("Peer"),
-						UseForPeeringService:   pulumi.Bool(true),
-					},
-				},
-				DirectPeeringType: pulumi.String("IxRs"),
-				PeerAsn: &peering.SubResourceArgs{
-					Id: pulumi.String("/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1"),
-				},
-			},
-			Kind:              pulumi.String("Direct"),
-			Location:          pulumi.String("eastus"),
-			PeeringLocation:   pulumi.String("peeringLocation0"),
-			PeeringName:       pulumi.String("peeringName"),
-			ResourceGroupName: pulumi.String("rgName"),
-			Sku: &peering.PeeringSkuArgs{
-				Name: pulumi.String("Premium_Direct_Free"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-peering = azurerm.peering.latest.Peering("peering",
-    direct={
-        "connections": [{
-            "bandwidthInMbps": 10000,
-            "bgpSession": {
-                "maxPrefixesAdvertisedV4": 1000,
-                "maxPrefixesAdvertisedV6": 100,
-                "microsoftSessionIPv4Address": "192.168.0.123",
-                "peerSessionIPv4Address": "192.168.0.234",
-                "sessionPrefixV4": "192.168.0.0/24",
-            },
-            "connectionIdentifier": "5F4CB5C7-6B43-4444-9338-9ABC72606C16",
-            "peeringDBFacilityId": 99999,
-            "sessionAddressProvider": "Peer",
-            "useForPeeringService": True,
-        }],
-        "directPeeringType": "IxRs",
-        "peerAsn": {
-            "id": "/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
-        },
-    },
-    kind="Direct",
-    location="eastus",
-    peering_location="peeringLocation0",
-    peering_name="peeringName",
-    resource_group_name="rgName",
-    sku={
-        "name": "Premium_Direct_Free",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const peering = new azurerm.peering.latest.Peering("peering", {
-    direct: {
-        connections: [{
-            bandwidthInMbps: 10000,
-            bgpSession: {
-                maxPrefixesAdvertisedV4: 1000,
-                maxPrefixesAdvertisedV6: 100,
-                microsoftSessionIPv4Address: "192.168.0.123",
-                peerSessionIPv4Address: "192.168.0.234",
-                sessionPrefixV4: "192.168.0.0/24",
-            },
-            connectionIdentifier: "5F4CB5C7-6B43-4444-9338-9ABC72606C16",
-            peeringDBFacilityId: 99999,
-            sessionAddressProvider: "Peer",
-            useForPeeringService: true,
-        }],
-        directPeeringType: "IxRs",
-        peerAsn: {
-            id: "/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
-        },
-    },
-    kind: "Direct",
-    location: "eastus",
-    peeringLocation: "peeringLocation0",
-    peeringName: "peeringName",
-    resourceGroupName: "rgName",
-    sku: {
-        name: "Premium_Direct_Free",
-    },
-});
-
-```
-
-{{% /example %}}
-
-### Create an exchange peering
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var peering = new AzureRM.Peering.Latest.Peering("peering", new AzureRM.Peering.Latest.PeeringArgs
-        {
-            Exchange = new AzureRM.Peering.Latest.Inputs.PeeringPropertiesExchangeArgs
-            {
-                Connections = 
-                {
-                    new AzureRM.Peering.Latest.Inputs.ExchangeConnectionArgs
-                    {
-                        BgpSession = new AzureRM.Peering.Latest.Inputs.BgpSessionArgs
-                        {
-                            MaxPrefixesAdvertisedV4 = 1000,
-                            MaxPrefixesAdvertisedV6 = 100,
-                            Md5AuthenticationKey = "test-md5-auth-key",
-                            PeerSessionIPv4Address = "192.168.2.1",
-                            PeerSessionIPv6Address = "fd00::1",
-                        },
-                        ConnectionIdentifier = "CE495334-0E94-4E51-8164-8116D6CD284D",
-                        PeeringDBFacilityId = 99999,
-                    },
-                    new AzureRM.Peering.Latest.Inputs.ExchangeConnectionArgs
-                    {
-                        BgpSession = new AzureRM.Peering.Latest.Inputs.BgpSessionArgs
-                        {
-                            MaxPrefixesAdvertisedV4 = 1000,
-                            MaxPrefixesAdvertisedV6 = 100,
-                            Md5AuthenticationKey = "test-md5-auth-key",
-                            PeerSessionIPv4Address = "192.168.2.2",
-                            PeerSessionIPv6Address = "fd00::2",
-                        },
-                        ConnectionIdentifier = "CDD8E673-CB07-47E6-84DE-3739F778762B",
-                        PeeringDBFacilityId = 99999,
-                    },
-                },
-                PeerAsn = new AzureRM.Peering.Latest.Inputs.SubResourceArgs
-                {
-                    Id = "/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
-                },
-            },
-            Kind = "Exchange",
-            Location = "eastus",
-            PeeringLocation = "peeringLocation0",
-            PeeringName = "peeringName",
-            ResourceGroupName = "rgName",
-            Sku = new AzureRM.Peering.Latest.Inputs.PeeringSkuArgs
-            {
-                Name = "Basic_Exchange_Free",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	peering "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/peering/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := peering.NewPeering(ctx, "peering", &peering.PeeringArgs{
-			Exchange: &peering.PeeringPropertiesExchangeArgs{
-				Connections: peering.ExchangeConnectionArray{
-					&peering.ExchangeConnectionArgs{
-						BgpSession: &peering.BgpSessionArgs{
-							MaxPrefixesAdvertisedV4: pulumi.Int(1000),
-							MaxPrefixesAdvertisedV6: pulumi.Int(100),
-							Md5AuthenticationKey:    pulumi.String("test-md5-auth-key"),
-							PeerSessionIPv4Address:  pulumi.String("192.168.2.1"),
-							PeerSessionIPv6Address:  pulumi.String("fd00::1"),
-						},
-						ConnectionIdentifier: pulumi.String("CE495334-0E94-4E51-8164-8116D6CD284D"),
-						PeeringDBFacilityId:  pulumi.Int(99999),
-					},
-					&peering.ExchangeConnectionArgs{
-						BgpSession: &peering.BgpSessionArgs{
-							MaxPrefixesAdvertisedV4: pulumi.Int(1000),
-							MaxPrefixesAdvertisedV6: pulumi.Int(100),
-							Md5AuthenticationKey:    pulumi.String("test-md5-auth-key"),
-							PeerSessionIPv4Address:  pulumi.String("192.168.2.2"),
-							PeerSessionIPv6Address:  pulumi.String("fd00::2"),
-						},
-						ConnectionIdentifier: pulumi.String("CDD8E673-CB07-47E6-84DE-3739F778762B"),
-						PeeringDBFacilityId:  pulumi.Int(99999),
-					},
-				},
-				PeerAsn: &peering.SubResourceArgs{
-					Id: pulumi.String("/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1"),
-				},
-			},
-			Kind:              pulumi.String("Exchange"),
-			Location:          pulumi.String("eastus"),
-			PeeringLocation:   pulumi.String("peeringLocation0"),
-			PeeringName:       pulumi.String("peeringName"),
-			ResourceGroupName: pulumi.String("rgName"),
-			Sku: &peering.PeeringSkuArgs{
-				Name: pulumi.String("Basic_Exchange_Free"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-peering = azurerm.peering.latest.Peering("peering",
-    exchange={
-        "connections": [
-            {
-                "bgpSession": {
-                    "maxPrefixesAdvertisedV4": 1000,
-                    "maxPrefixesAdvertisedV6": 100,
-                    "md5AuthenticationKey": "test-md5-auth-key",
-                    "peerSessionIPv4Address": "192.168.2.1",
-                    "peerSessionIPv6Address": "fd00::1",
-                },
-                "connectionIdentifier": "CE495334-0E94-4E51-8164-8116D6CD284D",
-                "peeringDBFacilityId": 99999,
-            },
-            {
-                "bgpSession": {
-                    "maxPrefixesAdvertisedV4": 1000,
-                    "maxPrefixesAdvertisedV6": 100,
-                    "md5AuthenticationKey": "test-md5-auth-key",
-                    "peerSessionIPv4Address": "192.168.2.2",
-                    "peerSessionIPv6Address": "fd00::2",
-                },
-                "connectionIdentifier": "CDD8E673-CB07-47E6-84DE-3739F778762B",
-                "peeringDBFacilityId": 99999,
-            },
-        ],
-        "peerAsn": {
-            "id": "/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
-        },
-    },
-    kind="Exchange",
-    location="eastus",
-    peering_location="peeringLocation0",
-    peering_name="peeringName",
-    resource_group_name="rgName",
-    sku={
-        "name": "Basic_Exchange_Free",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const peering = new azurerm.peering.latest.Peering("peering", {
-    exchange: {
-        connections: [
-            {
-                bgpSession: {
-                    maxPrefixesAdvertisedV4: 1000,
-                    maxPrefixesAdvertisedV6: 100,
-                    md5AuthenticationKey: "test-md5-auth-key",
-                    peerSessionIPv4Address: "192.168.2.1",
-                    peerSessionIPv6Address: "fd00::1",
-                },
-                connectionIdentifier: "CE495334-0E94-4E51-8164-8116D6CD284D",
-                peeringDBFacilityId: 99999,
-            },
-            {
-                bgpSession: {
-                    maxPrefixesAdvertisedV4: 1000,
-                    maxPrefixesAdvertisedV6: 100,
-                    md5AuthenticationKey: "test-md5-auth-key",
-                    peerSessionIPv4Address: "192.168.2.2",
-                    peerSessionIPv6Address: "fd00::2",
-                },
-                connectionIdentifier: "CDD8E673-CB07-47E6-84DE-3739F778762B",
-                peeringDBFacilityId: 99999,
-            },
-        ],
-        peerAsn: {
-            id: "/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
-        },
-    },
-    kind: "Exchange",
-    location: "eastus",
-    peeringLocation: "peeringLocation0",
-    peeringName: "peeringName",
-    resourceGroupName: "rgName",
-    sku: {
-        name: "Basic_Exchange_Free",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Peering Resource {#create}
@@ -1757,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxprefixesadvertisedv4_python" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixes<wbr>Advertised<wbr>V4</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv4 session.{{% /md %}}</dd>
 
@@ -1767,7 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxprefixesadvertisedv6_python" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixes<wbr>Advertised<wbr>V6</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv6 session.{{% /md %}}</dd>
 
@@ -2243,7 +1592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxprefixesadvertisedv4_python" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixes<wbr>Advertised<wbr>V4</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv4 session.{{% /md %}}</dd>
 
@@ -2253,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxprefixesadvertisedv6_python" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixes<wbr>Advertised<wbr>V6</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv6 session.{{% /md %}}</dd>
 
@@ -2559,7 +1908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bandwidth_in_mbps_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>in_<wbr>mbps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The bandwidth of the connection.{{% /md %}}</dd>
 
@@ -2589,7 +1938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peeringdbfacilityid_python" style="color: inherit; text-decoration: inherit;">peering<wbr>DBFacility<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd>
 
@@ -2955,7 +2304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisionedbandwidthinmbps_python" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Bandwidth<wbr>In<wbr>Mbps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The bandwidth that is actually provisioned.{{% /md %}}</dd>
 
@@ -2965,7 +2314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bandwidth_in_mbps_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>in_<wbr>mbps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The bandwidth of the connection.{{% /md %}}</dd>
 
@@ -2995,7 +2344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peeringdbfacilityid_python" style="color: inherit; text-decoration: inherit;">peering<wbr>DBFacility<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd>
 
@@ -3181,7 +2530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peeringdbfacilityid_python" style="color: inherit; text-decoration: inherit;">peering<wbr>DBFacility<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd>
 
@@ -3427,7 +2776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peeringdbfacilityid_python" style="color: inherit; text-decoration: inherit;">peering<wbr>DBFacility<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd>
 

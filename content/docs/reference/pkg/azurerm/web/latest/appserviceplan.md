@@ -12,127 +12,6 @@ meta_desc: "Explore the AppServicePlan resource of the web/latest module, includ
 
 App Service plan.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create Or Update App Service plan
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var appServicePlan = new AzureRM.Web.Latest.AppServicePlan("appServicePlan", new AzureRM.Web.Latest.AppServicePlanArgs
-        {
-            Kind = "app",
-            Location = "East US",
-            Name = "testsf6141",
-            ResourceGroupName = "testrg123",
-            Sku = new AzureRM.Web.Latest.Inputs.SkuDescriptionArgs
-            {
-                Capacity = 1,
-                Family = "P",
-                Name = "P1",
-                Size = "P1",
-                Tier = "Premium",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	web "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/web/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := web.NewAppServicePlan(ctx, "appServicePlan", &web.AppServicePlanArgs{
-			Kind:              pulumi.String("app"),
-			Location:          pulumi.String("East US"),
-			Name:              pulumi.String("testsf6141"),
-			ResourceGroupName: pulumi.String("testrg123"),
-			Sku: &web.SkuDescriptionArgs{
-				Capacity: pulumi.Int(1),
-				Family:   pulumi.String("P"),
-				Name:     pulumi.String("P1"),
-				Size:     pulumi.String("P1"),
-				Tier:     pulumi.String("Premium"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-app_service_plan = azurerm.web.latest.AppServicePlan("appServicePlan",
-    kind="app",
-    location="East US",
-    name="testsf6141",
-    resource_group_name="testrg123",
-    sku={
-        "capacity": 1,
-        "family": "P",
-        "name": "P1",
-        "size": "P1",
-        "tier": "Premium",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const appServicePlan = new azurerm.web.latest.AppServicePlan("appServicePlan", {
-    kind: "app",
-    location: "East US",
-    name: "testsf6141",
-    resourceGroupName: "testrg123",
-    sku: {
-        capacity: 1,
-        family: "P",
-        name: "P1",
-        size: "P1",
-        tier: "Premium",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a AppServicePlan Resource {#create}
@@ -144,7 +23,7 @@ const appServicePlan = new azurerm.web.latest.AppServicePlan("appServicePlan", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/web/latest/#pulumi_azurerm.web/latest.AppServicePlan">AppServicePlan</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">free_offer_expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosting_environment_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[HostingEnvironmentProfile]]</span> = None<span class="p">, </span><span class="nx">hyper_v</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_spot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_xenon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maximum_elastic_worker_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">per_site_scaling</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">reserved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[SkuDescription]]</span> = None<span class="p">, </span><span class="nx">spot_expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">target_worker_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">target_worker_size_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">worker_tier_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/web/latest/#pulumi_azurerm.web/latest.AppServicePlan">AppServicePlan</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">free_offer_expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosting_environment_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[HostingEnvironmentProfile]]</span> = None<span class="p">, </span><span class="nx">hyper_v</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_spot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_xenon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maximum_elastic_worker_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">per_site_scaling</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">reserved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[SkuDescription]]</span> = None<span class="p">, </span><span class="nx">spot_expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">target_worker_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">target_worker_size_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_tier_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -976,7 +855,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#maximum_elastic_worker_count_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>elastic_<wbr>worker_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan{{% /md %}}</dd>
 
@@ -1037,7 +916,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#target_worker_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>worker_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Scaling worker count.{{% /md %}}</dd>
 
@@ -1047,7 +926,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#target_worker_size_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>worker_<wbr>size_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Scaling worker size ID.{{% /md %}}</dd>
 
@@ -1396,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maximum_number_of_workers_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>number_<wbr>of_<wbr>workers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of instances that can be assigned to this App Service plan.{{% /md %}}</dd>
 
@@ -1406,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_sites_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>sites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of apps assigned to this App Service plan.{{% /md %}}</dd>
 
@@ -2225,7 +2104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd>
 
@@ -2235,7 +2114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd>
 
@@ -2245,7 +2124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd>
 
@@ -2431,7 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd>
 
@@ -2441,7 +2320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd>
 
@@ -2451,7 +2330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd>
 
@@ -2767,7 +2646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd>
 
@@ -3133,7 +3012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd>
 

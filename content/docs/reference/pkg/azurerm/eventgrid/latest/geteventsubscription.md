@@ -781,7 +781,7 @@ The following output properties are available:
 <a href="#maxeventsperbatch_python" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd>
 
@@ -791,7 +791,7 @@ The following output properties are available:
 <a href="#preferredbatchsizeinkilobytes_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd>
 
@@ -2233,7 +2233,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#event_time_to_live_in_minutes_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time_<wbr>to_<wbr>live_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time To Live (in minutes) for events.{{% /md %}}</dd>
 
@@ -2243,7 +2243,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#max_delivery_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>attempts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of delivery retry attempts for events.{{% /md %}}</dd>
 
@@ -3573,7 +3573,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#maxeventsperbatch_python" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd>
 
@@ -3583,7 +3583,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#preferredbatchsizeinkilobytes_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd>
 

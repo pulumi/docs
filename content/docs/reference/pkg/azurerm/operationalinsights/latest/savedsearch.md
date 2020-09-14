@@ -12,140 +12,6 @@ meta_desc: "Explore the SavedSearch resource of the operationalinsights/latest m
 
 Value object for saved search results.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### SavedSearchCreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var savedSearch = new AzureRM.OperationalInsights.Latest.SavedSearch("savedSearch", new AzureRM.OperationalInsights.Latest.SavedSearchArgs
-        {
-            Category = "Saved Search Test Category",
-            DisplayName = "Create or Update Saved Search Test",
-            FunctionAlias = "heartbeat_func",
-            FunctionParameters = "a:int=1",
-            Query = "Heartbeat | summarize Count() by Computer | take a",
-            ResourceGroupName = "TestRG",
-            SavedSearchId = "00000000-0000-0000-0000-00000000000",
-            Tags = 
-            {
-                new AzureRM.OperationalInsights.Latest.Inputs.TagArgs
-                {
-                    Name = "Group",
-                    Value = "Computer",
-                },
-            },
-            Version = 2,
-            WorkspaceName = "TestWS",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	operationalinsights "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/operationalinsights/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := operationalinsights.NewSavedSearch(ctx, "savedSearch", &operationalinsights.SavedSearchArgs{
-			Category:           pulumi.String("Saved Search Test Category"),
-			DisplayName:        pulumi.String("Create or Update Saved Search Test"),
-			FunctionAlias:      pulumi.String("heartbeat_func"),
-			FunctionParameters: pulumi.String("a:int=1"),
-			Query:              pulumi.String("Heartbeat | summarize Count() by Computer | take a"),
-			ResourceGroupName:  pulumi.String("TestRG"),
-			SavedSearchId:      pulumi.String("00000000-0000-0000-0000-00000000000"),
-			Tags: operationalinsights.TagArray{
-				&operationalinsights.TagArgs{
-					Name:  pulumi.String("Group"),
-					Value: pulumi.String("Computer"),
-				},
-			},
-			Version:       pulumi.Int(2),
-			WorkspaceName: pulumi.String("TestWS"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-saved_search = azurerm.operationalinsights.latest.SavedSearch("savedSearch",
-    category="Saved Search Test Category",
-    display_name="Create or Update Saved Search Test",
-    function_alias="heartbeat_func",
-    function_parameters="a:int=1",
-    query="Heartbeat | summarize Count() by Computer | take a",
-    resource_group_name="TestRG",
-    saved_search_id="00000000-0000-0000-0000-00000000000",
-    tags=[{
-        "name": "Group",
-        "value": "Computer",
-    }],
-    version=2,
-    workspace_name="TestWS")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const savedSearch = new azurerm.operationalinsights.latest.SavedSearch("savedSearch", {
-    category: "Saved Search Test Category",
-    displayName: "Create or Update Saved Search Test",
-    functionAlias: "heartbeat_func",
-    functionParameters: "a:int=1",
-    query: "Heartbeat | summarize Count() by Computer | take a",
-    resourceGroupName: "TestRG",
-    savedSearchId: "00000000-0000-0000-0000-00000000000",
-    tags: [{
-        name: "Group",
-        value: "Computer",
-    }],
-    version: 2,
-    workspaceName: "TestWS",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a SavedSearch Resource {#create}
@@ -157,7 +23,7 @@ const savedSearch = new azurerm.operationalinsights.latest.SavedSearch("savedSea
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/operationalinsights/latest/#pulumi_azurerm.operationalinsights/latest.SavedSearch">SavedSearch</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function_parameters</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">saved_search_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[Tag]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/operationalinsights/latest/#pulumi_azurerm.operationalinsights/latest.SavedSearch">SavedSearch</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function_parameters</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">saved_search_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[Tag]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -786,7 +652,7 @@ The SavedSearch resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The version number of the query language. The current version is 2 and is the default.{{% /md %}}</dd>
 

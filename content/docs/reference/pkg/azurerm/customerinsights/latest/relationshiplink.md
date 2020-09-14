@@ -12,172 +12,6 @@ meta_desc: "Explore the RelationshipLink resource of the customerinsights/latest
 
 The relationship link resource format.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### RelationshipLinks_CreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var relationshipLink = new AzureRM.CustomerInsights.Latest.RelationshipLink("relationshipLink", new AzureRM.CustomerInsights.Latest.RelationshipLinkArgs
-        {
-            Description = 
-            {
-                { "en-us", "Link Description" },
-            },
-            DisplayName = 
-            {
-                { "en-us", "Link DisplayName" },
-            },
-            HubName = "sdkTestHub",
-            InteractionType = "testInteraction4332",
-            ProfilePropertyReferences = 
-            {
-                new AzureRM.CustomerInsights.Latest.Inputs.ParticipantProfilePropertyReferenceArgs
-                {
-                    InteractionPropertyName = "profile1",
-                    ProfilePropertyName = "ProfileId",
-                },
-            },
-            RelatedProfilePropertyReferences = 
-            {
-                new AzureRM.CustomerInsights.Latest.Inputs.ParticipantProfilePropertyReferenceArgs
-                {
-                    InteractionPropertyName = "profile1",
-                    ProfilePropertyName = "ProfileId",
-                },
-            },
-            RelationshipLinkName = "Somelink",
-            RelationshipName = "testProfile2326994",
-            ResourceGroupName = "TestHubRG",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	customerinsights "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/customerinsights/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := customerinsights.NewRelationshipLink(ctx, "relationshipLink", &customerinsights.RelationshipLinkArgs{
-			Description: pulumi.StringMap{
-				"en-us": pulumi.String("Link Description"),
-			},
-			DisplayName: pulumi.StringMap{
-				"en-us": pulumi.String("Link DisplayName"),
-			},
-			HubName:         pulumi.String("sdkTestHub"),
-			InteractionType: pulumi.String("testInteraction4332"),
-			ProfilePropertyReferences: customerinsights.ParticipantProfilePropertyReferenceArray{
-				&customerinsights.ParticipantProfilePropertyReferenceArgs{
-					InteractionPropertyName: pulumi.String("profile1"),
-					ProfilePropertyName:     pulumi.String("ProfileId"),
-				},
-			},
-			RelatedProfilePropertyReferences: customerinsights.ParticipantProfilePropertyReferenceArray{
-				&customerinsights.ParticipantProfilePropertyReferenceArgs{
-					InteractionPropertyName: pulumi.String("profile1"),
-					ProfilePropertyName:     pulumi.String("ProfileId"),
-				},
-			},
-			RelationshipLinkName: pulumi.String("Somelink"),
-			RelationshipName:     pulumi.String("testProfile2326994"),
-			ResourceGroupName:    pulumi.String("TestHubRG"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-relationship_link = azurerm.customerinsights.latest.RelationshipLink("relationshipLink",
-    description={
-        "en-us": "Link Description",
-    },
-    display_name={
-        "en-us": "Link DisplayName",
-    },
-    hub_name="sdkTestHub",
-    interaction_type="testInteraction4332",
-    profile_property_references=[{
-        "interactionPropertyName": "profile1",
-        "profilePropertyName": "ProfileId",
-    }],
-    related_profile_property_references=[{
-        "interactionPropertyName": "profile1",
-        "profilePropertyName": "ProfileId",
-    }],
-    relationship_link_name="Somelink",
-    relationship_name="testProfile2326994",
-    resource_group_name="TestHubRG")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const relationshipLink = new azurerm.customerinsights.latest.RelationshipLink("relationshipLink", {
-    description: {
-        "en-us": "Link Description",
-    },
-    displayName: {
-        "en-us": "Link DisplayName",
-    },
-    hubName: "sdkTestHub",
-    interactionType: "testInteraction4332",
-    profilePropertyReferences: [{
-        interactionPropertyName: "profile1",
-        profilePropertyName: "ProfileId",
-    }],
-    relatedProfilePropertyReferences: [{
-        interactionPropertyName: "profile1",
-        profilePropertyName: "ProfileId",
-    }],
-    relationshipLinkName: "Somelink",
-    relationshipName: "testProfile2326994",
-    resourceGroupName: "TestHubRG",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a RelationshipLink Resource {#create}
@@ -1520,8 +1354,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linktype_python">
-<a href="#linktype_python" style="color: inherit; text-decoration: inherit;">link<wbr>Type</a>
+        <span id="link_type_python">
+<a href="#link_type_python" style="color: inherit; text-decoration: inherit;">link_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1686,8 +1520,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linktype_python">
-<a href="#linktype_python" style="color: inherit; text-decoration: inherit;">link<wbr>Type</a>
+        <span id="link_type_python">
+<a href="#link_type_python" style="color: inherit; text-decoration: inherit;">link_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

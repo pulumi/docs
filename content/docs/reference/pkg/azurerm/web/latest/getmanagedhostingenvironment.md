@@ -712,7 +712,7 @@ The following output properties are available:
 <a href="#ipssl_address_count_python" style="color: inherit; text-decoration: inherit;">ipssl_<wbr>address_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of ip ssl addresses reserved for the managed hosting environment{{% /md %}}</dd>
 

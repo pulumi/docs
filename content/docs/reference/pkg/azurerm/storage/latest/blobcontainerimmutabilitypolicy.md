@@ -12,106 +12,6 @@ meta_desc: "Explore the BlobContainerImmutabilityPolicy resource of the storage/
 
 The ImmutabilityPolicy property of a blob container, including Id, resource name, resource type, Etag.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### CreateOrUpdateImmutabilityPolicy
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var blobContainerImmutabilityPolicy = new AzureRM.Storage.Latest.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy", new AzureRM.Storage.Latest.BlobContainerImmutabilityPolicyArgs
-        {
-            AccountName = "sto7069",
-            AllowProtectedAppendWrites = true,
-            ContainerName = "container6397",
-            ImmutabilityPeriodSinceCreationInDays = 3,
-            ImmutabilityPolicyName = "default",
-            ResourceGroupName = "res1782",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	storage "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storage.NewBlobContainerImmutabilityPolicy(ctx, "blobContainerImmutabilityPolicy", &storage.BlobContainerImmutabilityPolicyArgs{
-			AccountName:                           pulumi.String("sto7069"),
-			AllowProtectedAppendWrites:            pulumi.Bool(true),
-			ContainerName:                         pulumi.String("container6397"),
-			ImmutabilityPeriodSinceCreationInDays: pulumi.Int(3),
-			ImmutabilityPolicyName:                pulumi.String("default"),
-			ResourceGroupName:                     pulumi.String("res1782"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-blob_container_immutability_policy = azurerm.storage.latest.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy",
-    account_name="sto7069",
-    allow_protected_append_writes=True,
-    container_name="container6397",
-    immutability_period_since_creation_in_days=3,
-    immutability_policy_name="default",
-    resource_group_name="res1782")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const blobContainerImmutabilityPolicy = new azurerm.storage.latest.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy", {
-    accountName: "sto7069",
-    allowProtectedAppendWrites: true,
-    containerName: "container6397",
-    immutabilityPeriodSinceCreationInDays: 3,
-    immutabilityPolicyName: "default",
-    resourceGroupName: "res1782",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a BlobContainerImmutabilityPolicy Resource {#create}
@@ -123,7 +23,7 @@ const blobContainerImmutabilityPolicy = new azurerm.storage.latest.BlobContainer
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/storage/latest/#pulumi_azurerm.storage/latest.BlobContainerImmutabilityPolicy">BlobContainerImmutabilityPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_protected_append_writes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">immutability_period_since_creation_in_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">immutability_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/storage/latest/#pulumi_azurerm.storage/latest.BlobContainerImmutabilityPolicy">BlobContainerImmutabilityPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_protected_append_writes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">immutability_period_since_creation_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">immutability_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -552,7 +452,7 @@ The BlobContainerImmutabilityPolicy resource accepts the following [input]({{< r
 <a href="#immutability_period_since_creation_in_days_python" style="color: inherit; text-decoration: inherit;">immutability_<wbr>period_<wbr>since_<wbr>creation_<wbr>in_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
 

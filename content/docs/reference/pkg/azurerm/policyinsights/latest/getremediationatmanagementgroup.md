@@ -781,7 +781,7 @@ The following output properties are available:
 <a href="#failed_deployments_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>deployments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of deployments required by the remediation that have failed.{{% /md %}}</dd>
 
@@ -791,7 +791,7 @@ The following output properties are available:
 <a href="#successful_deployments_python" style="color: inherit; text-decoration: inherit;">successful_<wbr>deployments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of deployments required by the remediation that have succeeded.{{% /md %}}</dd>
 
@@ -801,7 +801,7 @@ The following output properties are available:
 <a href="#total_deployments_python" style="color: inherit; text-decoration: inherit;">total_<wbr>deployments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of deployments required by the remediation.{{% /md %}}</dd>
 

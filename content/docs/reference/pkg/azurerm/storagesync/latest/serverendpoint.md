@@ -12,134 +12,6 @@ meta_desc: "Explore the ServerEndpoint resource of the storagesync/latest module
 
 Server Endpoint object.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### ServerEndpoints_Create
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var serverEndpoint = new AzureRM.StorageSync.Latest.ServerEndpoint("serverEndpoint", new AzureRM.StorageSync.Latest.ServerEndpointArgs
-        {
-            CloudTiering = "off",
-            InitialDownloadPolicy = "NamespaceThenModifiedFiles",
-            LocalCacheMode = "UpdateLocallyCachedFiles",
-            OfflineDataTransfer = "on",
-            OfflineDataTransferShareName = "myfileshare",
-            ResourceGroupName = "SampleResourceGroup_1",
-            ServerEndpointName = "SampleServerEndpoint_1",
-            ServerLocalPath = "D:\\SampleServerEndpoint_1",
-            ServerResourceId = "/subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/registeredServers/080d4133-bdb5-40a0-96a0-71a6057bfe9a",
-            StorageSyncServiceName = "SampleStorageSyncService_1",
-            SyncGroupName = "SampleSyncGroup_1",
-            TierFilesOlderThanDays = 0,
-            VolumeFreeSpacePercent = 100,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	storagesync "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storagesync/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storagesync.NewServerEndpoint(ctx, "serverEndpoint", &storagesync.ServerEndpointArgs{
-			CloudTiering:                 pulumi.String("off"),
-			InitialDownloadPolicy:        pulumi.String("NamespaceThenModifiedFiles"),
-			LocalCacheMode:               pulumi.String("UpdateLocallyCachedFiles"),
-			OfflineDataTransfer:          pulumi.String("on"),
-			OfflineDataTransferShareName: pulumi.String("myfileshare"),
-			ResourceGroupName:            pulumi.String("SampleResourceGroup_1"),
-			ServerEndpointName:           pulumi.String("SampleServerEndpoint_1"),
-			ServerLocalPath:              pulumi.String("D:\\SampleServerEndpoint_1"),
-			ServerResourceId:             pulumi.String("/subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/registeredServers/080d4133-bdb5-40a0-96a0-71a6057bfe9a"),
-			StorageSyncServiceName:       pulumi.String("SampleStorageSyncService_1"),
-			SyncGroupName:                pulumi.String("SampleSyncGroup_1"),
-			TierFilesOlderThanDays:       pulumi.Int(0),
-			VolumeFreeSpacePercent:       pulumi.Int(100),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-server_endpoint = azurerm.storagesync.latest.ServerEndpoint("serverEndpoint",
-    cloud_tiering="off",
-    initial_download_policy="NamespaceThenModifiedFiles",
-    local_cache_mode="UpdateLocallyCachedFiles",
-    offline_data_transfer="on",
-    offline_data_transfer_share_name="myfileshare",
-    resource_group_name="SampleResourceGroup_1",
-    server_endpoint_name="SampleServerEndpoint_1",
-    server_local_path="D:\\SampleServerEndpoint_1",
-    server_resource_id="/subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/registeredServers/080d4133-bdb5-40a0-96a0-71a6057bfe9a",
-    storage_sync_service_name="SampleStorageSyncService_1",
-    sync_group_name="SampleSyncGroup_1",
-    tier_files_older_than_days=0,
-    volume_free_space_percent=100)
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const serverEndpoint = new azurerm.storagesync.latest.ServerEndpoint("serverEndpoint", {
-    cloudTiering: "off",
-    initialDownloadPolicy: "NamespaceThenModifiedFiles",
-    localCacheMode: "UpdateLocallyCachedFiles",
-    offlineDataTransfer: "on",
-    offlineDataTransferShareName: "myfileshare",
-    resourceGroupName: "SampleResourceGroup_1",
-    serverEndpointName: "SampleServerEndpoint_1",
-    serverLocalPath: "D:\\SampleServerEndpoint_1",
-    serverResourceId: "/subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/registeredServers/080d4133-bdb5-40a0-96a0-71a6057bfe9a",
-    storageSyncServiceName: "SampleStorageSyncService_1",
-    syncGroupName: "SampleSyncGroup_1",
-    tierFilesOlderThanDays: 0,
-    volumeFreeSpacePercent: 100,
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ServerEndpoint Resource {#create}
@@ -151,7 +23,7 @@ const serverEndpoint = new azurerm.storagesync.latest.ServerEndpoint("serverEndp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/storagesync/latest/#pulumi_azurerm.storagesync/latest.ServerEndpoint">ServerEndpoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_tiering</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_download_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_cache_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offline_data_transfer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offline_data_transfer_share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_local_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_sync_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier_files_older_than_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">volume_free_space_percent</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/storagesync/latest/#pulumi_azurerm.storagesync/latest.ServerEndpoint">ServerEndpoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_tiering</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_download_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_cache_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offline_data_transfer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offline_data_transfer_share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_local_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_sync_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier_files_older_than_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">volume_free_space_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -890,7 +762,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tier_files_older_than_days_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>files_<wbr>older_<wbr>than_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Tier files older than days.{{% /md %}}</dd>
 
@@ -900,7 +772,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#volume_free_space_percent_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>free_<wbr>space_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Level of free space to be maintained by Cloud Tiering if it is enabled.{{% /md %}}</dd>
 
@@ -1564,7 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_hit_bytes_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>hit_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of bytes that were served from the local server{{% /md %}}</dd>
 
@@ -1574,7 +1446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_hit_bytes_percent_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>hit_<wbr>bytes_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of total bytes (hit + miss) that were served from the local server{{% /md %}}</dd>
 
@@ -1584,7 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_miss_bytes_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>miss_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of bytes that were served from the cloud{{% /md %}}</dd>
 
@@ -1886,7 +1758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_file_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>file_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd>
 
@@ -2122,7 +1994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cached_size_bytes_python" style="color: inherit; text-decoration: inherit;">cached_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Cached content size on the server{{% /md %}}</dd>
 
@@ -2142,7 +2014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#space_savings_bytes_python" style="color: inherit; text-decoration: inherit;">space_<wbr>savings_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of bytes saved on the server{{% /md %}}</dd>
 
@@ -2152,7 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#space_savings_percent_python" style="color: inherit; text-decoration: inherit;">space_<wbr>savings_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of cached size over total size{{% /md %}}</dd>
 
@@ -2162,7 +2034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_size_cloud_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>size_<wbr>cloud_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total size of content in the azure file share{{% /md %}}</dd>
 
@@ -2172,7 +2044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_size_bytes_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Volume size{{% /md %}}</dd>
 
@@ -2318,7 +2190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_volume_free_space_percent_python" style="color: inherit; text-decoration: inherit;">current_<wbr>volume_<wbr>free_<wbr>space_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Current volume free space percentage.{{% /md %}}</dd>
 
@@ -2328,7 +2200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effective_volume_free_space_policy_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>volume_<wbr>free_<wbr>space_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.{{% /md %}}</dd>
 
@@ -2454,7 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Error code (HResult){{% /md %}}</dd>
 
@@ -2464,7 +2336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filecount_python" style="color: inherit; text-decoration: inherit;">file<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of files with this error{{% /md %}}</dd>
 
@@ -2870,7 +2742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_cloud_tiering_result_python" style="color: inherit; text-decoration: inherit;">last_<wbr>cloud_<wbr>tiering_<wbr>result</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd>
 
@@ -3056,7 +2928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Error code (HResult){{% /md %}}</dd>
 
@@ -3066,7 +2938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentcount_python" style="color: inherit; text-decoration: inherit;">persistent<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of persistent files not syncing with the specified error code{{% /md %}}</dd>
 
@@ -3076,7 +2948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transientcount_python" style="color: inherit; text-decoration: inherit;">transient<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of transient files not syncing with the specified error code{{% /md %}}</dd>
 
@@ -3192,7 +3064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of occurences of the error{{% /md %}}</dd>
 
@@ -3202,7 +3074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Error code (HResult){{% /md %}}</dd>
 
@@ -3368,7 +3240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_recall_errors_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>recall_<wbr>errors_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total count of recall errors.{{% /md %}}</dd>
 
@@ -3604,7 +3476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applied_bytes_python" style="color: inherit; text-decoration: inherit;">applied_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Applied bytes{{% /md %}}</dd>
 
@@ -3614,7 +3486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applied_item_count_python" style="color: inherit; text-decoration: inherit;">applied_<wbr>item_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Applied item count.{{% /md %}}</dd>
 
@@ -3624,7 +3496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#per_item_error_count_python" style="color: inherit; text-decoration: inherit;">per_<wbr>item_<wbr>error_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Per item error count{{% /md %}}</dd>
 
@@ -3644,7 +3516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total bytes (if available){{% /md %}}</dd>
 
@@ -3654,7 +3526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_item_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>item_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total item count (if available){{% /md %}}</dd>
 
@@ -3930,7 +3802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_sync_per_item_error_count_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sync_<wbr>per_<wbr>item_<wbr>error_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Last sync per item error count.{{% /md %}}</dd>
 
@@ -3940,7 +3812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_sync_result_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sync_<wbr>result</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Last sync result (HResult){{% /md %}}</dd>
 
@@ -3970,7 +3842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistent_files_not_syncing_count_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>files_<wbr>not_<wbr>syncing_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of persistent files not syncing.{{% /md %}}</dd>
 
@@ -3980,7 +3852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transient_files_not_syncing_count_python" style="color: inherit; text-decoration: inherit;">transient_<wbr>files_<wbr>not_<wbr>syncing_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of transient files not syncing.{{% /md %}}</dd>
 
@@ -4436,7 +4308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_persistent_files_not_syncing_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>persistent_<wbr>files_<wbr>not_<wbr>syncing_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total count of persistent files not syncing (combined upload + download).{{% /md %}}</dd>
 

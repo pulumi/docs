@@ -1327,7 +1327,7 @@ The following output properties are available:
 <a href="#send_recv_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">send_<wbr>recv_<wbr>timeout_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Send and receive timeout on forwarding request to the backend. When timeout is reached, the request fails and returns.{{% /md %}}</dd>
 
@@ -1783,7 +1783,7 @@ The following output properties are available:
 <a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTP TCP port number. Must be between 1 and 65535.{{% /md %}}</dd>
 
@@ -1793,7 +1793,7 @@ The following output properties are available:
 <a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTPS TCP port number. Must be between 1 and 65535.{{% /md %}}</dd>
 
@@ -1803,7 +1803,7 @@ The following output properties are available:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.{{% /md %}}</dd>
 
@@ -1853,7 +1853,7 @@ The following output properties are available:
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Weight of this endpoint for load balancing purposes.{{% /md %}}</dd>
 
@@ -3067,7 +3067,7 @@ The following output properties are available:
 <a href="#sessionaffinityttlseconds_python" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>Ttl<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.{{% /md %}}</dd>
 
@@ -3695,7 +3695,7 @@ The following output properties are available:
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds between health probes.{{% /md %}}</dd>
 
@@ -4097,7 +4097,7 @@ The following output properties are available:
 <a href="#additionallatencymilliseconds_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Latency<wbr>Milliseconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The additional latency in milliseconds for probes to fall into the lowest latency bucket{{% /md %}}</dd>
 
@@ -4137,7 +4137,7 @@ The following output properties are available:
 <a href="#samplesize_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of samples to consider for load balancing decisions{{% /md %}}</dd>
 
@@ -4147,7 +4147,7 @@ The following output properties are available:
 <a href="#successfulsamplesrequired_python" style="color: inherit; text-decoration: inherit;">successful<wbr>Samples<wbr>Required</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of samples within the sample period that must succeed{{% /md %}}</dd>
 
@@ -5929,7 +5929,7 @@ The following output properties are available:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A priority assigned to this rule. {{% /md %}}</dd>
 

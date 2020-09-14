@@ -12,326 +12,6 @@ meta_desc: "Explore the Endpoint resource of the cdn/latest module, including ex
 
 CDN endpoint is the entity within a CDN profile containing configuration information such as origin, protocol, content caching and delivery behavior. The CDN endpoint uses the URL format <endpointname>.azureedge.net.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Endpoints_Create
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var endpoint = new AzureRM.Cdn.Latest.Endpoint("endpoint", new AzureRM.Cdn.Latest.EndpointArgs
-        {
-            ContentTypesToCompress = 
-            {
-                "text/html",
-                "application/octet-stream",
-            },
-            DefaultOriginGroup = new AzureRM.Cdn.Latest.Inputs.ResourceReferenceArgs
-            {
-                Id = "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/originGroups/originGroup1",
-            },
-            DeliveryPolicy = new AzureRM.Cdn.Latest.Inputs.EndpointPropertiesUpdateParametersDeliveryPolicyArgs
-            {
-                Description = "Test description for a policy.",
-                Rules = 
-                {
-                    new AzureRM.Cdn.Latest.Inputs.DeliveryRuleArgs
-                    {
-                        Actions = 
-                        {
-                            
-                            {
-                                { "name", "CacheExpiration" },
-                                { "parameters", 
-                                {
-                                    { "@odata.type", "#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters" },
-                                    { "cacheBehavior", "Override" },
-                                    { "cacheDuration", "10:10:09" },
-                                    { "cacheType", "All" },
-                                } },
-                            },
-                            
-                            {
-                                { "name", "ModifyResponseHeader" },
-                                { "parameters", 
-                                {
-                                    { "@odata.type", "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters" },
-                                    { "headerAction", "Overwrite" },
-                                    { "headerName", "Access-Control-Allow-Origin" },
-                                    { "value", "*" },
-                                } },
-                            },
-                            
-                            {
-                                { "name", "ModifyRequestHeader" },
-                                { "parameters", 
-                                {
-                                    { "@odata.type", "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters" },
-                                    { "headerAction", "Overwrite" },
-                                    { "headerName", "Accept-Encoding" },
-                                    { "value", "gzip" },
-                                } },
-                            },
-                        },
-                        Conditions = 
-                        {
-                            
-                            {
-                                { "name", "RemoteAddress" },
-                                { "parameters", 
-                                {
-                                    { "@odata.type", "#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters" },
-                                    { "matchValues", 
-                                    {
-                                        "192.168.1.0/24",
-                                        "10.0.0.0/24",
-                                    } },
-                                    { "negateCondition", true },
-                                    { "operator", "IPMatch" },
-                                } },
-                            },
-                        },
-                        Name = "rule1",
-                        Order = 1,
-                    },
-                },
-            },
-            EndpointName = "endpoint1",
-            IsCompressionEnabled = true,
-            IsHttpAllowed = true,
-            IsHttpsAllowed = true,
-            Location = "WestUs",
-            OriginGroups = 
-            {
-                new AzureRM.Cdn.Latest.Inputs.DeepCreatedOriginGroupArgs
-                {
-                    Name = "originGroup1",
-                },
-            },
-            OriginHostHeader = "www.bing.com",
-            OriginPath = "/photos",
-            Origins = 
-            {
-                new AzureRM.Cdn.Latest.Inputs.DeepCreatedOriginArgs
-                {
-                    Name = "origin1",
-                },
-                new AzureRM.Cdn.Latest.Inputs.DeepCreatedOriginArgs
-                {
-                    Name = "origin2",
-                },
-            },
-            ProfileName = "profile1",
-            QueryStringCachingBehavior = "BypassCaching",
-            ResourceGroupName = "RG",
-            Tags = 
-            {
-                { "key1", "value1" },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-endpoint = azurerm.cdn.latest.Endpoint("endpoint",
-    content_types_to_compress=[
-        "text/html",
-        "application/octet-stream",
-    ],
-    default_origin_group={
-        "id": "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/originGroups/originGroup1",
-    },
-    delivery_policy={
-        "description": "Test description for a policy.",
-        "rules": [{
-            "actions": [
-                {
-                    "name": "CacheExpiration",
-                    "parameters": {
-                        "@odata.type": "#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters",
-                        "cacheBehavior": "Override",
-                        "cacheDuration": "10:10:09",
-                        "cacheType": "All",
-                    },
-                },
-                {
-                    "name": "ModifyResponseHeader",
-                    "parameters": {
-                        "@odata.type": "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
-                        "headerAction": "Overwrite",
-                        "headerName": "Access-Control-Allow-Origin",
-                        "value": "*",
-                    },
-                },
-                {
-                    "name": "ModifyRequestHeader",
-                    "parameters": {
-                        "@odata.type": "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
-                        "headerAction": "Overwrite",
-                        "headerName": "Accept-Encoding",
-                        "value": "gzip",
-                    },
-                },
-            ],
-            "conditions": [{
-                "name": "RemoteAddress",
-                "parameters": {
-                    "@odata.type": "#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters",
-                    "matchValues": [
-                        "192.168.1.0/24",
-                        "10.0.0.0/24",
-                    ],
-                    "negateCondition": True,
-                    "operator": "IPMatch",
-                },
-            }],
-            "name": "rule1",
-            "order": 1,
-        }],
-    },
-    endpoint_name="endpoint1",
-    is_compression_enabled=True,
-    is_http_allowed=True,
-    is_https_allowed=True,
-    location="WestUs",
-    origin_groups=[{
-        "name": "originGroup1",
-    }],
-    origin_host_header="www.bing.com",
-    origin_path="/photos",
-    origins=[
-        {
-            "name": "origin1",
-        },
-        {
-            "name": "origin2",
-        },
-    ],
-    profile_name="profile1",
-    query_string_caching_behavior="BypassCaching",
-    resource_group_name="RG",
-    tags={
-        "key1": "value1",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const endpoint = new azurerm.cdn.latest.Endpoint("endpoint", {
-    contentTypesToCompress: [
-        "text/html",
-        "application/octet-stream",
-    ],
-    defaultOriginGroup: {
-        id: "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/originGroups/originGroup1",
-    },
-    deliveryPolicy: {
-        description: "Test description for a policy.",
-        rules: [{
-            actions: [
-                {
-                    name: "CacheExpiration",
-                    parameters: {
-                        "@odata.type": "#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters",
-                        cacheBehavior: "Override",
-                        cacheDuration: "10:10:09",
-                        cacheType: "All",
-                    },
-                },
-                {
-                    name: "ModifyResponseHeader",
-                    parameters: {
-                        "@odata.type": "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
-                        headerAction: "Overwrite",
-                        headerName: "Access-Control-Allow-Origin",
-                        value: "*",
-                    },
-                },
-                {
-                    name: "ModifyRequestHeader",
-                    parameters: {
-                        "@odata.type": "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
-                        headerAction: "Overwrite",
-                        headerName: "Accept-Encoding",
-                        value: "gzip",
-                    },
-                },
-            ],
-            conditions: [{
-                name: "RemoteAddress",
-                parameters: {
-                    "@odata.type": "#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters",
-                    matchValues: [
-                        "192.168.1.0/24",
-                        "10.0.0.0/24",
-                    ],
-                    negateCondition: true,
-                    operator: "IPMatch",
-                },
-            }],
-            name: "rule1",
-            order: 1,
-        }],
-    },
-    endpointName: "endpoint1",
-    isCompressionEnabled: true,
-    isHttpAllowed: true,
-    isHttpsAllowed: true,
-    location: "WestUs",
-    originGroups: [{
-        name: "originGroup1",
-    }],
-    originHostHeader: "www.bing.com",
-    originPath: "/photos",
-    origins: [
-        {
-            name: "origin1",
-        },
-        {
-            name: "origin2",
-        },
-    ],
-    profileName: "profile1",
-    queryStringCachingBehavior: "BypassCaching",
-    resourceGroupName: "RG",
-    tags: {
-        key1: "value1",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Endpoint Resource {#create}
@@ -3422,7 +3102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The value of the HTTP port. Must be between 1 and 65535.{{% /md %}}</dd>
 
@@ -3432,7 +3112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The value of the HTTPS port. Must be between 1 and 65535.{{% /md %}}</dd>
 
@@ -3452,7 +3132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.{{% /md %}}</dd>
 
@@ -3502,7 +3182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Weight of the origin in given origin group for load balancing. Must be between 1 and 1000{{% /md %}}</dd>
 
@@ -3748,7 +3428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traffic_restoration_time_to_healed_or_new_endpoints_in_minutes_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>restoration_<wbr>time_<wbr>to_<wbr>healed_<wbr>or_<wbr>new_<wbr>endpoints_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.{{% /md %}}</dd>
 
@@ -3994,7 +3674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traffic_restoration_time_to_healed_or_new_endpoints_in_minutes_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>restoration_<wbr>time_<wbr>to_<wbr>healed_<wbr>or_<wbr>new_<wbr>endpoints_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.{{% /md %}}</dd>
 
@@ -4440,7 +4120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The value of the HTTP port. Must be between 1 and 65535.{{% /md %}}</dd>
 
@@ -4450,7 +4130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The value of the HTTPS port. Must be between 1 and 65535.{{% /md %}}</dd>
 
@@ -4470,7 +4150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.{{% /md %}}</dd>
 
@@ -4520,7 +4200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Weight of the origin in given origin group for load balancing. Must be between 1 and 1000{{% /md %}}</dd>
 
@@ -4706,7 +4386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.{{% /md %}}</dd>
 
@@ -7320,7 +7000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.{{% /md %}}</dd>
 
@@ -9372,7 +9052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd>
 
@@ -9578,7 +9258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd>
 
@@ -9724,7 +9404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#begin_python" style="color: inherit; text-decoration: inherit;">begin</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd>
 
@@ -9734,7 +9414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd>
 
@@ -9850,7 +9530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#begin_python" style="color: inherit; text-decoration: inherit;">begin</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd>
 
@@ -9860,7 +9540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd>
 
@@ -15610,7 +15290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_based_failover_threshold_percentage_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>failover_<wbr>threshold_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd>
 
@@ -15776,7 +15456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_based_failover_threshold_percentage_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>failover_<wbr>threshold_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd>
 

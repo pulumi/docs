@@ -12,98 +12,6 @@ meta_desc: "Explore the ProtectionContainer resource of the recoveryservices/lat
 
 Base class for container with backup items. Containers with specific workloads are derived from this class.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### RegisterAzure Storage ProtectionContainers
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var protectionContainer = new AzureRM.RecoveryServices.Latest.ProtectionContainer("protectionContainer", new AzureRM.RecoveryServices.Latest.ProtectionContainerArgs
-        {
-            ContainerName = "VMAppContainer;Compute;testRG;testSQL",
-            FabricName = "Azure",
-            ResourceGroupName = "test-rg",
-            VaultName = "testvault",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	recoveryservices "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := recoveryservices.NewProtectionContainer(ctx, "protectionContainer", &recoveryservices.ProtectionContainerArgs{
-			ContainerName:     pulumi.String("VMAppContainer;Compute;testRG;testSQL"),
-			FabricName:        pulumi.String("Azure"),
-			ResourceGroupName: pulumi.String("test-rg"),
-			VaultName:         pulumi.String("testvault"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-protection_container = azurerm.recoveryservices.latest.ProtectionContainer("protectionContainer",
-    container_name="VMAppContainer;Compute;testRG;testSQL",
-    fabric_name="Azure",
-    resource_group_name="test-rg",
-    vault_name="testvault")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const protectionContainer = new azurerm.recoveryservices.latest.ProtectionContainer("protectionContainer", {
-    containerName: "VMAppContainer;Compute;testRG;testSQL",
-    fabricName: "Azure",
-    resourceGroupName: "test-rg",
-    vaultName: "testvault",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ProtectionContainer Resource {#create}
@@ -1530,7 +1438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd>
 
@@ -1896,7 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd>
 
@@ -3252,8 +3160,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aadtenantid_python">
-<a href="#aadtenantid_python" style="color: inherit; text-decoration: inherit;">aad<wbr>Tenant<wbr>Id</a>
+        <span id="aad_tenant_id_python">
+<a href="#aad_tenant_id_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>tenant_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3458,8 +3366,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aadtenantid_python">
-<a href="#aadtenantid_python" style="color: inherit; text-decoration: inherit;">aad<wbr>Tenant<wbr>Id</a>
+        <span id="aad_tenant_id_python">
+<a href="#aad_tenant_id_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>tenant_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4460,7 +4368,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd>
 
@@ -4986,7 +4894,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd>
 
@@ -7474,7 +7382,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd>
 
@@ -7680,7 +7588,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd>
 
@@ -8136,7 +8044,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}ContainerID represents the container.{{% /md %}}</dd>
 
@@ -8186,7 +8094,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd>
 
@@ -9114,7 +9022,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}ContainerID represents the container.{{% /md %}}</dd>
 
@@ -9164,7 +9072,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd>
 
@@ -9330,7 +9238,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#itemcount_python" style="color: inherit; text-decoration: inherit;">item<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Contains the protectable item Count inside this Container.{{% /md %}}</dd>
 
@@ -9496,7 +9404,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#itemcount_python" style="color: inherit; text-decoration: inherit;">item<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Contains the protectable item Count inside this Container.{{% /md %}}</dd>
 

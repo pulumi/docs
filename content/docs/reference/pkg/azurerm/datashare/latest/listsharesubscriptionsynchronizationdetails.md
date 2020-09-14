@@ -999,7 +999,7 @@ The following output properties are available:
 <a href="#durationms_python" style="color: inherit; text-decoration: inherit;">duration<wbr>Ms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Duration of data set level copy{{% /md %}}</dd>
 
@@ -1019,7 +1019,7 @@ The following output properties are available:
 <a href="#filesread_python" style="color: inherit; text-decoration: inherit;">files<wbr>Read</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of files read from the source data set{{% /md %}}</dd>
 
@@ -1029,7 +1029,7 @@ The following output properties are available:
 <a href="#fileswritten_python" style="color: inherit; text-decoration: inherit;">files<wbr>Written</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of files written into the sink data set{{% /md %}}</dd>
 
@@ -1059,7 +1059,7 @@ The following output properties are available:
 <a href="#rowscopied_python" style="color: inherit; text-decoration: inherit;">rows<wbr>Copied</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of files copied into the sink data set{{% /md %}}</dd>
 
@@ -1069,7 +1069,7 @@ The following output properties are available:
 <a href="#rowsread_python" style="color: inherit; text-decoration: inherit;">rows<wbr>Read</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of rows read from the source data set.{{% /md %}}</dd>
 
@@ -1079,7 +1079,7 @@ The following output properties are available:
 <a href="#sizeread_python" style="color: inherit; text-decoration: inherit;">size<wbr>Read</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the data read from the source data set in bytes{{% /md %}}</dd>
 
@@ -1089,7 +1089,7 @@ The following output properties are available:
 <a href="#sizewritten_python" style="color: inherit; text-decoration: inherit;">size<wbr>Written</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the data written into the sink data set in bytes{{% /md %}}</dd>
 
@@ -1115,11 +1115,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="vcore_python">
-<a href="#vcore_python" style="color: inherit; text-decoration: inherit;">v<wbr>Core</a>
+        <span id="v_core_python">
+<a href="#v_core_python" style="color: inherit; text-decoration: inherit;">v_<wbr>core</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The vCore units consumed for the data set synchronization{{% /md %}}</dd>
 

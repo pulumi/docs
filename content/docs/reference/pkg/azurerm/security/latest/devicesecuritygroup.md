@@ -12,124 +12,6 @@ meta_desc: "Explore the DeviceSecurityGroup resource of the security/latest modu
 
 The device security group resource
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update a device security group for the specified IoT hub resource
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var deviceSecurityGroup = new AzureRM.Security.Latest.DeviceSecurityGroup("deviceSecurityGroup", new AzureRM.Security.Latest.DeviceSecurityGroupArgs
-        {
-            DeviceSecurityGroupName = "samplesecuritygroup",
-            ResourceId = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub",
-            TimeWindowRules = 
-            {
-                new AzureRM.Security.Latest.Inputs.TimeWindowCustomAlertRuleArgs
-                {
-                    IsEnabled = true,
-                    MaxThreshold = 30,
-                    MinThreshold = 0,
-                    RuleType = "ActiveConnectionsNotInAllowedRange",
-                    TimeWindowSize = "PT05M",
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	security "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/security/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := security.NewDeviceSecurityGroup(ctx, "deviceSecurityGroup", &security.DeviceSecurityGroupArgs{
-			DeviceSecurityGroupName: pulumi.String("samplesecuritygroup"),
-			ResourceId:              pulumi.String("subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub"),
-			TimeWindowRules: security.TimeWindowCustomAlertRuleArray{
-				&security.TimeWindowCustomAlertRuleArgs{
-					IsEnabled:      pulumi.Bool(true),
-					MaxThreshold:   pulumi.Int(30),
-					MinThreshold:   pulumi.Int(0),
-					RuleType:       pulumi.String("ActiveConnectionsNotInAllowedRange"),
-					TimeWindowSize: pulumi.String("PT05M"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-device_security_group = azurerm.security.latest.DeviceSecurityGroup("deviceSecurityGroup",
-    device_security_group_name="samplesecuritygroup",
-    resource_id="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub",
-    time_window_rules=[{
-        "isEnabled": True,
-        "maxThreshold": 30,
-        "minThreshold": 0,
-        "ruleType": "ActiveConnectionsNotInAllowedRange",
-        "timeWindowSize": "PT05M",
-    }])
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const deviceSecurityGroup = new azurerm.security.latest.DeviceSecurityGroup("deviceSecurityGroup", {
-    deviceSecurityGroupName: "samplesecuritygroup",
-    resourceId: "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub",
-    timeWindowRules: [{
-        isEnabled: true,
-        maxThreshold: 30,
-        minThreshold: 0,
-        ruleType: "ActiveConnectionsNotInAllowedRange",
-        timeWindowSize: "PT05M",
-    }],
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a DeviceSecurityGroup Resource {#create}
@@ -1638,7 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxthreshold_python" style="color: inherit; text-decoration: inherit;">max<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
 
@@ -1648,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minthreshold_python" style="color: inherit; text-decoration: inherit;">min<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
 
@@ -1884,7 +1766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxthreshold_python" style="color: inherit; text-decoration: inherit;">max<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
 
@@ -1894,7 +1776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minthreshold_python" style="color: inherit; text-decoration: inherit;">min<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
 
@@ -2080,7 +1962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxthreshold_python" style="color: inherit; text-decoration: inherit;">max<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
 
@@ -2090,7 +1972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minthreshold_python" style="color: inherit; text-decoration: inherit;">min<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
 
@@ -2366,7 +2248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxthreshold_python" style="color: inherit; text-decoration: inherit;">max<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
 
@@ -2376,7 +2258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minthreshold_python" style="color: inherit; text-decoration: inherit;">min<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
 

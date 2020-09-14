@@ -12,166 +12,6 @@ meta_desc: "Explore the PeerAsn resource of the peering/latest module, including
 
 The essential information related to the peer's ASN.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create a peer ASN
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var peerAsn = new AzureRM.Peering.Latest.PeerAsn("peerAsn", new AzureRM.Peering.Latest.PeerAsnArgs
-        {
-            PeerAsn = 65000,
-            PeerAsnName = "peerAsnName",
-            PeerContactDetail = 
-            {
-                new AzureRM.Peering.Latest.Inputs.ContactDetailArgs
-                {
-                    Email = "noc@contoso.com",
-                    Phone = "+1 (234) 567-8999",
-                    Role = "Noc",
-                },
-                new AzureRM.Peering.Latest.Inputs.ContactDetailArgs
-                {
-                    Email = "abc@contoso.com",
-                    Phone = "+1 (234) 567-8900",
-                    Role = "Policy",
-                },
-                new AzureRM.Peering.Latest.Inputs.ContactDetailArgs
-                {
-                    Email = "xyz@contoso.com",
-                    Phone = "+1 (234) 567-8900",
-                    Role = "Technical",
-                },
-            },
-            PeerName = "Contoso",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	peering "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/peering/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := peering.NewPeerAsn(ctx, "peerAsn", &peering.PeerAsnArgs{
-			PeerAsn:     pulumi.Int(65000),
-			PeerAsnName: pulumi.String("peerAsnName"),
-			PeerContactDetail: peering.ContactDetailArray{
-				&peering.ContactDetailArgs{
-					Email: pulumi.String("noc@contoso.com"),
-					Phone: pulumi.String("+1 (234) 567-8999"),
-					Role:  pulumi.String("Noc"),
-				},
-				&peering.ContactDetailArgs{
-					Email: pulumi.String("abc@contoso.com"),
-					Phone: pulumi.String("+1 (234) 567-8900"),
-					Role:  pulumi.String("Policy"),
-				},
-				&peering.ContactDetailArgs{
-					Email: pulumi.String("xyz@contoso.com"),
-					Phone: pulumi.String("+1 (234) 567-8900"),
-					Role:  pulumi.String("Technical"),
-				},
-			},
-			PeerName: pulumi.String("Contoso"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-peer_asn = azurerm.peering.latest.PeerAsn("peerAsn",
-    peer_asn=65000,
-    peer_asn_name="peerAsnName",
-    peer_contact_detail=[
-        {
-            "email": "noc@contoso.com",
-            "phone": "+1 (234) 567-8999",
-            "role": "Noc",
-        },
-        {
-            "email": "abc@contoso.com",
-            "phone": "+1 (234) 567-8900",
-            "role": "Policy",
-        },
-        {
-            "email": "xyz@contoso.com",
-            "phone": "+1 (234) 567-8900",
-            "role": "Technical",
-        },
-    ],
-    peer_name="Contoso")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const peerAsn = new azurerm.peering.latest.PeerAsn("peerAsn", {
-    peerAsn: 65000,
-    peerAsnName: "peerAsnName",
-    peerContactDetail: [
-        {
-            email: "noc@contoso.com",
-            phone: "+1 (234) 567-8999",
-            role: "Noc",
-        },
-        {
-            email: "abc@contoso.com",
-            phone: "+1 (234) 567-8900",
-            role: "Policy",
-        },
-        {
-            email: "xyz@contoso.com",
-            phone: "+1 (234) 567-8900",
-            role: "Technical",
-        },
-    ],
-    peerName: "Contoso",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a PeerAsn Resource {#create}
@@ -183,7 +23,7 @@ const peerAsn = new azurerm.peering.latest.PeerAsn("peerAsn", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/peering/latest/#pulumi_azurerm.peering/latest.PeerAsn">PeerAsn</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">peer_asn_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_contact_detail</span><span class="p">:</span> <span class="nx">Optional[List[ContactDetail]]</span> = None<span class="p">, </span><span class="nx">peer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validation_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/peering/latest/#pulumi_azurerm.peering/latest.PeerAsn">PeerAsn</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">peer_asn_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_contact_detail</span><span class="p">:</span> <span class="nx">Optional[List[ContactDetail]]</span> = None<span class="p">, </span><span class="nx">peer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validation_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -542,7 +382,7 @@ The PeerAsn resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Autonomous System Number (ASN) of the peer.{{% /md %}}</dd>
 

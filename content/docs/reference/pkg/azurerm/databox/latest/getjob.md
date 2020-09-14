@@ -2504,7 +2504,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#bytesprocessed_python" style="color: inherit; text-decoration: inherit;">bytes<wbr>Processed</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}To indicate bytes transferred.{{% /md %}}</dd>
 
@@ -2524,7 +2524,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#directorieserroredout_python" style="color: inherit; text-decoration: inherit;">directories<wbr>Errored<wbr>Out</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}To indicate directories errored out in the job.{{% /md %}}</dd>
 
@@ -2534,7 +2534,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#fileserroredout_python" style="color: inherit; text-decoration: inherit;">files<wbr>Errored<wbr>Out</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of files which could not be copied{{% /md %}}</dd>
 
@@ -2544,7 +2544,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#filesprocessed_python" style="color: inherit; text-decoration: inherit;">files<wbr>Processed</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of files processed{{% /md %}}</dd>
 
@@ -2554,7 +2554,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#invaliddirectoriesprocessed_python" style="color: inherit; text-decoration: inherit;">invalid<wbr>Directories<wbr>Processed</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}To indicate directories renamed{{% /md %}}</dd>
 
@@ -2564,7 +2564,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#invalidfilebytesuploaded_python" style="color: inherit; text-decoration: inherit;">invalid<wbr>File<wbr>Bytes<wbr>Uploaded</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total amount of data not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
 
@@ -2574,7 +2574,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#invalidfilesprocessed_python" style="color: inherit; text-decoration: inherit;">invalid<wbr>Files<wbr>Processed</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of files not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
 
@@ -2595,7 +2595,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#renamedcontainercount_python" style="color: inherit; text-decoration: inherit;">renamed<wbr>Container<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of folders not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
 
@@ -2615,7 +2615,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#totalbytestoprocess_python" style="color: inherit; text-decoration: inherit;">total<wbr>Bytes<wbr>To<wbr>Process</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total amount of data to be processed by the job.{{% /md %}}</dd>
 
@@ -2625,7 +2625,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#totalfilestoprocess_python" style="color: inherit; text-decoration: inherit;">total<wbr>Files<wbr>To<wbr>Process</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total files to process{{% /md %}}</dd>
 
@@ -3143,7 +3143,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#bytescopied_python" style="color: inherit; text-decoration: inherit;">bytes<wbr>Copied</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Bytes copied during the copy of disk.{{% /md %}}</dd>
 
@@ -3153,7 +3153,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#percent_complete_python" style="color: inherit; text-decoration: inherit;">percent_<wbr>complete</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Indicates the percentage completed for the copy of the disk.{{% /md %}}</dd>
 
@@ -3859,7 +3859,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#expecteddatasizeinterabytes_python" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
 
@@ -4691,7 +4691,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#expecteddatasizeinterabytes_python" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
 
@@ -5337,7 +5337,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#expecteddatasizeinterabytes_python" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
 

@@ -12,107 +12,6 @@ meta_desc: "Explore the PrivateZone resource of the network/latest module, inclu
 
 Describes a Private DNS zone.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### PUT Private DNS Zone
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var privateZone = new AzureRM.Network.Latest.PrivateZone("privateZone", new AzureRM.Network.Latest.PrivateZoneArgs
-        {
-            Location = "Global",
-            PrivateZoneName = "privatezone1.com",
-            ResourceGroupName = "resourceGroup1",
-            Tags = 
-            {
-                { "key1", "value1" },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewPrivateZone(ctx, "privateZone", &network.PrivateZoneArgs{
-			Location:          pulumi.String("Global"),
-			PrivateZoneName:   pulumi.String("privatezone1.com"),
-			ResourceGroupName: pulumi.String("resourceGroup1"),
-			Tags: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-private_zone = azurerm.network.latest.PrivateZone("privateZone",
-    location="Global",
-    private_zone_name="privatezone1.com",
-    resource_group_name="resourceGroup1",
-    tags={
-        "key1": "value1",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const privateZone = new azurerm.network.latest.PrivateZone("privateZone", {
-    location: "Global",
-    privateZoneName: "privatezone1.com",
-    resourceGroupName: "resourceGroup1",
-    tags: {
-        key1: "value1",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a PrivateZone Resource {#create}
@@ -872,7 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_number_of_record_sets_python" style="color: inherit; text-decoration: inherit;">max_<wbr>number_<wbr>of_<wbr>record_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
 
@@ -882,7 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_number_of_virtual_network_links_python" style="color: inherit; text-decoration: inherit;">max_<wbr>number_<wbr>of_<wbr>virtual_<wbr>network_<wbr>links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
 
@@ -892,7 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_number_of_virtual_network_links_with_registration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>number_<wbr>of_<wbr>virtual_<wbr>network_<wbr>links_<wbr>with_<wbr>registration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
 
@@ -912,7 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_record_sets_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>record_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
 
@@ -922,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_virtual_network_links_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>virtual_<wbr>network_<wbr>links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
 
@@ -932,7 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_virtual_network_links_with_registration_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>virtual_<wbr>network_<wbr>links_<wbr>with_<wbr>registration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
 

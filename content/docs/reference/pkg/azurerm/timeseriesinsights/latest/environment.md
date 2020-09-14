@@ -12,115 +12,6 @@ meta_desc: "Explore the Environment resource of the timeseriesinsights/latest mo
 
 An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### EnvironmentsCreate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var environment = new AzureRM.TimeSeriesInsights.Latest.Environment("environment", new AzureRM.TimeSeriesInsights.Latest.EnvironmentArgs
-        {
-            EnvironmentName = "env1",
-            Kind = "Gen1",
-            Location = "West US",
-            ResourceGroupName = "rg1",
-            Sku = new AzureRM.TimeSeriesInsights.Latest.Inputs.SkuArgs
-            {
-                Capacity = 1,
-                Name = "S1",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	timeseriesinsights "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/timeseriesinsights/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := timeseriesinsights.NewEnvironment(ctx, "environment", &timeseriesinsights.EnvironmentArgs{
-			EnvironmentName:   pulumi.String("env1"),
-			Kind:              pulumi.String("Gen1"),
-			Location:          pulumi.String("West US"),
-			ResourceGroupName: pulumi.String("rg1"),
-			Sku: &timeseriesinsights.SkuArgs{
-				Capacity: pulumi.Int(1),
-				Name:     pulumi.String("S1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-environment = azurerm.timeseriesinsights.latest.Environment("environment",
-    environment_name="env1",
-    kind="Gen1",
-    location="West US",
-    resource_group_name="rg1",
-    sku={
-        "capacity": 1,
-        "name": "S1",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const environment = new azurerm.timeseriesinsights.latest.Environment("environment", {
-    environmentName: "env1",
-    kind: "Gen1",
-    location: "West US",
-    resourceGroupName: "rg1",
-    sku: {
-        capacity: 1,
-        name: "S1",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Environment Resource {#create}
@@ -845,7 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The capacity of the sku. For Gen1 environments, this value can be changed to support scale out of environments after they have been created.{{% /md %}}</dd>
 
@@ -971,7 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The capacity of the sku. For Gen1 environments, this value can be changed to support scale out of environments after they have been created.{{% /md %}}</dd>
 

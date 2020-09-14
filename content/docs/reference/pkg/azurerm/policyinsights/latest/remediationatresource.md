@@ -12,94 +12,6 @@ meta_desc: "Explore the RemediationAtResource resource of the policyinsights/lat
 
 The remediation definition.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create remediation at individual resource scope
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var remediationAtResource = new AzureRM.PolicyInsights.Latest.RemediationAtResource("remediationAtResource", new AzureRM.PolicyInsights.Latest.RemediationAtResourceArgs
-        {
-            PolicyAssignmentId = "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
-            RemediationName = "storageRemediation",
-            ResourceId = "subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourcegroups/myResourceGroup/providers/microsoft.storage/storageaccounts/storAc1",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	policyinsights "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/policyinsights/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := policyinsights.NewRemediationAtResource(ctx, "remediationAtResource", &policyinsights.RemediationAtResourceArgs{
-			PolicyAssignmentId: pulumi.String("/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5"),
-			RemediationName:    pulumi.String("storageRemediation"),
-			ResourceId:         pulumi.String("subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourcegroups/myResourceGroup/providers/microsoft.storage/storageaccounts/storAc1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-remediation_at_resource = azurerm.policyinsights.latest.RemediationAtResource("remediationAtResource",
-    policy_assignment_id="/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
-    remediation_name="storageRemediation",
-    resource_id="subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourcegroups/myResourceGroup/providers/microsoft.storage/storageaccounts/storAc1")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const remediationAtResource = new azurerm.policyinsights.latest.RemediationAtResource("remediationAtResource", {
-    policyAssignmentId: "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
-    remediationName: "storageRemediation",
-    resourceId: "subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourcegroups/myResourceGroup/providers/microsoft.storage/storageaccounts/storAc1",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a RemediationAtResource Resource {#create}
@@ -1014,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failed_deployments_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>deployments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of deployments required by the remediation that have failed.{{% /md %}}</dd>
 
@@ -1024,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successful_deployments_python" style="color: inherit; text-decoration: inherit;">successful_<wbr>deployments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of deployments required by the remediation that have succeeded.{{% /md %}}</dd>
 
@@ -1034,7 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_deployments_python" style="color: inherit; text-decoration: inherit;">total_<wbr>deployments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of deployments required by the remediation.{{% /md %}}</dd>
 

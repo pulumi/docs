@@ -12,215 +12,6 @@ meta_desc: "Explore the Account resource of the datalakeanalytics/latest module,
 
 A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Creates the specified Data Lake Analytics account. This supplies the user with computation services for Data Lake Analytics workloads.
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var account = new AzureRM.DataLakeAnalytics.Latest.Account("account", new AzureRM.DataLakeAnalytics.Latest.AccountArgs
-        {
-            AccountName = "contosoadla",
-            ComputePolicies = 
-            {
-                new AzureRM.DataLakeAnalytics.Latest.Inputs.CreateComputePolicyWithAccountParametersArgs
-                {
-                    Name = "test_policy",
-                },
-            },
-            DataLakeStoreAccounts = 
-            {
-                new AzureRM.DataLakeAnalytics.Latest.Inputs.AddDataLakeStoreWithAccountParametersArgs
-                {
-                    Name = "test_adls",
-                },
-            },
-            DefaultDataLakeStoreAccount = "test_adls",
-            FirewallAllowAzureIps = "Enabled",
-            FirewallRules = 
-            {
-                new AzureRM.DataLakeAnalytics.Latest.Inputs.CreateFirewallRuleWithAccountParametersArgs
-                {
-                    Name = "test_rule",
-                },
-            },
-            FirewallState = "Enabled",
-            Location = "eastus2",
-            MaxDegreeOfParallelism = 30,
-            MaxDegreeOfParallelismPerJob = 1,
-            MaxJobCount = 3,
-            MinPriorityPerJob = 1,
-            NewTier = "Consumption",
-            QueryStoreRetention = 30,
-            ResourceGroupName = "contosorg",
-            StorageAccounts = 
-            {
-                new AzureRM.DataLakeAnalytics.Latest.Inputs.AddStorageAccountWithAccountParametersArgs
-                {
-                    Name = "test_storage",
-                },
-            },
-            Tags = 
-            {
-                { "test_key", "test_value" },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	datalakeanalytics "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/datalakeanalytics/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datalakeanalytics.NewAccount(ctx, "account", &datalakeanalytics.AccountArgs{
-			AccountName: pulumi.String("contosoadla"),
-			ComputePolicies: datalakeanalytics.CreateComputePolicyWithAccountParametersArray{
-				&datalakeanalytics.CreateComputePolicyWithAccountParametersArgs{
-					Name: pulumi.String("test_policy"),
-				},
-			},
-			DataLakeStoreAccounts: datalakeanalytics.AddDataLakeStoreWithAccountParametersArray{
-				&datalakeanalytics.AddDataLakeStoreWithAccountParametersArgs{
-					Name: pulumi.String("test_adls"),
-				},
-			},
-			DefaultDataLakeStoreAccount: pulumi.String("test_adls"),
-			FirewallAllowAzureIps:       pulumi.String("Enabled"),
-			FirewallRules: datalakeanalytics.CreateFirewallRuleWithAccountParametersArray{
-				&datalakeanalytics.CreateFirewallRuleWithAccountParametersArgs{
-					Name: pulumi.String("test_rule"),
-				},
-			},
-			FirewallState:                pulumi.String("Enabled"),
-			Location:                     pulumi.String("eastus2"),
-			MaxDegreeOfParallelism:       pulumi.Int(30),
-			MaxDegreeOfParallelismPerJob: pulumi.Int(1),
-			MaxJobCount:                  pulumi.Int(3),
-			MinPriorityPerJob:            pulumi.Int(1),
-			NewTier:                      pulumi.String("Consumption"),
-			QueryStoreRetention:          pulumi.Int(30),
-			ResourceGroupName:            pulumi.String("contosorg"),
-			StorageAccounts: datalakeanalytics.AddStorageAccountWithAccountParametersArray{
-				&datalakeanalytics.AddStorageAccountWithAccountParametersArgs{
-					Name: pulumi.String("test_storage"),
-				},
-			},
-			Tags: pulumi.StringMap{
-				"test_key": pulumi.String("test_value"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-account = azurerm.datalakeanalytics.latest.Account("account",
-    account_name="contosoadla",
-    compute_policies=[{
-        "name": "test_policy",
-    }],
-    data_lake_store_accounts=[{
-        "name": "test_adls",
-    }],
-    default_data_lake_store_account="test_adls",
-    firewall_allow_azure_ips="Enabled",
-    firewall_rules=[{
-        "name": "test_rule",
-    }],
-    firewall_state="Enabled",
-    location="eastus2",
-    max_degree_of_parallelism=30,
-    max_degree_of_parallelism_per_job=1,
-    max_job_count=3,
-    min_priority_per_job=1,
-    new_tier="Consumption",
-    query_store_retention=30,
-    resource_group_name="contosorg",
-    storage_accounts=[{
-        "name": "test_storage",
-    }],
-    tags={
-        "test_key": "test_value",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const account = new azurerm.datalakeanalytics.latest.Account("account", {
-    accountName: "contosoadla",
-    computePolicies: [{
-        name: "test_policy",
-    }],
-    dataLakeStoreAccounts: [{
-        name: "test_adls",
-    }],
-    defaultDataLakeStoreAccount: "test_adls",
-    firewallAllowAzureIps: "Enabled",
-    firewallRules: [{
-        name: "test_rule",
-    }],
-    firewallState: "Enabled",
-    location: "eastus2",
-    maxDegreeOfParallelism: 30,
-    maxDegreeOfParallelismPerJob: 1,
-    maxJobCount: 3,
-    minPriorityPerJob: 1,
-    newTier: "Consumption",
-    queryStoreRetention: 30,
-    resourceGroupName: "contosorg",
-    storageAccounts: [{
-        name: "test_storage",
-    }],
-    tags: {
-        test_key: "test_value",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Account Resource {#create}
@@ -232,7 +23,7 @@ const account = new azurerm.datalakeanalytics.latest.Account("account", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/datalakeanalytics/latest/#pulumi_azurerm.datalakeanalytics/latest.Account">Account</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compute_policies</span><span class="p">:</span> <span class="nx">Optional[List[CreateComputePolicyWithAccountParameters]]</span> = None<span class="p">, </span><span class="nx">data_lake_store_accounts</span><span class="p">:</span> <span class="nx">Optional[List[AddDataLakeStoreWithAccountParameters]]</span> = None<span class="p">, </span><span class="nx">default_data_lake_store_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_allow_azure_ips</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_rules</span><span class="p">:</span> <span class="nx">Optional[List[CreateFirewallRuleWithAccountParameters]]</span> = None<span class="p">, </span><span class="nx">firewall_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_degree_of_parallelism</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">max_degree_of_parallelism_per_job</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">max_job_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_priority_per_job</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">new_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_store_retention</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[AddStorageAccountWithAccountParameters]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/datalakeanalytics/latest/#pulumi_azurerm.datalakeanalytics/latest.Account">Account</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compute_policies</span><span class="p">:</span> <span class="nx">Optional[List[CreateComputePolicyWithAccountParameters]]</span> = None<span class="p">, </span><span class="nx">data_lake_store_accounts</span><span class="p">:</span> <span class="nx">Optional[List[AddDataLakeStoreWithAccountParameters]]</span> = None<span class="p">, </span><span class="nx">default_data_lake_store_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_allow_azure_ips</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_rules</span><span class="p">:</span> <span class="nx">Optional[List[CreateFirewallRuleWithAccountParameters]]</span> = None<span class="p">, </span><span class="nx">firewall_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_degree_of_parallelism</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_degree_of_parallelism_per_job</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_job_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_priority_per_job</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">new_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_store_retention</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[AddStorageAccountWithAccountParameters]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1031,7 +822,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#max_degree_of_parallelism_python" style="color: inherit; text-decoration: inherit;">max_<wbr>degree_<wbr>of_<wbr>parallelism</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum supported degree of parallelism for this account.{{% /md %}}</dd>
 
@@ -1041,7 +832,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#max_degree_of_parallelism_per_job_python" style="color: inherit; text-decoration: inherit;">max_<wbr>degree_<wbr>of_<wbr>parallelism_<wbr>per_<wbr>job</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum supported degree of parallelism per job for this account.{{% /md %}}</dd>
 
@@ -1051,7 +842,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#max_job_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>job_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum supported jobs running under the account at the same time.{{% /md %}}</dd>
 
@@ -1061,7 +852,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#min_priority_per_job_python" style="color: inherit; text-decoration: inherit;">min_<wbr>priority_<wbr>per_<wbr>job</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum supported priority per job for this account.{{% /md %}}</dd>
 
@@ -1081,7 +872,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#query_store_retention_python" style="color: inherit; text-decoration: inherit;">query_<wbr>store_<wbr>retention</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of days that job metadata is retained.{{% /md %}}</dd>
 
@@ -1600,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_max_degree_of_parallelism_python" style="color: inherit; text-decoration: inherit;">system_<wbr>max_<wbr>degree_<wbr>of_<wbr>parallelism</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.{{% /md %}}</dd>
 
@@ -1610,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_max_job_count_python" style="color: inherit; text-decoration: inherit;">system_<wbr>max_<wbr>job_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.{{% /md %}}</dd>
 
@@ -2197,7 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_degree_of_parallelism_per_job_python" style="color: inherit; text-decoration: inherit;">max_<wbr>degree_<wbr>of_<wbr>parallelism_<wbr>per_<wbr>job</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum degree of parallelism per job this user can use to submit jobs.{{% /md %}}</dd>
 
@@ -2207,7 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_priority_per_job_python" style="color: inherit; text-decoration: inherit;">min_<wbr>priority_<wbr>per_<wbr>job</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum priority per job this user can use to submit jobs.{{% /md %}}</dd>
 
@@ -2483,7 +2274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_degree_of_parallelism_per_job_python" style="color: inherit; text-decoration: inherit;">max_<wbr>degree_<wbr>of_<wbr>parallelism_<wbr>per_<wbr>job</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum degree of parallelism per job this user can use to submit jobs. This property, the min priority per job property, or both must be passed.{{% /md %}}</dd>
 
@@ -2493,7 +2284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_priority_per_job_python" style="color: inherit; text-decoration: inherit;">min_<wbr>priority_<wbr>per_<wbr>job</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum priority per job this user can use to submit jobs. This property, the max degree of parallelism per job property, or both must be passed.{{% /md %}}</dd>
 

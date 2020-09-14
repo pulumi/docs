@@ -957,7 +957,7 @@ The following output properties are available:
 <a href="#backup_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Id of the backup.{{% /md %}}</dd>
 
@@ -1057,7 +1057,7 @@ The following output properties are available:
 <a href="#size_in_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the backup in bytes.{{% /md %}}</dd>
 
@@ -1097,7 +1097,7 @@ The following output properties are available:
 <a href="#website_size_in_bytes_python" style="color: inherit; text-decoration: inherit;">website_<wbr>size_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the original web app which has been backed up.{{% /md %}}</dd>
 
@@ -1319,7 +1319,7 @@ The following output properties are available:
 <a href="#frequencyinterval_python" style="color: inherit; text-decoration: inherit;">frequency<wbr>Interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day){{% /md %}}</dd>
 
@@ -1349,7 +1349,7 @@ The following output properties are available:
 <a href="#retentionperiodindays_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Period<wbr>In<wbr>Days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}After how many days backups should be deleted.{{% /md %}}</dd>
 
@@ -1534,8 +1534,8 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 
     <dt class="property-required"
             title="Required">
-        <span id="databasetype_python">
-<a href="#databasetype_python" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
+        <span id="database_type_python">
+<a href="#database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1744,8 +1744,8 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 
     <dt class="property-required"
             title="Required">
-        <span id="databasetype_python">
-<a href="#databasetype_python" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
+        <span id="database_type_python">
+<a href="#database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

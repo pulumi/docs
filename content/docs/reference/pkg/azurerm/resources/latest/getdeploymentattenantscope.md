@@ -1689,8 +1689,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dependson_python">
-<a href="#dependson_python" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
+        <span id="depends_on_python">
+<a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#basicdependencyresponse">List[Basic<wbr>Dependency<wbr>Response]</a></span>
@@ -3711,8 +3711,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="resourcetypes_python">
-<a href="#resourcetypes_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Types</a>
+        <span id="resource_types_python">
+<a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerresourcetyperesponse">List[Provider<wbr>Resource<wbr>Type<wbr>Response]</a></span>

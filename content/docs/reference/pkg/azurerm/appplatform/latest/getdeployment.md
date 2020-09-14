@@ -1283,7 +1283,7 @@ The following output properties are available:
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Required CPU, basic tier should be 1, standard tier should be in range (1, 4){{% /md %}}</dd>
 
@@ -1313,7 +1313,7 @@ The following output properties are available:
 <a href="#memory_in_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>in_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8){{% /md %}}</dd>
 
@@ -1479,7 +1479,7 @@ The following output properties are available:
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd>
 

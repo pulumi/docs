@@ -861,7 +861,7 @@ The following output properties are available:
 <a href="#bytessucceeded_python" style="color: inherit; text-decoration: inherit;">bytes<wbr>Succeeded</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
 
@@ -941,7 +941,7 @@ The following output properties are available:
 <a href="#percent_complete_python" style="color: inherit; text-decoration: inherit;">percent_<wbr>complete</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage completed for the drive. {{% /md %}}</dd>
 
@@ -2155,7 +2155,7 @@ The following output properties are available:
 <a href="#percent_complete_python" style="color: inherit; text-decoration: inherit;">percent_<wbr>complete</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Overall percentage completed for the job.{{% /md %}}</dd>
 
@@ -2411,7 +2411,7 @@ The following output properties are available:
 <a href="#drive_count_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
 

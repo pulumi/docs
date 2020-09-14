@@ -12,98 +12,6 @@ meta_desc: "Explore the RemediationAtManagementGroup resource of the policyinsig
 
 The remediation definition.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create remediation at management group scope
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var remediationAtManagementGroup = new AzureRM.PolicyInsights.Latest.RemediationAtManagementGroup("remediationAtManagementGroup", new AzureRM.PolicyInsights.Latest.RemediationAtManagementGroupArgs
-        {
-            ManagementGroupId = "financeMg",
-            ManagementGroupsNamespace = "Microsoft.Management",
-            PolicyAssignmentId = "/providers/microsoft.management/managementGroups/financeMg/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
-            RemediationName = "storageRemediation",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	policyinsights "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/policyinsights/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := policyinsights.NewRemediationAtManagementGroup(ctx, "remediationAtManagementGroup", &policyinsights.RemediationAtManagementGroupArgs{
-			ManagementGroupId:         pulumi.String("financeMg"),
-			ManagementGroupsNamespace: pulumi.String("Microsoft.Management"),
-			PolicyAssignmentId:        pulumi.String("/providers/microsoft.management/managementGroups/financeMg/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5"),
-			RemediationName:           pulumi.String("storageRemediation"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-remediation_at_management_group = azurerm.policyinsights.latest.RemediationAtManagementGroup("remediationAtManagementGroup",
-    management_group_id="financeMg",
-    management_groups_namespace="Microsoft.Management",
-    policy_assignment_id="/providers/microsoft.management/managementGroups/financeMg/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
-    remediation_name="storageRemediation")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const remediationAtManagementGroup = new azurerm.policyinsights.latest.RemediationAtManagementGroup("remediationAtManagementGroup", {
-    managementGroupId: "financeMg",
-    managementGroupsNamespace: "Microsoft.Management",
-    policyAssignmentId: "/providers/microsoft.management/managementGroups/financeMg/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
-    remediationName: "storageRemediation",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a RemediationAtManagementGroup Resource {#create}
@@ -1058,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failed_deployments_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>deployments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of deployments required by the remediation that have failed.{{% /md %}}</dd>
 
@@ -1068,7 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successful_deployments_python" style="color: inherit; text-decoration: inherit;">successful_<wbr>deployments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of deployments required by the remediation that have succeeded.{{% /md %}}</dd>
 
@@ -1078,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_deployments_python" style="color: inherit; text-decoration: inherit;">total_<wbr>deployments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of deployments required by the remediation.{{% /md %}}</dd>
 

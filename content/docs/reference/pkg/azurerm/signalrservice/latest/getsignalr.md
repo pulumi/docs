@@ -807,7 +807,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#public_port_python" style="color: inherit; text-decoration: inherit;">public_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The publicly accessible port of the SignalR service which is designed for browser/client side usage.{{% /md %}}</dd>
 
@@ -817,7 +817,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#server_port_python" style="color: inherit; text-decoration: inherit;">server_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The publicly accessible port of the SignalR service which is designed for customer server side usage.{{% /md %}}</dd>
 
@@ -2011,7 +2011,7 @@ Allowed values: Standard_S1, Free_F1{{% /md %}}</dd>
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Optional, integer. The unit count of SignalR resource. 1 by default.
 

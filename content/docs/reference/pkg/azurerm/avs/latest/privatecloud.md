@@ -12,128 +12,6 @@ meta_desc: "Explore the PrivateCloud resource of the avs/latest module, includin
 
 A private cloud resource
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### PrivateClouds_CreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var privateCloud = new AzureRM.AVS.Latest.PrivateCloud("privateCloud", new AzureRM.AVS.Latest.PrivateCloudArgs
-        {
-            Location = "eastus2",
-            ManagementCluster = new AzureRM.AVS.Latest.Inputs.ManagementClusterArgs
-            {
-                ClusterSize = 4,
-            },
-            NetworkBlock = "192.168.48.0/22",
-            PrivateCloudName = "cloud1",
-            ResourceGroupName = "group1",
-            Sku = new AzureRM.AVS.Latest.Inputs.SkuArgs
-            {
-                Name = "AV36",
-            },
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	avs "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/avs/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := avs.NewPrivateCloud(ctx, "privateCloud", &avs.PrivateCloudArgs{
-			Location: pulumi.String("eastus2"),
-			ManagementCluster: &avs.ManagementClusterArgs{
-				ClusterSize: pulumi.Int(4),
-			},
-			NetworkBlock:      pulumi.String("192.168.48.0/22"),
-			PrivateCloudName:  pulumi.String("cloud1"),
-			ResourceGroupName: pulumi.String("group1"),
-			Sku: &avs.SkuArgs{
-				Name: pulumi.String("AV36"),
-			},
-			Tags: nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-private_cloud = azurerm.avs.latest.PrivateCloud("privateCloud",
-    location="eastus2",
-    management_cluster={
-        "clusterSize": 4,
-    },
-    network_block="192.168.48.0/22",
-    private_cloud_name="cloud1",
-    resource_group_name="group1",
-    sku={
-        "name": "AV36",
-    },
-    tags={})
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const privateCloud = new azurerm.avs.latest.PrivateCloud("privateCloud", {
-    location: "eastus2",
-    managementCluster: {
-        clusterSize: 4,
-    },
-    networkBlock: "192.168.48.0/22",
-    privateCloudName: "cloud1",
-    resourceGroupName: "group1",
-    sku: {
-        name: "AV36",
-    },
-    tags: {},
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a PrivateCloud Resource {#create}
@@ -2612,7 +2490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_size_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The cluster size{{% /md %}}</dd>
 
@@ -2758,7 +2636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The identity{{% /md %}}</dd>
 
@@ -2768,7 +2646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_size_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The cluster size{{% /md %}}</dd>
 

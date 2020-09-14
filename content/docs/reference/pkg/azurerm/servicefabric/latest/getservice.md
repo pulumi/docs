@@ -1031,7 +1031,7 @@ The following output properties are available:
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of partitions.{{% /md %}}</dd>
 
@@ -1383,7 +1383,7 @@ The following output properties are available:
 <a href="#defaultload_python" style="color: inherit; text-decoration: inherit;">default<wbr>Load</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.{{% /md %}}</dd>
 
@@ -1393,7 +1393,7 @@ The following output properties are available:
 <a href="#primarydefaultload_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Default<wbr>Load</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.{{% /md %}}</dd>
 
@@ -1403,7 +1403,7 @@ The following output properties are available:
 <a href="#secondarydefaultload_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Default<wbr>Load</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.{{% /md %}}</dd>
 
@@ -1703,7 +1703,7 @@ should be split between the partition ‘count’
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of partitions.{{% /md %}}</dd>
 

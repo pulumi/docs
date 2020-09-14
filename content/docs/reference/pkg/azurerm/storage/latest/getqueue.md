@@ -359,7 +359,7 @@ The following output properties are available:
 <a href="#approximate_message_count_python" style="color: inherit; text-decoration: inherit;">approximate_<wbr>message_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Integer indicating an approximate number of messages in the queue. This number is not lower than the actual number of messages in the queue, but could be higher.{{% /md %}}</dd>
 

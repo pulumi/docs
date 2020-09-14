@@ -749,7 +749,7 @@ The following output properties are available:
 <a href="#output_snap_time_python" style="color: inherit; text-decoration: inherit;">output_<wbr>snap_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The output snapshot time.{{% /md %}}</dd>
 
@@ -841,7 +841,7 @@ The following output properties are available:
 <a href="#fragments_per_ts_segment_python" style="color: inherit; text-decoration: inherit;">fragments_<wbr>per_<wbr>ts_<wbr>segment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of fragments per HTTP Live Streaming (HLS) segment.{{% /md %}}</dd>
 

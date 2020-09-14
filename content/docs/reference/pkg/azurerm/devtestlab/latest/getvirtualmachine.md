@@ -2307,7 +2307,7 @@ The following output properties are available:
 <a href="#artifacts_applied_python" style="color: inherit; text-decoration: inherit;">artifacts_<wbr>applied</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were successfully applied.{{% /md %}}</dd>
 
@@ -2327,7 +2327,7 @@ The following output properties are available:
 <a href="#total_artifacts_python" style="color: inherit; text-decoration: inherit;">total_<wbr>artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were tentatively applied.{{% /md %}}</dd>
 
@@ -2935,7 +2935,7 @@ The following output properties are available:
 <a href="#disk_size_gi_b_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gi_<wbr>b</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the disk to be attached in GibiBytes.{{% /md %}}</dd>
 
@@ -3121,7 +3121,7 @@ The following output properties are available:
 <a href="#disk_size_gi_b_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gi_<wbr>b</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets data disk size in GiB.{{% /md %}}</dd>
 
@@ -4227,7 +4227,7 @@ The following output properties are available:
 <a href="#minute_python" style="color: inherit; text-decoration: inherit;">minute</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minutes of the hour the schedule will run.{{% /md %}}</dd>
 
@@ -4373,7 +4373,7 @@ The following output properties are available:
 <a href="#backend_port_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port to which the external traffic will be redirected.{{% /md %}}</dd>
 
@@ -4383,7 +4383,7 @@ The following output properties are available:
 <a href="#frontend_port_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.{{% /md %}}</dd>
 
@@ -5035,7 +5035,7 @@ The following output properties are available:
 <a href="#time_in_minutes_python" style="color: inherit; text-decoration: inherit;">time_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time in minutes before event at which notification will be sent.{{% /md %}}</dd>
 

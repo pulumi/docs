@@ -929,7 +929,7 @@ The following output properties are available:
 <a href="#remaining_retention_days_python" style="color: inherit; text-decoration: inherit;">remaining_<wbr>retention_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Remaining retention days for soft deleted blob container.{{% /md %}}</dd>
 
@@ -1241,7 +1241,7 @@ The following output properties are available:
 <a href="#immutability_period_since_creation_in_days_python" style="color: inherit; text-decoration: inherit;">immutability_<wbr>period_<wbr>since_<wbr>creation_<wbr>in_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
 
@@ -1849,7 +1849,7 @@ The following output properties are available:
 <a href="#immutability_period_since_creation_in_days_python" style="color: inherit; text-decoration: inherit;">immutability_<wbr>period_<wbr>since_<wbr>creation_<wbr>in_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
 

@@ -12,231 +12,6 @@ meta_desc: "Explore the StreamingEndpoint resource of the media/latest module, i
 
 The StreamingEndpoint.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create a StreamingEndpoint
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var streamingEndpoint = new AzureRM.Media.Latest.StreamingEndpoint("streamingEndpoint", new AzureRM.Media.Latest.StreamingEndpointArgs
-        {
-            AccessControl = new AzureRM.Media.Latest.Inputs.StreamingEndpointAccessControlArgs
-            {
-                Akamai = new AzureRM.Media.Latest.Inputs.AkamaiAccessControlArgs
-                {
-                    AkamaiSignatureHeaderAuthenticationKeyList = 
-                    {
-                        new AzureRM.Media.Latest.Inputs.AkamaiSignatureHeaderAuthenticationKeyArgs
-                        {
-                            Base64Key = "dGVzdGlkMQ==",
-                            Expiration = "2029-12-31T16:00:00-08:00",
-                            Identifier = "id1",
-                        },
-                        new AzureRM.Media.Latest.Inputs.AkamaiSignatureHeaderAuthenticationKeyArgs
-                        {
-                            Base64Key = "dGVzdGlkMQ==",
-                            Expiration = "2030-12-31T16:00:00-08:00",
-                            Identifier = "id2",
-                        },
-                    },
-                },
-                Ip = new AzureRM.Media.Latest.Inputs.IPAccessControlArgs
-                {
-                    Allow = 
-                    {
-                        new AzureRM.Media.Latest.Inputs.IPRangeArgs
-                        {
-                            Address = "192.168.1.1",
-                            Name = "AllowedIp",
-                        },
-                    },
-                },
-            },
-            AccountName = "slitestmedia10",
-            AvailabilitySetName = "availableset",
-            CdnEnabled = false,
-            Description = "test event 1",
-            Location = "West US",
-            ResourceGroupName = "mediaresources",
-            ScaleUnits = 1,
-            StreamingEndpointName = "myStreamingEndpoint1",
-            Tags = 
-            {
-                { "tag1", "value1" },
-                { "tag2", "value2" },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	media "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := media.NewStreamingEndpoint(ctx, "streamingEndpoint", &media.StreamingEndpointArgs{
-			AccessControl: &media.StreamingEndpointAccessControlArgs{
-				Akamai: &media.AkamaiAccessControlArgs{
-					AkamaiSignatureHeaderAuthenticationKeyList: media.AkamaiSignatureHeaderAuthenticationKeyArray{
-						&media.AkamaiSignatureHeaderAuthenticationKeyArgs{
-							Base64Key:  pulumi.String("dGVzdGlkMQ=="),
-							Expiration: pulumi.String("2029-12-31T16:00:00-08:00"),
-							Identifier: pulumi.String("id1"),
-						},
-						&media.AkamaiSignatureHeaderAuthenticationKeyArgs{
-							Base64Key:  pulumi.String("dGVzdGlkMQ=="),
-							Expiration: pulumi.String("2030-12-31T16:00:00-08:00"),
-							Identifier: pulumi.String("id2"),
-						},
-					},
-				},
-				Ip: &media.IPAccessControlArgs{
-					Allow: media.IPRangeArray{
-						&media.IPRangeArgs{
-							Address: pulumi.String("192.168.1.1"),
-							Name:    pulumi.String("AllowedIp"),
-						},
-					},
-				},
-			},
-			AccountName:           pulumi.String("slitestmedia10"),
-			AvailabilitySetName:   pulumi.String("availableset"),
-			CdnEnabled:            pulumi.Bool(false),
-			Description:           pulumi.String("test event 1"),
-			Location:              pulumi.String("West US"),
-			ResourceGroupName:     pulumi.String("mediaresources"),
-			ScaleUnits:            pulumi.Int(1),
-			StreamingEndpointName: pulumi.String("myStreamingEndpoint1"),
-			Tags: pulumi.StringMap{
-				"tag1": pulumi.String("value1"),
-				"tag2": pulumi.String("value2"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-streaming_endpoint = azurerm.media.latest.StreamingEndpoint("streamingEndpoint",
-    access_control={
-        "akamai": {
-            "akamaiSignatureHeaderAuthenticationKeyList": [
-                {
-                    "base64Key": "dGVzdGlkMQ==",
-                    "expiration": "2029-12-31T16:00:00-08:00",
-                    "identifier": "id1",
-                },
-                {
-                    "base64Key": "dGVzdGlkMQ==",
-                    "expiration": "2030-12-31T16:00:00-08:00",
-                    "identifier": "id2",
-                },
-            ],
-        },
-        "ip": {
-            "allow": [{
-                "address": "192.168.1.1",
-                "name": "AllowedIp",
-            }],
-        },
-    },
-    account_name="slitestmedia10",
-    availability_set_name="availableset",
-    cdn_enabled=False,
-    description="test event 1",
-    location="West US",
-    resource_group_name="mediaresources",
-    scale_units=1,
-    streaming_endpoint_name="myStreamingEndpoint1",
-    tags={
-        "tag1": "value1",
-        "tag2": "value2",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const streamingEndpoint = new azurerm.media.latest.StreamingEndpoint("streamingEndpoint", {
-    accessControl: {
-        akamai: {
-            akamaiSignatureHeaderAuthenticationKeyList: [
-                {
-                    base64Key: "dGVzdGlkMQ==",
-                    expiration: "2029-12-31T16:00:00-08:00",
-                    identifier: "id1",
-                },
-                {
-                    base64Key: "dGVzdGlkMQ==",
-                    expiration: "2030-12-31T16:00:00-08:00",
-                    identifier: "id2",
-                },
-            ],
-        },
-        ip: {
-            allow: [{
-                address: "192.168.1.1",
-                name: "AllowedIp",
-            }],
-        },
-    },
-    accountName: "slitestmedia10",
-    availabilitySetName: "availableset",
-    cdnEnabled: false,
-    description: "test event 1",
-    location: "West US",
-    resourceGroupName: "mediaresources",
-    scaleUnits: 1,
-    streamingEndpointName: "myStreamingEndpoint1",
-    tags: {
-        tag1: "value1",
-        tag2: "value2",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a StreamingEndpoint Resource {#create}
@@ -248,7 +23,7 @@ const streamingEndpoint = new azurerm.media.latest.StreamingEndpoint("streamingE
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/media/latest/#pulumi_azurerm.media/latest.StreamingEndpoint">StreamingEndpoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_control</span><span class="p">:</span> <span class="nx">Optional[Dict[StreamingEndpointAccessControl]]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cdn_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cdn_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cdn_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cross_site_access_policies</span><span class="p">:</span> <span class="nx">Optional[Dict[CrossSiteAccessPolicies]]</span> = None<span class="p">, </span><span class="nx">custom_host_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_cache_age</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_units</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">streaming_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/media/latest/#pulumi_azurerm.media/latest.StreamingEndpoint">StreamingEndpoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_control</span><span class="p">:</span> <span class="nx">Optional[Dict[StreamingEndpointAccessControl]]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cdn_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cdn_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cdn_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cross_site_access_policies</span><span class="p">:</span> <span class="nx">Optional[Dict[CrossSiteAccessPolicies]]</span> = None<span class="p">, </span><span class="nx">custom_host_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_cache_age</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_units</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">streaming_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -957,7 +732,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#scale_units_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>units</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of scale units.  Use the Scale operation to adjust this value.{{% /md %}}</dd>
 
@@ -1067,7 +842,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#max_cache_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>cache_<wbr>age</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max cache age{{% /md %}}</dd>
 
@@ -2579,7 +2354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetprefixlength_python" style="color: inherit; text-decoration: inherit;">subnet<wbr>Prefix<wbr>Length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The subnet mask prefix length (see CIDR notation).{{% /md %}}</dd>
 
@@ -2745,7 +2520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetprefixlength_python" style="color: inherit; text-decoration: inherit;">subnet<wbr>Prefix<wbr>Length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The subnet mask prefix length (see CIDR notation).{{% /md %}}</dd>
 

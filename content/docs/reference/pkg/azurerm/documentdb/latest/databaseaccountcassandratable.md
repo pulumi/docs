@@ -12,190 +12,6 @@ meta_desc: "Explore the DatabaseAccountCassandraTable resource of the documentdb
 
 An Azure Cosmos DB Cassandra table.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### CosmosDBCassandraTableCreateUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var databaseAccountCassandraTable = new AzureRM.DocumentDB.Latest.DatabaseAccountCassandraTable("databaseAccountCassandraTable", new AzureRM.DocumentDB.Latest.DatabaseAccountCassandraTableArgs
-        {
-            AccountName = "ddb1",
-            KeyspaceName = "tableName",
-            Options = ,
-            Resource = new AzureRM.DocumentDB.Latest.Inputs.CassandraTableResourceArgs
-            {
-                DefaultTtl = 100,
-                Id = "tableName",
-                Schema = new AzureRM.DocumentDB.Latest.Inputs.CassandraSchemaArgs
-                {
-                    ClusterKeys = 
-                    {
-                        new AzureRM.DocumentDB.Latest.Inputs.ClusterKeyArgs
-                        {
-                            Name = "columnA",
-                            OrderBy = "Asc",
-                        },
-                    },
-                    Columns = 
-                    {
-                        new AzureRM.DocumentDB.Latest.Inputs.ColumnArgs
-                        {
-                            Name = "columnA",
-                            Type = "Ascii",
-                        },
-                    },
-                    PartitionKeys = 
-                    {
-                        new AzureRM.DocumentDB.Latest.Inputs.CassandraPartitionKeyArgs
-                        {
-                            Name = "columnA",
-                        },
-                    },
-                },
-            },
-            ResourceGroupName = "rg1",
-            TableName = "tableName",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/documentdb/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewDatabaseAccountCassandraTable(ctx, "databaseAccountCassandraTable", &documentdb.DatabaseAccountCassandraTableArgs{
-			AccountName:  pulumi.String("ddb1"),
-			KeyspaceName: pulumi.String("tableName"),
-			Options:      nil,
-			Resource: &documentdb.CassandraTableResourceArgs{
-				DefaultTtl: pulumi.Int(100),
-				Id:         pulumi.String("tableName"),
-				Schema: &documentdb.CassandraSchemaArgs{
-					ClusterKeys: documentdb.ClusterKeyArray{
-						&documentdb.ClusterKeyArgs{
-							Name:    pulumi.String("columnA"),
-							OrderBy: pulumi.String("Asc"),
-						},
-					},
-					Columns: documentdb.ColumnArray{
-						&documentdb.ColumnArgs{
-							Name: pulumi.String("columnA"),
-							Type: pulumi.String("Ascii"),
-						},
-					},
-					PartitionKeys: documentdb.CassandraPartitionKeyArray{
-						&documentdb.CassandraPartitionKeyArgs{
-							Name: pulumi.String("columnA"),
-						},
-					},
-				},
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			TableName:         pulumi.String("tableName"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-database_account_cassandra_table = azurerm.documentdb.latest.DatabaseAccountCassandraTable("databaseAccountCassandraTable",
-    account_name="ddb1",
-    keyspace_name="tableName",
-    options={},
-    resource={
-        "defaultTtl": 100,
-        "id": "tableName",
-        "schema": {
-            "clusterKeys": [{
-                "name": "columnA",
-                "orderBy": "Asc",
-            }],
-            "columns": [{
-                "name": "columnA",
-                "type": "Ascii",
-            }],
-            "partitionKeys": [{
-                "name": "columnA",
-            }],
-        },
-    },
-    resource_group_name="rg1",
-    table_name="tableName")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const databaseAccountCassandraTable = new azurerm.documentdb.latest.DatabaseAccountCassandraTable("databaseAccountCassandraTable", {
-    accountName: "ddb1",
-    keyspaceName: "tableName",
-    options: {},
-    resource: {
-        defaultTtl: 100,
-        id: "tableName",
-        schema: {
-            clusterKeys: [{
-                name: "columnA",
-                orderBy: "Asc",
-            }],
-            columns: [{
-                name: "columnA",
-                type: "Ascii",
-            }],
-            partitionKeys: [{
-                name: "columnA",
-            }],
-        },
-    },
-    resourceGroupName: "rg1",
-    tableName: "tableName",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a DatabaseAccountCassandraTable Resource {#create}
@@ -925,7 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time to live of the Cosmos DB Cassandra table{{% /md %}}</dd>
 
@@ -1624,7 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time to live of the Cosmos DB Cassandra table{{% /md %}}</dd>
 

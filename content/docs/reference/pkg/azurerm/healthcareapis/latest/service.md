@@ -12,206 +12,6 @@ meta_desc: "Explore the Service resource of the healthcareapis/latest module, in
 
 The description of the service.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or Update a service with all parameters
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var service = new AzureRM.HealthcareApis.Latest.Service("service", new AzureRM.HealthcareApis.Latest.ServiceArgs
-        {
-            Identity = new AzureRM.HealthcareApis.Latest.Inputs.ResourceIdentityArgs
-            {
-                Type = "SystemAssigned",
-            },
-            Kind = "fhir-R4",
-            Location = "westus2",
-            ResourceGroupName = "rg1",
-            ResourceName = "service1",
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	healthcareapis "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/healthcareapis/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := healthcareapis.NewService(ctx, "service", &healthcareapis.ServiceArgs{
-			Identity: &healthcareapis.ResourceIdentityArgs{
-				Type: pulumi.String("SystemAssigned"),
-			},
-			Kind:              pulumi.String("fhir-R4"),
-			Location:          pulumi.String("westus2"),
-			ResourceGroupName: pulumi.String("rg1"),
-			ResourceName:      pulumi.String("service1"),
-			Tags:              nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-service = azurerm.healthcareapis.latest.Service("service",
-    identity={
-        "type": "SystemAssigned",
-    },
-    kind="fhir-R4",
-    location="westus2",
-    resource_group_name="rg1",
-    resource_name="service1",
-    tags={})
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const service = new azurerm.healthcareapis.latest.Service("service", {
-    identity: {
-        type: "SystemAssigned",
-    },
-    kind: "fhir-R4",
-    location: "westus2",
-    resourceGroupName: "rg1",
-    resourceName: "service1",
-    tags: {},
-});
-
-```
-
-{{% /example %}}
-
-### Create or Update a service with minimum parameters
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var service = new AzureRM.HealthcareApis.Latest.Service("service", new AzureRM.HealthcareApis.Latest.ServiceArgs
-        {
-            Kind = "fhir-R4",
-            Location = "westus2",
-            ResourceGroupName = "rg1",
-            ResourceName = "service2",
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	healthcareapis "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/healthcareapis/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := healthcareapis.NewService(ctx, "service", &healthcareapis.ServiceArgs{
-			Kind:              pulumi.String("fhir-R4"),
-			Location:          pulumi.String("westus2"),
-			ResourceGroupName: pulumi.String("rg1"),
-			ResourceName:      pulumi.String("service2"),
-			Tags:              nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-service = azurerm.healthcareapis.latest.Service("service",
-    kind="fhir-R4",
-    location="westus2",
-    resource_group_name="rg1",
-    resource_name="service2",
-    tags={})
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const service = new azurerm.healthcareapis.latest.Service("service", {
-    kind: "fhir-R4",
-    location: "westus2",
-    resourceGroupName: "rg1",
-    resourceName: "service2",
-    tags: {},
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Service Resource {#create}
@@ -1882,7 +1682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max age to be allowed via CORS.{{% /md %}}</dd>
 
@@ -2128,7 +1928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max age to be allowed via CORS.{{% /md %}}</dd>
 
@@ -2234,7 +2034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offer_throughput_python" style="color: inherit; text-decoration: inherit;">offer_<wbr>throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The provisioned throughput for the backing database.{{% /md %}}</dd>
 
@@ -2320,7 +2120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offer_throughput_python" style="color: inherit; text-decoration: inherit;">offer_<wbr>throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The provisioned throughput for the backing database.{{% /md %}}</dd>
 

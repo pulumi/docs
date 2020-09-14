@@ -559,7 +559,7 @@ The following output properties are available:
 <a href="#bytes_to_capture_per_packet_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>to_<wbr>capture_<wbr>per_<wbr>packet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of bytes captured per packet, the remaining bytes are truncated.{{% /md %}}</dd>
 
@@ -579,7 +579,7 @@ The following output properties are available:
 <a href="#time_limit_in_seconds_python" style="color: inherit; text-decoration: inherit;">time_<wbr>limit_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum duration of the capture session in seconds.{{% /md %}}</dd>
 
@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#total_bytes_per_session_python" style="color: inherit; text-decoration: inherit;">total_<wbr>bytes_<wbr>per_<wbr>session</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum size of the capture output.{{% /md %}}</dd>
 

@@ -12,556 +12,6 @@ meta_desc: "Explore the Profile resource of the network/latest module, including
 
 Class representing a Traffic Manager profile.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Profile-PUT-NoEndpoints
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var profile = new AzureRM.Network.Latest.Profile("profile", new AzureRM.Network.Latest.ProfileArgs
-        {
-            DnsConfig = new AzureRM.Network.Latest.Inputs.DnsConfigArgs
-            {
-                RelativeName = "azsmnet6386",
-                Ttl = 35,
-            },
-            Location = "global",
-            MonitorConfig = new AzureRM.Network.Latest.Inputs.MonitorConfigArgs
-            {
-                Path = "/testpath.aspx",
-                Port = 80,
-                Protocol = "HTTP",
-            },
-            ProfileName = "azsmnet6386",
-            ProfileStatus = "Enabled",
-            ResourceGroupName = "azuresdkfornetautoresttrafficmanager1421",
-            TrafficRoutingMethod = "Performance",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewProfile(ctx, "profile", &network.ProfileArgs{
-			DnsConfig: &network.DnsConfigArgs{
-				RelativeName: pulumi.String("azsmnet6386"),
-				Ttl:          pulumi.Int(35),
-			},
-			Location: pulumi.String("global"),
-			MonitorConfig: &network.MonitorConfigArgs{
-				Path:     pulumi.String("/testpath.aspx"),
-				Port:     pulumi.Int(80),
-				Protocol: pulumi.String("HTTP"),
-			},
-			ProfileName:          pulumi.String("azsmnet6386"),
-			ProfileStatus:        pulumi.String("Enabled"),
-			ResourceGroupName:    pulumi.String("azuresdkfornetautoresttrafficmanager1421"),
-			TrafficRoutingMethod: pulumi.String("Performance"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-profile = azurerm.network.latest.Profile("profile",
-    dns_config={
-        "relativeName": "azsmnet6386",
-        "ttl": 35,
-    },
-    location="global",
-    monitor_config={
-        "path": "/testpath.aspx",
-        "port": 80,
-        "protocol": "HTTP",
-    },
-    profile_name="azsmnet6386",
-    profile_status="Enabled",
-    resource_group_name="azuresdkfornetautoresttrafficmanager1421",
-    traffic_routing_method="Performance")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const profile = new azurerm.network.latest.Profile("profile", {
-    dnsConfig: {
-        relativeName: "azsmnet6386",
-        ttl: 35,
-    },
-    location: "global",
-    monitorConfig: {
-        path: "/testpath.aspx",
-        port: 80,
-        protocol: "HTTP",
-    },
-    profileName: "azsmnet6386",
-    profileStatus: "Enabled",
-    resourceGroupName: "azuresdkfornetautoresttrafficmanager1421",
-    trafficRoutingMethod: "Performance",
-});
-
-```
-
-{{% /example %}}
-
-### Profile-PUT-WithCustomHeaders
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var profile = new AzureRM.Network.Latest.Profile("profile", new AzureRM.Network.Latest.ProfileArgs
-        {
-            DnsConfig = new AzureRM.Network.Latest.Inputs.DnsConfigArgs
-            {
-                RelativeName = "azuresdkfornetautoresttrafficmanager6192",
-                Ttl = 35,
-            },
-            Endpoints = 
-            {
-                new AzureRM.Network.Latest.Inputs.EndpointArgs
-                {
-                    Name = "My external endpoint",
-                    Type = "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
-                },
-            },
-            Location = "global",
-            MonitorConfig = new AzureRM.Network.Latest.Inputs.MonitorConfigArgs
-            {
-                CustomHeaders = 
-                {
-                    new AzureRM.Network.Latest.Inputs.MonitorConfigCustomHeadersArgs
-                    {
-                        Name = "header-1",
-                        Value = "value-1",
-                    },
-                    new AzureRM.Network.Latest.Inputs.MonitorConfigCustomHeadersArgs
-                    {
-                        Name = "header-2",
-                        Value = "value-2",
-                    },
-                },
-                ExpectedStatusCodeRanges = 
-                {
-                    new AzureRM.Network.Latest.Inputs.MonitorConfigExpectedStatusCodeRangesArgs
-                    {
-                        Max = 205,
-                        Min = 200,
-                    },
-                    new AzureRM.Network.Latest.Inputs.MonitorConfigExpectedStatusCodeRangesArgs
-                    {
-                        Max = 410,
-                        Min = 400,
-                    },
-                },
-                IntervalInSeconds = 10,
-                Path = "/testpath.aspx",
-                Port = 80,
-                Protocol = "HTTP",
-                TimeoutInSeconds = 5,
-                ToleratedNumberOfFailures = 2,
-            },
-            ProfileName = "azuresdkfornetautoresttrafficmanager6192",
-            ProfileStatus = "Enabled",
-            ResourceGroupName = "azuresdkfornetautoresttrafficmanager2583",
-            TrafficRoutingMethod = "Performance",
-            TrafficViewEnrollmentStatus = "Disabled",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewProfile(ctx, "profile", &network.ProfileArgs{
-			DnsConfig: &network.DnsConfigArgs{
-				RelativeName: pulumi.String("azuresdkfornetautoresttrafficmanager6192"),
-				Ttl:          pulumi.Int(35),
-			},
-			Endpoints: network.EndpointArray{
-				&network.EndpointArgs{
-					Name: pulumi.String("My external endpoint"),
-					Type: pulumi.String("Microsoft.network/TrafficManagerProfiles/ExternalEndpoints"),
-				},
-			},
-			Location: pulumi.String("global"),
-			MonitorConfig: &network.MonitorConfigArgs{
-				CustomHeaders: network.MonitorConfigCustomHeadersArray{
-					&network.MonitorConfigCustomHeadersArgs{
-						Name:  pulumi.String("header-1"),
-						Value: pulumi.String("value-1"),
-					},
-					&network.MonitorConfigCustomHeadersArgs{
-						Name:  pulumi.String("header-2"),
-						Value: pulumi.String("value-2"),
-					},
-				},
-				ExpectedStatusCodeRanges: network.MonitorConfigExpectedStatusCodeRangesArray{
-					&network.MonitorConfigExpectedStatusCodeRangesArgs{
-						Max: pulumi.Int(205),
-						Min: pulumi.Int(200),
-					},
-					&network.MonitorConfigExpectedStatusCodeRangesArgs{
-						Max: pulumi.Int(410),
-						Min: pulumi.Int(400),
-					},
-				},
-				IntervalInSeconds:         pulumi.Int(10),
-				Path:                      pulumi.String("/testpath.aspx"),
-				Port:                      pulumi.Int(80),
-				Protocol:                  pulumi.String("HTTP"),
-				TimeoutInSeconds:          pulumi.Int(5),
-				ToleratedNumberOfFailures: pulumi.Int(2),
-			},
-			ProfileName:                 pulumi.String("azuresdkfornetautoresttrafficmanager6192"),
-			ProfileStatus:               pulumi.String("Enabled"),
-			ResourceGroupName:           pulumi.String("azuresdkfornetautoresttrafficmanager2583"),
-			TrafficRoutingMethod:        pulumi.String("Performance"),
-			TrafficViewEnrollmentStatus: pulumi.String("Disabled"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-profile = azurerm.network.latest.Profile("profile",
-    dns_config={
-        "relativeName": "azuresdkfornetautoresttrafficmanager6192",
-        "ttl": 35,
-    },
-    endpoints=[{
-        "name": "My external endpoint",
-        "type": "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
-    }],
-    location="global",
-    monitor_config={
-        "customHeaders": [
-            {
-                "name": "header-1",
-                "value": "value-1",
-            },
-            {
-                "name": "header-2",
-                "value": "value-2",
-            },
-        ],
-        "expectedStatusCodeRanges": [
-            {
-                "max": 205,
-                "min": 200,
-            },
-            {
-                "max": 410,
-                "min": 400,
-            },
-        ],
-        "intervalInSeconds": 10,
-        "path": "/testpath.aspx",
-        "port": 80,
-        "protocol": "HTTP",
-        "timeoutInSeconds": 5,
-        "toleratedNumberOfFailures": 2,
-    },
-    profile_name="azuresdkfornetautoresttrafficmanager6192",
-    profile_status="Enabled",
-    resource_group_name="azuresdkfornetautoresttrafficmanager2583",
-    traffic_routing_method="Performance",
-    traffic_view_enrollment_status="Disabled")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const profile = new azurerm.network.latest.Profile("profile", {
-    dnsConfig: {
-        relativeName: "azuresdkfornetautoresttrafficmanager6192",
-        ttl: 35,
-    },
-    endpoints: [{
-        name: "My external endpoint",
-        type: "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
-    }],
-    location: "global",
-    monitorConfig: {
-        customHeaders: [
-            {
-                name: "header-1",
-                value: "value-1",
-            },
-            {
-                name: "header-2",
-                value: "value-2",
-            },
-        ],
-        expectedStatusCodeRanges: [
-            {
-                max: 205,
-                min: 200,
-            },
-            {
-                max: 410,
-                min: 400,
-            },
-        ],
-        intervalInSeconds: 10,
-        path: "/testpath.aspx",
-        port: 80,
-        protocol: "HTTP",
-        timeoutInSeconds: 5,
-        toleratedNumberOfFailures: 2,
-    },
-    profileName: "azuresdkfornetautoresttrafficmanager6192",
-    profileStatus: "Enabled",
-    resourceGroupName: "azuresdkfornetautoresttrafficmanager2583",
-    trafficRoutingMethod: "Performance",
-    trafficViewEnrollmentStatus: "Disabled",
-});
-
-```
-
-{{% /example %}}
-
-### Profile-PUT-WithEndpoints
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var profile = new AzureRM.Network.Latest.Profile("profile", new AzureRM.Network.Latest.ProfileArgs
-        {
-            DnsConfig = new AzureRM.Network.Latest.Inputs.DnsConfigArgs
-            {
-                RelativeName = "azuresdkfornetautoresttrafficmanager6192",
-                Ttl = 35,
-            },
-            Endpoints = 
-            {
-                new AzureRM.Network.Latest.Inputs.EndpointArgs
-                {
-                    Name = "My external endpoint",
-                    Type = "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
-                },
-            },
-            Location = "global",
-            MonitorConfig = new AzureRM.Network.Latest.Inputs.MonitorConfigArgs
-            {
-                IntervalInSeconds = 10,
-                Path = "/testpath.aspx",
-                Port = 80,
-                Protocol = "HTTP",
-                TimeoutInSeconds = 5,
-                ToleratedNumberOfFailures = 2,
-            },
-            ProfileName = "azuresdkfornetautoresttrafficmanager6192",
-            ProfileStatus = "Enabled",
-            ResourceGroupName = "azuresdkfornetautoresttrafficmanager2583",
-            TrafficRoutingMethod = "Performance",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewProfile(ctx, "profile", &network.ProfileArgs{
-			DnsConfig: &network.DnsConfigArgs{
-				RelativeName: pulumi.String("azuresdkfornetautoresttrafficmanager6192"),
-				Ttl:          pulumi.Int(35),
-			},
-			Endpoints: network.EndpointArray{
-				&network.EndpointArgs{
-					Name: pulumi.String("My external endpoint"),
-					Type: pulumi.String("Microsoft.network/TrafficManagerProfiles/ExternalEndpoints"),
-				},
-			},
-			Location: pulumi.String("global"),
-			MonitorConfig: &network.MonitorConfigArgs{
-				IntervalInSeconds:         pulumi.Int(10),
-				Path:                      pulumi.String("/testpath.aspx"),
-				Port:                      pulumi.Int(80),
-				Protocol:                  pulumi.String("HTTP"),
-				TimeoutInSeconds:          pulumi.Int(5),
-				ToleratedNumberOfFailures: pulumi.Int(2),
-			},
-			ProfileName:          pulumi.String("azuresdkfornetautoresttrafficmanager6192"),
-			ProfileStatus:        pulumi.String("Enabled"),
-			ResourceGroupName:    pulumi.String("azuresdkfornetautoresttrafficmanager2583"),
-			TrafficRoutingMethod: pulumi.String("Performance"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-profile = azurerm.network.latest.Profile("profile",
-    dns_config={
-        "relativeName": "azuresdkfornetautoresttrafficmanager6192",
-        "ttl": 35,
-    },
-    endpoints=[{
-        "name": "My external endpoint",
-        "type": "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
-    }],
-    location="global",
-    monitor_config={
-        "intervalInSeconds": 10,
-        "path": "/testpath.aspx",
-        "port": 80,
-        "protocol": "HTTP",
-        "timeoutInSeconds": 5,
-        "toleratedNumberOfFailures": 2,
-    },
-    profile_name="azuresdkfornetautoresttrafficmanager6192",
-    profile_status="Enabled",
-    resource_group_name="azuresdkfornetautoresttrafficmanager2583",
-    traffic_routing_method="Performance")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const profile = new azurerm.network.latest.Profile("profile", {
-    dnsConfig: {
-        relativeName: "azuresdkfornetautoresttrafficmanager6192",
-        ttl: 35,
-    },
-    endpoints: [{
-        name: "My external endpoint",
-        type: "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
-    }],
-    location: "global",
-    monitorConfig: {
-        intervalInSeconds: 10,
-        path: "/testpath.aspx",
-        port: 80,
-        protocol: "HTTP",
-        timeoutInSeconds: 5,
-        toleratedNumberOfFailures: 2,
-    },
-    profileName: "azuresdkfornetautoresttrafficmanager6192",
-    profileStatus: "Enabled",
-    resourceGroupName: "azuresdkfornetautoresttrafficmanager2583",
-    trafficRoutingMethod: "Performance",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Profile Resource {#create}
@@ -573,7 +23,7 @@ const profile = new azurerm.network.latest.Profile("profile", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/network/latest/#pulumi_azurerm.network/latest.Profile">Profile</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[Dict[DnsConfig]]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[List[Endpoint]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_return</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[Dict[MonitorConfig]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_view_enrollment_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/network/latest/#pulumi_azurerm.network/latest.Profile">Profile</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[Dict[DnsConfig]]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[List[Endpoint]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_return</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[Dict[MonitorConfig]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_view_enrollment_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1252,7 +702,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#max_return_python" style="color: inherit; text-decoration: inherit;">max_<wbr>return</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of endpoints to be returned for MultiValue routing type.{{% /md %}}</dd>
 
@@ -1536,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd>
 
@@ -1702,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd>
 
@@ -2238,7 +1688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_child_endpoints_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd>
 
@@ -2258,7 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd>
 
@@ -2308,7 +1758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd>
 
@@ -2726,7 +2176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd>
 
@@ -2892,7 +2342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd>
 
@@ -3428,7 +2878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_child_endpoints_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd>
 
@@ -3448,7 +2898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd>
 
@@ -3498,7 +2948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd>
 
@@ -3844,7 +3294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd>
 
@@ -3864,7 +3314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd>
 
@@ -3894,7 +3344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd>
 
@@ -3904,7 +3354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tolerated_number_of_failures_python" style="color: inherit; text-decoration: inherit;">tolerated_<wbr>number_<wbr>of_<wbr>failures</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd>
 
@@ -4146,7 +3596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max status code.{{% /md %}}</dd>
 
@@ -4156,7 +3606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Min status code.{{% /md %}}</dd>
 
@@ -4502,7 +3952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd>
 
@@ -4522,7 +3972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd>
 
@@ -4552,7 +4002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd>
 
@@ -4562,7 +4012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tolerated_number_of_failures_python" style="color: inherit; text-decoration: inherit;">tolerated_<wbr>number_<wbr>of_<wbr>failures</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd>
 
@@ -4804,7 +4254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max status code.{{% /md %}}</dd>
 
@@ -4814,7 +4264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Min status code.{{% /md %}}</dd>
 

@@ -12,124 +12,6 @@ meta_desc: "Explore the Workspace resource of the operationalinsights/latest mod
 
 The top level Workspace resource container.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### WorkspacesCreate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var workspace = new AzureRM.OperationalInsights.Latest.Workspace("workspace", new AzureRM.OperationalInsights.Latest.WorkspaceArgs
-        {
-            Location = "australiasoutheast",
-            ResourceGroupName = "oiautorest6685",
-            RetentionInDays = 30,
-            Sku = new AzureRM.OperationalInsights.Latest.Inputs.WorkspaceSkuArgs
-            {
-                Name = "PerGB2018",
-            },
-            Tags = 
-            {
-                { "tag1", "val1" },
-            },
-            WorkspaceName = "oiautorest6685",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	operationalinsights "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/operationalinsights/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := operationalinsights.NewWorkspace(ctx, "workspace", &operationalinsights.WorkspaceArgs{
-			Location:          pulumi.String("australiasoutheast"),
-			ResourceGroupName: pulumi.String("oiautorest6685"),
-			RetentionInDays:   pulumi.Int(30),
-			Sku: &operationalinsights.WorkspaceSkuArgs{
-				Name: pulumi.String("PerGB2018"),
-			},
-			Tags: pulumi.StringMap{
-				"tag1": pulumi.String("val1"),
-			},
-			WorkspaceName: pulumi.String("oiautorest6685"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-workspace = azurerm.operationalinsights.latest.Workspace("workspace",
-    location="australiasoutheast",
-    resource_group_name="oiautorest6685",
-    retention_in_days=30,
-    sku={
-        "name": "PerGB2018",
-    },
-    tags={
-        "tag1": "val1",
-    },
-    workspace_name="oiautorest6685")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const workspace = new azurerm.operationalinsights.latest.Workspace("workspace", {
-    location: "australiasoutheast",
-    resourceGroupName: "oiautorest6685",
-    retentionInDays: 30,
-    sku: {
-        name: "PerGB2018",
-    },
-    tags: {
-        tag1: "val1",
-    },
-    workspaceName: "oiautorest6685",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Workspace Resource {#create}
@@ -141,7 +23,7 @@ const workspace = new azurerm.operationalinsights.latest.Workspace("workspace", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/operationalinsights/latest/#pulumi_azurerm.operationalinsights/latest.Workspace">Workspace</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_for_ingestion</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_for_query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_in_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[WorkspaceSku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_capping</span><span class="p">:</span> <span class="nx">Optional[Dict[WorkspaceCapping]]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/operationalinsights/latest/#pulumi_azurerm.operationalinsights/latest.Workspace">Workspace</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_for_ingestion</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_for_query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[WorkspaceSku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_capping</span><span class="p">:</span> <span class="nx">Optional[Dict[WorkspaceCapping]]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -740,7 +622,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The workspace data retention in days, between 30 and 730.{{% /md %}}</dd>
 
@@ -1522,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_reservation_level_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd>
 
@@ -1708,7 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_capacity_reservation_level_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity_<wbr>reservation_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd>
 
@@ -1728,7 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_reservation_level_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd>
 

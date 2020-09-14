@@ -12,177 +12,6 @@ meta_desc: "Explore the Vault resource of the keyvault/latest module, including 
 
 Resource information with extended details.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create a new vault or update an existing vault
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var vault = new AzureRM.KeyVault.Latest.Vault("vault", new AzureRM.KeyVault.Latest.VaultArgs
-        {
-            Location = "westus",
-            ResourceGroupName = "sample-resource-group",
-            VaultName = "sample-vault",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	keyvault "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/keyvault/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := keyvault.NewVault(ctx, "vault", &keyvault.VaultArgs{
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("sample-resource-group"),
-			VaultName:         pulumi.String("sample-vault"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-vault = azurerm.keyvault.latest.Vault("vault",
-    location="westus",
-    resource_group_name="sample-resource-group",
-    vault_name="sample-vault")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const vault = new azurerm.keyvault.latest.Vault("vault", {
-    location: "westus",
-    resourceGroupName: "sample-resource-group",
-    vaultName: "sample-vault",
-});
-
-```
-
-{{% /example %}}
-
-### Create or update a vault with network acls
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var vault = new AzureRM.KeyVault.Latest.Vault("vault", new AzureRM.KeyVault.Latest.VaultArgs
-        {
-            Location = "westus",
-            ResourceGroupName = "sample-resource-group",
-            VaultName = "sample-vault",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	keyvault "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/keyvault/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := keyvault.NewVault(ctx, "vault", &keyvault.VaultArgs{
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("sample-resource-group"),
-			VaultName:         pulumi.String("sample-vault"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-vault = azurerm.keyvault.latest.Vault("vault",
-    location="westus",
-    resource_group_name="sample-resource-group",
-    vault_name="sample-vault")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const vault = new azurerm.keyvault.latest.Vault("vault", {
-    location: "westus",
-    resourceGroupName: "sample-resource-group",
-    vaultName: "sample-vault",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Vault Resource {#create}
@@ -3385,7 +3214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#soft_delete_retention_in_days_python" style="color: inherit; text-decoration: inherit;">soft_<wbr>delete_<wbr>retention_<wbr>in_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd>
 
@@ -3991,7 +3820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#soft_delete_retention_in_days_python" style="color: inherit; text-decoration: inherit;">soft_<wbr>delete_<wbr>retention_<wbr>in_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd>
 

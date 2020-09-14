@@ -811,7 +811,7 @@ The following output properties are available:
 <a href="#disk_count_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of data disks attached to the File Server. If multiple disks attached, they will be configured in RAID level 0.{{% /md %}}</dd>
 
@@ -821,7 +821,7 @@ The following output properties are available:
 <a href="#disk_size_in_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>in_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Disk size in GB for the blank data disks.{{% /md %}}</dd>
 

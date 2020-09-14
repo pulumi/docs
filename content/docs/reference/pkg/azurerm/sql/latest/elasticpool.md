@@ -12,205 +12,6 @@ meta_desc: "Explore the ElasticPool resource of the sql/latest module, including
 
 Represents a database elastic pool.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create elastic pool max
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var elasticPool = new AzureRM.Sql.Latest.ElasticPool("elasticPool", new AzureRM.Sql.Latest.ElasticPoolArgs
-        {
-            DatabaseDtuMax = 5,
-            DatabaseDtuMin = 0,
-            Dtu = 50,
-            Edition = "Basic",
-            ElasticPoolName = "sqlcrudtest-8102",
-            Location = "Japan East",
-            ResourceGroupName = "sqlcrudtest-2369",
-            ServerName = "sqlcrudtest-8069",
-            StorageMB = 5000,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	sql "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sql/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sql.NewElasticPool(ctx, "elasticPool", &sql.ElasticPoolArgs{
-			DatabaseDtuMax:    pulumi.Int(5),
-			DatabaseDtuMin:    pulumi.Int(0),
-			Dtu:               pulumi.Int(50),
-			Edition:           pulumi.String("Basic"),
-			ElasticPoolName:   pulumi.String("sqlcrudtest-8102"),
-			Location:          pulumi.String("Japan East"),
-			ResourceGroupName: pulumi.String("sqlcrudtest-2369"),
-			ServerName:        pulumi.String("sqlcrudtest-8069"),
-			StorageMB:         pulumi.Int(5000),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-elastic_pool = azurerm.sql.latest.ElasticPool("elasticPool",
-    database_dtu_max=5,
-    database_dtu_min=0,
-    dtu=50,
-    edition="Basic",
-    elastic_pool_name="sqlcrudtest-8102",
-    location="Japan East",
-    resource_group_name="sqlcrudtest-2369",
-    server_name="sqlcrudtest-8069",
-    storage_mb=5000)
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const elasticPool = new azurerm.sql.latest.ElasticPool("elasticPool", {
-    databaseDtuMax: 5,
-    databaseDtuMin: 0,
-    dtu: 50,
-    edition: "Basic",
-    elasticPoolName: "sqlcrudtest-8102",
-    location: "Japan East",
-    resourceGroupName: "sqlcrudtest-2369",
-    serverName: "sqlcrudtest-8069",
-    storageMB: 5000,
-});
-
-```
-
-{{% /example %}}
-
-### Create elastic pool min
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var elasticPool = new AzureRM.Sql.Latest.ElasticPool("elasticPool", new AzureRM.Sql.Latest.ElasticPoolArgs
-        {
-            ElasticPoolName = "sqlcrudtest-8102",
-            Location = "Japan East",
-            ResourceGroupName = "sqlcrudtest-2369",
-            ServerName = "sqlcrudtest-8069",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	sql "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sql/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sql.NewElasticPool(ctx, "elasticPool", &sql.ElasticPoolArgs{
-			ElasticPoolName:   pulumi.String("sqlcrudtest-8102"),
-			Location:          pulumi.String("Japan East"),
-			ResourceGroupName: pulumi.String("sqlcrudtest-2369"),
-			ServerName:        pulumi.String("sqlcrudtest-8069"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-elastic_pool = azurerm.sql.latest.ElasticPool("elasticPool",
-    elastic_pool_name="sqlcrudtest-8102",
-    location="Japan East",
-    resource_group_name="sqlcrudtest-2369",
-    server_name="sqlcrudtest-8069")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const elasticPool = new azurerm.sql.latest.ElasticPool("elasticPool", {
-    elasticPoolName: "sqlcrudtest-8102",
-    location: "Japan East",
-    resourceGroupName: "sqlcrudtest-2369",
-    serverName: "sqlcrudtest-8069",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ElasticPool Resource {#create}
@@ -222,7 +23,7 @@ const elasticPool = new azurerm.sql.latest.ElasticPool("elasticPool", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/sql/latest/#pulumi_azurerm.sql/latest.ElasticPool">ElasticPool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database_dtu_max</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">database_dtu_min</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dtu</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">edition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_mb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/sql/latest/#pulumi_azurerm.sql/latest.ElasticPool">ElasticPool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database_dtu_max</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">database_dtu_min</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">edition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_mb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -791,7 +592,7 @@ The ElasticPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#database_dtu_max_python" style="color: inherit; text-decoration: inherit;">database_<wbr>dtu_<wbr>max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum DTU any one database can consume.{{% /md %}}</dd>
 
@@ -801,7 +602,7 @@ The ElasticPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#database_dtu_min_python" style="color: inherit; text-decoration: inherit;">database_<wbr>dtu_<wbr>min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum DTU all databases are guaranteed.{{% /md %}}</dd>
 
@@ -811,7 +612,7 @@ The ElasticPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#dtu_python" style="color: inherit; text-decoration: inherit;">dtu</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The total shared DTU for the database elastic pool.{{% /md %}}</dd>
 
@@ -831,7 +632,7 @@ The ElasticPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#storage_mb_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets storage limit for the database elastic pool in MB.{{% /md %}}</dd>
 

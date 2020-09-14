@@ -12,115 +12,6 @@ meta_desc: "Explore the IotDpsResource resource of the devices/latest module, in
 
 The description of the provisioning service.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### DPSCreate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var iotDpsResource = new AzureRM.Devices.Latest.IotDpsResource("iotDpsResource", new AzureRM.Devices.Latest.IotDpsResourceArgs
-        {
-            Location = "East US",
-            ProvisioningServiceName = "myFirstProvisioningService",
-            ResourceGroupName = "myResourceGroup",
-            Sku = new AzureRM.Devices.Latest.Inputs.IotDpsSkuInfoArgs
-            {
-                Capacity = 1,
-                Name = "S1",
-            },
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	devices "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/devices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := devices.NewIotDpsResource(ctx, "iotDpsResource", &devices.IotDpsResourceArgs{
-			Location:                pulumi.String("East US"),
-			ProvisioningServiceName: pulumi.String("myFirstProvisioningService"),
-			ResourceGroupName:       pulumi.String("myResourceGroup"),
-			Sku: &devices.IotDpsSkuInfoArgs{
-				Capacity: pulumi.Int(1),
-				Name:     pulumi.String("S1"),
-			},
-			Tags: nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-iot_dps_resource = azurerm.devices.latest.IotDpsResource("iotDpsResource",
-    location="East US",
-    provisioning_service_name="myFirstProvisioningService",
-    resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 1,
-        "name": "S1",
-    },
-    tags={})
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const iotDpsResource = new azurerm.devices.latest.IotDpsResource("iotDpsResource", {
-    location: "East US",
-    provisioningServiceName: "myFirstProvisioningService",
-    resourceGroupName: "myResourceGroup",
-    sku: {
-        capacity: 1,
-        name: "S1",
-    },
-    tags: {},
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a IotDpsResource Resource {#create}
@@ -1737,7 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of units to provision{{% /md %}}</dd>
 
@@ -1903,7 +1794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of units to provision{{% /md %}}</dd>
 
@@ -2109,7 +2000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allocationweight_python" style="color: inherit; text-decoration: inherit;">allocation<wbr>Weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}weight to apply for a given iot h.{{% /md %}}</dd>
 
@@ -2355,7 +2246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allocationweight_python" style="color: inherit; text-decoration: inherit;">allocation<wbr>Weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}weight to apply for a given iot h.{{% /md %}}</dd>
 
@@ -2527,8 +2418,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ipmask_python">
-<a href="#ipmask_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
+        <span id="ip_mask_python">
+<a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2693,8 +2584,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ipmask_python">
-<a href="#ipmask_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
+        <span id="ip_mask_python">
+<a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

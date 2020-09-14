@@ -1159,7 +1159,7 @@ The following output properties are available:
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max age to be allowed via CORS.{{% /md %}}</dd>
 
@@ -1265,7 +1265,7 @@ The following output properties are available:
 <a href="#offer_throughput_python" style="color: inherit; text-decoration: inherit;">offer_<wbr>throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The provisioned throughput for the backing database.{{% /md %}}</dd>
 

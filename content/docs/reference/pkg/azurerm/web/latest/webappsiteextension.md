@@ -1121,7 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#download_count_python" style="color: inherit; text-decoration: inherit;">download_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of downloads.{{% /md %}}</dd>
 

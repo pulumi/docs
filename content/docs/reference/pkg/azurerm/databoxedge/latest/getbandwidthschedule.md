@@ -439,7 +439,7 @@ The following output properties are available:
 <a href="#rate_in_mbps_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>in_<wbr>mbps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The bandwidth rate in Mbps.{{% /md %}}</dd>
 

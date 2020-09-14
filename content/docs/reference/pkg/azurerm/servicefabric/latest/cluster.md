@@ -12,707 +12,6 @@ meta_desc: "Explore the Cluster resource of the servicefabric/latest module, inc
 
 The cluster resource
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Put a cluster with maximum parameters
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var cluster = new AzureRM.ServiceFabric.Latest.Cluster("cluster", new AzureRM.ServiceFabric.Latest.ClusterArgs
-        {
-            AddOnFeatures = 
-            {
-                "RepairManager",
-                "DnsService",
-                "BackupRestoreService",
-                "ResourceMonitorService",
-            },
-            ApplicationTypeVersionsCleanupPolicy = new AzureRM.ServiceFabric.Latest.Inputs.ApplicationTypeVersionsCleanupPolicyArgs
-            {
-                MaxUnusedVersionsToKeep = 2,
-            },
-            AzureActiveDirectory = new AzureRM.ServiceFabric.Latest.Inputs.AzureActiveDirectoryArgs
-            {
-                ClientApplication = "d151ad89-4bce-4ae8-b3d1-1dc79679fa75",
-                ClusterApplication = "5886372e-7bf4-4878-a497-8098aba608ae",
-                TenantId = "6abcc6a0-8666-43f1-87b8-172cf86a9f9c",
-            },
-            CertificateCommonNames = new AzureRM.ServiceFabric.Latest.Inputs.ServerCertificateCommonNamesArgs
-            {
-                CommonNames = 
-                {
-                    new AzureRM.ServiceFabric.Latest.Inputs.ServerCertificateCommonNameArgs
-                    {
-                        CertificateCommonName = "abc.com",
-                        CertificateIssuerThumbprint = "12599211F8F14C90AFA9532AD79A6F2CA1C00622",
-                    },
-                },
-                X509StoreName = "My",
-            },
-            ClientCertificateCommonNames = 
-            {
-                new AzureRM.ServiceFabric.Latest.Inputs.ClientCertificateCommonNameArgs
-                {
-                    CertificateCommonName = "abc.com",
-                    CertificateIssuerThumbprint = "5F3660C715EBBDA31DB1FFDCF508302348DE8E7A",
-                    IsAdmin = true,
-                },
-            },
-            ClientCertificateThumbprints = 
-            {
-                new AzureRM.ServiceFabric.Latest.Inputs.ClientCertificateThumbprintArgs
-                {
-                    CertificateThumbprint = "5F3660C715EBBDA31DB1FFDCF508302348DE8E7A",
-                    IsAdmin = true,
-                },
-            },
-            ClusterCodeVersion = "7.0.470.9590",
-            ClusterName = "myCluster",
-            DiagnosticsStorageAccountConfig = new AzureRM.ServiceFabric.Latest.Inputs.DiagnosticsStorageAccountConfigArgs
-            {
-                BlobEndpoint = "https://diag.blob.core.windows.net/",
-                ProtectedAccountKeyName = "StorageAccountKey1",
-                QueueEndpoint = "https://diag.queue.core.windows.net/",
-                StorageAccountName = "diag",
-                TableEndpoint = "https://diag.table.core.windows.net/",
-            },
-            EventStoreServiceEnabled = true,
-            FabricSettings = 
-            {
-                new AzureRM.ServiceFabric.Latest.Inputs.SettingsSectionDescriptionArgs
-                {
-                    Name = "UpgradeService",
-                    Parameters = 
-                    {
-                        new AzureRM.ServiceFabric.Latest.Inputs.SettingsParameterDescriptionArgs
-                        {
-                            Name = "AppPollIntervalInSeconds",
-                            Value = "60",
-                        },
-                    },
-                },
-            },
-            Location = "eastus",
-            ManagementEndpoint = "https://myCluster.eastus.cloudapp.azure.com:19080",
-            NodeTypes = 
-            {
-                new AzureRM.ServiceFabric.Latest.Inputs.NodeTypeDescriptionArgs
-                {
-                    ApplicationPorts = new AzureRM.ServiceFabric.Latest.Inputs.EndpointRangeDescriptionArgs
-                    {
-                        EndPort = 30000,
-                        StartPort = 20000,
-                    },
-                    ClientConnectionEndpointPort = 19000,
-                    DurabilityLevel = "Bronze",
-                    EphemeralPorts = new AzureRM.ServiceFabric.Latest.Inputs.EndpointRangeDescriptionArgs
-                    {
-                        EndPort = 64000,
-                        StartPort = 49000,
-                    },
-                    HttpGatewayEndpointPort = 19007,
-                    IsPrimary = true,
-                    Name = "nt1vm",
-                    VmInstanceCount = 5,
-                },
-            },
-            ReliabilityLevel = "Silver",
-            ResourceGroupName = "resRg",
-            ReverseProxyCertificateCommonNames = new AzureRM.ServiceFabric.Latest.Inputs.ServerCertificateCommonNamesArgs
-            {
-                CommonNames = 
-                {
-                    new AzureRM.ServiceFabric.Latest.Inputs.ServerCertificateCommonNameArgs
-                    {
-                        CertificateCommonName = "abc.com",
-                        CertificateIssuerThumbprint = "12599211F8F14C90AFA9532AD79A6F2CA1C00622",
-                    },
-                },
-                X509StoreName = "My",
-            },
-            Tags = ,
-            UpgradeDescription = new AzureRM.ServiceFabric.Latest.Inputs.ClusterUpgradePolicyArgs
-            {
-                DeltaHealthPolicy = new AzureRM.ServiceFabric.Latest.Inputs.ClusterUpgradeDeltaHealthPolicyArgs
-                {
-                    ApplicationDeltaHealthPolicies = 
-                    {
-                        { "fabric:/myApp1", new AzureRM.ServiceFabric.Latest.Inputs.ApplicationDeltaHealthPolicyArgs
-                        {
-                            DefaultServiceTypeDeltaHealthPolicy = new AzureRM.ServiceFabric.Latest.Inputs.ServiceTypeDeltaHealthPolicyArgs
-                            {
-                                MaxPercentDeltaUnhealthyServices = 0,
-                            },
-                            ServiceTypeDeltaHealthPolicies = 
-                            {
-                                { "myServiceType1", new AzureRM.ServiceFabric.Latest.Inputs.ServiceTypeDeltaHealthPolicyArgs
-                                {
-                                    MaxPercentDeltaUnhealthyServices = 0,
-                                } },
-                            },
-                        } },
-                    },
-                    MaxPercentDeltaUnhealthyApplications = 0,
-                    MaxPercentDeltaUnhealthyNodes = 0,
-                    MaxPercentUpgradeDomainDeltaUnhealthyNodes = 0,
-                },
-                ForceRestart = false,
-                HealthCheckRetryTimeout = "00:05:00",
-                HealthCheckStableDuration = "00:00:30",
-                HealthCheckWaitDuration = "00:00:30",
-                HealthPolicy = new AzureRM.ServiceFabric.Latest.Inputs.ClusterHealthPolicyArgs
-                {
-                    ApplicationHealthPolicies = 
-                    {
-                        { "fabric:/myApp1", new AzureRM.ServiceFabric.Latest.Inputs.ApplicationHealthPolicyArgs
-                        {
-                            DefaultServiceTypeHealthPolicy = new AzureRM.ServiceFabric.Latest.Inputs.ServiceTypeHealthPolicyArgs
-                            {
-                                MaxPercentUnhealthyServices = 0,
-                            },
-                            ServiceTypeHealthPolicies = 
-                            {
-                                { "myServiceType1", new AzureRM.ServiceFabric.Latest.Inputs.ServiceTypeHealthPolicyArgs
-                                {
-                                    MaxPercentUnhealthyServices = 100,
-                                } },
-                            },
-                        } },
-                    },
-                    MaxPercentUnhealthyApplications = 0,
-                    MaxPercentUnhealthyNodes = 0,
-                },
-                UpgradeDomainTimeout = "00:15:00",
-                UpgradeReplicaSetCheckTimeout = "00:10:00",
-                UpgradeTimeout = "01:00:00",
-            },
-            UpgradeMode = "Manual",
-            VmImage = "Windows",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-cluster = azurerm.servicefabric.latest.Cluster("cluster",
-    add_on_features=[
-        "RepairManager",
-        "DnsService",
-        "BackupRestoreService",
-        "ResourceMonitorService",
-    ],
-    application_type_versions_cleanup_policy={
-        "maxUnusedVersionsToKeep": 2,
-    },
-    azure_active_directory={
-        "clientApplication": "d151ad89-4bce-4ae8-b3d1-1dc79679fa75",
-        "clusterApplication": "5886372e-7bf4-4878-a497-8098aba608ae",
-        "tenantId": "6abcc6a0-8666-43f1-87b8-172cf86a9f9c",
-    },
-    certificate_common_names={
-        "commonNames": [{
-            "certificateCommonName": "abc.com",
-            "certificateIssuerThumbprint": "12599211F8F14C90AFA9532AD79A6F2CA1C00622",
-        }],
-        "x509StoreName": "My",
-    },
-    client_certificate_common_names=[{
-        "certificateCommonName": "abc.com",
-        "certificateIssuerThumbprint": "5F3660C715EBBDA31DB1FFDCF508302348DE8E7A",
-        "isAdmin": True,
-    }],
-    client_certificate_thumbprints=[{
-        "certificateThumbprint": "5F3660C715EBBDA31DB1FFDCF508302348DE8E7A",
-        "isAdmin": True,
-    }],
-    cluster_code_version="7.0.470.9590",
-    cluster_name="myCluster",
-    diagnostics_storage_account_config={
-        "blobEndpoint": "https://diag.blob.core.windows.net/",
-        "protectedAccountKeyName": "StorageAccountKey1",
-        "queueEndpoint": "https://diag.queue.core.windows.net/",
-        "storageAccountName": "diag",
-        "tableEndpoint": "https://diag.table.core.windows.net/",
-    },
-    event_store_service_enabled=True,
-    fabric_settings=[{
-        "name": "UpgradeService",
-        "parameters": [{
-            "name": "AppPollIntervalInSeconds",
-            "value": "60",
-        }],
-    }],
-    location="eastus",
-    management_endpoint="https://myCluster.eastus.cloudapp.azure.com:19080",
-    node_types=[{
-        "applicationPorts": {
-            "endPort": 30000,
-            "startPort": 20000,
-        },
-        "clientConnectionEndpointPort": 19000,
-        "durabilityLevel": "Bronze",
-        "ephemeralPorts": {
-            "endPort": 64000,
-            "startPort": 49000,
-        },
-        "httpGatewayEndpointPort": 19007,
-        "isPrimary": True,
-        "name": "nt1vm",
-        "vmInstanceCount": 5,
-    }],
-    reliability_level="Silver",
-    resource_group_name="resRg",
-    reverse_proxy_certificate_common_names={
-        "commonNames": [{
-            "certificateCommonName": "abc.com",
-            "certificateIssuerThumbprint": "12599211F8F14C90AFA9532AD79A6F2CA1C00622",
-        }],
-        "x509StoreName": "My",
-    },
-    tags={},
-    upgrade_description={
-        "deltaHealthPolicy": {
-            "applicationDeltaHealthPolicies": {
-                "fabric:/myApp1": {
-                    "defaultServiceTypeDeltaHealthPolicy": {
-                        "maxPercentDeltaUnhealthyServices": 0,
-                    },
-                    "serviceTypeDeltaHealthPolicies": {
-                        "myServiceType1": {
-                            "maxPercentDeltaUnhealthyServices": 0,
-                        },
-                    },
-                },
-            },
-            "maxPercentDeltaUnhealthyApplications": 0,
-            "maxPercentDeltaUnhealthyNodes": 0,
-            "maxPercentUpgradeDomainDeltaUnhealthyNodes": 0,
-        },
-        "forceRestart": False,
-        "healthCheckRetryTimeout": "00:05:00",
-        "healthCheckStableDuration": "00:00:30",
-        "healthCheckWaitDuration": "00:00:30",
-        "healthPolicy": {
-            "applicationHealthPolicies": {
-                "fabric:/myApp1": {
-                    "defaultServiceTypeHealthPolicy": {
-                        "maxPercentUnhealthyServices": 0,
-                    },
-                    "serviceTypeHealthPolicies": {
-                        "myServiceType1": {
-                            "maxPercentUnhealthyServices": 100,
-                        },
-                    },
-                },
-            },
-            "maxPercentUnhealthyApplications": 0,
-            "maxPercentUnhealthyNodes": 0,
-        },
-        "upgradeDomainTimeout": "00:15:00",
-        "upgradeReplicaSetCheckTimeout": "00:10:00",
-        "upgradeTimeout": "01:00:00",
-    },
-    upgrade_mode="Manual",
-    vm_image="Windows")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const cluster = new azurerm.servicefabric.latest.Cluster("cluster", {
-    addOnFeatures: [
-        "RepairManager",
-        "DnsService",
-        "BackupRestoreService",
-        "ResourceMonitorService",
-    ],
-    applicationTypeVersionsCleanupPolicy: {
-        maxUnusedVersionsToKeep: 2,
-    },
-    azureActiveDirectory: {
-        clientApplication: "d151ad89-4bce-4ae8-b3d1-1dc79679fa75",
-        clusterApplication: "5886372e-7bf4-4878-a497-8098aba608ae",
-        tenantId: "6abcc6a0-8666-43f1-87b8-172cf86a9f9c",
-    },
-    certificateCommonNames: {
-        commonNames: [{
-            certificateCommonName: "abc.com",
-            certificateIssuerThumbprint: "12599211F8F14C90AFA9532AD79A6F2CA1C00622",
-        }],
-        x509StoreName: "My",
-    },
-    clientCertificateCommonNames: [{
-        certificateCommonName: "abc.com",
-        certificateIssuerThumbprint: "5F3660C715EBBDA31DB1FFDCF508302348DE8E7A",
-        isAdmin: true,
-    }],
-    clientCertificateThumbprints: [{
-        certificateThumbprint: "5F3660C715EBBDA31DB1FFDCF508302348DE8E7A",
-        isAdmin: true,
-    }],
-    clusterCodeVersion: "7.0.470.9590",
-    clusterName: "myCluster",
-    diagnosticsStorageAccountConfig: {
-        blobEndpoint: "https://diag.blob.core.windows.net/",
-        protectedAccountKeyName: "StorageAccountKey1",
-        queueEndpoint: "https://diag.queue.core.windows.net/",
-        storageAccountName: "diag",
-        tableEndpoint: "https://diag.table.core.windows.net/",
-    },
-    eventStoreServiceEnabled: true,
-    fabricSettings: [{
-        name: "UpgradeService",
-        parameters: [{
-            name: "AppPollIntervalInSeconds",
-            value: "60",
-        }],
-    }],
-    location: "eastus",
-    managementEndpoint: "https://myCluster.eastus.cloudapp.azure.com:19080",
-    nodeTypes: [{
-        applicationPorts: {
-            endPort: 30000,
-            startPort: 20000,
-        },
-        clientConnectionEndpointPort: 19000,
-        durabilityLevel: "Bronze",
-        ephemeralPorts: {
-            endPort: 64000,
-            startPort: 49000,
-        },
-        httpGatewayEndpointPort: 19007,
-        isPrimary: true,
-        name: "nt1vm",
-        vmInstanceCount: 5,
-    }],
-    reliabilityLevel: "Silver",
-    resourceGroupName: "resRg",
-    reverseProxyCertificateCommonNames: {
-        commonNames: [{
-            certificateCommonName: "abc.com",
-            certificateIssuerThumbprint: "12599211F8F14C90AFA9532AD79A6F2CA1C00622",
-        }],
-        x509StoreName: "My",
-    },
-    tags: {},
-    upgradeDescription: {
-        deltaHealthPolicy: {
-            applicationDeltaHealthPolicies: {
-                "fabric:/myApp1": {
-                    defaultServiceTypeDeltaHealthPolicy: {
-                        maxPercentDeltaUnhealthyServices: 0,
-                    },
-                    serviceTypeDeltaHealthPolicies: {
-                        myServiceType1: {
-                            maxPercentDeltaUnhealthyServices: 0,
-                        },
-                    },
-                },
-            },
-            maxPercentDeltaUnhealthyApplications: 0,
-            maxPercentDeltaUnhealthyNodes: 0,
-            maxPercentUpgradeDomainDeltaUnhealthyNodes: 0,
-        },
-        forceRestart: false,
-        healthCheckRetryTimeout: "00:05:00",
-        healthCheckStableDuration: "00:00:30",
-        healthCheckWaitDuration: "00:00:30",
-        healthPolicy: {
-            applicationHealthPolicies: {
-                "fabric:/myApp1": {
-                    defaultServiceTypeHealthPolicy: {
-                        maxPercentUnhealthyServices: 0,
-                    },
-                    serviceTypeHealthPolicies: {
-                        myServiceType1: {
-                            maxPercentUnhealthyServices: 100,
-                        },
-                    },
-                },
-            },
-            maxPercentUnhealthyApplications: 0,
-            maxPercentUnhealthyNodes: 0,
-        },
-        upgradeDomainTimeout: "00:15:00",
-        upgradeReplicaSetCheckTimeout: "00:10:00",
-        upgradeTimeout: "01:00:00",
-    },
-    upgradeMode: "Manual",
-    vmImage: "Windows",
-});
-
-```
-
-{{% /example %}}
-
-### Put a cluster with minimum parameters
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var cluster = new AzureRM.ServiceFabric.Latest.Cluster("cluster", new AzureRM.ServiceFabric.Latest.ClusterArgs
-        {
-            ClusterName = "myCluster",
-            DiagnosticsStorageAccountConfig = new AzureRM.ServiceFabric.Latest.Inputs.DiagnosticsStorageAccountConfigArgs
-            {
-                BlobEndpoint = "https://diag.blob.core.windows.net/",
-                ProtectedAccountKeyName = "StorageAccountKey1",
-                QueueEndpoint = "https://diag.queue.core.windows.net/",
-                StorageAccountName = "diag",
-                TableEndpoint = "https://diag.table.core.windows.net/",
-            },
-            FabricSettings = 
-            {
-                new AzureRM.ServiceFabric.Latest.Inputs.SettingsSectionDescriptionArgs
-                {
-                    Name = "UpgradeService",
-                    Parameters = 
-                    {
-                        new AzureRM.ServiceFabric.Latest.Inputs.SettingsParameterDescriptionArgs
-                        {
-                            Name = "AppPollIntervalInSeconds",
-                            Value = "60",
-                        },
-                    },
-                },
-            },
-            Location = "eastus",
-            ManagementEndpoint = "http://myCluster.eastus.cloudapp.azure.com:19080",
-            NodeTypes = 
-            {
-                new AzureRM.ServiceFabric.Latest.Inputs.NodeTypeDescriptionArgs
-                {
-                    ApplicationPorts = new AzureRM.ServiceFabric.Latest.Inputs.EndpointRangeDescriptionArgs
-                    {
-                        EndPort = 30000,
-                        StartPort = 20000,
-                    },
-                    ClientConnectionEndpointPort = 19000,
-                    DurabilityLevel = "Bronze",
-                    EphemeralPorts = new AzureRM.ServiceFabric.Latest.Inputs.EndpointRangeDescriptionArgs
-                    {
-                        EndPort = 64000,
-                        StartPort = 49000,
-                    },
-                    HttpGatewayEndpointPort = 19007,
-                    IsPrimary = true,
-                    Name = "nt1vm",
-                    VmInstanceCount = 5,
-                },
-            },
-            ReliabilityLevel = "Silver",
-            ResourceGroupName = "resRg",
-            Tags = ,
-            UpgradeMode = "Automatic",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	servicefabric "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicefabric/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := servicefabric.NewCluster(ctx, "cluster", &servicefabric.ClusterArgs{
-			ClusterName: pulumi.String("myCluster"),
-			DiagnosticsStorageAccountConfig: &servicefabric.DiagnosticsStorageAccountConfigArgs{
-				BlobEndpoint:            pulumi.String("https://diag.blob.core.windows.net/"),
-				ProtectedAccountKeyName: pulumi.String("StorageAccountKey1"),
-				QueueEndpoint:           pulumi.String("https://diag.queue.core.windows.net/"),
-				StorageAccountName:      pulumi.String("diag"),
-				TableEndpoint:           pulumi.String("https://diag.table.core.windows.net/"),
-			},
-			FabricSettings: servicefabric.SettingsSectionDescriptionArray{
-				&servicefabric.SettingsSectionDescriptionArgs{
-					Name: pulumi.String("UpgradeService"),
-					Parameters: servicefabric.SettingsParameterDescriptionArray{
-						&servicefabric.SettingsParameterDescriptionArgs{
-							Name:  pulumi.String("AppPollIntervalInSeconds"),
-							Value: pulumi.String("60"),
-						},
-					},
-				},
-			},
-			Location:           pulumi.String("eastus"),
-			ManagementEndpoint: pulumi.String("http://myCluster.eastus.cloudapp.azure.com:19080"),
-			NodeTypes: servicefabric.NodeTypeDescriptionArray{
-				&servicefabric.NodeTypeDescriptionArgs{
-					ApplicationPorts: &servicefabric.EndpointRangeDescriptionArgs{
-						EndPort:   pulumi.Int(30000),
-						StartPort: pulumi.Int(20000),
-					},
-					ClientConnectionEndpointPort: pulumi.Int(19000),
-					DurabilityLevel:              pulumi.String("Bronze"),
-					EphemeralPorts: &servicefabric.EndpointRangeDescriptionArgs{
-						EndPort:   pulumi.Int(64000),
-						StartPort: pulumi.Int(49000),
-					},
-					HttpGatewayEndpointPort: pulumi.Int(19007),
-					IsPrimary:               pulumi.Bool(true),
-					Name:                    pulumi.String("nt1vm"),
-					VmInstanceCount:         pulumi.Int(5),
-				},
-			},
-			ReliabilityLevel:  pulumi.String("Silver"),
-			ResourceGroupName: pulumi.String("resRg"),
-			Tags:              nil,
-			UpgradeMode:       pulumi.String("Automatic"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-cluster = azurerm.servicefabric.latest.Cluster("cluster",
-    cluster_name="myCluster",
-    diagnostics_storage_account_config={
-        "blobEndpoint": "https://diag.blob.core.windows.net/",
-        "protectedAccountKeyName": "StorageAccountKey1",
-        "queueEndpoint": "https://diag.queue.core.windows.net/",
-        "storageAccountName": "diag",
-        "tableEndpoint": "https://diag.table.core.windows.net/",
-    },
-    fabric_settings=[{
-        "name": "UpgradeService",
-        "parameters": [{
-            "name": "AppPollIntervalInSeconds",
-            "value": "60",
-        }],
-    }],
-    location="eastus",
-    management_endpoint="http://myCluster.eastus.cloudapp.azure.com:19080",
-    node_types=[{
-        "applicationPorts": {
-            "endPort": 30000,
-            "startPort": 20000,
-        },
-        "clientConnectionEndpointPort": 19000,
-        "durabilityLevel": "Bronze",
-        "ephemeralPorts": {
-            "endPort": 64000,
-            "startPort": 49000,
-        },
-        "httpGatewayEndpointPort": 19007,
-        "isPrimary": True,
-        "name": "nt1vm",
-        "vmInstanceCount": 5,
-    }],
-    reliability_level="Silver",
-    resource_group_name="resRg",
-    tags={},
-    upgrade_mode="Automatic")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const cluster = new azurerm.servicefabric.latest.Cluster("cluster", {
-    clusterName: "myCluster",
-    diagnosticsStorageAccountConfig: {
-        blobEndpoint: "https://diag.blob.core.windows.net/",
-        protectedAccountKeyName: "StorageAccountKey1",
-        queueEndpoint: "https://diag.queue.core.windows.net/",
-        storageAccountName: "diag",
-        tableEndpoint: "https://diag.table.core.windows.net/",
-    },
-    fabricSettings: [{
-        name: "UpgradeService",
-        parameters: [{
-            name: "AppPollIntervalInSeconds",
-            value: "60",
-        }],
-    }],
-    location: "eastus",
-    managementEndpoint: "http://myCluster.eastus.cloudapp.azure.com:19080",
-    nodeTypes: [{
-        applicationPorts: {
-            endPort: 30000,
-            startPort: 20000,
-        },
-        clientConnectionEndpointPort: 19000,
-        durabilityLevel: "Bronze",
-        ephemeralPorts: {
-            endPort: 64000,
-            startPort: 49000,
-        },
-        httpGatewayEndpointPort: 19007,
-        isPrimary: true,
-        name: "nt1vm",
-        vmInstanceCount: 5,
-    }],
-    reliabilityLevel: "Silver",
-    resourceGroupName: "resRg",
-    tags: {},
-    upgradeMode: "Automatic",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}
@@ -2923,7 +2222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_unused_versions_to_keep_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unused_<wbr>versions_<wbr>to_<wbr>keep</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of unused versions per application type to keep.{{% /md %}}</dd>
 
@@ -3009,7 +2308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_unused_versions_to_keep_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unused_<wbr>versions_<wbr>to_<wbr>keep</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of unused versions per application type to keep.{{% /md %}}</dd>
 
@@ -4455,7 +3754,7 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 <a href="#max_percent_unhealthy_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>applications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
 
@@ -4471,7 +3770,7 @@ The computation rounds up to tolerate one failure on small numbers of applicatio
 <a href="#max_percent_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
 
@@ -4677,7 +3976,7 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 <a href="#max_percent_unhealthy_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>applications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
 
@@ -4693,7 +3992,7 @@ The computation rounds up to tolerate one failure on small numbers of applicatio
 <a href="#max_percent_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
 
@@ -4904,7 +4203,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#max_percent_delta_unhealthy_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>applications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
 The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
@@ -4917,7 +4216,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#max_percent_delta_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
 The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
@@ -4930,7 +4229,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#max_percent_upgrade_domain_delta_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>upgrade_<wbr>domain_<wbr>delta_<wbr>unhealthy_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
 The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
@@ -5146,7 +4445,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#max_percent_delta_unhealthy_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>applications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
 The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
@@ -5159,7 +4458,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#max_percent_delta_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
 The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
@@ -5172,7 +4471,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#max_percent_upgrade_domain_delta_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>upgrade_<wbr>domain_<wbr>delta_<wbr>unhealthy_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
 The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
@@ -6847,21 +6146,21 @@ The check is performed after every upgrade domain upgrade completion for all com
 
     <dt class="property-required"
             title="Required">
-        <span id="endport_python">
-<a href="#endport_python" style="color: inherit; text-decoration: inherit;">end<wbr>Port</a>
+        <span id="end_port_python">
+<a href="#end_port_python" style="color: inherit; text-decoration: inherit;">end_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}End port of a range of ports{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="startport_python">
-<a href="#startport_python" style="color: inherit; text-decoration: inherit;">start<wbr>Port</a>
+        <span id="start_port_python">
+<a href="#start_port_python" style="color: inherit; text-decoration: inherit;">start_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Starting port of a range of ports{{% /md %}}</dd>
 
@@ -6973,21 +6272,21 @@ The check is performed after every upgrade domain upgrade completion for all com
 
     <dt class="property-required"
             title="Required">
-        <span id="endport_python">
-<a href="#endport_python" style="color: inherit; text-decoration: inherit;">end<wbr>Port</a>
+        <span id="end_port_python">
+<a href="#end_port_python" style="color: inherit; text-decoration: inherit;">end_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}End port of a range of ports{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="startport_python">
-<a href="#startport_python" style="color: inherit; text-decoration: inherit;">start<wbr>Port</a>
+        <span id="start_port_python">
+<a href="#start_port_python" style="color: inherit; text-decoration: inherit;">start_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Starting port of a range of ports{{% /md %}}</dd>
 
@@ -7388,7 +6687,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#clientconnectionendpointport_python" style="color: inherit; text-decoration: inherit;">client<wbr>Connection<wbr>Endpoint<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The TCP cluster management endpoint port.{{% /md %}}</dd>
 
@@ -7398,14 +6697,14 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#httpgatewayendpointport_python" style="color: inherit; text-decoration: inherit;">http<wbr>Gateway<wbr>Endpoint<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTP cluster management endpoint port.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="isprimary_python">
-<a href="#isprimary_python" style="color: inherit; text-decoration: inherit;">is<wbr>Primary</a>
+        <span id="is_primary_python">
+<a href="#is_primary_python" style="color: inherit; text-decoration: inherit;">is_<wbr>primary</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7424,18 +6723,18 @@ The check is performed after every upgrade domain upgrade completion for all com
 
     <dt class="property-required"
             title="Required">
-        <span id="vminstancecount_python">
-<a href="#vminstancecount_python" style="color: inherit; text-decoration: inherit;">vm<wbr>Instance<wbr>Count</a>
+        <span id="vm_instance_count_python">
+<a href="#vm_instance_count_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationports_python">
-<a href="#applicationports_python" style="color: inherit; text-decoration: inherit;">application<wbr>Ports</a>
+        <span id="application_ports_python">
+<a href="#application_ports_python" style="color: inherit; text-decoration: inherit;">application_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointrangedescription">Dict[Endpoint<wbr>Range<wbr>Description]</a></span>
@@ -7469,8 +6768,8 @@ The check is performed after every upgrade domain upgrade completion for all com
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ephemeralports_python">
-<a href="#ephemeralports_python" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Ports</a>
+        <span id="ephemeral_ports_python">
+<a href="#ephemeral_ports_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointrangedescription">Dict[Endpoint<wbr>Range<wbr>Description]</a></span>
@@ -7479,8 +6778,8 @@ The check is performed after every upgrade domain upgrade completion for all com
 
     <dt class="property-optional"
             title="Optional">
-        <span id="placementproperties_python">
-<a href="#placementproperties_python" style="color: inherit; text-decoration: inherit;">placement<wbr>Properties</a>
+        <span id="placement_properties_python">
+<a href="#placement_properties_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
@@ -7493,7 +6792,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#reverseproxyendpointport_python" style="color: inherit; text-decoration: inherit;">reverse<wbr>Proxy<wbr>Endpoint<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The endpoint used by reverse proxy.{{% /md %}}</dd>
 
@@ -7894,7 +7193,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#clientconnectionendpointport_python" style="color: inherit; text-decoration: inherit;">client<wbr>Connection<wbr>Endpoint<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The TCP cluster management endpoint port.{{% /md %}}</dd>
 
@@ -7904,14 +7203,14 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#httpgatewayendpointport_python" style="color: inherit; text-decoration: inherit;">http<wbr>Gateway<wbr>Endpoint<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTP cluster management endpoint port.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="isprimary_python">
-<a href="#isprimary_python" style="color: inherit; text-decoration: inherit;">is<wbr>Primary</a>
+        <span id="is_primary_python">
+<a href="#is_primary_python" style="color: inherit; text-decoration: inherit;">is_<wbr>primary</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7930,18 +7229,18 @@ The check is performed after every upgrade domain upgrade completion for all com
 
     <dt class="property-required"
             title="Required">
-        <span id="vminstancecount_python">
-<a href="#vminstancecount_python" style="color: inherit; text-decoration: inherit;">vm<wbr>Instance<wbr>Count</a>
+        <span id="vm_instance_count_python">
+<a href="#vm_instance_count_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationports_python">
-<a href="#applicationports_python" style="color: inherit; text-decoration: inherit;">application<wbr>Ports</a>
+        <span id="application_ports_python">
+<a href="#application_ports_python" style="color: inherit; text-decoration: inherit;">application_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointrangedescriptionresponse">Dict[Endpoint<wbr>Range<wbr>Description<wbr>Response]</a></span>
@@ -7975,8 +7274,8 @@ The check is performed after every upgrade domain upgrade completion for all com
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ephemeralports_python">
-<a href="#ephemeralports_python" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Ports</a>
+        <span id="ephemeral_ports_python">
+<a href="#ephemeral_ports_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointrangedescriptionresponse">Dict[Endpoint<wbr>Range<wbr>Description<wbr>Response]</a></span>
@@ -7985,8 +7284,8 @@ The check is performed after every upgrade domain upgrade completion for all com
 
     <dt class="property-optional"
             title="Optional">
-        <span id="placementproperties_python">
-<a href="#placementproperties_python" style="color: inherit; text-decoration: inherit;">placement<wbr>Properties</a>
+        <span id="placement_properties_python">
+<a href="#placement_properties_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
@@ -7999,7 +7298,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#reverseproxyendpointport_python" style="color: inherit; text-decoration: inherit;">reverse<wbr>Proxy<wbr>Endpoint<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The endpoint used by reverse proxy.{{% /md %}}</dd>
 
@@ -8598,7 +7897,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#maxpercentdeltaunhealthyservices_python" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of services health degradation allowed during cluster upgrades.
 The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
@@ -8696,7 +7995,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#maxpercentdeltaunhealthyservices_python" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of services health degradation allowed during cluster upgrades.
 The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
@@ -8788,7 +8087,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#max_percent_unhealthy_services_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd>
@@ -8878,7 +8177,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#max_percent_unhealthy_services_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd>

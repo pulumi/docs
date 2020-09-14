@@ -799,7 +799,7 @@ The following output properties are available:
 <a href="#user_quota_python" style="color: inherit; text-decoration: inherit;">user_<wbr>quota</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum value MaxUsersInLab can be set to, as specified by the service{{% /md %}}</dd>
 
@@ -819,7 +819,7 @@ The following output properties are available:
 <a href="#max_users_in_lab_python" style="color: inherit; text-decoration: inherit;">max_<wbr>users_<wbr>in_<wbr>lab</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of users allowed in the lab.{{% /md %}}</dd>
 

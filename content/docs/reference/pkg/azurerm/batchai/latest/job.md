@@ -12,208 +12,6 @@ meta_desc: "Explore the Job resource of the batchai/latest module, including exa
 
 Information about a Job.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create a job
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var job = new AzureRM.BatchAI.Latest.Job("job", new AzureRM.BatchAI.Latest.JobArgs
-        {
-            Cluster = new AzureRM.BatchAI.Latest.Inputs.ResourceIdArgs
-            {
-                Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspace/demo_workspace/clusters/demo_cluster",
-            },
-            ContainerSettings = new AzureRM.BatchAI.Latest.Inputs.ContainerSettingsArgs
-            {
-                ImageSourceRegistry = new AzureRM.BatchAI.Latest.Inputs.ImageSourceRegistryArgs
-                {
-                    Image = "ubuntu",
-                },
-            },
-            CustomToolkitSettings = new AzureRM.BatchAI.Latest.Inputs.CustomToolkitSettingsArgs
-            {
-                CommandLine = "echo hi | tee $AZ_BATCHAI_OUTPUT_OUTPUTS/hi.txt",
-            },
-            ExperimentName = "demo_experiment",
-            InputDirectories = 
-            {
-                new AzureRM.BatchAI.Latest.Inputs.InputDirectoryArgs
-                {
-                    Id = "INPUT",
-                    Path = "$AZ_BATCHAI_MOUNT_ROOT/azfiles/input",
-                },
-            },
-            JobName = "demo_job",
-            NodeCount = 1,
-            OutputDirectories = 
-            {
-                new AzureRM.BatchAI.Latest.Inputs.OutputDirectoryArgs
-                {
-                    Id = "OUTPUTS",
-                    PathPrefix = "$AZ_BATCHAI_MOUNT_ROOT/azfiles/",
-                    PathSuffix = "files",
-                },
-            },
-            ResourceGroupName = "demo_resource_group",
-            SchedulingPriority = "normal",
-            StdOutErrPathPrefix = "$AZ_BATCHAI_MOUNT_ROOT/azfiles",
-            WorkspaceName = "demo_workspace",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	"fmt"
-
-	batchai "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/batchai/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := batchai.NewJob(ctx, "job", &batchai.JobArgs{
-			Cluster: &batchai.ResourceIdArgs{
-				Id: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspace/demo_workspace/clusters/demo_cluster"),
-			},
-			ContainerSettings: &batchai.ContainerSettingsArgs{
-				ImageSourceRegistry: &batchai.ImageSourceRegistryArgs{
-					Image: pulumi.String("ubuntu"),
-				},
-			},
-			CustomToolkitSettings: &batchai.CustomToolkitSettingsArgs{
-				CommandLine: pulumi.String(fmt.Sprintf("%v%v%v", "echo hi | tee ", "$", "AZ_BATCHAI_OUTPUT_OUTPUTS/hi.txt")),
-			},
-			ExperimentName: pulumi.String("demo_experiment"),
-			InputDirectories: batchai.InputDirectoryArray{
-				&batchai.InputDirectoryArgs{
-					Id:   pulumi.String("INPUT"),
-					Path: pulumi.String(fmt.Sprintf("%v%v", "$", "AZ_BATCHAI_MOUNT_ROOT/azfiles/input")),
-				},
-			},
-			JobName:   pulumi.String("demo_job"),
-			NodeCount: pulumi.Int(1),
-			OutputDirectories: batchai.OutputDirectoryArray{
-				&batchai.OutputDirectoryArgs{
-					Id:         pulumi.String("OUTPUTS"),
-					PathPrefix: pulumi.String(fmt.Sprintf("%v%v", "$", "AZ_BATCHAI_MOUNT_ROOT/azfiles/")),
-					PathSuffix: pulumi.String("files"),
-				},
-			},
-			ResourceGroupName:   pulumi.String("demo_resource_group"),
-			SchedulingPriority:  pulumi.String("normal"),
-			StdOutErrPathPrefix: pulumi.String(fmt.Sprintf("%v%v", "$", "AZ_BATCHAI_MOUNT_ROOT/azfiles")),
-			WorkspaceName:       pulumi.String("demo_workspace"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-job = azurerm.batchai.latest.Job("job",
-    cluster={
-        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspace/demo_workspace/clusters/demo_cluster",
-    },
-    container_settings={
-        "imageSourceRegistry": {
-            "image": "ubuntu",
-        },
-    },
-    custom_toolkit_settings={
-        "commandLine": "echo hi | tee $AZ_BATCHAI_OUTPUT_OUTPUTS/hi.txt",
-    },
-    experiment_name="demo_experiment",
-    input_directories=[{
-        "id": "INPUT",
-        "path": "$AZ_BATCHAI_MOUNT_ROOT/azfiles/input",
-    }],
-    job_name="demo_job",
-    node_count=1,
-    output_directories=[{
-        "id": "OUTPUTS",
-        "pathPrefix": "$AZ_BATCHAI_MOUNT_ROOT/azfiles/",
-        "pathSuffix": "files",
-    }],
-    resource_group_name="demo_resource_group",
-    scheduling_priority="normal",
-    std_out_err_path_prefix="$AZ_BATCHAI_MOUNT_ROOT/azfiles",
-    workspace_name="demo_workspace")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const job = new azurerm.batchai.latest.Job("job", {
-    cluster: {
-        id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspace/demo_workspace/clusters/demo_cluster",
-    },
-    containerSettings: {
-        imageSourceRegistry: {
-            image: "ubuntu",
-        },
-    },
-    customToolkitSettings: {
-        commandLine: `echo hi | tee $AZ_BATCHAI_OUTPUT_OUTPUTS/hi.txt`,
-    },
-    experimentName: "demo_experiment",
-    inputDirectories: [{
-        id: "INPUT",
-        path: `$AZ_BATCHAI_MOUNT_ROOT/azfiles/input`,
-    }],
-    jobName: "demo_job",
-    nodeCount: 1,
-    outputDirectories: [{
-        id: "OUTPUTS",
-        pathPrefix: `$AZ_BATCHAI_MOUNT_ROOT/azfiles/`,
-        pathSuffix: "files",
-    }],
-    resourceGroupName: "demo_resource_group",
-    schedulingPriority: "normal",
-    stdOutErrPathPrefix: `$AZ_BATCHAI_MOUNT_ROOT/azfiles`,
-    workspaceName: "demo_workspace",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Job Resource {#create}
@@ -225,7 +23,7 @@ const job = new azurerm.batchai.latest.Job("job", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/batchai/latest/#pulumi_azurerm.batchai/latest.Job">Job</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">caffe2_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[Caffe2Settings]]</span> = None<span class="p">, </span><span class="nx">caffe_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[CaffeSettings]]</span> = None<span class="p">, </span><span class="nx">chainer_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ChainerSettings]]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceId]]</span> = None<span class="p">, </span><span class="nx">cntk_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[CNTKsettings]]</span> = None<span class="p">, </span><span class="nx">constraints</span><span class="p">:</span> <span class="nx">Optional[Dict[JobBasePropertiesConstraints]]</span> = None<span class="p">, </span><span class="nx">container_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerSettings]]</span> = None<span class="p">, </span><span class="nx">custom_mpi_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[CustomMpiSettings]]</span> = None<span class="p">, </span><span class="nx">custom_toolkit_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[CustomToolkitSettings]]</span> = None<span class="p">, </span><span class="nx">environment_variables</span><span class="p">:</span> <span class="nx">Optional[List[EnvironmentVariable]]</span> = None<span class="p">, </span><span class="nx">experiment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">horovod_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[HorovodSettings]]</span> = None<span class="p">, </span><span class="nx">input_directories</span><span class="p">:</span> <span class="nx">Optional[List[InputDirectory]]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_preparation</span><span class="p">:</span> <span class="nx">Optional[Dict[JobPreparation]]</span> = None<span class="p">, </span><span class="nx">mount_volumes</span><span class="p">:</span> <span class="nx">Optional[Dict[MountVolumes]]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">output_directories</span><span class="p">:</span> <span class="nx">Optional[List[OutputDirectory]]</span> = None<span class="p">, </span><span class="nx">py_torch_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[PyTorchSettings]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[List[EnvironmentVariableWithSecretValue]]</span> = None<span class="p">, </span><span class="nx">std_out_err_path_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tensor_flow_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[TensorFlowSettings]]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/batchai/latest/#pulumi_azurerm.batchai/latest.Job">Job</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">caffe2_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[Caffe2Settings]]</span> = None<span class="p">, </span><span class="nx">caffe_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[CaffeSettings]]</span> = None<span class="p">, </span><span class="nx">chainer_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ChainerSettings]]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceId]]</span> = None<span class="p">, </span><span class="nx">cntk_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[CNTKsettings]]</span> = None<span class="p">, </span><span class="nx">constraints</span><span class="p">:</span> <span class="nx">Optional[Dict[JobBasePropertiesConstraints]]</span> = None<span class="p">, </span><span class="nx">container_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerSettings]]</span> = None<span class="p">, </span><span class="nx">custom_mpi_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[CustomMpiSettings]]</span> = None<span class="p">, </span><span class="nx">custom_toolkit_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[CustomToolkitSettings]]</span> = None<span class="p">, </span><span class="nx">environment_variables</span><span class="p">:</span> <span class="nx">Optional[List[EnvironmentVariable]]</span> = None<span class="p">, </span><span class="nx">experiment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">horovod_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[HorovodSettings]]</span> = None<span class="p">, </span><span class="nx">input_directories</span><span class="p">:</span> <span class="nx">Optional[List[InputDirectory]]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_preparation</span><span class="p">:</span> <span class="nx">Optional[Dict[JobPreparation]]</span> = None<span class="p">, </span><span class="nx">mount_volumes</span><span class="p">:</span> <span class="nx">Optional[Dict[MountVolumes]]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">output_directories</span><span class="p">:</span> <span class="nx">Optional[List[OutputDirectory]]</span> = None<span class="p">, </span><span class="nx">py_torch_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[PyTorchSettings]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[List[EnvironmentVariableWithSecretValue]]</span> = None<span class="p">, </span><span class="nx">std_out_err_path_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tensor_flow_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[TensorFlowSettings]]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1204,7 +1002,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes to run the job on. The job will be gang scheduled on that many compute nodes.{{% /md %}}</dd>
 
@@ -3650,7 +3448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
 
@@ -3936,7 +3734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
 
@@ -4514,7 +4312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
 
@@ -4760,7 +4558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
 
@@ -4976,7 +4774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
 
@@ -5182,7 +4980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
 
@@ -5570,7 +5368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
 
@@ -5696,7 +5494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
 
@@ -7060,7 +6858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
 
@@ -7266,7 +7064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
 
@@ -8400,7 +8198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exit_code_python" style="color: inherit; text-decoration: inherit;">exit_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The exit code of the job. This property is only returned if the job is in completed state.{{% /md %}}</dd>
 
@@ -10100,7 +9898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
 
@@ -10346,7 +10144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
 
@@ -10824,7 +10622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_server_count_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>server_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of parameter server tasks. If specified, the value must be less than or equal to nodeCount. If not specified, the default value is equal to 1 for distributed TensorFlow training. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd>
 
@@ -10854,7 +10652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_count_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of worker tasks. If specified, the value must be less than or equal to (nodeCount * numberOfGPUs per VM). If not specified, the default value is equal to nodeCount. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd>
 
@@ -11150,7 +10948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_server_count_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>server_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of parameter server tasks. If specified, the value must be less than or equal to nodeCount. If not specified, the default value is equal to 1 for distributed TensorFlow training. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd>
 
@@ -11180,7 +10978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_count_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of worker tasks. If specified, the value must be less than or equal to (nodeCount * numberOfGPUs per VM). If not specified, the default value is equal to nodeCount. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd>
 

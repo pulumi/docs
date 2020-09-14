@@ -12,177 +12,6 @@ meta_desc: "Explore the Trigger resource of the datafactory/latest module, inclu
 
 Trigger resource type.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Triggers_Create
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var trigger = new AzureRM.DataFactory.Latest.Trigger("trigger", new AzureRM.DataFactory.Latest.TriggerArgs
-        {
-            FactoryName = "exampleFactoryName",
-            ResourceGroupName = "exampleResourceGroup",
-            TriggerName = "exampleTrigger",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	datafactory "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/datafactory/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datafactory.NewTrigger(ctx, "trigger", &datafactory.TriggerArgs{
-			FactoryName:       pulumi.String("exampleFactoryName"),
-			ResourceGroupName: pulumi.String("exampleResourceGroup"),
-			TriggerName:       pulumi.String("exampleTrigger"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-trigger = azurerm.datafactory.latest.Trigger("trigger",
-    factory_name="exampleFactoryName",
-    resource_group_name="exampleResourceGroup",
-    trigger_name="exampleTrigger")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const trigger = new azurerm.datafactory.latest.Trigger("trigger", {
-    factoryName: "exampleFactoryName",
-    resourceGroupName: "exampleResourceGroup",
-    triggerName: "exampleTrigger",
-});
-
-```
-
-{{% /example %}}
-
-### Triggers_Update
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var trigger = new AzureRM.DataFactory.Latest.Trigger("trigger", new AzureRM.DataFactory.Latest.TriggerArgs
-        {
-            FactoryName = "exampleFactoryName",
-            ResourceGroupName = "exampleResourceGroup",
-            TriggerName = "exampleTrigger",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	datafactory "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/datafactory/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datafactory.NewTrigger(ctx, "trigger", &datafactory.TriggerArgs{
-			FactoryName:       pulumi.String("exampleFactoryName"),
-			ResourceGroupName: pulumi.String("exampleResourceGroup"),
-			TriggerName:       pulumi.String("exampleTrigger"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-trigger = azurerm.datafactory.latest.Trigger("trigger",
-    factory_name="exampleFactoryName",
-    resource_group_name="exampleResourceGroup",
-    trigger_name="exampleTrigger")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const trigger = new azurerm.datafactory.latest.Trigger("trigger", {
-    factoryName: "exampleFactoryName",
-    resourceGroupName: "exampleResourceGroup",
-    triggerName: "exampleTrigger",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Trigger Resource {#create}
@@ -953,8 +782,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="dependson_python">
-<a href="#dependson_python" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
+        <span id="depends_on_python">
+<a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinereference">List[Pipeline<wbr>Reference]</a></span>
@@ -1229,8 +1058,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="dependson_python">
-<a href="#dependson_python" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
+        <span id="depends_on_python">
+<a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinereferenceresponse">List[Pipeline<wbr>Reference<wbr>Response]</a></span>
@@ -2253,7 +2082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rerunconcurrency_python" style="color: inherit; text-decoration: inherit;">rerun<wbr>Concurrency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a rerun is triggered.{{% /md %}}</dd>
 
@@ -2569,7 +2398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rerunconcurrency_python" style="color: inherit; text-decoration: inherit;">rerun<wbr>Concurrency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a rerun is triggered.{{% /md %}}</dd>
 
@@ -2725,7 +2554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Interval between retries in seconds. Default is 30.{{% /md %}}</dd>
 
@@ -2851,7 +2680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Interval between retries in seconds. Default is 30.{{% /md %}}</dd>
 
@@ -4175,7 +4004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The interval of the time windows. The minimum interval allowed is 15 Minutes.{{% /md %}}</dd>
 
@@ -4185,7 +4014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxconcurrency_python" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a new run is triggered.{{% /md %}}</dd>
 
@@ -4231,8 +4060,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dependson_python">
-<a href="#dependson_python" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
+        <span id="depends_on_python">
+<a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">List[Union<Azurerm:Datafactory/Latest:Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference, Azurerm:Datafactory/Latest:Trigger<wbr>Dependency<wbr>Reference, Default=>]</span>
@@ -4691,7 +4520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The interval of the time windows. The minimum interval allowed is 15 Minutes.{{% /md %}}</dd>
 
@@ -4701,7 +4530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxconcurrency_python" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a new run is triggered.{{% /md %}}</dd>
 
@@ -4757,8 +4586,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dependson_python">
-<a href="#dependson_python" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
+        <span id="depends_on_python">
+<a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">List[Union<Azurerm:Datafactory/Latest:Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response, Azurerm:Datafactory/Latest:Trigger<wbr>Dependency<wbr>Reference<wbr>Response, Default=>]</span>

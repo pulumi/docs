@@ -1069,7 +1069,7 @@ The following output properties are available:
 <a href="#server_management_error_code_python" style="color: inherit; text-decoration: inherit;">server_<wbr>management_<wbr>error_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd>
 

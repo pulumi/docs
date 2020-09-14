@@ -3017,7 +3017,7 @@ The following output properties are available:
 <a href="#max_concurrent_calls_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>calls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the maximum concurrent calls that can be made to the web service. Minimum value: 4, Maximum value: 200.{{% /md %}}</dd>
 

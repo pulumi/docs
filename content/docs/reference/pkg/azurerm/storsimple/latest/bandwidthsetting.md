@@ -12,171 +12,6 @@ meta_desc: "Explore the BandwidthSetting resource of the storsimple/latest modul
 
 The bandwidth setting.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### BandwidthSettingsCreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var bandwidthSetting = new AzureRM.StorSimple.Latest.BandwidthSetting("bandwidthSetting", new AzureRM.StorSimple.Latest.BandwidthSettingArgs
-        {
-            BandwidthSettingName = "BWSForTest",
-            ManagerName = "ManagerForSDKTest1",
-            ResourceGroupName = "ResourceGroupForSDKTest",
-            Schedules = 
-            {
-                new AzureRM.StorSimple.Latest.Inputs.BandwidthScheduleArgs
-                {
-                    Days = 
-                    {
-                        "Saturday",
-                        "Sunday",
-                    },
-                    RateInMbps = 10,
-                    Start = new AzureRM.StorSimple.Latest.Inputs.TimeArgs
-                    {
-                        Hours = 10,
-                        Minutes = 0,
-                        Seconds = 0,
-                    },
-                    Stop = new AzureRM.StorSimple.Latest.Inputs.TimeArgs
-                    {
-                        Hours = 20,
-                        Minutes = 0,
-                        Seconds = 0,
-                    },
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	storsimple "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storsimple/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storsimple.NewBandwidthSetting(ctx, "bandwidthSetting", &storsimple.BandwidthSettingArgs{
-			BandwidthSettingName: pulumi.String("BWSForTest"),
-			ManagerName:          pulumi.String("ManagerForSDKTest1"),
-			ResourceGroupName:    pulumi.String("ResourceGroupForSDKTest"),
-			Schedules: storsimple.BandwidthScheduleArray{
-				&storsimple.BandwidthScheduleArgs{
-					Days: pulumi.StringArray{
-						pulumi.String("Saturday"),
-						pulumi.String("Sunday"),
-					},
-					RateInMbps: pulumi.Int(10),
-					Start: &storsimple.TimeArgs{
-						Hours:   pulumi.Int(10),
-						Minutes: pulumi.Int(0),
-						Seconds: pulumi.Int(0),
-					},
-					Stop: &storsimple.TimeArgs{
-						Hours:   pulumi.Int(20),
-						Minutes: pulumi.Int(0),
-						Seconds: pulumi.Int(0),
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-bandwidth_setting = azurerm.storsimple.latest.BandwidthSetting("bandwidthSetting",
-    bandwidth_setting_name="BWSForTest",
-    manager_name="ManagerForSDKTest1",
-    resource_group_name="ResourceGroupForSDKTest",
-    schedules=[{
-        "days": [
-            "Saturday",
-            "Sunday",
-        ],
-        "rateInMbps": 10,
-        "start": {
-            "hours": 10,
-            "minutes": 0,
-            "seconds": 0,
-        },
-        "stop": {
-            "hours": 20,
-            "minutes": 0,
-            "seconds": 0,
-        },
-    }])
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const bandwidthSetting = new azurerm.storsimple.latest.BandwidthSetting("bandwidthSetting", {
-    bandwidthSettingName: "BWSForTest",
-    managerName: "ManagerForSDKTest1",
-    resourceGroupName: "ResourceGroupForSDKTest",
-    schedules: [{
-        days: [
-            "Saturday",
-            "Sunday",
-        ],
-        rateInMbps: 10,
-        start: {
-            hours: 10,
-            minutes: 0,
-            seconds: 0,
-        },
-        stop: {
-            hours: 20,
-            minutes: 0,
-            seconds: 0,
-        },
-    }],
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a BandwidthSetting Resource {#create}
@@ -776,7 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_count_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of volumes that uses the bandwidth setting.{{% /md %}}</dd>
 
@@ -971,7 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rate_in_mbps_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>in_<wbr>mbps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The rate in Mbps.{{% /md %}}</dd>
 
@@ -1177,7 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rate_in_mbps_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>in_<wbr>mbps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The rate in Mbps.{{% /md %}}</dd>
 
@@ -1343,7 +1178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The hour.{{% /md %}}</dd>
 
@@ -1353,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minute.{{% /md %}}</dd>
 
@@ -1363,7 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The second.{{% /md %}}</dd>
 
@@ -1509,7 +1344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The hour.{{% /md %}}</dd>
 
@@ -1519,7 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minute.{{% /md %}}</dd>
 
@@ -1529,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The second.{{% /md %}}</dd>
 

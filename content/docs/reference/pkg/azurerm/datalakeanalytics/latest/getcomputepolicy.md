@@ -419,7 +419,7 @@ The following output properties are available:
 <a href="#max_degree_of_parallelism_per_job_python" style="color: inherit; text-decoration: inherit;">max_<wbr>degree_<wbr>of_<wbr>parallelism_<wbr>per_<wbr>job</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum degree of parallelism per job this user can use to submit jobs.{{% /md %}}</dd>
 
@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#min_priority_per_job_python" style="color: inherit; text-decoration: inherit;">min_<wbr>priority_<wbr>per_<wbr>job</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum priority per job this user can use to submit jobs.{{% /md %}}</dd>
 

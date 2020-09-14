@@ -2365,7 +2365,7 @@ The following output properties are available:
 <a href="#critical_and_security_patch_count_python" style="color: inherit; text-decoration: inherit;">critical_<wbr>and_<wbr>security_<wbr>patch_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of critical or security patches that have been detected as available and not yet installed.{{% /md %}}</dd>
 
@@ -2395,7 +2395,7 @@ The following output properties are available:
 <a href="#other_patch_count_python" style="color: inherit; text-decoration: inherit;">other_<wbr>patch_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of all available patches excluding critical and security.{{% /md %}}</dd>
 
@@ -3229,7 +3229,7 @@ The following output properties are available:
 <a href="#disk_iops_read_write_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>iops_<wbr>read_<wbr>write</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Read-Write IOPS for the managed disk when StorageAccountType is UltraSSD_LRS. Returned only for VirtualMachine ScaleSet VM disks. Can be updated only via updates to the VirtualMachine Scale Set.{{% /md %}}</dd>
 
@@ -3239,7 +3239,7 @@ The following output properties are available:
 <a href="#disk_m_bps_read_write_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>m_<wbr>bps_<wbr>read_<wbr>write</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the bandwidth in MB per second for the managed disk when StorageAccountType is UltraSSD_LRS. Returned only for VirtualMachine ScaleSet VM disks. Can be updated only via updates to the VirtualMachine Scale Set.{{% /md %}}</dd>
 
@@ -3249,7 +3249,7 @@ The following output properties are available:
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.{{% /md %}}</dd>
 
@@ -3269,7 +3269,7 @@ The following output properties are available:
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd>
 
@@ -5411,7 +5411,7 @@ The following output properties are available:
 <a href="#excluded_patch_count_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>patch_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of all available patches but excluded explicitly by a customer-specified exclusion list match.{{% /md %}}</dd>
 
@@ -5421,7 +5421,7 @@ The following output properties are available:
 <a href="#failed_patch_count_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>patch_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The count of patches that failed installation.{{% /md %}}</dd>
 
@@ -5441,7 +5441,7 @@ The following output properties are available:
 <a href="#installed_patch_count_python" style="color: inherit; text-decoration: inherit;">installed_<wbr>patch_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The count of patches that successfully installed.{{% /md %}}</dd>
 
@@ -5471,7 +5471,7 @@ The following output properties are available:
 <a href="#not_selected_patch_count_python" style="color: inherit; text-decoration: inherit;">not_<wbr>selected_<wbr>patch_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of all available patches but not going to be installed because it didn't match a classification or inclusion list entry.{{% /md %}}</dd>
 
@@ -5481,7 +5481,7 @@ The following output properties are available:
 <a href="#pending_patch_count_python" style="color: inherit; text-decoration: inherit;">pending_<wbr>patch_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of all available patches expected to be installed over the course of the patch installation operation.{{% /md %}}</dd>
 
@@ -6807,7 +6807,7 @@ The following output properties are available:
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd>
 
@@ -10711,7 +10711,7 @@ The following output properties are available:
 <a href="#platform_fault_domain_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>fault_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the fault domain of the virtual machine.{{% /md %}}</dd>
 
@@ -10721,7 +10721,7 @@ The following output properties are available:
 <a href="#platform_update_domain_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>update_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the update domain of the virtual machine.{{% /md %}}</dd>
 

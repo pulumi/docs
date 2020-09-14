@@ -1059,7 +1059,7 @@ The following output properties are available:
 <a href="#tier_files_older_than_days_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>files_<wbr>older_<wbr>than_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Tier files older than days.{{% /md %}}</dd>
 
@@ -1069,7 +1069,7 @@ The following output properties are available:
 <a href="#volume_free_space_percent_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>free_<wbr>space_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Level of free space to be maintained by Cloud Tiering if it is enabled.{{% /md %}}</dd>
 
@@ -1251,7 +1251,7 @@ The following output properties are available:
 <a href="#cache_hit_bytes_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>hit_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of bytes that were served from the local server{{% /md %}}</dd>
 
@@ -1261,7 +1261,7 @@ The following output properties are available:
 <a href="#cache_hit_bytes_percent_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>hit_<wbr>bytes_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of total bytes (hit + miss) that were served from the local server{{% /md %}}</dd>
 
@@ -1271,7 +1271,7 @@ The following output properties are available:
 <a href="#cache_miss_bytes_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>miss_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of bytes that were served from the cloud{{% /md %}}</dd>
 
@@ -1573,7 +1573,7 @@ The following output properties are available:
 <a href="#total_file_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>file_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd>
 
@@ -1809,7 +1809,7 @@ The following output properties are available:
 <a href="#cached_size_bytes_python" style="color: inherit; text-decoration: inherit;">cached_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Cached content size on the server{{% /md %}}</dd>
 
@@ -1829,7 +1829,7 @@ The following output properties are available:
 <a href="#space_savings_bytes_python" style="color: inherit; text-decoration: inherit;">space_<wbr>savings_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of bytes saved on the server{{% /md %}}</dd>
 
@@ -1839,7 +1839,7 @@ The following output properties are available:
 <a href="#space_savings_percent_python" style="color: inherit; text-decoration: inherit;">space_<wbr>savings_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of cached size over total size{{% /md %}}</dd>
 
@@ -1849,7 +1849,7 @@ The following output properties are available:
 <a href="#total_size_cloud_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>size_<wbr>cloud_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total size of content in the azure file share{{% /md %}}</dd>
 
@@ -1859,7 +1859,7 @@ The following output properties are available:
 <a href="#volume_size_bytes_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Volume size{{% /md %}}</dd>
 
@@ -2005,7 +2005,7 @@ The following output properties are available:
 <a href="#current_volume_free_space_percent_python" style="color: inherit; text-decoration: inherit;">current_<wbr>volume_<wbr>free_<wbr>space_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Current volume free space percentage.{{% /md %}}</dd>
 
@@ -2015,7 +2015,7 @@ The following output properties are available:
 <a href="#effective_volume_free_space_policy_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>volume_<wbr>free_<wbr>space_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.{{% /md %}}</dd>
 
@@ -2141,7 +2141,7 @@ The following output properties are available:
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Error code (HResult){{% /md %}}</dd>
 
@@ -2151,7 +2151,7 @@ The following output properties are available:
 <a href="#filecount_python" style="color: inherit; text-decoration: inherit;">file<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of files with this error{{% /md %}}</dd>
 
@@ -2557,7 +2557,7 @@ The following output properties are available:
 <a href="#last_cloud_tiering_result_python" style="color: inherit; text-decoration: inherit;">last_<wbr>cloud_<wbr>tiering_<wbr>result</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd>
 
@@ -2743,7 +2743,7 @@ The following output properties are available:
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Error code (HResult){{% /md %}}</dd>
 
@@ -2753,7 +2753,7 @@ The following output properties are available:
 <a href="#persistentcount_python" style="color: inherit; text-decoration: inherit;">persistent<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of persistent files not syncing with the specified error code{{% /md %}}</dd>
 
@@ -2763,7 +2763,7 @@ The following output properties are available:
 <a href="#transientcount_python" style="color: inherit; text-decoration: inherit;">transient<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of transient files not syncing with the specified error code{{% /md %}}</dd>
 
@@ -2879,7 +2879,7 @@ The following output properties are available:
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of occurences of the error{{% /md %}}</dd>
 
@@ -2889,7 +2889,7 @@ The following output properties are available:
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Error code (HResult){{% /md %}}</dd>
 
@@ -3055,7 +3055,7 @@ The following output properties are available:
 <a href="#total_recall_errors_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>recall_<wbr>errors_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total count of recall errors.{{% /md %}}</dd>
 
@@ -3291,7 +3291,7 @@ The following output properties are available:
 <a href="#applied_bytes_python" style="color: inherit; text-decoration: inherit;">applied_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Applied bytes{{% /md %}}</dd>
 
@@ -3301,7 +3301,7 @@ The following output properties are available:
 <a href="#applied_item_count_python" style="color: inherit; text-decoration: inherit;">applied_<wbr>item_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Applied item count.{{% /md %}}</dd>
 
@@ -3311,7 +3311,7 @@ The following output properties are available:
 <a href="#per_item_error_count_python" style="color: inherit; text-decoration: inherit;">per_<wbr>item_<wbr>error_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Per item error count{{% /md %}}</dd>
 
@@ -3331,7 +3331,7 @@ The following output properties are available:
 <a href="#total_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total bytes (if available){{% /md %}}</dd>
 
@@ -3341,7 +3341,7 @@ The following output properties are available:
 <a href="#total_item_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>item_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total item count (if available){{% /md %}}</dd>
 
@@ -3617,7 +3617,7 @@ The following output properties are available:
 <a href="#last_sync_per_item_error_count_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sync_<wbr>per_<wbr>item_<wbr>error_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Last sync per item error count.{{% /md %}}</dd>
 
@@ -3627,7 +3627,7 @@ The following output properties are available:
 <a href="#last_sync_result_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sync_<wbr>result</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Last sync result (HResult){{% /md %}}</dd>
 
@@ -3657,7 +3657,7 @@ The following output properties are available:
 <a href="#persistent_files_not_syncing_count_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>files_<wbr>not_<wbr>syncing_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of persistent files not syncing.{{% /md %}}</dd>
 
@@ -3667,7 +3667,7 @@ The following output properties are available:
 <a href="#transient_files_not_syncing_count_python" style="color: inherit; text-decoration: inherit;">transient_<wbr>files_<wbr>not_<wbr>syncing_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of transient files not syncing.{{% /md %}}</dd>
 
@@ -4123,7 +4123,7 @@ The following output properties are available:
 <a href="#total_persistent_files_not_syncing_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>persistent_<wbr>files_<wbr>not_<wbr>syncing_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total count of persistent files not syncing (combined upload + download).{{% /md %}}</dd>
 

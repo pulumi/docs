@@ -12,289 +12,6 @@ meta_desc: "Explore the RosettaNetProcessConfiguration resource of the logic/lat
 
 The integration account RosettaNet process configuration.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update an RosettaNetProcessConfiguration
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var rosettaNetProcessConfiguration = new AzureRM.Logic.Latest.RosettaNetProcessConfiguration("rosettaNetProcessConfiguration", new AzureRM.Logic.Latest.RosettaNetProcessConfigurationArgs
-        {
-            ActivitySettings = new AzureRM.Logic.Latest.Inputs.RosettaNetPipActivitySettingsArgs
-            {
-                AcknowledgmentOfReceiptSettings = new AzureRM.Logic.Latest.Inputs.RosettaNetPipAcknowledgmentOfReceiptSettingsArgs
-                {
-                    IsNonRepudiationRequired = false,
-                    TimeToAcknowledgeInSeconds = 600,
-                },
-                ActivityBehavior = new AzureRM.Logic.Latest.Inputs.RosettaNetPipActivityBehaviorArgs
-                {
-                    ActionType = "DoubleAction",
-                    IsAuthorizationRequired = false,
-                    IsSecuredTransportRequired = false,
-                    NonRepudiationOfOriginAndContent = false,
-                    PersistentConfidentialityScope = "None",
-                    ResponseType = "Async",
-                    RetryCount = 2,
-                    TimeToPerformInSeconds = 7200,
-                },
-                ActivityType = "RequestResponse",
-            },
-            Description = "Test description",
-            InitiatorRoleSettings = new AzureRM.Logic.Latest.Inputs.RosettaNetPipRoleSettingsArgs
-            {
-                Action = "Purchase Order Request",
-                BusinessDocument = new AzureRM.Logic.Latest.Inputs.RosettaNetPipBusinessDocumentArgs
-                {
-                    Description = "A request to accept a purchase order for fulfillment..",
-                    Name = "Purchase Order Request",
-                    Version = "V02.02.00",
-                },
-                Description = "This partner role creates a demand for a product or service.",
-                Role = "Buyer",
-                RoleType = "Functional",
-                Service = "Buyer Service",
-                ServiceClassification = "Business Service",
-            },
-            IntegrationAccountName = "testia123",
-            ProcessCode = "3A4",
-            ProcessName = "Request Purchase Order",
-            ProcessVersion = "V02.02.00",
-            ResourceGroupName = "testrg123",
-            ResponderRoleSettings = new AzureRM.Logic.Latest.Inputs.RosettaNetPipRoleSettingsArgs
-            {
-                Action = "Purchase Order Confirmation Action",
-                BusinessDocument = new AzureRM.Logic.Latest.Inputs.RosettaNetPipBusinessDocumentArgs
-                {
-                    Description = "Formally confirms the status of line item(s) in a Purchase Order. A Purchase Order line item may have one of the following states: accepted, rejected, or pending.",
-                    Name = "Purchase Order Confirmation",
-                    Version = "V02.02.00",
-                },
-                Description = "An organization that sells products to partners in the supply chain.",
-                Role = "Seller",
-                RoleType = "Organizational",
-                Service = "Seller Service",
-                ServiceClassification = "Business Service",
-            },
-            RosettaNetProcessConfigurationName = "3A4",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	logic "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := logic.NewRosettaNetProcessConfiguration(ctx, "rosettaNetProcessConfiguration", &logic.RosettaNetProcessConfigurationArgs{
-			ActivitySettings: &logic.RosettaNetPipActivitySettingsArgs{
-				AcknowledgmentOfReceiptSettings: &logic.RosettaNetPipAcknowledgmentOfReceiptSettingsArgs{
-					IsNonRepudiationRequired:   pulumi.Bool(false),
-					TimeToAcknowledgeInSeconds: pulumi.Int(600),
-				},
-				ActivityBehavior: &logic.RosettaNetPipActivityBehaviorArgs{
-					ActionType:                       pulumi.String("DoubleAction"),
-					IsAuthorizationRequired:          pulumi.Bool(false),
-					IsSecuredTransportRequired:       pulumi.Bool(false),
-					NonRepudiationOfOriginAndContent: pulumi.Bool(false),
-					PersistentConfidentialityScope:   pulumi.String("None"),
-					ResponseType:                     pulumi.String("Async"),
-					RetryCount:                       pulumi.Int(2),
-					TimeToPerformInSeconds:           pulumi.Int(7200),
-				},
-				ActivityType: pulumi.String("RequestResponse"),
-			},
-			Description: pulumi.String("Test description"),
-			InitiatorRoleSettings: &logic.RosettaNetPipRoleSettingsArgs{
-				Action: pulumi.String("Purchase Order Request"),
-				BusinessDocument: &logic.RosettaNetPipBusinessDocumentArgs{
-					Description: pulumi.String("A request to accept a purchase order for fulfillment.."),
-					Name:        pulumi.String("Purchase Order Request"),
-					Version:     pulumi.String("V02.02.00"),
-				},
-				Description:           pulumi.String("This partner role creates a demand for a product or service."),
-				Role:                  pulumi.String("Buyer"),
-				RoleType:              pulumi.String("Functional"),
-				Service:               pulumi.String("Buyer Service"),
-				ServiceClassification: pulumi.String("Business Service"),
-			},
-			IntegrationAccountName: pulumi.String("testia123"),
-			ProcessCode:            pulumi.String("3A4"),
-			ProcessName:            pulumi.String("Request Purchase Order"),
-			ProcessVersion:         pulumi.String("V02.02.00"),
-			ResourceGroupName:      pulumi.String("testrg123"),
-			ResponderRoleSettings: &logic.RosettaNetPipRoleSettingsArgs{
-				Action: pulumi.String("Purchase Order Confirmation Action"),
-				BusinessDocument: &logic.RosettaNetPipBusinessDocumentArgs{
-					Description: pulumi.String("Formally confirms the status of line item(s) in a Purchase Order. A Purchase Order line item may have one of the following states: accepted, rejected, or pending."),
-					Name:        pulumi.String("Purchase Order Confirmation"),
-					Version:     pulumi.String("V02.02.00"),
-				},
-				Description:           pulumi.String("An organization that sells products to partners in the supply chain."),
-				Role:                  pulumi.String("Seller"),
-				RoleType:              pulumi.String("Organizational"),
-				Service:               pulumi.String("Seller Service"),
-				ServiceClassification: pulumi.String("Business Service"),
-			},
-			RosettaNetProcessConfigurationName: pulumi.String("3A4"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-rosetta_net_process_configuration = azurerm.logic.latest.RosettaNetProcessConfiguration("rosettaNetProcessConfiguration",
-    activity_settings={
-        "acknowledgmentOfReceiptSettings": {
-            "isNonRepudiationRequired": False,
-            "timeToAcknowledgeInSeconds": 600,
-        },
-        "activityBehavior": {
-            "actionType": "DoubleAction",
-            "isAuthorizationRequired": False,
-            "isSecuredTransportRequired": False,
-            "nonRepudiationOfOriginAndContent": False,
-            "persistentConfidentialityScope": "None",
-            "responseType": "Async",
-            "retryCount": 2,
-            "timeToPerformInSeconds": 7200,
-        },
-        "activityType": "RequestResponse",
-    },
-    description="Test description",
-    initiator_role_settings={
-        "action": "Purchase Order Request",
-        "businessDocument": {
-            "description": "A request to accept a purchase order for fulfillment..",
-            "name": "Purchase Order Request",
-            "version": "V02.02.00",
-        },
-        "description": "This partner role creates a demand for a product or service.",
-        "role": "Buyer",
-        "roleType": "Functional",
-        "service": "Buyer Service",
-        "serviceClassification": "Business Service",
-    },
-    integration_account_name="testia123",
-    process_code="3A4",
-    process_name="Request Purchase Order",
-    process_version="V02.02.00",
-    resource_group_name="testrg123",
-    responder_role_settings={
-        "action": "Purchase Order Confirmation Action",
-        "businessDocument": {
-            "description": "Formally confirms the status of line item(s) in a Purchase Order. A Purchase Order line item may have one of the following states: accepted, rejected, or pending.",
-            "name": "Purchase Order Confirmation",
-            "version": "V02.02.00",
-        },
-        "description": "An organization that sells products to partners in the supply chain.",
-        "role": "Seller",
-        "roleType": "Organizational",
-        "service": "Seller Service",
-        "serviceClassification": "Business Service",
-    },
-    rosetta_net_process_configuration_name="3A4")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const rosettaNetProcessConfiguration = new azurerm.logic.latest.RosettaNetProcessConfiguration("rosettaNetProcessConfiguration", {
-    activitySettings: {
-        acknowledgmentOfReceiptSettings: {
-            isNonRepudiationRequired: false,
-            timeToAcknowledgeInSeconds: 600,
-        },
-        activityBehavior: {
-            actionType: "DoubleAction",
-            isAuthorizationRequired: false,
-            isSecuredTransportRequired: false,
-            nonRepudiationOfOriginAndContent: false,
-            persistentConfidentialityScope: "None",
-            responseType: "Async",
-            retryCount: 2,
-            timeToPerformInSeconds: 7200,
-        },
-        activityType: "RequestResponse",
-    },
-    description: "Test description",
-    initiatorRoleSettings: {
-        action: "Purchase Order Request",
-        businessDocument: {
-            description: "A request to accept a purchase order for fulfillment..",
-            name: "Purchase Order Request",
-            version: "V02.02.00",
-        },
-        description: "This partner role creates a demand for a product or service.",
-        role: "Buyer",
-        roleType: "Functional",
-        service: "Buyer Service",
-        serviceClassification: "Business Service",
-    },
-    integrationAccountName: "testia123",
-    processCode: "3A4",
-    processName: "Request Purchase Order",
-    processVersion: "V02.02.00",
-    resourceGroupName: "testrg123",
-    responderRoleSettings: {
-        action: "Purchase Order Confirmation Action",
-        businessDocument: {
-            description: "Formally confirms the status of line item(s) in a Purchase Order. A Purchase Order line item may have one of the following states: accepted, rejected, or pending.",
-            name: "Purchase Order Confirmation",
-            version: "V02.02.00",
-        },
-        description: "An organization that sells products to partners in the supply chain.",
-        role: "Seller",
-        roleType: "Organizational",
-        service: "Seller Service",
-        serviceClassification: "Business Service",
-    },
-    rosettaNetProcessConfigurationName: "3A4",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a RosettaNetProcessConfiguration Resource {#create}
@@ -1389,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_to_acknowledge_in_seconds_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>acknowledge_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time to acknowledge in seconds.{{% /md %}}</dd>
 
@@ -1515,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_to_acknowledge_in_seconds_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>acknowledge_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time to acknowledge in seconds.{{% /md %}}</dd>
 
@@ -1871,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_count_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The value indicating retry count.{{% /md %}}</dd>
 
@@ -1881,7 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_to_perform_in_seconds_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>perform_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time to perform in seconds.{{% /md %}}</dd>
 
@@ -2237,7 +1954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_count_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The value indicating retry count.{{% /md %}}</dd>
 
@@ -2247,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_to_perform_in_seconds_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>perform_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time to perform in seconds.{{% /md %}}</dd>
 

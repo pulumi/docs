@@ -571,7 +571,7 @@ The following output properties are available:
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd>
 
@@ -757,7 +757,7 @@ The following output properties are available:
 <a href="#mapto_python" style="color: inherit; text-decoration: inherit;">map<wbr>To</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd>
 

@@ -12,115 +12,6 @@ meta_desc: "Explore the Device resource of the databoxedge/latest module, includ
 
 The Data Box Edge/Gateway device.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### DataBoxEdgeDevicePut
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var device = new AzureRM.DataBoxEdge.Latest.Device("device", new AzureRM.DataBoxEdge.Latest.DeviceArgs
-        {
-            DeviceName = "testedgedevice",
-            Location = "eastus",
-            ResourceGroupName = "GroupForEdgeAutomation",
-            Sku = new AzureRM.DataBoxEdge.Latest.Inputs.SkuArgs
-            {
-                Name = "Edge",
-                Tier = "Standard",
-            },
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	databoxedge "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/databoxedge/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := databoxedge.NewDevice(ctx, "device", &databoxedge.DeviceArgs{
-			DeviceName:        pulumi.String("testedgedevice"),
-			Location:          pulumi.String("eastus"),
-			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
-			Sku: &databoxedge.SkuArgs{
-				Name: pulumi.String("Edge"),
-				Tier: pulumi.String("Standard"),
-			},
-			Tags: nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-device = azurerm.databoxedge.latest.Device("device",
-    device_name="testedgedevice",
-    location="eastus",
-    resource_group_name="GroupForEdgeAutomation",
-    sku={
-        "name": "Edge",
-        "tier": "Standard",
-    },
-    tags={})
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const device = new azurerm.databoxedge.latest.Device("device", {
-    deviceName: "testedgedevice",
-    location: "eastus",
-    resourceGroupName: "GroupForEdgeAutomation",
-    sku: {
-        name: "Edge",
-        tier: "Standard",
-    },
-    tags: {},
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Device Resource {#create}
@@ -1190,7 +1081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#device_local_capacity_python" style="color: inherit; text-decoration: inherit;">device_<wbr>local_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Data Box Edge/Gateway device local capacity in MB.{{% /md %}}</dd>
 
@@ -1250,7 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes in the cluster.{{% /md %}}</dd>
 

@@ -1049,7 +1049,7 @@ The following output properties are available:
 <a href="#usage_threshold_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.{{% /md %}}</dd>
 
@@ -1781,7 +1781,7 @@ The following output properties are available:
 <a href="#ruleindex_python" style="color: inherit; text-decoration: inherit;">rule<wbr>Index</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Order index{{% /md %}}</dd>
 

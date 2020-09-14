@@ -1063,7 +1063,7 @@ The following output properties are available:
 <a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd>
 
@@ -1073,7 +1073,7 @@ The following output properties are available:
 <a href="#channels_python" style="color: inherit; text-decoration: inherit;">channels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd>
 
@@ -1093,7 +1093,7 @@ The following output properties are available:
 <a href="#samplingrate_python" style="color: inherit; text-decoration: inherit;">sampling<wbr>Rate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd>
 

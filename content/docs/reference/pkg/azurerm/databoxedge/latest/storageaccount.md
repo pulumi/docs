@@ -12,110 +12,6 @@ meta_desc: "Explore the StorageAccount resource of the databoxedge/latest module
 
 Represents a Storage Account on the  Data Box Edge/Gateway device.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### StorageAccountPut
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var storageAccount = new AzureRM.DataBoxEdge.Latest.StorageAccount("storageAccount", new AzureRM.DataBoxEdge.Latest.StorageAccountArgs
-        {
-            DataPolicy = "Cloud",
-            Description = "It's an awesome storage account",
-            DeviceName = "testedgedevice",
-            ResourceGroupName = "GroupForEdgeAutomation",
-            StorageAccountCredentialId = "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForDataBoxEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/cisbvt",
-            StorageAccountName = "blobstorageaccount1",
-            StorageAccountStatus = "OK",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	databoxedge "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/databoxedge/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := databoxedge.NewStorageAccount(ctx, "storageAccount", &databoxedge.StorageAccountArgs{
-			DataPolicy:                 pulumi.String("Cloud"),
-			Description:                pulumi.String("It's an awesome storage account"),
-			DeviceName:                 pulumi.String("testedgedevice"),
-			ResourceGroupName:          pulumi.String("GroupForEdgeAutomation"),
-			StorageAccountCredentialId: pulumi.String("/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForDataBoxEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/cisbvt"),
-			StorageAccountName:         pulumi.String("blobstorageaccount1"),
-			StorageAccountStatus:       pulumi.String("OK"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-storage_account = azurerm.databoxedge.latest.StorageAccount("storageAccount",
-    data_policy="Cloud",
-    description="It's an awesome storage account",
-    device_name="testedgedevice",
-    resource_group_name="GroupForEdgeAutomation",
-    storage_account_credential_id="/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForDataBoxEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/cisbvt",
-    storage_account_name="blobstorageaccount1",
-    storage_account_status="OK")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const storageAccount = new azurerm.databoxedge.latest.StorageAccount("storageAccount", {
-    dataPolicy: "Cloud",
-    description: "It's an awesome storage account",
-    deviceName: "testedgedevice",
-    resourceGroupName: "GroupForEdgeAutomation",
-    storageAccountCredentialId: "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForDataBoxEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/cisbvt",
-    storageAccountName: "blobstorageaccount1",
-    storageAccountStatus: "OK",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a StorageAccount Resource {#create}
@@ -805,7 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_count_python" style="color: inherit; text-decoration: inherit;">container_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Container Count. Present only for Storage Accounts with DataPolicy set to Cloud.{{% /md %}}</dd>
 

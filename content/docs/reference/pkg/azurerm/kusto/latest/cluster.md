@@ -12,140 +12,6 @@ meta_desc: "Explore the Cluster resource of the kusto/latest module, including e
 
 Class representing a Kusto cluster.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### KustoClustersCreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var cluster = new AzureRM.Kusto.Latest.Cluster("cluster", new AzureRM.Kusto.Latest.ClusterArgs
-        {
-            ClusterName = "kustoclusterrptest4",
-            EnableDoubleEncryption = false,
-            EnablePurge = true,
-            EnableStreamingIngest = true,
-            Identity = new AzureRM.Kusto.Latest.Inputs.IdentityArgs
-            {
-                Type = "SystemAssigned",
-            },
-            Location = "westus",
-            ResourceGroupName = "kustorptest",
-            Sku = new AzureRM.Kusto.Latest.Inputs.AzureSkuArgs
-            {
-                Capacity = 2,
-                Name = "Standard_L8s",
-                Tier = "Standard",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	kusto "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/kusto/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := kusto.NewCluster(ctx, "cluster", &kusto.ClusterArgs{
-			ClusterName:            pulumi.String("kustoclusterrptest4"),
-			EnableDoubleEncryption: pulumi.Bool(false),
-			EnablePurge:            pulumi.Bool(true),
-			EnableStreamingIngest:  pulumi.Bool(true),
-			Identity: &kusto.IdentityArgs{
-				Type: pulumi.String("SystemAssigned"),
-			},
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("kustorptest"),
-			Sku: &kusto.AzureSkuArgs{
-				Capacity: pulumi.Int(2),
-				Name:     pulumi.String("Standard_L8s"),
-				Tier:     pulumi.String("Standard"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-cluster = azurerm.kusto.latest.Cluster("cluster",
-    cluster_name="kustoclusterrptest4",
-    enable_double_encryption=False,
-    enable_purge=True,
-    enable_streaming_ingest=True,
-    identity={
-        "type": "SystemAssigned",
-    },
-    location="westus",
-    resource_group_name="kustorptest",
-    sku={
-        "capacity": 2,
-        "name": "Standard_L8s",
-        "tier": "Standard",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const cluster = new azurerm.kusto.latest.Cluster("cluster", {
-    clusterName: "kustoclusterrptest4",
-    enableDoubleEncryption: false,
-    enablePurge: true,
-    enableStreamingIngest: true,
-    identity: {
-        type: "SystemAssigned",
-    },
-    location: "westus",
-    resourceGroupName: "kustorptest",
-    sku: {
-        capacity: 2,
-        name: "Standard_L8s",
-        tier: "Standard",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}
@@ -1520,7 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of instances of the cluster.{{% /md %}}</dd>
 
@@ -1686,7 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of instances of the cluster.{{% /md %}}</dd>
 
@@ -2794,7 +2660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum allowed instances count.{{% /md %}}</dd>
 
@@ -2804,7 +2670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum allowed instances count.{{% /md %}}</dd>
 
@@ -2814,7 +2680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The version of the template defined, for instance 1.{{% /md %}}</dd>
 
@@ -3000,7 +2866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum allowed instances count.{{% /md %}}</dd>
 
@@ -3010,7 +2876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum allowed instances count.{{% /md %}}</dd>
 
@@ -3020,7 +2886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The version of the template defined, for instance 1.{{% /md %}}</dd>
 

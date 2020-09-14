@@ -779,7 +779,7 @@ The following output properties are available:
 <a href="#active_job_and_job_schedule_quota_python" style="color: inherit; text-decoration: inherit;">active_<wbr>job_<wbr>and_<wbr>job_<wbr>schedule_<wbr>quota</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -799,7 +799,7 @@ The following output properties are available:
 <a href="#dedicated_core_quota_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>core_<wbr>quota</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd>
 
@@ -859,7 +859,7 @@ The following output properties are available:
 <a href="#low_priority_core_quota_python" style="color: inherit; text-decoration: inherit;">low_<wbr>priority_<wbr>core_<wbr>quota</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd>
 
@@ -889,7 +889,7 @@ The following output properties are available:
 <a href="#pool_quota_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>quota</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2295,7 +2295,7 @@ The following output properties are available:
 <a href="#corequota_python" style="color: inherit; text-decoration: inherit;">core<wbr>Quota</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The core quota for the VM family for the Batch account.{{% /md %}}</dd>
 

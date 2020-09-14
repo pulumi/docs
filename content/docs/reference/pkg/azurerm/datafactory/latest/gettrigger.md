@@ -627,8 +627,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="dependson_python">
-<a href="#dependson_python" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
+        <span id="depends_on_python">
+<a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinereferenceresponse">List[Pipeline<wbr>Reference<wbr>Response]</a></span>
@@ -1349,7 +1349,7 @@ The following output properties are available:
 <a href="#rerunconcurrency_python" style="color: inherit; text-decoration: inherit;">rerun<wbr>Concurrency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a rerun is triggered.{{% /md %}}</dd>
 
@@ -1505,7 +1505,7 @@ The following output properties are available:
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Interval between retries in seconds. Default is 30.{{% /md %}}</dd>
 
@@ -2395,7 +2395,7 @@ The following output properties are available:
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The interval of the time windows. The minimum interval allowed is 15 Minutes.{{% /md %}}</dd>
 
@@ -2405,7 +2405,7 @@ The following output properties are available:
 <a href="#maxconcurrency_python" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a new run is triggered.{{% /md %}}</dd>
 
@@ -2461,8 +2461,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dependson_python">
-<a href="#dependson_python" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
+        <span id="depends_on_python">
+<a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">List[Union<Azurerm:Datafactory/Latest:Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response, Azurerm:Datafactory/Latest:Trigger<wbr>Dependency<wbr>Reference<wbr>Response, Default=>]</span>

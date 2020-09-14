@@ -841,7 +841,7 @@ The following output properties are available:
 <a href="#throttlinginmin_python" style="color: inherit; text-decoration: inherit;">throttling<wbr>In<wbr>Min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd>
 
@@ -1707,7 +1707,7 @@ The following output properties are available:
 <a href="#frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd>
 
@@ -1717,7 +1717,7 @@ The following output properties are available:
 <a href="#time_window_in_minutes_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd>
 

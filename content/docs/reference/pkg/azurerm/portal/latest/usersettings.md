@@ -12,83 +12,6 @@ meta_desc: "Explore the UserSettings resource of the portal/latest module, inclu
 
 Response to get user settings
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### PutUserSettings
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var userSettings = new AzureRM.Portal.Latest.UserSettings("userSettings", new AzureRM.Portal.Latest.UserSettingsArgs
-        {
-            UserSettingsName = "cloudconsole",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	portal "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/portal/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := portal.NewUserSettings(ctx, "userSettings", &portal.UserSettingsArgs{
-			UserSettingsName: pulumi.String("cloudconsole"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-user_settings = azurerm.portal.latest.UserSettings("userSettings", user_settings_name="cloudconsole")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const userSettings = new azurerm.portal.latest.UserSettings("userSettings", {userSettingsName: "cloudconsole"});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a UserSettings Resource {#create}
@@ -603,7 +526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_in_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>in_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of file share{{% /md %}}</dd>
 
@@ -769,7 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_in_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>in_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of file share{{% /md %}}</dd>
 

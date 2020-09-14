@@ -13,984 +13,6 @@ meta_desc: "Explore the Task resource of the containerregistry/latest module, in
 The task that has the ARM resource and task properties.
 The task will have all information to schedule a run against it.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Tasks_Create
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var task = new AzureRM.ContainerRegistry.Latest.Task("task", new AzureRM.ContainerRegistry.Latest.TaskArgs
-        {
-            AgentConfiguration = new AzureRM.ContainerRegistry.Latest.Inputs.AgentPropertiesArgs
-            {
-                Cpu = 2,
-            },
-            Identity = new AzureRM.ContainerRegistry.Latest.Inputs.IdentityPropertiesArgs
-            {
-                Type = "SystemAssigned",
-            },
-            Location = "eastus",
-            Platform = new AzureRM.ContainerRegistry.Latest.Inputs.PlatformPropertiesArgs
-            {
-                Architecture = "amd64",
-                Os = "Linux",
-            },
-            RegistryName = "myRegistry",
-            ResourceGroupName = "myResourceGroup",
-            Status = "Enabled",
-            Step = new AzureRM.ContainerRegistry.Latest.Inputs.TaskStepPropertiesArgs
-            {
-                ContextPath = "src",
-            },
-            Tags = 
-            {
-                { "testkey", "value" },
-            },
-            TaskName = "mytTask",
-            Trigger = new AzureRM.ContainerRegistry.Latest.Inputs.TriggerPropertiesArgs
-            {
-                BaseImageTrigger = new AzureRM.ContainerRegistry.Latest.Inputs.BaseImageTriggerArgs
-                {
-                    BaseImageTriggerType = "Runtime",
-                    Name = "myBaseImageTrigger",
-                },
-                SourceTriggers = 
-                {
-                    new AzureRM.ContainerRegistry.Latest.Inputs.SourceTriggerArgs
-                    {
-                        Name = "mySourceTrigger",
-                        SourceRepository = new AzureRM.ContainerRegistry.Latest.Inputs.SourcePropertiesArgs
-                        {
-                            Branch = "master",
-                            RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
-                            SourceControlAuthProperties = new AzureRM.ContainerRegistry.Latest.Inputs.AuthInfoArgs
-                            {
-                                Token = "xxxxx",
-                                TokenType = "PAT",
-                            },
-                            SourceControlType = "Github",
-                        },
-                        SourceTriggerEvents = 
-                        {
-                            "commit",
-                        },
-                    },
-                },
-                TimerTriggers = 
-                {
-                    new AzureRM.ContainerRegistry.Latest.Inputs.TimerTriggerArgs
-                    {
-                        Name = "myTimerTrigger",
-                        Schedule = "30 9 * * 1-5",
-                    },
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	containerregistry "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/containerregistry/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := containerregistry.NewTask(ctx, "task", &containerregistry.TaskArgs{
-			AgentConfiguration: &containerregistry.AgentPropertiesArgs{
-				Cpu: pulumi.Int(2),
-			},
-			Identity: &containerregistry.IdentityPropertiesArgs{
-				Type: pulumi.String("SystemAssigned"),
-			},
-			Location: pulumi.String("eastus"),
-			Platform: &containerregistry.PlatformPropertiesArgs{
-				Architecture: pulumi.String("amd64"),
-				Os:           pulumi.String("Linux"),
-			},
-			RegistryName:      pulumi.String("myRegistry"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			Status:            pulumi.String("Enabled"),
-			Step: &containerregistry.TaskStepPropertiesArgs{
-				ContextPath: pulumi.String("src"),
-			},
-			Tags: pulumi.StringMap{
-				"testkey": pulumi.String("value"),
-			},
-			TaskName: pulumi.String("mytTask"),
-			Trigger: &containerregistry.TriggerPropertiesArgs{
-				BaseImageTrigger: &containerregistry.BaseImageTriggerArgs{
-					BaseImageTriggerType: pulumi.String("Runtime"),
-					Name:                 pulumi.String("myBaseImageTrigger"),
-				},
-				SourceTriggers: containerregistry.SourceTriggerArray{
-					&containerregistry.SourceTriggerArgs{
-						Name: pulumi.String("mySourceTrigger"),
-						SourceRepository: &containerregistry.SourcePropertiesArgs{
-							Branch:        pulumi.String("master"),
-							RepositoryUrl: pulumi.String("https://github.com/Azure/azure-rest-api-specs"),
-							SourceControlAuthProperties: &containerregistry.AuthInfoArgs{
-								Token:     pulumi.String("xxxxx"),
-								TokenType: pulumi.String("PAT"),
-							},
-							SourceControlType: pulumi.String("Github"),
-						},
-						SourceTriggerEvents: pulumi.StringArray{
-							pulumi.String("commit"),
-						},
-					},
-				},
-				TimerTriggers: containerregistry.TimerTriggerArray{
-					&containerregistry.TimerTriggerArgs{
-						Name:     pulumi.String("myTimerTrigger"),
-						Schedule: pulumi.String("30 9 * * 1-5"),
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-task = azurerm.containerregistry.latest.Task("task",
-    agent_configuration={
-        "cpu": 2,
-    },
-    identity={
-        "type": "SystemAssigned",
-    },
-    location="eastus",
-    platform={
-        "architecture": "amd64",
-        "os": "Linux",
-    },
-    registry_name="myRegistry",
-    resource_group_name="myResourceGroup",
-    status="Enabled",
-    step={
-        "contextPath": "src",
-    },
-    tags={
-        "testkey": "value",
-    },
-    task_name="mytTask",
-    trigger={
-        "baseImageTrigger": {
-            "baseImageTriggerType": "Runtime",
-            "name": "myBaseImageTrigger",
-        },
-        "sourceTriggers": [{
-            "name": "mySourceTrigger",
-            "sourceRepository": {
-                "branch": "master",
-                "repositoryUrl": "https://github.com/Azure/azure-rest-api-specs",
-                "sourceControlAuthProperties": {
-                    "token": "xxxxx",
-                    "tokenType": "PAT",
-                },
-                "sourceControlType": "Github",
-            },
-            "sourceTriggerEvents": ["commit"],
-        }],
-        "timerTriggers": [{
-            "name": "myTimerTrigger",
-            "schedule": "30 9 * * 1-5",
-        }],
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const task = new azurerm.containerregistry.latest.Task("task", {
-    agentConfiguration: {
-        cpu: 2,
-    },
-    identity: {
-        type: "SystemAssigned",
-    },
-    location: "eastus",
-    platform: {
-        architecture: "amd64",
-        os: "Linux",
-    },
-    registryName: "myRegistry",
-    resourceGroupName: "myResourceGroup",
-    status: "Enabled",
-    step: {
-        contextPath: "src",
-    },
-    tags: {
-        testkey: "value",
-    },
-    taskName: "mytTask",
-    trigger: {
-        baseImageTrigger: {
-            baseImageTriggerType: "Runtime",
-            name: "myBaseImageTrigger",
-        },
-        sourceTriggers: [{
-            name: "mySourceTrigger",
-            sourceRepository: {
-                branch: "master",
-                repositoryUrl: "https://github.com/Azure/azure-rest-api-specs",
-                sourceControlAuthProperties: {
-                    token: "xxxxx",
-                    tokenType: "PAT",
-                },
-                sourceControlType: "Github",
-            },
-            sourceTriggerEvents: ["commit"],
-        }],
-        timerTriggers: [{
-            name: "myTimerTrigger",
-            schedule: "30 9 * * 1-5",
-        }],
-    },
-});
-
-```
-
-{{% /example %}}
-
-### Tasks_Create_WithSystemAndUserIdentities
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var task = new AzureRM.ContainerRegistry.Latest.Task("task", new AzureRM.ContainerRegistry.Latest.TaskArgs
-        {
-            AgentConfiguration = new AzureRM.ContainerRegistry.Latest.Inputs.AgentPropertiesArgs
-            {
-                Cpu = 2,
-            },
-            Identity = new AzureRM.ContainerRegistry.Latest.Inputs.IdentityPropertiesArgs
-            {
-                Type = "SystemAssigned, UserAssigned",
-                UserAssignedIdentities = 
-                {
-                    { "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2",  },
-                },
-            },
-            Location = "eastus",
-            Platform = new AzureRM.ContainerRegistry.Latest.Inputs.PlatformPropertiesArgs
-            {
-                Architecture = "amd64",
-                Os = "Linux",
-            },
-            RegistryName = "myRegistry",
-            ResourceGroupName = "myResourceGroup",
-            Status = "Enabled",
-            Step = new AzureRM.ContainerRegistry.Latest.Inputs.TaskStepPropertiesArgs
-            {
-                ContextPath = "src",
-            },
-            Tags = 
-            {
-                { "testkey", "value" },
-            },
-            TaskName = "mytTask",
-            Trigger = new AzureRM.ContainerRegistry.Latest.Inputs.TriggerPropertiesArgs
-            {
-                BaseImageTrigger = new AzureRM.ContainerRegistry.Latest.Inputs.BaseImageTriggerArgs
-                {
-                    BaseImageTriggerType = "Runtime",
-                    Name = "myBaseImageTrigger",
-                },
-                SourceTriggers = 
-                {
-                    new AzureRM.ContainerRegistry.Latest.Inputs.SourceTriggerArgs
-                    {
-                        Name = "mySourceTrigger",
-                        SourceRepository = new AzureRM.ContainerRegistry.Latest.Inputs.SourcePropertiesArgs
-                        {
-                            Branch = "master",
-                            RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
-                            SourceControlAuthProperties = new AzureRM.ContainerRegistry.Latest.Inputs.AuthInfoArgs
-                            {
-                                Token = "xxxxx",
-                                TokenType = "PAT",
-                            },
-                            SourceControlType = "Github",
-                        },
-                        SourceTriggerEvents = 
-                        {
-                            "commit",
-                        },
-                    },
-                },
-                TimerTriggers = 
-                {
-                    new AzureRM.ContainerRegistry.Latest.Inputs.TimerTriggerArgs
-                    {
-                        Name = "myTimerTrigger",
-                        Schedule = "30 9 * * 1-5",
-                    },
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-task = azurerm.containerregistry.latest.Task("task",
-    agent_configuration={
-        "cpu": 2,
-    },
-    identity={
-        "type": "SystemAssigned, UserAssigned",
-        "userAssignedIdentities": {
-            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": {},
-        },
-    },
-    location="eastus",
-    platform={
-        "architecture": "amd64",
-        "os": "Linux",
-    },
-    registry_name="myRegistry",
-    resource_group_name="myResourceGroup",
-    status="Enabled",
-    step={
-        "contextPath": "src",
-    },
-    tags={
-        "testkey": "value",
-    },
-    task_name="mytTask",
-    trigger={
-        "baseImageTrigger": {
-            "baseImageTriggerType": "Runtime",
-            "name": "myBaseImageTrigger",
-        },
-        "sourceTriggers": [{
-            "name": "mySourceTrigger",
-            "sourceRepository": {
-                "branch": "master",
-                "repositoryUrl": "https://github.com/Azure/azure-rest-api-specs",
-                "sourceControlAuthProperties": {
-                    "token": "xxxxx",
-                    "tokenType": "PAT",
-                },
-                "sourceControlType": "Github",
-            },
-            "sourceTriggerEvents": ["commit"],
-        }],
-        "timerTriggers": [{
-            "name": "myTimerTrigger",
-            "schedule": "30 9 * * 1-5",
-        }],
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const task = new azurerm.containerregistry.latest.Task("task", {
-    agentConfiguration: {
-        cpu: 2,
-    },
-    identity: {
-        type: "SystemAssigned, UserAssigned",
-        userAssignedIdentities: {
-            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": {},
-        },
-    },
-    location: "eastus",
-    platform: {
-        architecture: "amd64",
-        os: "Linux",
-    },
-    registryName: "myRegistry",
-    resourceGroupName: "myResourceGroup",
-    status: "Enabled",
-    step: {
-        contextPath: "src",
-    },
-    tags: {
-        testkey: "value",
-    },
-    taskName: "mytTask",
-    trigger: {
-        baseImageTrigger: {
-            baseImageTriggerType: "Runtime",
-            name: "myBaseImageTrigger",
-        },
-        sourceTriggers: [{
-            name: "mySourceTrigger",
-            sourceRepository: {
-                branch: "master",
-                repositoryUrl: "https://github.com/Azure/azure-rest-api-specs",
-                sourceControlAuthProperties: {
-                    token: "xxxxx",
-                    tokenType: "PAT",
-                },
-                sourceControlType: "Github",
-            },
-            sourceTriggerEvents: ["commit"],
-        }],
-        timerTriggers: [{
-            name: "myTimerTrigger",
-            schedule: "30 9 * * 1-5",
-        }],
-    },
-});
-
-```
-
-{{% /example %}}
-
-### Tasks_Create_WithUserIdentities
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var task = new AzureRM.ContainerRegistry.Latest.Task("task", new AzureRM.ContainerRegistry.Latest.TaskArgs
-        {
-            AgentConfiguration = new AzureRM.ContainerRegistry.Latest.Inputs.AgentPropertiesArgs
-            {
-                Cpu = 2,
-            },
-            Identity = new AzureRM.ContainerRegistry.Latest.Inputs.IdentityPropertiesArgs
-            {
-                Type = "UserAssigned",
-                UserAssignedIdentities = 
-                {
-                    { "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1",  },
-                    { "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2",  },
-                },
-            },
-            Location = "eastus",
-            Platform = new AzureRM.ContainerRegistry.Latest.Inputs.PlatformPropertiesArgs
-            {
-                Architecture = "amd64",
-                Os = "Linux",
-            },
-            RegistryName = "myRegistry",
-            ResourceGroupName = "myResourceGroup",
-            Status = "Enabled",
-            Step = new AzureRM.ContainerRegistry.Latest.Inputs.TaskStepPropertiesArgs
-            {
-                ContextPath = "src",
-            },
-            Tags = 
-            {
-                { "testkey", "value" },
-            },
-            TaskName = "mytTask",
-            Trigger = new AzureRM.ContainerRegistry.Latest.Inputs.TriggerPropertiesArgs
-            {
-                BaseImageTrigger = new AzureRM.ContainerRegistry.Latest.Inputs.BaseImageTriggerArgs
-                {
-                    BaseImageTriggerType = "Runtime",
-                    Name = "myBaseImageTrigger",
-                },
-                SourceTriggers = 
-                {
-                    new AzureRM.ContainerRegistry.Latest.Inputs.SourceTriggerArgs
-                    {
-                        Name = "mySourceTrigger",
-                        SourceRepository = new AzureRM.ContainerRegistry.Latest.Inputs.SourcePropertiesArgs
-                        {
-                            Branch = "master",
-                            RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
-                            SourceControlAuthProperties = new AzureRM.ContainerRegistry.Latest.Inputs.AuthInfoArgs
-                            {
-                                Token = "xxxxx",
-                                TokenType = "PAT",
-                            },
-                            SourceControlType = "Github",
-                        },
-                        SourceTriggerEvents = 
-                        {
-                            "commit",
-                        },
-                    },
-                },
-                TimerTriggers = 
-                {
-                    new AzureRM.ContainerRegistry.Latest.Inputs.TimerTriggerArgs
-                    {
-                        Name = "myTimerTrigger",
-                        Schedule = "30 9 * * 1-5",
-                    },
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-task = azurerm.containerregistry.latest.Task("task",
-    agent_configuration={
-        "cpu": 2,
-    },
-    identity={
-        "type": "UserAssigned",
-        "userAssignedIdentities": {
-            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": {},
-            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": {},
-        },
-    },
-    location="eastus",
-    platform={
-        "architecture": "amd64",
-        "os": "Linux",
-    },
-    registry_name="myRegistry",
-    resource_group_name="myResourceGroup",
-    status="Enabled",
-    step={
-        "contextPath": "src",
-    },
-    tags={
-        "testkey": "value",
-    },
-    task_name="mytTask",
-    trigger={
-        "baseImageTrigger": {
-            "baseImageTriggerType": "Runtime",
-            "name": "myBaseImageTrigger",
-        },
-        "sourceTriggers": [{
-            "name": "mySourceTrigger",
-            "sourceRepository": {
-                "branch": "master",
-                "repositoryUrl": "https://github.com/Azure/azure-rest-api-specs",
-                "sourceControlAuthProperties": {
-                    "token": "xxxxx",
-                    "tokenType": "PAT",
-                },
-                "sourceControlType": "Github",
-            },
-            "sourceTriggerEvents": ["commit"],
-        }],
-        "timerTriggers": [{
-            "name": "myTimerTrigger",
-            "schedule": "30 9 * * 1-5",
-        }],
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const task = new azurerm.containerregistry.latest.Task("task", {
-    agentConfiguration: {
-        cpu: 2,
-    },
-    identity: {
-        type: "UserAssigned",
-        userAssignedIdentities: {
-            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": {},
-            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": {},
-        },
-    },
-    location: "eastus",
-    platform: {
-        architecture: "amd64",
-        os: "Linux",
-    },
-    registryName: "myRegistry",
-    resourceGroupName: "myResourceGroup",
-    status: "Enabled",
-    step: {
-        contextPath: "src",
-    },
-    tags: {
-        testkey: "value",
-    },
-    taskName: "mytTask",
-    trigger: {
-        baseImageTrigger: {
-            baseImageTriggerType: "Runtime",
-            name: "myBaseImageTrigger",
-        },
-        sourceTriggers: [{
-            name: "mySourceTrigger",
-            sourceRepository: {
-                branch: "master",
-                repositoryUrl: "https://github.com/Azure/azure-rest-api-specs",
-                sourceControlAuthProperties: {
-                    token: "xxxxx",
-                    tokenType: "PAT",
-                },
-                sourceControlType: "Github",
-            },
-            sourceTriggerEvents: ["commit"],
-        }],
-        timerTriggers: [{
-            name: "myTimerTrigger",
-            schedule: "30 9 * * 1-5",
-        }],
-    },
-});
-
-```
-
-{{% /example %}}
-
-### Tasks_Create_WithUserIdentities_WithSystemIdentity
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var task = new AzureRM.ContainerRegistry.Latest.Task("task", new AzureRM.ContainerRegistry.Latest.TaskArgs
-        {
-            AgentConfiguration = new AzureRM.ContainerRegistry.Latest.Inputs.AgentPropertiesArgs
-            {
-                Cpu = 2,
-            },
-            Identity = new AzureRM.ContainerRegistry.Latest.Inputs.IdentityPropertiesArgs
-            {
-                Type = "SystemAssigned",
-            },
-            Location = "eastus",
-            Platform = new AzureRM.ContainerRegistry.Latest.Inputs.PlatformPropertiesArgs
-            {
-                Architecture = "amd64",
-                Os = "Linux",
-            },
-            RegistryName = "myRegistry",
-            ResourceGroupName = "myResourceGroup",
-            Status = "Enabled",
-            Step = new AzureRM.ContainerRegistry.Latest.Inputs.TaskStepPropertiesArgs
-            {
-                ContextPath = "src",
-            },
-            Tags = 
-            {
-                { "testkey", "value" },
-            },
-            TaskName = "mytTask",
-            Trigger = new AzureRM.ContainerRegistry.Latest.Inputs.TriggerPropertiesArgs
-            {
-                BaseImageTrigger = new AzureRM.ContainerRegistry.Latest.Inputs.BaseImageTriggerArgs
-                {
-                    BaseImageTriggerType = "Runtime",
-                    Name = "myBaseImageTrigger",
-                },
-                SourceTriggers = 
-                {
-                    new AzureRM.ContainerRegistry.Latest.Inputs.SourceTriggerArgs
-                    {
-                        Name = "mySourceTrigger",
-                        SourceRepository = new AzureRM.ContainerRegistry.Latest.Inputs.SourcePropertiesArgs
-                        {
-                            Branch = "master",
-                            RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
-                            SourceControlAuthProperties = new AzureRM.ContainerRegistry.Latest.Inputs.AuthInfoArgs
-                            {
-                                Token = "xxxxx",
-                                TokenType = "PAT",
-                            },
-                            SourceControlType = "Github",
-                        },
-                        SourceTriggerEvents = 
-                        {
-                            "commit",
-                        },
-                    },
-                },
-                TimerTriggers = 
-                {
-                    new AzureRM.ContainerRegistry.Latest.Inputs.TimerTriggerArgs
-                    {
-                        Name = "myTimerTrigger",
-                        Schedule = "30 9 * * 1-5",
-                    },
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	containerregistry "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/containerregistry/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := containerregistry.NewTask(ctx, "task", &containerregistry.TaskArgs{
-			AgentConfiguration: &containerregistry.AgentPropertiesArgs{
-				Cpu: pulumi.Int(2),
-			},
-			Identity: &containerregistry.IdentityPropertiesArgs{
-				Type: pulumi.String("SystemAssigned"),
-			},
-			Location: pulumi.String("eastus"),
-			Platform: &containerregistry.PlatformPropertiesArgs{
-				Architecture: pulumi.String("amd64"),
-				Os:           pulumi.String("Linux"),
-			},
-			RegistryName:      pulumi.String("myRegistry"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			Status:            pulumi.String("Enabled"),
-			Step: &containerregistry.TaskStepPropertiesArgs{
-				ContextPath: pulumi.String("src"),
-			},
-			Tags: pulumi.StringMap{
-				"testkey": pulumi.String("value"),
-			},
-			TaskName: pulumi.String("mytTask"),
-			Trigger: &containerregistry.TriggerPropertiesArgs{
-				BaseImageTrigger: &containerregistry.BaseImageTriggerArgs{
-					BaseImageTriggerType: pulumi.String("Runtime"),
-					Name:                 pulumi.String("myBaseImageTrigger"),
-				},
-				SourceTriggers: containerregistry.SourceTriggerArray{
-					&containerregistry.SourceTriggerArgs{
-						Name: pulumi.String("mySourceTrigger"),
-						SourceRepository: &containerregistry.SourcePropertiesArgs{
-							Branch:        pulumi.String("master"),
-							RepositoryUrl: pulumi.String("https://github.com/Azure/azure-rest-api-specs"),
-							SourceControlAuthProperties: &containerregistry.AuthInfoArgs{
-								Token:     pulumi.String("xxxxx"),
-								TokenType: pulumi.String("PAT"),
-							},
-							SourceControlType: pulumi.String("Github"),
-						},
-						SourceTriggerEvents: pulumi.StringArray{
-							pulumi.String("commit"),
-						},
-					},
-				},
-				TimerTriggers: containerregistry.TimerTriggerArray{
-					&containerregistry.TimerTriggerArgs{
-						Name:     pulumi.String("myTimerTrigger"),
-						Schedule: pulumi.String("30 9 * * 1-5"),
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-task = azurerm.containerregistry.latest.Task("task",
-    agent_configuration={
-        "cpu": 2,
-    },
-    identity={
-        "type": "SystemAssigned",
-    },
-    location="eastus",
-    platform={
-        "architecture": "amd64",
-        "os": "Linux",
-    },
-    registry_name="myRegistry",
-    resource_group_name="myResourceGroup",
-    status="Enabled",
-    step={
-        "contextPath": "src",
-    },
-    tags={
-        "testkey": "value",
-    },
-    task_name="mytTask",
-    trigger={
-        "baseImageTrigger": {
-            "baseImageTriggerType": "Runtime",
-            "name": "myBaseImageTrigger",
-        },
-        "sourceTriggers": [{
-            "name": "mySourceTrigger",
-            "sourceRepository": {
-                "branch": "master",
-                "repositoryUrl": "https://github.com/Azure/azure-rest-api-specs",
-                "sourceControlAuthProperties": {
-                    "token": "xxxxx",
-                    "tokenType": "PAT",
-                },
-                "sourceControlType": "Github",
-            },
-            "sourceTriggerEvents": ["commit"],
-        }],
-        "timerTriggers": [{
-            "name": "myTimerTrigger",
-            "schedule": "30 9 * * 1-5",
-        }],
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const task = new azurerm.containerregistry.latest.Task("task", {
-    agentConfiguration: {
-        cpu: 2,
-    },
-    identity: {
-        type: "SystemAssigned",
-    },
-    location: "eastus",
-    platform: {
-        architecture: "amd64",
-        os: "Linux",
-    },
-    registryName: "myRegistry",
-    resourceGroupName: "myResourceGroup",
-    status: "Enabled",
-    step: {
-        contextPath: "src",
-    },
-    tags: {
-        testkey: "value",
-    },
-    taskName: "mytTask",
-    trigger: {
-        baseImageTrigger: {
-            baseImageTriggerType: "Runtime",
-            name: "myBaseImageTrigger",
-        },
-        sourceTriggers: [{
-            name: "mySourceTrigger",
-            sourceRepository: {
-                branch: "master",
-                repositoryUrl: "https://github.com/Azure/azure-rest-api-specs",
-                sourceControlAuthProperties: {
-                    token: "xxxxx",
-                    tokenType: "PAT",
-                },
-                sourceControlType: "Github",
-            },
-            sourceTriggerEvents: ["commit"],
-        }],
-        timerTriggers: [{
-            name: "myTimerTrigger",
-            schedule: "30 9 * * 1-5",
-        }],
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Task Resource {#create}
@@ -1002,7 +24,7 @@ const task = new azurerm.containerregistry.latest.Task("task", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/containerregistry/latest/#pulumi_azurerm.containerregistry/latest.Task">Task</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agent_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[AgentProperties]]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[Dict[Credentials]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[IdentityProperties]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[Dict[PlatformProperties]]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step</span><span class="p">:</span> <span class="nx">Optional[Dict[TaskStepProperties]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">task_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">trigger</span><span class="p">:</span> <span class="nx">Optional[Dict[TriggerProperties]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/containerregistry/latest/#pulumi_azurerm.containerregistry/latest.Task">Task</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agent_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[AgentProperties]]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[Dict[Credentials]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[IdentityProperties]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[Dict[PlatformProperties]]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step</span><span class="p">:</span> <span class="nx">Optional[Dict[TaskStepProperties]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">task_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">trigger</span><span class="p">:</span> <span class="nx">Optional[Dict[TriggerProperties]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1701,7 +723,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd>
 
@@ -2045,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd>
 
@@ -2131,7 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd>
 
@@ -2509,8 +1531,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="tokentype_python">
-<a href="#tokentype_python" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
+        <span id="token_type_python">
+<a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2519,18 +1541,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="expiresin_python">
-<a href="#expiresin_python" style="color: inherit; text-decoration: inherit;">expires<wbr>In</a>
+        <span id="expires_in_python">
+<a href="#expires_in_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>in</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshtoken_python">
-<a href="#refreshtoken_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
+        <span id="refresh_token_python">
+<a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2755,8 +1777,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="tokentype_python">
-<a href="#tokentype_python" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
+        <span id="token_type_python">
+<a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2765,18 +1787,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="expiresin_python">
-<a href="#expiresin_python" style="color: inherit; text-decoration: inherit;">expires<wbr>In</a>
+        <span id="expires_in_python">
+<a href="#expires_in_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>in</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshtoken_python">
-<a href="#refreshtoken_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
+        <span id="refresh_token_python">
+<a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4329,8 +3351,8 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="baseimagedependencies_python">
-<a href="#baseimagedependencies_python" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Dependencies</a>
+        <span id="base_image_dependencies_python">
+<a href="#base_image_dependencies_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>dependencies</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagedependencyresponse">List[Base<wbr>Image<wbr>Dependency<wbr>Response]</a></span>
@@ -4339,8 +3361,8 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="dockerfilepath_python">
-<a href="#dockerfilepath_python" style="color: inherit; text-decoration: inherit;">docker<wbr>File<wbr>Path</a>
+        <span id="docker_file_path_python">
+<a href="#docker_file_path_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>file_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4379,8 +3401,8 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imagenames_python">
-<a href="#imagenames_python" style="color: inherit; text-decoration: inherit;">image<wbr>Names</a>
+        <span id="image_names_python">
+<a href="#image_names_python" style="color: inherit; text-decoration: inherit;">image_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4399,8 +3421,8 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nocache_python">
-<a href="#nocache_python" style="color: inherit; text-decoration: inherit;">no<wbr>Cache</a>
+        <span id="no_cache_python">
+<a href="#no_cache_python" style="color: inherit; text-decoration: inherit;">no_<wbr>cache</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4645,8 +3667,8 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="baseimagedependencies_python">
-<a href="#baseimagedependencies_python" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Dependencies</a>
+        <span id="base_image_dependencies_python">
+<a href="#base_image_dependencies_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>dependencies</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagedependencyresponse">List[Base<wbr>Image<wbr>Dependency<wbr>Response]</a></span>
@@ -4931,8 +3953,8 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="baseimagedependencies_python">
-<a href="#baseimagedependencies_python" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Dependencies</a>
+        <span id="base_image_dependencies_python">
+<a href="#base_image_dependencies_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>dependencies</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagedependencyresponse">List[Base<wbr>Image<wbr>Dependency<wbr>Response]</a></span>
@@ -6380,8 +5402,8 @@ webhooks for notifications.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcecontroltype_python">
-<a href="#sourcecontroltype_python" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Type</a>
+        <span id="source_control_type_python">
+<a href="#source_control_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6400,8 +5422,8 @@ webhooks for notifications.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcecontrolauthproperties_python">
-<a href="#sourcecontrolauthproperties_python" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Auth<wbr>Properties</a>
+        <span id="source_control_auth_properties_python">
+<a href="#source_control_auth_properties_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>auth_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authinfo">Dict[Auth<wbr>Info]</a></span>
@@ -6590,8 +5612,8 @@ webhooks for notifications.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcecontroltype_python">
-<a href="#sourcecontroltype_python" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Type</a>
+        <span id="source_control_type_python">
+<a href="#source_control_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6610,8 +5632,8 @@ webhooks for notifications.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcecontrolauthproperties_python">
-<a href="#sourcecontrolauthproperties_python" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Auth<wbr>Properties</a>
+        <span id="source_control_auth_properties_python">
+<a href="#source_control_auth_properties_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>auth_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authinforesponse">Dict[Auth<wbr>Info<wbr>Response]</a></span>
@@ -6985,16 +6007,6 @@ the source registry during the run.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcerepository_python">
-<a href="#sourcerepository_python" style="color: inherit; text-decoration: inherit;">source<wbr>Repository</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceproperties">Dict[Source<wbr>Properties]</a></span>
-    </dt>
-    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="sourcetriggerevents_python">
 <a href="#sourcetriggerevents_python" style="color: inherit; text-decoration: inherit;">source<wbr>Trigger<wbr>Events</a>
 </span> 
@@ -7002,6 +6014,16 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="source_repository_python">
+<a href="#source_repository_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repository</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sourceproperties">Dict[Source<wbr>Properties]</a></span>
+    </dt>
+    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7191,16 +6213,6 @@ the source registry during the run.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcerepository_python">
-<a href="#sourcerepository_python" style="color: inherit; text-decoration: inherit;">source<wbr>Repository</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcepropertiesresponse">Dict[Source<wbr>Properties<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="sourcetriggerevents_python">
 <a href="#sourcetriggerevents_python" style="color: inherit; text-decoration: inherit;">source<wbr>Trigger<wbr>Events</a>
 </span> 
@@ -7208,6 +6220,16 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="source_repository_python">
+<a href="#source_repository_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repository</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sourcepropertiesresponse">Dict[Source<wbr>Properties<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

@@ -967,8 +967,8 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipmask_python">
-<a href="#ipmask_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
+        <span id="ip_mask_python">
+<a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

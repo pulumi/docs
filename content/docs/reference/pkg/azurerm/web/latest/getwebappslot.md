@@ -1661,7 +1661,7 @@ the app is not served on those hostnames.{{% /md %}}</dd>
 <a href="#max_number_of_workers_python" style="color: inherit; text-decoration: inherit;">max_<wbr>number_<wbr>of_<wbr>workers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of workers.
 This only applies to Functions container.{{% /md %}}</dd>
@@ -1845,7 +1845,7 @@ This only applies to Functions container.{{% /md %}}</dd>
 <a href="#container_size_python" style="color: inherit; text-decoration: inherit;">container_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the function container.{{% /md %}}</dd>
 
@@ -1865,7 +1865,7 @@ This only applies to Functions container.{{% /md %}}</dd>
 <a href="#daily_memory_time_quota_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>memory_<wbr>time_<wbr>quota</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum allowed daily memory-time quota (applicable on dynamic apps only).{{% /md %}}</dd>
 
@@ -2793,7 +2793,7 @@ before taking the action{{% /md %}}</dd>
 <a href="#private_bytes_in_kb_python" style="color: inherit; text-decoration: inherit;">private_<wbr>bytes_<wbr>in_<wbr>kb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A rule based on private bytes.{{% /md %}}</dd>
 
@@ -4845,7 +4845,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Priority of IP restriction rule.{{% /md %}}</dd>
 
@@ -4865,7 +4865,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 <a href="#subnettraffictag_python" style="color: inherit; text-decoration: inherit;">subnet<wbr>Traffic<wbr>Tag</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(internal) Subnet traffic tag{{% /md %}}</dd>
 
@@ -4895,7 +4895,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 <a href="#vnettraffictag_python" style="color: inherit; text-decoration: inherit;">vnet<wbr>Traffic<wbr>Tag</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(internal) Vnet traffic tag{{% /md %}}</dd>
 
@@ -6057,7 +6057,7 @@ https://www.siteextensions.net/packages/TiPCallback/{{% /md %}}</dd>
 <a href="#changeintervalinminutes_python" style="color: inherit; text-decoration: inherit;">change<wbr>Interval<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies interval in minutes to reevaluate ReroutePercentage.{{% /md %}}</dd>
 
@@ -6225,7 +6225,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd>
 
@@ -8224,7 +8224,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#logs_directory_size_limit_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>directory_<wbr>size_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}HTTP logs directory size limit.{{% /md %}}</dd>
 
@@ -8244,7 +8244,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#managed_service_identity_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>service_<wbr>identity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Managed Service Identity Id{{% /md %}}</dd>
 
@@ -8284,7 +8284,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#number_of_workers_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>workers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of workers.{{% /md %}}</dd>
 
@@ -8314,7 +8314,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#pre_warmed_instance_count_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>warmed_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of preWarmed instances.
 This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
@@ -8485,7 +8485,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#x_managed_service_identity_id_python" style="color: inherit; text-decoration: inherit;">x_<wbr>managed_<wbr>service_<wbr>identity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Explicit Managed Service Identity Id{{% /md %}}</dd>
 
@@ -8631,7 +8631,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#max_disk_size_in_mb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>disk_<wbr>size_<wbr>in_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum allowed disk size usage in MB.{{% /md %}}</dd>
 
@@ -8641,7 +8641,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#max_memory_in_mb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>memory_<wbr>in_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum allowed memory usage in MB.{{% /md %}}</dd>
 
@@ -9169,7 +9169,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd>
 
@@ -9395,7 +9395,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd>
 
@@ -9405,7 +9405,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}HTTP status code.{{% /md %}}</dd>
 
@@ -9415,7 +9415,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#substatus_python" style="color: inherit; text-decoration: inherit;">sub<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Request Sub Status.{{% /md %}}</dd>
 
@@ -9435,7 +9435,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#win32status_python" style="color: inherit; text-decoration: inherit;">win32Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Win32 error code.{{% /md %}}</dd>
 

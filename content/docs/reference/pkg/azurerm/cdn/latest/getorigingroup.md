@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#traffic_restoration_time_to_healed_or_new_endpoints_in_minutes_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>restoration_<wbr>time_<wbr>to_<wbr>healed_<wbr>or_<wbr>new_<wbr>endpoints_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.{{% /md %}}</dd>
 
@@ -771,7 +771,7 @@ The following output properties are available:
 <a href="#probe_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd>
 
@@ -917,7 +917,7 @@ The following output properties are available:
 <a href="#begin_python" style="color: inherit; text-decoration: inherit;">begin</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd>
 
@@ -927,7 +927,7 @@ The following output properties are available:
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd>
 
@@ -1179,7 +1179,7 @@ The following output properties are available:
 <a href="#response_based_failover_threshold_percentage_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>failover_<wbr>threshold_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd>
 

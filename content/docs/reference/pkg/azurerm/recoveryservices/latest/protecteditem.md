@@ -12,193 +12,6 @@ meta_desc: "Explore the ProtectedItem resource of the recoveryservices/latest mo
 
 Base class for backup items.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Enable Protection on Azure IaasVm
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var protectedItem = new AzureRM.RecoveryServices.Latest.ProtectedItem("protectedItem", new AzureRM.RecoveryServices.Latest.ProtectedItemArgs
-        {
-            ContainerName = "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
-            FabricName = "Azure",
-            ProtectedItemName = "VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
-            ResourceGroupName = "SwaggerTestRg",
-            VaultName = "NetSDKTestRsVault",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	recoveryservices "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := recoveryservices.NewProtectedItem(ctx, "protectedItem", &recoveryservices.ProtectedItemArgs{
-			ContainerName:     pulumi.String("IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1"),
-			FabricName:        pulumi.String("Azure"),
-			ProtectedItemName: pulumi.String("VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1"),
-			ResourceGroupName: pulumi.String("SwaggerTestRg"),
-			VaultName:         pulumi.String("NetSDKTestRsVault"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-protected_item = azurerm.recoveryservices.latest.ProtectedItem("protectedItem",
-    container_name="IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
-    fabric_name="Azure",
-    protected_item_name="VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
-    resource_group_name="SwaggerTestRg",
-    vault_name="NetSDKTestRsVault")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const protectedItem = new azurerm.recoveryservices.latest.ProtectedItem("protectedItem", {
-    containerName: "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
-    fabricName: "Azure",
-    protectedItemName: "VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
-    resourceGroupName: "SwaggerTestRg",
-    vaultName: "NetSDKTestRsVault",
-});
-
-```
-
-{{% /example %}}
-
-### Stop Protection with retain data on Azure IaasVm
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var protectedItem = new AzureRM.RecoveryServices.Latest.ProtectedItem("protectedItem", new AzureRM.RecoveryServices.Latest.ProtectedItemArgs
-        {
-            ContainerName = "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
-            FabricName = "Azure",
-            ProtectedItemName = "VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
-            ResourceGroupName = "SwaggerTestRg",
-            VaultName = "NetSDKTestRsVault",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	recoveryservices "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := recoveryservices.NewProtectedItem(ctx, "protectedItem", &recoveryservices.ProtectedItemArgs{
-			ContainerName:     pulumi.String("IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1"),
-			FabricName:        pulumi.String("Azure"),
-			ProtectedItemName: pulumi.String("VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1"),
-			ResourceGroupName: pulumi.String("SwaggerTestRg"),
-			VaultName:         pulumi.String("NetSDKTestRsVault"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-protected_item = azurerm.recoveryservices.latest.ProtectedItem("protectedItem",
-    container_name="IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
-    fabric_name="Azure",
-    protected_item_name="VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
-    resource_group_name="SwaggerTestRg",
-    vault_name="NetSDKTestRsVault")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const protectedItem = new azurerm.recoveryservices.latest.ProtectedItem("protectedItem", {
-    containerName: "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
-    fabricName: "Azure",
-    protectedItemName: "VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
-    resourceGroupName: "SwaggerTestRg",
-    vaultName: "NetSDKTestRsVault",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ProtectedItem Resource {#create}
@@ -1939,7 +1752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
 
@@ -2185,7 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
 
@@ -3207,7 +3020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd>
 
@@ -4409,7 +4222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
 
@@ -4575,7 +4388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
 
@@ -6473,7 +6286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
 
@@ -6639,7 +6452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
 
@@ -8537,7 +8350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
 
@@ -8703,7 +8516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
 
@@ -11071,7 +10884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onpremiserecoverypointcount_python" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}disk recovery point count.{{% /md %}}</dd>
 
@@ -11111,7 +10924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}cloud recovery point count.{{% /md %}}</dd>
 
@@ -11677,7 +11490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onpremiserecoverypointcount_python" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}disk recovery point count.{{% /md %}}</dd>
 
@@ -11717,7 +11530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}cloud recovery point count.{{% /md %}}</dd>
 
@@ -13809,7 +13622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemid_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
 
@@ -14615,7 +14428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemid_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
 
@@ -15573,7 +15386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletesynctimeinutc_python" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Sync<wbr>Time<wbr>In<wbr>UTC</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
 
@@ -15879,7 +15692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of backup copies associated with the backup item.{{% /md %}}</dd>
 
@@ -16045,7 +15858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of backup copies associated with the backup item.{{% /md %}}</dd>
 
@@ -16751,7 +16564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletesynctimeinutc_python" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Sync<wbr>Time<wbr>In<wbr>UTC</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
 
@@ -17067,7 +16880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd>
 

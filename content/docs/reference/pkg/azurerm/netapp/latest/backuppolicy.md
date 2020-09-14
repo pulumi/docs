@@ -12,114 +12,6 @@ meta_desc: "Explore the BackupPolicy resource of the netapp/latest module, inclu
 
 Backup policy information
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### BackupPolicies_Create
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var backupPolicy = new AzureRM.NetApp.Latest.BackupPolicy("backupPolicy", new AzureRM.NetApp.Latest.BackupPolicyArgs
-        {
-            AccountName = "account1",
-            BackupPolicyName = "backupPolicyName",
-            DailyBackupsToKeep = 10,
-            Enabled = true,
-            Location = "westus",
-            MonthlyBackupsToKeep = 10,
-            ResourceGroupName = "myRG",
-            WeeklyBackupsToKeep = 10,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	netapp "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/netapp/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := netapp.NewbackupPolicy(ctx, "backupPolicy", &netapp.backupPolicyArgs{
-			AccountName:          pulumi.String("account1"),
-			BackupPolicyName:     pulumi.String("backupPolicyName"),
-			DailyBackupsToKeep:   pulumi.Int(10),
-			Enabled:              pulumi.Bool(true),
-			Location:             pulumi.String("westus"),
-			MonthlyBackupsToKeep: pulumi.Int(10),
-			ResourceGroupName:    pulumi.String("myRG"),
-			WeeklyBackupsToKeep:  pulumi.Int(10),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-backup_policy = azurerm.netapp.latest.BackupPolicy("backupPolicy",
-    account_name="account1",
-    backup_policy_name="backupPolicyName",
-    daily_backups_to_keep=10,
-    enabled=True,
-    location="westus",
-    monthly_backups_to_keep=10,
-    resource_group_name="myRG",
-    weekly_backups_to_keep=10)
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const backupPolicy = new azurerm.netapp.latest.BackupPolicy("backupPolicy", {
-    accountName: "account1",
-    backupPolicyName: "backupPolicyName",
-    dailyBackupsToKeep: 10,
-    enabled: true,
-    location: "westus",
-    monthlyBackupsToKeep: 10,
-    resourceGroupName: "myRG",
-    weeklyBackupsToKeep: 10,
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a BackupPolicy Resource {#create}
@@ -131,7 +23,7 @@ const backupPolicy = new azurerm.netapp.latest.BackupPolicy("backupPolicy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/netapp/latest/#pulumi_azurerm.netapp/latest.BackupPolicy">BackupPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">daily_backups_to_keep</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monthly_backups_to_keep</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_backups</span><span class="p">:</span> <span class="nx">Optional[List[VolumeBackups]]</span> = None<span class="p">, </span><span class="nx">volumes_assigned</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">weekly_backups_to_keep</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">yearly_backups_to_keep</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/netapp/latest/#pulumi_azurerm.netapp/latest.BackupPolicy">BackupPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">daily_backups_to_keep</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monthly_backups_to_keep</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_backups</span><span class="p">:</span> <span class="nx">Optional[List[VolumeBackups]]</span> = None<span class="p">, </span><span class="nx">volumes_assigned</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">weekly_backups_to_keep</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">yearly_backups_to_keep</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -730,7 +622,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#daily_backups_to_keep_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>backups_<wbr>to_<wbr>keep</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Daily backups count to keep{{% /md %}}</dd>
 
@@ -750,7 +642,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#monthly_backups_to_keep_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>backups_<wbr>to_<wbr>keep</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Monthly backups count to keep{{% /md %}}</dd>
 
@@ -780,7 +672,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#volumes_assigned_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>assigned</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Volumes using current backup policy{{% /md %}}</dd>
 
@@ -790,7 +682,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#weekly_backups_to_keep_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>backups_<wbr>to_<wbr>keep</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Weekly backups count to keep{{% /md %}}</dd>
 
@@ -800,7 +692,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#yearly_backups_to_keep_python" style="color: inherit; text-decoration: inherit;">yearly_<wbr>backups_<wbr>to_<wbr>keep</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Yearly backups count to keep{{% /md %}}</dd>
 
@@ -1154,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupscount_python" style="color: inherit; text-decoration: inherit;">backups<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total count of backups for volume{{% /md %}}</dd>
 
@@ -1320,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupscount_python" style="color: inherit; text-decoration: inherit;">backups<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total count of backups for volume{{% /md %}}</dd>
 

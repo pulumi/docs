@@ -12,107 +12,6 @@ meta_desc: "Explore the Zone resource of the network/latest module, including ex
 
 Describes a DNS zone.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create zone
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var zone = new AzureRM.Network.Latest.Zone("zone", new AzureRM.Network.Latest.ZoneArgs
-        {
-            Location = "Global",
-            ResourceGroupName = "rg1",
-            Tags = 
-            {
-                { "key1", "value1" },
-            },
-            ZoneName = "zone1",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewZone(ctx, "zone", &network.ZoneArgs{
-			Location:          pulumi.String("Global"),
-			ResourceGroupName: pulumi.String("rg1"),
-			Tags: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-			},
-			ZoneName: pulumi.String("zone1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-zone = azurerm.network.latest.Zone("zone",
-    location="Global",
-    resource_group_name="rg1",
-    tags={
-        "key1": "value1",
-    },
-    zone_name="zone1")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const zone = new azurerm.network.latest.Zone("zone", {
-    location: "Global",
-    resourceGroupName: "rg1",
-    tags: {
-        key1: "value1",
-    },
-    zoneName: "zone1",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Zone Resource {#create}
@@ -872,7 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_number_of_record_sets_python" style="color: inherit; text-decoration: inherit;">max_<wbr>number_<wbr>of_<wbr>record_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
 
@@ -902,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_record_sets_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>record_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
 

@@ -12,102 +12,6 @@ meta_desc: "Explore the Project resource of the migrate/latest module, including
 
 Azure Migrate Project.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Projects_Create
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var project = new AzureRM.Migrate.Latest.Project("project", new AzureRM.Migrate.Latest.ProjectArgs
-        {
-            ETag = "",
-            Location = "West Europe",
-            ProjectName = "abGoyalProject2",
-            ResourceGroupName = "abgoyal-westEurope",
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	migrate "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := migrate.NewProject(ctx, "project", &migrate.ProjectArgs{
-			ETag:              pulumi.String(""),
-			Location:          pulumi.String("West Europe"),
-			ProjectName:       pulumi.String("abGoyalProject2"),
-			ResourceGroupName: pulumi.String("abgoyal-westEurope"),
-			Tags:              nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-project = azurerm.migrate.latest.Project("project",
-    e_tag="",
-    location="West Europe",
-    project_name="abGoyalProject2",
-    resource_group_name="abgoyal-westEurope",
-    tags={})
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const project = new azurerm.migrate.latest.Project("project", {
-    eTag: "",
-    location: "West Europe",
-    projectName: "abGoyalProject2",
-    resourceGroupName: "abgoyal-westEurope",
-    tags: {},
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Project Resource {#create}
@@ -1358,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_assessments_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>assessments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of assessments created in the project.{{% /md %}}</dd>
 
@@ -1368,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_groups_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of groups created in the project.{{% /md %}}</dd>
 
@@ -1378,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_machines_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>machines</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of machines in the project.{{% /md %}}</dd>
 

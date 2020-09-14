@@ -779,7 +779,7 @@ The following output properties are available:
 <a href="#current_node_count_python" style="color: inherit; text-decoration: inherit;">current_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of compute nodes currently assigned to the cluster.{{% /md %}}</dd>
 
@@ -1227,7 +1227,7 @@ The following output properties are available:
 <a href="#maximum_node_count_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of compute nodes the cluster can have.{{% /md %}}</dd>
 
@@ -1237,7 +1237,7 @@ The following output properties are available:
 <a href="#minimum_node_count_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of compute nodes the Batch AI service will try to allocate for the cluster. Note, the actual number of nodes can be less than the specified value if the subscription has not enough quota to fulfill the request.{{% /md %}}</dd>
 
@@ -1247,7 +1247,7 @@ The following output properties are available:
 <a href="#initial_node_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of compute nodes to allocate on cluster creation. Note that this value is used only during cluster creation. Default: 0.{{% /md %}}</dd>
 
@@ -3057,7 +3057,7 @@ The following output properties are available:
 <a href="#target_node_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The desired number of compute nodes in the Cluster. Default is 0.{{% /md %}}</dd>
 
@@ -3771,7 +3771,7 @@ The following output properties are available:
 <a href="#idle_node_count_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd>
 
@@ -3781,7 +3781,7 @@ The following output properties are available:
 <a href="#leaving_node_count_python" style="color: inherit; text-decoration: inherit;">leaving_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes which are leaving the cluster.{{% /md %}}</dd>
 
@@ -3791,7 +3791,7 @@ The following output properties are available:
 <a href="#preparing_node_count_python" style="color: inherit; text-decoration: inherit;">preparing_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd>
 
@@ -3801,7 +3801,7 @@ The following output properties are available:
 <a href="#running_node_count_python" style="color: inherit; text-decoration: inherit;">running_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd>
 
@@ -3811,7 +3811,7 @@ The following output properties are available:
 <a href="#unusable_node_count_python" style="color: inherit; text-decoration: inherit;">unusable_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd>
 

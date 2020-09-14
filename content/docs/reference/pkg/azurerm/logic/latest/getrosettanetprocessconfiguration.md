@@ -921,7 +921,7 @@ The following output properties are available:
 <a href="#time_to_acknowledge_in_seconds_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>acknowledge_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time to acknowledge in seconds.{{% /md %}}</dd>
 
@@ -1277,7 +1277,7 @@ The following output properties are available:
 <a href="#retry_count_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The value indicating retry count.{{% /md %}}</dd>
 
@@ -1287,7 +1287,7 @@ The following output properties are available:
 <a href="#time_to_perform_in_seconds_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>perform_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time to perform in seconds.{{% /md %}}</dd>
 

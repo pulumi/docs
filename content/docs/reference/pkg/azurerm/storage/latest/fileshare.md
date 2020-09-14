@@ -12,268 +12,6 @@ meta_desc: "Explore the FileShare resource of the storage/latest module, includi
 
 Properties of the file share, including Id, resource name, resource type, Etag.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create NFS Shares
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var fileShare = new AzureRM.Storage.Latest.FileShare("fileShare", new AzureRM.Storage.Latest.FileShareArgs
-        {
-            AccountName = "sto666",
-            EnabledProtocols = "NFS",
-            ResourceGroupName = "res346",
-            ShareName = "share1235",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	storage "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storage.NewFileShare(ctx, "fileShare", &storage.FileShareArgs{
-			AccountName:       pulumi.String("sto666"),
-			EnabledProtocols:  pulumi.String("NFS"),
-			ResourceGroupName: pulumi.String("res346"),
-			ShareName:         pulumi.String("share1235"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-file_share = azurerm.storage.latest.FileShare("fileShare",
-    account_name="sto666",
-    enabled_protocols="NFS",
-    resource_group_name="res346",
-    share_name="share1235")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const fileShare = new azurerm.storage.latest.FileShare("fileShare", {
-    accountName: "sto666",
-    enabledProtocols: "NFS",
-    resourceGroupName: "res346",
-    shareName: "share1235",
-});
-
-```
-
-{{% /example %}}
-
-### PutShares
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var fileShare = new AzureRM.Storage.Latest.FileShare("fileShare", new AzureRM.Storage.Latest.FileShareArgs
-        {
-            AccountName = "sto328",
-            ResourceGroupName = "res3376",
-            ShareName = "share6185",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	storage "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storage.NewFileShare(ctx, "fileShare", &storage.FileShareArgs{
-			AccountName:       pulumi.String("sto328"),
-			ResourceGroupName: pulumi.String("res3376"),
-			ShareName:         pulumi.String("share6185"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-file_share = azurerm.storage.latest.FileShare("fileShare",
-    account_name="sto328",
-    resource_group_name="res3376",
-    share_name="share6185")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const fileShare = new azurerm.storage.latest.FileShare("fileShare", {
-    accountName: "sto328",
-    resourceGroupName: "res3376",
-    shareName: "share6185",
-});
-
-```
-
-{{% /example %}}
-
-### PutShares with Access Tier
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var fileShare = new AzureRM.Storage.Latest.FileShare("fileShare", new AzureRM.Storage.Latest.FileShareArgs
-        {
-            AccessTier = "Hot",
-            AccountName = "sto666",
-            ResourceGroupName = "res346",
-            ShareName = "share1235",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	storage "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storage.NewFileShare(ctx, "fileShare", &storage.FileShareArgs{
-			AccessTier:        pulumi.String("Hot"),
-			AccountName:       pulumi.String("sto666"),
-			ResourceGroupName: pulumi.String("res346"),
-			ShareName:         pulumi.String("share1235"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-file_share = azurerm.storage.latest.FileShare("fileShare",
-    access_tier="Hot",
-    account_name="sto666",
-    resource_group_name="res346",
-    share_name="share1235")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const fileShare = new azurerm.storage.latest.FileShare("fileShare", {
-    accessTier: "Hot",
-    accountName: "sto666",
-    resourceGroupName: "res346",
-    shareName: "share1235",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a FileShare Resource {#create}
@@ -285,7 +23,7 @@ const fileShare = new azurerm.storage.latest.FileShare("fileShare", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/storage/latest/#pulumi_azurerm.storage/latest.FileShare">FileShare</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_protocols</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_squash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_quota</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/storage/latest/#pulumi_azurerm.storage/latest.FileShare">FileShare</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_protocols</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_squash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_quota</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -794,7 +532,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#share_quota_python" style="color: inherit; text-decoration: inherit;">share_<wbr>quota</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.{{% /md %}}</dd>
 
@@ -1283,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remaining_retention_days_python" style="color: inherit; text-decoration: inherit;">remaining_<wbr>retention_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Remaining retention days for share that was soft deleted.{{% /md %}}</dd>
 
@@ -1293,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#share_usage_bytes_python" style="color: inherit; text-decoration: inherit;">share_<wbr>usage_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.{{% /md %}}</dd>
 

@@ -12,154 +12,6 @@ meta_desc: "Explore the ServerDetails resource of the analysisservices/latest mo
 
 Represents an instance of an Analysis Services resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create a server.
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var serverDetails = new AzureRM.AnalysisServices.Latest.ServerDetails("serverDetails", new AzureRM.AnalysisServices.Latest.ServerDetailsArgs
-        {
-            AsAdministrators = new AzureRM.AnalysisServices.Latest.Inputs.ServerAdministratorsArgs
-            {
-                Members = 
-                {
-                    "azsdktest@microsoft.com",
-                    "azsdktest2@microsoft.com",
-                },
-            },
-            Location = "West US",
-            ResourceGroupName = "TestRG",
-            ServerName = "azsdktest",
-            Sku = new AzureRM.AnalysisServices.Latest.Inputs.ResourceSkuArgs
-            {
-                Capacity = 1,
-                Name = "S1",
-                Tier = "Standard",
-            },
-            Tags = 
-            {
-                { "testKey", "testValue" },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	analysisservices "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/analysisservices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := analysisservices.NewServerDetails(ctx, "serverDetails", &analysisservices.ServerDetailsArgs{
-			AsAdministrators: &analysisservices.ServerAdministratorsArgs{
-				Members: pulumi.StringArray{
-					pulumi.String("azsdktest@microsoft.com"),
-					pulumi.String("azsdktest2@microsoft.com"),
-				},
-			},
-			Location:          pulumi.String("West US"),
-			ResourceGroupName: pulumi.String("TestRG"),
-			ServerName:        pulumi.String("azsdktest"),
-			Sku: &analysisservices.ResourceSkuArgs{
-				Capacity: pulumi.Int(1),
-				Name:     pulumi.String("S1"),
-				Tier:     pulumi.String("Standard"),
-			},
-			Tags: pulumi.StringMap{
-				"testKey": pulumi.String("testValue"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-server_details = azurerm.analysisservices.latest.ServerDetails("serverDetails",
-    as_administrators={
-        "members": [
-            "azsdktest@microsoft.com",
-            "azsdktest2@microsoft.com",
-        ],
-    },
-    location="West US",
-    resource_group_name="TestRG",
-    server_name="azsdktest",
-    sku={
-        "capacity": 1,
-        "name": "S1",
-        "tier": "Standard",
-    },
-    tags={
-        "testKey": "testValue",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const serverDetails = new azurerm.analysisservices.latest.ServerDetails("serverDetails", {
-    asAdministrators: {
-        members: [
-            "azsdktest@microsoft.com",
-            "azsdktest2@microsoft.com",
-        ],
-    },
-    location: "West US",
-    resourceGroupName: "TestRG",
-    serverName: "azsdktest",
-    sku: {
-        capacity: 1,
-        name: "S1",
-        tier: "Standard",
-    },
-    tags: {
-        testKey: "testValue",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ServerDetails Resource {#create}
@@ -2040,7 +1892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of instances in the read only query pool.{{% /md %}}</dd>
 
@@ -2206,7 +2058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of instances in the read only query pool.{{% /md %}}</dd>
 

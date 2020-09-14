@@ -12,110 +12,6 @@ meta_desc: "Explore the Backup resource of the netapp/latest module, including e
 
 Backup of a Volume
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Backups_Create
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var backup = new AzureRM.NetApp.Latest.Backup("backup", new AzureRM.NetApp.Latest.BackupArgs
-        {
-            AccountName = "account1",
-            BackupName = "backup1",
-            Label = "myLabel",
-            Location = "eastus",
-            PoolName = "pool1",
-            ResourceGroupName = "myRG",
-            VolumeName = "volume1",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	netapp "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/netapp/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := netapp.NewBackup(ctx, "backup", &netapp.BackupArgs{
-			AccountName:       pulumi.String("account1"),
-			BackupName:        pulumi.String("backup1"),
-			Label:             pulumi.String("myLabel"),
-			Location:          pulumi.String("eastus"),
-			PoolName:          pulumi.String("pool1"),
-			ResourceGroupName: pulumi.String("myRG"),
-			VolumeName:        pulumi.String("volume1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-backup = azurerm.netapp.latest.Backup("backup",
-    account_name="account1",
-    backup_name="backup1",
-    label="myLabel",
-    location="eastus",
-    pool_name="pool1",
-    resource_group_name="myRG",
-    volume_name="volume1")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const backup = new azurerm.netapp.latest.Backup("backup", {
-    accountName: "account1",
-    backupName: "backup1",
-    label: "myLabel",
-    location: "eastus",
-    poolName: "pool1",
-    resourceGroupName: "myRG",
-    volumeName: "volume1",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Backup Resource {#create}
@@ -905,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of backup{{% /md %}}</dd>
 

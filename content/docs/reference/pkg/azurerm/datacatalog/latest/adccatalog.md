@@ -12,167 +12,6 @@ meta_desc: "Explore the ADCCatalog resource of the datacatalog/latest module, in
 
 Azure Data Catalog.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create Azure Data Catalog Service
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var adcCatalog = new AzureRM.DataCatalog.Latest.ADCCatalog("adcCatalog", new AzureRM.DataCatalog.Latest.ADCCatalogArgs
-        {
-            Admins = 
-            {
-                new AzureRM.DataCatalog.Latest.Inputs.PrincipalsArgs
-                {
-                    ObjectId = "99999999-9999-9999-999999999999",
-                    Upn = "myupn@microsoft.com",
-                },
-            },
-            CatalogName = "exampleCatalog",
-            EnableAutomaticUnitAdjustment = false,
-            Location = "North US",
-            ResourceGroupName = "exampleResourceGroup",
-            Sku = "Standard",
-            Tags = 
-            {
-                { "mykey", "myvalue" },
-                { "mykey2", "myvalue2" },
-            },
-            Units = 1,
-            Users = 
-            {
-                new AzureRM.DataCatalog.Latest.Inputs.PrincipalsArgs
-                {
-                    ObjectId = "99999999-9999-9999-999999999999",
-                    Upn = "myupn@microsoft.com",
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	datacatalog "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/datacatalog/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datacatalog.NewADCCatalog(ctx, "adcCatalog", &datacatalog.ADCCatalogArgs{
-			Admins: datacatalog.PrincipalsArray{
-				&datacatalog.PrincipalsArgs{
-					ObjectId: pulumi.String("99999999-9999-9999-999999999999"),
-					Upn:      pulumi.String("myupn@microsoft.com"),
-				},
-			},
-			CatalogName:                   pulumi.String("exampleCatalog"),
-			EnableAutomaticUnitAdjustment: pulumi.Bool(false),
-			Location:                      pulumi.String("North US"),
-			ResourceGroupName:             pulumi.String("exampleResourceGroup"),
-			Sku:                           pulumi.String("Standard"),
-			Tags: pulumi.StringMap{
-				"mykey":  pulumi.String("myvalue"),
-				"mykey2": pulumi.String("myvalue2"),
-			},
-			Units: pulumi.Int(1),
-			Users: datacatalog.PrincipalsArray{
-				&datacatalog.PrincipalsArgs{
-					ObjectId: pulumi.String("99999999-9999-9999-999999999999"),
-					Upn:      pulumi.String("myupn@microsoft.com"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-adc_catalog = azurerm.datacatalog.latest.ADCCatalog("adcCatalog",
-    admins=[{
-        "objectId": "99999999-9999-9999-999999999999",
-        "upn": "myupn@microsoft.com",
-    }],
-    catalog_name="exampleCatalog",
-    enable_automatic_unit_adjustment=False,
-    location="North US",
-    resource_group_name="exampleResourceGroup",
-    sku="Standard",
-    tags={
-        "mykey": "myvalue",
-        "mykey2": "myvalue2",
-    },
-    units=1,
-    users=[{
-        "objectId": "99999999-9999-9999-999999999999",
-        "upn": "myupn@microsoft.com",
-    }])
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const adcCatalog = new azurerm.datacatalog.latest.ADCCatalog("adcCatalog", {
-    admins: [{
-        objectId: "99999999-9999-9999-999999999999",
-        upn: "myupn@microsoft.com",
-    }],
-    catalogName: "exampleCatalog",
-    enableAutomaticUnitAdjustment: false,
-    location: "North US",
-    resourceGroupName: "exampleResourceGroup",
-    sku: "Standard",
-    tags: {
-        mykey: "myvalue",
-        mykey2: "myvalue2",
-    },
-    units: 1,
-    users: [{
-        objectId: "99999999-9999-9999-999999999999",
-        upn: "myupn@microsoft.com",
-    }],
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ADCCatalog Resource {#create}
@@ -184,7 +23,7 @@ const adcCatalog = new azurerm.datacatalog.latest.ADCCatalog("adcCatalog", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/datacatalog/latest/#pulumi_azurerm.datacatalog/latest.ADCCatalog">ADCCatalog</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admins</span><span class="p">:</span> <span class="nx">Optional[List[Principals]]</span> = None<span class="p">, </span><span class="nx">catalog_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_automatic_unit_adjustment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">successfully_provisioned</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">units</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[List[Principals]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/datacatalog/latest/#pulumi_azurerm.datacatalog/latest.ADCCatalog">ADCCatalog</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admins</span><span class="p">:</span> <span class="nx">Optional[List[Principals]]</span> = None<span class="p">, </span><span class="nx">catalog_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_automatic_unit_adjustment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">successfully_provisioned</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">units</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[List[Principals]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -803,7 +642,7 @@ The ADCCatalog resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Azure data catalog units.{{% /md %}}</dd>
 

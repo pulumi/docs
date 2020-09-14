@@ -12,198 +12,6 @@ meta_desc: "Explore the CassandraResourceCassandraTable resource of the document
 
 An Azure Cosmos DB Cassandra table.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### CosmosDBCassandraTableCreateUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var cassandraResourceCassandraTable = new AzureRM.DocumentDB.Latest.CassandraResourceCassandraTable("cassandraResourceCassandraTable", new AzureRM.DocumentDB.Latest.CassandraResourceCassandraTableArgs
-        {
-            AccountName = "ddb1",
-            KeyspaceName = "keyspaceName",
-            Location = "West US",
-            Options = ,
-            Resource = new AzureRM.DocumentDB.Latest.Inputs.CassandraTableResourceArgs
-            {
-                DefaultTtl = 100,
-                Id = "tableName",
-                Schema = new AzureRM.DocumentDB.Latest.Inputs.CassandraSchemaArgs
-                {
-                    ClusterKeys = 
-                    {
-                        new AzureRM.DocumentDB.Latest.Inputs.ClusterKeyArgs
-                        {
-                            Name = "columnA",
-                            OrderBy = "Asc",
-                        },
-                    },
-                    Columns = 
-                    {
-                        new AzureRM.DocumentDB.Latest.Inputs.ColumnArgs
-                        {
-                            Name = "columnA",
-                            Type = "Ascii",
-                        },
-                    },
-                    PartitionKeys = 
-                    {
-                        new AzureRM.DocumentDB.Latest.Inputs.CassandraPartitionKeyArgs
-                        {
-                            Name = "columnA",
-                        },
-                    },
-                },
-            },
-            ResourceGroupName = "rg1",
-            TableName = "tableName",
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/documentdb/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewCassandraResourceCassandraTable(ctx, "cassandraResourceCassandraTable", &documentdb.CassandraResourceCassandraTableArgs{
-			AccountName:  pulumi.String("ddb1"),
-			KeyspaceName: pulumi.String("keyspaceName"),
-			Location:     pulumi.String("West US"),
-			Options:      nil,
-			Resource: &documentdb.CassandraTableResourceArgs{
-				DefaultTtl: pulumi.Int(100),
-				Id:         pulumi.String("tableName"),
-				Schema: &documentdb.CassandraSchemaArgs{
-					ClusterKeys: documentdb.ClusterKeyArray{
-						&documentdb.ClusterKeyArgs{
-							Name:    pulumi.String("columnA"),
-							OrderBy: pulumi.String("Asc"),
-						},
-					},
-					Columns: documentdb.ColumnArray{
-						&documentdb.ColumnArgs{
-							Name: pulumi.String("columnA"),
-							Type: pulumi.String("Ascii"),
-						},
-					},
-					PartitionKeys: documentdb.CassandraPartitionKeyArray{
-						&documentdb.CassandraPartitionKeyArgs{
-							Name: pulumi.String("columnA"),
-						},
-					},
-				},
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			TableName:         pulumi.String("tableName"),
-			Tags:              nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-cassandra_resource_cassandra_table = azurerm.documentdb.latest.CassandraResourceCassandraTable("cassandraResourceCassandraTable",
-    account_name="ddb1",
-    keyspace_name="keyspaceName",
-    location="West US",
-    options={},
-    resource={
-        "defaultTtl": 100,
-        "id": "tableName",
-        "schema": {
-            "clusterKeys": [{
-                "name": "columnA",
-                "orderBy": "Asc",
-            }],
-            "columns": [{
-                "name": "columnA",
-                "type": "Ascii",
-            }],
-            "partitionKeys": [{
-                "name": "columnA",
-            }],
-        },
-    },
-    resource_group_name="rg1",
-    table_name="tableName",
-    tags={})
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const cassandraResourceCassandraTable = new azurerm.documentdb.latest.CassandraResourceCassandraTable("cassandraResourceCassandraTable", {
-    accountName: "ddb1",
-    keyspaceName: "keyspaceName",
-    location: "West US",
-    options: {},
-    resource: {
-        defaultTtl: 100,
-        id: "tableName",
-        schema: {
-            clusterKeys: [{
-                name: "columnA",
-                orderBy: "Asc",
-            }],
-            columns: [{
-                name: "columnA",
-                type: "Ascii",
-            }],
-            partitionKeys: [{
-                name: "columnA",
-            }],
-        },
-    },
-    resourceGroupName: "rg1",
-    tableName: "tableName",
-    tags: {},
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a CassandraResourceCassandraTable Resource {#create}
@@ -978,7 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
 
@@ -1064,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
 
@@ -1694,7 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.{{% /md %}}</dd>
 
@@ -2000,7 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analytical_storage_ttl_python" style="color: inherit; text-decoration: inherit;">analytical_<wbr>storage_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd>
 
@@ -2010,7 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time to live of the Cosmos DB Cassandra table{{% /md %}}</dd>
 
@@ -2176,7 +1984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time to live of the Cosmos DB Cassandra table{{% /md %}}</dd>
 
@@ -2816,7 +2624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd>
 

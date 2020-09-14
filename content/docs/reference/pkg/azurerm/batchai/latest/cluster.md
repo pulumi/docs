@@ -12,249 +12,6 @@ meta_desc: "Explore the Cluster resource of the batchai/latest module, including
 
 Information about a Cluster.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create a cluster
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var cluster = new AzureRM.BatchAI.Latest.Cluster("cluster", new AzureRM.BatchAI.Latest.ClusterArgs
-        {
-            ClusterName = "demo_cluster",
-            NodeSetup = new AzureRM.BatchAI.Latest.Inputs.NodeSetupArgs
-            {
-                MountVolumes = new AzureRM.BatchAI.Latest.Inputs.MountVolumesArgs
-                {
-                    AzureFileShares = 
-                    {
-                        new AzureRM.BatchAI.Latest.Inputs.AzureFileShareReferenceArgs
-                        {
-                            AccountName = "storage_account_name",
-                            AzureFileUrl = "https://storage_account_name.file.core.windows.net/azure_file_share_name",
-                            Credentials = new AzureRM.BatchAI.Latest.Inputs.AzureStorageCredentialsInfoArgs
-                            {
-                                AccountKey = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
-                            },
-                            DirectoryMode = "0777",
-                            FileMode = "0777",
-                            RelativeMountPath = "azfiles",
-                        },
-                    },
-                    FileServers = 
-                    {
-                        new AzureRM.BatchAI.Latest.Inputs.FileServerReferenceArgs
-                        {
-                            FileServer = new AzureRM.BatchAI.Latest.Inputs.ResourceIdArgs
-                            {
-                                Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspaces/fileservers/fileservercedd134b",
-                            },
-                            MountOptions = "rw",
-                            RelativeMountPath = "nfs",
-                        },
-                    },
-                },
-            },
-            ResourceGroupName = "demo_resource_group",
-            ScaleSettings = new AzureRM.BatchAI.Latest.Inputs.ScaleSettingsArgs
-            {
-                Manual = new AzureRM.BatchAI.Latest.Inputs.ManualScaleSettingsArgs
-                {
-                    NodeDeallocationOption = "requeue",
-                    TargetNodeCount = 1,
-                },
-            },
-            UserAccountSettings = new AzureRM.BatchAI.Latest.Inputs.UserAccountSettingsArgs
-            {
-                AdminUserName = "admin_user_name",
-                AdminUserPassword = "admin_user_password",
-                AdminUserSshPublicKey = "ssh-rsa AAAAB3NzaC1yc...",
-            },
-            VmPriority = "dedicated",
-            VmSize = "STANDARD_NC6",
-            WorkspaceName = "demo_workspace",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	batchai "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/batchai/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := batchai.NewCluster(ctx, "cluster", &batchai.ClusterArgs{
-			ClusterName: pulumi.String("demo_cluster"),
-			NodeSetup: &batchai.NodeSetupArgs{
-				MountVolumes: &batchai.MountVolumesArgs{
-					AzureFileShares: batchai.AzureFileShareReferenceArray{
-						&batchai.AzureFileShareReferenceArgs{
-							AccountName:  pulumi.String("storage_account_name"),
-							AzureFileUrl: pulumi.String("https://storage_account_name.file.core.windows.net/azure_file_share_name"),
-							Credentials: &batchai.AzureStorageCredentialsInfoArgs{
-								AccountKey: pulumi.String("00000000000000000000000000000000000000000000000000000000000000000000000000000000000000=="),
-							},
-							DirectoryMode:     pulumi.String("0777"),
-							FileMode:          pulumi.String("0777"),
-							RelativeMountPath: pulumi.String("azfiles"),
-						},
-					},
-					FileServers: batchai.FileServerReferenceArray{
-						&batchai.FileServerReferenceArgs{
-							FileServer: &batchai.ResourceIdArgs{
-								Id: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspaces/fileservers/fileservercedd134b"),
-							},
-							MountOptions:      pulumi.String("rw"),
-							RelativeMountPath: pulumi.String("nfs"),
-						},
-					},
-				},
-			},
-			ResourceGroupName: pulumi.String("demo_resource_group"),
-			ScaleSettings: &batchai.ScaleSettingsArgs{
-				Manual: &batchai.ManualScaleSettingsArgs{
-					NodeDeallocationOption: pulumi.String("requeue"),
-					TargetNodeCount:        pulumi.Int(1),
-				},
-			},
-			UserAccountSettings: &batchai.UserAccountSettingsArgs{
-				AdminUserName:         pulumi.String("admin_user_name"),
-				AdminUserPassword:     pulumi.String("admin_user_password"),
-				AdminUserSshPublicKey: pulumi.String("ssh-rsa AAAAB3NzaC1yc..."),
-			},
-			VmPriority:    pulumi.String("dedicated"),
-			VmSize:        pulumi.String("STANDARD_NC6"),
-			WorkspaceName: pulumi.String("demo_workspace"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-cluster = azurerm.batchai.latest.Cluster("cluster",
-    cluster_name="demo_cluster",
-    node_setup={
-        "mountVolumes": {
-            "azureFileShares": [{
-                "accountName": "storage_account_name",
-                "azureFileUrl": "https://storage_account_name.file.core.windows.net/azure_file_share_name",
-                "credentials": {
-                    "accountKey": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
-                },
-                "directoryMode": "0777",
-                "fileMode": "0777",
-                "relativeMountPath": "azfiles",
-            }],
-            "fileServers": [{
-                "fileServer": {
-                    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspaces/fileservers/fileservercedd134b",
-                },
-                "mountOptions": "rw",
-                "relativeMountPath": "nfs",
-            }],
-        },
-    },
-    resource_group_name="demo_resource_group",
-    scale_settings={
-        "manual": {
-            "nodeDeallocationOption": "requeue",
-            "targetNodeCount": 1,
-        },
-    },
-    user_account_settings={
-        "adminUserName": "admin_user_name",
-        "adminUserPassword": "admin_user_password",
-        "adminUserSshPublicKey": "ssh-rsa AAAAB3NzaC1yc...",
-    },
-    vm_priority="dedicated",
-    vm_size="STANDARD_NC6",
-    workspace_name="demo_workspace")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const cluster = new azurerm.batchai.latest.Cluster("cluster", {
-    clusterName: "demo_cluster",
-    nodeSetup: {
-        mountVolumes: {
-            azureFileShares: [{
-                accountName: "storage_account_name",
-                azureFileUrl: "https://storage_account_name.file.core.windows.net/azure_file_share_name",
-                credentials: {
-                    accountKey: "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
-                },
-                directoryMode: "0777",
-                fileMode: "0777",
-                relativeMountPath: "azfiles",
-            }],
-            fileServers: [{
-                fileServer: {
-                    id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspaces/fileservers/fileservercedd134b",
-                },
-                mountOptions: "rw",
-                relativeMountPath: "nfs",
-            }],
-        },
-    },
-    resourceGroupName: "demo_resource_group",
-    scaleSettings: {
-        manual: {
-            nodeDeallocationOption: "requeue",
-            targetNodeCount: 1,
-        },
-    },
-    userAccountSettings: {
-        adminUserName: "admin_user_name",
-        adminUserPassword: "admin_user_password",
-        adminUserSshPublicKey: "ssh-rsa AAAAB3NzaC1yc...",
-    },
-    vmPriority: "dedicated",
-    vmSize: "STANDARD_NC6",
-    workspaceName: "demo_workspace",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}
@@ -1264,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_node_count_python" style="color: inherit; text-decoration: inherit;">current_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of compute nodes currently assigned to the cluster.{{% /md %}}</dd>
 
@@ -1821,7 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maximum_node_count_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of compute nodes the cluster can have.{{% /md %}}</dd>
 
@@ -1831,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_node_count_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of compute nodes the Batch AI service will try to allocate for the cluster. Note, the actual number of nodes can be less than the specified value if the subscription has not enough quota to fulfill the request.{{% /md %}}</dd>
 
@@ -1841,7 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_node_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of compute nodes to allocate on cluster creation. Note that this value is used only during cluster creation. Default: 0.{{% /md %}}</dd>
 
@@ -1987,7 +1744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maximum_node_count_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of compute nodes the cluster can have.{{% /md %}}</dd>
 
@@ -1997,7 +1754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_node_count_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of compute nodes the Batch AI service will try to allocate for the cluster. Note, the actual number of nodes can be less than the specified value if the subscription has not enough quota to fulfill the request.{{% /md %}}</dd>
 
@@ -2007,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_node_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of compute nodes to allocate on cluster creation. Note that this value is used only during cluster creation. Default: 0.{{% /md %}}</dd>
 
@@ -5345,7 +5102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_node_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The desired number of compute nodes in the Cluster. Default is 0.{{% /md %}}</dd>
 
@@ -5471,7 +5228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_node_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The desired number of compute nodes in the Cluster. Default is 0.{{% /md %}}</dd>
 
@@ -6557,7 +6314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#idle_node_count_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd>
 
@@ -6567,7 +6324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#leaving_node_count_python" style="color: inherit; text-decoration: inherit;">leaving_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes which are leaving the cluster.{{% /md %}}</dd>
 
@@ -6577,7 +6334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preparing_node_count_python" style="color: inherit; text-decoration: inherit;">preparing_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd>
 
@@ -6587,7 +6344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#running_node_count_python" style="color: inherit; text-decoration: inherit;">running_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd>
 
@@ -6597,7 +6354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unusable_node_count_python" style="color: inherit; text-decoration: inherit;">unusable_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd>
 

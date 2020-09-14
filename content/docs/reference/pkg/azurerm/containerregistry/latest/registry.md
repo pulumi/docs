@@ -12,124 +12,6 @@ meta_desc: "Explore the Registry resource of the containerregistry/latest module
 
 An object that represents a container registry.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### RegistryCreate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var registry = new AzureRM.ContainerRegistry.Latest.Registry("registry", new AzureRM.ContainerRegistry.Latest.RegistryArgs
-        {
-            AdminUserEnabled = true,
-            Location = "westus",
-            RegistryName = "myRegistry",
-            ResourceGroupName = "myResourceGroup",
-            Sku = new AzureRM.ContainerRegistry.Latest.Inputs.SkuArgs
-            {
-                Name = "Standard",
-            },
-            Tags = 
-            {
-                { "key", "value" },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	containerregistry "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/containerregistry/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := containerregistry.NewRegistry(ctx, "registry", &containerregistry.RegistryArgs{
-			AdminUserEnabled:  pulumi.Bool(true),
-			Location:          pulumi.String("westus"),
-			RegistryName:      pulumi.String("myRegistry"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			Sku: &containerregistry.SkuArgs{
-				Name: pulumi.String("Standard"),
-			},
-			Tags: pulumi.StringMap{
-				"key": pulumi.String("value"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-registry = azurerm.containerregistry.latest.Registry("registry",
-    admin_user_enabled=True,
-    location="westus",
-    registry_name="myRegistry",
-    resource_group_name="myResourceGroup",
-    sku={
-        "name": "Standard",
-    },
-    tags={
-        "key": "value",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const registry = new azurerm.containerregistry.latest.Registry("registry", {
-    adminUserEnabled: true,
-    location: "westus",
-    registryName: "myRegistry",
-    resourceGroupName: "myResourceGroup",
-    sku: {
-        name: "Standard",
-    },
-    tags: {
-        key: "value",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Registry Resource {#create}
@@ -2222,7 +2104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of days to retain an untagged manifest after which it gets purged.{{% /md %}}</dd>
 
@@ -2388,7 +2270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of days to retain an untagged manifest after which it gets purged.{{% /md %}}</dd>
 

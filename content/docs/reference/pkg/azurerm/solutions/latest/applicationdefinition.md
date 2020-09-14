@@ -12,132 +12,6 @@ meta_desc: "Explore the ApplicationDefinition resource of the solutions/latest m
 
 Information about managed application definition.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update managed application definition
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var applicationDefinition = new AzureRM.Solutions.Latest.ApplicationDefinition("applicationDefinition", new AzureRM.Solutions.Latest.ApplicationDefinitionArgs
-        {
-            ApplicationDefinitionName = "myManagedApplicationDef",
-            Authorizations = 
-            {
-                new AzureRM.Solutions.Latest.Inputs.ApplicationAuthorizationArgs
-                {
-                    PrincipalId = "validprincipalguid",
-                    RoleDefinitionId = "validroleguid",
-                },
-            },
-            Description = "myManagedApplicationDef description",
-            DisplayName = "myManagedApplicationDef",
-            Location = "East US 2",
-            LockLevel = "None",
-            PackageFileUri = "https://path/to/packagezipfile",
-            ResourceGroupName = "rg",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	solutions "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/solutions/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := solutions.NewApplicationDefinition(ctx, "applicationDefinition", &solutions.ApplicationDefinitionArgs{
-			ApplicationDefinitionName: pulumi.String("myManagedApplicationDef"),
-			Authorizations: solutions.ApplicationAuthorizationArray{
-				&solutions.ApplicationAuthorizationArgs{
-					PrincipalId:      pulumi.String("validprincipalguid"),
-					RoleDefinitionId: pulumi.String("validroleguid"),
-				},
-			},
-			Description:       pulumi.String("myManagedApplicationDef description"),
-			DisplayName:       pulumi.String("myManagedApplicationDef"),
-			Location:          pulumi.String("East US 2"),
-			LockLevel:         pulumi.String("None"),
-			PackageFileUri:    pulumi.String("https://path/to/packagezipfile"),
-			ResourceGroupName: pulumi.String("rg"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-application_definition = azurerm.solutions.latest.ApplicationDefinition("applicationDefinition",
-    application_definition_name="myManagedApplicationDef",
-    authorizations=[{
-        "principalId": "validprincipalguid",
-        "roleDefinitionId": "validroleguid",
-    }],
-    description="myManagedApplicationDef description",
-    display_name="myManagedApplicationDef",
-    location="East US 2",
-    lock_level="None",
-    package_file_uri="https://path/to/packagezipfile",
-    resource_group_name="rg")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const applicationDefinition = new azurerm.solutions.latest.ApplicationDefinition("applicationDefinition", {
-    applicationDefinitionName: "myManagedApplicationDef",
-    authorizations: [{
-        principalId: "validprincipalguid",
-        roleDefinitionId: "validroleguid",
-    }],
-    description: "myManagedApplicationDef description",
-    displayName: "myManagedApplicationDef",
-    location: "East US 2",
-    lockLevel: "None",
-    packageFileUri: "https://path/to/packagezipfile",
-    resourceGroupName: "rg",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ApplicationDefinition Resource {#create}
@@ -3328,7 +3202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The SKU capacity.{{% /md %}}</dd>
 
@@ -3614,7 +3488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The SKU capacity.{{% /md %}}</dd>
 

@@ -1785,7 +1785,7 @@ The following output properties are available:
 <a href="#max_unused_versions_to_keep_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unused_<wbr>versions_<wbr>to_<wbr>keep</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of unused versions per application type to keep.{{% /md %}}</dd>
 
@@ -2607,7 +2607,7 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 <a href="#max_percent_unhealthy_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>applications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
 
@@ -2623,7 +2623,7 @@ The computation rounds up to tolerate one failure on small numbers of applicatio
 <a href="#max_percent_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
 
@@ -2834,7 +2834,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#max_percent_delta_unhealthy_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>applications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
 The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
@@ -2847,7 +2847,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#max_percent_delta_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
 The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
@@ -2860,7 +2860,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#max_percent_upgrade_domain_delta_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>upgrade_<wbr>domain_<wbr>delta_<wbr>unhealthy_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
 The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
@@ -3843,21 +3843,21 @@ The check is performed after every upgrade domain upgrade completion for all com
 
     <dt class="property-required"
             title="Required">
-        <span id="endport_python">
-<a href="#endport_python" style="color: inherit; text-decoration: inherit;">end<wbr>Port</a>
+        <span id="end_port_python">
+<a href="#end_port_python" style="color: inherit; text-decoration: inherit;">end_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}End port of a range of ports{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="startport_python">
-<a href="#startport_python" style="color: inherit; text-decoration: inherit;">start<wbr>Port</a>
+        <span id="start_port_python">
+<a href="#start_port_python" style="color: inherit; text-decoration: inherit;">start_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Starting port of a range of ports{{% /md %}}</dd>
 
@@ -4258,7 +4258,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#clientconnectionendpointport_python" style="color: inherit; text-decoration: inherit;">client<wbr>Connection<wbr>Endpoint<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The TCP cluster management endpoint port.{{% /md %}}</dd>
 
@@ -4268,14 +4268,14 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#httpgatewayendpointport_python" style="color: inherit; text-decoration: inherit;">http<wbr>Gateway<wbr>Endpoint<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTP cluster management endpoint port.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="isprimary_python">
-<a href="#isprimary_python" style="color: inherit; text-decoration: inherit;">is<wbr>Primary</a>
+        <span id="is_primary_python">
+<a href="#is_primary_python" style="color: inherit; text-decoration: inherit;">is_<wbr>primary</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4294,18 +4294,18 @@ The check is performed after every upgrade domain upgrade completion for all com
 
     <dt class="property-required"
             title="Required">
-        <span id="vminstancecount_python">
-<a href="#vminstancecount_python" style="color: inherit; text-decoration: inherit;">vm<wbr>Instance<wbr>Count</a>
+        <span id="vm_instance_count_python">
+<a href="#vm_instance_count_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationports_python">
-<a href="#applicationports_python" style="color: inherit; text-decoration: inherit;">application<wbr>Ports</a>
+        <span id="application_ports_python">
+<a href="#application_ports_python" style="color: inherit; text-decoration: inherit;">application_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointrangedescriptionresponse">Dict[Endpoint<wbr>Range<wbr>Description<wbr>Response]</a></span>
@@ -4339,8 +4339,8 @@ The check is performed after every upgrade domain upgrade completion for all com
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ephemeralports_python">
-<a href="#ephemeralports_python" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Ports</a>
+        <span id="ephemeral_ports_python">
+<a href="#ephemeral_ports_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointrangedescriptionresponse">Dict[Endpoint<wbr>Range<wbr>Description<wbr>Response]</a></span>
@@ -4349,8 +4349,8 @@ The check is performed after every upgrade domain upgrade completion for all com
 
     <dt class="property-optional"
             title="Optional">
-        <span id="placementproperties_python">
-<a href="#placementproperties_python" style="color: inherit; text-decoration: inherit;">placement<wbr>Properties</a>
+        <span id="placement_properties_python">
+<a href="#placement_properties_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
@@ -4363,7 +4363,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#reverseproxyendpointport_python" style="color: inherit; text-decoration: inherit;">reverse<wbr>Proxy<wbr>Endpoint<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The endpoint used by reverse proxy.{{% /md %}}</dd>
 
@@ -4710,7 +4710,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#maxpercentdeltaunhealthyservices_python" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of services health degradation allowed during cluster upgrades.
 The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
@@ -4802,7 +4802,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#max_percent_unhealthy_services_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd>

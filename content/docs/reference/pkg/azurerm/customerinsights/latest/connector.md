@@ -12,132 +12,6 @@ meta_desc: "Explore the Connector resource of the customerinsights/latest module
 
 The connector resource format.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Connectors_CreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var connector = new AzureRM.CustomerInsights.Latest.Connector("connector", new AzureRM.CustomerInsights.Latest.ConnectorArgs
-        {
-            ConnectorName = "testConnector",
-            ConnectorProperties = 
-            {
-                { "connectionKeyVaultUrl", 
-                {
-                    { "organizationId", "XXX" },
-                    { "organizationUrl", "https://XXX.crmlivetie.com/" },
-                } },
-            },
-            ConnectorType = "AzureBlob",
-            Description = "Test connector",
-            DisplayName = "testConnector",
-            HubName = "sdkTestHub",
-            ResourceGroupName = "TestHubRG",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	customerinsights "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/customerinsights/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := customerinsights.NewConnector(ctx, "connector", &customerinsights.ConnectorArgs{
-			ConnectorName: pulumi.String("testConnector"),
-			ConnectorProperties: pulumi.StringMapMap{
-				"connectionKeyVaultUrl": pulumi.StringMap{
-					"organization_id": pulumi.String("XXX"),
-					"organizationUrl": pulumi.String("https://XXX.crmlivetie.com/"),
-				},
-			},
-			ConnectorType:     pulumi.String("AzureBlob"),
-			Description:       pulumi.String("Test connector"),
-			DisplayName:       pulumi.String("testConnector"),
-			HubName:           pulumi.String("sdkTestHub"),
-			ResourceGroupName: pulumi.String("TestHubRG"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-connector = azurerm.customerinsights.latest.Connector("connector",
-    connector_name="testConnector",
-    connector_properties={
-        "connectionKeyVaultUrl": {
-            "organization_id": "XXX",
-            "organizationUrl": "https://XXX.crmlivetie.com/",
-        },
-    },
-    connector_type="AzureBlob",
-    description="Test connector",
-    display_name="testConnector",
-    hub_name="sdkTestHub",
-    resource_group_name="TestHubRG")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const connector = new azurerm.customerinsights.latest.Connector("connector", {
-    connectorName: "testConnector",
-    connectorProperties: {
-        connectionKeyVaultUrl: {
-            organizationId: "XXX",
-            organizationUrl: "https://XXX.crmlivetie.com/",
-        },
-    },
-    connectorType: "AzureBlob",
-    description: "Test connector",
-    displayName: "testConnector",
-    hubName: "sdkTestHub",
-    resourceGroupName: "TestHubRG",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Connector Resource {#create}
@@ -947,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connector_id_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}ID of the connector.{{% /md %}}</dd>
 

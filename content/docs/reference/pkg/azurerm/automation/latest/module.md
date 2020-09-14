@@ -12,128 +12,6 @@ meta_desc: "Explore the Module resource of the automation/latest module, includi
 
 Definition of the module type.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update a module
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var module = new AzureRM.Automation.Latest.Module("module", new AzureRM.Automation.Latest.ModuleArgs
-        {
-            AutomationAccountName = "myAutomationAccount33",
-            ContentLink = new AzureRM.Automation.Latest.Inputs.ContentLinkArgs
-            {
-                ContentHash = new AzureRM.Automation.Latest.Inputs.ContentHashArgs
-                {
-                    Algorithm = "sha265",
-                    Value = "07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
-                },
-                Uri = "https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip",
-                Version = "1.0.0.0",
-            },
-            ModuleName = "OmsCompositeResources",
-            ResourceGroupName = "rg",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	automation "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/automation/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := automation.NewModule(ctx, "module", &automation.ModuleArgs{
-			AutomationAccountName: pulumi.String("myAutomationAccount33"),
-			ContentLink: &automation.ContentLinkArgs{
-				ContentHash: &automation.ContentHashArgs{
-					Algorithm: pulumi.String("sha265"),
-					Value:     pulumi.String("07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A"),
-				},
-				Uri:     pulumi.String("https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip"),
-				Version: pulumi.String("1.0.0.0"),
-			},
-			ModuleName:        pulumi.String("OmsCompositeResources"),
-			ResourceGroupName: pulumi.String("rg"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-module = azurerm.automation.latest.Module("module",
-    automation_account_name="myAutomationAccount33",
-    content_link={
-        "contentHash": {
-            "algorithm": "sha265",
-            "value": "07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
-        },
-        "uri": "https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip",
-        "version": "1.0.0.0",
-    },
-    module_name="OmsCompositeResources",
-    resource_group_name="rg")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const module = new azurerm.automation.latest.Module("module", {
-    automationAccountName: "myAutomationAccount33",
-    contentLink: {
-        contentHash: {
-            algorithm: "sha265",
-            value: "07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
-        },
-        uri: "https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip",
-        version: "1.0.0.0",
-    },
-    moduleName: "OmsCompositeResources",
-    resourceGroupName: "rg",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Module Resource {#create}
@@ -1073,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activity_count_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the activity count of the module.{{% /md %}}</dd>
 
@@ -1163,7 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_in_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the size in bytes of the module.{{% /md %}}</dd>
 

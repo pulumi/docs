@@ -12,110 +12,6 @@ meta_desc: "Explore the ComputePolicy resource of the datalakeanalytics/latest m
 
 Data Lake Analytics compute policy information.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Creates or updates the specified compute policy
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var computePolicy = new AzureRM.DataLakeAnalytics.Latest.ComputePolicy("computePolicy", new AzureRM.DataLakeAnalytics.Latest.ComputePolicyArgs
-        {
-            AccountName = "contosoadla",
-            ComputePolicyName = "test_policy",
-            MaxDegreeOfParallelismPerJob = 10,
-            MinPriorityPerJob = 30,
-            ObjectId = "776b9091-8916-4638-87f7-9c989a38da98",
-            ObjectType = "User",
-            ResourceGroupName = "contosorg",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	datalakeanalytics "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/datalakeanalytics/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datalakeanalytics.NewComputePolicy(ctx, "computePolicy", &datalakeanalytics.ComputePolicyArgs{
-			AccountName:                  pulumi.String("contosoadla"),
-			ComputePolicyName:            pulumi.String("test_policy"),
-			MaxDegreeOfParallelismPerJob: pulumi.Int(10),
-			MinPriorityPerJob:            pulumi.Int(30),
-			ObjectId:                     pulumi.String("776b9091-8916-4638-87f7-9c989a38da98"),
-			ObjectType:                   pulumi.String("User"),
-			ResourceGroupName:            pulumi.String("contosorg"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-compute_policy = azurerm.datalakeanalytics.latest.ComputePolicy("computePolicy",
-    account_name="contosoadla",
-    compute_policy_name="test_policy",
-    max_degree_of_parallelism_per_job=10,
-    min_priority_per_job=30,
-    object_id="776b9091-8916-4638-87f7-9c989a38da98",
-    object_type="User",
-    resource_group_name="contosorg")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const computePolicy = new azurerm.datalakeanalytics.latest.ComputePolicy("computePolicy", {
-    accountName: "contosoadla",
-    computePolicyName: "test_policy",
-    maxDegreeOfParallelismPerJob: 10,
-    minPriorityPerJob: 30,
-    objectId: "776b9091-8916-4638-87f7-9c989a38da98",
-    objectType: "User",
-    resourceGroupName: "contosorg",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ComputePolicy Resource {#create}
@@ -127,7 +23,7 @@ const computePolicy = new azurerm.datalakeanalytics.latest.ComputePolicy("comput
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/datalakeanalytics/latest/#pulumi_azurerm.datalakeanalytics/latest.ComputePolicy">ComputePolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compute_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_degree_of_parallelism_per_job</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_priority_per_job</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/datalakeanalytics/latest/#pulumi_azurerm.datalakeanalytics/latest.ComputePolicy">ComputePolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compute_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_degree_of_parallelism_per_job</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_priority_per_job</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -586,7 +482,7 @@ The ComputePolicy resource accepts the following [input]({{< relref "/docs/intro
 <a href="#max_degree_of_parallelism_per_job_python" style="color: inherit; text-decoration: inherit;">max_<wbr>degree_<wbr>of_<wbr>parallelism_<wbr>per_<wbr>job</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum degree of parallelism per job this user can use to submit jobs. This property, the min priority per job property, or both must be passed.{{% /md %}}</dd>
 
@@ -596,7 +492,7 @@ The ComputePolicy resource accepts the following [input]({{< relref "/docs/intro
 <a href="#min_priority_per_job_python" style="color: inherit; text-decoration: inherit;">min_<wbr>priority_<wbr>per_<wbr>job</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum priority per job this user can use to submit jobs. This property, the max degree of parallelism per job property, or both must be passed.{{% /md %}}</dd>
 

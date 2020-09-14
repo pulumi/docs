@@ -12,106 +12,6 @@ meta_desc: "Explore the Application resource of the solutions/latest module, inc
 
 Information about managed application.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update managed application
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var application = new AzureRM.Solutions.Latest.Application("application", new AzureRM.Solutions.Latest.ApplicationArgs
-        {
-            ApplicationDefinitionId = "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myAppDef",
-            ApplicationName = "myManagedApplication",
-            Kind = "ServiceCatalog",
-            Location = "East US 2",
-            ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
-            ResourceGroupName = "rg",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	solutions "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/solutions/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := solutions.NewApplication(ctx, "application", &solutions.ApplicationArgs{
-			ApplicationDefinitionId: pulumi.String("/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myAppDef"),
-			ApplicationName:         pulumi.String("myManagedApplication"),
-			Kind:                    pulumi.String("ServiceCatalog"),
-			Location:                pulumi.String("East US 2"),
-			ManagedResourceGroupId:  pulumi.String("/subscriptions/subid/resourceGroups/myManagedRG"),
-			ResourceGroupName:       pulumi.String("rg"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-application = azurerm.solutions.latest.Application("application",
-    application_definition_id="/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myAppDef",
-    application_name="myManagedApplication",
-    kind="ServiceCatalog",
-    location="East US 2",
-    managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
-    resource_group_name="rg")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const application = new azurerm.solutions.latest.Application("application", {
-    applicationDefinitionId: "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myAppDef",
-    applicationName: "myManagedApplication",
-    kind: "ServiceCatalog",
-    location: "East US 2",
-    managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
-    resourceGroupName: "rg",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Application Resource {#create}
@@ -4050,7 +3950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The SKU capacity.{{% /md %}}</dd>
 
@@ -4336,7 +4236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The SKU capacity.{{% /md %}}</dd>
 

@@ -12,123 +12,6 @@ meta_desc: "Explore the StorageAccountCredential resource of the storsimple/late
 
 The storage account credential.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### StorageAccountCredentialsCreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var storageAccountCredential = new AzureRM.StorSimple.Latest.StorageAccountCredential("storageAccountCredential", new AzureRM.StorSimple.Latest.StorageAccountCredentialArgs
-        {
-            AccessKey = new AzureRM.StorSimple.Latest.Inputs.AsymmetricEncryptedSecretArgs
-            {
-                EncryptionAlgorithm = "RSAES_PKCS1_v_1_5",
-                EncryptionCertThumbprint = "A872A2DF196AC7682EE24791E7DE2E2A360F5926",
-                Value = "ATuJSkmrFk4h8r1jrZ4nd3nthLSddcguEO5QLO/NECUtTuB9kL4dNv3/jC4WOvFkeVr3x1UvfhlIeMmJBF1SMr6hR1JzD0xNU/TtQqUeXN7V3jk7I+2l67P9StuHWR6OMd3XOLwvznxOEQtEWpweDiobZU1ZiY03WafcGZFpV5j6tEoHeopoZ1J/GhPtkYmx+TqxzUN6qnir5rP3NSYiZciImP/qu8U9yUV/xpVRv39KvFc2Yr5SpKpMMRUj55XW10UnPer63M6KovF8X9Wi/fNnrZAs1Esl5XddZETGrW/e5B++VMJ6w0Q/uvPR+UBwrOU0804l0SzwdIe3qVVd0Q==",
-            },
-            EndPoint = "blob.core.windows.net",
-            ManagerName = "ManagerForSDKTest1",
-            ResourceGroupName = "ResourceGroupForSDKTest",
-            SslStatus = "Enabled",
-            StorageAccountCredentialName = "SACForTest",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	storsimple "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storsimple/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storsimple.NewStorageAccountCredential(ctx, "storageAccountCredential", &storsimple.StorageAccountCredentialArgs{
-			AccessKey: &storsimple.AsymmetricEncryptedSecretArgs{
-				EncryptionAlgorithm:      pulumi.String("RSAES_PKCS1_v_1_5"),
-				EncryptionCertThumbprint: pulumi.String("A872A2DF196AC7682EE24791E7DE2E2A360F5926"),
-				Value:                    pulumi.String("ATuJSkmrFk4h8r1jrZ4nd3nthLSddcguEO5QLO/NECUtTuB9kL4dNv3/jC4WOvFkeVr3x1UvfhlIeMmJBF1SMr6hR1JzD0xNU/TtQqUeXN7V3jk7I+2l67P9StuHWR6OMd3XOLwvznxOEQtEWpweDiobZU1ZiY03WafcGZFpV5j6tEoHeopoZ1J/GhPtkYmx+TqxzUN6qnir5rP3NSYiZciImP/qu8U9yUV/xpVRv39KvFc2Yr5SpKpMMRUj55XW10UnPer63M6KovF8X9Wi/fNnrZAs1Esl5XddZETGrW/e5B++VMJ6w0Q/uvPR+UBwrOU0804l0SzwdIe3qVVd0Q=="),
-			},
-			EndPoint:                     pulumi.String("blob.core.windows.net"),
-			ManagerName:                  pulumi.String("ManagerForSDKTest1"),
-			ResourceGroupName:            pulumi.String("ResourceGroupForSDKTest"),
-			SslStatus:                    pulumi.String("Enabled"),
-			StorageAccountCredentialName: pulumi.String("SACForTest"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-storage_account_credential = azurerm.storsimple.latest.StorageAccountCredential("storageAccountCredential",
-    access_key={
-        "encryptionAlgorithm": "RSAES_PKCS1_v_1_5",
-        "encryptionCertThumbprint": "A872A2DF196AC7682EE24791E7DE2E2A360F5926",
-        "value": "ATuJSkmrFk4h8r1jrZ4nd3nthLSddcguEO5QLO/NECUtTuB9kL4dNv3/jC4WOvFkeVr3x1UvfhlIeMmJBF1SMr6hR1JzD0xNU/TtQqUeXN7V3jk7I+2l67P9StuHWR6OMd3XOLwvznxOEQtEWpweDiobZU1ZiY03WafcGZFpV5j6tEoHeopoZ1J/GhPtkYmx+TqxzUN6qnir5rP3NSYiZciImP/qu8U9yUV/xpVRv39KvFc2Yr5SpKpMMRUj55XW10UnPer63M6KovF8X9Wi/fNnrZAs1Esl5XddZETGrW/e5B++VMJ6w0Q/uvPR+UBwrOU0804l0SzwdIe3qVVd0Q==",
-    },
-    end_point="blob.core.windows.net",
-    manager_name="ManagerForSDKTest1",
-    resource_group_name="ResourceGroupForSDKTest",
-    ssl_status="Enabled",
-    storage_account_credential_name="SACForTest")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const storageAccountCredential = new azurerm.storsimple.latest.StorageAccountCredential("storageAccountCredential", {
-    accessKey: {
-        encryptionAlgorithm: "RSAES_PKCS1_v_1_5",
-        encryptionCertThumbprint: "A872A2DF196AC7682EE24791E7DE2E2A360F5926",
-        value: "ATuJSkmrFk4h8r1jrZ4nd3nthLSddcguEO5QLO/NECUtTuB9kL4dNv3/jC4WOvFkeVr3x1UvfhlIeMmJBF1SMr6hR1JzD0xNU/TtQqUeXN7V3jk7I+2l67P9StuHWR6OMd3XOLwvznxOEQtEWpweDiobZU1ZiY03WafcGZFpV5j6tEoHeopoZ1J/GhPtkYmx+TqxzUN6qnir5rP3NSYiZciImP/qu8U9yUV/xpVRv39KvFc2Yr5SpKpMMRUj55XW10UnPer63M6KovF8X9Wi/fNnrZAs1Esl5XddZETGrW/e5B++VMJ6w0Q/uvPR+UBwrOU0804l0SzwdIe3qVVd0Q==",
-    },
-    endPoint: "blob.core.windows.net",
-    managerName: "ManagerForSDKTest1",
-    resourceGroupName: "ResourceGroupForSDKTest",
-    sslStatus: "Enabled",
-    storageAccountCredentialName: "SACForTest",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a StorageAccountCredential Resource {#create}
@@ -808,7 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_count_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The count of volumes using this storage account credential.{{% /md %}}</dd>
 

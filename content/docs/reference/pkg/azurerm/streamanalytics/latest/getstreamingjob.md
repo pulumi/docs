@@ -1029,7 +1029,7 @@ The following output properties are available:
 <a href="#events_late_arrival_max_delay_in_seconds_python" style="color: inherit; text-decoration: inherit;">events_<wbr>late_<wbr>arrival_<wbr>max_<wbr>delay_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum tolerable delay in seconds where events arriving late could be included.  Supported range is -1 to 1814399 (20.23:59:59 days) and -1 is used to specify wait indefinitely. If the property is absent, it is interpreted to have a value of -1.{{% /md %}}</dd>
 
@@ -1039,7 +1039,7 @@ The following output properties are available:
 <a href="#events_out_of_order_max_delay_in_seconds_python" style="color: inherit; text-decoration: inherit;">events_<wbr>out_<wbr>of_<wbr>order_<wbr>max_<wbr>delay_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum tolerable delay in seconds where out-of-order events can be adjusted to be back in order.{{% /md %}}</dd>
 
@@ -1523,8 +1523,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshtoken_python">
-<a href="#refreshtoken_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
+        <span id="refresh_token_python">
+<a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1783,7 +1783,7 @@ The following output properties are available:
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd>
 
@@ -1969,7 +1969,7 @@ The following output properties are available:
 <a href="#mapto_python" style="color: inherit; text-decoration: inherit;">map<wbr>To</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd>
 
@@ -2763,7 +2763,7 @@ The following output properties are available:
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of rows to write to the Azure Table at a time.{{% /md %}}</dd>
 
@@ -3561,7 +3561,7 @@ The following output properties are available:
 <a href="#sourcepartitioncount_python" style="color: inherit; text-decoration: inherit;">source<wbr>Partition<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The partition count of the blob input data source. Range 1 - 256.{{% /md %}}</dd>
 
@@ -6437,8 +6437,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshtoken_python">
-<a href="#refreshtoken_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
+        <span id="refresh_token_python">
+<a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8079,7 +8079,7 @@ The following output properties are available:
 <a href="#streaming_units_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>units</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the number of streaming units that the streaming job uses.{{% /md %}}</dd>
 

@@ -12,94 +12,6 @@ meta_desc: "Explore the ReplicationPolicy resource of the recoveryservices/lates
 
 Protection profile details.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Creates the policy.
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var replicationPolicy = new AzureRM.RecoveryServices.Latest.ReplicationPolicy("replicationPolicy", new AzureRM.RecoveryServices.Latest.ReplicationPolicyArgs
-        {
-            PolicyName = "protectionprofile1",
-            ResourceGroupName = "resourceGroupPS1",
-            ResourceName = "vault1",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	recoveryservices "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := recoveryservices.NewReplicationPolicy(ctx, "replicationPolicy", &recoveryservices.ReplicationPolicyArgs{
-			PolicyName:        pulumi.String("protectionprofile1"),
-			ResourceGroupName: pulumi.String("resourceGroupPS1"),
-			ResourceName:      pulumi.String("vault1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-replication_policy = azurerm.recoveryservices.latest.ReplicationPolicy("replicationPolicy",
-    policy_name="protectionprofile1",
-    resource_group_name="resourceGroupPS1",
-    resource_name="vault1")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const replicationPolicy = new azurerm.recoveryservices.latest.ReplicationPolicy("replicationPolicy", {
-    policyName: "protectionprofile1",
-    resourceGroupName: "resourceGroupPS1",
-    resourceName: "vault1",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ReplicationPolicy Resource {#create}
@@ -854,7 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency (in minutes).{{% /md %}}</dd>
 
@@ -864,7 +776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency (in minutes).{{% /md %}}</dd>
 
@@ -874,7 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistory_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
 
@@ -1080,7 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
 
@@ -1090,7 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
 
@@ -1110,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistory_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
 
@@ -1120,7 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointthresholdinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
 
@@ -1452,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationconsistentsnapshotfrequencyinhours_python" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.{{% /md %}}</dd>
 
@@ -1482,7 +1394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistorydurationinhours_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>Duration<wbr>In<wbr>Hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The duration (in hours) to which point the recovery history needs to be maintained.{{% /md %}}</dd>
 
@@ -1492,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationinterval_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The replication interval.{{% /md %}}</dd>
 
@@ -1698,7 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationconsistentsnapshotfrequencyinhours_python" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.{{% /md %}}</dd>
 
@@ -1718,7 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistoryduration_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>Duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The duration (in hours) to which point the recovery history needs to be maintained.{{% /md %}}</dd>
 
@@ -1728,7 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationinterval_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The replication interval.{{% /md %}}</dd>
 
@@ -2094,7 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedauthenticationtype_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Authentication<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd>
 
@@ -2104,7 +2016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationconsistentsnapshotfrequencyinhours_python" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd>
 
@@ -2164,7 +2076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypoints_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Points</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd>
 
@@ -2184,7 +2096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationport_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd>
 
@@ -2570,7 +2482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedauthenticationtype_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Authentication<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd>
 
@@ -2580,7 +2492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationconsistentsnapshotfrequencyinhours_python" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd>
 
@@ -2640,7 +2552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypoints_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Points</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd>
 
@@ -2660,7 +2572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationfrequencyinseconds_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Frequency<wbr>In<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the replication interval.{{% /md %}}</dd>
 
@@ -2670,7 +2582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationport_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd>
 
@@ -3056,7 +2968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedauthenticationtype_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Authentication<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd>
 
@@ -3066,7 +2978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationconsistentsnapshotfrequencyinhours_python" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd>
 
@@ -3126,7 +3038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypoints_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Points</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd>
 
@@ -3146,7 +3058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationfrequencyinseconds_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Frequency<wbr>In<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the replication interval.{{% /md %}}</dd>
 
@@ -3156,7 +3068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationport_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd>
 
@@ -3512,7 +3424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedauthenticationtype_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Authentication<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd>
 
@@ -3522,7 +3434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationconsistentsnapshotfrequencyinhours_python" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd>
 
@@ -3582,7 +3494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypoints_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Points</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd>
 
@@ -3602,7 +3514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationport_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd>
 
@@ -3958,7 +3870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedauthenticationtype_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Authentication<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd>
 
@@ -3968,7 +3880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationconsistentsnapshotfrequencyinhours_python" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd>
 
@@ -4028,7 +3940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypoints_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Points</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd>
 
@@ -4048,7 +3960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationport_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd>
 
@@ -4254,7 +4166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
 
@@ -4264,7 +4176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
 
@@ -4284,7 +4196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistory_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
 
@@ -4294,7 +4206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointthresholdinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
 
@@ -4510,7 +4422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency (in minutes).{{% /md %}}</dd>
 
@@ -4520,7 +4432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency (in minutes).{{% /md %}}</dd>
 
@@ -4530,7 +4442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistory_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
 
@@ -4540,7 +4452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointthresholdinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
 
@@ -4716,7 +4628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
 
@@ -4736,7 +4648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistory_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
 
@@ -4746,7 +4658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointthresholdinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
 
@@ -4922,7 +4834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
 
@@ -4942,7 +4854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistory_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
 
@@ -4952,7 +4864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointthresholdinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
 
@@ -5138,7 +5050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency (in minutes).{{% /md %}}</dd>
 
@@ -5148,7 +5060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistory_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
 
@@ -5158,7 +5070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointthresholdinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
 
@@ -5490,7 +5402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
 
@@ -5500,7 +5412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
 
@@ -5520,7 +5432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistory_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
 
@@ -5530,7 +5442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointthresholdinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
 
@@ -5676,7 +5588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency (in minutes).{{% /md %}}</dd>
 
@@ -5686,7 +5598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency (in minutes).{{% /md %}}</dd>
 
@@ -5696,7 +5608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistoryinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
 
@@ -5842,7 +5754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
 
@@ -5852,7 +5764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
 
@@ -5862,7 +5774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistoryinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
 

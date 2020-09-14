@@ -897,7 +897,7 @@ The following output properties are available:
 <a href="#number_python" style="color: inherit; text-decoration: inherit;">number</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1203,7 +1203,7 @@ The following output properties are available:
 <a href="#number_python" style="color: inherit; text-decoration: inherit;">number</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1253,7 +1253,7 @@ The following output properties are available:
 <a href="#mappedport_python" style="color: inherit; text-decoration: inherit;">mapped<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port which is mapped to this port's `number` in the Azure Firewall, if applicable{{% /md %}}</dd>
 

@@ -843,8 +843,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshtoken_python">
-<a href="#refreshtoken_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
+        <span id="refresh_token_python">
+<a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1419,7 +1419,7 @@ The following output properties are available:
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of rows to write to the Azure Table at a time.{{% /md %}}</dd>
 
@@ -3033,8 +3033,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshtoken_python">
-<a href="#refreshtoken_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
+        <span id="refresh_token_python">
+<a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

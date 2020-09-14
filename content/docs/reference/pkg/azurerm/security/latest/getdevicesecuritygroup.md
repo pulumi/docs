@@ -1163,7 +1163,7 @@ The following output properties are available:
 <a href="#maxthreshold_python" style="color: inherit; text-decoration: inherit;">max<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
 
@@ -1173,7 +1173,7 @@ The following output properties are available:
 <a href="#minthreshold_python" style="color: inherit; text-decoration: inherit;">min<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
 
@@ -1439,7 +1439,7 @@ The following output properties are available:
 <a href="#maxthreshold_python" style="color: inherit; text-decoration: inherit;">max<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
 
@@ -1449,7 +1449,7 @@ The following output properties are available:
 <a href="#minthreshold_python" style="color: inherit; text-decoration: inherit;">min<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
 

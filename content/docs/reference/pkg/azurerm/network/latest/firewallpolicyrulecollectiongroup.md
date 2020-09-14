@@ -12,267 +12,6 @@ meta_desc: "Explore the FirewallPolicyRuleCollectionGroup resource of the networ
 
 Rule Collection Group resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create FirewallPolicyRuleCollectionGroup
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var firewallPolicyRuleCollectionGroup = new AzureRM.Network.Latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureRM.Network.Latest.FirewallPolicyRuleCollectionGroupArgs
-        {
-            FirewallPolicyName = "firewallPolicy",
-            Priority = 110,
-            ResourceGroupName = "rg1",
-            RuleCollectionGroupName = "ruleCollectionGroup1",
-            RuleCollections = 
-            {
-                new AzureRM.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionArgs
-                {
-                    Action = new AzureRM.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
-                    {
-                        Type = "Deny",
-                    },
-                    Name = "Example-Filter-Rule-Collection",
-                    RuleCollectionType = "FirewallPolicyFilterRuleCollection",
-                    Rules = 
-                    {
-                        
-                        {
-                            { "destinationAddresses", 
-                            {
-                                "*",
-                            } },
-                            { "destinationPorts", 
-                            {
-                                "*",
-                            } },
-                            { "ipProtocols", 
-                            {
-                                "TCP",
-                            } },
-                            { "name", "network-rule1" },
-                            { "ruleType", "NetworkRule" },
-                            { "sourceAddresses", 
-                            {
-                                "10.1.25.0/24",
-                            } },
-                        },
-                    },
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-firewall_policy_rule_collection_group = azurerm.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
-    firewall_policy_name="firewallPolicy",
-    priority=110,
-    resource_group_name="rg1",
-    rule_collection_group_name="ruleCollectionGroup1",
-    rule_collections=[{
-        "action": {
-            "type": "Deny",
-        },
-        "name": "Example-Filter-Rule-Collection",
-        "ruleCollectionType": "FirewallPolicyFilterRuleCollection",
-        "rules": [{
-            "destinationAddresses": ["*"],
-            "destinationPorts": ["*"],
-            "ipProtocols": ["TCP"],
-            "name": "network-rule1",
-            "ruleType": "NetworkRule",
-            "sourceAddresses": ["10.1.25.0/24"],
-        }],
-    }])
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const firewallPolicyRuleCollectionGroup = new azurerm.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
-    firewallPolicyName: "firewallPolicy",
-    priority: 110,
-    resourceGroupName: "rg1",
-    ruleCollectionGroupName: "ruleCollectionGroup1",
-    ruleCollections: [{
-        action: {
-            type: "Deny",
-        },
-        name: "Example-Filter-Rule-Collection",
-        ruleCollectionType: "FirewallPolicyFilterRuleCollection",
-        rules: [{
-            destinationAddresses: ["*"],
-            destinationPorts: ["*"],
-            ipProtocols: ["TCP"],
-            name: "network-rule1",
-            ruleType: "NetworkRule",
-            sourceAddresses: ["10.1.25.0/24"],
-        }],
-    }],
-});
-
-```
-
-{{% /example %}}
-
-### Create FirewallPolicyRuleCollectionGroup With IpGroups
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var firewallPolicyRuleCollectionGroup = new AzureRM.Network.Latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureRM.Network.Latest.FirewallPolicyRuleCollectionGroupArgs
-        {
-            FirewallPolicyName = "firewallPolicy",
-            Priority = 110,
-            ResourceGroupName = "rg1",
-            RuleCollectionGroupName = "ruleCollectionGroup1",
-            RuleCollections = 
-            {
-                new AzureRM.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionArgs
-                {
-                    Action = new AzureRM.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
-                    {
-                        Type = "Deny",
-                    },
-                    Name = "Example-Filter-Rule-Collection",
-                    RuleCollectionType = "FirewallPolicyFilterRuleCollection",
-                    Rules = 
-                    {
-                        
-                        {
-                            { "destinationIpGroups", 
-                            {
-                                "/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2",
-                            } },
-                            { "destinationPorts", 
-                            {
-                                "*",
-                            } },
-                            { "ipProtocols", 
-                            {
-                                "TCP",
-                            } },
-                            { "name", "network-1" },
-                            { "ruleType", "NetworkRule" },
-                            { "sourceIpGroups", 
-                            {
-                                "/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1",
-                            } },
-                        },
-                    },
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-firewall_policy_rule_collection_group = azurerm.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
-    firewall_policy_name="firewallPolicy",
-    priority=110,
-    resource_group_name="rg1",
-    rule_collection_group_name="ruleCollectionGroup1",
-    rule_collections=[{
-        "action": {
-            "type": "Deny",
-        },
-        "name": "Example-Filter-Rule-Collection",
-        "ruleCollectionType": "FirewallPolicyFilterRuleCollection",
-        "rules": [{
-            "destinationIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
-            "destinationPorts": ["*"],
-            "ipProtocols": ["TCP"],
-            "name": "network-1",
-            "ruleType": "NetworkRule",
-            "sourceIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1"],
-        }],
-    }])
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const firewallPolicyRuleCollectionGroup = new azurerm.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
-    firewallPolicyName: "firewallPolicy",
-    priority: 110,
-    resourceGroupName: "rg1",
-    ruleCollectionGroupName: "ruleCollectionGroup1",
-    ruleCollections: [{
-        action: {
-            type: "Deny",
-        },
-        name: "Example-Filter-Rule-Collection",
-        ruleCollectionType: "FirewallPolicyFilterRuleCollection",
-        rules: [{
-            destinationIpGroups: ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
-            destinationPorts: ["*"],
-            ipProtocols: ["TCP"],
-            name: "network-1",
-            ruleType: "NetworkRule",
-            sourceIpGroups: ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1"],
-        }],
-    }],
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a FirewallPolicyRuleCollectionGroup Resource {#create}
@@ -284,7 +23,7 @@ const firewallPolicyRuleCollectionGroup = new azurerm.network.latest.FirewallPol
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/network/latest/#pulumi_azurerm.network/latest.FirewallPolicyRuleCollectionGroup">FirewallPolicyRuleCollectionGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">firewall_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_collection_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_collections</span><span class="p">:</span> <span class="nx">Optional[List[Union&lt;Azurerm:Network/Latest:FirewallPolicyFilterRuleCollection, Azurerm:Network/Latest:FirewallPolicyNatRuleCollection, Default=&gt;]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/network/latest/#pulumi_azurerm.network/latest.FirewallPolicyRuleCollectionGroup">FirewallPolicyRuleCollectionGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">firewall_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_collection_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_collections</span><span class="p">:</span> <span class="nx">Optional[List[Union&lt;Azurerm:Network/Latest:FirewallPolicyFilterRuleCollection, Azurerm:Network/Latest:FirewallPolicyNatRuleCollection, Default=&gt;]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -743,7 +482,7 @@ The FirewallPolicyRuleCollectionGroup resource accepts the following [input]({{<
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection Group resource.{{% /md %}}</dd>
 
@@ -1889,7 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
 
@@ -2267,7 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
 
@@ -2473,7 +2212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
 
@@ -2851,7 +2590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
 
@@ -2977,7 +2716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port number for the protocol, cannot be greater than 64000.{{% /md %}}</dd>
 
@@ -3103,7 +2842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port number for the protocol, cannot be greater than 64000.{{% /md %}}</dd>
 

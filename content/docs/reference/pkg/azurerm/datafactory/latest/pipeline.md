@@ -12,519 +12,6 @@ meta_desc: "Explore the Pipeline resource of the datafactory/latest module, incl
 
 Pipeline resource type.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Pipelines_Create
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var pipeline = new AzureRM.DataFactory.Latest.Pipeline("pipeline", new AzureRM.DataFactory.Latest.PipelineArgs
-        {
-            Activities = 
-            {
-                
-                {
-                    { "name", "ExampleForeachActivity" },
-                    { "type", "ForEach" },
-                    { "typeProperties", 
-                    {
-                        { "activities", 
-                        {
-                            
-                            {
-                                { "inputs", 
-                                {
-                                    
-                                    {
-                                        { "parameters", 
-                                        {
-                                            { "MyFileName", "examplecontainer.csv" },
-                                            { "MyFolderPath", "examplecontainer" },
-                                        } },
-                                        { "referenceName", "exampleDataset" },
-                                        { "type", "DatasetReference" },
-                                    },
-                                } },
-                                { "name", "ExampleCopyActivity" },
-                                { "outputs", 
-                                {
-                                    
-                                    {
-                                        { "parameters", 
-                                        {
-                                            { "MyFileName", 
-                                            {
-                                                { "type", "Expression" },
-                                                { "value", "@item()" },
-                                            } },
-                                            { "MyFolderPath", "examplecontainer" },
-                                        } },
-                                        { "referenceName", "exampleDataset" },
-                                        { "type", "DatasetReference" },
-                                    },
-                                } },
-                                { "type", "Copy" },
-                                { "typeProperties", 
-                                {
-                                    { "dataIntegrationUnits", 32 },
-                                    { "sink", 
-                                    {
-                                        { "type", "BlobSink" },
-                                    } },
-                                    { "source", 
-                                    {
-                                        { "type", "BlobSource" },
-                                    } },
-                                } },
-                            },
-                        } },
-                        { "isSequential", true },
-                        { "items", 
-                        {
-                            { "type", "Expression" },
-                            { "value", "@pipeline().parameters.OutputBlobNameList" },
-                        } },
-                    } },
-                },
-            },
-            FactoryName = "exampleFactoryName",
-            Parameters = 
-            {
-                { "JobId", new AzureRM.DataFactory.Latest.Inputs.ParameterSpecificationArgs
-                {
-                    Type = "String",
-                } },
-                { "OutputBlobNameList", new AzureRM.DataFactory.Latest.Inputs.ParameterSpecificationArgs
-                {
-                    Type = "Array",
-                } },
-            },
-            PipelineName = "examplePipeline",
-            ResourceGroupName = "exampleResourceGroup",
-            RunDimensions = 
-            {
-                { "JobId", 
-                {
-                    { "type", "Expression" },
-                    { "value", "@pipeline().parameters.JobId" },
-                } },
-            },
-            Variables = 
-            {
-                { "TestVariableArray", new AzureRM.DataFactory.Latest.Inputs.VariableSpecificationArgs
-                {
-                    Type = "Array",
-                } },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-pipeline = azurerm.datafactory.latest.Pipeline("pipeline",
-    activities=[{
-        "name": "ExampleForeachActivity",
-        "type": "ForEach",
-        "typeProperties": {
-            "activities": [{
-                "inputs": [{
-                    "parameters": {
-                        "MyFileName": "examplecontainer.csv",
-                        "MyFolderPath": "examplecontainer",
-                    },
-                    "referenceName": "exampleDataset",
-                    "type": "DatasetReference",
-                }],
-                "name": "ExampleCopyActivity",
-                "outputs": [{
-                    "parameters": {
-                        "MyFileName": {
-                            "type": "Expression",
-                            "value": "@item()",
-                        },
-                        "MyFolderPath": "examplecontainer",
-                    },
-                    "referenceName": "exampleDataset",
-                    "type": "DatasetReference",
-                }],
-                "type": "Copy",
-                "typeProperties": {
-                    "dataIntegrationUnits": 32,
-                    "sink": {
-                        "type": "BlobSink",
-                    },
-                    "source": {
-                        "type": "BlobSource",
-                    },
-                },
-            }],
-            "isSequential": True,
-            "items": {
-                "type": "Expression",
-                "value": "@pipeline().parameters.OutputBlobNameList",
-            },
-        },
-    }],
-    factory_name="exampleFactoryName",
-    parameters={
-        "JobId": {
-            "type": "String",
-        },
-        "OutputBlobNameList": {
-            "type": "Array",
-        },
-    },
-    pipeline_name="examplePipeline",
-    resource_group_name="exampleResourceGroup",
-    run_dimensions={
-        "JobId": {
-            "type": "Expression",
-            "value": "@pipeline().parameters.JobId",
-        },
-    },
-    variables={
-        "TestVariableArray": {
-            "type": "Array",
-        },
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const pipeline = new azurerm.datafactory.latest.Pipeline("pipeline", {
-    activities: [{
-        name: "ExampleForeachActivity",
-        type: "ForEach",
-        typeProperties: {
-            activities: [{
-                inputs: [{
-                    parameters: {
-                        MyFileName: "examplecontainer.csv",
-                        MyFolderPath: "examplecontainer",
-                    },
-                    referenceName: "exampleDataset",
-                    type: "DatasetReference",
-                }],
-                name: "ExampleCopyActivity",
-                outputs: [{
-                    parameters: {
-                        MyFileName: {
-                            type: "Expression",
-                            value: "@item()",
-                        },
-                        MyFolderPath: "examplecontainer",
-                    },
-                    referenceName: "exampleDataset",
-                    type: "DatasetReference",
-                }],
-                type: "Copy",
-                typeProperties: {
-                    dataIntegrationUnits: 32,
-                    sink: {
-                        type: "BlobSink",
-                    },
-                    source: {
-                        type: "BlobSource",
-                    },
-                },
-            }],
-            isSequential: true,
-            items: {
-                type: "Expression",
-                value: "@pipeline().parameters.OutputBlobNameList",
-            },
-        },
-    }],
-    factoryName: "exampleFactoryName",
-    parameters: {
-        JobId: {
-            type: "String",
-        },
-        OutputBlobNameList: {
-            type: "Array",
-        },
-    },
-    pipelineName: "examplePipeline",
-    resourceGroupName: "exampleResourceGroup",
-    runDimensions: {
-        JobId: {
-            type: "Expression",
-            value: "@pipeline().parameters.JobId",
-        },
-    },
-    variables: {
-        TestVariableArray: {
-            type: "Array",
-        },
-    },
-});
-
-```
-
-{{% /example %}}
-
-### Pipelines_Update
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var pipeline = new AzureRM.DataFactory.Latest.Pipeline("pipeline", new AzureRM.DataFactory.Latest.PipelineArgs
-        {
-            Activities = 
-            {
-                
-                {
-                    { "name", "ExampleForeachActivity" },
-                    { "type", "ForEach" },
-                    { "typeProperties", 
-                    {
-                        { "activities", 
-                        {
-                            
-                            {
-                                { "inputs", 
-                                {
-                                    
-                                    {
-                                        { "parameters", 
-                                        {
-                                            { "MyFileName", "examplecontainer.csv" },
-                                            { "MyFolderPath", "examplecontainer" },
-                                        } },
-                                        { "referenceName", "exampleDataset" },
-                                        { "type", "DatasetReference" },
-                                    },
-                                } },
-                                { "name", "ExampleCopyActivity" },
-                                { "outputs", 
-                                {
-                                    
-                                    {
-                                        { "parameters", 
-                                        {
-                                            { "MyFileName", 
-                                            {
-                                                { "type", "Expression" },
-                                                { "value", "@item()" },
-                                            } },
-                                            { "MyFolderPath", "examplecontainer" },
-                                        } },
-                                        { "referenceName", "exampleDataset" },
-                                        { "type", "DatasetReference" },
-                                    },
-                                } },
-                                { "type", "Copy" },
-                                { "typeProperties", 
-                                {
-                                    { "dataIntegrationUnits", 32 },
-                                    { "sink", 
-                                    {
-                                        { "type", "BlobSink" },
-                                    } },
-                                    { "source", 
-                                    {
-                                        { "type", "BlobSource" },
-                                    } },
-                                } },
-                            },
-                        } },
-                        { "isSequential", true },
-                        { "items", 
-                        {
-                            { "type", "Expression" },
-                            { "value", "@pipeline().parameters.OutputBlobNameList" },
-                        } },
-                    } },
-                },
-            },
-            Description = "Example description",
-            FactoryName = "exampleFactoryName",
-            Parameters = 
-            {
-                { "OutputBlobNameList", new AzureRM.DataFactory.Latest.Inputs.ParameterSpecificationArgs
-                {
-                    Type = "Array",
-                } },
-            },
-            PipelineName = "examplePipeline",
-            ResourceGroupName = "exampleResourceGroup",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-pipeline = azurerm.datafactory.latest.Pipeline("pipeline",
-    activities=[{
-        "name": "ExampleForeachActivity",
-        "type": "ForEach",
-        "typeProperties": {
-            "activities": [{
-                "inputs": [{
-                    "parameters": {
-                        "MyFileName": "examplecontainer.csv",
-                        "MyFolderPath": "examplecontainer",
-                    },
-                    "referenceName": "exampleDataset",
-                    "type": "DatasetReference",
-                }],
-                "name": "ExampleCopyActivity",
-                "outputs": [{
-                    "parameters": {
-                        "MyFileName": {
-                            "type": "Expression",
-                            "value": "@item()",
-                        },
-                        "MyFolderPath": "examplecontainer",
-                    },
-                    "referenceName": "exampleDataset",
-                    "type": "DatasetReference",
-                }],
-                "type": "Copy",
-                "typeProperties": {
-                    "dataIntegrationUnits": 32,
-                    "sink": {
-                        "type": "BlobSink",
-                    },
-                    "source": {
-                        "type": "BlobSource",
-                    },
-                },
-            }],
-            "isSequential": True,
-            "items": {
-                "type": "Expression",
-                "value": "@pipeline().parameters.OutputBlobNameList",
-            },
-        },
-    }],
-    description="Example description",
-    factory_name="exampleFactoryName",
-    parameters={
-        "OutputBlobNameList": {
-            "type": "Array",
-        },
-    },
-    pipeline_name="examplePipeline",
-    resource_group_name="exampleResourceGroup")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const pipeline = new azurerm.datafactory.latest.Pipeline("pipeline", {
-    activities: [{
-        name: "ExampleForeachActivity",
-        type: "ForEach",
-        typeProperties: {
-            activities: [{
-                inputs: [{
-                    parameters: {
-                        MyFileName: "examplecontainer.csv",
-                        MyFolderPath: "examplecontainer",
-                    },
-                    referenceName: "exampleDataset",
-                    type: "DatasetReference",
-                }],
-                name: "ExampleCopyActivity",
-                outputs: [{
-                    parameters: {
-                        MyFileName: {
-                            type: "Expression",
-                            value: "@item()",
-                        },
-                        MyFolderPath: "examplecontainer",
-                    },
-                    referenceName: "exampleDataset",
-                    type: "DatasetReference",
-                }],
-                type: "Copy",
-                typeProperties: {
-                    dataIntegrationUnits: 32,
-                    sink: {
-                        type: "BlobSink",
-                    },
-                    source: {
-                        type: "BlobSource",
-                    },
-                },
-            }],
-            isSequential: true,
-            items: {
-                type: "Expression",
-                value: "@pipeline().parameters.OutputBlobNameList",
-            },
-        },
-    }],
-    description: "Example description",
-    factoryName: "exampleFactoryName",
-    parameters: {
-        OutputBlobNameList: {
-            type: "Array",
-        },
-    },
-    pipelineName: "examplePipeline",
-    resourceGroupName: "exampleResourceGroup",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Pipeline Resource {#create}
@@ -536,7 +23,7 @@ const pipeline = new azurerm.datafactory.latest.Pipeline("pipeline", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/datafactory/latest/#pulumi_azurerm.datafactory/latest.Pipeline">Pipeline</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activities</span><span class="p">:</span> <span class="nx">Optional[List[Union&lt;Azurerm:Datafactory/Latest:ControlActivity, Azurerm:Datafactory/Latest:ExecutionActivity, Default=&gt;]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[List[Any&gt;]]</span> = None<span class="p">, </span><span class="nx">concurrency</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[Dict[PipelineFolder]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, ParameterSpecification]]</span> = None<span class="p">, </span><span class="nx">pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_dimensions</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any&gt;]]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Dict[str, VariableSpecification]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/datafactory/latest/#pulumi_azurerm.datafactory/latest.Pipeline">Pipeline</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activities</span><span class="p">:</span> <span class="nx">Optional[List[Union&lt;Azurerm:Datafactory/Latest:ControlActivity, Azurerm:Datafactory/Latest:ExecutionActivity, Default=&gt;]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[List[Any&gt;]]</span> = None<span class="p">, </span><span class="nx">concurrency</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[Dict[PipelineFolder]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, ParameterSpecification]]</span> = None<span class="p">, </span><span class="nx">pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_dimensions</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any&gt;]]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Dict[str, VariableSpecification]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1115,7 +602,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#concurrency_python" style="color: inherit; text-decoration: inherit;">concurrency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max number of concurrent runs for the pipeline.{{% /md %}}</dd>
 
@@ -1841,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retryintervalinseconds_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Interval<wbr>In<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Interval between each retry attempt (in seconds). The default is 30 sec.{{% /md %}}</dd>
 
@@ -2087,7 +1574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retryintervalinseconds_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Interval<wbr>In<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Interval between each retry attempt (in seconds). The default is 30 sec.{{% /md %}}</dd>
 
@@ -2299,8 +1786,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dependson_python">
-<a href="#dependson_python" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
+        <span id="depends_on_python">
+<a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#activitydependency">List[Activity<wbr>Dependency]</a></span>
@@ -2505,8 +1992,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dependson_python">
-<a href="#dependson_python" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
+        <span id="depends_on_python">
+<a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#activitydependencyresponse">List[Activity<wbr>Dependency<wbr>Response]</a></span>
@@ -2771,8 +2258,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dependson_python">
-<a href="#dependson_python" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
+        <span id="depends_on_python">
+<a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#activitydependency">List[Activity<wbr>Dependency]</a></span>
@@ -3057,8 +2544,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dependson_python">
-<a href="#dependson_python" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
+        <span id="depends_on_python">
+<a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#activitydependencyresponse">List[Activity<wbr>Dependency<wbr>Response]</a></span>

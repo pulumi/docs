@@ -12,344 +12,6 @@ meta_desc: "Explore the Application resource of the servicefabric/latest module,
 
 The application resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Put an application with maximum parameters
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var application = new AzureRM.ServiceFabric.Latest.Application("application", new AzureRM.ServiceFabric.Latest.ApplicationArgs
-        {
-            ApplicationName = "myApp",
-            ClusterName = "myCluster",
-            MaximumNodes = 3,
-            Metrics = 
-            {
-                new AzureRM.ServiceFabric.Latest.Inputs.ApplicationMetricDescriptionArgs
-                {
-                    MaximumCapacity = 3,
-                    Name = "metric1",
-                    ReservationCapacity = 1,
-                    TotalApplicationCapacity = 5,
-                },
-            },
-            MinimumNodes = 1,
-            Parameters = 
-            {
-                { "param1", "value1" },
-            },
-            RemoveApplicationCapacity = false,
-            ResourceGroupName = "resRg",
-            TypeName = "myAppType",
-            TypeVersion = "1.0",
-            UpgradePolicy = new AzureRM.ServiceFabric.Latest.Inputs.ApplicationUpgradePolicyArgs
-            {
-                ApplicationHealthPolicy = new AzureRM.ServiceFabric.Latest.Inputs.ArmApplicationHealthPolicyArgs
-                {
-                    ConsiderWarningAsError = true,
-                    DefaultServiceTypeHealthPolicy = new AzureRM.ServiceFabric.Latest.Inputs.ArmServiceTypeHealthPolicyArgs
-                    {
-                        MaxPercentUnhealthyPartitionsPerService = 0,
-                        MaxPercentUnhealthyReplicasPerPartition = 0,
-                        MaxPercentUnhealthyServices = 0,
-                    },
-                    MaxPercentUnhealthyDeployedApplications = 0,
-                },
-                ForceRestart = false,
-                RollingUpgradeMonitoringPolicy = new AzureRM.ServiceFabric.Latest.Inputs.ArmRollingUpgradeMonitoringPolicyArgs
-                {
-                    FailureAction = "Rollback",
-                    HealthCheckRetryTimeout = "00:10:00",
-                    HealthCheckStableDuration = "00:05:00",
-                    HealthCheckWaitDuration = "00:02:00",
-                    UpgradeDomainTimeout = "1.06:00:00",
-                    UpgradeTimeout = "01:00:00",
-                },
-                UpgradeMode = "Monitored",
-                UpgradeReplicaSetCheckTimeout = "01:00:00",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	servicefabric "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicefabric/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := servicefabric.NewApplication(ctx, "application", &servicefabric.ApplicationArgs{
-			ApplicationName: pulumi.String("myApp"),
-			ClusterName:     pulumi.String("myCluster"),
-			MaximumNodes:    pulumi.Int(3),
-			Metrics: servicefabric.ApplicationMetricDescriptionArray{
-				&servicefabric.ApplicationMetricDescriptionArgs{
-					MaximumCapacity:          pulumi.Int(3),
-					Name:                     pulumi.String("metric1"),
-					ReservationCapacity:      pulumi.Int(1),
-					TotalApplicationCapacity: pulumi.Int(5),
-				},
-			},
-			MinimumNodes: pulumi.Int(1),
-			Parameters: pulumi.StringMap{
-				"param1": pulumi.String("value1"),
-			},
-			RemoveApplicationCapacity: pulumi.Bool(false),
-			ResourceGroupName:         pulumi.String("resRg"),
-			TypeName:                  pulumi.String("myAppType"),
-			TypeVersion:               pulumi.String("1.0"),
-			UpgradePolicy: &servicefabric.ApplicationUpgradePolicyArgs{
-				ApplicationHealthPolicy: &servicefabric.ArmApplicationHealthPolicyArgs{
-					ConsiderWarningAsError: pulumi.Bool(true),
-					DefaultServiceTypeHealthPolicy: &servicefabric.ArmServiceTypeHealthPolicyArgs{
-						MaxPercentUnhealthyPartitionsPerService: pulumi.Int(0),
-						MaxPercentUnhealthyReplicasPerPartition: pulumi.Int(0),
-						MaxPercentUnhealthyServices:             pulumi.Int(0),
-					},
-					MaxPercentUnhealthyDeployedApplications: pulumi.Int(0),
-				},
-				ForceRestart: pulumi.Bool(false),
-				RollingUpgradeMonitoringPolicy: &servicefabric.ArmRollingUpgradeMonitoringPolicyArgs{
-					FailureAction:             pulumi.String("Rollback"),
-					HealthCheckRetryTimeout:   pulumi.String("00:10:00"),
-					HealthCheckStableDuration: pulumi.String("00:05:00"),
-					HealthCheckWaitDuration:   pulumi.String("00:02:00"),
-					UpgradeDomainTimeout:      pulumi.String("1.06:00:00"),
-					UpgradeTimeout:            pulumi.String("01:00:00"),
-				},
-				UpgradeMode:                   pulumi.String("Monitored"),
-				UpgradeReplicaSetCheckTimeout: pulumi.String("01:00:00"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-application = azurerm.servicefabric.latest.Application("application",
-    application_name="myApp",
-    cluster_name="myCluster",
-    maximum_nodes=3,
-    metrics=[{
-        "maximumCapacity": 3,
-        "name": "metric1",
-        "reservationCapacity": 1,
-        "totalApplicationCapacity": 5,
-    }],
-    minimum_nodes=1,
-    parameters={
-        "param1": "value1",
-    },
-    remove_application_capacity=False,
-    resource_group_name="resRg",
-    type_name="myAppType",
-    type_version="1.0",
-    upgrade_policy={
-        "applicationHealthPolicy": {
-            "considerWarningAsError": True,
-            "defaultServiceTypeHealthPolicy": {
-                "maxPercentUnhealthyPartitionsPerService": 0,
-                "maxPercentUnhealthyReplicasPerPartition": 0,
-                "maxPercentUnhealthyServices": 0,
-            },
-            "maxPercentUnhealthyDeployedApplications": 0,
-        },
-        "forceRestart": False,
-        "rollingUpgradeMonitoringPolicy": {
-            "failureAction": "Rollback",
-            "healthCheckRetryTimeout": "00:10:00",
-            "healthCheckStableDuration": "00:05:00",
-            "healthCheckWaitDuration": "00:02:00",
-            "upgradeDomainTimeout": "1.06:00:00",
-            "upgradeTimeout": "01:00:00",
-        },
-        "upgradeMode": "Monitored",
-        "upgradeReplicaSetCheckTimeout": "01:00:00",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const application = new azurerm.servicefabric.latest.Application("application", {
-    applicationName: "myApp",
-    clusterName: "myCluster",
-    maximumNodes: 3,
-    metrics: [{
-        maximumCapacity: 3,
-        name: "metric1",
-        reservationCapacity: 1,
-        totalApplicationCapacity: 5,
-    }],
-    minimumNodes: 1,
-    parameters: {
-        param1: "value1",
-    },
-    removeApplicationCapacity: false,
-    resourceGroupName: "resRg",
-    typeName: "myAppType",
-    typeVersion: "1.0",
-    upgradePolicy: {
-        applicationHealthPolicy: {
-            considerWarningAsError: true,
-            defaultServiceTypeHealthPolicy: {
-                maxPercentUnhealthyPartitionsPerService: 0,
-                maxPercentUnhealthyReplicasPerPartition: 0,
-                maxPercentUnhealthyServices: 0,
-            },
-            maxPercentUnhealthyDeployedApplications: 0,
-        },
-        forceRestart: false,
-        rollingUpgradeMonitoringPolicy: {
-            failureAction: "Rollback",
-            healthCheckRetryTimeout: "00:10:00",
-            healthCheckStableDuration: "00:05:00",
-            healthCheckWaitDuration: "00:02:00",
-            upgradeDomainTimeout: "1.06:00:00",
-            upgradeTimeout: "01:00:00",
-        },
-        upgradeMode: "Monitored",
-        upgradeReplicaSetCheckTimeout: "01:00:00",
-    },
-});
-
-```
-
-{{% /example %}}
-
-### Put an application with minimum parameters
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var application = new AzureRM.ServiceFabric.Latest.Application("application", new AzureRM.ServiceFabric.Latest.ApplicationArgs
-        {
-            ApplicationName = "myApp",
-            ClusterName = "myCluster",
-            RemoveApplicationCapacity = false,
-            ResourceGroupName = "resRg",
-            TypeName = "myAppType",
-            TypeVersion = "1.0",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	servicefabric "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicefabric/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := servicefabric.NewApplication(ctx, "application", &servicefabric.ApplicationArgs{
-			ApplicationName:           pulumi.String("myApp"),
-			ClusterName:               pulumi.String("myCluster"),
-			RemoveApplicationCapacity: pulumi.Bool(false),
-			ResourceGroupName:         pulumi.String("resRg"),
-			TypeName:                  pulumi.String("myAppType"),
-			TypeVersion:               pulumi.String("1.0"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-application = azurerm.servicefabric.latest.Application("application",
-    application_name="myApp",
-    cluster_name="myCluster",
-    remove_application_capacity=False,
-    resource_group_name="resRg",
-    type_name="myAppType",
-    type_version="1.0")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const application = new azurerm.servicefabric.latest.Application("application", {
-    applicationName: "myApp",
-    clusterName: "myCluster",
-    removeApplicationCapacity: false,
-    resourceGroupName: "resRg",
-    typeName: "myAppType",
-    typeVersion: "1.0",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Application Resource {#create}
@@ -361,7 +23,7 @@ const application = new azurerm.servicefabric.latest.Application("application", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/servicefabric/latest/#pulumi_azurerm.servicefabric/latest.Application">Application</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_identities</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationUserAssignedIdentity]]</span> = None<span class="p">, </span><span class="nx">maximum_nodes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">metrics</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationMetricDescription]]</span> = None<span class="p">, </span><span class="nx">minimum_nodes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">remove_application_capacity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[ApplicationUpgradePolicy]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/servicefabric/latest/#pulumi_azurerm.servicefabric/latest.Application">Application</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_identities</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationUserAssignedIdentity]]</span> = None<span class="p">, </span><span class="nx">maximum_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metrics</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationMetricDescription]]</span> = None<span class="p">, </span><span class="nx">minimum_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">remove_application_capacity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[ApplicationUpgradePolicy]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1070,7 +732,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#maximum_nodes_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. By default, the value of this property is zero and it means that the services can be placed on any node.{{% /md %}}</dd>
 
@@ -1090,7 +752,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#minimum_nodes_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. If this property is set to zero, no capacity will be reserved. The value of this property cannot be more than the value of the MaximumNodes property.{{% /md %}}</dd>
 
@@ -1613,7 +1275,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#maximumcapacity_python" style="color: inherit; text-decoration: inherit;">maximum<wbr>Capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum node capacity for Service Fabric application.
 This is the maximum Load for an instance of this application on a single node. Even if the capacity of node is greater than this value, Service Fabric will limit the total load of services within the application on each node to this value.
@@ -1638,7 +1300,7 @@ When updating existing application with application capacity, the product of Max
 <a href="#reservationcapacity_python" style="color: inherit; text-decoration: inherit;">reservation<wbr>Capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The node reservation capacity for Service Fabric application.
 This is the amount of load which is reserved on nodes which have instances of this application.
@@ -1653,7 +1315,7 @@ When setting application capacity or when updating application capacity; this va
 <a href="#totalapplicationcapacity_python" style="color: inherit; text-decoration: inherit;">total<wbr>Application<wbr>Capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The total metric capacity for Service Fabric application.
 This is the total metric capacity for this application in the cluster. Service Fabric will try to limit the sum of loads of services within the application to this value.
@@ -1871,7 +1533,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#maximumcapacity_python" style="color: inherit; text-decoration: inherit;">maximum<wbr>Capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum node capacity for Service Fabric application.
 This is the maximum Load for an instance of this application on a single node. Even if the capacity of node is greater than this value, Service Fabric will limit the total load of services within the application on each node to this value.
@@ -1896,7 +1558,7 @@ When updating existing application with application capacity, the product of Max
 <a href="#reservationcapacity_python" style="color: inherit; text-decoration: inherit;">reservation<wbr>Capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The node reservation capacity for Service Fabric application.
 This is the amount of load which is reserved on nodes which have instances of this application.
@@ -1911,7 +1573,7 @@ When setting application capacity or when updating application capacity; this va
 <a href="#totalapplicationcapacity_python" style="color: inherit; text-decoration: inherit;">total<wbr>Application<wbr>Capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The total metric capacity for Service Fabric application.
 This is the total metric capacity for this application in the cluster. Service Fabric will try to limit the sum of loads of services within the application to this value.
@@ -2874,7 +2536,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#max_percent_unhealthy_deployed_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>deployed_<wbr>applications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.
 The percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.
@@ -3096,7 +2758,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#max_percent_unhealthy_deployed_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>deployed_<wbr>applications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.
 The percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.
@@ -3837,7 +3499,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#max_percent_unhealthy_partitions_per_service_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>partitions_<wbr>per_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum percentage of partitions per service allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd>
@@ -3848,7 +3510,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#max_percent_unhealthy_replicas_per_partition_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>replicas_<wbr>per_<wbr>partition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum percentage of replicas per partition allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd>
@@ -3859,7 +3521,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#max_percent_unhealthy_services_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd>
@@ -4015,7 +3677,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#max_percent_unhealthy_partitions_per_service_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>partitions_<wbr>per_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum percentage of partitions per service allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd>
@@ -4026,7 +3688,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#max_percent_unhealthy_replicas_per_partition_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>replicas_<wbr>per_<wbr>partition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum percentage of replicas per partition allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd>
@@ -4037,7 +3699,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#max_percent_unhealthy_services_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd>

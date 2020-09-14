@@ -779,7 +779,7 @@ The following output properties are available:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd>
 
@@ -881,7 +881,7 @@ The following output properties are available:
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd>
 
@@ -1259,8 +1259,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="tokentype_python">
-<a href="#tokentype_python" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
+        <span id="token_type_python">
+<a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1269,18 +1269,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="expiresin_python">
-<a href="#expiresin_python" style="color: inherit; text-decoration: inherit;">expires<wbr>In</a>
+        <span id="expires_in_python">
+<a href="#expires_in_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>in</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshtoken_python">
-<a href="#refreshtoken_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
+        <span id="refresh_token_python">
+<a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2347,8 +2347,8 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="baseimagedependencies_python">
-<a href="#baseimagedependencies_python" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Dependencies</a>
+        <span id="base_image_dependencies_python">
+<a href="#base_image_dependencies_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>dependencies</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagedependencyresponse">List[Base<wbr>Image<wbr>Dependency<wbr>Response]</a></span>
@@ -2357,8 +2357,8 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="dockerfilepath_python">
-<a href="#dockerfilepath_python" style="color: inherit; text-decoration: inherit;">docker<wbr>File<wbr>Path</a>
+        <span id="docker_file_path_python">
+<a href="#docker_file_path_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>file_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2397,8 +2397,8 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imagenames_python">
-<a href="#imagenames_python" style="color: inherit; text-decoration: inherit;">image<wbr>Names</a>
+        <span id="image_names_python">
+<a href="#image_names_python" style="color: inherit; text-decoration: inherit;">image_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2417,8 +2417,8 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nocache_python">
-<a href="#nocache_python" style="color: inherit; text-decoration: inherit;">no<wbr>Cache</a>
+        <span id="no_cache_python">
+<a href="#no_cache_python" style="color: inherit; text-decoration: inherit;">no_<wbr>cache</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2663,8 +2663,8 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="baseimagedependencies_python">
-<a href="#baseimagedependencies_python" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Dependencies</a>
+        <span id="base_image_dependencies_python">
+<a href="#base_image_dependencies_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>dependencies</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagedependencyresponse">List[Base<wbr>Image<wbr>Dependency<wbr>Response]</a></span>
@@ -2949,8 +2949,8 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="baseimagedependencies_python">
-<a href="#baseimagedependencies_python" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Dependencies</a>
+        <span id="base_image_dependencies_python">
+<a href="#base_image_dependencies_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>dependencies</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagedependencyresponse">List[Base<wbr>Image<wbr>Dependency<wbr>Response]</a></span>
@@ -3876,8 +3876,8 @@ webhooks for notifications.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcecontroltype_python">
-<a href="#sourcecontroltype_python" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Type</a>
+        <span id="source_control_type_python">
+<a href="#source_control_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3896,8 +3896,8 @@ webhooks for notifications.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcecontrolauthproperties_python">
-<a href="#sourcecontrolauthproperties_python" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Auth<wbr>Properties</a>
+        <span id="source_control_auth_properties_python">
+<a href="#source_control_auth_properties_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>auth_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authinforesponse">Dict[Auth<wbr>Info<wbr>Response]</a></span>
@@ -4177,16 +4177,6 @@ the source registry during the run.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcerepository_python">
-<a href="#sourcerepository_python" style="color: inherit; text-decoration: inherit;">source<wbr>Repository</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcepropertiesresponse">Dict[Source<wbr>Properties<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="sourcetriggerevents_python">
 <a href="#sourcetriggerevents_python" style="color: inherit; text-decoration: inherit;">source<wbr>Trigger<wbr>Events</a>
 </span> 
@@ -4194,6 +4184,16 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="source_repository_python">
+<a href="#source_repository_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repository</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sourcepropertiesresponse">Dict[Source<wbr>Properties<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

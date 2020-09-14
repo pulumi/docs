@@ -637,7 +637,7 @@ The following output properties are available:
 <a href="#daily_backups_to_keep_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>backups_<wbr>to_<wbr>keep</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Daily backups count to keep{{% /md %}}</dd>
 
@@ -657,7 +657,7 @@ The following output properties are available:
 <a href="#monthly_backups_to_keep_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>backups_<wbr>to_<wbr>keep</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Monthly backups count to keep{{% /md %}}</dd>
 
@@ -687,7 +687,7 @@ The following output properties are available:
 <a href="#volumes_assigned_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>assigned</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Volumes using current backup policy{{% /md %}}</dd>
 
@@ -697,7 +697,7 @@ The following output properties are available:
 <a href="#weekly_backups_to_keep_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>backups_<wbr>to_<wbr>keep</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Weekly backups count to keep{{% /md %}}</dd>
 
@@ -707,7 +707,7 @@ The following output properties are available:
 <a href="#yearly_backups_to_keep_python" style="color: inherit; text-decoration: inherit;">yearly_<wbr>backups_<wbr>to_<wbr>keep</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Yearly backups count to keep{{% /md %}}</dd>
 
@@ -859,7 +859,7 @@ The following output properties are available:
 <a href="#backupscount_python" style="color: inherit; text-decoration: inherit;">backups<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total count of backups for volume{{% /md %}}</dd>
 

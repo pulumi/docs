@@ -12,141 +12,6 @@ meta_desc: "Explore the DiagnosticSetting resource of the aadiam/latest module, 
 
 The diagnostic setting resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### BatchAccountDelete
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var diagnosticSetting = new AzureRM.Aadiam.Latest.DiagnosticSetting("diagnosticSetting", new AzureRM.Aadiam.Latest.DiagnosticSettingArgs
-        {
-            EventHubAuthorizationRuleId = "/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
-            EventHubName = "myeventhub",
-            Logs = 
-            {
-                new AzureRM.Aadiam.Latest.Inputs.LogSettingsArgs
-                {
-                    Category = "AuditLogs",
-                    Enabled = true,
-                    RetentionPolicy = new AzureRM.Aadiam.Latest.Inputs.RetentionPolicyArgs
-                    {
-                        Days = 0,
-                        Enabled = false,
-                    },
-                },
-            },
-            Name = "mysetting",
-            StorageAccountId = "/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1",
-            WorkspaceId = "",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	aadiam "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/aadiam/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aadiam.NewDiagnosticSetting(ctx, "diagnosticSetting", &aadiam.DiagnosticSettingArgs{
-			EventHubAuthorizationRuleId: pulumi.String("/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule"),
-			EventHubName:                pulumi.String("myeventhub"),
-			Logs: aadiam.LogSettingsArray{
-				&aadiam.LogSettingsArgs{
-					Category: pulumi.String("AuditLogs"),
-					Enabled:  pulumi.Bool(true),
-					RetentionPolicy: &aadiam.RetentionPolicyArgs{
-						Days:    pulumi.Int(0),
-						Enabled: pulumi.Bool(false),
-					},
-				},
-			},
-			Name:             pulumi.String("mysetting"),
-			StorageAccountId: pulumi.String("/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1"),
-			WorkspaceId:      pulumi.String(""),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-diagnostic_setting = azurerm.aadiam.latest.DiagnosticSetting("diagnosticSetting",
-    event_hub_authorization_rule_id="/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
-    event_hub_name="myeventhub",
-    logs=[{
-        "category": "AuditLogs",
-        "enabled": True,
-        "retentionPolicy": {
-            "days": 0,
-            "enabled": False,
-        },
-    }],
-    name="mysetting",
-    storage_account_id="/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1",
-    workspace_id="")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const diagnosticSetting = new azurerm.aadiam.latest.DiagnosticSetting("diagnosticSetting", {
-    eventHubAuthorizationRuleId: "/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
-    eventHubName: "myeventhub",
-    logs: [{
-        category: "AuditLogs",
-        enabled: true,
-        retentionPolicy: {
-            days: 0,
-            enabled: false,
-        },
-    }],
-    name: "mysetting",
-    storageAccountId: "/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1",
-    workspaceId: "",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a DiagnosticSetting Resource {#create}
@@ -1203,7 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of days for the retention in days. A value of 0 will retain the events indefinitely.{{% /md %}}</dd>
 
@@ -1329,7 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of days for the retention in days. A value of 0 will retain the events indefinitely.{{% /md %}}</dd>
 

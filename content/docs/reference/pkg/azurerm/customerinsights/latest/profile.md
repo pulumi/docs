@@ -12,317 +12,6 @@ meta_desc: "Explore the Profile resource of the customerinsights/latest module, 
 
 The profile resource format.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Profiles_CreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var profile = new AzureRM.CustomerInsights.Latest.Profile("profile", new AzureRM.CustomerInsights.Latest.ProfileArgs
-        {
-            ApiEntitySetName = "TestProfileType396",
-            Fields = 
-            {
-                new AzureRM.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
-                {
-                    FieldName = "Id",
-                    FieldType = "Edm.String",
-                    IsArray = false,
-                    IsRequired = true,
-                },
-                new AzureRM.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
-                {
-                    FieldName = "ProfileId",
-                    FieldType = "Edm.String",
-                    IsArray = false,
-                    IsRequired = true,
-                },
-                new AzureRM.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
-                {
-                    FieldName = "LastName",
-                    FieldType = "Edm.String",
-                    IsArray = false,
-                    IsRequired = true,
-                },
-                new AzureRM.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
-                {
-                    FieldName = "TestProfileType396",
-                    FieldType = "Edm.String",
-                    IsArray = false,
-                    IsRequired = true,
-                },
-                new AzureRM.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
-                {
-                    FieldName = "SavingAccountBalance",
-                    FieldType = "Edm.Int32",
-                    IsArray = false,
-                    IsRequired = true,
-                },
-            },
-            HubName = "sdkTestHub",
-            LargeImage = "\\\\Images\\\\LargeImage",
-            MediumImage = "\\\\Images\\\\MediumImage",
-            ProfileName = "TestProfileType396",
-            ResourceGroupName = "TestHubRG",
-            SchemaItemTypeLink = "SchemaItemTypeLink",
-            SmallImage = "\\\\Images\\\\smallImage",
-            StrongIds = 
-            {
-                new AzureRM.CustomerInsights.Latest.Inputs.StrongIdArgs
-                {
-                    KeyPropertyNames = 
-                    {
-                        "Id",
-                        "SavingAccountBalance",
-                    },
-                    StrongIdName = "Id",
-                },
-                new AzureRM.CustomerInsights.Latest.Inputs.StrongIdArgs
-                {
-                    KeyPropertyNames = 
-                    {
-                        "ProfileId",
-                        "LastName",
-                    },
-                    StrongIdName = "ProfileId",
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	customerinsights "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/customerinsights/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := customerinsights.NewProfile(ctx, "profile", &customerinsights.ProfileArgs{
-			ApiEntitySetName: pulumi.String("TestProfileType396"),
-			Fields: customerinsights.PropertyDefinitionArray{
-				&customerinsights.PropertyDefinitionArgs{
-					FieldName:  pulumi.String("Id"),
-					FieldType:  pulumi.String("Edm.String"),
-					IsArray:    pulumi.Bool(false),
-					IsRequired: pulumi.Bool(true),
-				},
-				&customerinsights.PropertyDefinitionArgs{
-					FieldName:  pulumi.String("ProfileId"),
-					FieldType:  pulumi.String("Edm.String"),
-					IsArray:    pulumi.Bool(false),
-					IsRequired: pulumi.Bool(true),
-				},
-				&customerinsights.PropertyDefinitionArgs{
-					FieldName:  pulumi.String("LastName"),
-					FieldType:  pulumi.String("Edm.String"),
-					IsArray:    pulumi.Bool(false),
-					IsRequired: pulumi.Bool(true),
-				},
-				&customerinsights.PropertyDefinitionArgs{
-					FieldName:  pulumi.String("TestProfileType396"),
-					FieldType:  pulumi.String("Edm.String"),
-					IsArray:    pulumi.Bool(false),
-					IsRequired: pulumi.Bool(true),
-				},
-				&customerinsights.PropertyDefinitionArgs{
-					FieldName:  pulumi.String("SavingAccountBalance"),
-					FieldType:  pulumi.String("Edm.Int32"),
-					IsArray:    pulumi.Bool(false),
-					IsRequired: pulumi.Bool(true),
-				},
-			},
-			HubName:            pulumi.String("sdkTestHub"),
-			LargeImage:         pulumi.String("\\\\Images\\\\LargeImage"),
-			MediumImage:        pulumi.String("\\\\Images\\\\MediumImage"),
-			ProfileName:        pulumi.String("TestProfileType396"),
-			ResourceGroupName:  pulumi.String("TestHubRG"),
-			SchemaItemTypeLink: pulumi.String("SchemaItemTypeLink"),
-			SmallImage:         pulumi.String("\\\\Images\\\\smallImage"),
-			StrongIds: customerinsights.StrongIdArray{
-				&customerinsights.StrongIdArgs{
-					KeyPropertyNames: pulumi.StringArray{
-						pulumi.String("Id"),
-						pulumi.String("SavingAccountBalance"),
-					},
-					StrongIdName: pulumi.String("Id"),
-				},
-				&customerinsights.StrongIdArgs{
-					KeyPropertyNames: pulumi.StringArray{
-						pulumi.String("ProfileId"),
-						pulumi.String("LastName"),
-					},
-					StrongIdName: pulumi.String("ProfileId"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-profile = azurerm.customerinsights.latest.Profile("profile",
-    api_entity_set_name="TestProfileType396",
-    fields=[
-        {
-            "fieldName": "Id",
-            "fieldType": "Edm.String",
-            "isArray": False,
-            "isRequired": True,
-        },
-        {
-            "fieldName": "ProfileId",
-            "fieldType": "Edm.String",
-            "isArray": False,
-            "isRequired": True,
-        },
-        {
-            "fieldName": "LastName",
-            "fieldType": "Edm.String",
-            "isArray": False,
-            "isRequired": True,
-        },
-        {
-            "fieldName": "TestProfileType396",
-            "fieldType": "Edm.String",
-            "isArray": False,
-            "isRequired": True,
-        },
-        {
-            "fieldName": "SavingAccountBalance",
-            "fieldType": "Edm.Int32",
-            "isArray": False,
-            "isRequired": True,
-        },
-    ],
-    hub_name="sdkTestHub",
-    large_image="\\\\Images\\\\LargeImage",
-    medium_image="\\\\Images\\\\MediumImage",
-    profile_name="TestProfileType396",
-    resource_group_name="TestHubRG",
-    schema_item_type_link="SchemaItemTypeLink",
-    small_image="\\\\Images\\\\smallImage",
-    strong_ids=[
-        {
-            "keyPropertyNames": [
-                "Id",
-                "SavingAccountBalance",
-            ],
-            "strongIdName": "Id",
-        },
-        {
-            "keyPropertyNames": [
-                "ProfileId",
-                "LastName",
-            ],
-            "strongIdName": "ProfileId",
-        },
-    ])
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const profile = new azurerm.customerinsights.latest.Profile("profile", {
-    apiEntitySetName: "TestProfileType396",
-    fields: [
-        {
-            fieldName: "Id",
-            fieldType: "Edm.String",
-            isArray: false,
-            isRequired: true,
-        },
-        {
-            fieldName: "ProfileId",
-            fieldType: "Edm.String",
-            isArray: false,
-            isRequired: true,
-        },
-        {
-            fieldName: "LastName",
-            fieldType: "Edm.String",
-            isArray: false,
-            isRequired: true,
-        },
-        {
-            fieldName: "TestProfileType396",
-            fieldType: "Edm.String",
-            isArray: false,
-            isRequired: true,
-        },
-        {
-            fieldName: "SavingAccountBalance",
-            fieldType: "Edm.Int32",
-            isArray: false,
-            isRequired: true,
-        },
-    ],
-    hubName: "sdkTestHub",
-    largeImage: "\\\\Images\\\\LargeImage",
-    mediumImage: "\\\\Images\\\\MediumImage",
-    profileName: "TestProfileType396",
-    resourceGroupName: "TestHubRG",
-    schemaItemTypeLink: "SchemaItemTypeLink",
-    smallImage: "\\\\Images\\\\smallImage",
-    strongIds: [
-        {
-            keyPropertyNames: [
-                "Id",
-                "SavingAccountBalance",
-            ],
-            strongIdName: "Id",
-        },
-        {
-            keyPropertyNames: [
-                "ProfileId",
-                "LastName",
-            ],
-            strongIdName: "ProfileId",
-        },
-    ],
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Profile Resource {#create}
@@ -334,7 +23,7 @@ const profile = new azurerm.customerinsights.latest.Profile("profile", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/customerinsights/latest/#pulumi_azurerm.customerinsights/latest.Profile">Profile</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_entity_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Array&lt;String&gt;]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">entity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[List[PropertyDefinition]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instances_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">large_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">localized_attributes</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Map&lt;String&gt;]]</span> = None<span class="p">, </span><span class="nx">medium_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_item_type_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">small_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strong_ids</span><span class="p">:</span> <span class="nx">Optional[List[StrongId]]</span> = None<span class="p">, </span><span class="nx">timestamp_field_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/customerinsights/latest/#pulumi_azurerm.customerinsights/latest.Profile">Profile</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_entity_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Array&lt;String&gt;]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">entity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[List[PropertyDefinition]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instances_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">large_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">localized_attributes</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Map&lt;String&gt;]]</span> = None<span class="p">, </span><span class="nx">medium_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_item_type_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">small_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strong_ids</span><span class="p">:</span> <span class="nx">Optional[List[StrongId]]</span> = None<span class="p">, </span><span class="nx">timestamp_field_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1163,7 +852,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#instances_count_python" style="color: inherit; text-decoration: inherit;">instances_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The instance count.{{% /md %}}</dd>
 
@@ -1787,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The data source ID.{{% /md %}}</dd>
 
@@ -1817,7 +1506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#precedence_python" style="color: inherit; text-decoration: inherit;">precedence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}the precedence value.{{% /md %}}</dd>
 
@@ -1943,7 +1632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd>
 
@@ -2069,7 +1758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd>
 
@@ -2695,7 +2384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxlength_python" style="color: inherit; text-decoration: inherit;">max<wbr>Length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd>
 
@@ -3381,7 +3070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxlength_python" style="color: inherit; text-decoration: inherit;">max<wbr>Length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd>
 

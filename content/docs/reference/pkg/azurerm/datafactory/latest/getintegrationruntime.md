@@ -1447,14 +1447,14 @@ The following output properties are available:
 <a href="#maxparallelexecutionspernode_python" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum parallel executions count per node for managed integration runtime.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodesize_python">
-<a href="#nodesize_python" style="color: inherit; text-decoration: inherit;">node<wbr>Size</a>
+        <span id="node_size_python">
+<a href="#node_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1467,7 +1467,7 @@ The following output properties are available:
 <a href="#numberofnodes_python" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The required number of nodes for managed integration runtime.{{% /md %}}</dd>
 
@@ -1745,8 +1745,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computetype_python">
-<a href="#computetype_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Type</a>
+        <span id="compute_type_python">
+<a href="#compute_type_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1759,7 +1759,7 @@ The following output properties are available:
 <a href="#corecount_python" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.{{% /md %}}</dd>
 
@@ -1769,7 +1769,7 @@ The following output properties are available:
 <a href="#time_to_live_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>live</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job.{{% /md %}}</dd>
 

@@ -12,129 +12,6 @@ meta_desc: "Explore the ExpressRouteGateway resource of the network/latest modul
 
 ExpressRoute gateway resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### ExpressRouteGatewayCreate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var expressRouteGateway = new AzureRM.Network.Latest.ExpressRouteGateway("expressRouteGateway", new AzureRM.Network.Latest.ExpressRouteGatewayArgs
-        {
-            AutoScaleConfiguration = new AzureRM.Network.Latest.Inputs.ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs
-            {
-                Bounds = new AzureRM.Network.Latest.Inputs.ExpressRouteGatewayPropertiesBoundsArgs
-                {
-                    Min = 3,
-                },
-            },
-            ExpressRouteGatewayName = "gateway-2",
-            Location = "westus",
-            ResourceGroupName = "resourceGroupName",
-            VirtualHub = new AzureRM.Network.Latest.Inputs.VirtualHubIdArgs
-            {
-                Id = "/subscriptions/subid/resourceGroups/resourceGroupId/providers/Microsoft.Network/virtualHubs/virtualHubName",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewExpressRouteGateway(ctx, "expressRouteGateway", &network.ExpressRouteGatewayArgs{
-			AutoScaleConfiguration: &network.ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs{
-				Bounds: &network.ExpressRouteGatewayPropertiesBoundsArgs{
-					Min: pulumi.Int(3),
-				},
-			},
-			ExpressRouteGatewayName: pulumi.String("gateway-2"),
-			Location:                pulumi.String("westus"),
-			ResourceGroupName:       pulumi.String("resourceGroupName"),
-			VirtualHub: &network.VirtualHubIdArgs{
-				Id: pulumi.String("/subscriptions/subid/resourceGroups/resourceGroupId/providers/Microsoft.Network/virtualHubs/virtualHubName"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-express_route_gateway = azurerm.network.latest.ExpressRouteGateway("expressRouteGateway",
-    auto_scale_configuration={
-        "bounds": {
-            "min": 3,
-        },
-    },
-    express_route_gateway_name="gateway-2",
-    location="westus",
-    resource_group_name="resourceGroupName",
-    virtual_hub={
-        "id": "/subscriptions/subid/resourceGroups/resourceGroupId/providers/Microsoft.Network/virtualHubs/virtualHubName",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const expressRouteGateway = new azurerm.network.latest.ExpressRouteGateway("expressRouteGateway", {
-    autoScaleConfiguration: {
-        bounds: {
-            min: 3,
-        },
-    },
-    expressRouteGatewayName: "gateway-2",
-    location: "westus",
-    resourceGroupName: "resourceGroupName",
-    virtualHub: {
-        id: "/subscriptions/subid/resourceGroups/resourceGroupId/providers/Microsoft.Network/virtualHubs/virtualHubName",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ExpressRouteGateway Resource {#create}
@@ -1355,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_weight_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The routing weight associated to the connection.{{% /md %}}</dd>
 
@@ -1557,7 +1434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of scale units deployed for ExpressRoute gateway.{{% /md %}}</dd>
 
@@ -1567,7 +1444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of scale units deployed for ExpressRoute gateway.{{% /md %}}</dd>
 
@@ -1769,7 +1646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of scale units deployed for ExpressRoute gateway.{{% /md %}}</dd>
 
@@ -1779,7 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of scale units deployed for ExpressRoute gateway.{{% /md %}}</dd>
 

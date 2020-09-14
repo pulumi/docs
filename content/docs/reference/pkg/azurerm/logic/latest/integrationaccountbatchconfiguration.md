@@ -12,98 +12,6 @@ meta_desc: "Explore the IntegrationAccountBatchConfiguration resource of the log
 
 The batch configuration resource definition.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update a batch configuration
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var integrationAccountBatchConfiguration = new AzureRM.Logic.Latest.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration", new AzureRM.Logic.Latest.IntegrationAccountBatchConfigurationArgs
-        {
-            BatchConfigurationName = "testBatchConfiguration",
-            IntegrationAccountName = "testIntegrationAccount",
-            Location = "westus",
-            ResourceGroupName = "testResourceGroup",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	logic "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := logic.NewIntegrationAccountBatchConfiguration(ctx, "integrationAccountBatchConfiguration", &logic.IntegrationAccountBatchConfigurationArgs{
-			BatchConfigurationName: pulumi.String("testBatchConfiguration"),
-			IntegrationAccountName: pulumi.String("testIntegrationAccount"),
-			Location:               pulumi.String("westus"),
-			ResourceGroupName:      pulumi.String("testResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-integration_account_batch_configuration = azurerm.logic.latest.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration",
-    batch_configuration_name="testBatchConfiguration",
-    integration_account_name="testIntegrationAccount",
-    location="westus",
-    resource_group_name="testResourceGroup")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const integrationAccountBatchConfiguration = new azurerm.logic.latest.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration", {
-    batchConfigurationName: "testBatchConfiguration",
-    integrationAccountName: "testIntegrationAccount",
-    location: "westus",
-    resourceGroupName: "testResourceGroup",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a IntegrationAccountBatchConfiguration Resource {#create}
@@ -1350,7 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The batch size in bytes.{{% /md %}}</dd>
 
@@ -1360,7 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_count_python" style="color: inherit; text-decoration: inherit;">message_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The message count.{{% /md %}}</dd>
 
@@ -1516,7 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The batch size in bytes.{{% /md %}}</dd>
 
@@ -1526,7 +1434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_count_python" style="color: inherit; text-decoration: inherit;">message_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The message count.{{% /md %}}</dd>
 
@@ -1908,7 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#occurrence_python" style="color: inherit; text-decoration: inherit;">occurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The occurrence.{{% /md %}}</dd>
 
@@ -2034,7 +1942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#occurrence_python" style="color: inherit; text-decoration: inherit;">occurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The occurrence.{{% /md %}}</dd>
 
@@ -2536,7 +2444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The interval.{{% /md %}}</dd>
 
@@ -2822,7 +2730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The interval.{{% /md %}}</dd>
 

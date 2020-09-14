@@ -12,149 +12,6 @@ meta_desc: "Explore the LogProfile resource of the insights/latest module, inclu
 
 The log profile resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update a log profile
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var logProfile = new AzureRM.Insights.Latest.LogProfile("logProfile", new AzureRM.Insights.Latest.LogProfileArgs
-        {
-            Categories = 
-            {
-                "Write",
-                "Delete",
-                "Action",
-            },
-            Location = "",
-            Locations = 
-            {
-                "global",
-            },
-            LogProfileName = "Rac46PostSwapRG",
-            RetentionPolicy = new AzureRM.Insights.Latest.Inputs.RetentionPolicyArgs
-            {
-                Days = 3,
-                Enabled = true,
-            },
-            ServiceBusRuleId = "",
-            StorageAccountId = "/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/JohnKemTest/providers/Microsoft.Storage/storageAccounts/johnkemtest8162",
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	insights "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := insights.NewLogProfile(ctx, "logProfile", &insights.LogProfileArgs{
-			Categories: pulumi.StringArray{
-				pulumi.String("Write"),
-				pulumi.String("Delete"),
-				pulumi.String("Action"),
-			},
-			Location: pulumi.String(""),
-			Locations: pulumi.StringArray{
-				pulumi.String("global"),
-			},
-			LogProfileName: pulumi.String("Rac46PostSwapRG"),
-			RetentionPolicy: &insights.RetentionPolicyArgs{
-				Days:    pulumi.Int(3),
-				Enabled: pulumi.Bool(true),
-			},
-			ServiceBusRuleId: pulumi.String(""),
-			StorageAccountId: pulumi.String("/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/JohnKemTest/providers/Microsoft.Storage/storageAccounts/johnkemtest8162"),
-			Tags:             nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-log_profile = azurerm.insights.latest.LogProfile("logProfile",
-    categories=[
-        "Write",
-        "Delete",
-        "Action",
-    ],
-    location="",
-    locations=["global"],
-    log_profile_name="Rac46PostSwapRG",
-    retention_policy={
-        "days": 3,
-        "enabled": True,
-    },
-    service_bus_rule_id="",
-    storage_account_id="/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/JohnKemTest/providers/Microsoft.Storage/storageAccounts/johnkemtest8162",
-    tags={})
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const logProfile = new azurerm.insights.latest.LogProfile("logProfile", {
-    categories: [
-        "Write",
-        "Delete",
-        "Action",
-    ],
-    location: "",
-    locations: ["global"],
-    logProfileName: "Rac46PostSwapRG",
-    retentionPolicy: {
-        days: 3,
-        enabled: true,
-    },
-    serviceBusRuleId: "",
-    storageAccountId: "/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/JohnKemTest/providers/Microsoft.Storage/storageAccounts/johnkemtest8162",
-    tags: {},
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a LogProfile Resource {#create}
@@ -959,7 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}the number of days for the retention in days. A value of 0 will retain the events indefinitely.{{% /md %}}</dd>
 
@@ -1085,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}the number of days for the retention in days. A value of 0 will retain the events indefinitely.{{% /md %}}</dd>
 

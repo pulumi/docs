@@ -12,1030 +12,6 @@ meta_desc: "Explore the RecordSet resource of the network/latest module, includi
 
 Describes a DNS record set (a collection of DNS records with the same name and type) in a Private DNS zone.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### PUT Private DNS Zone A Record Set
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var recordSet = new AzureRM.Network.Latest.RecordSet("recordSet", new AzureRM.Network.Latest.RecordSetArgs
-        {
-            ARecords = 
-            {
-                new AzureRM.Network.Latest.Inputs.ARecordArgs
-                {
-                    Ipv4Address = "1.2.3.4",
-                },
-            },
-            Metadata = 
-            {
-                { "key1", "value1" },
-            },
-            PrivateZoneName = "privatezone1.com",
-            RecordType = "A",
-            RelativeRecordSetName = "recordA",
-            ResourceGroupName = "resourceGroup1",
-            Ttl = 3600,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewRecordSet(ctx, "recordSet", &network.RecordSetArgs{
-			ARecords: network.ARecordArray{
-				&network.ARecordArgs{
-					Ipv4Address: pulumi.String("1.2.3.4"),
-				},
-			},
-			Metadata: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-			},
-			PrivateZoneName:       pulumi.String("privatezone1.com"),
-			RecordType:            pulumi.String("A"),
-			RelativeRecordSetName: pulumi.String("recordA"),
-			ResourceGroupName:     pulumi.String("resourceGroup1"),
-			Ttl:                   pulumi.Int(3600),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-record_set = azurerm.network.latest.RecordSet("recordSet",
-    a_records=[{
-        "ipv4Address": "1.2.3.4",
-    }],
-    metadata={
-        "key1": "value1",
-    },
-    private_zone_name="privatezone1.com",
-    record_type="A",
-    relative_record_set_name="recordA",
-    resource_group_name="resourceGroup1",
-    ttl=3600)
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const recordSet = new azurerm.network.latest.RecordSet("recordSet", {
-    aRecords: [{
-        ipv4Address: "1.2.3.4",
-    }],
-    metadata: {
-        key1: "value1",
-    },
-    privateZoneName: "privatezone1.com",
-    recordType: "A",
-    relativeRecordSetName: "recordA",
-    resourceGroupName: "resourceGroup1",
-    ttl: 3600,
-});
-
-```
-
-{{% /example %}}
-
-### PUT Private DNS Zone AAAA Record Set
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var recordSet = new AzureRM.Network.Latest.RecordSet("recordSet", new AzureRM.Network.Latest.RecordSetArgs
-        {
-            AaaaRecords = 
-            {
-                new AzureRM.Network.Latest.Inputs.AaaaRecordArgs
-                {
-                    Ipv6Address = "::1",
-                },
-            },
-            Metadata = 
-            {
-                { "key1", "value1" },
-            },
-            PrivateZoneName = "privatezone1.com",
-            RecordType = "AAAA",
-            RelativeRecordSetName = "recordAAAA",
-            ResourceGroupName = "resourceGroup1",
-            Ttl = 3600,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewRecordSet(ctx, "recordSet", &network.RecordSetArgs{
-			AaaaRecords: network.AaaaRecordArray{
-				&network.AaaaRecordArgs{
-					Ipv6Address: pulumi.String("::1"),
-				},
-			},
-			Metadata: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-			},
-			PrivateZoneName:       pulumi.String("privatezone1.com"),
-			RecordType:            pulumi.String("AAAA"),
-			RelativeRecordSetName: pulumi.String("recordAAAA"),
-			ResourceGroupName:     pulumi.String("resourceGroup1"),
-			Ttl:                   pulumi.Int(3600),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-record_set = azurerm.network.latest.RecordSet("recordSet",
-    aaaa_records=[{
-        "ipv6Address": "::1",
-    }],
-    metadata={
-        "key1": "value1",
-    },
-    private_zone_name="privatezone1.com",
-    record_type="AAAA",
-    relative_record_set_name="recordAAAA",
-    resource_group_name="resourceGroup1",
-    ttl=3600)
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const recordSet = new azurerm.network.latest.RecordSet("recordSet", {
-    aaaaRecords: [{
-        ipv6Address: "::1",
-    }],
-    metadata: {
-        key1: "value1",
-    },
-    privateZoneName: "privatezone1.com",
-    recordType: "AAAA",
-    relativeRecordSetName: "recordAAAA",
-    resourceGroupName: "resourceGroup1",
-    ttl: 3600,
-});
-
-```
-
-{{% /example %}}
-
-### PUT Private DNS Zone CNAME Record Set
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var recordSet = new AzureRM.Network.Latest.RecordSet("recordSet", new AzureRM.Network.Latest.RecordSetArgs
-        {
-            CnameRecord = new AzureRM.Network.Latest.Inputs.CnameRecordArgs
-            {
-                Cname = "contoso.com",
-            },
-            Metadata = 
-            {
-                { "key1", "value1" },
-            },
-            PrivateZoneName = "privatezone1.com",
-            RecordType = "CNAME",
-            RelativeRecordSetName = "recordCNAME",
-            ResourceGroupName = "resourceGroup1",
-            Ttl = 3600,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewRecordSet(ctx, "recordSet", &network.RecordSetArgs{
-			CnameRecord: &network.CnameRecordArgs{
-				Cname: pulumi.String("contoso.com"),
-			},
-			Metadata: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-			},
-			PrivateZoneName:       pulumi.String("privatezone1.com"),
-			RecordType:            pulumi.String("CNAME"),
-			RelativeRecordSetName: pulumi.String("recordCNAME"),
-			ResourceGroupName:     pulumi.String("resourceGroup1"),
-			Ttl:                   pulumi.Int(3600),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-record_set = azurerm.network.latest.RecordSet("recordSet",
-    cname_record={
-        "cname": "contoso.com",
-    },
-    metadata={
-        "key1": "value1",
-    },
-    private_zone_name="privatezone1.com",
-    record_type="CNAME",
-    relative_record_set_name="recordCNAME",
-    resource_group_name="resourceGroup1",
-    ttl=3600)
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const recordSet = new azurerm.network.latest.RecordSet("recordSet", {
-    cnameRecord: {
-        cname: "contoso.com",
-    },
-    metadata: {
-        key1: "value1",
-    },
-    privateZoneName: "privatezone1.com",
-    recordType: "CNAME",
-    relativeRecordSetName: "recordCNAME",
-    resourceGroupName: "resourceGroup1",
-    ttl: 3600,
-});
-
-```
-
-{{% /example %}}
-
-### PUT Private DNS Zone MX Record Set
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var recordSet = new AzureRM.Network.Latest.RecordSet("recordSet", new AzureRM.Network.Latest.RecordSetArgs
-        {
-            Metadata = 
-            {
-                { "key1", "value1" },
-            },
-            MxRecords = 
-            {
-                new AzureRM.Network.Latest.Inputs.MxRecordArgs
-                {
-                    Exchange = "mail.privatezone1.com",
-                    Preference = 0,
-                },
-            },
-            PrivateZoneName = "privatezone1.com",
-            RecordType = "MX",
-            RelativeRecordSetName = "recordMX",
-            ResourceGroupName = "resourceGroup1",
-            Ttl = 3600,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewRecordSet(ctx, "recordSet", &network.RecordSetArgs{
-			Metadata: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-			},
-			MxRecords: network.MxRecordArray{
-				&network.MxRecordArgs{
-					Exchange:   pulumi.String("mail.privatezone1.com"),
-					Preference: pulumi.Int(0),
-				},
-			},
-			PrivateZoneName:       pulumi.String("privatezone1.com"),
-			RecordType:            pulumi.String("MX"),
-			RelativeRecordSetName: pulumi.String("recordMX"),
-			ResourceGroupName:     pulumi.String("resourceGroup1"),
-			Ttl:                   pulumi.Int(3600),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-record_set = azurerm.network.latest.RecordSet("recordSet",
-    metadata={
-        "key1": "value1",
-    },
-    mx_records=[{
-        "exchange": "mail.privatezone1.com",
-        "preference": 0,
-    }],
-    private_zone_name="privatezone1.com",
-    record_type="MX",
-    relative_record_set_name="recordMX",
-    resource_group_name="resourceGroup1",
-    ttl=3600)
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const recordSet = new azurerm.network.latest.RecordSet("recordSet", {
-    metadata: {
-        key1: "value1",
-    },
-    mxRecords: [{
-        exchange: "mail.privatezone1.com",
-        preference: 0,
-    }],
-    privateZoneName: "privatezone1.com",
-    recordType: "MX",
-    relativeRecordSetName: "recordMX",
-    resourceGroupName: "resourceGroup1",
-    ttl: 3600,
-});
-
-```
-
-{{% /example %}}
-
-### PUT Private DNS Zone PTR Record Set
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var recordSet = new AzureRM.Network.Latest.RecordSet("recordSet", new AzureRM.Network.Latest.RecordSetArgs
-        {
-            Metadata = 
-            {
-                { "key1", "value1" },
-            },
-            PrivateZoneName = "0.0.127.in-addr.arpa",
-            PtrRecords = 
-            {
-                new AzureRM.Network.Latest.Inputs.PtrRecordArgs
-                {
-                    Ptrdname = "localhost",
-                },
-            },
-            RecordType = "PTR",
-            RelativeRecordSetName = "1",
-            ResourceGroupName = "resourceGroup1",
-            Ttl = 3600,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewRecordSet(ctx, "recordSet", &network.RecordSetArgs{
-			Metadata: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-			},
-			PrivateZoneName: pulumi.String("0.0.127.in-addr.arpa"),
-			PtrRecords: network.PtrRecordArray{
-				&network.PtrRecordArgs{
-					Ptrdname: pulumi.String("localhost"),
-				},
-			},
-			RecordType:            pulumi.String("PTR"),
-			RelativeRecordSetName: pulumi.String("1"),
-			ResourceGroupName:     pulumi.String("resourceGroup1"),
-			Ttl:                   pulumi.Int(3600),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-record_set = azurerm.network.latest.RecordSet("recordSet",
-    metadata={
-        "key1": "value1",
-    },
-    private_zone_name="0.0.127.in-addr.arpa",
-    ptr_records=[{
-        "ptrdname": "localhost",
-    }],
-    record_type="PTR",
-    relative_record_set_name="1",
-    resource_group_name="resourceGroup1",
-    ttl=3600)
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const recordSet = new azurerm.network.latest.RecordSet("recordSet", {
-    metadata: {
-        key1: "value1",
-    },
-    privateZoneName: "0.0.127.in-addr.arpa",
-    ptrRecords: [{
-        ptrdname: "localhost",
-    }],
-    recordType: "PTR",
-    relativeRecordSetName: "1",
-    resourceGroupName: "resourceGroup1",
-    ttl: 3600,
-});
-
-```
-
-{{% /example %}}
-
-### PUT Private DNS Zone SOA Record Set
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var recordSet = new AzureRM.Network.Latest.RecordSet("recordSet", new AzureRM.Network.Latest.RecordSetArgs
-        {
-            Metadata = 
-            {
-                { "key1", "value1" },
-            },
-            PrivateZoneName = "privatezone1.com",
-            RecordType = "SOA",
-            RelativeRecordSetName = "@",
-            ResourceGroupName = "resourceGroup1",
-            SoaRecord = new AzureRM.Network.Latest.Inputs.SoaRecordArgs
-            {
-                Email = "azureprivatedns-hostmaster.microsoft.com",
-                ExpireTime = 2419200,
-                Host = "azureprivatedns.net",
-                MinimumTtl = 300,
-                RefreshTime = 3600,
-                RetryTime = 300,
-                SerialNumber = 1,
-            },
-            Ttl = 3600,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewRecordSet(ctx, "recordSet", &network.RecordSetArgs{
-			Metadata: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-			},
-			PrivateZoneName:       pulumi.String("privatezone1.com"),
-			RecordType:            pulumi.String("SOA"),
-			RelativeRecordSetName: pulumi.String("@"),
-			ResourceGroupName:     pulumi.String("resourceGroup1"),
-			SoaRecord: &network.SoaRecordArgs{
-				Email:        pulumi.String("azureprivatedns-hostmaster.microsoft.com"),
-				ExpireTime:   pulumi.Int(2419200),
-				Host:         pulumi.String("azureprivatedns.net"),
-				MinimumTtl:   pulumi.Int(300),
-				RefreshTime:  pulumi.Int(3600),
-				RetryTime:    pulumi.Int(300),
-				SerialNumber: pulumi.Int(1),
-			},
-			Ttl: pulumi.Int(3600),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-record_set = azurerm.network.latest.RecordSet("recordSet",
-    metadata={
-        "key1": "value1",
-    },
-    private_zone_name="privatezone1.com",
-    record_type="SOA",
-    relative_record_set_name="@",
-    resource_group_name="resourceGroup1",
-    soa_record={
-        "email": "azureprivatedns-hostmaster.microsoft.com",
-        "expireTime": 2419200,
-        "host": "azureprivatedns.net",
-        "minimumTtl": 300,
-        "refreshTime": 3600,
-        "retryTime": 300,
-        "serialNumber": 1,
-    },
-    ttl=3600)
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const recordSet = new azurerm.network.latest.RecordSet("recordSet", {
-    metadata: {
-        key1: "value1",
-    },
-    privateZoneName: "privatezone1.com",
-    recordType: "SOA",
-    relativeRecordSetName: "@",
-    resourceGroupName: "resourceGroup1",
-    soaRecord: {
-        email: "azureprivatedns-hostmaster.microsoft.com",
-        expireTime: 2419200,
-        host: "azureprivatedns.net",
-        minimumTtl: 300,
-        refreshTime: 3600,
-        retryTime: 300,
-        serialNumber: 1,
-    },
-    ttl: 3600,
-});
-
-```
-
-{{% /example %}}
-
-### PUT Private DNS Zone SRV Record Set
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var recordSet = new AzureRM.Network.Latest.RecordSet("recordSet", new AzureRM.Network.Latest.RecordSetArgs
-        {
-            Metadata = 
-            {
-                { "key1", "value1" },
-            },
-            PrivateZoneName = "privatezone1.com",
-            RecordType = "SRV",
-            RelativeRecordSetName = "recordSRV",
-            ResourceGroupName = "resourceGroup1",
-            SrvRecords = 
-            {
-                new AzureRM.Network.Latest.Inputs.SrvRecordArgs
-                {
-                    Port = 80,
-                    Priority = 0,
-                    Target = "contoso.com",
-                    Weight = 10,
-                },
-            },
-            Ttl = 3600,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewRecordSet(ctx, "recordSet", &network.RecordSetArgs{
-			Metadata: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-			},
-			PrivateZoneName:       pulumi.String("privatezone1.com"),
-			RecordType:            pulumi.String("SRV"),
-			RelativeRecordSetName: pulumi.String("recordSRV"),
-			ResourceGroupName:     pulumi.String("resourceGroup1"),
-			SrvRecords: network.SrvRecordArray{
-				&network.SrvRecordArgs{
-					Port:     pulumi.Int(80),
-					Priority: pulumi.Int(0),
-					Target:   pulumi.String("contoso.com"),
-					Weight:   pulumi.Int(10),
-				},
-			},
-			Ttl: pulumi.Int(3600),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-record_set = azurerm.network.latest.RecordSet("recordSet",
-    metadata={
-        "key1": "value1",
-    },
-    private_zone_name="privatezone1.com",
-    record_type="SRV",
-    relative_record_set_name="recordSRV",
-    resource_group_name="resourceGroup1",
-    srv_records=[{
-        "port": 80,
-        "priority": 0,
-        "target": "contoso.com",
-        "weight": 10,
-    }],
-    ttl=3600)
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const recordSet = new azurerm.network.latest.RecordSet("recordSet", {
-    metadata: {
-        key1: "value1",
-    },
-    privateZoneName: "privatezone1.com",
-    recordType: "SRV",
-    relativeRecordSetName: "recordSRV",
-    resourceGroupName: "resourceGroup1",
-    srvRecords: [{
-        port: 80,
-        priority: 0,
-        target: "contoso.com",
-        weight: 10,
-    }],
-    ttl: 3600,
-});
-
-```
-
-{{% /example %}}
-
-### PUT Private DNS Zone TXT Record Set
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var recordSet = new AzureRM.Network.Latest.RecordSet("recordSet", new AzureRM.Network.Latest.RecordSetArgs
-        {
-            Metadata = 
-            {
-                { "key1", "value1" },
-            },
-            PrivateZoneName = "privatezone1.com",
-            RecordType = "TXT",
-            RelativeRecordSetName = "recordTXT",
-            ResourceGroupName = "resourceGroup1",
-            Ttl = 3600,
-            TxtRecords = 
-            {
-                new AzureRM.Network.Latest.Inputs.TxtRecordArgs
-                {
-                    Value = 
-                    {
-                        "string1",
-                        "string2",
-                    },
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewRecordSet(ctx, "recordSet", &network.RecordSetArgs{
-			Metadata: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-			},
-			PrivateZoneName:       pulumi.String("privatezone1.com"),
-			RecordType:            pulumi.String("TXT"),
-			RelativeRecordSetName: pulumi.String("recordTXT"),
-			ResourceGroupName:     pulumi.String("resourceGroup1"),
-			Ttl:                   pulumi.Int(3600),
-			TxtRecords: network.TxtRecordArray{
-				&network.TxtRecordArgs{
-					Value: pulumi.StringArray{
-						pulumi.String("string1"),
-						pulumi.String("string2"),
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-record_set = azurerm.network.latest.RecordSet("recordSet",
-    metadata={
-        "key1": "value1",
-    },
-    private_zone_name="privatezone1.com",
-    record_type="TXT",
-    relative_record_set_name="recordTXT",
-    resource_group_name="resourceGroup1",
-    ttl=3600,
-    txt_records=[{
-        "value": [
-            "string1",
-            "string2",
-        ],
-    }])
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const recordSet = new azurerm.network.latest.RecordSet("recordSet", {
-    metadata: {
-        key1: "value1",
-    },
-    privateZoneName: "privatezone1.com",
-    recordType: "TXT",
-    relativeRecordSetName: "recordTXT",
-    resourceGroupName: "resourceGroup1",
-    ttl: 3600,
-    txtRecords: [{
-        value: [
-            "string1",
-            "string2",
-        ],
-    }],
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a RecordSet Resource {#create}
@@ -1047,7 +23,7 @@ const recordSet = new azurerm.network.latest.RecordSet("recordSet", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/network/latest/#pulumi_azurerm.network/latest.RecordSet">RecordSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">a_records</span><span class="p">:</span> <span class="nx">Optional[List[ARecord]]</span> = None<span class="p">, </span><span class="nx">aaaa_records</span><span class="p">:</span> <span class="nx">Optional[List[AaaaRecord]]</span> = None<span class="p">, </span><span class="nx">cname_record</span><span class="p">:</span> <span class="nx">Optional[Dict[CnameRecord]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">mx_records</span><span class="p">:</span> <span class="nx">Optional[List[MxRecord]]</span> = None<span class="p">, </span><span class="nx">private_zone_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ptr_records</span><span class="p">:</span> <span class="nx">Optional[List[PtrRecord]]</span> = None<span class="p">, </span><span class="nx">record_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">relative_record_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soa_record</span><span class="p">:</span> <span class="nx">Optional[Dict[SoaRecord]]</span> = None<span class="p">, </span><span class="nx">srv_records</span><span class="p">:</span> <span class="nx">Optional[List[SrvRecord]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">txt_records</span><span class="p">:</span> <span class="nx">Optional[List[TxtRecord]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/network/latest/#pulumi_azurerm.network/latest.RecordSet">RecordSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">a_records</span><span class="p">:</span> <span class="nx">Optional[List[ARecord]]</span> = None<span class="p">, </span><span class="nx">aaaa_records</span><span class="p">:</span> <span class="nx">Optional[List[AaaaRecord]]</span> = None<span class="p">, </span><span class="nx">cname_record</span><span class="p">:</span> <span class="nx">Optional[Dict[CnameRecord]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">mx_records</span><span class="p">:</span> <span class="nx">Optional[List[MxRecord]]</span> = None<span class="p">, </span><span class="nx">private_zone_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ptr_records</span><span class="p">:</span> <span class="nx">Optional[List[PtrRecord]]</span> = None<span class="p">, </span><span class="nx">record_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">relative_record_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soa_record</span><span class="p">:</span> <span class="nx">Optional[Dict[SoaRecord]]</span> = None<span class="p">, </span><span class="nx">srv_records</span><span class="p">:</span> <span class="nx">Optional[List[SrvRecord]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">txt_records</span><span class="p">:</span> <span class="nx">Optional[List[TxtRecord]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1826,7 +802,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The TTL (time-to-live) of the records in the record set.{{% /md %}}</dd>
 
@@ -2726,7 +1702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preference_python" style="color: inherit; text-decoration: inherit;">preference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The preference value for this MX record.{{% /md %}}</dd>
 
@@ -2852,7 +1828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preference_python" style="color: inherit; text-decoration: inherit;">preference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The preference value for this MX record.{{% /md %}}</dd>
 
@@ -3300,7 +2276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The expire time for this SOA record.{{% /md %}}</dd>
 
@@ -3320,7 +2296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_ttl_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum value for this SOA record. By convention this is used to determine the negative caching duration.{{% /md %}}</dd>
 
@@ -3330,7 +2306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refresh_time_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The refresh value for this SOA record.{{% /md %}}</dd>
 
@@ -3340,7 +2316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_time_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The retry time for this SOA record.{{% /md %}}</dd>
 
@@ -3350,7 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The serial number for this SOA record.{{% /md %}}</dd>
 
@@ -3626,7 +2602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The expire time for this SOA record.{{% /md %}}</dd>
 
@@ -3646,7 +2622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_ttl_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum value for this SOA record. By convention this is used to determine the negative caching duration.{{% /md %}}</dd>
 
@@ -3656,7 +2632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refresh_time_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The refresh value for this SOA record.{{% /md %}}</dd>
 
@@ -3666,7 +2642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_time_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The retry time for this SOA record.{{% /md %}}</dd>
 
@@ -3676,7 +2652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The serial number for this SOA record.{{% /md %}}</dd>
 
@@ -3852,7 +2828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port value for this SRV record.{{% /md %}}</dd>
 
@@ -3862,7 +2838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The priority value for this SRV record.{{% /md %}}</dd>
 
@@ -3882,7 +2858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The weight value for this SRV record.{{% /md %}}</dd>
 
@@ -4058,7 +3034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port value for this SRV record.{{% /md %}}</dd>
 
@@ -4068,7 +3044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The priority value for this SRV record.{{% /md %}}</dd>
 
@@ -4088,7 +3064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The weight value for this SRV record.{{% /md %}}</dd>
 

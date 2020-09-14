@@ -12,158 +12,6 @@ meta_desc: "Explore the OriginGroup resource of the cdn/latest module, including
 
 Origin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### OriginGroups_Create
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var originGroup = new AzureRM.Cdn.Latest.OriginGroup("originGroup", new AzureRM.Cdn.Latest.OriginGroupArgs
-        {
-            EndpointName = "endpoint1",
-            HealthProbeSettings = new AzureRM.Cdn.Latest.Inputs.HealthProbeParametersArgs
-            {
-                ProbeIntervalInSeconds = 120,
-                ProbePath = "/health.aspx",
-                ProbeProtocol = "Http",
-                ProbeRequestType = "GET",
-            },
-            OriginGroupName = "origingroup1",
-            Origins = 
-            {
-                new AzureRM.Cdn.Latest.Inputs.ResourceReferenceArgs
-                {
-                    Id = "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
-                },
-            },
-            ProfileName = "profile1",
-            ResourceGroupName = "RG",
-            ResponseBasedOriginErrorDetectionSettings = new AzureRM.Cdn.Latest.Inputs.ResponseBasedOriginErrorDetectionParametersArgs
-            {
-                ResponseBasedDetectedErrorTypes = "TcpErrorsOnly",
-                ResponseBasedFailoverThresholdPercentage = 10,
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	cdn "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cdn.NewOriginGroup(ctx, "originGroup", &cdn.OriginGroupArgs{
-			EndpointName: pulumi.String("endpoint1"),
-			HealthProbeSettings: &cdn.HealthProbeParametersArgs{
-				ProbeIntervalInSeconds: pulumi.Int(120),
-				ProbePath:              pulumi.String("/health.aspx"),
-				ProbeProtocol:          pulumi.String("Http"),
-				ProbeRequestType:       pulumi.String("GET"),
-			},
-			OriginGroupName: pulumi.String("origingroup1"),
-			Origins: cdn.ResourceReferenceArray{
-				&cdn.ResourceReferenceArgs{
-					Id: pulumi.String("/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1"),
-				},
-			},
-			ProfileName:       pulumi.String("profile1"),
-			ResourceGroupName: pulumi.String("RG"),
-			ResponseBasedOriginErrorDetectionSettings: &cdn.ResponseBasedOriginErrorDetectionParametersArgs{
-				ResponseBasedDetectedErrorTypes:          pulumi.String("TcpErrorsOnly"),
-				ResponseBasedFailoverThresholdPercentage: pulumi.Int(10),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-origin_group = azurerm.cdn.latest.OriginGroup("originGroup",
-    endpoint_name="endpoint1",
-    health_probe_settings={
-        "probeIntervalInSeconds": 120,
-        "probePath": "/health.aspx",
-        "probeProtocol": "Http",
-        "probeRequestType": "GET",
-    },
-    origin_group_name="origingroup1",
-    origins=[{
-        "id": "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
-    }],
-    profile_name="profile1",
-    resource_group_name="RG",
-    response_based_origin_error_detection_settings={
-        "responseBasedDetectedErrorTypes": "TcpErrorsOnly",
-        "responseBasedFailoverThresholdPercentage": 10,
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const originGroup = new azurerm.cdn.latest.OriginGroup("originGroup", {
-    endpointName: "endpoint1",
-    healthProbeSettings: {
-        probeIntervalInSeconds: 120,
-        probePath: "/health.aspx",
-        probeProtocol: "Http",
-        probeRequestType: "GET",
-    },
-    originGroupName: "origingroup1",
-    origins: [{
-        id: "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
-    }],
-    profileName: "profile1",
-    resourceGroupName: "RG",
-    responseBasedOriginErrorDetectionSettings: {
-        responseBasedDetectedErrorTypes: "TcpErrorsOnly",
-        responseBasedFailoverThresholdPercentage: 10,
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a OriginGroup Resource {#create}
@@ -175,7 +23,7 @@ const originGroup = new azurerm.cdn.latest.OriginGroup("originGroup", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/cdn/latest/#pulumi_azurerm.cdn/latest.OriginGroup">OriginGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_probe_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[HealthProbeParameters]]</span> = None<span class="p">, </span><span class="nx">origin_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[List[ResourceReference]]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">response_based_origin_error_detection_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ResponseBasedOriginErrorDetectionParameters]]</span> = None<span class="p">, </span><span class="nx">traffic_restoration_time_to_healed_or_new_endpoints_in_minutes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/cdn/latest/#pulumi_azurerm.cdn/latest.OriginGroup">OriginGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_probe_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[HealthProbeParameters]]</span> = None<span class="p">, </span><span class="nx">origin_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[List[ResourceReference]]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">response_based_origin_error_detection_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ResponseBasedOriginErrorDetectionParameters]]</span> = None<span class="p">, </span><span class="nx">traffic_restoration_time_to_healed_or_new_endpoints_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -684,7 +532,7 @@ The OriginGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#traffic_restoration_time_to_healed_or_new_endpoints_in_minutes_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>restoration_<wbr>time_<wbr>to_<wbr>healed_<wbr>or_<wbr>new_<wbr>endpoints_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.{{% /md %}}</dd>
 
@@ -1108,7 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd>
 
@@ -1314,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd>
 
@@ -1460,7 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#begin_python" style="color: inherit; text-decoration: inherit;">begin</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd>
 
@@ -1470,7 +1318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd>
 
@@ -1586,7 +1434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#begin_python" style="color: inherit; text-decoration: inherit;">begin</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd>
 
@@ -1596,7 +1444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd>
 
@@ -1934,7 +1782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_based_failover_threshold_percentage_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>failover_<wbr>threshold_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd>
 
@@ -2100,7 +1948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_based_failover_threshold_percentage_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>failover_<wbr>threshold_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd>
 

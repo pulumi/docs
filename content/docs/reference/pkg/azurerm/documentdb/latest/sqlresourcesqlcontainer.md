@@ -12,288 +12,6 @@ meta_desc: "Explore the SqlResourceSqlContainer resource of the documentdb/lates
 
 An Azure Cosmos DB container.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### CosmosDBSqlContainerCreateUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var sqlResourceSqlContainer = new AzureRM.DocumentDB.Latest.SqlResourceSqlContainer("sqlResourceSqlContainer", new AzureRM.DocumentDB.Latest.SqlResourceSqlContainerArgs
-        {
-            AccountName = "ddb1",
-            ContainerName = "containerName",
-            DatabaseName = "databaseName",
-            Location = "West US",
-            Options = ,
-            Resource = new AzureRM.DocumentDB.Latest.Inputs.SqlContainerResourceArgs
-            {
-                ConflictResolutionPolicy = new AzureRM.DocumentDB.Latest.Inputs.ConflictResolutionPolicyArgs
-                {
-                    ConflictResolutionPath = "/path",
-                    Mode = "LastWriterWins",
-                },
-                DefaultTtl = 100,
-                Id = "containerName",
-                IndexingPolicy = new AzureRM.DocumentDB.Latest.Inputs.IndexingPolicyArgs
-                {
-                    Automatic = true,
-                    ExcludedPaths = {},
-                    IncludedPaths = 
-                    {
-                        new AzureRM.DocumentDB.Latest.Inputs.IncludedPathArgs
-                        {
-                            Indexes = 
-                            {
-                                new AzureRM.DocumentDB.Latest.Inputs.IndexesArgs
-                                {
-                                    DataType = "String",
-                                    Kind = "Range",
-                                    Precision = -1,
-                                },
-                                new AzureRM.DocumentDB.Latest.Inputs.IndexesArgs
-                                {
-                                    DataType = "Number",
-                                    Kind = "Range",
-                                    Precision = -1,
-                                },
-                            },
-                            Path = "/*",
-                        },
-                    },
-                    IndexingMode = "Consistent",
-                },
-                PartitionKey = new AzureRM.DocumentDB.Latest.Inputs.ContainerPartitionKeyArgs
-                {
-                    Kind = "Hash",
-                    Paths = 
-                    {
-                        "/AccountNumber",
-                    },
-                },
-                UniqueKeyPolicy = new AzureRM.DocumentDB.Latest.Inputs.UniqueKeyPolicyArgs
-                {
-                    UniqueKeys = 
-                    {
-                        new AzureRM.DocumentDB.Latest.Inputs.UniqueKeyArgs
-                        {
-                            Paths = 
-                            {
-                                "/testPath",
-                            },
-                        },
-                    },
-                },
-            },
-            ResourceGroupName = "rg1",
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/documentdb/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewSqlResourceSqlContainer(ctx, "sqlResourceSqlContainer", &documentdb.SqlResourceSqlContainerArgs{
-			AccountName:   pulumi.String("ddb1"),
-			ContainerName: pulumi.String("containerName"),
-			DatabaseName:  pulumi.String("databaseName"),
-			Location:      pulumi.String("West US"),
-			Options:       nil,
-			Resource: &documentdb.SqlContainerResourceArgs{
-				ConflictResolutionPolicy: &documentdb.ConflictResolutionPolicyArgs{
-					ConflictResolutionPath: pulumi.String("/path"),
-					Mode:                   pulumi.String("LastWriterWins"),
-				},
-				DefaultTtl: pulumi.Int(100),
-				Id:         pulumi.String("containerName"),
-				IndexingPolicy: &documentdb.IndexingPolicyArgs{
-					Automatic:     pulumi.Bool(true),
-					ExcludedPaths: documentdb.ExcludedPathArray{},
-					IncludedPaths: documentdb.IncludedPathArray{
-						&documentdb.IncludedPathArgs{
-							Indexes: documentdb.IndexesArray{
-								&documentdb.IndexesArgs{
-									DataType:  pulumi.String("String"),
-									Kind:      pulumi.String("Range"),
-									Precision: pulumi.Int(-1),
-								},
-								&documentdb.IndexesArgs{
-									DataType:  pulumi.String("Number"),
-									Kind:      pulumi.String("Range"),
-									Precision: pulumi.Int(-1),
-								},
-							},
-							Path: pulumi.String("/*"),
-						},
-					},
-					IndexingMode: pulumi.String("Consistent"),
-				},
-				PartitionKey: &documentdb.ContainerPartitionKeyArgs{
-					Kind: pulumi.String("Hash"),
-					Paths: pulumi.StringArray{
-						pulumi.String("/AccountNumber"),
-					},
-				},
-				UniqueKeyPolicy: &documentdb.UniqueKeyPolicyArgs{
-					UniqueKeys: documentdb.UniqueKeyArray{
-						&documentdb.UniqueKeyArgs{
-							Paths: pulumi.StringArray{
-								pulumi.String("/testPath"),
-							},
-						},
-					},
-				},
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			Tags:              nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-sql_resource_sql_container = azurerm.documentdb.latest.SqlResourceSqlContainer("sqlResourceSqlContainer",
-    account_name="ddb1",
-    container_name="containerName",
-    database_name="databaseName",
-    location="West US",
-    options={},
-    resource={
-        "conflictResolutionPolicy": {
-            "conflictResolutionPath": "/path",
-            "mode": "LastWriterWins",
-        },
-        "defaultTtl": 100,
-        "id": "containerName",
-        "indexingPolicy": {
-            "automatic": True,
-            "excludedPaths": [],
-            "includedPaths": [{
-                "indexes": [
-                    {
-                        "dataType": "String",
-                        "kind": "Range",
-                        "precision": -1,
-                    },
-                    {
-                        "dataType": "Number",
-                        "kind": "Range",
-                        "precision": -1,
-                    },
-                ],
-                "path": "/*",
-            }],
-            "indexingMode": "Consistent",
-        },
-        "partitionKey": {
-            "kind": "Hash",
-            "paths": ["/AccountNumber"],
-        },
-        "uniqueKeyPolicy": {
-            "uniqueKeys": [{
-                "paths": ["/testPath"],
-            }],
-        },
-    },
-    resource_group_name="rg1",
-    tags={})
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const sqlResourceSqlContainer = new azurerm.documentdb.latest.SqlResourceSqlContainer("sqlResourceSqlContainer", {
-    accountName: "ddb1",
-    containerName: "containerName",
-    databaseName: "databaseName",
-    location: "West US",
-    options: {},
-    resource: {
-        conflictResolutionPolicy: {
-            conflictResolutionPath: "/path",
-            mode: "LastWriterWins",
-        },
-        defaultTtl: 100,
-        id: "containerName",
-        indexingPolicy: {
-            automatic: true,
-            excludedPaths: [],
-            includedPaths: [{
-                indexes: [
-                    {
-                        dataType: "String",
-                        kind: "Range",
-                        precision: -1,
-                    },
-                    {
-                        dataType: "Number",
-                        kind: "Range",
-                        precision: -1,
-                    },
-                ],
-                path: "/*",
-            }],
-            indexingMode: "Consistent",
-        },
-        partitionKey: {
-            kind: "Hash",
-            paths: ["/AccountNumber"],
-        },
-        uniqueKeyPolicy: {
-            uniqueKeys: [{
-                paths: ["/testPath"],
-            }],
-        },
-    },
-    resourceGroupName: "rg1",
-    tags: {},
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a SqlResourceSqlContainer Resource {#create}
@@ -1068,7 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
 
@@ -1154,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
 
@@ -1904,7 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Indicates the version of the partition key definition{{% /md %}}</dd>
 
@@ -2070,7 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Indicates the version of the partition key definition{{% /md %}}</dd>
 
@@ -2196,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd>
 
@@ -2786,7 +2504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#precision_python" style="color: inherit; text-decoration: inherit;">precision</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The precision of the index. -1 is maximum precision.{{% /md %}}</dd>
 
@@ -2952,7 +2670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#precision_python" style="color: inherit; text-decoration: inherit;">precision</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The precision of the index. -1 is maximum precision.{{% /md %}}</dd>
 
@@ -3902,7 +3620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.{{% /md %}}</dd>
 
@@ -4298,7 +4016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analytical_storage_ttl_python" style="color: inherit; text-decoration: inherit;">analytical_<wbr>storage_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd>
 
@@ -4318,7 +4036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Default time to live{{% /md %}}</dd>
 
@@ -4624,7 +4342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analytical_storage_ttl_python" style="color: inherit; text-decoration: inherit;">analytical_<wbr>storage_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd>
 
@@ -4644,7 +4362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Default time to live{{% /md %}}</dd>
 

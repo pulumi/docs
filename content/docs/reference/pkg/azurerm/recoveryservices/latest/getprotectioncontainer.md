@@ -1047,7 +1047,7 @@ The following output properties are available:
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd>
 
@@ -1831,8 +1831,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aadtenantid_python">
-<a href="#aadtenantid_python" style="color: inherit; text-decoration: inherit;">aad<wbr>Tenant<wbr>Id</a>
+        <span id="aad_tenant_id_python">
+<a href="#aad_tenant_id_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>tenant_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2617,7 +2617,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd>
 
@@ -4107,7 +4107,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd>
 
@@ -4809,7 +4809,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}ContainerID represents the container.{{% /md %}}</dd>
 
@@ -4859,7 +4859,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd>
 
@@ -5025,7 +5025,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#itemcount_python" style="color: inherit; text-decoration: inherit;">item<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Contains the protectable item Count inside this Container.{{% /md %}}</dd>
 

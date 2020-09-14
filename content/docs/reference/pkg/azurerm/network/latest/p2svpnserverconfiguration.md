@@ -12,229 +12,6 @@ meta_desc: "Explore the P2sVpnServerConfiguration resource of the network/latest
 
 P2SVpnServerConfiguration Resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### P2SVpnServerConfigurationPut
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var p2sVpnServerConfiguration = new AzureRM.Network.Latest.P2sVpnServerConfiguration("p2sVpnServerConfiguration", new AzureRM.Network.Latest.P2sVpnServerConfigurationArgs
-        {
-            P2SVpnServerConfigRadiusClientRootCertificates = 
-            {
-                new AzureRM.Network.Latest.Inputs.P2SVpnServerConfigRadiusClientRootCertificateArgs
-                {
-                    Name = "p2sVpnServerConfigRadiusClientRootCert1",
-                },
-            },
-            P2SVpnServerConfigRadiusServerRootCertificates = 
-            {
-                new AzureRM.Network.Latest.Inputs.P2SVpnServerConfigRadiusServerRootCertificateArgs
-                {
-                    Name = "p2sVpnServerConfigRadiusServerRootCert1",
-                },
-            },
-            P2SVpnServerConfigVpnClientRevokedCertificates = 
-            {
-                new AzureRM.Network.Latest.Inputs.P2SVpnServerConfigVpnClientRevokedCertificateArgs
-                {
-                    Name = "p2sVpnServerConfigVpnClientRevokedCert1",
-                },
-            },
-            P2SVpnServerConfigVpnClientRootCertificates = 
-            {
-                new AzureRM.Network.Latest.Inputs.P2SVpnServerConfigVpnClientRootCertificateArgs
-                {
-                    Name = "p2sVpnServerConfigVpnClientRootCert1",
-                },
-            },
-            P2SVpnServerConfigurationName = "p2sVpnServerConfiguration1",
-            RadiusServerAddress = "8.9.9.9",
-            RadiusServerSecret = "123_abc",
-            ResourceGroupName = "rg1",
-            VirtualWanName = "virtualWan1",
-            VpnClientIpsecPolicies = 
-            {
-                new AzureRM.Network.Latest.Inputs.IpsecPolicyArgs
-                {
-                    DhGroup = "DHGroup14",
-                    IkeEncryption = "AES256",
-                    IkeIntegrity = "SHA384",
-                    IpsecEncryption = "AES256",
-                    IpsecIntegrity = "SHA256",
-                    PfsGroup = "PFS14",
-                    SaDataSizeKilobytes = 429497,
-                    SaLifeTimeSeconds = 86472,
-                },
-            },
-            VpnProtocols = 
-            {
-                "IkeV2",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewP2sVpnServerConfiguration(ctx, "p2sVpnServerConfiguration", &network.P2sVpnServerConfigurationArgs{
-			P2SVpnServerConfigRadiusClientRootCertificates: network.P2SVpnServerConfigRadiusClientRootCertificateArray{
-				&network.P2SVpnServerConfigRadiusClientRootCertificateArgs{
-					Name: pulumi.String("p2sVpnServerConfigRadiusClientRootCert1"),
-				},
-			},
-			P2SVpnServerConfigRadiusServerRootCertificates: network.P2SVpnServerConfigRadiusServerRootCertificateArray{
-				&network.P2SVpnServerConfigRadiusServerRootCertificateArgs{
-					Name: pulumi.String("p2sVpnServerConfigRadiusServerRootCert1"),
-				},
-			},
-			P2SVpnServerConfigVpnClientRevokedCertificates: network.P2SVpnServerConfigVpnClientRevokedCertificateArray{
-				&network.P2SVpnServerConfigVpnClientRevokedCertificateArgs{
-					Name: pulumi.String("p2sVpnServerConfigVpnClientRevokedCert1"),
-				},
-			},
-			P2SVpnServerConfigVpnClientRootCertificates: network.P2SVpnServerConfigVpnClientRootCertificateArray{
-				&network.P2SVpnServerConfigVpnClientRootCertificateArgs{
-					Name: pulumi.String("p2sVpnServerConfigVpnClientRootCert1"),
-				},
-			},
-			P2SVpnServerConfigurationName: pulumi.String("p2sVpnServerConfiguration1"),
-			RadiusServerAddress:           pulumi.String("8.9.9.9"),
-			RadiusServerSecret:            pulumi.String("123_abc"),
-			ResourceGroupName:             pulumi.String("rg1"),
-			VirtualWanName:                pulumi.String("virtualWan1"),
-			VpnClientIpsecPolicies: network.IpsecPolicyArray{
-				&network.IpsecPolicyArgs{
-					DhGroup:             pulumi.String("DHGroup14"),
-					IkeEncryption:       pulumi.String("AES256"),
-					IkeIntegrity:        pulumi.String("SHA384"),
-					IpsecEncryption:     pulumi.String("AES256"),
-					IpsecIntegrity:      pulumi.String("SHA256"),
-					PfsGroup:            pulumi.String("PFS14"),
-					SaDataSizeKilobytes: pulumi.Int(429497),
-					SaLifeTimeSeconds:   pulumi.Int(86472),
-				},
-			},
-			VpnProtocols: pulumi.StringArray{
-				pulumi.String("IkeV2"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-p2s_vpn_server_configuration = azurerm.network.latest.P2sVpnServerConfiguration("p2sVpnServerConfiguration",
-    p2_s_vpn_server_config_radius_client_root_certificates=[{
-        "name": "p2sVpnServerConfigRadiusClientRootCert1",
-    }],
-    p2_s_vpn_server_config_radius_server_root_certificates=[{
-        "name": "p2sVpnServerConfigRadiusServerRootCert1",
-    }],
-    p2_s_vpn_server_config_vpn_client_revoked_certificates=[{
-        "name": "p2sVpnServerConfigVpnClientRevokedCert1",
-    }],
-    p2_s_vpn_server_config_vpn_client_root_certificates=[{
-        "name": "p2sVpnServerConfigVpnClientRootCert1",
-    }],
-    p2_s_vpn_server_configuration_name="p2sVpnServerConfiguration1",
-    radius_server_address="8.9.9.9",
-    radius_server_secret="123_abc",
-    resource_group_name="rg1",
-    virtual_wan_name="virtualWan1",
-    vpn_client_ipsec_policies=[{
-        "dhGroup": "DHGroup14",
-        "ikeEncryption": "AES256",
-        "ikeIntegrity": "SHA384",
-        "ipsecEncryption": "AES256",
-        "ipsecIntegrity": "SHA256",
-        "pfsGroup": "PFS14",
-        "saDataSizeKilobytes": 429497,
-        "saLifeTimeSeconds": 86472,
-    }],
-    vpn_protocols=["IkeV2"])
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const p2sVpnServerConfiguration = new azurerm.network.latest.P2sVpnServerConfiguration("p2sVpnServerConfiguration", {
-    p2SVpnServerConfigRadiusClientRootCertificates: [{
-        name: "p2sVpnServerConfigRadiusClientRootCert1",
-    }],
-    p2SVpnServerConfigRadiusServerRootCertificates: [{
-        name: "p2sVpnServerConfigRadiusServerRootCert1",
-    }],
-    p2SVpnServerConfigVpnClientRevokedCertificates: [{
-        name: "p2sVpnServerConfigVpnClientRevokedCert1",
-    }],
-    p2SVpnServerConfigVpnClientRootCertificates: [{
-        name: "p2sVpnServerConfigVpnClientRootCert1",
-    }],
-    p2SVpnServerConfigurationName: "p2sVpnServerConfiguration1",
-    radiusServerAddress: "8.9.9.9",
-    radiusServerSecret: "123_abc",
-    resourceGroupName: "rg1",
-    virtualWanName: "virtualWan1",
-    vpnClientIpsecPolicies: [{
-        dhGroup: "DHGroup14",
-        ikeEncryption: "AES256",
-        ikeIntegrity: "SHA384",
-        ipsecEncryption: "AES256",
-        ipsecIntegrity: "SHA256",
-        pfsGroup: "PFS14",
-        saDataSizeKilobytes: 429497,
-        saLifeTimeSeconds: 86472,
-    }],
-    vpnProtocols: ["IkeV2"],
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a P2sVpnServerConfiguration Resource {#create}
@@ -1519,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sadatasizekilobytes_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd>
 
@@ -1529,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#salifetimeseconds_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Life<wbr>Time<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd>
 
@@ -1885,7 +1662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sadatasizekilobytes_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd>
 
@@ -1895,7 +1672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#salifetimeseconds_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Life<wbr>Time<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd>
 

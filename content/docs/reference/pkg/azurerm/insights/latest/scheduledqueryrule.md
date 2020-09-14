@@ -12,425 +12,6 @@ meta_desc: "Explore the ScheduledQueryRule resource of the insights/latest modul
 
 The Log Search Rule resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or Update rule - AlertingAction
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var scheduledQueryRule = new AzureRM.Insights.Latest.ScheduledQueryRule("scheduledQueryRule", new AzureRM.Insights.Latest.ScheduledQueryRuleArgs
-        {
-            Action = 
-            {
-                { "aznsAction", new AzureRM.Insights.Latest.Inputs.AzNsActionGroupArgs
-                {
-                    ActionGroup = {},
-                    CustomWebhookPayload = "{}",
-                    EmailSubject = "Email Header",
-                } },
-                { "odata.type", "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction" },
-                { "severity", "1" },
-                { "trigger", new AzureRM.Insights.Latest.Inputs.TriggerConditionArgs
-                {
-                    MetricTrigger = new AzureRM.Insights.Latest.Inputs.LogMetricTriggerArgs
-                    {
-                        MetricColumn = "Computer",
-                        MetricTriggerType = "Consecutive",
-                        Threshold = 5,
-                        ThresholdOperator = "GreaterThan",
-                    },
-                    Threshold = 3,
-                    ThresholdOperator = "GreaterThan",
-                } },
-            },
-            Description = "log alert description",
-            Enabled = "true",
-            Location = "eastus",
-            ResourceGroupName = "Rac46PostSwapRG",
-            RuleName = "logalertfoo",
-            Schedule = new AzureRM.Insights.Latest.Inputs.ScheduleArgs
-            {
-                FrequencyInMinutes = 15,
-                TimeWindowInMinutes = 15,
-            },
-            Source = new AzureRM.Insights.Latest.Inputs.SourceArgs
-            {
-                DataSourceId = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
-                Query = "Heartbeat | summarize AggregatedValue = count() by bin(TimeGenerated, 5m)",
-                QueryType = "ResultCount",
-            },
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-scheduled_query_rule = azurerm.insights.latest.ScheduledQueryRule("scheduledQueryRule",
-    action={
-        "aznsAction": {
-            "actionGroup": [],
-            "customWebhookPayload": "{}",
-            "emailSubject": "Email Header",
-        },
-        "odata.type": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
-        "severity": "1",
-        "trigger": {
-            "metricTrigger": {
-                "metricColumn": "Computer",
-                "metricTriggerType": "Consecutive",
-                "threshold": 5,
-                "thresholdOperator": "GreaterThan",
-            },
-            "threshold": 3,
-            "thresholdOperator": "GreaterThan",
-        },
-    },
-    description="log alert description",
-    enabled="true",
-    location="eastus",
-    resource_group_name="Rac46PostSwapRG",
-    rule_name="logalertfoo",
-    schedule={
-        "frequencyInMinutes": 15,
-        "timeWindowInMinutes": 15,
-    },
-    source={
-        "dataSourceId": "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
-        "query": "Heartbeat | summarize AggregatedValue = count() by bin(TimeGenerated, 5m)",
-        "queryType": "ResultCount",
-    },
-    tags={})
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const scheduledQueryRule = new azurerm.insights.latest.ScheduledQueryRule("scheduledQueryRule", {
-    action: {
-        aznsAction: {
-            actionGroup: [],
-            customWebhookPayload: "{}",
-            emailSubject: "Email Header",
-        },
-        "odata.type": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
-        severity: "1",
-        trigger: {
-            metricTrigger: {
-                metricColumn: "Computer",
-                metricTriggerType: "Consecutive",
-                threshold: 5,
-                thresholdOperator: "GreaterThan",
-            },
-            threshold: 3,
-            thresholdOperator: "GreaterThan",
-        },
-    },
-    description: "log alert description",
-    enabled: "true",
-    location: "eastus",
-    resourceGroupName: "Rac46PostSwapRG",
-    ruleName: "logalertfoo",
-    schedule: {
-        frequencyInMinutes: 15,
-        timeWindowInMinutes: 15,
-    },
-    source: {
-        dataSourceId: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
-        query: "Heartbeat | summarize AggregatedValue = count() by bin(TimeGenerated, 5m)",
-        queryType: "ResultCount",
-    },
-    tags: {},
-});
-
-```
-
-{{% /example %}}
-
-### Create or Update rule - AlertingAction with Cross-Resource
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var scheduledQueryRule = new AzureRM.Insights.Latest.ScheduledQueryRule("scheduledQueryRule", new AzureRM.Insights.Latest.ScheduledQueryRuleArgs
-        {
-            Action = 
-            {
-                { "aznsAction", new AzureRM.Insights.Latest.Inputs.AzNsActionGroupArgs
-                {
-                    ActionGroup = 
-                    {
-                        "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag",
-                    },
-                    EmailSubject = "Cross Resource Mail!!",
-                } },
-                { "odata.type", "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction" },
-                { "severity", "3" },
-                { "trigger", new AzureRM.Insights.Latest.Inputs.TriggerConditionArgs
-                {
-                    Threshold = 5000,
-                    ThresholdOperator = "GreaterThan",
-                } },
-            },
-            Description = "Sample Cross Resource alert",
-            Enabled = "true",
-            Location = "eastus",
-            ResourceGroupName = "Rac46PostSwapRG",
-            RuleName = "SampleCrossResourceAlert",
-            Schedule = new AzureRM.Insights.Latest.Inputs.ScheduleArgs
-            {
-                FrequencyInMinutes = 60,
-                TimeWindowInMinutes = 60,
-            },
-            Source = new AzureRM.Insights.Latest.Inputs.SourceArgs
-            {
-                AuthorizedResources = 
-                {
-                    "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
-                    "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI",
-                },
-                DataSourceId = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI",
-                Query = "union requests, workspace(\"sampleWorkspace\").Update",
-                QueryType = "ResultCount",
-            },
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-scheduled_query_rule = azurerm.insights.latest.ScheduledQueryRule("scheduledQueryRule",
-    action={
-        "aznsAction": {
-            "actionGroup": ["/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag"],
-            "emailSubject": "Cross Resource Mail!!",
-        },
-        "odata.type": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
-        "severity": "3",
-        "trigger": {
-            "threshold": 5000,
-            "thresholdOperator": "GreaterThan",
-        },
-    },
-    description="Sample Cross Resource alert",
-    enabled="true",
-    location="eastus",
-    resource_group_name="Rac46PostSwapRG",
-    rule_name="SampleCrossResourceAlert",
-    schedule={
-        "frequencyInMinutes": 60,
-        "timeWindowInMinutes": 60,
-    },
-    source={
-        "authorizedResources": [
-            "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
-            "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI",
-        ],
-        "dataSourceId": "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI",
-        "query": "union requests, workspace(\"sampleWorkspace\").Update",
-        "queryType": "ResultCount",
-    },
-    tags={})
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const scheduledQueryRule = new azurerm.insights.latest.ScheduledQueryRule("scheduledQueryRule", {
-    action: {
-        aznsAction: {
-            actionGroup: ["/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag"],
-            emailSubject: "Cross Resource Mail!!",
-        },
-        "odata.type": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
-        severity: "3",
-        trigger: {
-            threshold: 5000,
-            thresholdOperator: "GreaterThan",
-        },
-    },
-    description: "Sample Cross Resource alert",
-    enabled: "true",
-    location: "eastus",
-    resourceGroupName: "Rac46PostSwapRG",
-    ruleName: "SampleCrossResourceAlert",
-    schedule: {
-        frequencyInMinutes: 60,
-        timeWindowInMinutes: 60,
-    },
-    source: {
-        authorizedResources: [
-            "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
-            "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI",
-        ],
-        dataSourceId: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI",
-        query: "union requests, workspace(\"sampleWorkspace\").Update",
-        queryType: "ResultCount",
-    },
-    tags: {},
-});
-
-```
-
-{{% /example %}}
-
-### Create or Update rule - LogToMetricAction
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var scheduledQueryRule = new AzureRM.Insights.Latest.ScheduledQueryRule("scheduledQueryRule", new AzureRM.Insights.Latest.ScheduledQueryRuleArgs
-        {
-            Action = 
-            {
-                { "criteria", 
-                {
-                    new AzureRM.Insights.Latest.Inputs.CriteriaArgs
-                    {
-                        Dimensions = {},
-                        MetricName = "Average_% Idle Time",
-                    },
-                } },
-                { "odata.type", "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction" },
-            },
-            Description = "log to metric description",
-            Enabled = "true",
-            Location = "West Europe",
-            ResourceGroupName = "alertsweu",
-            RuleName = "logtometricfoo",
-            Source = new AzureRM.Insights.Latest.Inputs.SourceArgs
-            {
-                DataSourceId = "/subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/Microsoft.OperationalInsights/workspaces/alertsweu",
-            },
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-scheduled_query_rule = azurerm.insights.latest.ScheduledQueryRule("scheduledQueryRule",
-    action={
-        "criteria": [{
-            "dimensions": [],
-            "metricName": "Average_% Idle Time",
-        }],
-        "odata.type": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction",
-    },
-    description="log to metric description",
-    enabled="true",
-    location="West Europe",
-    resource_group_name="alertsweu",
-    rule_name="logtometricfoo",
-    source={
-        "dataSourceId": "/subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/Microsoft.OperationalInsights/workspaces/alertsweu",
-    },
-    tags={})
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const scheduledQueryRule = new azurerm.insights.latest.ScheduledQueryRule("scheduledQueryRule", {
-    action: {
-        criteria: [{
-            dimensions: [],
-            metricName: `Average_% Idle Time`,
-        }],
-        "odata.type": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction",
-    },
-    description: "log to metric description",
-    enabled: "true",
-    location: "West Europe",
-    resourceGroupName: "alertsweu",
-    ruleName: "logtometricfoo",
-    source: {
-        dataSourceId: "/subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/Microsoft.OperationalInsights/workspaces/alertsweu",
-    },
-    tags: {},
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ScheduledQueryRule Resource {#create}
@@ -1445,7 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throttlinginmin_python" style="color: inherit; text-decoration: inherit;">throttling<wbr>In<wbr>Min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd>
 
@@ -1651,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throttlinginmin_python" style="color: inherit; text-decoration: inherit;">throttling<wbr>In<wbr>Min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd>
 
@@ -3267,7 +2848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd>
 
@@ -3277,7 +2858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_window_in_minutes_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd>
 
@@ -3393,7 +2974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd>
 
@@ -3403,7 +2984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_window_in_minutes_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd>
 

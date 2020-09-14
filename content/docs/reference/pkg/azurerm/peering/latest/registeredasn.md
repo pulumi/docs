@@ -12,98 +12,6 @@ meta_desc: "Explore the RegisteredAsn resource of the peering/latest module, inc
 
 The customer's ASN that is registered by the peering service provider.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update a registered ASN for the peering
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var registeredAsn = new AzureRM.Peering.Latest.RegisteredAsn("registeredAsn", new AzureRM.Peering.Latest.RegisteredAsnArgs
-        {
-            Asn = 65000,
-            PeeringName = "peeringName",
-            RegisteredAsnName = "registeredAsnName",
-            ResourceGroupName = "rgName",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	peering "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/peering/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := peering.NewRegisteredAsn(ctx, "registeredAsn", &peering.RegisteredAsnArgs{
-			Asn:               pulumi.Int(65000),
-			PeeringName:       pulumi.String("peeringName"),
-			RegisteredAsnName: pulumi.String("registeredAsnName"),
-			ResourceGroupName: pulumi.String("rgName"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-registered_asn = azurerm.peering.latest.RegisteredAsn("registeredAsn",
-    asn=65000,
-    peering_name="peeringName",
-    registered_asn_name="registeredAsnName",
-    resource_group_name="rgName")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const registeredAsn = new azurerm.peering.latest.RegisteredAsn("registeredAsn", {
-    asn: 65000,
-    peeringName: "peeringName",
-    registeredAsnName: "registeredAsnName",
-    resourceGroupName: "rgName",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a RegisteredAsn Resource {#create}
@@ -115,7 +23,7 @@ const registeredAsn = new azurerm.peering.latest.RegisteredAsn("registeredAsn", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/peering/latest/#pulumi_azurerm.peering/latest.RegisteredAsn">RegisteredAsn</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">asn</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registered_asn_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/peering/latest/#pulumi_azurerm.peering/latest.RegisteredAsn">RegisteredAsn</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registered_asn_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -464,7 +372,7 @@ The RegisteredAsn resource accepts the following [input]({{< relref "/docs/intro
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The customer's ASN from which traffic originates.{{% /md %}}</dd>
 

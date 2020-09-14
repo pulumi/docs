@@ -12,177 +12,6 @@ meta_desc: "Explore the Dataset resource of the datafactory/latest module, inclu
 
 Dataset resource type.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Datasets_Create
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var dataset = new AzureRM.DataFactory.Latest.Dataset("dataset", new AzureRM.DataFactory.Latest.DatasetArgs
-        {
-            DatasetName = "exampleDataset",
-            FactoryName = "exampleFactoryName",
-            ResourceGroupName = "exampleResourceGroup",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	datafactory "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/datafactory/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datafactory.NewDataset(ctx, "dataset", &datafactory.DatasetArgs{
-			DatasetName:       pulumi.String("exampleDataset"),
-			FactoryName:       pulumi.String("exampleFactoryName"),
-			ResourceGroupName: pulumi.String("exampleResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-dataset = azurerm.datafactory.latest.Dataset("dataset",
-    dataset_name="exampleDataset",
-    factory_name="exampleFactoryName",
-    resource_group_name="exampleResourceGroup")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const dataset = new azurerm.datafactory.latest.Dataset("dataset", {
-    datasetName: "exampleDataset",
-    factoryName: "exampleFactoryName",
-    resourceGroupName: "exampleResourceGroup",
-});
-
-```
-
-{{% /example %}}
-
-### Datasets_Update
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var dataset = new AzureRM.DataFactory.Latest.Dataset("dataset", new AzureRM.DataFactory.Latest.DatasetArgs
-        {
-            DatasetName = "exampleDataset",
-            FactoryName = "exampleFactoryName",
-            ResourceGroupName = "exampleResourceGroup",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	datafactory "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/datafactory/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datafactory.NewDataset(ctx, "dataset", &datafactory.DatasetArgs{
-			DatasetName:       pulumi.String("exampleDataset"),
-			FactoryName:       pulumi.String("exampleFactoryName"),
-			ResourceGroupName: pulumi.String("exampleResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-dataset = azurerm.datafactory.latest.Dataset("dataset",
-    dataset_name="exampleDataset",
-    factory_name="exampleFactoryName",
-    resource_group_name="exampleResourceGroup")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const dataset = new azurerm.datafactory.latest.Dataset("dataset", {
-    datasetName: "exampleDataset",
-    factoryName: "exampleFactoryName",
-    resourceGroupName: "exampleResourceGroup",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Dataset Resource {#create}
@@ -4395,7 +4224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#avrocompressionlevel_python" style="color: inherit; text-decoration: inherit;">avro<wbr>Compression<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4841,7 +4670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#avrocompressionlevel_python" style="color: inherit; text-decoration: inherit;">avro<wbr>Compression<wbr>Level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

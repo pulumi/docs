@@ -913,7 +913,7 @@ The following output properties are available:
 <a href="#sourcepartitioncount_python" style="color: inherit; text-decoration: inherit;">source<wbr>Partition<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The partition count of the blob input data source. Range 1 - 256.{{% /md %}}</dd>
 

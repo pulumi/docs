@@ -12,106 +12,6 @@ meta_desc: "Explore the Service resource of the windowsiot/latest module, includ
 
 The description of the Windows IoT Device Service.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Service_Create
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var service = new AzureRM.WindowsIoT.Latest.Service("service", new AzureRM.WindowsIoT.Latest.ServiceArgs
-        {
-            AdminDomainName = "d.e.f",
-            BillingDomainName = "a.b.c",
-            DeviceName = "service4445",
-            Notes = "blah",
-            Quantity = 1000000,
-            ResourceGroupName = "res9101",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	windowsiot "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/windowsiot/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := windowsiot.NewService(ctx, "service", &windowsiot.ServiceArgs{
-			AdminDomainName:   pulumi.String("d.e.f"),
-			BillingDomainName: pulumi.String("a.b.c"),
-			DeviceName:        pulumi.String("service4445"),
-			Notes:             pulumi.String("blah"),
-			Quantity:          pulumi.Int(1000000),
-			ResourceGroupName: pulumi.String("res9101"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-service = azurerm.windowsiot.latest.Service("service",
-    admin_domain_name="d.e.f",
-    billing_domain_name="a.b.c",
-    device_name="service4445",
-    notes="blah",
-    quantity=1000000,
-    resource_group_name="res9101")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const service = new azurerm.windowsiot.latest.Service("service", {
-    adminDomainName: "d.e.f",
-    billingDomainName: "a.b.c",
-    deviceName: "service4445",
-    notes: "blah",
-    quantity: 1000000,
-    resourceGroupName: "res9101",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Service Resource {#create}
@@ -123,7 +23,7 @@ const service = new azurerm.windowsiot.latest.Service("service", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/windowsiot/latest/#pulumi_azurerm.windowsiot/latest.Service">Service</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">billing_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">quantity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/windowsiot/latest/#pulumi_azurerm.windowsiot/latest.Service">Service</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">billing_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">quantity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -552,7 +452,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#quantity_python" style="color: inherit; text-decoration: inherit;">quantity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Windows IoT Device Service device allocation,{{% /md %}}</dd>
 

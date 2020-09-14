@@ -12,189 +12,6 @@ meta_desc: "Explore the LiveEvent resource of the media/latest module, including
 
 The Live Event.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create a LiveEvent
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var liveEvent = new AzureRM.Media.Latest.LiveEvent("liveEvent", new AzureRM.Media.Latest.LiveEventArgs
-        {
-            AccountName = "slitestmedia10",
-            Description = "test event 1",
-            Input = new AzureRM.Media.Latest.Inputs.LiveEventInputArgs
-            {
-                KeyFrameIntervalDuration = "PT6S",
-                StreamingProtocol = "RTMP",
-            },
-            LiveEventName = "myLiveEvent1",
-            Location = "West US",
-            Preview = new AzureRM.Media.Latest.Inputs.LiveEventPreviewArgs
-            {
-                AccessControl = new AzureRM.Media.Latest.Inputs.LiveEventPreviewAccessControlArgs
-                {
-                    Ip = new AzureRM.Media.Latest.Inputs.IPAccessControlArgs
-                    {
-                        Allow = 
-                        {
-                            new AzureRM.Media.Latest.Inputs.IPRangeArgs
-                            {
-                                Address = "0.0.0.0",
-                                Name = "AllowAll",
-                                SubnetPrefixLength = 0,
-                            },
-                        },
-                    },
-                },
-            },
-            ResourceGroupName = "mediaresources",
-            Tags = 
-            {
-                { "tag1", "value1" },
-                { "tag2", "value2" },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	media "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := media.NewLiveEvent(ctx, "liveEvent", &media.LiveEventArgs{
-			AccountName: pulumi.String("slitestmedia10"),
-			Description: pulumi.String("test event 1"),
-			Input: &media.LiveEventInputArgs{
-				KeyFrameIntervalDuration: pulumi.String("PT6S"),
-				StreamingProtocol:        pulumi.String("RTMP"),
-			},
-			LiveEventName: pulumi.String("myLiveEvent1"),
-			Location:      pulumi.String("West US"),
-			Preview: &media.LiveEventPreviewArgs{
-				AccessControl: &media.LiveEventPreviewAccessControlArgs{
-					Ip: &media.IPAccessControlArgs{
-						Allow: media.IPRangeArray{
-							&media.IPRangeArgs{
-								Address:            pulumi.String("0.0.0.0"),
-								Name:               pulumi.String("AllowAll"),
-								SubnetPrefixLength: pulumi.Int(0),
-							},
-						},
-					},
-				},
-			},
-			ResourceGroupName: pulumi.String("mediaresources"),
-			Tags: pulumi.StringMap{
-				"tag1": pulumi.String("value1"),
-				"tag2": pulumi.String("value2"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-live_event = azurerm.media.latest.LiveEvent("liveEvent",
-    account_name="slitestmedia10",
-    description="test event 1",
-    input={
-        "keyFrameIntervalDuration": "PT6S",
-        "streamingProtocol": "RTMP",
-    },
-    live_event_name="myLiveEvent1",
-    location="West US",
-    preview={
-        "accessControl": {
-            "ip": {
-                "allow": [{
-                    "address": "0.0.0.0",
-                    "name": "AllowAll",
-                    "subnetPrefixLength": 0,
-                }],
-            },
-        },
-    },
-    resource_group_name="mediaresources",
-    tags={
-        "tag1": "value1",
-        "tag2": "value2",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const liveEvent = new azurerm.media.latest.LiveEvent("liveEvent", {
-    accountName: "slitestmedia10",
-    description: "test event 1",
-    input: {
-        keyFrameIntervalDuration: "PT6S",
-        streamingProtocol: "RTMP",
-    },
-    liveEventName: "myLiveEvent1",
-    location: "West US",
-    preview: {
-        accessControl: {
-            ip: {
-                allow: [{
-                    address: "0.0.0.0",
-                    name: "AllowAll",
-                    subnetPrefixLength: 0,
-                }],
-            },
-        },
-    },
-    resourceGroupName: "mediaresources",
-    tags: {
-        tag1: "value1",
-        tag2: "value2",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a LiveEvent Resource {#create}
@@ -1833,7 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetprefixlength_python" style="color: inherit; text-decoration: inherit;">subnet<wbr>Prefix<wbr>Length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The subnet mask prefix length (see CIDR notation).{{% /md %}}</dd>
 
@@ -1999,7 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetprefixlength_python" style="color: inherit; text-decoration: inherit;">subnet<wbr>Prefix<wbr>Length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The subnet mask prefix length (see CIDR notation).{{% /md %}}</dd>
 

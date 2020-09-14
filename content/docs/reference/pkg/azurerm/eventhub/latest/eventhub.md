@@ -12,144 +12,6 @@ meta_desc: "Explore the EventHub resource of the eventhub/latest module, includi
 
 Single item in List or Get Event Hub operation
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### EventHubCreate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var eventHub = new AzureRM.EventHub.Latest.EventHub("eventHub", new AzureRM.EventHub.Latest.EventHubArgs
-        {
-            CaptureDescription = new AzureRM.EventHub.Latest.Inputs.CaptureDescriptionArgs
-            {
-                Destination = new AzureRM.EventHub.Latest.Inputs.DestinationArgs
-                {
-                    Name = "EventHubArchive.AzureBlockBlob",
-                },
-                Enabled = true,
-                Encoding = "Avro",
-                IntervalInSeconds = 120,
-                SizeLimitInBytes = 10485763,
-            },
-            EventHubName = "sdk-EventHub-6547",
-            MessageRetentionInDays = 4,
-            NamespaceName = "sdk-Namespace-5357",
-            PartitionCount = 4,
-            ResourceGroupName = "Default-NotificationHubs-AustraliaEast",
-            Status = "Active",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	eventhub "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventhub/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := eventhub.NewEventHub(ctx, "eventHub", &eventhub.EventHubArgs{
-			CaptureDescription: &eventhub.CaptureDescriptionArgs{
-				Destination: &eventhub.DestinationArgs{
-					Name: pulumi.String("EventHubArchive.AzureBlockBlob"),
-				},
-				Enabled:           pulumi.Bool(true),
-				Encoding:          pulumi.String("Avro"),
-				IntervalInSeconds: pulumi.Int(120),
-				SizeLimitInBytes:  pulumi.Int(10485763),
-			},
-			EventHubName:           pulumi.String("sdk-EventHub-6547"),
-			MessageRetentionInDays: pulumi.Int(4),
-			NamespaceName:          pulumi.String("sdk-Namespace-5357"),
-			PartitionCount:         pulumi.Int(4),
-			ResourceGroupName:      pulumi.String("Default-NotificationHubs-AustraliaEast"),
-			Status:                 pulumi.String("Active"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-event_hub = azurerm.eventhub.latest.EventHub("eventHub",
-    capture_description={
-        "destination": {
-            "name": "EventHubArchive.AzureBlockBlob",
-        },
-        "enabled": True,
-        "encoding": "Avro",
-        "intervalInSeconds": 120,
-        "sizeLimitInBytes": 10485763,
-    },
-    event_hub_name="sdk-EventHub-6547",
-    message_retention_in_days=4,
-    namespace_name="sdk-Namespace-5357",
-    partition_count=4,
-    resource_group_name="Default-NotificationHubs-AustraliaEast",
-    status="Active")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const eventHub = new azurerm.eventhub.latest.EventHub("eventHub", {
-    captureDescription: {
-        destination: {
-            name: "EventHubArchive.AzureBlockBlob",
-        },
-        enabled: true,
-        encoding: "Avro",
-        intervalInSeconds: 120,
-        sizeLimitInBytes: 10485763,
-    },
-    eventHubName: "sdk-EventHub-6547",
-    messageRetentionInDays: 4,
-    namespaceName: "sdk-Namespace-5357",
-    partitionCount: 4,
-    resourceGroupName: "Default-NotificationHubs-AustraliaEast",
-    status: "Active",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a EventHub Resource {#create}
@@ -161,7 +23,7 @@ const eventHub = new azurerm.eventhub.latest.EventHub("eventHub", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/eventhub/latest/#pulumi_azurerm.eventhub/latest.EventHub">EventHub</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capture_description</span><span class="p">:</span> <span class="nx">Optional[Dict[CaptureDescription]]</span> = None<span class="p">, </span><span class="nx">event_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">message_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/eventhub/latest/#pulumi_azurerm.eventhub/latest.EventHub">EventHub</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capture_description</span><span class="p">:</span> <span class="nx">Optional[Dict[CaptureDescription]]</span> = None<span class="p">, </span><span class="nx">event_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">message_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -610,7 +472,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#message_retention_in_days_python" style="color: inherit; text-decoration: inherit;">message_<wbr>retention_<wbr>in_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of days to retain the events for this Event Hub, value should be 1 to 7 days{{% /md %}}</dd>
 
@@ -620,7 +482,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#partition_count_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.{{% /md %}}</dd>
 
@@ -1184,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds{{% /md %}}</dd>
 
@@ -1194,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_limit_in_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>limit_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes{{% /md %}}</dd>
 
@@ -1470,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds{{% /md %}}</dd>
 
@@ -1480,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_limit_in_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>limit_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes{{% /md %}}</dd>
 

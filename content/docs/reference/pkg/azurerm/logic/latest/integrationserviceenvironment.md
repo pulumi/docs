@@ -12,111 +12,6 @@ meta_desc: "Explore the IntegrationServiceEnvironment resource of the logic/late
 
 The integration service environment.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update an integration service environment
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var integrationServiceEnvironment = new AzureRM.Logic.Latest.IntegrationServiceEnvironment("integrationServiceEnvironment", new AzureRM.Logic.Latest.IntegrationServiceEnvironmentArgs
-        {
-            IntegrationServiceEnvironmentName = "testIntegrationServiceEnvironment",
-            Location = "brazilsouth",
-            ResourceGroup = "testResourceGroup",
-            Sku = new AzureRM.Logic.Latest.Inputs.IntegrationServiceEnvironmentSkuArgs
-            {
-                Capacity = 2,
-                Name = "Premium",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	logic "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := logic.NewIntegrationServiceEnvironment(ctx, "integrationServiceEnvironment", &logic.IntegrationServiceEnvironmentArgs{
-			IntegrationServiceEnvironmentName: pulumi.String("testIntegrationServiceEnvironment"),
-			Location:                          pulumi.String("brazilsouth"),
-			ResourceGroup:                     pulumi.String("testResourceGroup"),
-			Sku: &logic.IntegrationServiceEnvironmentSkuArgs{
-				Capacity: pulumi.Int(2),
-				Name:     pulumi.String("Premium"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-integration_service_environment = azurerm.logic.latest.IntegrationServiceEnvironment("integrationServiceEnvironment",
-    integration_service_environment_name="testIntegrationServiceEnvironment",
-    location="brazilsouth",
-    resource_group="testResourceGroup",
-    sku={
-        "capacity": 2,
-        "name": "Premium",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const integrationServiceEnvironment = new azurerm.logic.latest.IntegrationServiceEnvironment("integrationServiceEnvironment", {
-    integrationServiceEnvironmentName: "testIntegrationServiceEnvironment",
-    location: "brazilsouth",
-    resourceGroup: "testResourceGroup",
-    sku: {
-        capacity: 2,
-        name: "Premium",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a IntegrationServiceEnvironment Resource {#create}
@@ -2009,7 +1904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The sku capacity.{{% /md %}}</dd>
 
@@ -2135,7 +2030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The sku capacity.{{% /md %}}</dd>
 

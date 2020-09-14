@@ -689,7 +689,7 @@ The following output properties are available:
 <a href="#cache_size_gb_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of this Cache, in GB.{{% /md %}}</dd>
 
@@ -1299,7 +1299,7 @@ The following output properties are available:
 <a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd>
 

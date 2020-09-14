@@ -12,103 +12,6 @@ meta_desc: "Explore the PrivateDnsZoneGroup resource of the network/latest modul
 
 Private dns zone group resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create private dns zone group
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var privateDnsZoneGroup = new AzureRM.Network.Latest.PrivateDnsZoneGroup("privateDnsZoneGroup", new AzureRM.Network.Latest.PrivateDnsZoneGroupArgs
-        {
-            PrivateDnsZoneConfigs = 
-            {
-                ,
-            },
-            PrivateDnsZoneGroupName = "testPdnsgroup",
-            PrivateEndpointName = "testPe",
-            ResourceGroupName = "rg1",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewPrivateDnsZoneGroup(ctx, "privateDnsZoneGroup", &network.PrivateDnsZoneGroupArgs{
-			PrivateDnsZoneConfigs: network.PrivateDnsZoneConfigArray{
-				nil,
-			},
-			PrivateDnsZoneGroupName: pulumi.String("testPdnsgroup"),
-			PrivateEndpointName:     pulumi.String("testPe"),
-			ResourceGroupName:       pulumi.String("rg1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-private_dns_zone_group = azurerm.network.latest.PrivateDnsZoneGroup("privateDnsZoneGroup",
-    private_dns_zone_configs=[{}],
-    private_dns_zone_group_name="testPdnsgroup",
-    private_endpoint_name="testPe",
-    resource_group_name="rg1")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const privateDnsZoneGroup = new azurerm.network.latest.PrivateDnsZoneGroup("privateDnsZoneGroup", {
-    privateDnsZoneConfigs: [{}],
-    privateDnsZoneGroupName: "testPdnsgroup",
-    privateEndpointName: "testPe",
-    resourceGroupName: "rg1",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a PrivateDnsZoneGroup Resource {#create}
@@ -1295,7 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Recordset time to live.{{% /md %}}</dd>
 

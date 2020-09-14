@@ -1439,7 +1439,7 @@ The following output properties are available:
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The job will be gang scheduled on that many compute nodes{{% /md %}}</dd>
 
@@ -2605,7 +2605,7 @@ The following output properties are available:
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
 
@@ -3017,7 +3017,7 @@ The following output properties are available:
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
 
@@ -3233,7 +3233,7 @@ The following output properties are available:
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
 
@@ -3495,7 +3495,7 @@ The following output properties are available:
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
 
@@ -4275,7 +4275,7 @@ The following output properties are available:
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
 
@@ -4945,7 +4945,7 @@ The following output properties are available:
 <a href="#exit_code_python" style="color: inherit; text-decoration: inherit;">exit_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The exit code of the job. This property is only returned if the job is in completed state.{{% /md %}}</dd>
 
@@ -5981,7 +5981,7 @@ The following output properties are available:
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
 
@@ -6373,7 +6373,7 @@ The following output properties are available:
 <a href="#parameter_server_count_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>server_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of parameter server tasks. If specified, the value must be less than or equal to nodeCount. If not specified, the default value is equal to 1 for distributed TensorFlow training. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd>
 
@@ -6403,7 +6403,7 @@ The following output properties are available:
 <a href="#worker_count_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of worker tasks. If specified, the value must be less than or equal to (nodeCount * numberOfGPUs per VM). If not specified, the default value is equal to nodeCount. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd>
 

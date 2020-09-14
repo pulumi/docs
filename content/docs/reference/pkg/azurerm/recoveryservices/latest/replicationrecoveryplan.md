@@ -12,94 +12,6 @@ meta_desc: "Explore the ReplicationRecoveryPlan resource of the recoveryservices
 
 Recovery plan details.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Creates a recovery plan with the given details.
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var replicationRecoveryPlan = new AzureRM.RecoveryServices.Latest.ReplicationRecoveryPlan("replicationRecoveryPlan", new AzureRM.RecoveryServices.Latest.ReplicationRecoveryPlanArgs
-        {
-            RecoveryPlanName = "RPtest1",
-            ResourceGroupName = "resourceGroupPS1",
-            ResourceName = "vault1",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	recoveryservices "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := recoveryservices.NewReplicationRecoveryPlan(ctx, "replicationRecoveryPlan", &recoveryservices.ReplicationRecoveryPlanArgs{
-			RecoveryPlanName:  pulumi.String("RPtest1"),
-			ResourceGroupName: pulumi.String("resourceGroupPS1"),
-			ResourceName:      pulumi.String("vault1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-replication_recovery_plan = azurerm.recoveryservices.latest.ReplicationRecoveryPlan("replicationRecoveryPlan",
-    recovery_plan_name="RPtest1",
-    resource_group_name="resourceGroupPS1",
-    resource_name="vault1")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const replicationRecoveryPlan = new azurerm.recoveryservices.latest.ReplicationRecoveryPlan("replicationRecoveryPlan", {
-    recoveryPlanName: "RPtest1",
-    resourceGroupName: "resourceGroupPS1",
-    resourceName: "vault1",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ReplicationRecoveryPlan Resource {#create}
@@ -2042,8 +1954,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="grouptype_python">
-<a href="#grouptype_python" style="color: inherit; text-decoration: inherit;">group<wbr>Type</a>
+        <span id="group_type_python">
+<a href="#group_type_python" style="color: inherit; text-decoration: inherit;">group_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2248,8 +2160,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="grouptype_python">
-<a href="#grouptype_python" style="color: inherit; text-decoration: inherit;">group<wbr>Type</a>
+        <span id="group_type_python">
+<a href="#group_type_python" style="color: inherit; text-decoration: inherit;">group_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -837,7 +837,7 @@ The following output properties are available:
 <a href="#rentalduration_python" style="color: inherit; text-decoration: inherit;">rental<wbr>Duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than or equal to 0.{{% /md %}}</dd>
 
@@ -963,7 +963,7 @@ The following output properties are available:
 <a href="#playbackdurationseconds_python" style="color: inherit; text-decoration: inherit;">playback<wbr>Duration<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Playback duration{{% /md %}}</dd>
 
@@ -973,7 +973,7 @@ The following output properties are available:
 <a href="#storagedurationseconds_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Duration<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Storage duration{{% /md %}}</dd>
 
@@ -1609,7 +1609,7 @@ The following output properties are available:
 <a href="#configurationdata_python" style="color: inherit; text-decoration: inherit;">configuration<wbr>Data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Configures the restriction control bits. Must be between 0 and 3 inclusive.{{% /md %}}</dd>
 
@@ -2541,7 +2541,7 @@ The following output properties are available:
 <a href="#agcandcolorstriperestriction_python" style="color: inherit; text-decoration: inherit;">agc<wbr>And<wbr>Color<wbr>Stripe<wbr>Restriction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.{{% /md %}}</dd>
 
@@ -2551,7 +2551,7 @@ The following output properties are available:
 <a href="#analogvideoopl_python" style="color: inherit; text-decoration: inherit;">analog<wbr>Video<wbr>Opl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio.{{% /md %}}</dd>
 
@@ -2561,7 +2561,7 @@ The following output properties are available:
 <a href="#compresseddigitalaudioopl_python" style="color: inherit; text-decoration: inherit;">compressed<wbr>Digital<wbr>Audio<wbr>Opl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio.{{% /md %}}</dd>
 
@@ -2571,7 +2571,7 @@ The following output properties are available:
 <a href="#compresseddigitalvideoopl_python" style="color: inherit; text-decoration: inherit;">compressed<wbr>Digital<wbr>Video<wbr>Opl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital video.{{% /md %}}</dd>
 
@@ -2601,7 +2601,7 @@ The following output properties are available:
 <a href="#scmsrestriction_python" style="color: inherit; text-decoration: inherit;">scms<wbr>Restriction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.{{% /md %}}</dd>
 
@@ -2611,7 +2611,7 @@ The following output properties are available:
 <a href="#uncompresseddigitalaudioopl_python" style="color: inherit; text-decoration: inherit;">uncompressed<wbr>Digital<wbr>Audio<wbr>Opl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital audio.{{% /md %}}</dd>
 
@@ -2621,7 +2621,7 @@ The following output properties are available:
 <a href="#uncompresseddigitalvideoopl_python" style="color: inherit; text-decoration: inherit;">uncompressed<wbr>Digital<wbr>Video<wbr>Opl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital video.{{% /md %}}</dd>
 

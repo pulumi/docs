@@ -12,94 +12,6 @@ meta_desc: "Explore the NamespaceAuthorizationRule resource of the notificationh
 
 Description of a Namespace AuthorizationRules.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### NameSpaceAuthorizationRuleCreate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var namespaceAuthorizationRule = new AzureRM.NotificationHubs.Latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", new AzureRM.NotificationHubs.Latest.NamespaceAuthorizationRuleArgs
-        {
-            AuthorizationRuleName = "sdk-AuthRules-1788",
-            NamespaceName = "nh-sdk-ns",
-            ResourceGroupName = "5ktrial",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	notificationhubs "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/notificationhubs/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := notificationhubs.NewNamespaceAuthorizationRule(ctx, "namespaceAuthorizationRule", &notificationhubs.NamespaceAuthorizationRuleArgs{
-			AuthorizationRuleName: pulumi.String("sdk-AuthRules-1788"),
-			NamespaceName:         pulumi.String("nh-sdk-ns"),
-			ResourceGroupName:     pulumi.String("5ktrial"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-namespace_authorization_rule = azurerm.notificationhubs.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule",
-    authorization_rule_name="sdk-AuthRules-1788",
-    namespace_name="nh-sdk-ns",
-    resource_group_name="5ktrial")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const namespaceAuthorizationRule = new azurerm.notificationhubs.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
-    authorizationRuleName: "sdk-AuthRules-1788",
-    namespaceName: "nh-sdk-ns",
-    resourceGroupName: "5ktrial",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a NamespaceAuthorizationRule Resource {#create}
@@ -1039,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The revision number for the rule{{% /md %}}</dd>
 
@@ -1410,7 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The capacity of the resource{{% /md %}}</dd>
 

@@ -871,7 +871,7 @@ The following output properties are available:
 <a href="#number_of_assessments_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>assessments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of assessments created in the project.{{% /md %}}</dd>
 
@@ -881,7 +881,7 @@ The following output properties are available:
 <a href="#number_of_groups_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of groups created in the project.{{% /md %}}</dd>
 
@@ -891,7 +891,7 @@ The following output properties are available:
 <a href="#number_of_machines_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>machines</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of machines in the project.{{% /md %}}</dd>
 

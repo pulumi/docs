@@ -3425,7 +3425,7 @@ The following output properties are available:
 <a href="#interchange_duplicates_validity_days_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>duplicates_<wbr>validity_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of days to look back for duplicate interchange.{{% /md %}}</dd>
 
@@ -4133,7 +4133,7 @@ The following output properties are available:
 <a href="#acknowledgement_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd>
 
@@ -4143,7 +4143,7 @@ The following output properties are available:
 <a href="#acknowledgement_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd>
 
@@ -4775,7 +4775,7 @@ The following output properties are available:
 <a href="#component_separator_python" style="color: inherit; text-decoration: inherit;">component_<wbr>separator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd>
 
@@ -4785,7 +4785,7 @@ The following output properties are available:
 <a href="#data_element_separator_python" style="color: inherit; text-decoration: inherit;">data_<wbr>element_<wbr>separator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
 
@@ -4805,7 +4805,7 @@ The following output properties are available:
 <a href="#release_indicator_python" style="color: inherit; text-decoration: inherit;">release_<wbr>indicator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The release indicator.{{% /md %}}</dd>
 
@@ -4815,7 +4815,7 @@ The following output properties are available:
 <a href="#repetition_separator_python" style="color: inherit; text-decoration: inherit;">repetition_<wbr>separator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The repetition separator.{{% /md %}}</dd>
 
@@ -4825,7 +4825,7 @@ The following output properties are available:
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
 
@@ -6847,7 +6847,7 @@ The following output properties are available:
 <a href="#group_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd>
 
@@ -6857,7 +6857,7 @@ The following output properties are available:
 <a href="#group_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd>
 
@@ -6867,7 +6867,7 @@ The following output properties are available:
 <a href="#interchange_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd>
 
@@ -6877,7 +6877,7 @@ The following output properties are available:
 <a href="#interchange_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd>
 
@@ -6937,7 +6937,7 @@ The following output properties are available:
 <a href="#transaction_set_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd>
 
@@ -6947,7 +6947,7 @@ The following output properties are available:
 <a href="#transaction_set_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd>
 
@@ -7613,7 +7613,7 @@ The following output properties are available:
 <a href="#component_separator_python" style="color: inherit; text-decoration: inherit;">component_<wbr>separator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd>
 
@@ -7623,7 +7623,7 @@ The following output properties are available:
 <a href="#data_element_separator_python" style="color: inherit; text-decoration: inherit;">data_<wbr>element_<wbr>separator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
 
@@ -7643,7 +7643,7 @@ The following output properties are available:
 <a href="#protocol_version_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The protocol version.{{% /md %}}</dd>
 
@@ -7653,7 +7653,7 @@ The following output properties are available:
 <a href="#release_indicator_python" style="color: inherit; text-decoration: inherit;">release_<wbr>indicator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The release indicator.{{% /md %}}</dd>
 
@@ -7663,7 +7663,7 @@ The following output properties are available:
 <a href="#repetition_separator_python" style="color: inherit; text-decoration: inherit;">repetition_<wbr>separator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The repetition separator.{{% /md %}}</dd>
 
@@ -7673,7 +7673,7 @@ The following output properties are available:
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
 
@@ -9821,7 +9821,7 @@ The following output properties are available:
 <a href="#interchange_control_number_validity_days_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>validity_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd>
 
@@ -10377,7 +10377,7 @@ The following output properties are available:
 <a href="#acknowledgement_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd>
 
@@ -10387,7 +10387,7 @@ The following output properties are available:
 <a href="#acknowledgement_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd>
 
@@ -10969,7 +10969,7 @@ The following output properties are available:
 <a href="#component_separator_python" style="color: inherit; text-decoration: inherit;">component_<wbr>separator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd>
 
@@ -10979,7 +10979,7 @@ The following output properties are available:
 <a href="#data_element_separator_python" style="color: inherit; text-decoration: inherit;">data_<wbr>element_<wbr>separator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
 
@@ -10989,7 +10989,7 @@ The following output properties are available:
 <a href="#replace_character_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>character</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The replacement character.{{% /md %}}</dd>
 
@@ -11009,7 +11009,7 @@ The following output properties are available:
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
 
@@ -12271,7 +12271,7 @@ The following output properties are available:
 <a href="#control_standards_id_python" style="color: inherit; text-decoration: inherit;">control_<wbr>standards_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The controls standards id.{{% /md %}}</dd>
 
@@ -12301,7 +12301,7 @@ The following output properties are available:
 <a href="#group_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd>
 
@@ -12311,7 +12311,7 @@ The following output properties are available:
 <a href="#group_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd>
 
@@ -12361,7 +12361,7 @@ The following output properties are available:
 <a href="#interchange_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The interchange  control number lower bound.{{% /md %}}</dd>
 
@@ -12371,7 +12371,7 @@ The following output properties are available:
 <a href="#interchange_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The interchange  control number upper bound.{{% /md %}}</dd>
 
@@ -12441,7 +12441,7 @@ The following output properties are available:
 <a href="#transaction_set_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd>
 
@@ -12451,7 +12451,7 @@ The following output properties are available:
 <a href="#transaction_set_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd>
 
@@ -12777,7 +12777,7 @@ The following output properties are available:
 <a href="#component_separator_python" style="color: inherit; text-decoration: inherit;">component_<wbr>separator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd>
 
@@ -12787,7 +12787,7 @@ The following output properties are available:
 <a href="#data_element_separator_python" style="color: inherit; text-decoration: inherit;">data_<wbr>element_<wbr>separator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
 
@@ -12797,7 +12797,7 @@ The following output properties are available:
 <a href="#replace_character_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>character</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The replacement character.{{% /md %}}</dd>
 
@@ -12817,7 +12817,7 @@ The following output properties are available:
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
 
@@ -15111,7 +15111,7 @@ The following output properties are available:
 <a href="#interchange_control_number_validity_days_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>validity_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd>
 

@@ -12,395 +12,6 @@ meta_desc: "Explore the DatabaseAccount resource of the documentdb/latest module
 
 An Azure Cosmos DB database account.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### CosmosDBDatabaseAccountCreateMax
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var databaseAccount = new AzureRM.DocumentDB.Latest.DatabaseAccount("databaseAccount", new AzureRM.DocumentDB.Latest.DatabaseAccountArgs
-        {
-            AccountName = "ddb1",
-            ApiProperties = new AzureRM.DocumentDB.Latest.Inputs.ApiPropertiesArgs
-            {
-                ServerVersion = "3.2",
-            },
-            ConsistencyPolicy = new AzureRM.DocumentDB.Latest.Inputs.ConsistencyPolicyArgs
-            {
-                DefaultConsistencyLevel = "BoundedStaleness",
-                MaxIntervalInSeconds = 10,
-                MaxStalenessPrefix = 200,
-            },
-            Cors = 
-            {
-                new AzureRM.DocumentDB.Latest.Inputs.CorsPolicyArgs
-                {
-                    AllowedOrigins = "https://test",
-                },
-            },
-            DatabaseAccountOfferType = "Standard",
-            EnableAnalyticalStorage = true,
-            EnableFreeTier = false,
-            IpRules = 
-            {
-                new AzureRM.DocumentDB.Latest.Inputs.IpAddressOrRangeArgs
-                {
-                    IpAddressOrRange = "23.43.230.120",
-                },
-                new AzureRM.DocumentDB.Latest.Inputs.IpAddressOrRangeArgs
-                {
-                    IpAddressOrRange = "110.12.240.0/12",
-                },
-            },
-            IsVirtualNetworkFilterEnabled = true,
-            KeyVaultKeyUri = "https://myKeyVault.vault.azure.net",
-            Kind = "MongoDB",
-            Location = "westus",
-            Locations = 
-            {
-                new AzureRM.DocumentDB.Latest.Inputs.LocationArgs
-                {
-                    FailoverPriority = 0,
-                    IsZoneRedundant = false,
-                    LocationName = "southcentralus",
-                },
-                new AzureRM.DocumentDB.Latest.Inputs.LocationArgs
-                {
-                    FailoverPriority = 1,
-                    IsZoneRedundant = false,
-                    LocationName = "eastus",
-                },
-            },
-            ResourceGroupName = "rg1",
-            Tags = ,
-            VirtualNetworkRules = 
-            {
-                new AzureRM.DocumentDB.Latest.Inputs.VirtualNetworkRuleArgs
-                {
-                    Id = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
-                    IgnoreMissingVNetServiceEndpoint = false,
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/documentdb/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewDatabaseAccount(ctx, "databaseAccount", &documentdb.DatabaseAccountArgs{
-			AccountName: pulumi.String("ddb1"),
-			ApiProperties: &documentdb.ApiPropertiesArgs{
-				ServerVersion: pulumi.String("3.2"),
-			},
-			ConsistencyPolicy: &documentdb.ConsistencyPolicyArgs{
-				DefaultConsistencyLevel: pulumi.String("BoundedStaleness"),
-				MaxIntervalInSeconds:    pulumi.Int(10),
-				MaxStalenessPrefix:      pulumi.Int(200),
-			},
-			Cors: documentdb.CorsPolicyArray{
-				&documentdb.CorsPolicyArgs{
-					AllowedOrigins: pulumi.String("https://test"),
-				},
-			},
-			DatabaseAccountOfferType: pulumi.String("Standard"),
-			EnableAnalyticalStorage:  pulumi.Bool(true),
-			EnableFreeTier:           pulumi.Bool(false),
-			IpRules: documentdb.IpAddressOrRangeArray{
-				&documentdb.IpAddressOrRangeArgs{
-					IpAddressOrRange: pulumi.String("23.43.230.120"),
-				},
-				&documentdb.IpAddressOrRangeArgs{
-					IpAddressOrRange: pulumi.String("110.12.240.0/12"),
-				},
-			},
-			IsVirtualNetworkFilterEnabled: pulumi.Bool(true),
-			KeyVaultKeyUri:                pulumi.String("https://myKeyVault.vault.azure.net"),
-			Kind:                          pulumi.String("MongoDB"),
-			Location:                      pulumi.String("westus"),
-			Locations: documentdb.LocationArray{
-				&documentdb.LocationArgs{
-					FailoverPriority: pulumi.Int(0),
-					IsZoneRedundant:  pulumi.Bool(false),
-					LocationName:     pulumi.String("southcentralus"),
-				},
-				&documentdb.LocationArgs{
-					FailoverPriority: pulumi.Int(1),
-					IsZoneRedundant:  pulumi.Bool(false),
-					LocationName:     pulumi.String("eastus"),
-				},
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			Tags:              nil,
-			VirtualNetworkRules: documentdb.VirtualNetworkRuleArray{
-				&documentdb.VirtualNetworkRuleArgs{
-					Id:                               pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1"),
-					IgnoreMissingVNetServiceEndpoint: pulumi.Bool(false),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-database_account = azurerm.documentdb.latest.DatabaseAccount("databaseAccount",
-    account_name="ddb1",
-    api_properties={
-        "serverVersion": "3.2",
-    },
-    consistency_policy={
-        "defaultConsistencyLevel": "BoundedStaleness",
-        "maxIntervalInSeconds": 10,
-        "maxStalenessPrefix": 200,
-    },
-    cors=[{
-        "allowedOrigins": "https://test",
-    }],
-    database_account_offer_type="Standard",
-    enable_analytical_storage=True,
-    enable_free_tier=False,
-    ip_rules=[
-        {
-            "ipAddressOrRange": "23.43.230.120",
-        },
-        {
-            "ipAddressOrRange": "110.12.240.0/12",
-        },
-    ],
-    is_virtual_network_filter_enabled=True,
-    key_vault_key_uri="https://myKeyVault.vault.azure.net",
-    kind="MongoDB",
-    location="westus",
-    locations=[
-        {
-            "failoverPriority": 0,
-            "isZoneRedundant": False,
-            "locationName": "southcentralus",
-        },
-        {
-            "failoverPriority": 1,
-            "isZoneRedundant": False,
-            "locationName": "eastus",
-        },
-    ],
-    resource_group_name="rg1",
-    tags={},
-    virtual_network_rules=[{
-        "id": "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
-        "ignoreMissingVNetServiceEndpoint": False,
-    }])
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const databaseAccount = new azurerm.documentdb.latest.DatabaseAccount("databaseAccount", {
-    accountName: "ddb1",
-    apiProperties: {
-        serverVersion: "3.2",
-    },
-    consistencyPolicy: {
-        defaultConsistencyLevel: "BoundedStaleness",
-        maxIntervalInSeconds: 10,
-        maxStalenessPrefix: 200,
-    },
-    cors: [{
-        allowedOrigins: "https://test",
-    }],
-    databaseAccountOfferType: "Standard",
-    enableAnalyticalStorage: true,
-    enableFreeTier: false,
-    ipRules: [
-        {
-            ipAddressOrRange: "23.43.230.120",
-        },
-        {
-            ipAddressOrRange: "110.12.240.0/12",
-        },
-    ],
-    isVirtualNetworkFilterEnabled: true,
-    keyVaultKeyUri: "https://myKeyVault.vault.azure.net",
-    kind: "MongoDB",
-    location: "westus",
-    locations: [
-        {
-            failoverPriority: 0,
-            isZoneRedundant: false,
-            locationName: "southcentralus",
-        },
-        {
-            failoverPriority: 1,
-            isZoneRedundant: false,
-            locationName: "eastus",
-        },
-    ],
-    resourceGroupName: "rg1",
-    tags: {},
-    virtualNetworkRules: [{
-        id: "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
-        ignoreMissingVNetServiceEndpoint: false,
-    }],
-});
-
-```
-
-{{% /example %}}
-
-### CosmosDBDatabaseAccountCreateMin
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var databaseAccount = new AzureRM.DocumentDB.Latest.DatabaseAccount("databaseAccount", new AzureRM.DocumentDB.Latest.DatabaseAccountArgs
-        {
-            AccountName = "ddb1",
-            DatabaseAccountOfferType = "Standard",
-            Location = "westus",
-            Locations = 
-            {
-                new AzureRM.DocumentDB.Latest.Inputs.LocationArgs
-                {
-                    FailoverPriority = 0,
-                    IsZoneRedundant = false,
-                    LocationName = "southcentralus",
-                },
-            },
-            ResourceGroupName = "rg1",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/documentdb/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewDatabaseAccount(ctx, "databaseAccount", &documentdb.DatabaseAccountArgs{
-			AccountName:              pulumi.String("ddb1"),
-			DatabaseAccountOfferType: pulumi.String("Standard"),
-			Location:                 pulumi.String("westus"),
-			Locations: documentdb.LocationArray{
-				&documentdb.LocationArgs{
-					FailoverPriority: pulumi.Int(0),
-					IsZoneRedundant:  pulumi.Bool(false),
-					LocationName:     pulumi.String("southcentralus"),
-				},
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-database_account = azurerm.documentdb.latest.DatabaseAccount("databaseAccount",
-    account_name="ddb1",
-    database_account_offer_type="Standard",
-    location="westus",
-    locations=[{
-        "failoverPriority": 0,
-        "isZoneRedundant": False,
-        "locationName": "southcentralus",
-    }],
-    resource_group_name="rg1")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const databaseAccount = new azurerm.documentdb.latest.DatabaseAccount("databaseAccount", {
-    accountName: "ddb1",
-    databaseAccountOfferType: "Standard",
-    location: "westus",
-    locations: [{
-        failoverPriority: 0,
-        isZoneRedundant: false,
-        locationName: "southcentralus",
-    }],
-    resourceGroupName: "rg1",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a DatabaseAccount Resource {#create}
@@ -2429,7 +2040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.{{% /md %}}</dd>
 
@@ -2439,7 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_staleness_prefix_python" style="color: inherit; text-decoration: inherit;">max_<wbr>staleness_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.{{% /md %}}</dd>
 
@@ -2595,7 +2206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.{{% /md %}}</dd>
 
@@ -2605,7 +2216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_staleness_prefix_python" style="color: inherit; text-decoration: inherit;">max_<wbr>staleness_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.{{% /md %}}</dd>
 
@@ -2851,7 +2462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxageinseconds_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum amount time that a browser should cache the preflight OPTIONS request.{{% /md %}}</dd>
 
@@ -3097,7 +2708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxageinseconds_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum amount time that a browser should cache the preflight OPTIONS request.{{% /md %}}</dd>
 
@@ -3253,14 +2864,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpriority_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="locationname_python">
-<a href="#locationname_python" style="color: inherit; text-decoration: inherit;">location<wbr>Name</a>
+        <span id="location_name_python">
+<a href="#location_name_python" style="color: inherit; text-decoration: inherit;">location_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3611,7 +3222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpriority_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.{{% /md %}}</dd>
 
@@ -3627,8 +3238,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="locationname_python">
-<a href="#locationname_python" style="color: inherit; text-decoration: inherit;">location<wbr>Name</a>
+        <span id="location_name_python">
+<a href="#location_name_python" style="color: inherit; text-decoration: inherit;">location_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3897,7 +3508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpriority_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.{{% /md %}}</dd>
 
@@ -3913,8 +3524,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="locationname_python">
-<a href="#locationname_python" style="color: inherit; text-decoration: inherit;">location<wbr>Name</a>
+        <span id="location_name_python">
+<a href="#location_name_python" style="color: inherit; text-decoration: inherit;">location_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

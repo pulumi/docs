@@ -12,103 +12,6 @@ meta_desc: "Explore the HybridUseBenefit resource of the softwareplan/latest mod
 
 Response on GET of a hybrid use benefit
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### HybridUseBenefit
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var hybridUseBenefit = new AzureRM.SoftwarePlan.Latest.HybridUseBenefit("hybridUseBenefit", new AzureRM.SoftwarePlan.Latest.HybridUseBenefitArgs
-        {
-            PlanId = "94f46eda-45f8-493a-8425-251921463a89",
-            Scope = "subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}",
-            Sku = new AzureRM.SoftwarePlan.Latest.Inputs.SkuArgs
-            {
-                Name = "SQL_Server_Perpetual",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	softwareplan "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/softwareplan/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := softwareplan.NewHybridUseBenefit(ctx, "hybridUseBenefit", &softwareplan.HybridUseBenefitArgs{
-			PlanId: pulumi.String("94f46eda-45f8-493a-8425-251921463a89"),
-			Scope:  pulumi.String("subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}"),
-			Sku: &softwareplan.SkuArgs{
-				Name: pulumi.String("SQL_Server_Perpetual"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-hybrid_use_benefit = azurerm.softwareplan.latest.HybridUseBenefit("hybridUseBenefit",
-    plan_id="94f46eda-45f8-493a-8425-251921463a89",
-    scope="subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}",
-    sku={
-        "name": "SQL_Server_Perpetual",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const hybridUseBenefit = new azurerm.softwareplan.latest.HybridUseBenefit("hybridUseBenefit", {
-    planId: "94f46eda-45f8-493a-8425-251921463a89",
-    scope: "subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}",
-    sku: {
-        name: "SQL_Server_Perpetual",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a HybridUseBenefit Resource {#create}
@@ -698,7 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Indicates the revision of the hybrid use benefit{{% /md %}}</dd>
 

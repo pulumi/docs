@@ -12,208 +12,6 @@ meta_desc: "Explore the VpnGateway resource of the network/latest module, includ
 
 VpnGateway Resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### VpnGatewayPut
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var vpnGateway = new AzureRM.Network.Latest.VpnGateway("vpnGateway", new AzureRM.Network.Latest.VpnGatewayArgs
-        {
-            BgpSettings = new AzureRM.Network.Latest.Inputs.BgpSettingsArgs
-            {
-                Asn = 65515,
-                BgpPeeringAddresses = 
-                {
-                    new AzureRM.Network.Latest.Inputs.IPConfigurationBgpPeeringAddressArgs
-                    {
-                        CustomBgpIpAddresses = 
-                        {
-                            "169.254.21.5",
-                        },
-                        IpconfigurationId = "Instance0",
-                    },
-                    new AzureRM.Network.Latest.Inputs.IPConfigurationBgpPeeringAddressArgs
-                    {
-                        CustomBgpIpAddresses = 
-                        {
-                            "169.254.21.10",
-                        },
-                        IpconfigurationId = "Instance1",
-                    },
-                },
-                PeerWeight = 0,
-            },
-            Connections = 
-            {
-                new AzureRM.Network.Latest.Inputs.VpnConnectionArgs
-                {
-                    Name = "vpnConnection1",
-                },
-            },
-            GatewayName = "gateway1",
-            Location = "westcentralus",
-            ResourceGroupName = "rg1",
-            Tags = 
-            {
-                { "key1", "value1" },
-            },
-            VirtualHub = new AzureRM.Network.Latest.Inputs.SubResourceArgs
-            {
-                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewVpnGateway(ctx, "vpnGateway", &network.VpnGatewayArgs{
-			BgpSettings: &network.BgpSettingsArgs{
-				Asn: pulumi.Int(65515),
-				BgpPeeringAddresses: network.IPConfigurationBgpPeeringAddressArray{
-					&network.IPConfigurationBgpPeeringAddressArgs{
-						CustomBgpIpAddresses: pulumi.StringArray{
-							pulumi.String("169.254.21.5"),
-						},
-						IpconfigurationId: pulumi.String("Instance0"),
-					},
-					&network.IPConfigurationBgpPeeringAddressArgs{
-						CustomBgpIpAddresses: pulumi.StringArray{
-							pulumi.String("169.254.21.10"),
-						},
-						IpconfigurationId: pulumi.String("Instance1"),
-					},
-				},
-				PeerWeight: pulumi.Int(0),
-			},
-			Connections: network.VpnConnectionArray{
-				&network.VpnConnectionArgs{
-					Name: pulumi.String("vpnConnection1"),
-				},
-			},
-			GatewayName:       pulumi.String("gateway1"),
-			Location:          pulumi.String("westcentralus"),
-			ResourceGroupName: pulumi.String("rg1"),
-			Tags: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-			},
-			VirtualHub: &network.SubResourceArgs{
-				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-vpn_gateway = azurerm.network.latest.VpnGateway("vpnGateway",
-    bgp_settings={
-        "asn": 65515,
-        "bgpPeeringAddresses": [
-            {
-                "customBgpIpAddresses": ["169.254.21.5"],
-                "ipconfigurationId": "Instance0",
-            },
-            {
-                "customBgpIpAddresses": ["169.254.21.10"],
-                "ipconfigurationId": "Instance1",
-            },
-        ],
-        "peerWeight": 0,
-    },
-    connections=[{
-        "name": "vpnConnection1",
-    }],
-    gateway_name="gateway1",
-    location="westcentralus",
-    resource_group_name="rg1",
-    tags={
-        "key1": "value1",
-    },
-    virtual_hub={
-        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const vpnGateway = new azurerm.network.latest.VpnGateway("vpnGateway", {
-    bgpSettings: {
-        asn: 65515,
-        bgpPeeringAddresses: [
-            {
-                customBgpIpAddresses: ["169.254.21.5"],
-                ipconfigurationId: "Instance0",
-            },
-            {
-                customBgpIpAddresses: ["169.254.21.10"],
-                ipconfigurationId: "Instance1",
-            },
-        ],
-        peerWeight: 0,
-    },
-    connections: [{
-        name: "vpnConnection1",
-    }],
-    gatewayName: "gateway1",
-    location: "westcentralus",
-    resourceGroupName: "rg1",
-    tags: {
-        key1: "value1",
-    },
-    virtualHub: {
-        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a VpnGateway Resource {#create}
@@ -225,7 +23,7 @@ const vpnGateway = new azurerm.network.latest.VpnGateway("vpnGateway", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/network/latest/#pulumi_azurerm.network/latest.VpnGateway">VpnGateway</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[BgpSettings]]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[List[VpnConnection]]</span> = None<span class="p">, </span><span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_scale_unit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/network/latest/#pulumi_azurerm.network/latest.VpnGateway">VpnGateway</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[BgpSettings]]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[List[VpnConnection]]</span> = None<span class="p">, </span><span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_scale_unit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -774,7 +572,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#vpn_gateway_scale_unit_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>scale_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The scale unit for this vpn gateway.{{% /md %}}</dd>
 
@@ -1238,7 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
 
@@ -1268,7 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_weight_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd>
 
@@ -1444,7 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
 
@@ -1474,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_weight_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd>
 
@@ -2162,7 +1960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sadatasizekilobytes_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd>
 
@@ -2172,7 +1970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#salifetimeseconds_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Life<wbr>Time<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd>
 
@@ -2528,7 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sadatasizekilobytes_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd>
 
@@ -2538,7 +2336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#salifetimeseconds_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Life<wbr>Time<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd>
 
@@ -4364,7 +4162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_bandwidth_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>bandwidth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
 
@@ -4384,7 +4182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dpd_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">dpd_<wbr>timeout_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}DPD timeout in seconds for vpn connection.{{% /md %}}</dd>
 
@@ -4474,7 +4272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_weight_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Routing weight for vpn connection.{{% /md %}}</dd>
 
@@ -5210,7 +5008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>bytes_<wbr>transferred</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Egress bytes transferred.{{% /md %}}</dd>
 
@@ -5230,7 +5028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>bytes_<wbr>transferred</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Ingress bytes transferred.{{% /md %}}</dd>
 
@@ -5250,7 +5048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_bandwidth_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>bandwidth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
 
@@ -5270,7 +5068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dpd_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">dpd_<wbr>timeout_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}DPD timeout in seconds for vpn connection.{{% /md %}}</dd>
 
@@ -5360,7 +5158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_weight_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Routing weight for vpn connection.{{% /md %}}</dd>
 
@@ -6022,7 +5820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_bandwidth_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>bandwidth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
 
@@ -6092,7 +5890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_weight_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Routing weight for vpn connection.{{% /md %}}</dd>
 
@@ -6738,7 +6536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>bytes_<wbr>transferred</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Egress bytes transferred.{{% /md %}}</dd>
 
@@ -6758,7 +6556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>bytes_<wbr>transferred</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Ingress bytes transferred.{{% /md %}}</dd>
 
@@ -6788,7 +6586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_bandwidth_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>bandwidth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
 
@@ -6858,7 +6656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_weight_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Routing weight for vpn connection.{{% /md %}}</dd>
 

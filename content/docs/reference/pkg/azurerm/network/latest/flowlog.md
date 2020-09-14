@@ -12,127 +12,6 @@ meta_desc: "Explore the FlowLog resource of the network/latest module, including
 
 A flow log resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update flow log
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var flowLog = new AzureRM.Network.Latest.FlowLog("flowLog", new AzureRM.Network.Latest.FlowLogArgs
-        {
-            Enabled = true,
-            FlowLogName = "fl",
-            Format = new AzureRM.Network.Latest.Inputs.FlowLogFormatParametersArgs
-            {
-                Type = "JSON",
-                Version = 1,
-            },
-            Location = "centraluseuap",
-            NetworkWatcherName = "nw1",
-            ResourceGroupName = "rg1",
-            StorageId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/nwtest1mgvbfmqsigdxe",
-            TargetResourceId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityGroups/desmondcentral-nsg",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewFlowLog(ctx, "flowLog", &network.FlowLogArgs{
-			Enabled:     pulumi.Bool(true),
-			FlowLogName: pulumi.String("fl"),
-			Format: &network.FlowLogFormatParametersArgs{
-				Type:    pulumi.String("JSON"),
-				Version: pulumi.Int(1),
-			},
-			Location:           pulumi.String("centraluseuap"),
-			NetworkWatcherName: pulumi.String("nw1"),
-			ResourceGroupName:  pulumi.String("rg1"),
-			StorageId:          pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/nwtest1mgvbfmqsigdxe"),
-			TargetResourceId:   pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityGroups/desmondcentral-nsg"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-flow_log = azurerm.network.latest.FlowLog("flowLog",
-    enabled=True,
-    flow_log_name="fl",
-    format={
-        "type": "JSON",
-        "version": 1,
-    },
-    location="centraluseuap",
-    network_watcher_name="nw1",
-    resource_group_name="rg1",
-    storage_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/nwtest1mgvbfmqsigdxe",
-    target_resource_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityGroups/desmondcentral-nsg")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const flowLog = new azurerm.network.latest.FlowLog("flowLog", {
-    enabled: true,
-    flowLogName: "fl",
-    format: {
-        type: "JSON",
-        version: 1,
-    },
-    location: "centraluseuap",
-    networkWatcherName: "nw1",
-    resourceGroupName: "rg1",
-    storageId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/nwtest1mgvbfmqsigdxe",
-    targetResourceId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityGroups/desmondcentral-nsg",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a FlowLog Resource {#create}
@@ -1227,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The version (revision) of the flow log.{{% /md %}}</dd>
 
@@ -1353,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The version (revision) of the flow log.{{% /md %}}</dd>
 
@@ -1469,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of days to retain flow log records.{{% /md %}}</dd>
 
@@ -1595,7 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of days to retain flow log records.{{% /md %}}</dd>
 
@@ -1821,7 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traffic_analytics_interval_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>analytics_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The interval in minutes which would decide how frequently TA service should do flow analytics.{{% /md %}}</dd>
 
@@ -2067,7 +1946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traffic_analytics_interval_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>analytics_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The interval in minutes which would decide how frequently TA service should do flow analytics.{{% /md %}}</dd>
 

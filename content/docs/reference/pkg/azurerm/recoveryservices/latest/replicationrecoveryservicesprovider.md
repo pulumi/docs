@@ -12,98 +12,6 @@ meta_desc: "Explore the ReplicationRecoveryServicesProvider resource of the reco
 
 Provider details.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Adds a recovery services provider.
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var replicationRecoveryServicesProvider = new AzureRM.RecoveryServices.Latest.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider", new AzureRM.RecoveryServices.Latest.ReplicationRecoveryServicesProviderArgs
-        {
-            FabricName = "vmwarefabric1",
-            ProviderName = "vmwareprovider1",
-            ResourceGroupName = "resourcegroup1",
-            ResourceName = "migrationvault",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	recoveryservices "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := recoveryservices.NewReplicationRecoveryServicesProvider(ctx, "replicationRecoveryServicesProvider", &recoveryservices.ReplicationRecoveryServicesProviderArgs{
-			FabricName:        pulumi.String("vmwarefabric1"),
-			ProviderName:      pulumi.String("vmwareprovider1"),
-			ResourceGroupName: pulumi.String("resourcegroup1"),
-			ResourceName:      pulumi.String("migrationvault"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-replication_recovery_services_provider = azurerm.recoveryservices.latest.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider",
-    fabric_name="vmwarefabric1",
-    provider_name="vmwareprovider1",
-    resource_group_name="resourcegroup1",
-    resource_name="migrationvault")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const replicationRecoveryServicesProvider = new azurerm.recoveryservices.latest.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider", {
-    fabricName: "vmwarefabric1",
-    providerName: "vmwareprovider1",
-    resourceGroupName: "resourcegroup1",
-    resourceName: "migrationvault",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ReplicationRecoveryServicesProvider Resource {#create}
@@ -3168,7 +3076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of protected VMs currently managed by the DRA.{{% /md %}}</dd>
 

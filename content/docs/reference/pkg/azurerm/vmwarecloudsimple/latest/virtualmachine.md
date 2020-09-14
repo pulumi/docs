@@ -12,192 +12,6 @@ meta_desc: "Explore the VirtualMachine resource of the vmwarecloudsimple/latest 
 
 Virtual machine model
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### CreateVirtualMachine
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var virtualMachine = new AzureRM.VMwareCloudSimple.Latest.VirtualMachine("virtualMachine", new AzureRM.VMwareCloudSimple.Latest.VirtualMachineArgs
-        {
-            AmountOfRam = 4096,
-            Disks = 
-            {
-                new AzureRM.VMwareCloudSimple.Latest.Inputs.VirtualDiskArgs
-                {
-                    ControllerId = "1000",
-                    IndependenceMode = "persistent",
-                    TotalSize = 10485760,
-                    VirtualDiskId = "2000",
-                },
-            },
-            Location = "westus2",
-            Nics = 
-            {
-                new AzureRM.VMwareCloudSimple.Latest.Inputs.VirtualNicArgs
-                {
-                    Network = new AzureRM.VMwareCloudSimple.Latest.Inputs.VirtualNetworkArgs
-                    {
-                        Id = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19",
-                    },
-                    NicType = "E1000",
-                    PowerOnBoot = true,
-                    VirtualNicId = "4000",
-                },
-            },
-            NumberOfCores = 2,
-            PrivateCloudId = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud",
-            ResourceGroupName = "myResourceGroup",
-            ResourcePool = new AzureRM.VMwareCloudSimple.Latest.Inputs.ResourcePoolArgs
-            {
-                Id = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26",
-            },
-            TemplateId = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualMachineTemplates/vm-34",
-            VirtualMachineName = "myVirtualMachine",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	vmwarecloudsimple "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/vmwarecloudsimple/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := vmwarecloudsimple.NewVirtualMachine(ctx, "virtualMachine", &vmwarecloudsimple.VirtualMachineArgs{
-			AmountOfRam: pulumi.Int(4096),
-			Disks: vmwarecloudsimple.VirtualDiskArray{
-				&vmwarecloudsimple.VirtualDiskArgs{
-					ControllerId:     pulumi.String("1000"),
-					IndependenceMode: pulumi.String("persistent"),
-					TotalSize:        pulumi.Int(10485760),
-					VirtualDiskId:    pulumi.String("2000"),
-				},
-			},
-			Location: pulumi.String("westus2"),
-			Nics: vmwarecloudsimple.VirtualNicArray{
-				&vmwarecloudsimple.VirtualNicArgs{
-					Network: &vmwarecloudsimple.VirtualNetworkArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19"),
-					},
-					NicType:      pulumi.String("E1000"),
-					PowerOnBoot:  pulumi.Bool(true),
-					VirtualNicId: pulumi.String("4000"),
-				},
-			},
-			NumberOfCores:     pulumi.Int(2),
-			PrivateCloudId:    pulumi.String("/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			ResourcePool: &vmwarecloudsimple.ResourcePoolArgs{
-				Id: pulumi.String("/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26"),
-			},
-			TemplateId:         pulumi.String("/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualMachineTemplates/vm-34"),
-			VirtualMachineName: pulumi.String("myVirtualMachine"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-virtual_machine = azurerm.vmwarecloudsimple.latest.VirtualMachine("virtualMachine",
-    amount_of_ram=4096,
-    disks=[{
-        "controllerId": "1000",
-        "independenceMode": "persistent",
-        "totalSize": 10485760,
-        "virtualDiskId": "2000",
-    }],
-    location="westus2",
-    nics=[{
-        "network": {
-            "id": "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19",
-        },
-        "nicType": "E1000",
-        "powerOnBoot": True,
-        "virtualNicId": "4000",
-    }],
-    number_of_cores=2,
-    private_cloud_id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud",
-    resource_group_name="myResourceGroup",
-    resource_pool={
-        "id": "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26",
-    },
-    template_id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualMachineTemplates/vm-34",
-    virtual_machine_name="myVirtualMachine")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const virtualMachine = new azurerm.vmwarecloudsimple.latest.VirtualMachine("virtualMachine", {
-    amountOfRam: 4096,
-    disks: [{
-        controllerId: "1000",
-        independenceMode: "persistent",
-        totalSize: 10485760,
-        virtualDiskId: "2000",
-    }],
-    location: "westus2",
-    nics: [{
-        network: {
-            id: "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19",
-        },
-        nicType: "E1000",
-        powerOnBoot: true,
-        virtualNicId: "4000",
-    }],
-    numberOfCores: 2,
-    privateCloudId: "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud",
-    resourceGroupName: "myResourceGroup",
-    resourcePool: {
-        id: "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26",
-    },
-    templateId: "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualMachineTemplates/vm-34",
-    virtualMachineName: "myVirtualMachine",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a VirtualMachine Resource {#create}
@@ -209,7 +23,7 @@ const virtualMachine = new azurerm.vmwarecloudsimple.latest.VirtualMachine("virt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/vmwarecloudsimple/latest/#pulumi_azurerm.vmwarecloudsimple/latest.VirtualMachine">VirtualMachine</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amount_of_ram</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">customization</span><span class="p">:</span> <span class="nx">Optional[Dict[GuestOSCustomization]]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[List[VirtualDisk]]</span> = None<span class="p">, </span><span class="nx">expose_to_guest_vm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nics</span><span class="p">:</span> <span class="nx">Optional[List[VirtualNic]]</span> = None<span class="p">, </span><span class="nx">number_of_cores</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_cloud_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_pool</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourcePool]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">v_sphere_networks</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/vmwarecloudsimple/latest/#pulumi_azurerm.vmwarecloudsimple/latest.VirtualMachine">VirtualMachine</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amount_of_ram</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">customization</span><span class="p">:</span> <span class="nx">Optional[Dict[GuestOSCustomization]]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[List[VirtualDisk]]</span> = None<span class="p">, </span><span class="nx">expose_to_guest_vm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nics</span><span class="p">:</span> <span class="nx">Optional[List[VirtualNic]]</span> = None<span class="p">, </span><span class="nx">number_of_cores</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_cloud_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_pool</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourcePool]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">v_sphere_networks</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -888,7 +702,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#amount_of_ram_python" style="color: inherit; text-decoration: inherit;">amount_<wbr>of_<wbr>ram</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of memory{{% /md %}}</dd>
 
@@ -908,7 +722,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#number_of_cores_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>cores</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of CPU cores{{% /md %}}</dd>
 
@@ -3295,7 +3109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-required"
             title="Required">
         <span id="controllerid_python">
-<a href="#controllerid_python" style="color: inherit; text-decoration: inherit;">controller<wbr>Id</a>
+<a href="#controllerid_python" style="color: inherit; text-decoration: inherit;">controller<wbr>ID</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3318,7 +3132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalsize_python" style="color: inherit; text-decoration: inherit;">total<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Disk's total size{{% /md %}}</dd>
 
@@ -3737,7 +3551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-required"
             title="Required">
         <span id="controllerid_python">
-<a href="#controllerid_python" style="color: inherit; text-decoration: inherit;">controller<wbr>Id</a>
+<a href="#controllerid_python" style="color: inherit; text-decoration: inherit;">controller<wbr>ID</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3760,7 +3574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalsize_python" style="color: inherit; text-decoration: inherit;">total<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Disk's total size{{% /md %}}</dd>
 

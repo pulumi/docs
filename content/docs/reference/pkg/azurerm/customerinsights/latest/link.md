@@ -12,184 +12,6 @@ meta_desc: "Explore the Link resource of the customerinsights/latest module, inc
 
 The link resource format.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Links_CreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var link = new AzureRM.CustomerInsights.Latest.Link("link", new AzureRM.CustomerInsights.Latest.LinkArgs
-        {
-            Description = 
-            {
-                { "en-us", "Link Description" },
-            },
-            DisplayName = 
-            {
-                { "en-us", "Link DisplayName" },
-            },
-            HubName = "sdkTestHub",
-            LinkName = "linkTest4806",
-            Mappings = 
-            {
-                new AzureRM.CustomerInsights.Latest.Inputs.TypePropertiesMappingArgs
-                {
-                    LinkType = "UpdateAlways",
-                    SourcePropertyName = "testInteraction1949",
-                    TargetPropertyName = "testProfile1446",
-                },
-            },
-            ParticipantPropertyReferences = 
-            {
-                new AzureRM.CustomerInsights.Latest.Inputs.ParticipantPropertyReferenceArgs
-                {
-                    SourcePropertyName = "testInteraction1949",
-                    TargetPropertyName = "ProfileId",
-                },
-            },
-            ResourceGroupName = "TestHubRG",
-            SourceEntityType = "Interaction",
-            SourceEntityTypeName = "testInteraction1949",
-            TargetEntityType = "Profile",
-            TargetEntityTypeName = "testProfile1446",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	customerinsights "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/customerinsights/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := customerinsights.NewLink(ctx, "link", &customerinsights.LinkArgs{
-			Description: pulumi.StringMap{
-				"en-us": pulumi.String("Link Description"),
-			},
-			DisplayName: pulumi.StringMap{
-				"en-us": pulumi.String("Link DisplayName"),
-			},
-			HubName:  pulumi.String("sdkTestHub"),
-			LinkName: pulumi.String("linkTest4806"),
-			Mappings: customerinsights.TypePropertiesMappingArray{
-				&customerinsights.TypePropertiesMappingArgs{
-					LinkType:           pulumi.String("UpdateAlways"),
-					SourcePropertyName: pulumi.String("testInteraction1949"),
-					TargetPropertyName: pulumi.String("testProfile1446"),
-				},
-			},
-			ParticipantPropertyReferences: customerinsights.ParticipantPropertyReferenceArray{
-				&customerinsights.ParticipantPropertyReferenceArgs{
-					SourcePropertyName: pulumi.String("testInteraction1949"),
-					TargetPropertyName: pulumi.String("ProfileId"),
-				},
-			},
-			ResourceGroupName:    pulumi.String("TestHubRG"),
-			SourceEntityType:     pulumi.String("Interaction"),
-			SourceEntityTypeName: pulumi.String("testInteraction1949"),
-			TargetEntityType:     pulumi.String("Profile"),
-			TargetEntityTypeName: pulumi.String("testProfile1446"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-link = azurerm.customerinsights.latest.Link("link",
-    description={
-        "en-us": "Link Description",
-    },
-    display_name={
-        "en-us": "Link DisplayName",
-    },
-    hub_name="sdkTestHub",
-    link_name="linkTest4806",
-    mappings=[{
-        "linkType": "UpdateAlways",
-        "sourcePropertyName": "testInteraction1949",
-        "targetPropertyName": "testProfile1446",
-    }],
-    participant_property_references=[{
-        "sourcePropertyName": "testInteraction1949",
-        "targetPropertyName": "ProfileId",
-    }],
-    resource_group_name="TestHubRG",
-    source_entity_type="Interaction",
-    source_entity_type_name="testInteraction1949",
-    target_entity_type="Profile",
-    target_entity_type_name="testProfile1446")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const link = new azurerm.customerinsights.latest.Link("link", {
-    description: {
-        "en-us": "Link Description",
-    },
-    displayName: {
-        "en-us": "Link DisplayName",
-    },
-    hubName: "sdkTestHub",
-    linkName: "linkTest4806",
-    mappings: [{
-        linkType: "UpdateAlways",
-        sourcePropertyName: "testInteraction1949",
-        targetPropertyName: "testProfile1446",
-    }],
-    participantPropertyReferences: [{
-        sourcePropertyName: "testInteraction1949",
-        targetPropertyName: "ProfileId",
-    }],
-    resourceGroupName: "TestHubRG",
-    sourceEntityType: "Interaction",
-    sourceEntityTypeName: "testInteraction1949",
-    targetEntityType: "Profile",
-    targetEntityTypeName: "testProfile1446",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Link Resource {#create}
@@ -1572,8 +1394,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linktype_python">
-<a href="#linktype_python" style="color: inherit; text-decoration: inherit;">link<wbr>Type</a>
+        <span id="link_type_python">
+<a href="#link_type_python" style="color: inherit; text-decoration: inherit;">link_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1738,8 +1560,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linktype_python">
-<a href="#linktype_python" style="color: inherit; text-decoration: inherit;">link<wbr>Type</a>
+        <span id="link_type_python">
+<a href="#link_type_python" style="color: inherit; text-decoration: inherit;">link_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

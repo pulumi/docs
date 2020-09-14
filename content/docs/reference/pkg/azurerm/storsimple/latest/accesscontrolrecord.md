@@ -12,98 +12,6 @@ meta_desc: "Explore the AccessControlRecord resource of the storsimple/latest mo
 
 The access control record.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### AccessControlRecordsCreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var accessControlRecord = new AzureRM.StorSimple.Latest.AccessControlRecord("accessControlRecord", new AzureRM.StorSimple.Latest.AccessControlRecordArgs
-        {
-            AccessControlRecordName = "ACRForTest",
-            InitiatorName = "iqn.2017-06.com.contoso:ForTest",
-            ManagerName = "ManagerForSDKTest1",
-            ResourceGroupName = "ResourceGroupForSDKTest",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	storsimple "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storsimple/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storsimple.NewAccessControlRecord(ctx, "accessControlRecord", &storsimple.AccessControlRecordArgs{
-			AccessControlRecordName: pulumi.String("ACRForTest"),
-			InitiatorName:           pulumi.String("iqn.2017-06.com.contoso:ForTest"),
-			ManagerName:             pulumi.String("ManagerForSDKTest1"),
-			ResourceGroupName:       pulumi.String("ResourceGroupForSDKTest"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-access_control_record = azurerm.storsimple.latest.AccessControlRecord("accessControlRecord",
-    access_control_record_name="ACRForTest",
-    initiator_name="iqn.2017-06.com.contoso:ForTest",
-    manager_name="ManagerForSDKTest1",
-    resource_group_name="ResourceGroupForSDKTest")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const accessControlRecord = new azurerm.storsimple.latest.AccessControlRecord("accessControlRecord", {
-    accessControlRecordName: "ACRForTest",
-    initiatorName: "iqn.2017-06.com.contoso:ForTest",
-    managerName: "ManagerForSDKTest1",
-    resourceGroupName: "ResourceGroupForSDKTest",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a AccessControlRecord Resource {#create}
@@ -703,7 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_count_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of volumes using the access control record.{{% /md %}}</dd>
 

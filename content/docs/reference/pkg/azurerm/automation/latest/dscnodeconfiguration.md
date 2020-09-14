@@ -12,245 +12,6 @@ meta_desc: "Explore the DscNodeConfiguration resource of the automation/latest m
 
 Definition of the dsc node configuration.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create node configuration
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var dscNodeConfiguration = new AzureRM.Automation.Latest.DscNodeConfiguration("dscNodeConfiguration", new AzureRM.Automation.Latest.DscNodeConfigurationArgs
-        {
-            AutomationAccountName = "myAutomationAccount20",
-            Configuration = new AzureRM.Automation.Latest.Inputs.DscConfigurationAssociationPropertyArgs
-            {
-                Name = "configName",
-            },
-            IncrementNodeConfigurationBuild = true,
-            Name = "configName.nodeConfigName",
-            NodeConfigurationName = "configName.nodeConfigName",
-            ResourceGroupName = "rg",
-            Source = new AzureRM.Automation.Latest.Inputs.ContentSourceArgs
-            {
-                Hash = new AzureRM.Automation.Latest.Inputs.ContentHashArgs
-                {
-                    Algorithm = "sha256",
-                    Value = "6DE256A57F01BFA29B88696D5E77A383D6E61484C7686E8DB955FA10ACE9FFE5",
-                },
-                Type = "embeddedContent",
-                Value = @"
-instance of MSFT_RoleResource as $MSFT_RoleResource1ref
-{
-ResourceID = ""[WindowsFeature]IIS"";
- Ensure = ""Present"";
- SourceInfo = ""::3::32::WindowsFeature"";
- Name = ""Web-Server"";
- ModuleName = ""PsDesiredStateConfiguration"";
-
-ModuleVersion = ""1.0"";
- ConfigurationName = ""configName"";
-};
-instance of OMI_ConfigurationDocument
-
-                    {
- Version=""2.0.0"";
- 
-                        MinimumCompatibleVersion = ""1.0.0"";
- 
-                        CompatibleVersionAdditionalProperties= {""Omi_BaseResource:ConfigurationName""};
- 
-                        Author=""weijiel"";
- 
-                        GenerationDate=""03/30/2017 13:40:25"";
- 
-                        GenerationHost=""TEST-BACKEND"";
- 
-                        Name=""configName"";
-
-                    };
-",
-                Version = "1.0",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	"fmt"
-
-	automation "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/automation/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := automation.NewDscNodeConfiguration(ctx, "dscNodeConfiguration", &automation.DscNodeConfigurationArgs{
-			AutomationAccountName: pulumi.String("myAutomationAccount20"),
-			Configuration: &automation.DscConfigurationAssociationPropertyArgs{
-				Name: pulumi.String("configName"),
-			},
-			IncrementNodeConfigurationBuild: pulumi.Bool(true),
-			Name:                            pulumi.String("configName.nodeConfigName"),
-			NodeConfigurationName:           pulumi.String("configName.nodeConfigName"),
-			ResourceGroupName:               pulumi.String("rg"),
-			Source: &automation.ContentSourceArgs{
-				Hash: &automation.ContentHashArgs{
-					Algorithm: pulumi.String("sha256"),
-					Value:     pulumi.String("6DE256A57F01BFA29B88696D5E77A383D6E61484C7686E8DB955FA10ACE9FFE5"),
-				},
-				Type: pulumi.String("embeddedContent"),
-				Value: pulumi.String(fmt.Sprintf("%v%v%v", "\ninstance of MSFT_RoleResource as ", "$", "MSFT_RoleResource1ref\n{\nResourceID = \"[WindowsFeature]IIS\";\n Ensure = \"Present\";\n SourceInfo = \"::3::32::WindowsFeature\";\n Name = \"Web-Server\";\n ModuleName = \"PsDesiredStateConfiguration\";\n\nModuleVersion = \"1.0\";\n ConfigurationName = \"configName\";\n};\ninstance of OMI_ConfigurationDocument\n\n                    {\n Version=\"2.0.0\";\n \n                        MinimumCompatibleVersion = \"1.0.0\";\n \n                        CompatibleVersionAdditionalProperties= {\"Omi_BaseResource:ConfigurationName\"};\n \n                        Author=\"weijiel\";\n \n                        GenerationDate=\"03/30/2017 13:40:25\";\n \n                        GenerationHost=\"TEST-BACKEND\";\n \n                        Name=\"configName\";\n\n                    };\n")),
-				Version: pulumi.String("1.0"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-dsc_node_configuration = azurerm.automation.latest.DscNodeConfiguration("dscNodeConfiguration",
-    automation_account_name="myAutomationAccount20",
-    configuration={
-        "name": "configName",
-    },
-    increment_node_configuration_build=True,
-    name="configName.nodeConfigName",
-    node_configuration_name="configName.nodeConfigName",
-    resource_group_name="rg",
-    source={
-        "hash": {
-            "algorithm": "sha256",
-            "value": "6DE256A57F01BFA29B88696D5E77A383D6E61484C7686E8DB955FA10ACE9FFE5",
-        },
-        "type": "embeddedContent",
-        "value": """
-instance of MSFT_RoleResource as $MSFT_RoleResource1ref
-{
-ResourceID = "[WindowsFeature]IIS";
- Ensure = "Present";
- SourceInfo = "::3::32::WindowsFeature";
- Name = "Web-Server";
- ModuleName = "PsDesiredStateConfiguration";
-
-ModuleVersion = "1.0";
- ConfigurationName = "configName";
-};
-instance of OMI_ConfigurationDocument
-
-                    {
- Version="2.0.0";
- 
-                        MinimumCompatibleVersion = "1.0.0";
- 
-                        CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
- 
-                        Author="weijiel";
- 
-                        GenerationDate="03/30/2017 13:40:25";
- 
-                        GenerationHost="TEST-BACKEND";
- 
-                        Name="configName";
-
-                    };
-""",
-        "version": "1.0",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const dscNodeConfiguration = new azurerm.automation.latest.DscNodeConfiguration("dscNodeConfiguration", {
-    automationAccountName: "myAutomationAccount20",
-    configuration: {
-        name: "configName",
-    },
-    incrementNodeConfigurationBuild: true,
-    name: "configName.nodeConfigName",
-    nodeConfigurationName: "configName.nodeConfigName",
-    resourceGroupName: "rg",
-    source: {
-        hash: {
-            algorithm: "sha256",
-            value: "6DE256A57F01BFA29B88696D5E77A383D6E61484C7686E8DB955FA10ACE9FFE5",
-        },
-        type: "embeddedContent",
-        value: `
-instance of MSFT_RoleResource as $MSFT_RoleResource1ref
-{
-ResourceID = "[WindowsFeature]IIS";
- Ensure = "Present";
- SourceInfo = "::3::32::WindowsFeature";
- Name = "Web-Server";
- ModuleName = "PsDesiredStateConfiguration";
-
-ModuleVersion = "1.0";
- ConfigurationName = "configName";
-};
-instance of OMI_ConfigurationDocument
-
-                    {
- Version="2.0.0";
- 
-                        MinimumCompatibleVersion = "1.0.0";
- 
-                        CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
- 
-                        Author="weijiel";
- 
-                        GenerationDate="03/30/2017 13:40:25";
- 
-                        GenerationHost="TEST-BACKEND";
- 
-                        Name="configName";
-
-                    };
-`,
-        version: "1.0",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a DscNodeConfiguration Resource {#create}
@@ -1010,7 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of nodes with this node configuration assigned{{% /md %}}</dd>
 

@@ -12,141 +12,6 @@ meta_desc: "Explore the PatchSchedule resource of the cache/latest module, inclu
 
 Response to put/get patch schedules for Redis cache.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### RedisCachePatchSchedulesCreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var patchSchedule = new AzureRM.Cache.Latest.PatchSchedule("patchSchedule", new AzureRM.Cache.Latest.PatchScheduleArgs
-        {
-            Default = "default",
-            Name = "cache1",
-            ResourceGroupName = "rg1",
-            ScheduleEntries = 
-            {
-                new AzureRM.Cache.Latest.Inputs.ScheduleEntryArgs
-                {
-                    DayOfWeek = "Monday",
-                    MaintenanceWindow = "PT5H",
-                    StartHourUtc = 12,
-                },
-                new AzureRM.Cache.Latest.Inputs.ScheduleEntryArgs
-                {
-                    DayOfWeek = "Tuesday",
-                    StartHourUtc = 12,
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	cache "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cache/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cache.NewPatchSchedule(ctx, "patchSchedule", &cache.PatchScheduleArgs{
-			Default:           pulumi.String("default"),
-			Name:              pulumi.String("cache1"),
-			ResourceGroupName: pulumi.String("rg1"),
-			ScheduleEntries: cache.ScheduleEntryArray{
-				&cache.ScheduleEntryArgs{
-					DayOfWeek:         pulumi.String("Monday"),
-					MaintenanceWindow: pulumi.String("PT5H"),
-					StartHourUtc:      pulumi.Int(12),
-				},
-				&cache.ScheduleEntryArgs{
-					DayOfWeek:    pulumi.String("Tuesday"),
-					StartHourUtc: pulumi.Int(12),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-patch_schedule = azurerm.cache.latest.PatchSchedule("patchSchedule",
-    default="default",
-    name="cache1",
-    resource_group_name="rg1",
-    schedule_entries=[
-        {
-            "dayOfWeek": "Monday",
-            "maintenanceWindow": "PT5H",
-            "startHourUtc": 12,
-        },
-        {
-            "dayOfWeek": "Tuesday",
-            "startHourUtc": 12,
-        },
-    ])
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const patchSchedule = new azurerm.cache.latest.PatchSchedule("patchSchedule", {
-    "default": "default",
-    name: "cache1",
-    resourceGroupName: "rg1",
-    scheduleEntries: [
-        {
-            dayOfWeek: "Monday",
-            maintenanceWindow: "PT5H",
-            startHourUtc: 12,
-        },
-        {
-            dayOfWeek: "Tuesday",
-            startHourUtc: 12,
-        },
-    ],
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a PatchSchedule Resource {#create}
@@ -777,8 +642,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="dayofweek_python">
-<a href="#dayofweek_python" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
+        <span id="day_of_week_python">
+<a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -791,14 +656,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starthourutc_python" style="color: inherit; text-decoration: inherit;">start<wbr>Hour<wbr>Utc</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maintenancewindow_python">
-<a href="#maintenancewindow_python" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+        <span id="maintenance_window_python">
+<a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -943,8 +808,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="dayofweek_python">
-<a href="#dayofweek_python" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
+        <span id="day_of_week_python">
+<a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -957,14 +822,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starthourutc_python" style="color: inherit; text-decoration: inherit;">start<wbr>Hour<wbr>Utc</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maintenancewindow_python">
-<a href="#maintenancewindow_python" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+        <span id="maintenance_window_python">
+<a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

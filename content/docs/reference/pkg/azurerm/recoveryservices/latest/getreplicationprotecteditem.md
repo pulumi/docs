@@ -1201,7 +1201,7 @@ The following output properties are available:
 <a href="#diskcapacityinbytes_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
 
@@ -1301,7 +1301,7 @@ The following output properties are available:
 <a href="#monitoringpercentagecompletion_python" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Percentage<wbr>Completion</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.{{% /md %}}</dd>
 
@@ -2237,7 +2237,7 @@ The following output properties are available:
 <a href="#diskcapacityinbytes_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
 
@@ -2347,7 +2347,7 @@ The following output properties are available:
 <a href="#monitoringpercentagecompletion_python" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Percentage<wbr>Completion</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.{{% /md %}}</dd>
 
@@ -3863,7 +3863,7 @@ The following output properties are available:
 <a href="#monitoringpercentagecompletion_python" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Percentage<wbr>Completion</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.{{% /md %}}</dd>
 
@@ -4043,7 +4043,7 @@ The following output properties are available:
 <a href="#rpoinseconds_python" style="color: inherit; text-decoration: inherit;">rpo<wbr>In<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The last RPO value in seconds.{{% /md %}}</dd>
 
@@ -4219,7 +4219,7 @@ The following output properties are available:
 <a href="#disklunid_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Lun<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The source lun Id for the data disk.{{% /md %}}</dd>
 
@@ -5093,7 +5093,7 @@ The following output properties are available:
 <a href="#maxsizemb_python" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>MB</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The hard disk max size in MB.{{% /md %}}</dd>
 
@@ -6745,7 +6745,7 @@ The following output properties are available:
 <a href="#rpoinseconds_python" style="color: inherit; text-decoration: inherit;">rpo<wbr>In<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Last RPO value.{{% /md %}}</dd>
 
@@ -6775,7 +6775,7 @@ The following output properties are available:
 <a href="#sourcevmcpucount_python" style="color: inherit; text-decoration: inherit;">source<wbr>Vm<wbr>Cpu<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The CPU count of the VM on the primary side.{{% /md %}}</dd>
 
@@ -6785,7 +6785,7 @@ The following output properties are available:
 <a href="#sourcevmramsizeinmb_python" style="color: inherit; text-decoration: inherit;">source<wbr>Vm<wbr>Ram<wbr>Size<wbr>In<wbr>MB</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The RAM size of the VM on the primary side.{{% /md %}}</dd>
 
@@ -8877,7 +8877,7 @@ The following output properties are available:
 <a href="#diskcapacityinbytes_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
 
@@ -8917,7 +8917,7 @@ The following output properties are available:
 <a href="#filesystemcapacityinbytes_python" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The disk file system capacity in bytes.{{% /md %}}</dd>
 
@@ -8967,7 +8967,7 @@ The following output properties are available:
 <a href="#resyncdurationinseconds_python" style="color: inherit; text-decoration: inherit;">resync<wbr>Duration<wbr>In<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The resync duration in seconds.{{% /md %}}</dd>
 
@@ -8977,7 +8977,7 @@ The following output properties are available:
 <a href="#resyncprogresspercentage_python" style="color: inherit; text-decoration: inherit;">resync<wbr>Progress<wbr>Percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The resync progress percentage.{{% /md %}}</dd>
 
@@ -8997,7 +8997,7 @@ The following output properties are available:
 <a href="#rpoinseconds_python" style="color: inherit; text-decoration: inherit;">rpo<wbr>In<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The RPO in seconds.{{% /md %}}</dd>
 
@@ -11043,7 +11043,7 @@ The following output properties are available:
 <a href="#resyncprogresspercentage_python" style="color: inherit; text-decoration: inherit;">resync<wbr>Progress<wbr>Percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The resync progress percentage.{{% /md %}}</dd>
 
@@ -11053,7 +11053,7 @@ The following output properties are available:
 <a href="#rpoinseconds_python" style="color: inherit; text-decoration: inherit;">rpo<wbr>In<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The RPO in seconds.{{% /md %}}</dd>
 
@@ -11093,7 +11093,7 @@ The following output properties are available:
 <a href="#sourcevmcpucount_python" style="color: inherit; text-decoration: inherit;">source<wbr>Vm<wbr>Cpu<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The CPU count of the VM on the primary side.{{% /md %}}</dd>
 
@@ -11103,7 +11103,7 @@ The following output properties are available:
 <a href="#sourcevmramsizeinmb_python" style="color: inherit; text-decoration: inherit;">source<wbr>Vm<wbr>Ram<wbr>Size<wbr>In<wbr>MB</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The RAM size of the VM on the primary side.{{% /md %}}</dd>
 
@@ -11729,7 +11729,7 @@ The following output properties are available:
 <a href="#diskcapacityinbytes_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
 
@@ -11769,7 +11769,7 @@ The following output properties are available:
 <a href="#filesystemcapacityinbytes_python" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The file system capacity in bytes.{{% /md %}}</dd>
 
@@ -11819,7 +11819,7 @@ The following output properties are available:
 <a href="#resyncdurationinseconds_python" style="color: inherit; text-decoration: inherit;">resync<wbr>Duration<wbr>In<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The resync duration in seconds.{{% /md %}}</dd>
 
@@ -11829,7 +11829,7 @@ The following output properties are available:
 <a href="#resyncprogresspercentage_python" style="color: inherit; text-decoration: inherit;">resync<wbr>Progress<wbr>Percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The resync progress percentage.{{% /md %}}</dd>
 
@@ -11849,7 +11849,7 @@ The following output properties are available:
 <a href="#rpoinseconds_python" style="color: inherit; text-decoration: inherit;">rpo<wbr>In<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The RPO in seconds.{{% /md %}}</dd>
 
@@ -13305,7 +13305,7 @@ The following output properties are available:
 <a href="#rpoinseconds_python" style="color: inherit; text-decoration: inherit;">rpo<wbr>In<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The RPO in seconds.{{% /md %}}</dd>
 
@@ -13315,7 +13315,7 @@ The following output properties are available:
 <a href="#sourcevmcpucount_python" style="color: inherit; text-decoration: inherit;">source<wbr>Vm<wbr>Cpu<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The CPU count of the VM on the primary side.{{% /md %}}</dd>
 
@@ -13325,7 +13325,7 @@ The following output properties are available:
 <a href="#sourcevmramsizeinmb_python" style="color: inherit; text-decoration: inherit;">source<wbr>Vm<wbr>Ram<wbr>Size<wbr>In<wbr>MB</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The RAM size of the VM on the primary side.{{% /md %}}</dd>
 
@@ -14233,7 +14233,7 @@ The following output properties are available:
 <a href="#privateport_python" style="color: inherit; text-decoration: inherit;">private<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The input endpoint private port.{{% /md %}}</dd>
 
@@ -14253,7 +14253,7 @@ The following output properties are available:
 <a href="#public_port_python" style="color: inherit; text-decoration: inherit;">public_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The input endpoint public port.{{% /md %}}</dd>
 

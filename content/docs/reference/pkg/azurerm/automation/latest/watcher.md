@@ -12,114 +12,6 @@ meta_desc: "Explore the Watcher resource of the automation/latest module, includ
 
 Definition of the watcher type.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update watcher
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var watcher = new AzureRM.Automation.Latest.Watcher("watcher", new AzureRM.Automation.Latest.WatcherArgs
-        {
-            AutomationAccountName = "MyTestAutomationAccount",
-            Description = "This is a test watcher.",
-            ExecutionFrequencyInSeconds = 60,
-            ResourceGroupName = "rg",
-            ScriptName = "MyTestWatcherRunbook",
-            ScriptRunOn = "MyTestHybridWorkerGroup",
-            Tags = ,
-            WatcherName = "MyTestWatcher",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	automation "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/automation/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := automation.NewWatcher(ctx, "watcher", &automation.WatcherArgs{
-			AutomationAccountName:       pulumi.String("MyTestAutomationAccount"),
-			Description:                 pulumi.String("This is a test watcher."),
-			ExecutionFrequencyInSeconds: pulumi.Int(60),
-			ResourceGroupName:           pulumi.String("rg"),
-			ScriptName:                  pulumi.String("MyTestWatcherRunbook"),
-			ScriptRunOn:                 pulumi.String("MyTestHybridWorkerGroup"),
-			Tags:                        nil,
-			WatcherName:                 pulumi.String("MyTestWatcher"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-watcher = azurerm.automation.latest.Watcher("watcher",
-    automation_account_name="MyTestAutomationAccount",
-    description="This is a test watcher.",
-    execution_frequency_in_seconds=60,
-    resource_group_name="rg",
-    script_name="MyTestWatcherRunbook",
-    script_run_on="MyTestHybridWorkerGroup",
-    tags={},
-    watcher_name="MyTestWatcher")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const watcher = new azurerm.automation.latest.Watcher("watcher", {
-    automationAccountName: "MyTestAutomationAccount",
-    description: "This is a test watcher.",
-    executionFrequencyInSeconds: 60,
-    resourceGroupName: "rg",
-    scriptName: "MyTestWatcherRunbook",
-    scriptRunOn: "MyTestHybridWorkerGroup",
-    tags: {},
-    watcherName: "MyTestWatcher",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Watcher Resource {#create}
@@ -131,7 +23,7 @@ const watcher = new azurerm.automation.latest.Watcher("watcher", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/automation/latest/#pulumi_azurerm.automation/latest.Watcher">Watcher</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_frequency_in_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script_parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">script_run_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/automation/latest/#pulumi_azurerm.automation/latest.Watcher">Watcher</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_frequency_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script_parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">script_run_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -710,7 +602,7 @@ The Watcher resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#execution_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>frequency_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency at which the watcher is invoked.{{% /md %}}</dd>
 

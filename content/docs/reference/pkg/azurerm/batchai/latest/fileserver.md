@@ -12,145 +12,6 @@ meta_desc: "Explore the FileServer resource of the batchai/latest module, includ
 
 File Server information.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create a file server
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var fileServer = new AzureRM.BatchAI.Latest.FileServer("fileServer", new AzureRM.BatchAI.Latest.FileServerArgs
-        {
-            DataDisks = new AzureRM.BatchAI.Latest.Inputs.DataDisksArgs
-            {
-                DiskCount = 2,
-                DiskSizeInGB = 10,
-                StorageAccountType = "Standard_LRS",
-            },
-            FileServerName = "demo_nfs",
-            ResourceGroupName = "demo_resource_group",
-            SshConfiguration = new AzureRM.BatchAI.Latest.Inputs.SshConfigurationArgs
-            {
-                UserAccountSettings = new AzureRM.BatchAI.Latest.Inputs.UserAccountSettingsArgs
-                {
-                    AdminUserName = "admin_user_name",
-                    AdminUserPassword = "admin_user_password",
-                },
-            },
-            VmSize = "STANDARD_NC6",
-            WorkspaceName = "demo_workspace",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	batchai "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/batchai/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := batchai.NewFileServer(ctx, "fileServer", &batchai.FileServerArgs{
-			DataDisks: &batchai.DataDisksArgs{
-				DiskCount:          pulumi.Int(2),
-				DiskSizeInGB:       pulumi.Int(10),
-				StorageAccountType: pulumi.String("Standard_LRS"),
-			},
-			FileServerName:    pulumi.String("demo_nfs"),
-			ResourceGroupName: pulumi.String("demo_resource_group"),
-			SshConfiguration: &batchai.SshConfigurationArgs{
-				UserAccountSettings: &batchai.UserAccountSettingsArgs{
-					AdminUserName:     pulumi.String("admin_user_name"),
-					AdminUserPassword: pulumi.String("admin_user_password"),
-				},
-			},
-			VmSize:        pulumi.String("STANDARD_NC6"),
-			WorkspaceName: pulumi.String("demo_workspace"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-file_server = azurerm.batchai.latest.FileServer("fileServer",
-    data_disks={
-        "diskCount": 2,
-        "diskSizeInGB": 10,
-        "storageAccountType": "Standard_LRS",
-    },
-    file_server_name="demo_nfs",
-    resource_group_name="demo_resource_group",
-    ssh_configuration={
-        "userAccountSettings": {
-            "adminUserName": "admin_user_name",
-            "adminUserPassword": "admin_user_password",
-        },
-    },
-    vm_size="STANDARD_NC6",
-    workspace_name="demo_workspace")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const fileServer = new azurerm.batchai.latest.FileServer("fileServer", {
-    dataDisks: {
-        diskCount: 2,
-        diskSizeInGB: 10,
-        storageAccountType: "Standard_LRS",
-    },
-    fileServerName: "demo_nfs",
-    resourceGroupName: "demo_resource_group",
-    sshConfiguration: {
-        userAccountSettings: {
-            adminUserName: "admin_user_name",
-            adminUserPassword: "admin_user_password",
-        },
-    },
-    vmSize: "STANDARD_NC6",
-    workspaceName: "demo_workspace",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a FileServer Resource {#create}
@@ -1135,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_count_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of data disks attached to the File Server. If multiple disks attached, they will be configured in RAID level 0.{{% /md %}}</dd>
 
@@ -1145,7 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_in_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>in_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Disk size in GB for the blank data disks.{{% /md %}}</dd>
 
@@ -1341,7 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_count_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of data disks attached to the File Server. If multiple disks attached, they will be configured in RAID level 0.{{% /md %}}</dd>
 
@@ -1351,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_in_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>in_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Disk size in GB for the blank data disks.{{% /md %}}</dd>
 

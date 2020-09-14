@@ -12,457 +12,6 @@ meta_desc: "Explore the Server resource of the dbformariadb/latest module, inclu
 
 Represents a server.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create a database as a point in time restore
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var server = new AzureRM.DBforMariaDB.Latest.Server("server", new AzureRM.DBforMariaDB.Latest.ServerArgs
-        {
-            Location = "brazilsouth",
-            ResourceGroupName = "TargetResourceGroup",
-            ServerName = "targetserver",
-            Sku = new AzureRM.DBforMariaDB.Latest.Inputs.SkuArgs
-            {
-                Capacity = 2,
-                Family = "Gen5",
-                Name = "GP_Gen5_2",
-                Tier = "GeneralPurpose",
-            },
-            Tags = 
-            {
-                { "ElasticServer", "1" },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	dbformariadb "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/dbformariadb/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := dbformariadb.NewServer(ctx, "server", &dbformariadb.ServerArgs{
-			Location:          pulumi.String("brazilsouth"),
-			ResourceGroupName: pulumi.String("TargetResourceGroup"),
-			ServerName:        pulumi.String("targetserver"),
-			Sku: &dbformariadb.SkuArgs{
-				Capacity: pulumi.Int(2),
-				Family:   pulumi.String("Gen5"),
-				Name:     pulumi.String("GP_Gen5_2"),
-				Tier:     pulumi.String("GeneralPurpose"),
-			},
-			Tags: pulumi.StringMap{
-				"ElasticServer": pulumi.String("1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-server = azurerm.dbformariadb.latest.Server("server",
-    location="brazilsouth",
-    resource_group_name="TargetResourceGroup",
-    server_name="targetserver",
-    sku={
-        "capacity": 2,
-        "family": "Gen5",
-        "name": "GP_Gen5_2",
-        "tier": "GeneralPurpose",
-    },
-    tags={
-        "ElasticServer": "1",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const server = new azurerm.dbformariadb.latest.Server("server", {
-    location: "brazilsouth",
-    resourceGroupName: "TargetResourceGroup",
-    serverName: "targetserver",
-    sku: {
-        capacity: 2,
-        family: "Gen5",
-        name: "GP_Gen5_2",
-        tier: "GeneralPurpose",
-    },
-    tags: {
-        ElasticServer: "1",
-    },
-});
-
-```
-
-{{% /example %}}
-
-### Create a new server
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var server = new AzureRM.DBforMariaDB.Latest.Server("server", new AzureRM.DBforMariaDB.Latest.ServerArgs
-        {
-            Location = "westus",
-            ResourceGroupName = "testrg",
-            ServerName = "mariadbtestsvc4",
-            Sku = new AzureRM.DBforMariaDB.Latest.Inputs.SkuArgs
-            {
-                Capacity = 2,
-                Family = "Gen5",
-                Name = "GP_Gen5_2",
-                Tier = "GeneralPurpose",
-            },
-            Tags = 
-            {
-                { "ElasticServer", "1" },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	dbformariadb "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/dbformariadb/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := dbformariadb.NewServer(ctx, "server", &dbformariadb.ServerArgs{
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("testrg"),
-			ServerName:        pulumi.String("mariadbtestsvc4"),
-			Sku: &dbformariadb.SkuArgs{
-				Capacity: pulumi.Int(2),
-				Family:   pulumi.String("Gen5"),
-				Name:     pulumi.String("GP_Gen5_2"),
-				Tier:     pulumi.String("GeneralPurpose"),
-			},
-			Tags: pulumi.StringMap{
-				"ElasticServer": pulumi.String("1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-server = azurerm.dbformariadb.latest.Server("server",
-    location="westus",
-    resource_group_name="testrg",
-    server_name="mariadbtestsvc4",
-    sku={
-        "capacity": 2,
-        "family": "Gen5",
-        "name": "GP_Gen5_2",
-        "tier": "GeneralPurpose",
-    },
-    tags={
-        "ElasticServer": "1",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const server = new azurerm.dbformariadb.latest.Server("server", {
-    location: "westus",
-    resourceGroupName: "testrg",
-    serverName: "mariadbtestsvc4",
-    sku: {
-        capacity: 2,
-        family: "Gen5",
-        name: "GP_Gen5_2",
-        tier: "GeneralPurpose",
-    },
-    tags: {
-        ElasticServer: "1",
-    },
-});
-
-```
-
-{{% /example %}}
-
-### Create a replica server
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var server = new AzureRM.DBforMariaDB.Latest.Server("server", new AzureRM.DBforMariaDB.Latest.ServerArgs
-        {
-            Location = "westus",
-            ResourceGroupName = "TargetResourceGroup",
-            ServerName = "targetserver",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	dbformariadb "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/dbformariadb/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := dbformariadb.NewServer(ctx, "server", &dbformariadb.ServerArgs{
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("TargetResourceGroup"),
-			ServerName:        pulumi.String("targetserver"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-server = azurerm.dbformariadb.latest.Server("server",
-    location="westus",
-    resource_group_name="TargetResourceGroup",
-    server_name="targetserver")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const server = new azurerm.dbformariadb.latest.Server("server", {
-    location: "westus",
-    resourceGroupName: "TargetResourceGroup",
-    serverName: "targetserver",
-});
-
-```
-
-{{% /example %}}
-
-### Create a server as a geo restore
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var server = new AzureRM.DBforMariaDB.Latest.Server("server", new AzureRM.DBforMariaDB.Latest.ServerArgs
-        {
-            Location = "westus",
-            ResourceGroupName = "TargetResourceGroup",
-            ServerName = "targetserver",
-            Sku = new AzureRM.DBforMariaDB.Latest.Inputs.SkuArgs
-            {
-                Capacity = 2,
-                Family = "Gen5",
-                Name = "GP_Gen5_2",
-                Tier = "GeneralPurpose",
-            },
-            Tags = 
-            {
-                { "ElasticServer", "1" },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	dbformariadb "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/dbformariadb/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := dbformariadb.NewServer(ctx, "server", &dbformariadb.ServerArgs{
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("TargetResourceGroup"),
-			ServerName:        pulumi.String("targetserver"),
-			Sku: &dbformariadb.SkuArgs{
-				Capacity: pulumi.Int(2),
-				Family:   pulumi.String("Gen5"),
-				Name:     pulumi.String("GP_Gen5_2"),
-				Tier:     pulumi.String("GeneralPurpose"),
-			},
-			Tags: pulumi.StringMap{
-				"ElasticServer": pulumi.String("1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-server = azurerm.dbformariadb.latest.Server("server",
-    location="westus",
-    resource_group_name="TargetResourceGroup",
-    server_name="targetserver",
-    sku={
-        "capacity": 2,
-        "family": "Gen5",
-        "name": "GP_Gen5_2",
-        "tier": "GeneralPurpose",
-    },
-    tags={
-        "ElasticServer": "1",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const server = new azurerm.dbformariadb.latest.Server("server", {
-    location: "westus",
-    resourceGroupName: "TargetResourceGroup",
-    serverName: "targetserver",
-    sku: {
-        capacity: 2,
-        family: "Gen5",
-        name: "GP_Gen5_2",
-        tier: "GeneralPurpose",
-    },
-    tags: {
-        ElasticServer: "1",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Server Resource {#create}
@@ -1492,7 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replica_capacity_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of replicas that a master server can have.{{% /md %}}</dd>
 
@@ -2583,8 +2132,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverid_python">
-<a href="#sourceserverid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Id</a>
+        <span id="source_server_id_python">
+<a href="#source_server_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2829,8 +2378,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverid_python">
-<a href="#sourceserverid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Id</a>
+        <span id="source_server_id_python">
+<a href="#source_server_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3115,8 +2664,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverid_python">
-<a href="#sourceserverid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Id</a>
+        <span id="source_server_id_python">
+<a href="#source_server_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3375,7 +2924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The scale up/out capacity, representing server's compute units.{{% /md %}}</dd>
 
@@ -3621,7 +3170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The scale up/out capacity, representing server's compute units.{{% /md %}}</dd>
 
@@ -3827,7 +3376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_retention_days_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Backup retention days for the server.{{% /md %}}</dd>
 
@@ -3857,7 +3406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_mb_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max storage allowed for a server.{{% /md %}}</dd>
 
@@ -4033,7 +3582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_retention_days_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Backup retention days for the server.{{% /md %}}</dd>
 
@@ -4063,7 +3612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_mb_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max storage allowed for a server.{{% /md %}}</dd>
 

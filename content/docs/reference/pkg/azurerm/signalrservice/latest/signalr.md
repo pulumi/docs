@@ -12,327 +12,6 @@ meta_desc: "Explore the SignalR resource of the signalrservice/latest module, in
 
 A class represent a SignalR service resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### SignalR_CreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var signalR = new AzureRM.SignalRService.Latest.SignalR("signalR", new AzureRM.SignalRService.Latest.SignalRArgs
-        {
-            Cors = new AzureRM.SignalRService.Latest.Inputs.SignalRCorsSettingsArgs
-            {
-                AllowedOrigins = 
-                {
-                    "https://foo.com",
-                    "https://bar.com",
-                },
-            },
-            Features = 
-            {
-                new AzureRM.SignalRService.Latest.Inputs.SignalRFeatureArgs
-                {
-                    Flag = "ServiceMode",
-                    Properties = ,
-                    Value = "Serverless",
-                },
-                new AzureRM.SignalRService.Latest.Inputs.SignalRFeatureArgs
-                {
-                    Flag = "EnableConnectivityLogs",
-                    Properties = ,
-                    Value = "True",
-                },
-                new AzureRM.SignalRService.Latest.Inputs.SignalRFeatureArgs
-                {
-                    Flag = "EnableMessagingLogs",
-                    Properties = ,
-                    Value = "False",
-                },
-            },
-            Kind = "SignalR",
-            Location = "eastus",
-            NetworkACLs = new AzureRM.SignalRService.Latest.Inputs.SignalRNetworkACLsArgs
-            {
-                DefaultAction = "Deny",
-                PrivateEndpoints = 
-                {
-                    new AzureRM.SignalRService.Latest.Inputs.PrivateEndpointACLArgs
-                    {
-                        Allow = 
-                        {
-                            "ServerConnection",
-                        },
-                        Name = "mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
-                    },
-                },
-                PublicNetwork = new AzureRM.SignalRService.Latest.Inputs.NetworkACLArgs
-                {
-                    Allow = 
-                    {
-                        "ClientConnection",
-                    },
-                },
-            },
-            ResourceGroupName = "myResourceGroup",
-            ResourceName = "mySignalRService",
-            Sku = new AzureRM.SignalRService.Latest.Inputs.ResourceSkuArgs
-            {
-                Capacity = 1,
-                Name = "Standard_S1",
-                Tier = "Standard",
-            },
-            Tags = 
-            {
-                { "key1", "value1" },
-            },
-            Upstream = new AzureRM.SignalRService.Latest.Inputs.ServerlessUpstreamSettingsArgs
-            {
-                Templates = 
-                {
-                    new AzureRM.SignalRService.Latest.Inputs.UpstreamTemplateArgs
-                    {
-                        CategoryPattern = "*",
-                        EventPattern = "connect,disconnect",
-                        HubPattern = "*",
-                        UrlTemplate = "https://example.com/chat/api/connect",
-                    },
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	signalrservice "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/signalrservice/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := signalrservice.NewSignalR(ctx, "signalR", &signalrservice.SignalRArgs{
-			Cors: &signalrservice.SignalRCorsSettingsArgs{
-				AllowedOrigins: pulumi.StringArray{
-					pulumi.String("https://foo.com"),
-					pulumi.String("https://bar.com"),
-				},
-			},
-			Features: signalrservice.SignalRFeatureArray{
-				&signalrservice.SignalRFeatureArgs{
-					Flag:       pulumi.String("ServiceMode"),
-					Properties: nil,
-					Value:      pulumi.String("Serverless"),
-				},
-				&signalrservice.SignalRFeatureArgs{
-					Flag:       pulumi.String("EnableConnectivityLogs"),
-					Properties: nil,
-					Value:      pulumi.String("True"),
-				},
-				&signalrservice.SignalRFeatureArgs{
-					Flag:       pulumi.String("EnableMessagingLogs"),
-					Properties: nil,
-					Value:      pulumi.String("False"),
-				},
-			},
-			Kind:     pulumi.String("SignalR"),
-			Location: pulumi.String("eastus"),
-			NetworkACLs: &signalrservice.SignalRNetworkACLsArgs{
-				DefaultAction: pulumi.String("Deny"),
-				PrivateEndpoints: signalrservice.PrivateEndpointACLArray{
-					&signalrservice.PrivateEndpointACLArgs{
-						Allow: pulumi.StringArray{
-							pulumi.String("ServerConnection"),
-						},
-						Name: pulumi.String("mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e"),
-					},
-				},
-				PublicNetwork: &signalrservice.NetworkACLArgs{
-					Allow: pulumi.StringArray{
-						pulumi.String("ClientConnection"),
-					},
-				},
-			},
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			ResourceName:      pulumi.String("mySignalRService"),
-			Sku: &signalrservice.ResourceSkuArgs{
-				Capacity: pulumi.Int(1),
-				Name:     pulumi.String("Standard_S1"),
-				Tier:     pulumi.String("Standard"),
-			},
-			Tags: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-			},
-			Upstream: &signalrservice.ServerlessUpstreamSettingsArgs{
-				Templates: signalrservice.UpstreamTemplateArray{
-					&signalrservice.UpstreamTemplateArgs{
-						CategoryPattern: pulumi.String("*"),
-						EventPattern:    pulumi.String("connect,disconnect"),
-						HubPattern:      pulumi.String("*"),
-						UrlTemplate:     pulumi.String("https://example.com/chat/api/connect"),
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-signal_r = azurerm.signalrservice.latest.SignalR("signalR",
-    cors={
-        "allowedOrigins": [
-            "https://foo.com",
-            "https://bar.com",
-        ],
-    },
-    features=[
-        {
-            "flag": "ServiceMode",
-            "properties": {},
-            "value": "Serverless",
-        },
-        {
-            "flag": "EnableConnectivityLogs",
-            "properties": {},
-            "value": "True",
-        },
-        {
-            "flag": "EnableMessagingLogs",
-            "properties": {},
-            "value": "False",
-        },
-    ],
-    kind="SignalR",
-    location="eastus",
-    network_acls={
-        "defaultAction": "Deny",
-        "privateEndpoints": [{
-            "allow": ["ServerConnection"],
-            "name": "mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
-        }],
-        "publicNetwork": {
-            "allow": ["ClientConnection"],
-        },
-    },
-    resource_group_name="myResourceGroup",
-    resource_name="mySignalRService",
-    sku={
-        "capacity": 1,
-        "name": "Standard_S1",
-        "tier": "Standard",
-    },
-    tags={
-        "key1": "value1",
-    },
-    upstream={
-        "templates": [{
-            "categoryPattern": "*",
-            "eventPattern": "connect,disconnect",
-            "hubPattern": "*",
-            "urlTemplate": "https://example.com/chat/api/connect",
-        }],
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const signalR = new azurerm.signalrservice.latest.SignalR("signalR", {
-    cors: {
-        allowedOrigins: [
-            "https://foo.com",
-            "https://bar.com",
-        ],
-    },
-    features: [
-        {
-            flag: "ServiceMode",
-            properties: {},
-            value: "Serverless",
-        },
-        {
-            flag: "EnableConnectivityLogs",
-            properties: {},
-            value: "True",
-        },
-        {
-            flag: "EnableMessagingLogs",
-            properties: {},
-            value: "False",
-        },
-    ],
-    kind: "SignalR",
-    location: "eastus",
-    networkACLs: {
-        defaultAction: "Deny",
-        privateEndpoints: [{
-            allow: ["ServerConnection"],
-            name: "mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
-        }],
-        publicNetwork: {
-            allow: ["ClientConnection"],
-        },
-    },
-    resourceGroupName: "myResourceGroup",
-    resourceName: "mySignalRService",
-    sku: {
-        capacity: 1,
-        name: "Standard_S1",
-        tier: "Standard",
-    },
-    tags: {
-        key1: "value1",
-    },
-    upstream: {
-        templates: [{
-            categoryPattern: "*",
-            eventPattern: "connect,disconnect",
-            hubPattern: "*",
-            urlTemplate: "https://example.com/chat/api/connect",
-        }],
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a SignalR Resource {#create}
@@ -1406,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_port_python" style="color: inherit; text-decoration: inherit;">public_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The publicly accessible port of the SignalR service which is designed for browser/client side usage.{{% /md %}}</dd>
 
@@ -1416,7 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_port_python" style="color: inherit; text-decoration: inherit;">server_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The publicly accessible port of the SignalR service which is designed for customer server side usage.{{% /md %}}</dd>
 
@@ -2809,7 +2488,7 @@ Allowed values: Standard_S1, Free_F1{{% /md %}}</dd>
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Optional, integer. The unit count of SignalR resource. 1 by default.
 
@@ -3087,7 +2766,7 @@ Allowed values: Standard_S1, Free_F1{{% /md %}}</dd>
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Optional, integer. The unit count of SignalR resource. 1 by default.
 

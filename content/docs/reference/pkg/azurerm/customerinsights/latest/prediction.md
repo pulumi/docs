@@ -12,181 +12,6 @@ meta_desc: "Explore the Prediction resource of the customerinsights/latest modul
 
 The prediction resource format.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Predictions_CreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var prediction = new AzureRM.CustomerInsights.Latest.Prediction("prediction", new AzureRM.CustomerInsights.Latest.PredictionArgs
-        {
-            AutoAnalyze = true,
-            Description = 
-            {
-                { "en-us", "sdktest" },
-            },
-            DisplayName = 
-            {
-                { "en-us", "sdktest" },
-            },
-            Grades = {},
-            HubName = "sdkTestHub",
-            InvolvedInteractionTypes = {},
-            InvolvedKpiTypes = {},
-            InvolvedRelationships = {},
-            Mappings = new AzureRM.CustomerInsights.Latest.Inputs.PredictionMappingsArgs
-            {
-                Grade = "sdktest_Grade",
-                Reason = "sdktest_Reason",
-                Score = "sdktest_Score",
-            },
-            NegativeOutcomeExpression = "Customers.FirstName = 'Mike'",
-            PositiveOutcomeExpression = "Customers.FirstName = 'David'",
-            PredictionName = "sdktest",
-            PrimaryProfileType = "Customers",
-            ResourceGroupName = "TestHubRG",
-            ScopeExpression = "*",
-            ScoreLabel = "score label",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	customerinsights "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/customerinsights/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := customerinsights.NewPrediction(ctx, "prediction", &customerinsights.PredictionArgs{
-			AutoAnalyze: pulumi.Bool(true),
-			Description: pulumi.StringMap{
-				"en-us": pulumi.String("sdktest"),
-			},
-			DisplayName: pulumi.StringMap{
-				"en-us": pulumi.String("sdktest"),
-			},
-			Grades:                   customerinsights.PredictionGradesArray{},
-			HubName:                  pulumi.String("sdkTestHub"),
-			InvolvedInteractionTypes: []interface{}{},
-			InvolvedKpiTypes:         []interface{}{},
-			InvolvedRelationships:    []interface{}{},
-			Mappings: &customerinsights.PredictionMappingsArgs{
-				Grade:  pulumi.String("sdktest_Grade"),
-				Reason: pulumi.String("sdktest_Reason"),
-				Score:  pulumi.String("sdktest_Score"),
-			},
-			NegativeOutcomeExpression: pulumi.String("Customers.FirstName = 'Mike'"),
-			PositiveOutcomeExpression: pulumi.String("Customers.FirstName = 'David'"),
-			PredictionName:            pulumi.String("sdktest"),
-			PrimaryProfileType:        pulumi.String("Customers"),
-			ResourceGroupName:         pulumi.String("TestHubRG"),
-			ScopeExpression:           pulumi.String("*"),
-			ScoreLabel:                pulumi.String("score label"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-prediction = azurerm.customerinsights.latest.Prediction("prediction",
-    auto_analyze=True,
-    description={
-        "en-us": "sdktest",
-    },
-    display_name={
-        "en-us": "sdktest",
-    },
-    grades=[],
-    hub_name="sdkTestHub",
-    involved_interaction_types=[],
-    involved_kpi_types=[],
-    involved_relationships=[],
-    mappings={
-        "grade": "sdktest_Grade",
-        "reason": "sdktest_Reason",
-        "score": "sdktest_Score",
-    },
-    negative_outcome_expression="Customers.FirstName = 'Mike'",
-    positive_outcome_expression="Customers.FirstName = 'David'",
-    prediction_name="sdktest",
-    primary_profile_type="Customers",
-    resource_group_name="TestHubRG",
-    scope_expression="*",
-    score_label="score label")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const prediction = new azurerm.customerinsights.latest.Prediction("prediction", {
-    autoAnalyze: true,
-    description: {
-        "en-us": "sdktest",
-    },
-    displayName: {
-        "en-us": "sdktest",
-    },
-    grades: [],
-    hubName: "sdkTestHub",
-    involvedInteractionTypes: [],
-    involvedKpiTypes: [],
-    involvedRelationships: [],
-    mappings: {
-        grade: "sdktest_Grade",
-        reason: "sdktest_Reason",
-        score: "sdktest_Score",
-    },
-    negativeOutcomeExpression: "Customers.FirstName = 'Mike'",
-    positiveOutcomeExpression: "Customers.FirstName = 'David'",
-    predictionName: "sdktest",
-    primaryProfileType: "Customers",
-    resourceGroupName: "TestHubRG",
-    scopeExpression: "*",
-    scoreLabel: "score label",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Prediction Resource {#create}
@@ -1471,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxscorethreshold_python" style="color: inherit; text-decoration: inherit;">max<wbr>Score<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd>
 
@@ -1481,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minscorethreshold_python" style="color: inherit; text-decoration: inherit;">min<wbr>Score<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd>
 
@@ -1803,7 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxscorethreshold_python" style="color: inherit; text-decoration: inherit;">max<wbr>Score<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd>
 
@@ -1813,7 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minscorethreshold_python" style="color: inherit; text-decoration: inherit;">min<wbr>Score<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd>
 

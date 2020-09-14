@@ -1151,7 +1151,7 @@ The following output properties are available:
 <a href="#maxscorethreshold_python" style="color: inherit; text-decoration: inherit;">max<wbr>Score<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd>
 
@@ -1161,7 +1161,7 @@ The following output properties are available:
 <a href="#minscorethreshold_python" style="color: inherit; text-decoration: inherit;">min<wbr>Score<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd>
 

@@ -12,280 +12,6 @@ meta_desc: "Explore the DatabaseAccountGremlinGraph resource of the documentdb/l
 
 An Azure Cosmos DB Gremlin graph.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### CosmosDBGremlinGraphCreateUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var databaseAccountGremlinGraph = new AzureRM.DocumentDB.Latest.DatabaseAccountGremlinGraph("databaseAccountGremlinGraph", new AzureRM.DocumentDB.Latest.DatabaseAccountGremlinGraphArgs
-        {
-            AccountName = "ddb1",
-            DatabaseName = "databaseName",
-            GraphName = "graphName",
-            Options = ,
-            Resource = new AzureRM.DocumentDB.Latest.Inputs.GremlinGraphResourceArgs
-            {
-                ConflictResolutionPolicy = new AzureRM.DocumentDB.Latest.Inputs.ConflictResolutionPolicyArgs
-                {
-                    ConflictResolutionPath = "/path",
-                    Mode = "LastWriterWins",
-                },
-                DefaultTtl = 100,
-                Id = "graphName",
-                IndexingPolicy = new AzureRM.DocumentDB.Latest.Inputs.IndexingPolicyArgs
-                {
-                    Automatic = true,
-                    ExcludedPaths = {},
-                    IncludedPaths = 
-                    {
-                        new AzureRM.DocumentDB.Latest.Inputs.IncludedPathArgs
-                        {
-                            Indexes = 
-                            {
-                                new AzureRM.DocumentDB.Latest.Inputs.IndexesArgs
-                                {
-                                    DataType = "String",
-                                    Kind = "Range",
-                                    Precision = -1,
-                                },
-                                new AzureRM.DocumentDB.Latest.Inputs.IndexesArgs
-                                {
-                                    DataType = "Number",
-                                    Kind = "Range",
-                                    Precision = -1,
-                                },
-                            },
-                            Path = "/*",
-                        },
-                    },
-                    IndexingMode = "Consistent",
-                },
-                PartitionKey = new AzureRM.DocumentDB.Latest.Inputs.ContainerPartitionKeyArgs
-                {
-                    Kind = "Hash",
-                    Paths = 
-                    {
-                        "/AccountNumber",
-                    },
-                },
-                UniqueKeyPolicy = new AzureRM.DocumentDB.Latest.Inputs.UniqueKeyPolicyArgs
-                {
-                    UniqueKeys = 
-                    {
-                        new AzureRM.DocumentDB.Latest.Inputs.UniqueKeyArgs
-                        {
-                            Paths = 
-                            {
-                                "/testPath",
-                            },
-                        },
-                    },
-                },
-            },
-            ResourceGroupName = "rg1",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/documentdb/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewDatabaseAccountGremlinGraph(ctx, "databaseAccountGremlinGraph", &documentdb.DatabaseAccountGremlinGraphArgs{
-			AccountName:  pulumi.String("ddb1"),
-			DatabaseName: pulumi.String("databaseName"),
-			GraphName:    pulumi.String("graphName"),
-			Options:      nil,
-			Resource: &documentdb.GremlinGraphResourceArgs{
-				ConflictResolutionPolicy: &documentdb.ConflictResolutionPolicyArgs{
-					ConflictResolutionPath: pulumi.String("/path"),
-					Mode:                   pulumi.String("LastWriterWins"),
-				},
-				DefaultTtl: pulumi.Int(100),
-				Id:         pulumi.String("graphName"),
-				IndexingPolicy: &documentdb.IndexingPolicyArgs{
-					Automatic:     pulumi.Bool(true),
-					ExcludedPaths: documentdb.ExcludedPathArray{},
-					IncludedPaths: documentdb.IncludedPathArray{
-						&documentdb.IncludedPathArgs{
-							Indexes: documentdb.IndexesArray{
-								&documentdb.IndexesArgs{
-									DataType:  pulumi.String("String"),
-									Kind:      pulumi.String("Range"),
-									Precision: pulumi.Int(-1),
-								},
-								&documentdb.IndexesArgs{
-									DataType:  pulumi.String("Number"),
-									Kind:      pulumi.String("Range"),
-									Precision: pulumi.Int(-1),
-								},
-							},
-							Path: pulumi.String("/*"),
-						},
-					},
-					IndexingMode: pulumi.String("Consistent"),
-				},
-				PartitionKey: &documentdb.ContainerPartitionKeyArgs{
-					Kind: pulumi.String("Hash"),
-					Paths: pulumi.StringArray{
-						pulumi.String("/AccountNumber"),
-					},
-				},
-				UniqueKeyPolicy: &documentdb.UniqueKeyPolicyArgs{
-					UniqueKeys: documentdb.UniqueKeyArray{
-						&documentdb.UniqueKeyArgs{
-							Paths: pulumi.StringArray{
-								pulumi.String("/testPath"),
-							},
-						},
-					},
-				},
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-database_account_gremlin_graph = azurerm.documentdb.latest.DatabaseAccountGremlinGraph("databaseAccountGremlinGraph",
-    account_name="ddb1",
-    database_name="databaseName",
-    graph_name="graphName",
-    options={},
-    resource={
-        "conflictResolutionPolicy": {
-            "conflictResolutionPath": "/path",
-            "mode": "LastWriterWins",
-        },
-        "defaultTtl": 100,
-        "id": "graphName",
-        "indexingPolicy": {
-            "automatic": True,
-            "excludedPaths": [],
-            "includedPaths": [{
-                "indexes": [
-                    {
-                        "dataType": "String",
-                        "kind": "Range",
-                        "precision": -1,
-                    },
-                    {
-                        "dataType": "Number",
-                        "kind": "Range",
-                        "precision": -1,
-                    },
-                ],
-                "path": "/*",
-            }],
-            "indexingMode": "Consistent",
-        },
-        "partitionKey": {
-            "kind": "Hash",
-            "paths": ["/AccountNumber"],
-        },
-        "uniqueKeyPolicy": {
-            "uniqueKeys": [{
-                "paths": ["/testPath"],
-            }],
-        },
-    },
-    resource_group_name="rg1")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const databaseAccountGremlinGraph = new azurerm.documentdb.latest.DatabaseAccountGremlinGraph("databaseAccountGremlinGraph", {
-    accountName: "ddb1",
-    databaseName: "databaseName",
-    graphName: "graphName",
-    options: {},
-    resource: {
-        conflictResolutionPolicy: {
-            conflictResolutionPath: "/path",
-            mode: "LastWriterWins",
-        },
-        defaultTtl: 100,
-        id: "graphName",
-        indexingPolicy: {
-            automatic: true,
-            excludedPaths: [],
-            includedPaths: [{
-                indexes: [
-                    {
-                        dataType: "String",
-                        kind: "Range",
-                        precision: -1,
-                    },
-                    {
-                        dataType: "Number",
-                        kind: "Range",
-                        precision: -1,
-                    },
-                ],
-                path: "/*",
-            }],
-            indexingMode: "Consistent",
-        },
-        partitionKey: {
-            kind: "Hash",
-            paths: ["/AccountNumber"],
-        },
-        uniqueKeyPolicy: {
-            uniqueKeys: [{
-                paths: ["/testPath"],
-            }],
-        },
-    },
-    resourceGroupName: "rg1",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a DatabaseAccountGremlinGraph Resource {#create}
@@ -1205,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Default time to live{{% /md %}}</dd>
 
@@ -2044,7 +1770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Indicates the version of the partition key definition{{% /md %}}</dd>
 
@@ -2210,7 +1936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Indicates the version of the partition key definition{{% /md %}}</dd>
 
@@ -2638,7 +2364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Default time to live{{% /md %}}</dd>
 
@@ -3086,7 +2812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#precision_python" style="color: inherit; text-decoration: inherit;">precision</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The precision of the index. -1 is maximum precision.{{% /md %}}</dd>
 
@@ -3252,7 +2978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#precision_python" style="color: inherit; text-decoration: inherit;">precision</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The precision of the index. -1 is maximum precision.{{% /md %}}</dd>
 

@@ -12,102 +12,6 @@ meta_desc: "Explore the BackupScheduleGroup resource of the storsimple/latest mo
 
 The Backup Schedule Group
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### BackupScheduleGroupsCreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var backupScheduleGroup = new AzureRM.StorSimple.Latest.BackupScheduleGroup("backupScheduleGroup", new AzureRM.StorSimple.Latest.BackupScheduleGroupArgs
-        {
-            DeviceName = "HSDK-4XY4FI2IVG",
-            ManagerName = "hAzureSDKOperations",
-            ResourceGroupName = "ResourceGroupForSDKTest",
-            ScheduleGroupName = "BackupSchGroupForSDKTest",
-            StartTime = ,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	storsimple "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storsimple/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storsimple.NewBackupScheduleGroup(ctx, "backupScheduleGroup", &storsimple.BackupScheduleGroupArgs{
-			DeviceName:        pulumi.String("HSDK-4XY4FI2IVG"),
-			ManagerName:       pulumi.String("hAzureSDKOperations"),
-			ResourceGroupName: pulumi.String("ResourceGroupForSDKTest"),
-			ScheduleGroupName: pulumi.String("BackupSchGroupForSDKTest"),
-			StartTime:         nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-backup_schedule_group = azurerm.storsimple.latest.BackupScheduleGroup("backupScheduleGroup",
-    device_name="HSDK-4XY4FI2IVG",
-    manager_name="hAzureSDKOperations",
-    resource_group_name="ResourceGroupForSDKTest",
-    schedule_group_name="BackupSchGroupForSDKTest",
-    start_time={})
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const backupScheduleGroup = new azurerm.storsimple.latest.BackupScheduleGroup("backupScheduleGroup", {
-    deviceName: "HSDK-4XY4FI2IVG",
-    managerName: "hAzureSDKOperations",
-    resourceGroupName: "ResourceGroupForSDKTest",
-    scheduleGroupName: "BackupSchGroupForSDKTest",
-    startTime: {},
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a BackupScheduleGroup Resource {#create}
@@ -822,7 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The hour.{{% /md %}}</dd>
 
@@ -832,7 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minute.{{% /md %}}</dd>
 
@@ -842,7 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The second.{{% /md %}}</dd>
 
@@ -988,7 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The hour.{{% /md %}}</dd>
 
@@ -998,7 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minute.{{% /md %}}</dd>
 
@@ -1008,7 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The second.{{% /md %}}</dd>
 

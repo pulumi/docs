@@ -12,119 +12,6 @@ meta_desc: "Explore the BackupPolicy resource of the storsimple/latest module, i
 
 The backup policy.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### BackupPoliciesCreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var backupPolicy = new AzureRM.StorSimple.Latest.BackupPolicy("backupPolicy", new AzureRM.StorSimple.Latest.BackupPolicyArgs
-        {
-            BackupPolicyName = "BkUpPolicy01ForSDKTest",
-            DeviceName = "Device05ForSDKTest",
-            Kind = "Series8000",
-            ManagerName = "ManagerForSDKTest1",
-            ResourceGroupName = "ResourceGroupForSDKTest",
-            VolumeIds = 
-            {
-                "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/volumeContainerForSDKTest/volumes/Clonedvolume1",
-                "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/volumeContainerForSDKTest/volumes/volume1",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	storsimple "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storsimple/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storsimple.NewBackupPolicy(ctx, "backupPolicy", &storsimple.BackupPolicyArgs{
-			BackupPolicyName:  pulumi.String("BkUpPolicy01ForSDKTest"),
-			DeviceName:        pulumi.String("Device05ForSDKTest"),
-			Kind:              pulumi.String("Series8000"),
-			ManagerName:       pulumi.String("ManagerForSDKTest1"),
-			ResourceGroupName: pulumi.String("ResourceGroupForSDKTest"),
-			VolumeIds: pulumi.StringArray{
-				pulumi.String("/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/volumeContainerForSDKTest/volumes/Clonedvolume1"),
-				pulumi.String("/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/volumeContainerForSDKTest/volumes/volume1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-backup_policy = azurerm.storsimple.latest.BackupPolicy("backupPolicy",
-    backup_policy_name="BkUpPolicy01ForSDKTest",
-    device_name="Device05ForSDKTest",
-    kind="Series8000",
-    manager_name="ManagerForSDKTest1",
-    resource_group_name="ResourceGroupForSDKTest",
-    volume_ids=[
-        "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/volumeContainerForSDKTest/volumes/Clonedvolume1",
-        "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/volumeContainerForSDKTest/volumes/volume1",
-    ])
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const backupPolicy = new azurerm.storsimple.latest.BackupPolicy("backupPolicy", {
-    backupPolicyName: "BkUpPolicy01ForSDKTest",
-    deviceName: "Device05ForSDKTest",
-    kind: "Series8000",
-    managerName: "ManagerForSDKTest1",
-    resourceGroupName: "ResourceGroupForSDKTest",
-    volumeIds: [
-        "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/volumeContainerForSDKTest/volumes/Clonedvolume1",
-        "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/volumeContainerForSDKTest/volumes/volume1",
-    ],
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a BackupPolicy Resource {#create}
@@ -944,7 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedules_count_python" style="color: inherit; text-decoration: inherit;">schedules_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The count of schedules the backup policy contains.{{% /md %}}</dd>
 

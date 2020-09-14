@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#tenant_features_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>features</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.{{% /md %}}</dd>
 
@@ -701,7 +701,7 @@ The following output properties are available:
 <a href="#max_units_python" style="color: inherit; text-decoration: inherit;">max_<wbr>units</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.{{% /md %}}</dd>
 
@@ -711,7 +711,7 @@ The following output properties are available:
 <a href="#min_units_python" style="color: inherit; text-decoration: inherit;">min_<wbr>units</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.{{% /md %}}</dd>
 

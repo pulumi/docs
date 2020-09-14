@@ -12,375 +12,6 @@ meta_desc: "Explore the StreamingJob resource of the streamanalytics/latest modu
 
 A streaming job object, containing all information associated with the named streaming job.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create a complete streaming job (a streaming job with a transformation, at least 1 input and at least 1 output)
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var streamingJob = new AzureRM.StreamAnalytics.Latest.StreamingJob("streamingJob", new AzureRM.StreamAnalytics.Latest.StreamingJobArgs
-        {
-            CompatibilityLevel = "1.0",
-            DataLocale = "en-US",
-            EventsLateArrivalMaxDelayInSeconds = 5,
-            EventsOutOfOrderMaxDelayInSeconds = 0,
-            EventsOutOfOrderPolicy = "Drop",
-            Functions = {},
-            Inputs = 
-            {
-                new AzureRM.StreamAnalytics.Latest.Inputs.InputArgs
-                {
-                    Name = "inputtest",
-                    Properties = 
-                    {
-                        { "datasource", 
-                        {
-                            { "properties", 
-                            {
-                                { "container", "containerName" },
-                                { "pathPattern", "" },
-                                { "storageAccounts", 
-                                {
-                                    
-                                    {
-                                        { "accountKey", "yourAccountKey==" },
-                                        { "accountName", "yourAccountName" },
-                                    },
-                                } },
-                            } },
-                            { "type", "Microsoft.Storage/Blob" },
-                        } },
-                        { "serialization", 
-                        {
-                            { "properties", 
-                            {
-                                { "encoding", "UTF8" },
-                            } },
-                            { "type", "Json" },
-                        } },
-                        { "type", "Stream" },
-                    },
-                },
-            },
-            JobName = "sj7804",
-            Location = "West US",
-            OutputErrorPolicy = "Drop",
-            Outputs = 
-            {
-                new AzureRM.StreamAnalytics.Latest.Inputs.OutputArgs
-                {
-                    Name = "outputtest",
-                },
-            },
-            ResourceGroupName = "sjrg3276",
-            Sku = new AzureRM.StreamAnalytics.Latest.Inputs.SkuArgs
-            {
-                Name = "Standard",
-            },
-            Tags = 
-            {
-                { "key1", "value1" },
-                { "key3", "value3" },
-                { "randomKey", "randomValue" },
-            },
-            Transformation = new AzureRM.StreamAnalytics.Latest.Inputs.TransformationArgs
-            {
-                Name = "transformationtest",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-streaming_job = azurerm.streamanalytics.latest.StreamingJob("streamingJob",
-    compatibility_level="1.0",
-    data_locale="en-US",
-    events_late_arrival_max_delay_in_seconds=5,
-    events_out_of_order_max_delay_in_seconds=0,
-    events_out_of_order_policy="Drop",
-    functions=[],
-    inputs=[{
-        "name": "inputtest",
-        "properties": {
-            "datasource": {
-                "properties": {
-                    "container": "containerName",
-                    "pathPattern": "",
-                    "storageAccounts": [{
-                        "accountKey": "yourAccountKey==",
-                        "accountName": "yourAccountName",
-                    }],
-                },
-                "type": "Microsoft.Storage/Blob",
-            },
-            "serialization": {
-                "properties": {
-                    "encoding": "UTF8",
-                },
-                "type": "Json",
-            },
-            "type": "Stream",
-        },
-    }],
-    job_name="sj7804",
-    location="West US",
-    output_error_policy="Drop",
-    outputs=[{
-        "name": "outputtest",
-    }],
-    resource_group_name="sjrg3276",
-    sku={
-        "name": "Standard",
-    },
-    tags={
-        "key1": "value1",
-        "key3": "value3",
-        "randomKey": "randomValue",
-    },
-    transformation={
-        "name": "transformationtest",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const streamingJob = new azurerm.streamanalytics.latest.StreamingJob("streamingJob", {
-    compatibilityLevel: "1.0",
-    dataLocale: "en-US",
-    eventsLateArrivalMaxDelayInSeconds: 5,
-    eventsOutOfOrderMaxDelayInSeconds: 0,
-    eventsOutOfOrderPolicy: "Drop",
-    functions: [],
-    inputs: [{
-        name: "inputtest",
-        properties: {
-            datasource: {
-                properties: {
-                    container: "containerName",
-                    pathPattern: "",
-                    storageAccounts: [{
-                        accountKey: "yourAccountKey==",
-                        accountName: "yourAccountName",
-                    }],
-                },
-                type: "Microsoft.Storage/Blob",
-            },
-            serialization: {
-                properties: {
-                    encoding: "UTF8",
-                },
-                type: "Json",
-            },
-            type: "Stream",
-        },
-    }],
-    jobName: "sj7804",
-    location: "West US",
-    outputErrorPolicy: "Drop",
-    outputs: [{
-        name: "outputtest",
-    }],
-    resourceGroupName: "sjrg3276",
-    sku: {
-        name: "Standard",
-    },
-    tags: {
-        key1: "value1",
-        key3: "value3",
-        randomKey: "randomValue",
-    },
-    transformation: {
-        name: "transformationtest",
-    },
-});
-
-```
-
-{{% /example %}}
-
-### Create a streaming job shell (a streaming job with no inputs, outputs, transformation, or functions)
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var streamingJob = new AzureRM.StreamAnalytics.Latest.StreamingJob("streamingJob", new AzureRM.StreamAnalytics.Latest.StreamingJobArgs
-        {
-            CompatibilityLevel = "1.0",
-            DataLocale = "en-US",
-            EventsLateArrivalMaxDelayInSeconds = 16,
-            EventsOutOfOrderMaxDelayInSeconds = 5,
-            EventsOutOfOrderPolicy = "Drop",
-            Functions = {},
-            Inputs = {},
-            JobName = "sj59",
-            Location = "West US",
-            OutputErrorPolicy = "Drop",
-            Outputs = {},
-            ResourceGroupName = "sjrg6936",
-            Sku = new AzureRM.StreamAnalytics.Latest.Inputs.SkuArgs
-            {
-                Name = "Standard",
-            },
-            Tags = 
-            {
-                { "key1", "value1" },
-                { "key3", "value3" },
-                { "randomKey", "randomValue" },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	streamanalytics "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/streamanalytics/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := streamanalytics.NewStreamingJob(ctx, "streamingJob", &streamanalytics.StreamingJobArgs{
-			CompatibilityLevel:                 pulumi.String("1.0"),
-			DataLocale:                         pulumi.String("en-US"),
-			EventsLateArrivalMaxDelayInSeconds: pulumi.Int(16),
-			EventsOutOfOrderMaxDelayInSeconds:  pulumi.Int(5),
-			EventsOutOfOrderPolicy:             pulumi.String("Drop"),
-			Functions:                          streamanalytics.FunctionArray{},
-			Inputs:                             streamanalytics.InputArray{},
-			JobName:                            pulumi.String("sj59"),
-			Location:                           pulumi.String("West US"),
-			OutputErrorPolicy:                  pulumi.String("Drop"),
-			Outputs:                            streamanalytics.OutputArray{},
-			ResourceGroupName:                  pulumi.String("sjrg6936"),
-			Sku: &streamanalytics.SkuArgs{
-				Name: pulumi.String("Standard"),
-			},
-			Tags: pulumi.StringMap{
-				"key1":      pulumi.String("value1"),
-				"key3":      pulumi.String("value3"),
-				"randomKey": pulumi.String("randomValue"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-streaming_job = azurerm.streamanalytics.latest.StreamingJob("streamingJob",
-    compatibility_level="1.0",
-    data_locale="en-US",
-    events_late_arrival_max_delay_in_seconds=16,
-    events_out_of_order_max_delay_in_seconds=5,
-    events_out_of_order_policy="Drop",
-    functions=[],
-    inputs=[],
-    job_name="sj59",
-    location="West US",
-    output_error_policy="Drop",
-    outputs=[],
-    resource_group_name="sjrg6936",
-    sku={
-        "name": "Standard",
-    },
-    tags={
-        "key1": "value1",
-        "key3": "value3",
-        "randomKey": "randomValue",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const streamingJob = new azurerm.streamanalytics.latest.StreamingJob("streamingJob", {
-    compatibilityLevel: "1.0",
-    dataLocale: "en-US",
-    eventsLateArrivalMaxDelayInSeconds: 16,
-    eventsOutOfOrderMaxDelayInSeconds: 5,
-    eventsOutOfOrderPolicy: "Drop",
-    functions: [],
-    inputs: [],
-    jobName: "sj59",
-    location: "West US",
-    outputErrorPolicy: "Drop",
-    outputs: [],
-    resourceGroupName: "sjrg6936",
-    sku: {
-        name: "Standard",
-    },
-    tags: {
-        key1: "value1",
-        key3: "value3",
-        randomKey: "randomValue",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a StreamingJob Resource {#create}
@@ -392,7 +23,7 @@ const streamingJob = new azurerm.streamanalytics.latest.StreamingJob("streamingJ
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/streamanalytics/latest/#pulumi_azurerm.streamanalytics/latest.StreamingJob">StreamingJob</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">compatibility_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_locale</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">events_late_arrival_max_delay_in_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">events_out_of_order_max_delay_in_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">events_out_of_order_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">functions</span><span class="p">:</span> <span class="nx">Optional[List[Function]]</span> = None<span class="p">, </span><span class="nx">inputs</span><span class="p">:</span> <span class="nx">Optional[List[Input]]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_error_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_start_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[List[Output]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">transformation</span><span class="p">:</span> <span class="nx">Optional[Dict[Transformation]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/streamanalytics/latest/#pulumi_azurerm.streamanalytics/latest.StreamingJob">StreamingJob</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">compatibility_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_locale</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">events_late_arrival_max_delay_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">events_out_of_order_max_delay_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">events_out_of_order_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">functions</span><span class="p">:</span> <span class="nx">Optional[List[Function]]</span> = None<span class="p">, </span><span class="nx">inputs</span><span class="p">:</span> <span class="nx">Optional[List[Input]]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_error_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_start_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[List[Output]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">transformation</span><span class="p">:</span> <span class="nx">Optional[Dict[Transformation]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1141,7 +772,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#events_late_arrival_max_delay_in_seconds_python" style="color: inherit; text-decoration: inherit;">events_<wbr>late_<wbr>arrival_<wbr>max_<wbr>delay_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum tolerable delay in seconds where events arriving late could be included.  Supported range is -1 to 1814399 (20.23:59:59 days) and -1 is used to specify wait indefinitely. If the property is absent, it is interpreted to have a value of -1.{{% /md %}}</dd>
 
@@ -1151,7 +782,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#events_out_of_order_max_delay_in_seconds_python" style="color: inherit; text-decoration: inherit;">events_<wbr>out_<wbr>of_<wbr>order_<wbr>max_<wbr>delay_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum tolerable delay in seconds where out-of-order events can be adjusted to be back in order.{{% /md %}}</dd>
 
@@ -2083,8 +1714,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshtoken_python">
-<a href="#refreshtoken_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
+        <span id="refresh_token_python">
+<a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2449,8 +2080,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshtoken_python">
-<a href="#refreshtoken_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
+        <span id="refresh_token_python">
+<a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2709,7 +2340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd>
 
@@ -2955,7 +2586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd>
 
@@ -3141,7 +2772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mapto_python" style="color: inherit; text-decoration: inherit;">map<wbr>To</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd>
 
@@ -3307,7 +2938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mapto_python" style="color: inherit; text-decoration: inherit;">map<wbr>To</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd>
 
@@ -4599,7 +4230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of rows to write to the Azure Table at a time.{{% /md %}}</dd>
 
@@ -4925,7 +4556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of rows to write to the Azure Table at a time.{{% /md %}}</dd>
 
@@ -6215,7 +5846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcepartitioncount_python" style="color: inherit; text-decoration: inherit;">source<wbr>Partition<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The partition count of the blob input data source. Range 1 - 256.{{% /md %}}</dd>
 
@@ -6501,7 +6132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcepartitioncount_python" style="color: inherit; text-decoration: inherit;">source<wbr>Partition<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The partition count of the blob input data source. Range 1 - 256.{{% /md %}}</dd>
 
@@ -11369,8 +11000,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshtoken_python">
-<a href="#refreshtoken_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
+        <span id="refresh_token_python">
+<a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11695,8 +11326,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshtoken_python">
-<a href="#refreshtoken_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
+        <span id="refresh_token_python">
+<a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14339,7 +13970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streaming_units_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>units</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the number of streaming units that the streaming job uses.{{% /md %}}</dd>
 
@@ -14625,7 +14256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streaming_units_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>units</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the number of streaming units that the streaming job uses.{{% /md %}}</dd>
 

@@ -1098,7 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#familysequencenumber_python" style="color: inherit; text-decoration: inherit;">family<wbr>Sequence<wbr>Number</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Sequence number of the backup file in the backup set{{% /md %}}</dd>
 
@@ -1646,8 +1646,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sasuri_python">
-<a href="#sasuri_python" style="color: inherit; text-decoration: inherit;">sas<wbr>Uri</a>
+        <span id="sas_uri_python">
+<a href="#sas_uri_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1732,8 +1732,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sasuri_python">
-<a href="#sasuri_python" style="color: inherit; text-decoration: inherit;">sas<wbr>Uri</a>
+        <span id="sas_uri_python">
+<a href="#sas_uri_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9742,7 +9742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#familycount_python" style="color: inherit; text-decoration: inherit;">family<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of files in the backup set.{{% /md %}}</dd>
 
@@ -9772,7 +9772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Position of current database backup in the file.{{% /md %}}</dd>
 
@@ -10354,7 +10354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#execution_count_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}No. of query executions{{% /md %}}</dd>
 
@@ -15442,7 +15442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appliedchanges_python" style="color: inherit; text-decoration: inherit;">applied<wbr>Changes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of applied changes{{% /md %}}</dd>
 
@@ -15452,7 +15452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cdcdeletecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Delete<wbr>Counter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of cdc deletes{{% /md %}}</dd>
 
@@ -15462,7 +15462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cdcinsertcounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Insert<wbr>Counter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of cdc inserts{{% /md %}}</dd>
 
@@ -15472,7 +15472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cdcupdatecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Update<wbr>Counter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of cdc updates{{% /md %}}</dd>
 
@@ -15502,7 +15502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullloadcompletedtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Completed<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of tables completed in full load{{% /md %}}</dd>
 
@@ -15512,7 +15512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullloaderroredtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Errored<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of tables errored in full load{{% /md %}}</dd>
 
@@ -15522,7 +15522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullloadloadingtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Loading<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of tables loading in full load{{% /md %}}</dd>
 
@@ -15532,7 +15532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullloadqueuedtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Queued<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of tables queued in full load{{% /md %}}</dd>
 
@@ -15552,7 +15552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#incomingchanges_python" style="color: inherit; text-decoration: inherit;">incoming<wbr>Changes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of incoming changes{{% /md %}}</dd>
 
@@ -15572,7 +15572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}CDC apply latency{{% /md %}}</dd>
 
@@ -16550,7 +16550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataerrorscounter_python" style="color: inherit; text-decoration: inherit;">data<wbr>Errors<wbr>Counter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of data errors occurred{{% /md %}}</dd>
 
@@ -16600,7 +16600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullloadtotalrows_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Total<wbr>Rows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of rows applied in full load{{% /md %}}</dd>
 
@@ -16650,7 +16650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalchangesapplied_python" style="color: inherit; text-decoration: inherit;">total<wbr>Changes<wbr>Applied</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total number of applied changes{{% /md %}}</dd>
 
@@ -18508,7 +18508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appliedchanges_python" style="color: inherit; text-decoration: inherit;">applied<wbr>Changes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of applied changes{{% /md %}}</dd>
 
@@ -18518,7 +18518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cdcdeletecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Delete<wbr>Counter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of cdc deletes{{% /md %}}</dd>
 
@@ -18528,7 +18528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cdcinsertcounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Insert<wbr>Counter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of cdc inserts{{% /md %}}</dd>
 
@@ -18538,7 +18538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cdcupdatecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Update<wbr>Counter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of cdc updates{{% /md %}}</dd>
 
@@ -18568,7 +18568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullloadcompletedtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Completed<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of tables completed in full load{{% /md %}}</dd>
 
@@ -18578,7 +18578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullloaderroredtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Errored<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of tables errored in full load{{% /md %}}</dd>
 
@@ -18588,7 +18588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullloadloadingtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Loading<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of tables loading in full load{{% /md %}}</dd>
 
@@ -18598,7 +18598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullloadqueuedtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Queued<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of tables queued in full load{{% /md %}}</dd>
 
@@ -18618,7 +18618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#incomingchanges_python" style="color: inherit; text-decoration: inherit;">incoming<wbr>Changes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of incoming changes{{% /md %}}</dd>
 
@@ -18638,7 +18638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}CDC apply latency{{% /md %}}</dd>
 
@@ -19586,7 +19586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cdcdeletecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Delete<wbr>Counter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of applied deletes{{% /md %}}</dd>
 
@@ -19596,7 +19596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cdcinsertcounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Insert<wbr>Counter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of applied inserts{{% /md %}}</dd>
 
@@ -19606,7 +19606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cdcupdatecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Update<wbr>Counter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of applied updates{{% /md %}}</dd>
 
@@ -19616,7 +19616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataerrorscounter_python" style="color: inherit; text-decoration: inherit;">data<wbr>Errors<wbr>Counter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of data errors occurred{{% /md %}}</dd>
 
@@ -19666,7 +19666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullloadtotalrows_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Total<wbr>Rows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of rows applied in full load{{% /md %}}</dd>
 
@@ -19716,7 +19716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalchangesapplied_python" style="color: inherit; text-decoration: inherit;">total<wbr>Changes<wbr>Applied</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total number of applied changes{{% /md %}}</dd>
 
@@ -22306,7 +22306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appliedchanges_python" style="color: inherit; text-decoration: inherit;">applied<wbr>Changes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of applied changes{{% /md %}}</dd>
 
@@ -22316,7 +22316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cdcdeletecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Delete<wbr>Counter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of cdc deletes{{% /md %}}</dd>
 
@@ -22326,7 +22326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cdcinsertcounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Insert<wbr>Counter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of cdc inserts{{% /md %}}</dd>
 
@@ -22336,7 +22336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cdcupdatecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Update<wbr>Counter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of cdc updates{{% /md %}}</dd>
 
@@ -22366,7 +22366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullloadcompletedtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Completed<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of tables completed in full load{{% /md %}}</dd>
 
@@ -22376,7 +22376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullloaderroredtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Errored<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of tables errored in full load{{% /md %}}</dd>
 
@@ -22386,7 +22386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullloadloadingtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Loading<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of tables loading in full load{{% /md %}}</dd>
 
@@ -22396,7 +22396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullloadqueuedtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Queued<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of tables queued in full load{{% /md %}}</dd>
 
@@ -22416,7 +22416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#incomingchanges_python" style="color: inherit; text-decoration: inherit;">incoming<wbr>Changes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of incoming changes{{% /md %}}</dd>
 
@@ -22436,7 +22436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}CDC apply latency{{% /md %}}</dd>
 
@@ -22878,7 +22878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasecount_python" style="color: inherit; text-decoration: inherit;">database<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of databases{{% /md %}}</dd>
 
@@ -23424,7 +23424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cdcdeletecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Delete<wbr>Counter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of applied deletes{{% /md %}}</dd>
 
@@ -23434,7 +23434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cdcinsertcounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Insert<wbr>Counter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of applied inserts{{% /md %}}</dd>
 
@@ -23444,7 +23444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cdcupdatecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Update<wbr>Counter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of applied updates{{% /md %}}</dd>
 
@@ -23454,7 +23454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataerrorscounter_python" style="color: inherit; text-decoration: inherit;">data<wbr>Errors<wbr>Counter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of data errors occurred{{% /md %}}</dd>
 
@@ -23504,7 +23504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullloadtotalrows_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Total<wbr>Rows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of rows applied in full load{{% /md %}}</dd>
 
@@ -23554,7 +23554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalchangesapplied_python" style="color: inherit; text-decoration: inherit;">total<wbr>Changes<wbr>Applied</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total number of applied changes{{% /md %}}</dd>
 
@@ -24840,7 +24840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorcount_python" style="color: inherit; text-decoration: inherit;">error<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of database/object errors.{{% /md %}}</dd>
 
@@ -24890,7 +24890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numberofobjects_python" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Objects</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of objects{{% /md %}}</dd>
 
@@ -24900,7 +24900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numberofobjectscompleted_python" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Objects<wbr>Completed</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of successfully completed objects{{% /md %}}</dd>
 
@@ -24956,8 +24956,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="statusmessage_python">
-<a href="#statusmessage_python" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
+        <span id="status_message_python">
+<a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -26058,7 +26058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#durationinseconds_python" style="color: inherit; text-decoration: inherit;">duration<wbr>In<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Duration of task execution in seconds.{{% /md %}}</dd>
 
@@ -26154,8 +26154,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="statusmessage_python">
-<a href="#statusmessage_python" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
+        <span id="status_message_python">
+<a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -26564,7 +26564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#itemscompletedcount_python" style="color: inherit; text-decoration: inherit;">items<wbr>Completed<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of successfully completed items{{% /md %}}</dd>
 
@@ -26574,7 +26574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#itemscount_python" style="color: inherit; text-decoration: inherit;">items<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of items{{% /md %}}</dd>
 
@@ -26620,8 +26620,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="statusmessage_python">
-<a href="#statusmessage_python" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
+        <span id="status_message_python">
+<a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -29214,7 +29214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasecount_python" style="color: inherit; text-decoration: inherit;">database<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of databases{{% /md %}}</dd>
 
@@ -29224,7 +29224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databaseerrorcount_python" style="color: inherit; text-decoration: inherit;">database<wbr>Error<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of database level errors{{% /md %}}</dd>
 
@@ -29260,16 +29260,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceservername_python">
-<a href="#sourceservername_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Source server name{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="sourceserverversion_python">
 <a href="#sourceserverversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Version</a>
 </span> 
@@ -29277,6 +29267,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Source server version{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="source_server_name_python">
+<a href="#source_server_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Source server name{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -34214,7 +34214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port for Server{{% /md %}}</dd>
 
@@ -34420,7 +34420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port for Server{{% /md %}}</dd>
 
@@ -34948,7 +34948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port for Server{{% /md %}}</dd>
 
@@ -35194,7 +35194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port for Server{{% /md %}}</dd>
 
@@ -35556,7 +35556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statementsinbatch_python" style="color: inherit; text-decoration: inherit;">statements<wbr>In<wbr>Batch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total no. of statements in the batch{{% /md %}}</dd>
 
@@ -35812,7 +35812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hresult_python" style="color: inherit; text-decoration: inherit;">h<wbr>Result</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Coded numerical value that is assigned to a specific exception{{% /md %}}</dd>
 
@@ -40896,7 +40896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#waitcount_python" style="color: inherit; text-decoration: inherit;">wait<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total no. of waits{{% /md %}}</dd>
 

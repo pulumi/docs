@@ -12,191 +12,6 @@ meta_desc: "Explore the Workspace resource of the machinelearningservices/latest
 
 An object that represents a machine learning workspace.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create Workspace
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var workspace = new AzureRM.MachineLearningServices.Latest.Workspace("workspace", new AzureRM.MachineLearningServices.Latest.WorkspaceArgs
-        {
-            ApplicationInsights = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",
-            ContainerRegistry = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry",
-            Description = "test description",
-            Encryption = new AzureRM.MachineLearningServices.Latest.Inputs.EncryptionPropertyArgs
-            {
-                KeyVaultProperties = new AzureRM.MachineLearningServices.Latest.Inputs.KeyVaultPropertiesArgs
-                {
-                    IdentityClientId = "",
-                    KeyIdentifier = "https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb",
-                    KeyVaultArmId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
-                },
-                Status = "Enabled",
-            },
-            FriendlyName = "HelloName",
-            HbiWorkspace = false,
-            KeyVault = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
-            Location = "eastus2euap",
-            ResourceGroupName = "workspace-1234",
-            SharedPrivateLinkResources = 
-            {
-                new AzureRM.MachineLearningServices.Latest.Inputs.SharedPrivateLinkResourceArgs
-                {
-                    Name = "testdbresource",
-                },
-            },
-            Sku = new AzureRM.MachineLearningServices.Latest.Inputs.SkuArgs
-            {
-                Name = "Basic",
-                Tier = "Basic",
-            },
-            StorageAccount = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount",
-            WorkspaceName = "testworkspace",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	machinelearningservices "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/machinelearningservices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := machinelearningservices.NewWorkspace(ctx, "workspace", &machinelearningservices.WorkspaceArgs{
-			ApplicationInsights: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights"),
-			ContainerRegistry:   pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry"),
-			Description:         pulumi.String("test description"),
-			Encryption: &machinelearningservices.EncryptionPropertyArgs{
-				KeyVaultProperties: &machinelearningservices.KeyVaultPropertiesArgs{
-					IdentityClientId: pulumi.String(""),
-					KeyIdentifier:    pulumi.String("https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb"),
-					KeyVaultArmId:    pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv"),
-				},
-				Status: pulumi.String("Enabled"),
-			},
-			FriendlyName:      pulumi.String("HelloName"),
-			HbiWorkspace:      pulumi.Bool(false),
-			KeyVault:          pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv"),
-			Location:          pulumi.String("eastus2euap"),
-			ResourceGroupName: pulumi.String("workspace-1234"),
-			SharedPrivateLinkResources: machinelearningservices.SharedPrivateLinkResourceArray{
-				&machinelearningservices.SharedPrivateLinkResourceArgs{
-					Name: pulumi.String("testdbresource"),
-				},
-			},
-			Sku: &machinelearningservices.SkuArgs{
-				Name: pulumi.String("Basic"),
-				Tier: pulumi.String("Basic"),
-			},
-			StorageAccount: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount"),
-			WorkspaceName:  pulumi.String("testworkspace"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-workspace = azurerm.machinelearningservices.latest.Workspace("workspace",
-    application_insights="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",
-    container_registry="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry",
-    description="test description",
-    encryption={
-        "keyVaultProperties": {
-            "identityClientId": "",
-            "keyIdentifier": "https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb",
-            "keyVaultArmId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
-        },
-        "status": "Enabled",
-    },
-    friendly_name="HelloName",
-    hbi_workspace=False,
-    key_vault="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
-    location="eastus2euap",
-    resource_group_name="workspace-1234",
-    shared_private_link_resources=[{
-        "name": "testdbresource",
-    }],
-    sku={
-        "name": "Basic",
-        "tier": "Basic",
-    },
-    storage_account="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount",
-    workspace_name="testworkspace")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const workspace = new azurerm.machinelearningservices.latest.Workspace("workspace", {
-    applicationInsights: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",
-    containerRegistry: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry",
-    description: "test description",
-    encryption: {
-        keyVaultProperties: {
-            identityClientId: "",
-            keyIdentifier: "https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb",
-            keyVaultArmId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
-        },
-        status: "Enabled",
-    },
-    friendlyName: "HelloName",
-    hbiWorkspace: false,
-    keyVault: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
-    location: "eastus2euap",
-    resourceGroupName: "workspace-1234",
-    sharedPrivateLinkResources: [{
-        name: "testdbresource",
-    }],
-    sku: {
-        name: "Basic",
-        tier: "Basic",
-    },
-    storageAccount: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount",
-    workspaceName: "testworkspace",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Workspace Resource {#create}
@@ -1516,7 +1331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_count_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of private connections in the workspace{{% /md %}}</dd>
 
@@ -2693,7 +2508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

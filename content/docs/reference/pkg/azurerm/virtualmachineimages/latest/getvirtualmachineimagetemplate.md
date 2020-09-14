@@ -679,7 +679,7 @@ The following output properties are available:
 <a href="#build_timeout_in_minutes_python" style="color: inherit; text-decoration: inherit;">build_<wbr>timeout_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).{{% /md %}}</dd>
 
@@ -3299,7 +3299,7 @@ The following output properties are available:
 <a href="#os_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.{{% /md %}}</dd>
 
@@ -3525,7 +3525,7 @@ The following output properties are available:
 <a href="#updatelimit_python" style="color: inherit; text-decoration: inherit;">update<wbr>Limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000){{% /md %}}</dd>
 

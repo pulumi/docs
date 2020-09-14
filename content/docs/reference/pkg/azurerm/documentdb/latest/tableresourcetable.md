@@ -12,119 +12,6 @@ meta_desc: "Explore the TableResourceTable resource of the documentdb/latest mod
 
 An Azure Cosmos DB Table.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### CosmosDBTableReplace
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var tableResourceTable = new AzureRM.DocumentDB.Latest.TableResourceTable("tableResourceTable", new AzureRM.DocumentDB.Latest.TableResourceTableArgs
-        {
-            AccountName = "ddb1",
-            Location = "West US",
-            Options = ,
-            Resource = new AzureRM.DocumentDB.Latest.Inputs.TableResourceArgs
-            {
-                Id = "tableName",
-            },
-            ResourceGroupName = "rg1",
-            TableName = "tableName",
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/documentdb/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewTableResourceTable(ctx, "tableResourceTable", &documentdb.TableResourceTableArgs{
-			AccountName: pulumi.String("ddb1"),
-			Location:    pulumi.String("West US"),
-			Options:     nil,
-			Resource: &documentdb.TableResourceArgs{
-				Id: pulumi.String("tableName"),
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			TableName:         pulumi.String("tableName"),
-			Tags:              nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-table_resource_table = azurerm.documentdb.latest.TableResourceTable("tableResourceTable",
-    account_name="ddb1",
-    location="West US",
-    options={},
-    resource={
-        "id": "tableName",
-    },
-    resource_group_name="rg1",
-    table_name="tableName",
-    tags={})
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const tableResourceTable = new azurerm.documentdb.latest.TableResourceTable("tableResourceTable", {
-    accountName: "ddb1",
-    location: "West US",
-    options: {},
-    resource: {
-        id: "tableName",
-    },
-    resourceGroupName: "rg1",
-    tableName: "tableName",
-    tags: {},
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a TableResourceTable Resource {#create}
@@ -859,7 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
 
@@ -945,7 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
 
@@ -1071,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd>
 
@@ -1197,7 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.{{% /md %}}</dd>
 

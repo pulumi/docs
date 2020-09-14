@@ -12,144 +12,6 @@ meta_desc: "Explore the StaticSite resource of the web/latest module, including 
 
 Static Site ARM resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update a static site
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var staticSite = new AzureRM.Web.Latest.StaticSite("staticSite", new AzureRM.Web.Latest.StaticSiteArgs
-        {
-            Branch = "master",
-            BuildProperties = new AzureRM.Web.Latest.Inputs.StaticSiteBuildPropertiesArgs
-            {
-                ApiLocation = "api",
-                AppArtifactLocation = "build",
-                AppLocation = "app",
-            },
-            Location = "West US 2",
-            Name = "testStaticSite0",
-            RepositoryToken = "repoToken123",
-            RepositoryUrl = "https://github.com/username/RepoName",
-            ResourceGroupName = "rg",
-            Sku = new AzureRM.Web.Latest.Inputs.SkuDescriptionArgs
-            {
-                Name = "Basic",
-                Tier = "Basic",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	web "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/web/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := web.NewStaticSite(ctx, "staticSite", &web.StaticSiteArgs{
-			Branch: pulumi.String("master"),
-			BuildProperties: &web.StaticSiteBuildPropertiesArgs{
-				ApiLocation:         pulumi.String("api"),
-				AppArtifactLocation: pulumi.String("build"),
-				AppLocation:         pulumi.String("app"),
-			},
-			Location:          pulumi.String("West US 2"),
-			Name:              pulumi.String("testStaticSite0"),
-			RepositoryToken:   pulumi.String("repoToken123"),
-			RepositoryUrl:     pulumi.String("https://github.com/username/RepoName"),
-			ResourceGroupName: pulumi.String("rg"),
-			Sku: &web.SkuDescriptionArgs{
-				Name: pulumi.String("Basic"),
-				Tier: pulumi.String("Basic"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-static_site = azurerm.web.latest.StaticSite("staticSite",
-    branch="master",
-    build_properties={
-        "apiLocation": "api",
-        "appArtifactLocation": "build",
-        "appLocation": "app",
-    },
-    location="West US 2",
-    name="testStaticSite0",
-    repository_token="repoToken123",
-    repository_url="https://github.com/username/RepoName",
-    resource_group_name="rg",
-    sku={
-        "name": "Basic",
-        "tier": "Basic",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const staticSite = new azurerm.web.latest.StaticSite("staticSite", {
-    branch: "master",
-    buildProperties: {
-        apiLocation: "api",
-        appArtifactLocation: "build",
-        appLocation: "app",
-    },
-    location: "West US 2",
-    name: "testStaticSite0",
-    repositoryToken: "repoToken123",
-    repositoryUrl: "https://github.com/username/RepoName",
-    resourceGroupName: "rg",
-    sku: {
-        name: "Basic",
-        tier: "Basic",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a StaticSite Resource {#create}
@@ -1466,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd>
 
@@ -1476,7 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd>
 
@@ -1486,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd>
 
@@ -1672,7 +1534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd>
 
@@ -1682,7 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd>
 
@@ -1692,7 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd>
 
@@ -2008,7 +1870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd>
 
@@ -2374,7 +2236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd>
 

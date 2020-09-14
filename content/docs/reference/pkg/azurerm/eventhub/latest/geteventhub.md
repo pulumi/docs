@@ -569,7 +569,7 @@ The following output properties are available:
 <a href="#message_retention_in_days_python" style="color: inherit; text-decoration: inherit;">message_<wbr>retention_<wbr>in_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of days to retain the events for this Event Hub, value should be 1 to 7 days{{% /md %}}</dd>
 
@@ -579,7 +579,7 @@ The following output properties are available:
 <a href="#partition_count_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.{{% /md %}}</dd>
 
@@ -861,7 +861,7 @@ The following output properties are available:
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds{{% /md %}}</dd>
 
@@ -871,7 +871,7 @@ The following output properties are available:
 <a href="#size_limit_in_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>limit_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes{{% /md %}}</dd>
 

@@ -972,7 +972,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#maximum_number_of_workers_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>number_<wbr>of_<wbr>workers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of instances that can be assigned to this App Service plan.{{% /md %}}</dd>
 
@@ -992,7 +992,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#number_of_sites_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>sites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of apps assigned to this App Service plan.{{% /md %}}</dd>
 
@@ -1112,7 +1112,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#maximum_elastic_worker_count_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>elastic_<wbr>worker_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan{{% /md %}}</dd>
 
@@ -1173,7 +1173,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#target_worker_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>worker_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Scaling worker count.{{% /md %}}</dd>
 
@@ -1183,7 +1183,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#target_worker_size_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>worker_<wbr>size_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Scaling worker size ID.{{% /md %}}</dd>
 
@@ -1707,7 +1707,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd>
 
@@ -1717,7 +1717,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd>
 
@@ -1727,7 +1727,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd>
 
@@ -2043,7 +2043,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd>
 

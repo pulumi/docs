@@ -12,120 +12,6 @@ meta_desc: "Explore the Policy resource of the apimanagement/latest module, incl
 
 Policy Contract details.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### ApiManagementCreatePolicy
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var policy = new AzureRM.ApiManagement.Latest.Policy("policy", new AzureRM.ApiManagement.Latest.PolicyArgs
-        {
-            Format = "xml",
-            PolicyId = "policy",
-            ResourceGroupName = "rg1",
-            ServiceName = "apimService1",
-            Value = @"<policies>
-  <inbound />
-  <backend>
-    <forward-request />
-  </backend>
-  <outbound />
-</policies>",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	apimanagement "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/apimanagement/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := apimanagement.NewPolicy(ctx, "policy", &apimanagement.PolicyArgs{
-			Format:            pulumi.String("xml"),
-			PolicyId:          pulumi.String("policy"),
-			ResourceGroupName: pulumi.String("rg1"),
-			ServiceName:       pulumi.String("apimService1"),
-			Value: pulumi.String("<policies>\n  <inbound />\n  <backend>\n    <forward-request />\n  </backend>\n  <outbound />\n</policies>"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-policy = azurerm.apimanagement.latest.Policy("policy",
-    format="xml",
-    policy_id="policy",
-    resource_group_name="rg1",
-    service_name="apimService1",
-    value="""<policies>
-  <inbound />
-  <backend>
-    <forward-request />
-  </backend>
-  <outbound />
-</policies>""")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const policy = new azurerm.apimanagement.latest.Policy("policy", {
-    format: "xml",
-    policyId: "policy",
-    resourceGroupName: "rg1",
-    serviceName: "apimService1",
-    value: `<policies>
-  <inbound />
-  <backend>
-    <forward-request />
-  </backend>
-  <outbound />
-</policies>`,
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Policy Resource {#create}

@@ -12,203 +12,6 @@ meta_desc: "Explore the RemediationAtSubscription resource of the policyinsights
 
 The remediation definition.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create remediation at subscription scope
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var remediationAtSubscription = new AzureRM.PolicyInsights.Latest.RemediationAtSubscription("remediationAtSubscription", new AzureRM.PolicyInsights.Latest.RemediationAtSubscriptionArgs
-        {
-            PolicyAssignmentId = "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
-            RemediationName = "storageRemediation",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	policyinsights "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/policyinsights/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := policyinsights.NewRemediationAtSubscription(ctx, "remediationAtSubscription", &policyinsights.RemediationAtSubscriptionArgs{
-			PolicyAssignmentId: pulumi.String("/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5"),
-			RemediationName:    pulumi.String("storageRemediation"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-remediation_at_subscription = azurerm.policyinsights.latest.RemediationAtSubscription("remediationAtSubscription",
-    policy_assignment_id="/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
-    remediation_name="storageRemediation")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const remediationAtSubscription = new azurerm.policyinsights.latest.RemediationAtSubscription("remediationAtSubscription", {
-    policyAssignmentId: "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
-    remediationName: "storageRemediation",
-});
-
-```
-
-{{% /example %}}
-
-### Create remediation at subscription scope with all properties
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var remediationAtSubscription = new AzureRM.PolicyInsights.Latest.RemediationAtSubscription("remediationAtSubscription", new AzureRM.PolicyInsights.Latest.RemediationAtSubscriptionArgs
-        {
-            Filters = new AzureRM.PolicyInsights.Latest.Inputs.RemediationFiltersArgs
-            {
-                Locations = 
-                {
-                    "eastus",
-                    "westus",
-                },
-            },
-            PolicyAssignmentId = "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
-            PolicyDefinitionReferenceId = "8c8fa9e4",
-            RemediationName = "storageRemediation",
-            ResourceDiscoveryMode = "ReEvaluateCompliance",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	policyinsights "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/policyinsights/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := policyinsights.NewRemediationAtSubscription(ctx, "remediationAtSubscription", &policyinsights.RemediationAtSubscriptionArgs{
-			Filters: &policyinsights.RemediationFiltersArgs{
-				Locations: pulumi.StringArray{
-					pulumi.String("eastus"),
-					pulumi.String("westus"),
-				},
-			},
-			PolicyAssignmentId:          pulumi.String("/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5"),
-			PolicyDefinitionReferenceId: pulumi.String("8c8fa9e4"),
-			RemediationName:             pulumi.String("storageRemediation"),
-			ResourceDiscoveryMode:       pulumi.String("ReEvaluateCompliance"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-remediation_at_subscription = azurerm.policyinsights.latest.RemediationAtSubscription("remediationAtSubscription",
-    filters={
-        "locations": [
-            "eastus",
-            "westus",
-        ],
-    },
-    policy_assignment_id="/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
-    policy_definition_reference_id="8c8fa9e4",
-    remediation_name="storageRemediation",
-    resource_discovery_mode="ReEvaluateCompliance")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const remediationAtSubscription = new azurerm.policyinsights.latest.RemediationAtSubscription("remediationAtSubscription", {
-    filters: {
-        locations: [
-            "eastus",
-            "westus",
-        ],
-    },
-    policyAssignmentId: "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
-    policyDefinitionReferenceId: "8c8fa9e4",
-    remediationName: "storageRemediation",
-    resourceDiscoveryMode: "ReEvaluateCompliance",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a RemediationAtSubscription Resource {#create}
@@ -1083,7 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failed_deployments_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>deployments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of deployments required by the remediation that have failed.{{% /md %}}</dd>
 
@@ -1093,7 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successful_deployments_python" style="color: inherit; text-decoration: inherit;">successful_<wbr>deployments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of deployments required by the remediation that have succeeded.{{% /md %}}</dd>
 
@@ -1103,7 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_deployments_python" style="color: inherit; text-decoration: inherit;">total_<wbr>deployments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of deployments required by the remediation.{{% /md %}}</dd>
 

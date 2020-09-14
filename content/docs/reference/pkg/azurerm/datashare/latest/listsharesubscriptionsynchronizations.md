@@ -699,7 +699,7 @@ The following output properties are available:
 <a href="#durationms_python" style="color: inherit; text-decoration: inherit;">duration<wbr>Ms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Synchronization duration{{% /md %}}</dd>
 

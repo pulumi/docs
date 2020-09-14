@@ -12,185 +12,6 @@ meta_desc: "Explore the BlobContainer resource of the storage/latest module, inc
 
 Properties of the blob container, including Id, resource name, resource type, Etag.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### PutContainerWithDefaultEncryptionScope
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var blobContainer = new AzureRM.Storage.Latest.BlobContainer("blobContainer", new AzureRM.Storage.Latest.BlobContainerArgs
-        {
-            AccountName = "sto328",
-            ContainerName = "container6185",
-            DefaultEncryptionScope = "encryptionscope185",
-            DenyEncryptionScopeOverride = true,
-            ResourceGroupName = "res3376",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	storage "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storage.NewBlobContainer(ctx, "blobContainer", &storage.BlobContainerArgs{
-			AccountName:                 pulumi.String("sto328"),
-			ContainerName:               pulumi.String("container6185"),
-			DefaultEncryptionScope:      pulumi.String("encryptionscope185"),
-			DenyEncryptionScopeOverride: pulumi.Bool(true),
-			ResourceGroupName:           pulumi.String("res3376"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-blob_container = azurerm.storage.latest.BlobContainer("blobContainer",
-    account_name="sto328",
-    container_name="container6185",
-    default_encryption_scope="encryptionscope185",
-    deny_encryption_scope_override=True,
-    resource_group_name="res3376")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const blobContainer = new azurerm.storage.latest.BlobContainer("blobContainer", {
-    accountName: "sto328",
-    containerName: "container6185",
-    defaultEncryptionScope: "encryptionscope185",
-    denyEncryptionScopeOverride: true,
-    resourceGroupName: "res3376",
-});
-
-```
-
-{{% /example %}}
-
-### PutContainers
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var blobContainer = new AzureRM.Storage.Latest.BlobContainer("blobContainer", new AzureRM.Storage.Latest.BlobContainerArgs
-        {
-            AccountName = "sto328",
-            ContainerName = "container6185",
-            ResourceGroupName = "res3376",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	storage "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storage.NewBlobContainer(ctx, "blobContainer", &storage.BlobContainerArgs{
-			AccountName:       pulumi.String("sto328"),
-			ContainerName:     pulumi.String("container6185"),
-			ResourceGroupName: pulumi.String("res3376"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-blob_container = azurerm.storage.latest.BlobContainer("blobContainer",
-    account_name="sto328",
-    container_name="container6185",
-    resource_group_name="res3376")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const blobContainer = new azurerm.storage.latest.BlobContainer("blobContainer", {
-    accountName: "sto328",
-    containerName: "container6185",
-    resourceGroupName: "res3376",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a BlobContainer Resource {#create}
@@ -1330,7 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remaining_retention_days_python" style="color: inherit; text-decoration: inherit;">remaining_<wbr>retention_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Remaining retention days for soft deleted blob container.{{% /md %}}</dd>
 
@@ -1605,7 +1426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#immutability_period_since_creation_in_days_python" style="color: inherit; text-decoration: inherit;">immutability_<wbr>period_<wbr>since_<wbr>creation_<wbr>in_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
 
@@ -2213,7 +2034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#immutability_period_since_creation_in_days_python" style="color: inherit; text-decoration: inherit;">immutability_<wbr>period_<wbr>since_<wbr>creation_<wbr>in_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
 

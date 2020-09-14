@@ -12,616 +12,6 @@ meta_desc: "Explore the MachineLearningCompute resource of the machinelearningse
 
 Machine Learning compute object wrapped into ARM resource envelope.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create AKS Compute
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var machineLearningCompute = new AzureRM.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureRM.MachineLearningServices.Latest.MachineLearningComputeArgs
-        {
-            ComputeName = "compute123",
-            Location = "eastus",
-            ResourceGroupName = "testrg123",
-            WorkspaceName = "workspaces123",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	machinelearningservices "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/machinelearningservices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
-			ComputeName:       pulumi.String("compute123"),
-			Location:          pulumi.String("eastus"),
-			ResourceGroupName: pulumi.String("testrg123"),
-			WorkspaceName:     pulumi.String("workspaces123"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-machine_learning_compute = azurerm.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
-    compute_name="compute123",
-    location="eastus",
-    resource_group_name="testrg123",
-    workspace_name="workspaces123")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const machineLearningCompute = new azurerm.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
-    computeName: "compute123",
-    location: "eastus",
-    resourceGroupName: "testrg123",
-    workspaceName: "workspaces123",
-});
-
-```
-
-{{% /example %}}
-
-### Create a AML Compute
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var machineLearningCompute = new AzureRM.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureRM.MachineLearningServices.Latest.MachineLearningComputeArgs
-        {
-            ComputeName = "compute123",
-            Identity = new AzureRM.MachineLearningServices.Latest.Inputs.IdentityArgs
-            {
-                Type = "SystemAssigned,UserAssigned",
-            },
-            Location = "eastus",
-            Properties = 
-            {
-                { "remoteLoginPortPublicAccess", "NotSpecified" },
-                { "scaleSettings", 
-                {
-                    { "maxNodeCount", 1 },
-                    { "minNodeCount", 0 },
-                    { "nodeIdleTimeBeforeScaleDown", "PT5M" },
-                } },
-                { "vmPriority", "Dedicated" },
-                { "vmSize", "STANDARD_NC6" },
-            },
-            ResourceGroupName = "testrg123",
-            WorkspaceName = "workspaces123",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-machine_learning_compute = azurerm.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
-    compute_name="compute123",
-    identity={
-        "type": "SystemAssigned,UserAssigned",
-    },
-    location="eastus",
-    properties={
-        "remoteLoginPortPublicAccess": "NotSpecified",
-        "scaleSettings": {
-            "maxNodeCount": 1,
-            "minNodeCount": 0,
-            "nodeIdleTimeBeforeScaleDown": "PT5M",
-        },
-        "vmPriority": "Dedicated",
-        "vmSize": "STANDARD_NC6",
-    },
-    resource_group_name="testrg123",
-    workspace_name="workspaces123")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const machineLearningCompute = new azurerm.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
-    computeName: "compute123",
-    identity: {
-        type: "SystemAssigned,UserAssigned",
-    },
-    location: "eastus",
-    properties: {
-        remoteLoginPortPublicAccess: "NotSpecified",
-        scaleSettings: {
-            maxNodeCount: 1,
-            minNodeCount: 0,
-            nodeIdleTimeBeforeScaleDown: "PT5M",
-        },
-        vmPriority: "Dedicated",
-        vmSize: "STANDARD_NC6",
-    },
-    resourceGroupName: "testrg123",
-    workspaceName: "workspaces123",
-});
-
-```
-
-{{% /example %}}
-
-### Create a ComputeInstance Compute
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var machineLearningCompute = new AzureRM.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureRM.MachineLearningServices.Latest.MachineLearningComputeArgs
-        {
-            ComputeName = "compute123",
-            Location = "eastus",
-            Properties = 
-            {
-                { "applicationSharingPolicy", "Personal" },
-                { "sshSettings", 
-                {
-                    { "sshPublicAccess", "Disabled" },
-                } },
-                { "subnet", "test-subnet-resource-id" },
-                { "vmSize", "STANDARD_NC6" },
-            },
-            ResourceGroupName = "testrg123",
-            WorkspaceName = "workspaces123",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-machine_learning_compute = azurerm.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
-    compute_name="compute123",
-    location="eastus",
-    properties={
-        "applicationSharingPolicy": "Personal",
-        "sshSettings": {
-            "sshPublicAccess": "Disabled",
-        },
-        "subnet": "test-subnet-resource-id",
-        "vmSize": "STANDARD_NC6",
-    },
-    resource_group_name="testrg123",
-    workspace_name="workspaces123")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const machineLearningCompute = new azurerm.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
-    computeName: "compute123",
-    location: "eastus",
-    properties: {
-        applicationSharingPolicy: "Personal",
-        sshSettings: {
-            sshPublicAccess: "Disabled",
-        },
-        subnet: "test-subnet-resource-id",
-        vmSize: "STANDARD_NC6",
-    },
-    resourceGroupName: "testrg123",
-    workspaceName: "workspaces123",
-});
-
-```
-
-{{% /example %}}
-
-### Create a ComputeInstance Compute with minimal inputs
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var machineLearningCompute = new AzureRM.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureRM.MachineLearningServices.Latest.MachineLearningComputeArgs
-        {
-            ComputeName = "compute123",
-            Location = "eastus",
-            Properties = 
-            {
-                { "vmSize", "STANDARD_NC6" },
-            },
-            ResourceGroupName = "testrg123",
-            WorkspaceName = "workspaces123",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-machine_learning_compute = azurerm.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
-    compute_name="compute123",
-    location="eastus",
-    properties={
-        "vmSize": "STANDARD_NC6",
-    },
-    resource_group_name="testrg123",
-    workspace_name="workspaces123")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const machineLearningCompute = new azurerm.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
-    computeName: "compute123",
-    location: "eastus",
-    properties: {
-        vmSize: "STANDARD_NC6",
-    },
-    resourceGroupName: "testrg123",
-    workspaceName: "workspaces123",
-});
-
-```
-
-{{% /example %}}
-
-### Create a DataFactory Compute
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var machineLearningCompute = new AzureRM.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureRM.MachineLearningServices.Latest.MachineLearningComputeArgs
-        {
-            ComputeName = "compute123",
-            Location = "eastus",
-            ResourceGroupName = "testrg123",
-            WorkspaceName = "workspaces123",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	machinelearningservices "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/machinelearningservices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
-			ComputeName:       pulumi.String("compute123"),
-			Location:          pulumi.String("eastus"),
-			ResourceGroupName: pulumi.String("testrg123"),
-			WorkspaceName:     pulumi.String("workspaces123"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-machine_learning_compute = azurerm.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
-    compute_name="compute123",
-    location="eastus",
-    resource_group_name="testrg123",
-    workspace_name="workspaces123")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const machineLearningCompute = new azurerm.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
-    computeName: "compute123",
-    location: "eastus",
-    resourceGroupName: "testrg123",
-    workspaceName: "workspaces123",
-});
-
-```
-
-{{% /example %}}
-
-### Update a AKS Compute
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var machineLearningCompute = new AzureRM.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureRM.MachineLearningServices.Latest.MachineLearningComputeArgs
-        {
-            ComputeName = "compute123",
-            Location = "eastus",
-            Properties = 
-            {
-                { "agentCount", 4 },
-            },
-            ResourceGroupName = "testrg123",
-            WorkspaceName = "workspaces123",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-machine_learning_compute = azurerm.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
-    compute_name="compute123",
-    location="eastus",
-    properties={
-        "agentCount": 4,
-    },
-    resource_group_name="testrg123",
-    workspace_name="workspaces123")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const machineLearningCompute = new azurerm.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
-    computeName: "compute123",
-    location: "eastus",
-    properties: {
-        agentCount: 4,
-    },
-    resourceGroupName: "testrg123",
-    workspaceName: "workspaces123",
-});
-
-```
-
-{{% /example %}}
-
-### Update a AML Compute
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var machineLearningCompute = new AzureRM.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureRM.MachineLearningServices.Latest.MachineLearningComputeArgs
-        {
-            ComputeName = "compute123",
-            Identity = new AzureRM.MachineLearningServices.Latest.Inputs.IdentityArgs
-            {
-                Type = "SystemAssigned,UserAssigned",
-            },
-            Location = "eastus",
-            Properties = 
-            {
-                { "scaleSettings", 
-                {
-                    { "maxNodeCount", 1 },
-                    { "minNodeCount", 0 },
-                    { "nodeIdleTimeBeforeScaleDown", "PT5M" },
-                } },
-            },
-            ResourceGroupName = "testrg123",
-            WorkspaceName = "workspaces123",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-machine_learning_compute = azurerm.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
-    compute_name="compute123",
-    identity={
-        "type": "SystemAssigned,UserAssigned",
-    },
-    location="eastus",
-    properties={
-        "scaleSettings": {
-            "maxNodeCount": 1,
-            "minNodeCount": 0,
-            "nodeIdleTimeBeforeScaleDown": "PT5M",
-        },
-    },
-    resource_group_name="testrg123",
-    workspace_name="workspaces123")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const machineLearningCompute = new azurerm.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
-    computeName: "compute123",
-    identity: {
-        type: "SystemAssigned,UserAssigned",
-    },
-    location: "eastus",
-    properties: {
-        scaleSettings: {
-            maxNodeCount: 1,
-            minNodeCount: 0,
-            nodeIdleTimeBeforeScaleDown: "PT5M",
-        },
-    },
-    resourceGroupName: "testrg123",
-    workspaceName: "workspaces123",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a MachineLearningCompute Resource {#create}
@@ -1718,23 +1108,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="agentcount_python">
-<a href="#agentcount_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Number of agents{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="agentvmsize_python">
-<a href="#agentvmsize_python" style="color: inherit; text-decoration: inherit;">agent<wbr>VMSize</a>
+<a href="#agentvmsize_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Vm<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Agent virtual machine size{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="agent_count_python">
+<a href="#agent_count_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of agents{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1748,8 +1138,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clusterfqdn_python">
-<a href="#clusterfqdn_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Fqdn</a>
+        <span id="cluster_fqdn_python">
+<a href="#cluster_fqdn_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>fqdn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2114,8 +1504,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningerrors_python">
-<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
+        <span id="provisioning_errors_python">
+<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -2400,8 +1790,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="systemservices_python">
-<a href="#systemservices_python" style="color: inherit; text-decoration: inherit;">system<wbr>Services</a>
+        <span id="system_services_python">
+<a href="#system_services_python" style="color: inherit; text-decoration: inherit;">system_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemserviceresponse">List[System<wbr>Service<wbr>Response]</a></span>
@@ -2410,23 +1800,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="agentcount_python">
-<a href="#agentcount_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Number of agents{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="agentvmsize_python">
-<a href="#agentvmsize_python" style="color: inherit; text-decoration: inherit;">agent<wbr>VMSize</a>
+<a href="#agentvmsize_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Vm<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Agent virtual machine size{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="agent_count_python">
+<a href="#agent_count_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of agents{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2440,8 +1830,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clusterfqdn_python">
-<a href="#clusterfqdn_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Fqdn</a>
+        <span id="cluster_fqdn_python">
+<a href="#cluster_fqdn_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>fqdn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3710,8 +3100,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningerrors_python">
-<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
+        <span id="provisioning_errors_python">
+<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -4200,7 +3590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_node_count_python" style="color: inherit; text-decoration: inherit;">current_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of compute nodes currently assigned to the compute.{{% /md %}}</dd>
 
@@ -4230,7 +3620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_node_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.{{% /md %}}</dd>
 
@@ -5472,8 +4862,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningerrors_python">
-<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
+        <span id="provisioning_errors_python">
+<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -5858,8 +5248,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="connectivityendpoints_python">
-<a href="#connectivityendpoints_python" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Endpoints</a>
+        <span id="connectivity_endpoints_python">
+<a href="#connectivity_endpoints_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstanceconnectivityendpointsresponse">Dict[Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response]</a></span>
@@ -6244,7 +5634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshport_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Describes the port for connecting through SSH.{{% /md %}}</dd>
 
@@ -6752,8 +6142,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningerrors_python">
-<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
+        <span id="provisioning_errors_python">
+<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -7440,8 +6830,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningerrors_python">
-<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
+        <span id="provisioning_errors_python">
+<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -8224,8 +7614,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningerrors_python">
-<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
+        <span id="provisioning_errors_python">
+<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -9028,7 +8418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshport_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port open for ssh connections on the master node of the cluster.{{% /md %}}</dd>
 
@@ -9380,8 +8770,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningerrors_python">
-<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
+        <span id="provisioning_errors_python">
+<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -9600,7 +8990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshport_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port open for ssh connections on the master node of the cluster.{{% /md %}}</dd>
 
@@ -10340,7 +9730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#idle_node_count_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd>
 
@@ -10350,7 +9740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#leaving_node_count_python" style="color: inherit; text-decoration: inherit;">leaving_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes which are leaving the amlCompute.{{% /md %}}</dd>
 
@@ -10360,7 +9750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptednodecount_python" style="color: inherit; text-decoration: inherit;">preempted<wbr>Node<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes which are in preempted state.{{% /md %}}</dd>
 
@@ -10370,7 +9760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preparing_node_count_python" style="color: inherit; text-decoration: inherit;">preparing_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd>
 
@@ -10380,7 +9770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#running_node_count_python" style="color: inherit; text-decoration: inherit;">running_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd>
 
@@ -10390,7 +9780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unusable_node_count_python" style="color: inherit; text-decoration: inherit;">unusable_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd>
 
@@ -10704,21 +10094,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="maxnodecount_python">
-<a href="#maxnodecount_python" style="color: inherit; text-decoration: inherit;">max<wbr>Node<wbr>Count</a>
+        <span id="max_node_count_python">
+<a href="#max_node_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max number of nodes to use{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minnodecount_python">
-<a href="#minnodecount_python" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Count</a>
+        <span id="min_node_count_python">
+<a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Min number of nodes to use{{% /md %}}</dd>
 
@@ -10870,21 +10260,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="maxnodecount_python">
-<a href="#maxnodecount_python" style="color: inherit; text-decoration: inherit;">max<wbr>Node<wbr>Count</a>
+        <span id="max_node_count_python">
+<a href="#max_node_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max number of nodes to use{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minnodecount_python">
-<a href="#minnodecount_python" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Count</a>
+        <span id="min_node_count_python">
+<a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Min number of nodes to use{{% /md %}}</dd>
 
@@ -12458,7 +11848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshport_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port open for ssh connections.{{% /md %}}</dd>
 
@@ -12820,8 +12210,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningerrors_python">
-<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
+        <span id="provisioning_errors_python">
+<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -13070,7 +12460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshport_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port open for ssh connections.{{% /md %}}</dd>
 

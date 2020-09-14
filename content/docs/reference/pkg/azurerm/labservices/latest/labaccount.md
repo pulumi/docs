@@ -966,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minnumberofcores_python" style="color: inherit; text-decoration: inherit;">min<wbr>Number<wbr>Of<wbr>Cores</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of cores a VM of this size has. This is the minimum number of cores within this tier.{{% /md %}}</dd>
 
@@ -1554,7 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_cores_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>cores</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of cores a VM of this size has.{{% /md %}}</dd>
 

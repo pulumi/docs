@@ -12,111 +12,6 @@ meta_desc: "Explore the AutomationAccount resource of the automation/latest modu
 
 Definition of the automation account type.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update automation account
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var automationAccount = new AzureRM.Automation.Latest.AutomationAccount("automationAccount", new AzureRM.Automation.Latest.AutomationAccountArgs
-        {
-            AutomationAccountName = "myAutomationAccount9",
-            Location = "East US 2",
-            Name = "myAutomationAccount9",
-            ResourceGroupName = "rg",
-            Sku = new AzureRM.Automation.Latest.Inputs.SkuArgs
-            {
-                Name = "Free",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	automation "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/automation/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := automation.NewAutomationAccount(ctx, "automationAccount", &automation.AutomationAccountArgs{
-			AutomationAccountName: pulumi.String("myAutomationAccount9"),
-			Location:              pulumi.String("East US 2"),
-			Name:                  pulumi.String("myAutomationAccount9"),
-			ResourceGroupName:     pulumi.String("rg"),
-			Sku: &automation.SkuArgs{
-				Name: pulumi.String("Free"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-automation_account = azurerm.automation.latest.AutomationAccount("automationAccount",
-    automation_account_name="myAutomationAccount9",
-    location="East US 2",
-    name="myAutomationAccount9",
-    resource_group_name="rg",
-    sku={
-        "name": "Free",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const automationAccount = new azurerm.automation.latest.AutomationAccount("automationAccount", {
-    automationAccountName: "myAutomationAccount9",
-    location: "East US 2",
-    name: "myAutomationAccount9",
-    resourceGroupName: "rg",
-    sku: {
-        name: "Free",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a AutomationAccount Resource {#create}
@@ -1081,7 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU capacity.{{% /md %}}</dd>
 
@@ -1247,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU capacity.{{% /md %}}</dd>
 

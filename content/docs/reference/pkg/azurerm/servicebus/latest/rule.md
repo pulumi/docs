@@ -12,327 +12,6 @@ meta_desc: "Explore the Rule resource of the servicebus/latest module, including
 
 Description of Rule Resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### RulesCreateCorrelationFilter
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var rule = new AzureRM.ServiceBus.Latest.Rule("rule", new AzureRM.ServiceBus.Latest.RuleArgs
-        {
-            CorrelationFilter = new AzureRM.ServiceBus.Latest.Inputs.CorrelationFilterArgs
-            {
-                Properties = 
-                {
-                    { "topicHint", "Crop" },
-                },
-            },
-            FilterType = "CorrelationFilter",
-            NamespaceName = "sdk-Namespace-1319",
-            ResourceGroupName = "resourceGroupName",
-            RuleName = "sdk-Rules-6571",
-            SubscriptionName = "sdk-Subscriptions-8691",
-            TopicName = "sdk-Topics-2081",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	servicebus "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicebus/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := servicebus.NewRule(ctx, "rule", &servicebus.RuleArgs{
-			CorrelationFilter: &servicebus.CorrelationFilterArgs{
-				Properties: pulumi.StringMap{
-					"topicHint": pulumi.String("Crop"),
-				},
-			},
-			FilterType:        pulumi.String("CorrelationFilter"),
-			NamespaceName:     pulumi.String("sdk-Namespace-1319"),
-			ResourceGroupName: pulumi.String("resourceGroupName"),
-			RuleName:          pulumi.String("sdk-Rules-6571"),
-			SubscriptionName:  pulumi.String("sdk-Subscriptions-8691"),
-			TopicName:         pulumi.String("sdk-Topics-2081"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-rule = azurerm.servicebus.latest.Rule("rule",
-    correlation_filter={
-        "properties": {
-            "topicHint": "Crop",
-        },
-    },
-    filter_type="CorrelationFilter",
-    namespace_name="sdk-Namespace-1319",
-    resource_group_name="resourceGroupName",
-    rule_name="sdk-Rules-6571",
-    subscription_name="sdk-Subscriptions-8691",
-    topic_name="sdk-Topics-2081")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const rule = new azurerm.servicebus.latest.Rule("rule", {
-    correlationFilter: {
-        properties: {
-            topicHint: "Crop",
-        },
-    },
-    filterType: "CorrelationFilter",
-    namespaceName: "sdk-Namespace-1319",
-    resourceGroupName: "resourceGroupName",
-    ruleName: "sdk-Rules-6571",
-    subscriptionName: "sdk-Subscriptions-8691",
-    topicName: "sdk-Topics-2081",
-});
-
-```
-
-{{% /example %}}
-
-### RulesCreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var rule = new AzureRM.ServiceBus.Latest.Rule("rule", new AzureRM.ServiceBus.Latest.RuleArgs
-        {
-            NamespaceName = "sdk-Namespace-1319",
-            ResourceGroupName = "resourceGroupName",
-            RuleName = "sdk-Rules-6571",
-            SubscriptionName = "sdk-Subscriptions-8691",
-            TopicName = "sdk-Topics-2081",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	servicebus "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicebus/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := servicebus.NewRule(ctx, "rule", &servicebus.RuleArgs{
-			NamespaceName:     pulumi.String("sdk-Namespace-1319"),
-			ResourceGroupName: pulumi.String("resourceGroupName"),
-			RuleName:          pulumi.String("sdk-Rules-6571"),
-			SubscriptionName:  pulumi.String("sdk-Subscriptions-8691"),
-			TopicName:         pulumi.String("sdk-Topics-2081"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-rule = azurerm.servicebus.latest.Rule("rule",
-    namespace_name="sdk-Namespace-1319",
-    resource_group_name="resourceGroupName",
-    rule_name="sdk-Rules-6571",
-    subscription_name="sdk-Subscriptions-8691",
-    topic_name="sdk-Topics-2081")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const rule = new azurerm.servicebus.latest.Rule("rule", {
-    namespaceName: "sdk-Namespace-1319",
-    resourceGroupName: "resourceGroupName",
-    ruleName: "sdk-Rules-6571",
-    subscriptionName: "sdk-Subscriptions-8691",
-    topicName: "sdk-Topics-2081",
-});
-
-```
-
-{{% /example %}}
-
-### RulesCreateSqlFilter
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var rule = new AzureRM.ServiceBus.Latest.Rule("rule", new AzureRM.ServiceBus.Latest.RuleArgs
-        {
-            FilterType = "SqlFilter",
-            NamespaceName = "sdk-Namespace-1319",
-            ResourceGroupName = "resourceGroupName",
-            RuleName = "sdk-Rules-6571",
-            SqlFilter = new AzureRM.ServiceBus.Latest.Inputs.SqlFilterArgs
-            {
-                SqlExpression = "myproperty=test",
-            },
-            SubscriptionName = "sdk-Subscriptions-8691",
-            TopicName = "sdk-Topics-2081",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	servicebus "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicebus/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := servicebus.NewRule(ctx, "rule", &servicebus.RuleArgs{
-			FilterType:        pulumi.String("SqlFilter"),
-			NamespaceName:     pulumi.String("sdk-Namespace-1319"),
-			ResourceGroupName: pulumi.String("resourceGroupName"),
-			RuleName:          pulumi.String("sdk-Rules-6571"),
-			SqlFilter: &servicebus.SqlFilterArgs{
-				SqlExpression: pulumi.String("myproperty=test"),
-			},
-			SubscriptionName: pulumi.String("sdk-Subscriptions-8691"),
-			TopicName:        pulumi.String("sdk-Topics-2081"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-rule = azurerm.servicebus.latest.Rule("rule",
-    filter_type="SqlFilter",
-    namespace_name="sdk-Namespace-1319",
-    resource_group_name="resourceGroupName",
-    rule_name="sdk-Rules-6571",
-    sql_filter={
-        "sqlExpression": "myproperty=test",
-    },
-    subscription_name="sdk-Subscriptions-8691",
-    topic_name="sdk-Topics-2081")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const rule = new azurerm.servicebus.latest.Rule("rule", {
-    filterType: "SqlFilter",
-    namespaceName: "sdk-Namespace-1319",
-    resourceGroupName: "resourceGroupName",
-    ruleName: "sdk-Rules-6571",
-    sqlFilter: {
-        sqlExpression: "myproperty=test",
-    },
-    subscriptionName: "sdk-Subscriptions-8691",
-    topicName: "sdk-Topics-2081",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Rule Resource {#create}
@@ -1207,7 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compatibility_level_python" style="color: inherit; text-decoration: inherit;">compatibility_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.{{% /md %}}</dd>
 
@@ -1373,7 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compatibility_level_python" style="color: inherit; text-decoration: inherit;">compatibility_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.{{% /md %}}</dd>
 
@@ -2431,7 +2110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compatibility_level_python" style="color: inherit; text-decoration: inherit;">compatibility_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.{{% /md %}}</dd>
 
@@ -2597,7 +2276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compatibility_level_python" style="color: inherit; text-decoration: inherit;">compatibility_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.{{% /md %}}</dd>
 

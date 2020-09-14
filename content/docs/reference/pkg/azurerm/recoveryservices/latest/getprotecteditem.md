@@ -841,7 +841,7 @@ The following output properties are available:
 <a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
 
@@ -1863,7 +1863,7 @@ The following output properties are available:
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd>
 
@@ -2059,7 +2059,7 @@ The following output properties are available:
 <a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
 
@@ -3271,7 +3271,7 @@ The following output properties are available:
 <a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
 
@@ -4123,7 +4123,7 @@ The following output properties are available:
 <a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
 
@@ -5765,7 +5765,7 @@ The following output properties are available:
 <a href="#onpremiserecoverypointcount_python" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}disk recovery point count.{{% /md %}}</dd>
 
@@ -5805,7 +5805,7 @@ The following output properties are available:
 <a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}cloud recovery point count.{{% /md %}}</dd>
 
@@ -7685,7 +7685,7 @@ The following output properties are available:
 <a href="#protecteditemid_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
 
@@ -8017,7 +8017,7 @@ The following output properties are available:
 <a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of backup copies associated with the backup item.{{% /md %}}</dd>
 
@@ -8723,7 +8723,7 @@ The following output properties are available:
 <a href="#deferreddeletesynctimeinutc_python" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Sync<wbr>Time<wbr>In<wbr>UTC</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
 
@@ -9039,7 +9039,7 @@ The following output properties are available:
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd>
 

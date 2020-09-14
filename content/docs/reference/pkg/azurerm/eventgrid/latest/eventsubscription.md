@@ -12,682 +12,6 @@ meta_desc: "Explore the EventSubscription resource of the eventgrid/latest modul
 
 Event Subscription
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### EventSubscriptions_CreateOrUpdateForCustomTopic_EventHubDestination
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var eventSubscription = new AzureRM.EventGrid.Latest.EventSubscription("eventSubscription", new AzureRM.EventGrid.Latest.EventSubscriptionArgs
-        {
-            DeadLetterDestination = new AzureRM.EventGrid.Latest.Inputs.StorageBlobDeadLetterDestinationArgs
-            {
-                EndpointType = "StorageBlob",
-            },
-            Destination = 
-            {
-                { "endpointType", "EventHub" },
-                { "properties", 
-                {
-                    { "resourceId", "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1" },
-                } },
-            },
-            EventSubscriptionName = "examplesubscription1",
-            Filter = new AzureRM.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
-            {
-                IsSubjectCaseSensitive = false,
-                SubjectBeginsWith = "ExamplePrefix",
-                SubjectEndsWith = "ExampleSuffix",
-            },
-            Scope = "subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-event_subscription = azurerm.eventgrid.latest.EventSubscription("eventSubscription",
-    dead_letter_destination={
-        "endpointType": "StorageBlob",
-    },
-    destination={
-        "endpointType": "EventHub",
-        "properties": {
-            "resourceId": "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
-        },
-    },
-    event_subscription_name="examplesubscription1",
-    filter={
-        "isSubjectCaseSensitive": False,
-        "subjectBeginsWith": "ExamplePrefix",
-        "subjectEndsWith": "ExampleSuffix",
-    },
-    scope="subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const eventSubscription = new azurerm.eventgrid.latest.EventSubscription("eventSubscription", {
-    deadLetterDestination: {
-        endpointType: "StorageBlob",
-    },
-    destination: {
-        endpointType: "EventHub",
-        properties: {
-            resourceId: "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
-        },
-    },
-    eventSubscriptionName: "examplesubscription1",
-    filter: {
-        isSubjectCaseSensitive: false,
-        subjectBeginsWith: "ExamplePrefix",
-        subjectEndsWith: "ExampleSuffix",
-    },
-    scope: "subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1",
-});
-
-```
-
-{{% /example %}}
-
-### EventSubscriptions_CreateOrUpdateForCustomTopic_HybridConnectionDestination
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var eventSubscription = new AzureRM.EventGrid.Latest.EventSubscription("eventSubscription", new AzureRM.EventGrid.Latest.EventSubscriptionArgs
-        {
-            DeadLetterDestination = new AzureRM.EventGrid.Latest.Inputs.StorageBlobDeadLetterDestinationArgs
-            {
-                EndpointType = "StorageBlob",
-            },
-            Destination = 
-            {
-                { "endpointType", "HybridConnection" },
-                { "properties", 
-                {
-                    { "resourceId", "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Relay/namespaces/ContosoNamespace/hybridConnections/HC1" },
-                } },
-            },
-            EventSubscriptionName = "examplesubscription1",
-            Filter = new AzureRM.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
-            {
-                IsSubjectCaseSensitive = false,
-                SubjectBeginsWith = "ExamplePrefix",
-                SubjectEndsWith = "ExampleSuffix",
-            },
-            Scope = "subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-event_subscription = azurerm.eventgrid.latest.EventSubscription("eventSubscription",
-    dead_letter_destination={
-        "endpointType": "StorageBlob",
-    },
-    destination={
-        "endpointType": "HybridConnection",
-        "properties": {
-            "resourceId": "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Relay/namespaces/ContosoNamespace/hybridConnections/HC1",
-        },
-    },
-    event_subscription_name="examplesubscription1",
-    filter={
-        "isSubjectCaseSensitive": False,
-        "subjectBeginsWith": "ExamplePrefix",
-        "subjectEndsWith": "ExampleSuffix",
-    },
-    scope="subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const eventSubscription = new azurerm.eventgrid.latest.EventSubscription("eventSubscription", {
-    deadLetterDestination: {
-        endpointType: "StorageBlob",
-    },
-    destination: {
-        endpointType: "HybridConnection",
-        properties: {
-            resourceId: "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Relay/namespaces/ContosoNamespace/hybridConnections/HC1",
-        },
-    },
-    eventSubscriptionName: "examplesubscription1",
-    filter: {
-        isSubjectCaseSensitive: false,
-        subjectBeginsWith: "ExamplePrefix",
-        subjectEndsWith: "ExampleSuffix",
-    },
-    scope: "subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1",
-});
-
-```
-
-{{% /example %}}
-
-### EventSubscriptions_CreateOrUpdateForCustomTopic_StorageQueueDestination
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var eventSubscription = new AzureRM.EventGrid.Latest.EventSubscription("eventSubscription", new AzureRM.EventGrid.Latest.EventSubscriptionArgs
-        {
-            DeadLetterDestination = new AzureRM.EventGrid.Latest.Inputs.StorageBlobDeadLetterDestinationArgs
-            {
-                EndpointType = "StorageBlob",
-            },
-            Destination = 
-            {
-                { "endpointType", "StorageQueue" },
-                { "properties", 
-                {
-                    { "queueName", "queue1" },
-                    { "resourceId", "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg" },
-                } },
-            },
-            EventSubscriptionName = "examplesubscription1",
-            Filter = new AzureRM.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
-            {
-                IsSubjectCaseSensitive = false,
-                SubjectBeginsWith = "ExamplePrefix",
-                SubjectEndsWith = "ExampleSuffix",
-            },
-            Scope = "subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-event_subscription = azurerm.eventgrid.latest.EventSubscription("eventSubscription",
-    dead_letter_destination={
-        "endpointType": "StorageBlob",
-    },
-    destination={
-        "endpointType": "StorageQueue",
-        "properties": {
-            "queueName": "queue1",
-            "resourceId": "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
-        },
-    },
-    event_subscription_name="examplesubscription1",
-    filter={
-        "isSubjectCaseSensitive": False,
-        "subjectBeginsWith": "ExamplePrefix",
-        "subjectEndsWith": "ExampleSuffix",
-    },
-    scope="subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const eventSubscription = new azurerm.eventgrid.latest.EventSubscription("eventSubscription", {
-    deadLetterDestination: {
-        endpointType: "StorageBlob",
-    },
-    destination: {
-        endpointType: "StorageQueue",
-        properties: {
-            queueName: "queue1",
-            resourceId: "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
-        },
-    },
-    eventSubscriptionName: "examplesubscription1",
-    filter: {
-        isSubjectCaseSensitive: false,
-        subjectBeginsWith: "ExamplePrefix",
-        subjectEndsWith: "ExampleSuffix",
-    },
-    scope: "subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1",
-});
-
-```
-
-{{% /example %}}
-
-### EventSubscriptions_CreateOrUpdateForCustomTopic_WebhookDestination
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var eventSubscription = new AzureRM.EventGrid.Latest.EventSubscription("eventSubscription", new AzureRM.EventGrid.Latest.EventSubscriptionArgs
-        {
-            Destination = 
-            {
-                { "endpointType", "EventHub" },
-                { "properties", 
-                {
-                    { "resourceId", "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1" },
-                } },
-            },
-            EventSubscriptionName = "examplesubscription1",
-            Filter = new AzureRM.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
-            {
-                IsSubjectCaseSensitive = false,
-                SubjectBeginsWith = "ExamplePrefix",
-                SubjectEndsWith = "ExampleSuffix",
-            },
-            Scope = "subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-event_subscription = azurerm.eventgrid.latest.EventSubscription("eventSubscription",
-    destination={
-        "endpointType": "EventHub",
-        "properties": {
-            "resourceId": "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
-        },
-    },
-    event_subscription_name="examplesubscription1",
-    filter={
-        "isSubjectCaseSensitive": False,
-        "subjectBeginsWith": "ExamplePrefix",
-        "subjectEndsWith": "ExampleSuffix",
-    },
-    scope="subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const eventSubscription = new azurerm.eventgrid.latest.EventSubscription("eventSubscription", {
-    destination: {
-        endpointType: "EventHub",
-        properties: {
-            resourceId: "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
-        },
-    },
-    eventSubscriptionName: "examplesubscription1",
-    filter: {
-        isSubjectCaseSensitive: false,
-        subjectBeginsWith: "ExamplePrefix",
-        subjectEndsWith: "ExampleSuffix",
-    },
-    scope: "subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1",
-});
-
-```
-
-{{% /example %}}
-
-### EventSubscriptions_CreateOrUpdateForResource
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var eventSubscription = new AzureRM.EventGrid.Latest.EventSubscription("eventSubscription", new AzureRM.EventGrid.Latest.EventSubscriptionArgs
-        {
-            Destination = 
-            {
-                { "endpointType", "WebHook" },
-                { "properties", 
-                {
-                    { "endpointUrl", "https://requestb.in/15ksip71" },
-                } },
-            },
-            EventSubscriptionName = "examplesubscription10",
-            Filter = new AzureRM.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
-            {
-                IsSubjectCaseSensitive = false,
-                SubjectBeginsWith = "ExamplePrefix",
-                SubjectEndsWith = "ExampleSuffix",
-            },
-            Scope = "subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-event_subscription = azurerm.eventgrid.latest.EventSubscription("eventSubscription",
-    destination={
-        "endpointType": "WebHook",
-        "properties": {
-            "endpointUrl": "https://requestb.in/15ksip71",
-        },
-    },
-    event_subscription_name="examplesubscription10",
-    filter={
-        "isSubjectCaseSensitive": False,
-        "subjectBeginsWith": "ExamplePrefix",
-        "subjectEndsWith": "ExampleSuffix",
-    },
-    scope="subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const eventSubscription = new azurerm.eventgrid.latest.EventSubscription("eventSubscription", {
-    destination: {
-        endpointType: "WebHook",
-        properties: {
-            endpointUrl: "https://requestb.in/15ksip71",
-        },
-    },
-    eventSubscriptionName: "examplesubscription10",
-    filter: {
-        isSubjectCaseSensitive: false,
-        subjectBeginsWith: "ExamplePrefix",
-        subjectEndsWith: "ExampleSuffix",
-    },
-    scope: "subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1",
-});
-
-```
-
-{{% /example %}}
-
-### EventSubscriptions_CreateOrUpdateForResourceGroup
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var eventSubscription = new AzureRM.EventGrid.Latest.EventSubscription("eventSubscription", new AzureRM.EventGrid.Latest.EventSubscriptionArgs
-        {
-            Destination = 
-            {
-                { "endpointType", "WebHook" },
-                { "properties", 
-                {
-                    { "endpointUrl", "https://requestb.in/15ksip71" },
-                } },
-            },
-            EventSubscriptionName = "examplesubscription2",
-            Filter = new AzureRM.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
-            {
-                IsSubjectCaseSensitive = false,
-                SubjectBeginsWith = "ExamplePrefix",
-                SubjectEndsWith = "ExampleSuffix",
-            },
-            Scope = "subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-event_subscription = azurerm.eventgrid.latest.EventSubscription("eventSubscription",
-    destination={
-        "endpointType": "WebHook",
-        "properties": {
-            "endpointUrl": "https://requestb.in/15ksip71",
-        },
-    },
-    event_subscription_name="examplesubscription2",
-    filter={
-        "isSubjectCaseSensitive": False,
-        "subjectBeginsWith": "ExamplePrefix",
-        "subjectEndsWith": "ExampleSuffix",
-    },
-    scope="subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const eventSubscription = new azurerm.eventgrid.latest.EventSubscription("eventSubscription", {
-    destination: {
-        endpointType: "WebHook",
-        properties: {
-            endpointUrl: "https://requestb.in/15ksip71",
-        },
-    },
-    eventSubscriptionName: "examplesubscription2",
-    filter: {
-        isSubjectCaseSensitive: false,
-        subjectBeginsWith: "ExamplePrefix",
-        subjectEndsWith: "ExampleSuffix",
-    },
-    scope: "subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg",
-});
-
-```
-
-{{% /example %}}
-
-### EventSubscriptions_CreateOrUpdateForSubscription
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var eventSubscription = new AzureRM.EventGrid.Latest.EventSubscription("eventSubscription", new AzureRM.EventGrid.Latest.EventSubscriptionArgs
-        {
-            Destination = 
-            {
-                { "endpointType", "WebHook" },
-                { "properties", 
-                {
-                    { "endpointUrl", "https://requestb.in/15ksip71" },
-                } },
-            },
-            EventSubscriptionName = "examplesubscription3",
-            Filter = new AzureRM.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
-            {
-                IsSubjectCaseSensitive = false,
-            },
-            Scope = "subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-event_subscription = azurerm.eventgrid.latest.EventSubscription("eventSubscription",
-    destination={
-        "endpointType": "WebHook",
-        "properties": {
-            "endpointUrl": "https://requestb.in/15ksip71",
-        },
-    },
-    event_subscription_name="examplesubscription3",
-    filter={
-        "isSubjectCaseSensitive": False,
-    },
-    scope="subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const eventSubscription = new azurerm.eventgrid.latest.EventSubscription("eventSubscription", {
-    destination: {
-        endpointType: "WebHook",
-        properties: {
-            endpointUrl: "https://requestb.in/15ksip71",
-        },
-    },
-    eventSubscriptionName: "examplesubscription3",
-    filter: {
-        isSubjectCaseSensitive: false,
-    },
-    scope: "subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a EventSubscription Resource {#create}
@@ -1642,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxeventsperbatch_python" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd>
 
@@ -1652,7 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferredbatchsizeinkilobytes_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd>
 
@@ -1808,7 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxeventsperbatch_python" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd>
 
@@ -1818,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferredbatchsizeinkilobytes_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd>
 
@@ -4576,7 +3900,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#event_time_to_live_in_minutes_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time_<wbr>to_<wbr>live_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time To Live (in minutes) for events.{{% /md %}}</dd>
 
@@ -4586,7 +3910,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#max_delivery_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>attempts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of delivery retry attempts for events.{{% /md %}}</dd>
 
@@ -4702,7 +4026,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#event_time_to_live_in_minutes_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time_<wbr>to_<wbr>live_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time To Live (in minutes) for events.{{% /md %}}</dd>
 
@@ -4712,7 +4036,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#max_delivery_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>attempts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of delivery retry attempts for events.{{% /md %}}</dd>
 
@@ -7056,7 +6380,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#maxeventsperbatch_python" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd>
 
@@ -7066,7 +6390,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#preferredbatchsizeinkilobytes_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd>
 
@@ -7342,7 +6666,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#maxeventsperbatch_python" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd>
 
@@ -7352,7 +6676,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#preferredbatchsizeinkilobytes_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd>
 

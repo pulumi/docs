@@ -12,98 +12,6 @@ meta_desc: "Explore the Deployment resource of the appplatform/latest module, in
 
 Deployment resource payload
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Deployments_CreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var deployment = new AzureRM.AppPlatform.Latest.Deployment("deployment", new AzureRM.AppPlatform.Latest.DeploymentArgs
-        {
-            AppName = "myapp",
-            DeploymentName = "mydeployment",
-            ResourceGroupName = "myResourceGroup",
-            ServiceName = "myservice",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	appplatform "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/appplatform/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := appplatform.NewDeployment(ctx, "deployment", &appplatform.DeploymentArgs{
-			AppName:           pulumi.String("myapp"),
-			DeploymentName:    pulumi.String("mydeployment"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			ServiceName:       pulumi.String("myservice"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-deployment = azurerm.appplatform.latest.Deployment("deployment",
-    app_name="myapp",
-    deployment_name="mydeployment",
-    resource_group_name="myResourceGroup",
-    service_name="myservice")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const deployment = new azurerm.appplatform.latest.Deployment("deployment", {
-    appName: "myapp",
-    deploymentName: "mydeployment",
-    resourceGroupName: "myResourceGroup",
-    serviceName: "myservice",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Deployment Resource {#create}
@@ -1686,7 +1594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Required CPU, basic tier should be 1, standard tier should be in range (1, 4){{% /md %}}</dd>
 
@@ -1716,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_in_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>in_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8){{% /md %}}</dd>
 
@@ -1972,7 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Required CPU, basic tier should be 1, standard tier should be in range (1, 4){{% /md %}}</dd>
 
@@ -2002,7 +1910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_in_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>in_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8){{% /md %}}</dd>
 
@@ -2168,7 +2076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd>
 
@@ -2334,7 +2242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd>
 

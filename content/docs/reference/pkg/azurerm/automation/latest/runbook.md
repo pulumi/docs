@@ -12,297 +12,6 @@ meta_desc: "Explore the Runbook resource of the automation/latest module, includ
 
 Definition of the runbook type.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update runbook and publish it
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var runbook = new AzureRM.Automation.Latest.Runbook("runbook", new AzureRM.Automation.Latest.RunbookArgs
-        {
-            AutomationAccountName = "ContoseAutomationAccount",
-            Description = "Description of the Runbook",
-            Location = "East US 2",
-            LogActivityTrace = 1,
-            LogProgress = true,
-            LogVerbose = false,
-            Name = "Get-AzureVMTutorial",
-            PublishContentLink = new AzureRM.Automation.Latest.Inputs.ContentLinkArgs
-            {
-                ContentHash = new AzureRM.Automation.Latest.Inputs.ContentHashArgs
-                {
-                    Algorithm = "SHA256",
-                    Value = "115775B8FF2BE672D8A946BD0B489918C724DDE15A440373CA54461D53010A80",
-                },
-                Uri = "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-automation-runbook-getvms/Runbooks/Get-AzureVMTutorial.ps1",
-            },
-            ResourceGroupName = "rg",
-            RunbookName = "Get-AzureVMTutorial",
-            RunbookType = "PowerShellWorkflow",
-            Tags = 
-            {
-                { "tag01", "value01" },
-                { "tag02", "value02" },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	automation "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/automation/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := automation.NewRunbook(ctx, "runbook", &automation.RunbookArgs{
-			AutomationAccountName: pulumi.String("ContoseAutomationAccount"),
-			Description:           pulumi.String("Description of the Runbook"),
-			Location:              pulumi.String("East US 2"),
-			LogActivityTrace:      pulumi.Int(1),
-			LogProgress:           pulumi.Bool(true),
-			LogVerbose:            pulumi.Bool(false),
-			Name:                  pulumi.String("Get-AzureVMTutorial"),
-			PublishContentLink: &automation.ContentLinkArgs{
-				ContentHash: &automation.ContentHashArgs{
-					Algorithm: pulumi.String("SHA256"),
-					Value:     pulumi.String("115775B8FF2BE672D8A946BD0B489918C724DDE15A440373CA54461D53010A80"),
-				},
-				Uri: pulumi.String("https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-automation-runbook-getvms/Runbooks/Get-AzureVMTutorial.ps1"),
-			},
-			ResourceGroupName: pulumi.String("rg"),
-			RunbookName:       pulumi.String("Get-AzureVMTutorial"),
-			RunbookType:       pulumi.String("PowerShellWorkflow"),
-			Tags: pulumi.StringMap{
-				"tag01": pulumi.String("value01"),
-				"tag02": pulumi.String("value02"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-runbook = azurerm.automation.latest.Runbook("runbook",
-    automation_account_name="ContoseAutomationAccount",
-    description="Description of the Runbook",
-    location="East US 2",
-    log_activity_trace=1,
-    log_progress=True,
-    log_verbose=False,
-    name="Get-AzureVMTutorial",
-    publish_content_link={
-        "contentHash": {
-            "algorithm": "SHA256",
-            "value": "115775B8FF2BE672D8A946BD0B489918C724DDE15A440373CA54461D53010A80",
-        },
-        "uri": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-automation-runbook-getvms/Runbooks/Get-AzureVMTutorial.ps1",
-    },
-    resource_group_name="rg",
-    runbook_name="Get-AzureVMTutorial",
-    runbook_type="PowerShellWorkflow",
-    tags={
-        "tag01": "value01",
-        "tag02": "value02",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const runbook = new azurerm.automation.latest.Runbook("runbook", {
-    automationAccountName: "ContoseAutomationAccount",
-    description: "Description of the Runbook",
-    location: "East US 2",
-    logActivityTrace: 1,
-    logProgress: true,
-    logVerbose: false,
-    name: "Get-AzureVMTutorial",
-    publishContentLink: {
-        contentHash: {
-            algorithm: "SHA256",
-            value: "115775B8FF2BE672D8A946BD0B489918C724DDE15A440373CA54461D53010A80",
-        },
-        uri: "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-automation-runbook-getvms/Runbooks/Get-AzureVMTutorial.ps1",
-    },
-    resourceGroupName: "rg",
-    runbookName: "Get-AzureVMTutorial",
-    runbookType: "PowerShellWorkflow",
-    tags: {
-        tag01: "value01",
-        tag02: "value02",
-    },
-});
-
-```
-
-{{% /example %}}
-
-### Create runbook as draft
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var runbook = new AzureRM.Automation.Latest.Runbook("runbook", new AzureRM.Automation.Latest.RunbookArgs
-        {
-            AutomationAccountName = "ContoseAutomationAccount",
-            Description = "Description of the Runbook",
-            Draft = ,
-            Location = "East US 2",
-            LogProgress = false,
-            LogVerbose = false,
-            Name = "Get-AzureVMTutorial",
-            ResourceGroupName = "rg",
-            RunbookName = "Get-AzureVMTutorial",
-            RunbookType = "PowerShellWorkflow",
-            Tags = 
-            {
-                { "tag01", "value01" },
-                { "tag02", "value02" },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	automation "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/automation/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := automation.NewRunbook(ctx, "runbook", &automation.RunbookArgs{
-			AutomationAccountName: pulumi.String("ContoseAutomationAccount"),
-			Description:           pulumi.String("Description of the Runbook"),
-			Draft:                 nil,
-			Location:              pulumi.String("East US 2"),
-			LogProgress:           pulumi.Bool(false),
-			LogVerbose:            pulumi.Bool(false),
-			Name:                  pulumi.String("Get-AzureVMTutorial"),
-			ResourceGroupName:     pulumi.String("rg"),
-			RunbookName:           pulumi.String("Get-AzureVMTutorial"),
-			RunbookType:           pulumi.String("PowerShellWorkflow"),
-			Tags: pulumi.StringMap{
-				"tag01": pulumi.String("value01"),
-				"tag02": pulumi.String("value02"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-runbook = azurerm.automation.latest.Runbook("runbook",
-    automation_account_name="ContoseAutomationAccount",
-    description="Description of the Runbook",
-    draft={},
-    location="East US 2",
-    log_progress=False,
-    log_verbose=False,
-    name="Get-AzureVMTutorial",
-    resource_group_name="rg",
-    runbook_name="Get-AzureVMTutorial",
-    runbook_type="PowerShellWorkflow",
-    tags={
-        "tag01": "value01",
-        "tag02": "value02",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const runbook = new azurerm.automation.latest.Runbook("runbook", {
-    automationAccountName: "ContoseAutomationAccount",
-    description: "Description of the Runbook",
-    draft: {},
-    location: "East US 2",
-    logProgress: false,
-    logVerbose: false,
-    name: "Get-AzureVMTutorial",
-    resourceGroupName: "rg",
-    runbookName: "Get-AzureVMTutorial",
-    runbookType: "PowerShellWorkflow",
-    tags: {
-        tag01: "value01",
-        tag02: "value02",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Runbook Resource {#create}
@@ -314,7 +23,7 @@ const runbook = new azurerm.automation.latest.Runbook("runbook", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/automation/latest/#pulumi_azurerm.automation/latest.Runbook">Runbook</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">draft</span><span class="p">:</span> <span class="nx">Optional[Dict[RunbookDraft]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_activity_trace</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">log_progress</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_verbose</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publish_content_link</span><span class="p">:</span> <span class="nx">Optional[Dict[ContentLink]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runbook_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runbook_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/automation/latest/#pulumi_azurerm.automation/latest.Runbook">Runbook</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">draft</span><span class="p">:</span> <span class="nx">Optional[Dict[RunbookDraft]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_activity_trace</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_progress</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_verbose</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publish_content_link</span><span class="p">:</span> <span class="nx">Optional[Dict[ContentLink]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runbook_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runbook_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -973,7 +682,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#log_activity_trace_python" style="color: inherit; text-decoration: inherit;">log_<wbr>activity_<wbr>trace</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the activity-level tracing options of the runbook.{{% /md %}}</dd>
 
@@ -1442,7 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#job_count_python" style="color: inherit; text-decoration: inherit;">job_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job count of the runbook.{{% /md %}}</dd>
 
@@ -2863,7 +2572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Get or sets the position of the parameter.{{% /md %}}</dd>
 
@@ -3069,7 +2778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Get or sets the position of the parameter.{{% /md %}}</dd>
 

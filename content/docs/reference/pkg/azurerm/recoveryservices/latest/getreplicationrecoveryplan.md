@@ -1231,8 +1231,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="grouptype_python">
-<a href="#grouptype_python" style="color: inherit; text-decoration: inherit;">group<wbr>Type</a>
+        <span id="group_type_python">
+<a href="#group_type_python" style="color: inherit; text-decoration: inherit;">group_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

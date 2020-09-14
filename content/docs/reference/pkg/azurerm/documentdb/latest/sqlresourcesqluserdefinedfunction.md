@@ -12,123 +12,6 @@ meta_desc: "Explore the SqlResourceSqlUserDefinedFunction resource of the docume
 
 An Azure Cosmos DB userDefinedFunction.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### CosmosDBSqlUserDefinedFunctionCreateUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var sqlResourceSqlUserDefinedFunction = new AzureRM.DocumentDB.Latest.SqlResourceSqlUserDefinedFunction("sqlResourceSqlUserDefinedFunction", new AzureRM.DocumentDB.Latest.SqlResourceSqlUserDefinedFunctionArgs
-        {
-            AccountName = "ddb1",
-            ContainerName = "containerName",
-            DatabaseName = "databaseName",
-            Options = ,
-            Resource = new AzureRM.DocumentDB.Latest.Inputs.SqlUserDefinedFunctionResourceArgs
-            {
-                Body = "body",
-                Id = "userDefinedFunctionName",
-            },
-            ResourceGroupName = "rg1",
-            UserDefinedFunctionName = "userDefinedFunctionName",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/documentdb/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewSqlResourceSqlUserDefinedFunction(ctx, "sqlResourceSqlUserDefinedFunction", &documentdb.SqlResourceSqlUserDefinedFunctionArgs{
-			AccountName:   pulumi.String("ddb1"),
-			ContainerName: pulumi.String("containerName"),
-			DatabaseName:  pulumi.String("databaseName"),
-			Options:       nil,
-			Resource: &documentdb.SqlUserDefinedFunctionResourceArgs{
-				Body: pulumi.String("body"),
-				Id:   pulumi.String("userDefinedFunctionName"),
-			},
-			ResourceGroupName:       pulumi.String("rg1"),
-			UserDefinedFunctionName: pulumi.String("userDefinedFunctionName"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-sql_resource_sql_user_defined_function = azurerm.documentdb.latest.SqlResourceSqlUserDefinedFunction("sqlResourceSqlUserDefinedFunction",
-    account_name="ddb1",
-    container_name="containerName",
-    database_name="databaseName",
-    options={},
-    resource={
-        "body": "body",
-        "id": "userDefinedFunctionName",
-    },
-    resource_group_name="rg1",
-    user_defined_function_name="userDefinedFunctionName")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const sqlResourceSqlUserDefinedFunction = new azurerm.documentdb.latest.SqlResourceSqlUserDefinedFunction("sqlResourceSqlUserDefinedFunction", {
-    accountName: "ddb1",
-    containerName: "containerName",
-    databaseName: "databaseName",
-    options: {},
-    resource: {
-        body: "body",
-        id: "userDefinedFunctionName",
-    },
-    resourceGroupName: "rg1",
-    userDefinedFunctionName: "userDefinedFunctionName",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a SqlResourceSqlUserDefinedFunction Resource {#create}
@@ -943,7 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
 
@@ -1069,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd>
 

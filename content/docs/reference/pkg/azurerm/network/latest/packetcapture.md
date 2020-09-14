@@ -12,157 +12,6 @@ meta_desc: "Explore the PacketCapture resource of the network/latest module, inc
 
 Information about packet capture session.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create packet capture
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var packetCapture = new AzureRM.Network.Latest.PacketCapture("packetCapture", new AzureRM.Network.Latest.PacketCaptureArgs
-        {
-            BytesToCapturePerPacket = 10000,
-            Filters = 
-            {
-                new AzureRM.Network.Latest.Inputs.PacketCaptureFilterArgs
-                {
-                    LocalIPAddress = "10.0.0.4",
-                    LocalPort = "80",
-                    Protocol = "TCP",
-                },
-            },
-            NetworkWatcherName = "nw1",
-            PacketCaptureName = "pc1",
-            ResourceGroupName = "rg1",
-            StorageLocation = new AzureRM.Network.Latest.Inputs.PacketCaptureStorageLocationArgs
-            {
-                FilePath = "D:\\capture\\pc1.cap",
-                StorageId = "/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Storage/storageAccounts/pcstore",
-                StoragePath = "https://mytestaccountname.blob.core.windows.net/capture/pc1.cap",
-            },
-            Target = "/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Compute/virtualMachines/vm1",
-            TimeLimitInSeconds = 100,
-            TotalBytesPerSession = 100000,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewPacketCapture(ctx, "packetCapture", &network.PacketCaptureArgs{
-			BytesToCapturePerPacket: pulumi.Int(10000),
-			Filters: network.PacketCaptureFilterArray{
-				&network.PacketCaptureFilterArgs{
-					LocalIPAddress: pulumi.String("10.0.0.4"),
-					LocalPort:      pulumi.String("80"),
-					Protocol:       pulumi.String("TCP"),
-				},
-			},
-			NetworkWatcherName: pulumi.String("nw1"),
-			PacketCaptureName:  pulumi.String("pc1"),
-			ResourceGroupName:  pulumi.String("rg1"),
-			StorageLocation: &network.PacketCaptureStorageLocationArgs{
-				FilePath:    pulumi.String("D:\\capture\\pc1.cap"),
-				StorageId:   pulumi.String("/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Storage/storageAccounts/pcstore"),
-				StoragePath: pulumi.String("https://mytestaccountname.blob.core.windows.net/capture/pc1.cap"),
-			},
-			Target:               pulumi.String("/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Compute/virtualMachines/vm1"),
-			TimeLimitInSeconds:   pulumi.Int(100),
-			TotalBytesPerSession: pulumi.Int(100000),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-packet_capture = azurerm.network.latest.PacketCapture("packetCapture",
-    bytes_to_capture_per_packet=10000,
-    filters=[{
-        "localIPAddress": "10.0.0.4",
-        "localPort": "80",
-        "protocol": "TCP",
-    }],
-    network_watcher_name="nw1",
-    packet_capture_name="pc1",
-    resource_group_name="rg1",
-    storage_location={
-        "filePath": "D:\\capture\\pc1.cap",
-        "storageId": "/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Storage/storageAccounts/pcstore",
-        "storagePath": "https://mytestaccountname.blob.core.windows.net/capture/pc1.cap",
-    },
-    target="/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Compute/virtualMachines/vm1",
-    time_limit_in_seconds=100,
-    total_bytes_per_session=100000)
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const packetCapture = new azurerm.network.latest.PacketCapture("packetCapture", {
-    bytesToCapturePerPacket: 10000,
-    filters: [{
-        localIPAddress: "10.0.0.4",
-        localPort: "80",
-        protocol: "TCP",
-    }],
-    networkWatcherName: "nw1",
-    packetCaptureName: "pc1",
-    resourceGroupName: "rg1",
-    storageLocation: {
-        filePath: "D:\\capture\\pc1.cap",
-        storageId: "/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Storage/storageAccounts/pcstore",
-        storagePath: "https://mytestaccountname.blob.core.windows.net/capture/pc1.cap",
-    },
-    target: "/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Compute/virtualMachines/vm1",
-    timeLimitInSeconds: 100,
-    totalBytesPerSession: 100000,
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a PacketCapture Resource {#create}
@@ -174,7 +23,7 @@ const packetCapture = new azurerm.network.latest.PacketCapture("packetCapture", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/network/latest/#pulumi_azurerm.network/latest.PacketCapture">PacketCapture</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bytes_to_capture_per_packet</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[PacketCaptureFilter]]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">packet_capture_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_location</span><span class="p">:</span> <span class="nx">Optional[Dict[PacketCaptureStorageLocation]]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_limit_in_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">total_bytes_per_session</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/network/latest/#pulumi_azurerm.network/latest.PacketCapture">PacketCapture</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bytes_to_capture_per_packet</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[PacketCaptureFilter]]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">packet_capture_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_location</span><span class="p">:</span> <span class="nx">Optional[Dict[PacketCaptureStorageLocation]]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_limit_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">total_bytes_per_session</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -693,7 +542,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#bytes_to_capture_per_packet_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>to_<wbr>capture_<wbr>per_<wbr>packet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of bytes captured per packet, the remaining bytes are truncated.{{% /md %}}</dd>
 
@@ -713,7 +562,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#time_limit_in_seconds_python" style="color: inherit; text-decoration: inherit;">time_<wbr>limit_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum duration of the capture session in seconds.{{% /md %}}</dd>
 
@@ -723,7 +572,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#total_bytes_per_session_python" style="color: inherit; text-decoration: inherit;">total_<wbr>bytes_<wbr>per_<wbr>session</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum size of the capture output.{{% /md %}}</dd>
 

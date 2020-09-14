@@ -12,102 +12,6 @@ meta_desc: "Explore the StorageSyncService resource of the storagesync/latest mo
 
 Storage Sync Service object.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### StorageSyncServices_Create
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var storageSyncService = new AzureRM.StorageSync.Latest.StorageSyncService("storageSyncService", new AzureRM.StorageSync.Latest.StorageSyncServiceArgs
-        {
-            IncomingTrafficPolicy = "AllowAllTraffic",
-            Location = "WestUS",
-            ResourceGroupName = "SampleResourceGroup_1",
-            StorageSyncServiceName = "SampleStorageSyncService_1",
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	storagesync "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storagesync/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storagesync.NewStorageSyncService(ctx, "storageSyncService", &storagesync.StorageSyncServiceArgs{
-			IncomingTrafficPolicy:  pulumi.String("AllowAllTraffic"),
-			Location:               pulumi.String("WestUS"),
-			ResourceGroupName:      pulumi.String("SampleResourceGroup_1"),
-			StorageSyncServiceName: pulumi.String("SampleStorageSyncService_1"),
-			Tags:                   nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-storage_sync_service = azurerm.storagesync.latest.StorageSyncService("storageSyncService",
-    incoming_traffic_policy="AllowAllTraffic",
-    location="WestUS",
-    resource_group_name="SampleResourceGroup_1",
-    storage_sync_service_name="SampleStorageSyncService_1",
-    tags={})
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const storageSyncService = new azurerm.storagesync.latest.StorageSyncService("storageSyncService", {
-    incomingTrafficPolicy: "AllowAllTraffic",
-    location: "WestUS",
-    resourceGroupName: "SampleResourceGroup_1",
-    storageSyncServiceName: "SampleStorageSyncService_1",
-    tags: {},
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a StorageSyncService Resource {#create}
@@ -887,7 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_sync_service_status_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>sync_<wbr>service_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Storage Sync service status.{{% /md %}}</dd>
 

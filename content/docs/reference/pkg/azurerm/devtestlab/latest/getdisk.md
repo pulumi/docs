@@ -799,7 +799,7 @@ The following output properties are available:
 <a href="#disk_size_gi_b_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gi_<wbr>b</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the disk in GibiBytes.{{% /md %}}</dd>
 

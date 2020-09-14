@@ -12,214 +12,6 @@ meta_desc: "Explore the Service resource of the servicefabric/latest module, inc
 
 The service resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Put a service with maximum parameters
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var service = new AzureRM.ServiceFabric.Latest.Service("service", new AzureRM.ServiceFabric.Latest.ServiceArgs
-        {
-            ApplicationName = "myApp",
-            ClusterName = "myCluster",
-            CorrelationScheme = 
-            {
-                new AzureRM.ServiceFabric.Latest.Inputs.ServiceCorrelationDescriptionArgs
-                {
-                    Scheme = "Affinity",
-                    ServiceName = "fabric:/app1/app1~svc1",
-                },
-            },
-            DefaultMoveCost = "Medium",
-            PartitionDescription = 
-            {
-                { "partitionScheme", "Singleton" },
-            },
-            PlacementConstraints = "NodeType==frontend",
-            ResourceGroupName = "resRg",
-            ServiceDnsName = "my.service.dns",
-            ServiceKind = "Stateless",
-            ServiceLoadMetrics = 
-            {
-                new AzureRM.ServiceFabric.Latest.Inputs.ServiceLoadMetricDescriptionArgs
-                {
-                    Name = "metric1",
-                    Weight = "Low",
-                },
-            },
-            ServiceName = "myService",
-            ServicePackageActivationMode = "SharedProcess",
-            ServicePlacementPolicies = {},
-            ServiceTypeName = "myServiceType",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-service = azurerm.servicefabric.latest.Service("service",
-    application_name="myApp",
-    cluster_name="myCluster",
-    correlation_scheme=[{
-        "scheme": "Affinity",
-        "serviceName": "fabric:/app1/app1~svc1",
-    }],
-    default_move_cost="Medium",
-    partition_description={
-        "partitionScheme": "Singleton",
-    },
-    placement_constraints="NodeType==frontend",
-    resource_group_name="resRg",
-    service_dns_name="my.service.dns",
-    service_kind="Stateless",
-    service_load_metrics=[{
-        "name": "metric1",
-        "weight": "Low",
-    }],
-    service_name="myService",
-    service_package_activation_mode="SharedProcess",
-    service_placement_policies=[],
-    service_type_name="myServiceType")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const service = new azurerm.servicefabric.latest.Service("service", {
-    applicationName: "myApp",
-    clusterName: "myCluster",
-    correlationScheme: [{
-        scheme: "Affinity",
-        serviceName: "fabric:/app1/app1~svc1",
-    }],
-    defaultMoveCost: "Medium",
-    partitionDescription: {
-        partitionScheme: "Singleton",
-    },
-    placementConstraints: "NodeType==frontend",
-    resourceGroupName: "resRg",
-    serviceDnsName: "my.service.dns",
-    serviceKind: "Stateless",
-    serviceLoadMetrics: [{
-        name: "metric1",
-        weight: "Low",
-    }],
-    serviceName: "myService",
-    servicePackageActivationMode: "SharedProcess",
-    servicePlacementPolicies: [],
-    serviceTypeName: "myServiceType",
-});
-
-```
-
-{{% /example %}}
-
-### Put a service with minimum parameters
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var service = new AzureRM.ServiceFabric.Latest.Service("service", new AzureRM.ServiceFabric.Latest.ServiceArgs
-        {
-            ApplicationName = "myApp",
-            ClusterName = "myCluster",
-            PartitionDescription = 
-            {
-                { "partitionScheme", "Singleton" },
-            },
-            ResourceGroupName = "resRg",
-            ServiceKind = "Stateless",
-            ServiceName = "myService",
-            ServiceTypeName = "myServiceType",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-service = azurerm.servicefabric.latest.Service("service",
-    application_name="myApp",
-    cluster_name="myCluster",
-    partition_description={
-        "partitionScheme": "Singleton",
-    },
-    resource_group_name="resRg",
-    service_kind="Stateless",
-    service_name="myService",
-    service_type_name="myServiceType")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const service = new azurerm.servicefabric.latest.Service("service", {
-    applicationName: "myApp",
-    clusterName: "myCluster",
-    partitionDescription: {
-        partitionScheme: "Singleton",
-    },
-    resourceGroupName: "resRg",
-    serviceKind: "Stateless",
-    serviceName: "myService",
-    serviceTypeName: "myServiceType",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Service Resource {#create}
@@ -1424,7 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of partitions.{{% /md %}}</dd>
 
@@ -1550,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of partitions.{{% /md %}}</dd>
 
@@ -2028,7 +1820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultload_python" style="color: inherit; text-decoration: inherit;">default<wbr>Load</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.{{% /md %}}</dd>
 
@@ -2038,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarydefaultload_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Default<wbr>Load</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.{{% /md %}}</dd>
 
@@ -2048,7 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarydefaultload_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Default<wbr>Load</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.{{% /md %}}</dd>
 
@@ -2274,7 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultload_python" style="color: inherit; text-decoration: inherit;">default<wbr>Load</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.{{% /md %}}</dd>
 
@@ -2284,7 +2076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarydefaultload_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Default<wbr>Load</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.{{% /md %}}</dd>
 
@@ -2294,7 +2086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarydefaultload_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Default<wbr>Load</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.{{% /md %}}</dd>
 
@@ -2726,7 +2518,7 @@ should be split between the partition ‘count’
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of partitions.{{% /md %}}</dd>
 
@@ -2908,7 +2700,7 @@ should be split between the partition ‘count’
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of partitions.{{% /md %}}</dd>
 

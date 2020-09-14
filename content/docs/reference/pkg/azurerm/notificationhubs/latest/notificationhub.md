@@ -12,98 +12,6 @@ meta_desc: "Explore the NotificationHub resource of the notificationhubs/latest 
 
 Description of a NotificationHub Resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### NotificationHubCreate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var notificationHub = new AzureRM.NotificationHubs.Latest.NotificationHub("notificationHub", new AzureRM.NotificationHubs.Latest.NotificationHubArgs
-        {
-            Location = "eastus",
-            NamespaceName = "nh-sdk-ns",
-            NotificationHubName = "nh-sdk-hub",
-            ResourceGroupName = "5ktrial",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	notificationhubs "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/notificationhubs/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := notificationhubs.NewNotificationHub(ctx, "notificationHub", &notificationhubs.NotificationHubArgs{
-			Location:            pulumi.String("eastus"),
-			NamespaceName:       pulumi.String("nh-sdk-ns"),
-			NotificationHubName: pulumi.String("nh-sdk-hub"),
-			ResourceGroupName:   pulumi.String("5ktrial"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-notification_hub = azurerm.notificationhubs.latest.NotificationHub("notificationHub",
-    location="eastus",
-    namespace_name="nh-sdk-ns",
-    notification_hub_name="nh-sdk-hub",
-    resource_group_name="5ktrial")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const notificationHub = new azurerm.notificationhubs.latest.NotificationHub("notificationHub", {
-    location: "eastus",
-    namespaceName: "nh-sdk-ns",
-    notificationHubName: "nh-sdk-hub",
-    resourceGroupName: "5ktrial",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a NotificationHub Resource {#create}
@@ -3484,7 +3392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The revision number for the rule{{% /md %}}</dd>
 
@@ -3720,7 +3628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The capacity of the resource{{% /md %}}</dd>
 
@@ -3966,7 +3874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The capacity of the resource{{% /md %}}</dd>
 

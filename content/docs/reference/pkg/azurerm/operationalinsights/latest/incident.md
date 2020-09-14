@@ -12,147 +12,6 @@ meta_desc: "Explore the Incident resource of the operationalinsights/latest modu
 
 Represents an incident in Azure Security Insights.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Creates or updates an incident.
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var incident = new AzureRM.OperationalInsights.Latest.Incident("incident", new AzureRM.OperationalInsights.Latest.IncidentArgs
-        {
-            Classification = "FalsePositive",
-            ClassificationComment = "Not a malicious activity",
-            ClassificationReason = "IncorrectAlertLogic",
-            Description = "This is a demo incident",
-            Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
-            FirstActivityTimeUtc = "2019-01-01T13:00:30Z",
-            IncidentId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
-            LastActivityTimeUtc = "2019-01-01T13:05:30Z",
-            Owner = new AzureRM.OperationalInsights.Latest.Inputs.IncidentOwnerInfoArgs
-            {
-                ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
-            },
-            ResourceGroupName = "myRg",
-            Severity = "High",
-            Status = "Closed",
-            Title = "My incident",
-            WorkspaceName = "myWorkspace",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	operationalinsights "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/operationalinsights/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := operationalinsights.NewIncident(ctx, "incident", &operationalinsights.IncidentArgs{
-			Classification:        pulumi.String("FalsePositive"),
-			ClassificationComment: pulumi.String("Not a malicious activity"),
-			ClassificationReason:  pulumi.String("IncorrectAlertLogic"),
-			Description:           pulumi.String("This is a demo incident"),
-			Etag:                  pulumi.String("\"0300bf09-0000-0000-0000-5c37296e0000\""),
-			FirstActivityTimeUtc:  pulumi.String("2019-01-01T13:00:30Z"),
-			IncidentId:            pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
-			LastActivityTimeUtc:   pulumi.String("2019-01-01T13:05:30Z"),
-			Owner: &operationalinsights.IncidentOwnerInfoArgs{
-				ObjectId: pulumi.String("2046feea-040d-4a46-9e2b-91c2941bfa70"),
-			},
-			ResourceGroupName: pulumi.String("myRg"),
-			Severity:          pulumi.String("High"),
-			Status:            pulumi.String("Closed"),
-			Title:             pulumi.String("My incident"),
-			WorkspaceName:     pulumi.String("myWorkspace"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-incident = azurerm.operationalinsights.latest.Incident("incident",
-    classification="FalsePositive",
-    classification_comment="Not a malicious activity",
-    classification_reason="IncorrectAlertLogic",
-    description="This is a demo incident",
-    etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
-    first_activity_time_utc="2019-01-01T13:00:30Z",
-    incident_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
-    last_activity_time_utc="2019-01-01T13:05:30Z",
-    owner={
-        "objectId": "2046feea-040d-4a46-9e2b-91c2941bfa70",
-    },
-    resource_group_name="myRg",
-    severity="High",
-    status="Closed",
-    title="My incident",
-    workspace_name="myWorkspace")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const incident = new azurerm.operationalinsights.latest.Incident("incident", {
-    classification: "FalsePositive",
-    classificationComment: "Not a malicious activity",
-    classificationReason: "IncorrectAlertLogic",
-    description: "This is a demo incident",
-    etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
-    firstActivityTimeUtc: "2019-01-01T13:00:30Z",
-    incidentId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
-    lastActivityTimeUtc: "2019-01-01T13:05:30Z",
-    owner: {
-        objectId: "2046feea-040d-4a46-9e2b-91c2941bfa70",
-    },
-    resourceGroupName: "myRg",
-    severity: "High",
-    status: "Closed",
-    title: "My incident",
-    workspaceName: "myWorkspace",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Incident Resource {#create}
@@ -1302,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#incident_number_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A sequential number{{% /md %}}</dd>
 
@@ -1577,7 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alerts_count_python" style="color: inherit; text-decoration: inherit;">alerts_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of alerts in the incident{{% /md %}}</dd>
 
@@ -1587,7 +1446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bookmarks_count_python" style="color: inherit; text-decoration: inherit;">bookmarks_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of bookmarks in the incident{{% /md %}}</dd>
 
@@ -1597,7 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#comments_count_python" style="color: inherit; text-decoration: inherit;">comments_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of comments in the incident{{% /md %}}</dd>
 
@@ -1689,8 +1548,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="labelname_python">
-<a href="#labelname_python" style="color: inherit; text-decoration: inherit;">label<wbr>Name</a>
+        <span id="label_name_python">
+<a href="#label_name_python" style="color: inherit; text-decoration: inherit;">label_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1805,16 +1664,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="labelname_python">
-<a href="#labelname_python" style="color: inherit; text-decoration: inherit;">label<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the label{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="labeltype_python">
 <a href="#labeltype_python" style="color: inherit; text-decoration: inherit;">label<wbr>Type</a>
 </span> 
@@ -1822,6 +1671,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the label{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="label_name_python">
+<a href="#label_name_python" style="color: inherit; text-decoration: inherit;">label_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the label{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

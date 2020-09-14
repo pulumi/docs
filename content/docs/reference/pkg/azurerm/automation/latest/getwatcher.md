@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#execution_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>frequency_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency at which the watcher is invoked.{{% /md %}}</dd>
 

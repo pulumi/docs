@@ -1001,7 +1001,7 @@ The following output properties are available:
 <a href="#maxprefixesadvertisedv4_python" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixes<wbr>Advertised<wbr>V4</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv4 session.{{% /md %}}</dd>
 
@@ -1011,7 +1011,7 @@ The following output properties are available:
 <a href="#maxprefixesadvertisedv6_python" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixes<wbr>Advertised<wbr>V6</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv6 session.{{% /md %}}</dd>
 
@@ -1427,7 +1427,7 @@ The following output properties are available:
 <a href="#provisionedbandwidthinmbps_python" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Bandwidth<wbr>In<wbr>Mbps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The bandwidth that is actually provisioned.{{% /md %}}</dd>
 
@@ -1437,7 +1437,7 @@ The following output properties are available:
 <a href="#bandwidth_in_mbps_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>in_<wbr>mbps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The bandwidth of the connection.{{% /md %}}</dd>
 
@@ -1467,7 +1467,7 @@ The following output properties are available:
 <a href="#peeringdbfacilityid_python" style="color: inherit; text-decoration: inherit;">peering<wbr>DBFacility<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd>
 
@@ -1733,7 +1733,7 @@ The following output properties are available:
 <a href="#peeringdbfacilityid_python" style="color: inherit; text-decoration: inherit;">peering<wbr>DBFacility<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd>
 

@@ -2091,14 +2091,14 @@ The following output properties are available:
 <a href="#length_python" style="color: inherit; text-decoration: inherit;">length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of bytes of the content. Same as Size field.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mediatype_python">
-<a href="#mediatype_python" style="color: inherit; text-decoration: inherit;">media<wbr>Type</a>
+        <span id="media_type_python">
+<a href="#media_type_python" style="color: inherit; text-decoration: inherit;">media_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2131,7 +2131,7 @@ The following output properties are available:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of bytes of the content. Same as Length field.{{% /md %}}</dd>
 

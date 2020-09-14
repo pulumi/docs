@@ -3153,7 +3153,7 @@ The following output properties are available:
 <a href="#disk_count_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Disk count of the master target.{{% /md %}}</dd>
 
@@ -4625,7 +4625,7 @@ The following output properties are available:
 <a href="#throughputinbytes_python" style="color: inherit; text-decoration: inherit;">throughput<wbr>In<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The throughput in bytes.{{% /md %}}</dd>
 
@@ -4635,7 +4635,7 @@ The following output properties are available:
 <a href="#throughputinmbps_python" style="color: inherit; text-decoration: inherit;">throughput<wbr>In<wbr>MBps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The throughput in MBps.{{% /md %}}</dd>
 
@@ -4655,7 +4655,7 @@ The following output properties are available:
 <a href="#throughputuploadpendingdatainbytes_python" style="color: inherit; text-decoration: inherit;">throughput<wbr>Upload<wbr>Pending<wbr>Data<wbr>In<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The uploading pending data in bytes.{{% /md %}}</dd>
 
@@ -4695,7 +4695,7 @@ The following output properties are available:
 <a href="#availablememoryinbytes_python" style="color: inherit; text-decoration: inherit;">available<wbr>Memory<wbr>In<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The available memory.{{% /md %}}</dd>
 
@@ -4705,7 +4705,7 @@ The following output properties are available:
 <a href="#availablespaceinbytes_python" style="color: inherit; text-decoration: inherit;">available<wbr>Space<wbr>In<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The available space.{{% /md %}}</dd>
 
@@ -4885,7 +4885,7 @@ The following output properties are available:
 <a href="#sslcertexpiryremainingdays_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert<wbr>Expiry<wbr>Remaining<wbr>Days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}CS SSL cert expiry date.{{% /md %}}</dd>
 
@@ -4915,7 +4915,7 @@ The following output properties are available:
 <a href="#totalmemoryinbytes_python" style="color: inherit; text-decoration: inherit;">total<wbr>Memory<wbr>In<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The total memory.{{% /md %}}</dd>
 
@@ -4925,7 +4925,7 @@ The following output properties are available:
 <a href="#totalspaceinbytes_python" style="color: inherit; text-decoration: inherit;">total<wbr>Space<wbr>In<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The total space.{{% /md %}}</dd>
 
@@ -5111,7 +5111,7 @@ The following output properties are available:
 <a href="#capacityinbytes_python" style="color: inherit; text-decoration: inherit;">capacity<wbr>In<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The volume capacity.{{% /md %}}</dd>
 
@@ -5121,7 +5121,7 @@ The following output properties are available:
 <a href="#freespaceinbytes_python" style="color: inherit; text-decoration: inherit;">free<wbr>Space<wbr>In<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The free space available in this volume.{{% /md %}}</dd>
 
@@ -5131,7 +5131,7 @@ The following output properties are available:
 <a href="#thresholdpercentage_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The threshold percentage.{{% /md %}}</dd>
 
@@ -6279,16 +6279,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="agentcount_python">
-<a href="#agentcount_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The number of source and target servers configured to talk to this CS.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="agentexpirydate_python">
 <a href="#agentexpirydate_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Expiry<wbr>Date</a>
 </span> 
@@ -6309,6 +6299,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="agent_count_python">
+<a href="#agent_count_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The number of source and target servers configured to talk to this CS.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="agent_version_python">
 <a href="#agent_version_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version</a>
 </span> 
@@ -6323,7 +6323,7 @@ The following output properties are available:
 <a href="#availablememoryinbytes_python" style="color: inherit; text-decoration: inherit;">available<wbr>Memory<wbr>In<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The available memory.{{% /md %}}</dd>
 
@@ -6333,7 +6333,7 @@ The following output properties are available:
 <a href="#availablespaceinbytes_python" style="color: inherit; text-decoration: inherit;">available<wbr>Space<wbr>In<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The available space.{{% /md %}}</dd>
 
@@ -6523,7 +6523,7 @@ The following output properties are available:
 <a href="#sslcertexpiryremainingdays_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert<wbr>Expiry<wbr>Remaining<wbr>Days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}CS SSL cert expiry date.{{% /md %}}</dd>
 
@@ -6553,7 +6553,7 @@ The following output properties are available:
 <a href="#totalmemoryinbytes_python" style="color: inherit; text-decoration: inherit;">total<wbr>Memory<wbr>In<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The total memory.{{% /md %}}</dd>
 
@@ -6563,7 +6563,7 @@ The following output properties are available:
 <a href="#totalspaceinbytes_python" style="color: inherit; text-decoration: inherit;">total<wbr>Space<wbr>In<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The total space.{{% /md %}}</dd>
 

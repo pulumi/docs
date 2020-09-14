@@ -12,312 +12,6 @@ meta_desc: "Explore the Policy resource of the network/latest module, including 
 
 Defines web application firewall policy.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Creates specific policy
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var policy = new AzureRM.Network.Latest.Policy("policy", new AzureRM.Network.Latest.PolicyArgs
-        {
-            CustomRules = new AzureRM.Network.Latest.Inputs.CustomRuleListArgs
-            {
-                Rules = 
-                {
-                    new AzureRM.Network.Latest.Inputs.CustomRuleArgs
-                    {
-                        Action = "Block",
-                        MatchConditions = 
-                        {
-                            new AzureRM.Network.Latest.Inputs.MatchConditionArgs
-                            {
-                                Operator = "IPMatch",
-                            },
-                        },
-                        Name = "Rule1",
-                        Priority = 1,
-                        RateLimitThreshold = 1000,
-                        RuleType = "RateLimitRule",
-                    },
-                    new AzureRM.Network.Latest.Inputs.CustomRuleArgs
-                    {
-                        Action = "Block",
-                        MatchConditions = 
-                        {
-                            new AzureRM.Network.Latest.Inputs.MatchConditionArgs
-                            {
-                                Operator = "GeoMatch",
-                            },
-                            new AzureRM.Network.Latest.Inputs.MatchConditionArgs
-                            {
-                                Operator = "Contains",
-                                Transforms = 
-                                {
-                                    "Lowercase",
-                                },
-                            },
-                        },
-                        Name = "Rule2",
-                        Priority = 2,
-                        RuleType = "MatchRule",
-                    },
-                },
-            },
-            ManagedRules = new AzureRM.Network.Latest.Inputs.ManagedRuleSetListArgs
-            {
-                ManagedRuleSets = 
-                {
-                    new AzureRM.Network.Latest.Inputs.ManagedRuleSetArgs
-                    {
-                        RuleGroupOverrides = 
-                        {
-                            new AzureRM.Network.Latest.Inputs.ManagedRuleGroupOverrideArgs
-                            {
-                                RuleGroupName = "SQLI",
-                                Rules = 
-                                {
-                                    new AzureRM.Network.Latest.Inputs.ManagedRuleOverrideArgs
-                                    {
-                                        RuleId = "942100",
-                                    },
-                                    new AzureRM.Network.Latest.Inputs.ManagedRuleOverrideArgs
-                                    {
-                                        RuleId = "942110",
-                                    },
-                                },
-                            },
-                        },
-                        RuleSetType = "DefaultRuleSet",
-                        RuleSetVersion = "1.0",
-                    },
-                },
-            },
-            PolicyName = "Policy1",
-            PolicySettings = ,
-            ResourceGroupName = "rg1",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewPolicy(ctx, "policy", &network.PolicyArgs{
-			CustomRules: &network.CustomRuleListArgs{
-				Rules: network.CustomRuleArray{
-					&network.CustomRuleArgs{
-						Action: pulumi.String("Block"),
-						MatchConditions: network.MatchConditionArray{
-							&network.MatchConditionArgs{
-								Operator: pulumi.String("IPMatch"),
-							},
-						},
-						Name:               pulumi.String("Rule1"),
-						Priority:           pulumi.Int(1),
-						RateLimitThreshold: pulumi.Int(1000),
-						RuleType:           pulumi.String("RateLimitRule"),
-					},
-					&network.CustomRuleArgs{
-						Action: pulumi.String("Block"),
-						MatchConditions: network.MatchConditionArray{
-							&network.MatchConditionArgs{
-								Operator: pulumi.String("GeoMatch"),
-							},
-							&network.MatchConditionArgs{
-								Operator: pulumi.String("Contains"),
-								Transforms: pulumi.StringArray{
-									pulumi.String("Lowercase"),
-								},
-							},
-						},
-						Name:     pulumi.String("Rule2"),
-						Priority: pulumi.Int(2),
-						RuleType: pulumi.String("MatchRule"),
-					},
-				},
-			},
-			ManagedRules: &network.ManagedRuleSetListArgs{
-				ManagedRuleSets: network.ManagedRuleSetArray{
-					&network.ManagedRuleSetArgs{
-						RuleGroupOverrides: network.ManagedRuleGroupOverrideArray{
-							&network.ManagedRuleGroupOverrideArgs{
-								RuleGroupName: pulumi.String("SQLI"),
-								Rules: network.ManagedRuleOverrideArray{
-									&network.ManagedRuleOverrideArgs{
-										RuleId: pulumi.String("942100"),
-									},
-									&network.ManagedRuleOverrideArgs{
-										RuleId: pulumi.String("942110"),
-									},
-								},
-							},
-						},
-						RuleSetType:    pulumi.String("DefaultRuleSet"),
-						RuleSetVersion: pulumi.String("1.0"),
-					},
-				},
-			},
-			PolicyName:        pulumi.String("Policy1"),
-			PolicySettings:    nil,
-			ResourceGroupName: pulumi.String("rg1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-policy = azurerm.network.latest.Policy("policy",
-    custom_rules={
-        "rules": [
-            {
-                "action": "Block",
-                "matchConditions": [{
-                    "operator": "IPMatch",
-                }],
-                "name": "Rule1",
-                "priority": 1,
-                "rateLimitThreshold": 1000,
-                "ruleType": "RateLimitRule",
-            },
-            {
-                "action": "Block",
-                "matchConditions": [
-                    {
-                        "operator": "GeoMatch",
-                    },
-                    {
-                        "operator": "Contains",
-                        "transforms": ["Lowercase"],
-                    },
-                ],
-                "name": "Rule2",
-                "priority": 2,
-                "ruleType": "MatchRule",
-            },
-        ],
-    },
-    managed_rules={
-        "managedRuleSets": [{
-            "ruleGroupOverrides": [{
-                "ruleGroupName": "SQLI",
-                "rules": [
-                    {
-                        "ruleId": "942100",
-                    },
-                    {
-                        "ruleId": "942110",
-                    },
-                ],
-            }],
-            "ruleSetType": "DefaultRuleSet",
-            "ruleSetVersion": "1.0",
-        }],
-    },
-    policy_name="Policy1",
-    policy_settings={},
-    resource_group_name="rg1")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const policy = new azurerm.network.latest.Policy("policy", {
-    customRules: {
-        rules: [
-            {
-                action: "Block",
-                matchConditions: [{
-                    operator: "IPMatch",
-                }],
-                name: "Rule1",
-                priority: 1,
-                rateLimitThreshold: 1000,
-                ruleType: "RateLimitRule",
-            },
-            {
-                action: "Block",
-                matchConditions: [
-                    {
-                        operator: "GeoMatch",
-                    },
-                    {
-                        operator: "Contains",
-                        transforms: ["Lowercase"],
-                    },
-                ],
-                name: "Rule2",
-                priority: 2,
-                ruleType: "MatchRule",
-            },
-        ],
-    },
-    managedRules: {
-        managedRuleSets: [{
-            ruleGroupOverrides: [{
-                ruleGroupName: "SQLI",
-                rules: [
-                    {
-                        ruleId: "942100",
-                    },
-                    {
-                        ruleId: "942110",
-                    },
-                ],
-            }],
-            ruleSetType: "DefaultRuleSet",
-            ruleSetVersion: "1.0",
-        }],
-    },
-    policyName: "Policy1",
-    policySettings: {},
-    resourceGroupName: "rg1",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Policy Resource {#create}
@@ -1482,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.{{% /md %}}</dd>
 
@@ -1522,7 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ratelimitdurationinminutes_python" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Duration<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time window for resetting the rate limit count. Default is 1 minute.{{% /md %}}</dd>
 
@@ -1532,7 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ratelimitthreshold_python" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of allowed requests per client within the time window.{{% /md %}}</dd>
 
@@ -2020,7 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.{{% /md %}}</dd>
 
@@ -2060,7 +1754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ratelimitdurationinminutes_python" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Duration<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time window for resetting the rate limit count. Default is 1 minute.{{% /md %}}</dd>
 
@@ -2070,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ratelimitthreshold_python" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of allowed requests per client within the time window.{{% /md %}}</dd>
 
@@ -4114,7 +3808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_upload_limit_in_mb_python" style="color: inherit; text-decoration: inherit;">file_<wbr>upload_<wbr>limit_<wbr>in_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum file upload size in Mb for WAF.{{% /md %}}</dd>
 
@@ -4124,7 +3818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_request_body_size_in_kb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>request_<wbr>body_<wbr>size_<wbr>in_<wbr>kb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum request body size in Kb for WAF.{{% /md %}}</dd>
 
@@ -4360,7 +4054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_upload_limit_in_mb_python" style="color: inherit; text-decoration: inherit;">file_<wbr>upload_<wbr>limit_<wbr>in_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum file upload size in Mb for WAF.{{% /md %}}</dd>
 
@@ -4370,7 +4064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_request_body_size_in_kb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>request_<wbr>body_<wbr>size_<wbr>in_<wbr>kb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum request body size in Kb for WAF.{{% /md %}}</dd>
 

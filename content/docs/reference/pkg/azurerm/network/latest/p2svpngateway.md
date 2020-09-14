@@ -12,176 +12,6 @@ meta_desc: "Explore the P2sVpnGateway resource of the network/latest module, inc
 
 P2SVpnGateway Resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### P2SVpnGatewayPut
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var p2sVpnGateway = new AzureRM.Network.Latest.P2sVpnGateway("p2sVpnGateway", new AzureRM.Network.Latest.P2sVpnGatewayArgs
-        {
-            CustomDnsServers = 
-            {
-                "1.1.1.1",
-                "2.2.2.2",
-            },
-            GatewayName = "p2sVpnGateway1",
-            Location = "West US",
-            P2SConnectionConfigurations = 
-            {
-                new AzureRM.Network.Latest.Inputs.P2SConnectionConfigurationArgs
-                {
-                    Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1",
-                    Name = "P2SConnectionConfig1",
-                },
-            },
-            ResourceGroupName = "rg1",
-            Tags = 
-            {
-                { "key1", "value1" },
-            },
-            VirtualHub = new AzureRM.Network.Latest.Inputs.SubResourceArgs
-            {
-                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
-            },
-            VpnGatewayScaleUnit = 1,
-            VpnServerConfiguration = new AzureRM.Network.Latest.Inputs.SubResourceArgs
-            {
-                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewP2sVpnGateway(ctx, "p2sVpnGateway", &network.P2sVpnGatewayArgs{
-			CustomDnsServers: pulumi.StringArray{
-				pulumi.String("1.1.1.1"),
-				pulumi.String("2.2.2.2"),
-			},
-			GatewayName: pulumi.String("p2sVpnGateway1"),
-			Location:    pulumi.String("West US"),
-			P2SConnectionConfigurations: network.P2SConnectionConfigurationArray{
-				&network.P2SConnectionConfigurationArgs{
-					Id:   pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1"),
-					Name: pulumi.String("P2SConnectionConfig1"),
-				},
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			Tags: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-			},
-			VirtualHub: &network.SubResourceArgs{
-				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1"),
-			},
-			VpnGatewayScaleUnit: pulumi.Int(1),
-			VpnServerConfiguration: &network.SubResourceArgs{
-				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-p2s_vpn_gateway = azurerm.network.latest.P2sVpnGateway("p2sVpnGateway",
-    custom_dns_servers=[
-        "1.1.1.1",
-        "2.2.2.2",
-    ],
-    gateway_name="p2sVpnGateway1",
-    location="West US",
-    p2_s_connection_configurations=[{
-        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1",
-        "name": "P2SConnectionConfig1",
-    }],
-    resource_group_name="rg1",
-    tags={
-        "key1": "value1",
-    },
-    virtual_hub={
-        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
-    },
-    vpn_gateway_scale_unit=1,
-    vpn_server_configuration={
-        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const p2sVpnGateway = new azurerm.network.latest.P2sVpnGateway("p2sVpnGateway", {
-    customDnsServers: [
-        "1.1.1.1",
-        "2.2.2.2",
-    ],
-    gatewayName: "p2sVpnGateway1",
-    location: "West US",
-    p2SConnectionConfigurations: [{
-        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1",
-        name: "P2SConnectionConfig1",
-    }],
-    resourceGroupName: "rg1",
-    tags: {
-        key1: "value1",
-    },
-    virtualHub: {
-        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
-    },
-    vpnGatewayScaleUnit: 1,
-    vpnServerConfiguration: {
-        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a P2sVpnGateway Resource {#create}
@@ -193,7 +23,7 @@ const p2sVpnGateway = new azurerm.network.latest.P2sVpnGateway("p2sVpnGateway", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/network/latest/#pulumi_azurerm.network/latest.P2sVpnGateway">P2sVpnGateway</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_dns_servers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">p2_s_connection_configurations</span><span class="p">:</span> <span class="nx">Optional[List[P2SConnectionConfiguration]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_scale_unit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">vpn_server_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/network/latest/#pulumi_azurerm.network/latest.P2sVpnGateway">P2sVpnGateway</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_dns_servers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">p2_s_connection_configurations</span><span class="p">:</span> <span class="nx">Optional[List[P2SConnectionConfiguration]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_scale_unit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vpn_server_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -772,7 +602,7 @@ The P2sVpnGateway resource accepts the following [input]({{< relref "/docs/intro
 <a href="#vpn_gateway_scale_unit_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>scale_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The scale unit for this p2s vpn gateway.{{% /md %}}</dd>
 
@@ -3250,7 +3080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_egress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">total_<wbr>egress_<wbr>bytes_<wbr>transferred</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total of the Egress Bytes Transferred in this connection.{{% /md %}}</dd>
 
@@ -3260,7 +3090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_ingress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">total_<wbr>ingress_<wbr>bytes_<wbr>transferred</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total of the Ingress Bytes Transferred in this P2S Vpn connection.{{% /md %}}</dd>
 
@@ -3280,7 +3110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_client_connections_count_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>connections_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The total of p2s vpn clients connected at this time to this P2SVpnGateway.{{% /md %}}</dd>
 

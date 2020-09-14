@@ -12,126 +12,6 @@ meta_desc: "Explore the IscsiDisk resource of the storsimple/latest module, incl
 
 The iSCSI disk.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### IscsiDisksCreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var iscsiDisk = new AzureRM.StorSimple.Latest.IscsiDisk("iscsiDisk", new AzureRM.StorSimple.Latest.IscsiDiskArgs
-        {
-            AccessControlRecords = {},
-            DataPolicy = "Tiered",
-            Description = "Demo IscsiDisk for SDK Test Tiered",
-            DeviceName = "HSDK-0NZI14MDTF",
-            DiskName = "Auto-TestIscsiDisk1",
-            DiskStatus = "Online",
-            IscsiServerName = "HSDK-0NZI14MDTF",
-            ManagerName = "hAzureSDKOperations",
-            MonitoringStatus = "Enabled",
-            ProvisionedCapacityInBytes = 536870912000,
-            ResourceGroupName = "ResourceGroupForSDKTest",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	storsimple "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storsimple/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storsimple.NewIscsiDisk(ctx, "iscsiDisk", &storsimple.IscsiDiskArgs{
-			AccessControlRecords:       []interface{}{},
-			DataPolicy:                 pulumi.String("Tiered"),
-			Description:                pulumi.String("Demo IscsiDisk for SDK Test Tiered"),
-			DeviceName:                 pulumi.String("HSDK-0NZI14MDTF"),
-			DiskName:                   pulumi.String("Auto-TestIscsiDisk1"),
-			DiskStatus:                 pulumi.String("Online"),
-			IscsiServerName:            pulumi.String("HSDK-0NZI14MDTF"),
-			ManagerName:                pulumi.String("hAzureSDKOperations"),
-			MonitoringStatus:           pulumi.String("Enabled"),
-			ProvisionedCapacityInBytes: pulumi.Int(536870912000),
-			ResourceGroupName:          pulumi.String("ResourceGroupForSDKTest"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-iscsi_disk = azurerm.storsimple.latest.IscsiDisk("iscsiDisk",
-    access_control_records=[],
-    data_policy="Tiered",
-    description="Demo IscsiDisk for SDK Test Tiered",
-    device_name="HSDK-0NZI14MDTF",
-    disk_name="Auto-TestIscsiDisk1",
-    disk_status="Online",
-    iscsi_server_name="HSDK-0NZI14MDTF",
-    manager_name="hAzureSDKOperations",
-    monitoring_status="Enabled",
-    provisioned_capacity_in_bytes=536870912000,
-    resource_group_name="ResourceGroupForSDKTest")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const iscsiDisk = new azurerm.storsimple.latest.IscsiDisk("iscsiDisk", {
-    accessControlRecords: [],
-    dataPolicy: "Tiered",
-    description: "Demo IscsiDisk for SDK Test Tiered",
-    deviceName: "HSDK-0NZI14MDTF",
-    diskName: "Auto-TestIscsiDisk1",
-    diskStatus: "Online",
-    iscsiServerName: "HSDK-0NZI14MDTF",
-    managerName: "hAzureSDKOperations",
-    monitoringStatus: "Enabled",
-    provisionedCapacityInBytes: 536870912000,
-    resourceGroupName: "ResourceGroupForSDKTest",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a IscsiDisk Resource {#create}
@@ -143,7 +23,7 @@ const iscsiDisk = new azurerm.storsimple.latest.IscsiDisk("iscsiDisk", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/storsimple/latest/#pulumi_azurerm.storsimple/latest.IscsiDisk">IscsiDisk</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_control_records</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">data_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iscsi_server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioned_capacity_in_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/storsimple/latest/#pulumi_azurerm.storsimple/latest.IscsiDisk">IscsiDisk</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_control_records</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">data_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iscsi_server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioned_capacity_in_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -752,7 +632,7 @@ The IscsiDisk resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#provisioned_capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>capacity_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The provisioned capacity in bytes.{{% /md %}}</dd>
 
@@ -981,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_used_capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">local_<wbr>used_<wbr>capacity_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The local used capacity in bytes.{{% /md %}}</dd>
 
@@ -1011,7 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#used_capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>capacity_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The used capacity in bytes.{{% /md %}}</dd>
 

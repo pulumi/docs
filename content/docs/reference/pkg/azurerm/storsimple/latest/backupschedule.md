@@ -12,160 +12,6 @@ meta_desc: "Explore the BackupSchedule resource of the storsimple/latest module,
 
 The backup schedule.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### BackupSchedulesCreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var backupSchedule = new AzureRM.StorSimple.Latest.BackupSchedule("backupSchedule", new AzureRM.StorSimple.Latest.BackupScheduleArgs
-        {
-            BackupPolicyName = "BkUpPolicy01ForSDKTest",
-            BackupScheduleName = "schedule2",
-            BackupType = "CloudSnapshot",
-            DeviceName = "Device05ForSDKTest",
-            Kind = "Series8000",
-            ManagerName = "ManagerForSDKTest1",
-            ResourceGroupName = "ResourceGroupForSDKTest",
-            RetentionCount = 1,
-            ScheduleRecurrence = new AzureRM.StorSimple.Latest.Inputs.ScheduleRecurrenceArgs
-            {
-                RecurrenceType = "Weekly",
-                RecurrenceValue = 1,
-                WeeklyDaysList = 
-                {
-                    "Friday",
-                    "Thursday",
-                    "Monday",
-                },
-            },
-            ScheduleStatus = "Enabled",
-            StartTime = "2017-06-24T01:00:00Z",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	storsimple "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storsimple/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storsimple.NewBackupSchedule(ctx, "backupSchedule", &storsimple.BackupScheduleArgs{
-			BackupPolicyName:   pulumi.String("BkUpPolicy01ForSDKTest"),
-			BackupScheduleName: pulumi.String("schedule2"),
-			BackupType:         pulumi.String("CloudSnapshot"),
-			DeviceName:         pulumi.String("Device05ForSDKTest"),
-			Kind:               pulumi.String("Series8000"),
-			ManagerName:        pulumi.String("ManagerForSDKTest1"),
-			ResourceGroupName:  pulumi.String("ResourceGroupForSDKTest"),
-			RetentionCount:     pulumi.Int(1),
-			ScheduleRecurrence: &storsimple.ScheduleRecurrenceArgs{
-				RecurrenceType:  pulumi.String("Weekly"),
-				RecurrenceValue: pulumi.Int(1),
-				WeeklyDaysList: pulumi.StringArray{
-					pulumi.String("Friday"),
-					pulumi.String("Thursday"),
-					pulumi.String("Monday"),
-				},
-			},
-			ScheduleStatus: pulumi.String("Enabled"),
-			StartTime:      pulumi.String("2017-06-24T01:00:00Z"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-backup_schedule = azurerm.storsimple.latest.BackupSchedule("backupSchedule",
-    backup_policy_name="BkUpPolicy01ForSDKTest",
-    backup_schedule_name="schedule2",
-    backup_type="CloudSnapshot",
-    device_name="Device05ForSDKTest",
-    kind="Series8000",
-    manager_name="ManagerForSDKTest1",
-    resource_group_name="ResourceGroupForSDKTest",
-    retention_count=1,
-    schedule_recurrence={
-        "recurrenceType": "Weekly",
-        "recurrenceValue": 1,
-        "weeklyDaysList": [
-            "Friday",
-            "Thursday",
-            "Monday",
-        ],
-    },
-    schedule_status="Enabled",
-    start_time="2017-06-24T01:00:00Z")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const backupSchedule = new azurerm.storsimple.latest.BackupSchedule("backupSchedule", {
-    backupPolicyName: "BkUpPolicy01ForSDKTest",
-    backupScheduleName: "schedule2",
-    backupType: "CloudSnapshot",
-    deviceName: "Device05ForSDKTest",
-    kind: "Series8000",
-    managerName: "ManagerForSDKTest1",
-    resourceGroupName: "ResourceGroupForSDKTest",
-    retentionCount: 1,
-    scheduleRecurrence: {
-        recurrenceType: "Weekly",
-        recurrenceValue: 1,
-        weeklyDaysList: [
-            "Friday",
-            "Thursday",
-            "Monday",
-        ],
-    },
-    scheduleStatus: "Enabled",
-    startTime: "2017-06-24T01:00:00Z",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a BackupSchedule Resource {#create}
@@ -177,7 +23,7 @@ const backupSchedule = new azurerm.storsimple.latest.BackupSchedule("backupSched
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/storsimple/latest/#pulumi_azurerm.storsimple/latest.BackupSchedule">BackupSchedule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_schedule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">schedule_recurrence</span><span class="p">:</span> <span class="nx">Optional[Dict[ScheduleRecurrence]]</span> = None<span class="p">, </span><span class="nx">schedule_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/storsimple/latest/#pulumi_azurerm.storsimple/latest.BackupSchedule">BackupSchedule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_schedule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">schedule_recurrence</span><span class="p">:</span> <span class="nx">Optional[Dict[ScheduleRecurrence]]</span> = None<span class="p">, </span><span class="nx">schedule_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -766,7 +612,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#retention_count_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of backups to be retained.{{% /md %}}</dd>
 
@@ -1170,7 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_value_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The recurrence value.{{% /md %}}</dd>
 
@@ -1336,7 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_value_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The recurrence value.{{% /md %}}</dd>
 

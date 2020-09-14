@@ -12,124 +12,6 @@ meta_desc: "Explore the Cluster resource of the operationalinsights/latest modul
 
 The top level Log Analytics cluster resource container.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### ClustersCreate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var cluster = new AzureRM.OperationalInsights.Latest.Cluster("cluster", new AzureRM.OperationalInsights.Latest.ClusterArgs
-        {
-            ClusterName = "oiautorest6685",
-            Location = "australiasoutheast",
-            ResourceGroupName = "oiautorest6685",
-            Sku = new AzureRM.OperationalInsights.Latest.Inputs.ClusterSkuArgs
-            {
-                Capacity = 1000,
-                Name = "CapacityReservation",
-            },
-            Tags = 
-            {
-                { "tag1", "val1" },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	operationalinsights "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/operationalinsights/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := operationalinsights.NewCluster(ctx, "cluster", &operationalinsights.ClusterArgs{
-			ClusterName:       pulumi.String("oiautorest6685"),
-			Location:          pulumi.String("australiasoutheast"),
-			ResourceGroupName: pulumi.String("oiautorest6685"),
-			Sku: &operationalinsights.ClusterSkuArgs{
-				Capacity: pulumi.Int(1000),
-				Name:     pulumi.String("CapacityReservation"),
-			},
-			Tags: pulumi.StringMap{
-				"tag1": pulumi.String("val1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-cluster = azurerm.operationalinsights.latest.Cluster("cluster",
-    cluster_name="oiautorest6685",
-    location="australiasoutheast",
-    resource_group_name="oiautorest6685",
-    sku={
-        "capacity": 1000,
-        "name": "CapacityReservation",
-    },
-    tags={
-        "tag1": "val1",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const cluster = new azurerm.operationalinsights.latest.Cluster("cluster", {
-    clusterName: "oiautorest6685",
-    location: "australiasoutheast",
-    resourceGroupName: "oiautorest6685",
-    sku: {
-        capacity: 1000,
-        name: "CapacityReservation",
-    },
-    tags: {
-        tag1: "val1",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}
@@ -1014,7 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The capacity value{{% /md %}}</dd>
 
@@ -1140,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The capacity value{{% /md %}}</dd>
 

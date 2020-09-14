@@ -12,344 +12,6 @@ meta_desc: "Explore the ContainerGroup resource of the containerinstance/latest 
 
 A container group.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### ContainerGroupsCreateOrUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var containerGroup = new AzureRM.ContainerInstance.Latest.ContainerGroup("containerGroup", new AzureRM.ContainerInstance.Latest.ContainerGroupArgs
-        {
-            ContainerGroupName = "demo1",
-            Containers = 
-            {
-                new AzureRM.ContainerInstance.Latest.Inputs.ContainerArgs
-                {
-                    Name = "demo1",
-                },
-            },
-            Diagnostics = new AzureRM.ContainerInstance.Latest.Inputs.ContainerGroupDiagnosticsArgs
-            {
-                LogAnalytics = new AzureRM.ContainerInstance.Latest.Inputs.LogAnalyticsArgs
-                {
-                    LogType = "ContainerInsights",
-                    Metadata = 
-                    {
-                        { "test-key", "test-metadata-value" },
-                    },
-                    WorkspaceId = "workspaceid",
-                    WorkspaceKey = "workspaceKey",
-                },
-            },
-            DnsConfig = new AzureRM.ContainerInstance.Latest.Inputs.DnsConfigurationArgs
-            {
-                NameServers = 
-                {
-                    "1.1.1.1",
-                },
-                Options = "ndots:2",
-                SearchDomains = "cluster.local svc.cluster.local",
-            },
-            Identity = new AzureRM.ContainerInstance.Latest.Inputs.ContainerGroupIdentityArgs
-            {
-                Type = "SystemAssigned, UserAssigned",
-            },
-            ImageRegistryCredentials = {},
-            IpAddress = new AzureRM.ContainerInstance.Latest.Inputs.IpAddressArgs
-            {
-                DnsNameLabel = "dnsnamelabel1",
-                Ports = 
-                {
-                    new AzureRM.ContainerInstance.Latest.Inputs.PortArgs
-                    {
-                        Port = 80,
-                        Protocol = "TCP",
-                    },
-                },
-                Type = "Public",
-            },
-            Location = "west us",
-            NetworkProfile = new AzureRM.ContainerInstance.Latest.Inputs.ContainerGroupNetworkProfileArgs
-            {
-                Id = "test-network-profile-id",
-            },
-            OsType = "Linux",
-            ResourceGroupName = "demo",
-            Volumes = 
-            {
-                new AzureRM.ContainerInstance.Latest.Inputs.VolumeArgs
-                {
-                    AzureFile = new AzureRM.ContainerInstance.Latest.Inputs.AzureFileVolumeArgs
-                    {
-                        ShareName = "shareName",
-                        StorageAccountKey = "accountKey",
-                        StorageAccountName = "accountName",
-                    },
-                    Name = "volume1",
-                },
-                new AzureRM.ContainerInstance.Latest.Inputs.VolumeArgs
-                {
-                    EmptyDir = ,
-                    Name = "volume2",
-                },
-                new AzureRM.ContainerInstance.Latest.Inputs.VolumeArgs
-                {
-                    Name = "volume3",
-                    Secret = 
-                    {
-                        { "secretKey1", "SecretValue1InBase64" },
-                        { "secretKey2", "SecretValue2InBase64" },
-                    },
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	containerinstance "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/containerinstance/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := containerinstance.NewContainerGroup(ctx, "containerGroup", &containerinstance.ContainerGroupArgs{
-			ContainerGroupName: pulumi.String("demo1"),
-			Containers: containerinstance.ContainerArray{
-				&containerinstance.ContainerArgs{
-					Name: pulumi.String("demo1"),
-				},
-			},
-			Diagnostics: &containerinstance.ContainerGroupDiagnosticsArgs{
-				LogAnalytics: &containerinstance.LogAnalyticsArgs{
-					LogType: pulumi.String("ContainerInsights"),
-					Metadata: pulumi.StringMap{
-						"test-key": pulumi.String("test-metadata-value"),
-					},
-					WorkspaceId:  pulumi.String("workspaceid"),
-					WorkspaceKey: pulumi.String("workspaceKey"),
-				},
-			},
-			DnsConfig: &containerinstance.DnsConfigurationArgs{
-				NameServers: pulumi.StringArray{
-					pulumi.String("1.1.1.1"),
-				},
-				Options:       pulumi.String("ndots:2"),
-				SearchDomains: pulumi.String("cluster.local svc.cluster.local"),
-			},
-			Identity: &containerinstance.ContainerGroupIdentityArgs{
-				Type: pulumi.String("SystemAssigned, UserAssigned"),
-			},
-			ImageRegistryCredentials: containerinstance.ImageRegistryCredentialArray{},
-			IpAddress: &containerinstance.IpAddressArgs{
-				DnsNameLabel: pulumi.String("dnsnamelabel1"),
-				Ports: containerinstance.PortArray{
-					&containerinstance.PortArgs{
-						Port:     pulumi.Int(80),
-						Protocol: pulumi.String("TCP"),
-					},
-				},
-				Type: pulumi.String("Public"),
-			},
-			Location: pulumi.String("west us"),
-			NetworkProfile: &containerinstance.ContainerGroupNetworkProfileArgs{
-				Id: pulumi.String("test-network-profile-id"),
-			},
-			OsType:            pulumi.String("Linux"),
-			ResourceGroupName: pulumi.String("demo"),
-			Volumes: containerinstance.VolumeArray{
-				&containerinstance.VolumeArgs{
-					AzureFile: &containerinstance.AzureFileVolumeArgs{
-						ShareName:          pulumi.String("shareName"),
-						StorageAccountKey:  pulumi.String("accountKey"),
-						StorageAccountName: pulumi.String("accountName"),
-					},
-					Name: pulumi.String("volume1"),
-				},
-				&containerinstance.VolumeArgs{
-					EmptyDir: nil,
-					Name:     pulumi.String("volume2"),
-				},
-				&containerinstance.VolumeArgs{
-					Name: pulumi.String("volume3"),
-					Secret: pulumi.StringMap{
-						"secretKey1": pulumi.String("SecretValue1InBase64"),
-						"secretKey2": pulumi.String("SecretValue2InBase64"),
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-container_group = azurerm.containerinstance.latest.ContainerGroup("containerGroup",
-    container_group_name="demo1",
-    containers=[{
-        "name": "demo1",
-    }],
-    diagnostics={
-        "logAnalytics": {
-            "logType": "ContainerInsights",
-            "metadata": {
-                "test-key": "test-metadata-value",
-            },
-            "workspaceId": "workspaceid",
-            "workspaceKey": "workspaceKey",
-        },
-    },
-    dns_config={
-        "nameServers": ["1.1.1.1"],
-        "options": "ndots:2",
-        "searchDomains": "cluster.local svc.cluster.local",
-    },
-    identity={
-        "type": "SystemAssigned, UserAssigned",
-    },
-    image_registry_credentials=[],
-    ip_address={
-        "dnsNameLabel": "dnsnamelabel1",
-        "ports": [{
-            "port": 80,
-            "protocol": "TCP",
-        }],
-        "type": "Public",
-    },
-    location="west us",
-    network_profile={
-        "id": "test-network-profile-id",
-    },
-    os_type="Linux",
-    resource_group_name="demo",
-    volumes=[
-        {
-            "azureFile": {
-                "shareName": "shareName",
-                "storageAccountKey": "accountKey",
-                "storageAccountName": "accountName",
-            },
-            "name": "volume1",
-        },
-        {
-            "emptyDir": {},
-            "name": "volume2",
-        },
-        {
-            "name": "volume3",
-            "secret": {
-                "secretKey1": "SecretValue1InBase64",
-                "secretKey2": "SecretValue2InBase64",
-            },
-        },
-    ])
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const containerGroup = new azurerm.containerinstance.latest.ContainerGroup("containerGroup", {
-    containerGroupName: "demo1",
-    containers: [{
-        name: "demo1",
-    }],
-    diagnostics: {
-        logAnalytics: {
-            logType: "ContainerInsights",
-            metadata: {
-                "test-key": "test-metadata-value",
-            },
-            workspaceId: "workspaceid",
-            workspaceKey: "workspaceKey",
-        },
-    },
-    dnsConfig: {
-        nameServers: ["1.1.1.1"],
-        options: "ndots:2",
-        searchDomains: "cluster.local svc.cluster.local",
-    },
-    identity: {
-        type: "SystemAssigned, UserAssigned",
-    },
-    imageRegistryCredentials: [],
-    ipAddress: {
-        dnsNameLabel: "dnsnamelabel1",
-        ports: [{
-            port: 80,
-            protocol: "TCP",
-        }],
-        type: "Public",
-    },
-    location: "west us",
-    networkProfile: {
-        id: "test-network-profile-id",
-    },
-    osType: "Linux",
-    resourceGroupName: "demo",
-    volumes: [
-        {
-            azureFile: {
-                shareName: "shareName",
-                storageAccountKey: "accountKey",
-                storageAccountName: "accountName",
-            },
-            name: "volume1",
-        },
-        {
-            emptyDir: {},
-            name: "volume2",
-        },
-        {
-            name: "volume3",
-            secret: {
-                secretKey1: "SecretValue1InBase64",
-                secretKey2: "SecretValue2InBase64",
-            },
-        },
-    ],
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ContainerGroup Resource {#create}
@@ -3518,7 +3180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port number to probe.{{% /md %}}</dd>
 
@@ -3684,7 +3346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port number to probe.{{% /md %}}</dd>
 
@@ -3820,7 +3482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port number exposed within the container group.{{% /md %}}</dd>
 
@@ -3946,7 +3608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port number exposed within the container group.{{% /md %}}</dd>
 
@@ -4232,7 +3894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failurethreshold_python" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The failure threshold.{{% /md %}}</dd>
 
@@ -4252,7 +3914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialdelayseconds_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The initial delay seconds.{{% /md %}}</dd>
 
@@ -4262,7 +3924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodseconds_python" style="color: inherit; text-decoration: inherit;">period<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The period seconds.{{% /md %}}</dd>
 
@@ -4272,17 +3934,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successthreshold_python" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The success threshold.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeoutseconds_python">
-<a href="#timeoutseconds_python" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
+        <span id="timeout_seconds_python">
+<a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The timeout seconds.{{% /md %}}</dd>
 
@@ -4558,7 +4220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failurethreshold_python" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The failure threshold.{{% /md %}}</dd>
 
@@ -4578,7 +4240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialdelayseconds_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The initial delay seconds.{{% /md %}}</dd>
 
@@ -4588,7 +4250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodseconds_python" style="color: inherit; text-decoration: inherit;">period<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The period seconds.{{% /md %}}</dd>
 
@@ -4598,17 +4260,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successthreshold_python" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The success threshold.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeoutseconds_python">
-<a href="#timeoutseconds_python" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
+        <span id="timeout_seconds_python">
+<a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The timeout seconds.{{% /md %}}</dd>
 
@@ -4814,7 +4476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restartcount_python" style="color: inherit; text-decoration: inherit;">restart<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of times that the container instance has been restarted.{{% /md %}}</dd>
 
@@ -5476,14 +5138,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exit_code_python" style="color: inherit; text-decoration: inherit;">exit_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The container instance exit codes correspond to those from the `docker run` command.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="finishtime_python">
-<a href="#finishtime_python" style="color: inherit; text-decoration: inherit;">finish<wbr>Time</a>
+        <span id="finish_time_python">
+<a href="#finish_time_python" style="color: inherit; text-decoration: inherit;">finish_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6738,7 +6400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The count of the event.{{% /md %}}</dd>
 
@@ -7236,7 +6898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The count of the GPU resource.{{% /md %}}</dd>
 
@@ -7362,7 +7024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The count of the GPU resource.{{% /md %}}</dd>
 
@@ -8442,7 +8104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restartcount_python" style="color: inherit; text-decoration: inherit;">restart<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of times that the init container has been restarted.{{% /md %}}</dd>
 
@@ -9422,7 +9084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port number.{{% /md %}}</dd>
 
@@ -9548,7 +9210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port number.{{% /md %}}</dd>
 

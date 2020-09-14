@@ -3297,16 +3297,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sasuri_python">
-<a href="#sasuri_python" style="color: inherit; text-decoration: inherit;">sas<wbr>Uri</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}SAS URI of the Azure Blob Storage resource. It is mutually exclusive with connectionString, serviceEndpoint property. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="sas_token_python">
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span> 
@@ -3314,6 +3304,16 @@ The following output properties are available:
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of sasToken in sas uri.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sas_uri_python">
+<a href="#sas_uri_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}SAS URI of the Azure Blob Storage resource. It is mutually exclusive with connectionString, serviceEndpoint property. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5541,8 +5541,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="instancepoolid_python">
-<a href="#instancepoolid_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Pool<wbr>Id</a>
+        <span id="instance_pool_id_python">
+<a href="#instance_pool_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>pool_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
@@ -6227,16 +6227,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sasuri_python">
-<a href="#sasuri_python" style="color: inherit; text-decoration: inherit;">sas<wbr>Uri</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}SAS URI of the Azure File resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="sas_token_python">
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span> 
@@ -6244,6 +6234,16 @@ The following output properties are available:
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of sasToken in sas uri.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sas_uri_python">
+<a href="#sas_uri_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}SAS URI of the Azure File resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -11125,16 +11125,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sasuri_python">
-<a href="#sasuri_python" style="color: inherit; text-decoration: inherit;">sas<wbr>Uri</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}SAS URI of the Azure Storage resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="sas_token_python">
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span> 
@@ -11142,6 +11132,16 @@ The following output properties are available:
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of sasToken in sas uri.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sas_uri_python">
+<a href="#sas_uri_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}SAS URI of the Azure Storage resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -11531,16 +11531,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sasuri_python">
-<a href="#sasuri_python" style="color: inherit; text-decoration: inherit;">sas<wbr>Uri</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}SAS URI of the Azure Storage resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="sas_token_python">
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span> 
@@ -11548,6 +11538,16 @@ The following output properties are available:
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of sasToken in sas uri.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sas_uri_python">
+<a href="#sas_uri_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}SAS URI of the Azure Storage resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -19097,8 +19097,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshtoken_python">
-<a href="#refreshtoken_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
+        <span id="refresh_token_python">
+<a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
@@ -19773,8 +19773,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshtoken_python">
-<a href="#refreshtoken_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
+        <span id="refresh_token_python">
+<a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
@@ -22963,16 +22963,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clustertype_python">
-<a href="#clustertype_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}The cluster type. Type: string (or Expression with resultType string).{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="clusterusername_python">
 <a href="#clusterusername_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>User<wbr>Name</a>
 </span> 
@@ -22980,6 +22970,16 @@ The following output properties are available:
         <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}The username to access the cluster. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cluster_type_python">
+<a href="#cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The cluster type. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -23143,8 +23143,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sparkversion_python">
-<a href="#sparkversion_python" style="color: inherit; text-decoration: inherit;">spark<wbr>Version</a>
+        <span id="spark_version_python">
+<a href="#spark_version_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
@@ -25507,8 +25507,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshtoken_python">
-<a href="#refreshtoken_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
+        <span id="refresh_token_python">
+<a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>

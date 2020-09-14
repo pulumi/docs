@@ -12,128 +12,6 @@ meta_desc: "Explore the Namespace resource of the servicebus/latest module, incl
 
 Description of a namespace resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### NameSpaceCreate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var @namespace = new AzureRM.ServiceBus.Latest.Namespace("namespace", new AzureRM.ServiceBus.Latest.NamespaceArgs
-        {
-            Location = "South Central US",
-            NamespaceName = "sdk-Namespace2924",
-            ResourceGroupName = "ArunMonocle",
-            Sku = new AzureRM.ServiceBus.Latest.Inputs.SBSkuArgs
-            {
-                Name = "Standard",
-                Tier = "Standard",
-            },
-            Tags = 
-            {
-                { "tag1", "value1" },
-                { "tag2", "value2" },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	servicebus "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicebus/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := servicebus.NewNamespace(ctx, "namespace", &servicebus.NamespaceArgs{
-			Location:          pulumi.String("South Central US"),
-			NamespaceName:     pulumi.String("sdk-Namespace2924"),
-			ResourceGroupName: pulumi.String("ArunMonocle"),
-			Sku: &servicebus.SBSkuArgs{
-				Name: pulumi.String("Standard"),
-				Tier: pulumi.String("Standard"),
-			},
-			Tags: pulumi.StringMap{
-				"tag1": pulumi.String("value1"),
-				"tag2": pulumi.String("value2"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-namespace = azurerm.servicebus.latest.Namespace("namespace",
-    location="South Central US",
-    namespace_name="sdk-Namespace2924",
-    resource_group_name="ArunMonocle",
-    sku={
-        "name": "Standard",
-        "tier": "Standard",
-    },
-    tags={
-        "tag1": "value1",
-        "tag2": "value2",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const namespace = new azurerm.servicebus.latest.Namespace("namespace", {
-    location: "South Central US",
-    namespaceName: "sdk-Namespace2924",
-    resourceGroupName: "ArunMonocle",
-    sku: {
-        name: "Standard",
-        tier: "Standard",
-    },
-    tags: {
-        tag1: "value1",
-        tag2: "value2",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Namespace Resource {#create}
@@ -1058,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.{{% /md %}}</dd>
 
@@ -1224,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.{{% /md %}}</dd>
 

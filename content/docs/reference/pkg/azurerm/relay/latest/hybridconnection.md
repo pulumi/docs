@@ -12,98 +12,6 @@ meta_desc: "Explore the HybridConnection resource of the relay/latest module, in
 
 Description of hybrid connection resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### RelayHybridConnectionCreate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var hybridConnection = new AzureRM.Relay.Latest.HybridConnection("hybridConnection", new AzureRM.Relay.Latest.HybridConnectionArgs
-        {
-            HybridConnectionName = "sdk-Relay-Hybrid-01",
-            NamespaceName = "sdk-RelayNamespace-01",
-            RequiresClientAuthorization = true,
-            ResourceGroupName = "RG-eg",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	relay "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/relay/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := relay.NewHybridConnection(ctx, "hybridConnection", &relay.HybridConnectionArgs{
-			HybridConnectionName:        pulumi.String("sdk-Relay-Hybrid-01"),
-			NamespaceName:               pulumi.String("sdk-RelayNamespace-01"),
-			RequiresClientAuthorization: pulumi.Bool(true),
-			ResourceGroupName:           pulumi.String("RG-eg"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-hybrid_connection = azurerm.relay.latest.HybridConnection("hybridConnection",
-    hybrid_connection_name="sdk-Relay-Hybrid-01",
-    namespace_name="sdk-RelayNamespace-01",
-    requires_client_authorization=True,
-    resource_group_name="RG-eg")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const hybridConnection = new azurerm.relay.latest.HybridConnection("hybridConnection", {
-    hybridConnectionName: "sdk-Relay-Hybrid-01",
-    namespaceName: "sdk-RelayNamespace-01",
-    requiresClientAuthorization: true,
-    resourceGroupName: "RG-eg",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a HybridConnection Resource {#create}
@@ -753,7 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#listener_count_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of listeners for this hybrid connection. Note that min : 1 and max:25 are supported.{{% /md %}}</dd>
 

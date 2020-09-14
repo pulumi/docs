@@ -1043,8 +1043,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linktype_python">
-<a href="#linktype_python" style="color: inherit; text-decoration: inherit;">link<wbr>Type</a>
+        <span id="link_type_python">
+<a href="#link_type_python" style="color: inherit; text-decoration: inherit;">link_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

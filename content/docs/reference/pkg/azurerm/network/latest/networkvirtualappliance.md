@@ -12,176 +12,6 @@ meta_desc: "Explore the NetworkVirtualAppliance resource of the network/latest m
 
 NetworkVirtualAppliance Resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create NetworkVirtualAppliance
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var networkVirtualAppliance = new AzureRM.Network.Latest.NetworkVirtualAppliance("networkVirtualAppliance", new AzureRM.Network.Latest.NetworkVirtualApplianceArgs
-        {
-            BootStrapConfigurationBlobs = 
-            {
-                "https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrbootstrapconfig",
-            },
-            CloudInitConfigurationBlobs = 
-            {
-                "https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig",
-            },
-            Identity = new AzureRM.Network.Latest.Inputs.ManagedServiceIdentityArgs
-            {
-                Type = "UserAssigned",
-            },
-            Location = "West US",
-            NetworkVirtualApplianceName = "nva",
-            NvaSku = new AzureRM.Network.Latest.Inputs.VirtualApplianceSkuPropertiesArgs
-            {
-                BundledScaleUnit = "1",
-                MarketPlaceVersion = "12.1",
-                Vendor = "Cisco SDWAN",
-            },
-            ResourceGroupName = "rg1",
-            Tags = 
-            {
-                { "key1", "value1" },
-            },
-            VirtualApplianceAsn = 10000,
-            VirtualHub = new AzureRM.Network.Latest.Inputs.SubResourceArgs
-            {
-                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewNetworkVirtualAppliance(ctx, "networkVirtualAppliance", &network.NetworkVirtualApplianceArgs{
-			BootStrapConfigurationBlobs: pulumi.StringArray{
-				pulumi.String("https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrbootstrapconfig"),
-			},
-			CloudInitConfigurationBlobs: pulumi.StringArray{
-				pulumi.String("https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig"),
-			},
-			Identity: &network.ManagedServiceIdentityArgs{
-				Type: pulumi.String("UserAssigned"),
-			},
-			Location:                    pulumi.String("West US"),
-			NetworkVirtualApplianceName: pulumi.String("nva"),
-			NvaSku: &network.VirtualApplianceSkuPropertiesArgs{
-				BundledScaleUnit:   pulumi.String("1"),
-				MarketPlaceVersion: pulumi.String("12.1"),
-				Vendor:             pulumi.String("Cisco SDWAN"),
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			Tags: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-			},
-			VirtualApplianceAsn: pulumi.Int(10000),
-			VirtualHub: &network.SubResourceArgs{
-				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-network_virtual_appliance = azurerm.network.latest.NetworkVirtualAppliance("networkVirtualAppliance",
-    boot_strap_configuration_blobs=["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrbootstrapconfig"],
-    cloud_init_configuration_blobs=["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig"],
-    identity={
-        "type": "UserAssigned",
-    },
-    location="West US",
-    network_virtual_appliance_name="nva",
-    nva_sku={
-        "bundledScaleUnit": "1",
-        "marketPlaceVersion": "12.1",
-        "vendor": "Cisco SDWAN",
-    },
-    resource_group_name="rg1",
-    tags={
-        "key1": "value1",
-    },
-    virtual_appliance_asn=10000,
-    virtual_hub={
-        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const networkVirtualAppliance = new azurerm.network.latest.NetworkVirtualAppliance("networkVirtualAppliance", {
-    bootStrapConfigurationBlobs: ["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrbootstrapconfig"],
-    cloudInitConfigurationBlobs: ["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig"],
-    identity: {
-        type: "UserAssigned",
-    },
-    location: "West US",
-    networkVirtualApplianceName: "nva",
-    nvaSku: {
-        bundledScaleUnit: "1",
-        marketPlaceVersion: "12.1",
-        vendor: "Cisco SDWAN",
-    },
-    resourceGroupName: "rg1",
-    tags: {
-        key1: "value1",
-    },
-    virtualApplianceAsn: 10000,
-    virtualHub: {
-        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a NetworkVirtualAppliance Resource {#create}
@@ -193,7 +23,7 @@ const networkVirtualAppliance = new azurerm.network.latest.NetworkVirtualApplian
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/network/latest/#pulumi_azurerm.network/latest.NetworkVirtualAppliance">NetworkVirtualAppliance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">boot_strap_configuration_blobs</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">cloud_init_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_init_configuration_blobs</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedServiceIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_virtual_appliance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nva_sku</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualApplianceSkuProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_appliance_asn</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/network/latest/#pulumi_azurerm.network/latest.NetworkVirtualAppliance">NetworkVirtualAppliance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">boot_strap_configuration_blobs</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">cloud_init_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_init_configuration_blobs</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedServiceIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_virtual_appliance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nva_sku</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualApplianceSkuProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_appliance_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -852,7 +682,7 @@ The NetworkVirtualAppliance resource accepts the following [input]({{< relref "/
 <a href="#virtual_appliance_asn_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>appliance_<wbr>asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}VirtualAppliance ASN.{{% /md %}}</dd>
 

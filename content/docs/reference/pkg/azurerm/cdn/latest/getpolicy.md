@@ -1123,7 +1123,7 @@ The following output properties are available:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Defines in what order this rule be evaluated in the overall list of custom rules{{% /md %}}</dd>
 
@@ -1707,7 +1707,7 @@ The following output properties are available:
 <a href="#anomalyscore_python" style="color: inherit; text-decoration: inherit;">anomaly<wbr>Score</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Verizon only : If the rule set supports anomaly detection mode, this describes the threshold for blocking requests.{{% /md %}}</dd>
 
@@ -2219,7 +2219,7 @@ The following output properties are available:
 <a href="#default_custom_block_response_status_code_python" style="color: inherit; text-decoration: inherit;">default_<wbr>custom_<wbr>block_<wbr>response_<wbr>status_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If the action type is block, this field defines the default customer overridable http response status code.{{% /md %}}</dd>
 
@@ -2631,7 +2631,7 @@ The following output properties are available:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Defines in what order this rule be evaluated in the overall list of custom rules{{% /md %}}</dd>
 
@@ -2641,7 +2641,7 @@ The following output properties are available:
 <a href="#ratelimitdurationinminutes_python" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Duration<wbr>In<wbr>Minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Defines rate limit duration. Default is 1 minute.{{% /md %}}</dd>
 
@@ -2651,7 +2651,7 @@ The following output properties are available:
 <a href="#ratelimitthreshold_python" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Defines rate limit threshold.{{% /md %}}</dd>
 

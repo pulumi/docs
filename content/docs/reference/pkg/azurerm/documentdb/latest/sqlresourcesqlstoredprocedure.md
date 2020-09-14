@@ -12,123 +12,6 @@ meta_desc: "Explore the SqlResourceSqlStoredProcedure resource of the documentdb
 
 An Azure Cosmos DB storedProcedure.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### CosmosDBSqlStoredProcedureCreateUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var sqlResourceSqlStoredProcedure = new AzureRM.DocumentDB.Latest.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure", new AzureRM.DocumentDB.Latest.SqlResourceSqlStoredProcedureArgs
-        {
-            AccountName = "ddb1",
-            ContainerName = "containerName",
-            DatabaseName = "databaseName",
-            Options = ,
-            Resource = new AzureRM.DocumentDB.Latest.Inputs.SqlStoredProcedureResourceArgs
-            {
-                Body = "body",
-                Id = "storedProcedureName",
-            },
-            ResourceGroupName = "rg1",
-            StoredProcedureName = "storedProcedureName",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/documentdb/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewSqlResourceSqlStoredProcedure(ctx, "sqlResourceSqlStoredProcedure", &documentdb.SqlResourceSqlStoredProcedureArgs{
-			AccountName:   pulumi.String("ddb1"),
-			ContainerName: pulumi.String("containerName"),
-			DatabaseName:  pulumi.String("databaseName"),
-			Options:       nil,
-			Resource: &documentdb.SqlStoredProcedureResourceArgs{
-				Body: pulumi.String("body"),
-				Id:   pulumi.String("storedProcedureName"),
-			},
-			ResourceGroupName:   pulumi.String("rg1"),
-			StoredProcedureName: pulumi.String("storedProcedureName"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-sql_resource_sql_stored_procedure = azurerm.documentdb.latest.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure",
-    account_name="ddb1",
-    container_name="containerName",
-    database_name="databaseName",
-    options={},
-    resource={
-        "body": "body",
-        "id": "storedProcedureName",
-    },
-    resource_group_name="rg1",
-    stored_procedure_name="storedProcedureName")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const sqlResourceSqlStoredProcedure = new azurerm.documentdb.latest.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure", {
-    accountName: "ddb1",
-    containerName: "containerName",
-    databaseName: "databaseName",
-    options: {},
-    resource: {
-        body: "body",
-        id: "storedProcedureName",
-    },
-    resourceGroupName: "rg1",
-    storedProcedureName: "storedProcedureName",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a SqlResourceSqlStoredProcedure Resource {#create}
@@ -943,7 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
 
@@ -1069,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd>
 

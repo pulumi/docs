@@ -979,7 +979,7 @@ The following output properties are available:
 <a href="#amount_of_ram_python" style="color: inherit; text-decoration: inherit;">amount_<wbr>of_<wbr>ram</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of memory{{% /md %}}</dd>
 
@@ -1059,7 +1059,7 @@ The following output properties are available:
 <a href="#number_of_cores_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>cores</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of CPU cores{{% /md %}}</dd>
 
@@ -2502,7 +2502,7 @@ The following output properties are available:
     <dt class="property-required"
             title="Required">
         <span id="controllerid_python">
-<a href="#controllerid_python" style="color: inherit; text-decoration: inherit;">controller<wbr>Id</a>
+<a href="#controllerid_python" style="color: inherit; text-decoration: inherit;">controller<wbr>ID</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2525,7 +2525,7 @@ The following output properties are available:
 <a href="#totalsize_python" style="color: inherit; text-decoration: inherit;">total<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Disk's total size{{% /md %}}</dd>
 

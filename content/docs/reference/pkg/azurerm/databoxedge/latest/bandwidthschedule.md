@@ -12,123 +12,6 @@ meta_desc: "Explore the BandwidthSchedule resource of the databoxedge/latest mod
 
 The bandwidth schedule details.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### BandwidthSchedulePut
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var bandwidthSchedule = new AzureRM.DataBoxEdge.Latest.BandwidthSchedule("bandwidthSchedule", new AzureRM.DataBoxEdge.Latest.BandwidthScheduleArgs
-        {
-            Days = 
-            {
-                "Sunday",
-                "Monday",
-            },
-            DeviceName = "testedgedevice",
-            Name = "bandwidth-1",
-            RateInMbps = 100,
-            ResourceGroupName = "GroupForEdgeAutomation",
-            Start = "0:0:0",
-            Stop = "13:59:0",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	databoxedge "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/databoxedge/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := databoxedge.NewBandwidthSchedule(ctx, "bandwidthSchedule", &databoxedge.BandwidthScheduleArgs{
-			Days: pulumi.StringArray{
-				pulumi.String("Sunday"),
-				pulumi.String("Monday"),
-			},
-			DeviceName:        pulumi.String("testedgedevice"),
-			Name:              pulumi.String("bandwidth-1"),
-			RateInMbps:        pulumi.Int(100),
-			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
-			Start:             pulumi.String("0:0:0"),
-			Stop:              pulumi.String("13:59:0"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-bandwidth_schedule = azurerm.databoxedge.latest.BandwidthSchedule("bandwidthSchedule",
-    days=[
-        "Sunday",
-        "Monday",
-    ],
-    device_name="testedgedevice",
-    name="bandwidth-1",
-    rate_in_mbps=100,
-    resource_group_name="GroupForEdgeAutomation",
-    start="0:0:0",
-    stop="13:59:0")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const bandwidthSchedule = new azurerm.databoxedge.latest.BandwidthSchedule("bandwidthSchedule", {
-    days: [
-        "Sunday",
-        "Monday",
-    ],
-    deviceName: "testedgedevice",
-    name: "bandwidth-1",
-    rateInMbps: 100,
-    resourceGroupName: "GroupForEdgeAutomation",
-    start: "0:0:0",
-    stop: "13:59:0",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a BandwidthSchedule Resource {#create}
@@ -140,7 +23,7 @@ const bandwidthSchedule = new azurerm.databoxedge.latest.BandwidthSchedule("band
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/databoxedge/latest/#pulumi_azurerm.databoxedge/latest.BandwidthSchedule">BandwidthSchedule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">days</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rate_in_mbps</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stop</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/databoxedge/latest/#pulumi_azurerm.databoxedge/latest.BandwidthSchedule">BandwidthSchedule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">days</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rate_in_mbps</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stop</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -579,7 +462,7 @@ The BandwidthSchedule resource accepts the following [input]({{< relref "/docs/i
 <a href="#rate_in_mbps_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>in_<wbr>mbps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The bandwidth rate in Mbps.{{% /md %}}</dd>
 

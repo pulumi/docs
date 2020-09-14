@@ -12,98 +12,6 @@ meta_desc: "Explore the DedicatedCloudService resource of the vmwarecloudsimple/
 
 Dedicated cloud service model
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### CreateDedicatedCloudService
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var dedicatedCloudService = new AzureRM.VMwareCloudSimple.Latest.DedicatedCloudService("dedicatedCloudService", new AzureRM.VMwareCloudSimple.Latest.DedicatedCloudServiceArgs
-        {
-            DedicatedCloudServiceName = "myService",
-            GatewaySubnet = "10.0.0.0",
-            Location = "westus",
-            ResourceGroupName = "myResourceGroup",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	vmwarecloudsimple "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/vmwarecloudsimple/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := vmwarecloudsimple.NewDedicatedCloudService(ctx, "dedicatedCloudService", &vmwarecloudsimple.DedicatedCloudServiceArgs{
-			DedicatedCloudServiceName: pulumi.String("myService"),
-			GatewaySubnet:             pulumi.String("10.0.0.0"),
-			Location:                  pulumi.String("westus"),
-			ResourceGroupName:         pulumi.String("myResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-dedicated_cloud_service = azurerm.vmwarecloudsimple.latest.DedicatedCloudService("dedicatedCloudService",
-    dedicated_cloud_service_name="myService",
-    gateway_subnet="10.0.0.0",
-    location="westus",
-    resource_group_name="myResourceGroup")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const dedicatedCloudService = new azurerm.vmwarecloudsimple.latest.DedicatedCloudService("dedicatedCloudService", {
-    dedicatedCloudServiceName: "myService",
-    gatewaySubnet: "10.0.0.0",
-    location: "westus",
-    resourceGroupName: "myResourceGroup",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a DedicatedCloudService Resource {#create}
@@ -763,7 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}total nodes purchased{{% /md %}}</dd>
 

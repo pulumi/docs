@@ -12,177 +12,6 @@ meta_desc: "Explore the DatabaseAccountMongoDBCollection resource of the documen
 
 An Azure Cosmos DB MongoDB collection.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### CosmosDBMongoDBCollectionCreateUpdate
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var databaseAccountMongoDBCollection = new AzureRM.DocumentDB.Latest.DatabaseAccountMongoDBCollection("databaseAccountMongoDBCollection", new AzureRM.DocumentDB.Latest.DatabaseAccountMongoDBCollectionArgs
-        {
-            AccountName = "ddb1",
-            CollectionName = "collectionName",
-            DatabaseName = "databaseName",
-            Options = ,
-            Resource = new AzureRM.DocumentDB.Latest.Inputs.MongoDBCollectionResourceArgs
-            {
-                Id = "testcoll",
-                Indexes = 
-                {
-                    new AzureRM.DocumentDB.Latest.Inputs.MongoIndexArgs
-                    {
-                        Key = new AzureRM.DocumentDB.Latest.Inputs.MongoIndexKeysArgs
-                        {
-                            Keys = 
-                            {
-                                "testKey",
-                            },
-                        },
-                        Options = new AzureRM.DocumentDB.Latest.Inputs.MongoIndexOptionsArgs
-                        {
-                            ExpireAfterSeconds = 100,
-                            Unique = true,
-                        },
-                    },
-                },
-                ShardKey = 
-                {
-                    { "testKey", "Hash" },
-                },
-            },
-            ResourceGroupName = "rg1",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/documentdb/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewDatabaseAccountMongoDBCollection(ctx, "databaseAccountMongoDBCollection", &documentdb.DatabaseAccountMongoDBCollectionArgs{
-			AccountName:    pulumi.String("ddb1"),
-			CollectionName: pulumi.String("collectionName"),
-			DatabaseName:   pulumi.String("databaseName"),
-			Options:        nil,
-			Resource: &documentdb.MongoDBCollectionResourceArgs{
-				Id: pulumi.String("testcoll"),
-				Indexes: documentdb.MongoIndexArray{
-					&documentdb.MongoIndexArgs{
-						Key: &documentdb.MongoIndexKeysArgs{
-							Keys: pulumi.StringArray{
-								pulumi.String("testKey"),
-							},
-						},
-						Options: &documentdb.MongoIndexOptionsArgs{
-							ExpireAfterSeconds: pulumi.Int(100),
-							Unique:             pulumi.Bool(true),
-						},
-					},
-				},
-				ShardKey: pulumi.StringMap{
-					"testKey": pulumi.String("Hash"),
-				},
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-database_account_mongo_db_collection = azurerm.documentdb.latest.DatabaseAccountMongoDBCollection("databaseAccountMongoDBCollection",
-    account_name="ddb1",
-    collection_name="collectionName",
-    database_name="databaseName",
-    options={},
-    resource={
-        "id": "testcoll",
-        "indexes": [{
-            "key": {
-                "keys": ["testKey"],
-            },
-            "options": {
-                "expireAfterSeconds": 100,
-                "unique": True,
-            },
-        }],
-        "shardKey": {
-            "testKey": "Hash",
-        },
-    },
-    resource_group_name="rg1")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const databaseAccountMongoDBCollection = new azurerm.documentdb.latest.DatabaseAccountMongoDBCollection("databaseAccountMongoDBCollection", {
-    accountName: "ddb1",
-    collectionName: "collectionName",
-    databaseName: "databaseName",
-    options: {},
-    resource: {
-        id: "testcoll",
-        indexes: [{
-            key: {
-                keys: ["testKey"],
-            },
-            options: {
-                expireAfterSeconds: 100,
-                unique: true,
-            },
-        }],
-        shardKey: {
-            testKey: "Hash",
-        },
-    },
-    resourceGroupName: "rg1",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a DatabaseAccountMongoDBCollection Resource {#create}
@@ -1137,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analytical_storage_ttl_python" style="color: inherit; text-decoration: inherit;">analytical_<wbr>storage_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd>
 
@@ -1571,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expireafterseconds_python" style="color: inherit; text-decoration: inherit;">expire<wbr>After<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Expire after seconds{{% /md %}}</dd>
 
@@ -1697,7 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expireafterseconds_python" style="color: inherit; text-decoration: inherit;">expire<wbr>After<wbr>Seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Expire after seconds{{% /md %}}</dd>
 

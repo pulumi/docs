@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The LUN.{{% /md %}}</dd>
 
@@ -911,8 +911,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="operatingsystem_python">
-<a href="#operatingsystem_python" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
+        <span id="operating_system_python">
+<a href="#operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

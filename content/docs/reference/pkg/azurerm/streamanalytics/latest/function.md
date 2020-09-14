@@ -12,280 +12,6 @@ meta_desc: "Explore the Function resource of the streamanalytics/latest module, 
 
 A function object, containing all information associated with the named function. All functions are contained under a streaming job.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create a JavaScript function
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var function = new AzureRM.StreamAnalytics.Latest.Function("function", new AzureRM.StreamAnalytics.Latest.FunctionArgs
-        {
-            FunctionName = "function8197",
-            JobName = "sj8653",
-            Properties = new AzureRM.StreamAnalytics.Latest.Inputs.ScalarFunctionPropertiesArgs
-            {
-                Binding = 
-                {
-                    { "properties", 
-                    {
-                        { "script", "function (x, y) { return x + y; }" },
-                    } },
-                    { "type", "Microsoft.StreamAnalytics/JavascriptUdf" },
-                },
-                Inputs = 
-                {
-                    new AzureRM.StreamAnalytics.Latest.Inputs.FunctionInputArgs
-                    {
-                        DataType = "Any",
-                    },
-                },
-                Output = new AzureRM.StreamAnalytics.Latest.Inputs.FunctionOutputArgs
-                {
-                    DataType = "Any",
-                },
-            },
-            ResourceGroupName = "sjrg1637",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-function = azurerm.streamanalytics.latest.Function("function",
-    function_name="function8197",
-    job_name="sj8653",
-    properties={
-        "binding": {
-            "properties": {
-                "script": "function (x, y) { return x + y; }",
-            },
-            "type": "Microsoft.StreamAnalytics/JavascriptUdf",
-        },
-        "inputs": [{
-            "dataType": "Any",
-        }],
-        "output": {
-            "dataType": "Any",
-        },
-    },
-    resource_group_name="sjrg1637")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const _function = new azurerm.streamanalytics.latest.Function("function", {
-    functionName: "function8197",
-    jobName: "sj8653",
-    properties: {
-        binding: {
-            properties: {
-                script: "function (x, y) { return x + y; }",
-            },
-            type: "Microsoft.StreamAnalytics/JavascriptUdf",
-        },
-        inputs: [{
-            dataType: "Any",
-        }],
-        output: {
-            dataType: "Any",
-        },
-    },
-    resourceGroupName: "sjrg1637",
-});
-
-```
-
-{{% /example %}}
-
-### Create an Azure ML function
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var function = new AzureRM.StreamAnalytics.Latest.Function("function", new AzureRM.StreamAnalytics.Latest.FunctionArgs
-        {
-            FunctionName = "function588",
-            JobName = "sj9093",
-            Properties = new AzureRM.StreamAnalytics.Latest.Inputs.ScalarFunctionPropertiesArgs
-            {
-                Binding = 
-                {
-                    { "properties", 
-                    {
-                        { "apiKey", "someApiKey==" },
-                        { "batchSize", 1000 },
-                        { "endpoint", "someAzureMLEndpointURL" },
-                        { "inputs", 
-                        {
-                            { "columnNames", 
-                            {
-                                
-                                {
-                                    { "dataType", "string" },
-                                    { "mapTo", 0 },
-                                    { "name", "tweet" },
-                                },
-                            } },
-                            { "name", "input1" },
-                        } },
-                        { "outputs", 
-                        {
-                            
-                            {
-                                { "dataType", "string" },
-                                { "name", "Sentiment" },
-                            },
-                        } },
-                    } },
-                    { "type", "Microsoft.MachineLearning/WebService" },
-                },
-                Inputs = 
-                {
-                    new AzureRM.StreamAnalytics.Latest.Inputs.FunctionInputArgs
-                    {
-                        DataType = "nvarchar(max)",
-                    },
-                },
-                Output = new AzureRM.StreamAnalytics.Latest.Inputs.FunctionOutputArgs
-                {
-                    DataType = "nvarchar(max)",
-                },
-            },
-            ResourceGroupName = "sjrg7",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-function = azurerm.streamanalytics.latest.Function("function",
-    function_name="function588",
-    job_name="sj9093",
-    properties={
-        "binding": {
-            "properties": {
-                "apiKey": "someApiKey==",
-                "batchSize": 1000,
-                "endpoint": "someAzureMLEndpointURL",
-                "inputs": {
-                    "columnNames": [{
-                        "dataType": "string",
-                        "mapTo": 0,
-                        "name": "tweet",
-                    }],
-                    "name": "input1",
-                },
-                "outputs": [{
-                    "dataType": "string",
-                    "name": "Sentiment",
-                }],
-            },
-            "type": "Microsoft.MachineLearning/WebService",
-        },
-        "inputs": [{
-            "dataType": "nvarchar(max)",
-        }],
-        "output": {
-            "dataType": "nvarchar(max)",
-        },
-    },
-    resource_group_name="sjrg7")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const _function = new azurerm.streamanalytics.latest.Function("function", {
-    functionName: "function588",
-    jobName: "sj9093",
-    properties: {
-        binding: {
-            properties: {
-                apiKey: "someApiKey==",
-                batchSize: 1000,
-                endpoint: "someAzureMLEndpointURL",
-                inputs: {
-                    columnNames: [{
-                        dataType: "string",
-                        mapTo: 0,
-                        name: "tweet",
-                    }],
-                    name: "input1",
-                },
-                outputs: [{
-                    dataType: "string",
-                    name: "Sentiment",
-                }],
-            },
-            type: "Microsoft.MachineLearning/WebService",
-        },
-        inputs: [{
-            dataType: "nvarchar(max)",
-        }],
-        output: {
-            dataType: "nvarchar(max)",
-        },
-    },
-    resourceGroupName: "sjrg7",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Function Resource {#create}
@@ -1030,7 +756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd>
 
@@ -1276,7 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd>
 
@@ -1462,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mapto_python" style="color: inherit; text-decoration: inherit;">map<wbr>To</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd>
 
@@ -1628,7 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mapto_python" style="color: inherit; text-decoration: inherit;">map<wbr>To</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd>
 

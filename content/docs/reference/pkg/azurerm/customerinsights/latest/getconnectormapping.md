@@ -1071,7 +1071,7 @@ The following output properties are available:
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The interval of the given frequency to use.{{% /md %}}</dd>
 
@@ -1333,7 +1333,7 @@ The following output properties are available:
 <a href="#error_limit_python" style="color: inherit; text-decoration: inherit;">error_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The error limit allowed while importing data.{{% /md %}}</dd>
 
@@ -2157,8 +2157,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="columnname_python">
-<a href="#columnname_python" style="color: inherit; text-decoration: inherit;">column<wbr>Name</a>
+        <span id="column_name_python">
+<a href="#column_name_python" style="color: inherit; text-decoration: inherit;">column_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

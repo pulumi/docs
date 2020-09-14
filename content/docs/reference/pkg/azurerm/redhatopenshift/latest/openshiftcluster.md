@@ -12,252 +12,6 @@ meta_desc: "Explore the OpenShiftCluster resource of the redhatopenshift/latest 
 
 OpenShiftCluster represents an Azure Red Hat OpenShift cluster.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Creates or updates a OpenShift cluster with the specified subscription, resource group and resource name.
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var openShiftCluster = new AzureRM.RedHatOpenShift.Latest.OpenShiftCluster("openShiftCluster", new AzureRM.RedHatOpenShift.Latest.OpenShiftClusterArgs
-        {
-            ApiserverProfile = new AzureRM.RedHatOpenShift.Latest.Inputs.APIServerProfileArgs
-            {
-                Visibility = "Public",
-            },
-            ClusterProfile = new AzureRM.RedHatOpenShift.Latest.Inputs.ClusterProfileArgs
-            {
-                Domain = "cluster.location.aroapp.io",
-                PullSecret = "{\"auths\":{\"registry.connect.redhat.com\":{\"auth\":\"\"},\"registry.redhat.io\":{\"auth\":\"\"}}}",
-                ResourceGroupId = "/subscriptions/subscriptionId/resourceGroups/clusterResourceGroup",
-            },
-            ConsoleProfile = ,
-            IngressProfiles = 
-            {
-                new AzureRM.RedHatOpenShift.Latest.Inputs.IngressProfileArgs
-                {
-                    Name = "default",
-                    Visibility = "Public",
-                },
-            },
-            Location = "location",
-            MasterProfile = new AzureRM.RedHatOpenShift.Latest.Inputs.MasterProfileArgs
-            {
-                SubnetId = "/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/master",
-                VmSize = "Standard_D8s_v3",
-            },
-            NetworkProfile = new AzureRM.RedHatOpenShift.Latest.Inputs.NetworkProfileArgs
-            {
-                PodCidr = "10.128.0.0/14",
-                ServiceCidr = "172.30.0.0/16",
-            },
-            ResourceGroupName = "resourceGroup",
-            ResourceName = "resourceName",
-            ServicePrincipalProfile = new AzureRM.RedHatOpenShift.Latest.Inputs.ServicePrincipalProfileArgs
-            {
-                ClientId = "clientId",
-                ClientSecret = "clientSecret",
-            },
-            Tags = 
-            {
-                { "key", "value" },
-            },
-            WorkerProfiles = 
-            {
-                new AzureRM.RedHatOpenShift.Latest.Inputs.WorkerProfileArgs
-                {
-                    Count = 3,
-                    DiskSizeGB = 128,
-                    Name = "worker",
-                    SubnetId = "/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/worker",
-                    VmSize = "Standard_D2s_v3",
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	redhatopenshift "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/redhatopenshift/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := redhatopenshift.NewOpenShiftCluster(ctx, "openShiftCluster", &redhatopenshift.OpenShiftClusterArgs{
-			ApiserverProfile: &redhatopenshift.APIServerProfileArgs{
-				Visibility: pulumi.String("Public"),
-			},
-			ClusterProfile: &redhatopenshift.ClusterProfileArgs{
-				Domain:          pulumi.String("cluster.location.aroapp.io"),
-				PullSecret:      pulumi.String("{\"auths\":{\"registry.connect.redhat.com\":{\"auth\":\"\"},\"registry.redhat.io\":{\"auth\":\"\"}}}"),
-				ResourceGroupId: pulumi.String("/subscriptions/subscriptionId/resourceGroups/clusterResourceGroup"),
-			},
-			ConsoleProfile: nil,
-			IngressProfiles: redhatopenshift.IngressProfileArray{
-				&redhatopenshift.IngressProfileArgs{
-					Name:       pulumi.String("default"),
-					Visibility: pulumi.String("Public"),
-				},
-			},
-			Location: pulumi.String("location"),
-			MasterProfile: &redhatopenshift.MasterProfileArgs{
-				SubnetId: pulumi.String("/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/master"),
-				VmSize:   pulumi.String("Standard_D8s_v3"),
-			},
-			NetworkProfile: &redhatopenshift.NetworkProfileArgs{
-				PodCidr:     pulumi.String("10.128.0.0/14"),
-				ServiceCidr: pulumi.String("172.30.0.0/16"),
-			},
-			ResourceGroupName: pulumi.String("resourceGroup"),
-			ResourceName:      pulumi.String("resourceName"),
-			ServicePrincipalProfile: &redhatopenshift.ServicePrincipalProfileArgs{
-				ClientId:     pulumi.String("clientId"),
-				ClientSecret: pulumi.String("clientSecret"),
-			},
-			Tags: pulumi.StringMap{
-				"key": pulumi.String("value"),
-			},
-			WorkerProfiles: redhatopenshift.WorkerProfileArray{
-				&redhatopenshift.WorkerProfileArgs{
-					Count:      pulumi.Int(3),
-					DiskSizeGB: pulumi.Int(128),
-					Name:       pulumi.String("worker"),
-					SubnetId:   pulumi.String("/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/worker"),
-					VmSize:     pulumi.String("Standard_D2s_v3"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-open_shift_cluster = azurerm.redhatopenshift.latest.OpenShiftCluster("openShiftCluster",
-    apiserver_profile={
-        "visibility": "Public",
-    },
-    cluster_profile={
-        "domain": "cluster.location.aroapp.io",
-        "pullSecret": "{\"auths\":{\"registry.connect.redhat.com\":{\"auth\":\"\"},\"registry.redhat.io\":{\"auth\":\"\"}}}",
-        "resourceGroupId": "/subscriptions/subscriptionId/resourceGroups/clusterResourceGroup",
-    },
-    console_profile={},
-    ingress_profiles=[{
-        "name": "default",
-        "visibility": "Public",
-    }],
-    location="location",
-    master_profile={
-        "subnetId": "/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/master",
-        "vmSize": "Standard_D8s_v3",
-    },
-    network_profile={
-        "podCidr": "10.128.0.0/14",
-        "serviceCidr": "172.30.0.0/16",
-    },
-    resource_group_name="resourceGroup",
-    resource_name="resourceName",
-    service_principal_profile={
-        "clientId": "clientId",
-        "clientSecret": "clientSecret",
-    },
-    tags={
-        "key": "value",
-    },
-    worker_profiles=[{
-        "count": 3,
-        "diskSizeGB": 128,
-        "name": "worker",
-        "subnetId": "/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/worker",
-        "vmSize": "Standard_D2s_v3",
-    }])
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const openShiftCluster = new azurerm.redhatopenshift.latest.OpenShiftCluster("openShiftCluster", {
-    apiserverProfile: {
-        visibility: "Public",
-    },
-    clusterProfile: {
-        domain: "cluster.location.aroapp.io",
-        pullSecret: "{\"auths\":{\"registry.connect.redhat.com\":{\"auth\":\"\"},\"registry.redhat.io\":{\"auth\":\"\"}}}",
-        resourceGroupId: "/subscriptions/subscriptionId/resourceGroups/clusterResourceGroup",
-    },
-    consoleProfile: {},
-    ingressProfiles: [{
-        name: "default",
-        visibility: "Public",
-    }],
-    location: "location",
-    masterProfile: {
-        subnetId: "/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/master",
-        vmSize: "Standard_D8s_v3",
-    },
-    networkProfile: {
-        podCidr: "10.128.0.0/14",
-        serviceCidr: "172.30.0.0/16",
-    },
-    resourceGroupName: "resourceGroup",
-    resourceName: "resourceName",
-    servicePrincipalProfile: {
-        clientId: "clientId",
-        clientSecret: "clientSecret",
-    },
-    tags: {
-        key: "value",
-    },
-    workerProfiles: [{
-        count: 3,
-        diskSizeGB: 128,
-        name: "worker",
-        subnetId: "/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/worker",
-        vmSize: "Standard_D2s_v3",
-    }],
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a OpenShiftCluster Resource {#create}
@@ -3356,7 +3110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of worker VMs.  Must be between 3 and 20 (immutable).{{% /md %}}</dd>
 
@@ -3366,7 +3120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The disk size of the worker VMs.  Must be 128 or greater (immutable).{{% /md %}}</dd>
 
@@ -3602,7 +3356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of worker VMs.  Must be between 3 and 20 (immutable).{{% /md %}}</dd>
 
@@ -3612,7 +3366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The disk size of the worker VMs.  Must be 128 or greater (immutable).{{% /md %}}</dd>
 

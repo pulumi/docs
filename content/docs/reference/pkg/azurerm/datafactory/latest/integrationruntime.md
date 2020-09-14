@@ -12,94 +12,6 @@ meta_desc: "Explore the IntegrationRuntime resource of the datafactory/latest mo
 
 Integration runtime resource type.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### IntegrationRuntimes_Create
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var integrationRuntime = new AzureRM.DataFactory.Latest.IntegrationRuntime("integrationRuntime", new AzureRM.DataFactory.Latest.IntegrationRuntimeArgs
-        {
-            FactoryName = "exampleFactoryName",
-            IntegrationRuntimeName = "exampleIntegrationRuntime",
-            ResourceGroupName = "exampleResourceGroup",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	datafactory "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/datafactory/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datafactory.NewIntegrationRuntime(ctx, "integrationRuntime", &datafactory.IntegrationRuntimeArgs{
-			FactoryName:            pulumi.String("exampleFactoryName"),
-			IntegrationRuntimeName: pulumi.String("exampleIntegrationRuntime"),
-			ResourceGroupName:      pulumi.String("exampleResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-integration_runtime = azurerm.datafactory.latest.IntegrationRuntime("integrationRuntime",
-    factory_name="exampleFactoryName",
-    integration_runtime_name="exampleIntegrationRuntime",
-    resource_group_name="exampleResourceGroup")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const integrationRuntime = new azurerm.datafactory.latest.IntegrationRuntime("integrationRuntime", {
-    factoryName: "exampleFactoryName",
-    integrationRuntimeName: "exampleIntegrationRuntime",
-    resourceGroupName: "exampleResourceGroup",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a IntegrationRuntime Resource {#create}
@@ -2516,14 +2428,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxparallelexecutionspernode_python" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum parallel executions count per node for managed integration runtime.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodesize_python">
-<a href="#nodesize_python" style="color: inherit; text-decoration: inherit;">node<wbr>Size</a>
+        <span id="node_size_python">
+<a href="#node_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2536,7 +2448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numberofnodes_python" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The required number of nodes for managed integration runtime.{{% /md %}}</dd>
 
@@ -2802,14 +2714,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxparallelexecutionspernode_python" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum parallel executions count per node for managed integration runtime.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodesize_python">
-<a href="#nodesize_python" style="color: inherit; text-decoration: inherit;">node<wbr>Size</a>
+        <span id="node_size_python">
+<a href="#node_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2822,7 +2734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numberofnodes_python" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The required number of nodes for managed integration runtime.{{% /md %}}</dd>
 
@@ -3226,8 +3138,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computetype_python">
-<a href="#computetype_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Type</a>
+        <span id="compute_type_python">
+<a href="#compute_type_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3240,7 +3152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corecount_python" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.{{% /md %}}</dd>
 
@@ -3250,7 +3162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_to_live_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>live</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job.{{% /md %}}</dd>
 
@@ -3392,8 +3304,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computetype_python">
-<a href="#computetype_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Type</a>
+        <span id="compute_type_python">
+<a href="#compute_type_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3406,7 +3318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corecount_python" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.{{% /md %}}</dd>
 
@@ -3416,7 +3328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_to_live_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>live</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job.{{% /md %}}</dd>
 

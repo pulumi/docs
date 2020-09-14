@@ -867,8 +867,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningerrors_python">
-<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
+        <span id="provisioning_errors_python">
+<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -1153,8 +1153,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="systemservices_python">
-<a href="#systemservices_python" style="color: inherit; text-decoration: inherit;">system<wbr>Services</a>
+        <span id="system_services_python">
+<a href="#system_services_python" style="color: inherit; text-decoration: inherit;">system_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemserviceresponse">List[System<wbr>Service<wbr>Response]</a></span>
@@ -1163,23 +1163,23 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="agentcount_python">
-<a href="#agentcount_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Number of agents{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="agentvmsize_python">
-<a href="#agentvmsize_python" style="color: inherit; text-decoration: inherit;">agent<wbr>VMSize</a>
+<a href="#agentvmsize_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Vm<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Agent virtual machine size{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="agent_count_python">
+<a href="#agent_count_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of agents{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1193,8 +1193,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clusterfqdn_python">
-<a href="#clusterfqdn_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Fqdn</a>
+        <span id="cluster_fqdn_python">
+<a href="#cluster_fqdn_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>fqdn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1765,8 +1765,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningerrors_python">
-<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
+        <span id="provisioning_errors_python">
+<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -2255,7 +2255,7 @@ The following output properties are available:
 <a href="#current_node_count_python" style="color: inherit; text-decoration: inherit;">current_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of compute nodes currently assigned to the compute.{{% /md %}}</dd>
 
@@ -2285,7 +2285,7 @@ The following output properties are available:
 <a href="#target_node_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.{{% /md %}}</dd>
 
@@ -3115,8 +3115,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningerrors_python">
-<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
+        <span id="provisioning_errors_python">
+<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -3501,8 +3501,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="connectivityendpoints_python">
-<a href="#connectivityendpoints_python" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Endpoints</a>
+        <span id="connectivity_endpoints_python">
+<a href="#connectivity_endpoints_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstanceconnectivityendpointsresponse">Dict[Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response]</a></span>
@@ -3761,7 +3761,7 @@ The following output properties are available:
 <a href="#sshport_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Describes the port for connecting through SSH.{{% /md %}}</dd>
 
@@ -4103,8 +4103,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningerrors_python">
-<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
+        <span id="provisioning_errors_python">
+<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -4499,8 +4499,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningerrors_python">
-<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
+        <span id="provisioning_errors_python">
+<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -4991,8 +4991,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningerrors_python">
-<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
+        <span id="provisioning_errors_python">
+<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -5775,8 +5775,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningerrors_python">
-<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
+        <span id="provisioning_errors_python">
+<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -5995,7 +5995,7 @@ The following output properties are available:
 <a href="#sshport_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port open for ssh connections on the master node of the cluster.{{% /md %}}</dd>
 
@@ -6649,7 +6649,7 @@ The following output properties are available:
 <a href="#idle_node_count_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd>
 
@@ -6659,7 +6659,7 @@ The following output properties are available:
 <a href="#leaving_node_count_python" style="color: inherit; text-decoration: inherit;">leaving_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes which are leaving the amlCompute.{{% /md %}}</dd>
 
@@ -6669,7 +6669,7 @@ The following output properties are available:
 <a href="#preemptednodecount_python" style="color: inherit; text-decoration: inherit;">preempted<wbr>Node<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes which are in preempted state.{{% /md %}}</dd>
 
@@ -6679,7 +6679,7 @@ The following output properties are available:
 <a href="#preparing_node_count_python" style="color: inherit; text-decoration: inherit;">preparing_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd>
 
@@ -6689,7 +6689,7 @@ The following output properties are available:
 <a href="#running_node_count_python" style="color: inherit; text-decoration: inherit;">running_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd>
 
@@ -6699,7 +6699,7 @@ The following output properties are available:
 <a href="#unusable_node_count_python" style="color: inherit; text-decoration: inherit;">unusable_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd>
 
@@ -6927,21 +6927,21 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxnodecount_python">
-<a href="#maxnodecount_python" style="color: inherit; text-decoration: inherit;">max<wbr>Node<wbr>Count</a>
+        <span id="max_node_count_python">
+<a href="#max_node_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max number of nodes to use{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minnodecount_python">
-<a href="#minnodecount_python" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Count</a>
+        <span id="min_node_count_python">
+<a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Min number of nodes to use{{% /md %}}</dd>
 
@@ -7967,8 +7967,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningerrors_python">
-<a href="#provisioningerrors_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
+        <span id="provisioning_errors_python">
+<a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
@@ -8217,7 +8217,7 @@ The following output properties are available:
 <a href="#sshport_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port open for ssh connections.{{% /md %}}</dd>
 

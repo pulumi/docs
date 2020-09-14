@@ -12,442 +12,6 @@ meta_desc: "Explore the VirtualMachineImageTemplate resource of the virtualmachi
 
 Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create an Image Template for Linux.
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var virtualMachineImageTemplate = new AzureRM.VirtualMachineImages.Latest.VirtualMachineImageTemplate("virtualMachineImageTemplate", new AzureRM.VirtualMachineImages.Latest.VirtualMachineImageTemplateArgs
-        {
-            Customize = 
-            {
-                
-                {
-                    { "name", "Shell Customizer Example" },
-                    { "scriptUri", "https://example.com/path/to/script.sh" },
-                    { "type", "Shell" },
-                },
-            },
-            Distribute = 
-            {
-                
-                {
-                    { "artifactTags", 
-                    {
-                        { "tagName", "value" },
-                    } },
-                    { "imageId", "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1" },
-                    { "location", "1_location" },
-                    { "runOutputName", "image_it_pir_1" },
-                    { "type", "ManagedImage" },
-                },
-            },
-            Identity = new AzureRM.VirtualMachineImages.Latest.Inputs.ImageTemplateIdentityArgs
-            {
-                Type = "UserAssigned",
-            },
-            ImageTemplateName = "myImageTemplate",
-            Location = "westus",
-            ResourceGroupName = "myResourceGroup",
-            Source = 
-            {
-                { "imageId", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image" },
-                { "type", "ManagedImage" },
-            },
-            Tags = 
-            {
-                { "imagetemplate_tag1", "IT_T1" },
-                { "imagetemplate_tag2", "IT_T2" },
-            },
-            VmProfile = new AzureRM.VirtualMachineImages.Latest.Inputs.ImageTemplateVmProfileArgs
-            {
-                OsDiskSizeGB = 64,
-                VmSize = "Standard_D2s_v3",
-                VnetConfig = new AzureRM.VirtualMachineImages.Latest.Inputs.VirtualNetworkConfigArgs
-                {
-                    SubnetId = "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-virtual_machine_image_template = azurerm.virtualmachineimages.latest.VirtualMachineImageTemplate("virtualMachineImageTemplate",
-    customize=[{
-        "name": "Shell Customizer Example",
-        "scriptUri": "https://example.com/path/to/script.sh",
-        "type": "Shell",
-    }],
-    distribute=[{
-        "artifactTags": {
-            "tagName": "value",
-        },
-        "imageId": "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1",
-        "location": "1_location",
-        "runOutputName": "image_it_pir_1",
-        "type": "ManagedImage",
-    }],
-    identity={
-        "type": "UserAssigned",
-    },
-    image_template_name="myImageTemplate",
-    location="westus",
-    resource_group_name="myResourceGroup",
-    source={
-        "imageId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image",
-        "type": "ManagedImage",
-    },
-    tags={
-        "imagetemplate_tag1": "IT_T1",
-        "imagetemplate_tag2": "IT_T2",
-    },
-    vm_profile={
-        "osDiskSizeGB": 64,
-        "vmSize": "Standard_D2s_v3",
-        "vnetConfig": {
-            "subnetId": "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
-        },
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const virtualMachineImageTemplate = new azurerm.virtualmachineimages.latest.VirtualMachineImageTemplate("virtualMachineImageTemplate", {
-    customize: [{
-        name: "Shell Customizer Example",
-        scriptUri: "https://example.com/path/to/script.sh",
-        type: "Shell",
-    }],
-    distribute: [{
-        artifactTags: {
-            tagName: "value",
-        },
-        imageId: "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1",
-        location: "1_location",
-        runOutputName: "image_it_pir_1",
-        type: "ManagedImage",
-    }],
-    identity: {
-        type: "UserAssigned",
-    },
-    imageTemplateName: "myImageTemplate",
-    location: "westus",
-    resourceGroupName: "myResourceGroup",
-    source: {
-        imageId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image",
-        type: "ManagedImage",
-    },
-    tags: {
-        imagetemplate_tag1: "IT_T1",
-        imagetemplate_tag2: "IT_T2",
-    },
-    vmProfile: {
-        osDiskSizeGB: 64,
-        vmSize: "Standard_D2s_v3",
-        vnetConfig: {
-            subnetId: "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
-        },
-    },
-});
-
-```
-
-{{% /example %}}
-
-### Create an Image Template for Windows.
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var virtualMachineImageTemplate = new AzureRM.VirtualMachineImages.Latest.VirtualMachineImageTemplate("virtualMachineImageTemplate", new AzureRM.VirtualMachineImages.Latest.VirtualMachineImageTemplateArgs
-        {
-            Customize = 
-            {
-                
-                {
-                    { "inline", 
-                    {
-                        "Powershell command-1",
-                        "Powershell command-2",
-                        "Powershell command-3",
-                    } },
-                    { "name", "PowerShell (inline) Customizer Example" },
-                    { "type", "PowerShell" },
-                },
-                
-                {
-                    { "name", "PowerShell (script) Customizer Example" },
-                    { "scriptUri", "https://example.com/path/to/script.ps1" },
-                    { "type", "PowerShell" },
-                    { "validExitCodes", 
-                    {
-                        0,
-                        1,
-                    } },
-                },
-                
-                {
-                    { "name", "Restart Customizer Example" },
-                    { "restartCheckCommand", "powershell -command \"& {Write-Output 'restarted.'}\"" },
-                    { "restartCommand", "shutdown /f /r /t 0 /c \"packer restart\"" },
-                    { "restartTimeout", "10m" },
-                    { "type", "WindowsRestart" },
-                },
-                
-                {
-                    { "filters", 
-                    {
-                        "$_.BrowseOnly",
-                    } },
-                    { "name", "Windows Update Customizer Example" },
-                    { "searchCriteria", "BrowseOnly=0 and IsInstalled=0" },
-                    { "type", "WindowsUpdate" },
-                    { "updateLimit", 100 },
-                },
-            },
-            Distribute = 
-            {
-                
-                {
-                    { "artifactTags", 
-                    {
-                        { "tagName", "value" },
-                    } },
-                    { "imageId", "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1" },
-                    { "location", "1_location" },
-                    { "runOutputName", "image_it_pir_1" },
-                    { "type", "ManagedImage" },
-                },
-            },
-            Identity = new AzureRM.VirtualMachineImages.Latest.Inputs.ImageTemplateIdentityArgs
-            {
-                Type = "UserAssigned",
-            },
-            ImageTemplateName = "myImageTemplate",
-            Location = "westus",
-            ResourceGroupName = "myResourceGroup",
-            Source = 
-            {
-                { "imageId", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image" },
-                { "type", "ManagedImage" },
-            },
-            Tags = 
-            {
-                { "imagetemplate_tag1", "IT_T1" },
-                { "imagetemplate_tag2", "IT_T2" },
-            },
-            VmProfile = new AzureRM.VirtualMachineImages.Latest.Inputs.ImageTemplateVmProfileArgs
-            {
-                OsDiskSizeGB = 64,
-                VmSize = "Standard_D2s_v3",
-                VnetConfig = new AzureRM.VirtualMachineImages.Latest.Inputs.VirtualNetworkConfigArgs
-                {
-                    SubnetId = "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-virtual_machine_image_template = azurerm.virtualmachineimages.latest.VirtualMachineImageTemplate("virtualMachineImageTemplate",
-    customize=[
-        {
-            "inline": [
-                "Powershell command-1",
-                "Powershell command-2",
-                "Powershell command-3",
-            ],
-            "name": "PowerShell (inline) Customizer Example",
-            "type": "PowerShell",
-        },
-        {
-            "name": "PowerShell (script) Customizer Example",
-            "scriptUri": "https://example.com/path/to/script.ps1",
-            "type": "PowerShell",
-            "validExitCodes": [
-                0,
-                1,
-            ],
-        },
-        {
-            "name": "Restart Customizer Example",
-            "restartCheckCommand": "powershell -command \"& {Write-Output 'restarted.'}\"",
-            "restartCommand": "shutdown /f /r /t 0 /c \"packer restart\"",
-            "restartTimeout": "10m",
-            "type": "WindowsRestart",
-        },
-        {
-            "filters": ["$_.BrowseOnly"],
-            "name": "Windows Update Customizer Example",
-            "searchCriteria": "BrowseOnly=0 and IsInstalled=0",
-            "type": "WindowsUpdate",
-            "updateLimit": 100,
-        },
-    ],
-    distribute=[{
-        "artifactTags": {
-            "tagName": "value",
-        },
-        "imageId": "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1",
-        "location": "1_location",
-        "runOutputName": "image_it_pir_1",
-        "type": "ManagedImage",
-    }],
-    identity={
-        "type": "UserAssigned",
-    },
-    image_template_name="myImageTemplate",
-    location="westus",
-    resource_group_name="myResourceGroup",
-    source={
-        "imageId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image",
-        "type": "ManagedImage",
-    },
-    tags={
-        "imagetemplate_tag1": "IT_T1",
-        "imagetemplate_tag2": "IT_T2",
-    },
-    vm_profile={
-        "osDiskSizeGB": 64,
-        "vmSize": "Standard_D2s_v3",
-        "vnetConfig": {
-            "subnetId": "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
-        },
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const virtualMachineImageTemplate = new azurerm.virtualmachineimages.latest.VirtualMachineImageTemplate("virtualMachineImageTemplate", {
-    customize: [
-        {
-            inline: [
-                "Powershell command-1",
-                "Powershell command-2",
-                "Powershell command-3",
-            ],
-            name: "PowerShell (inline) Customizer Example",
-            type: "PowerShell",
-        },
-        {
-            name: "PowerShell (script) Customizer Example",
-            scriptUri: "https://example.com/path/to/script.ps1",
-            type: "PowerShell",
-            validExitCodes: [
-                0,
-                1,
-            ],
-        },
-        {
-            name: "Restart Customizer Example",
-            restartCheckCommand: "powershell -command \"& {Write-Output 'restarted.'}\"",
-            restartCommand: "shutdown /f /r /t 0 /c \"packer restart\"",
-            restartTimeout: "10m",
-            type: "WindowsRestart",
-        },
-        {
-            filters: [`$_.BrowseOnly`],
-            name: "Windows Update Customizer Example",
-            searchCriteria: "BrowseOnly=0 and IsInstalled=0",
-            type: "WindowsUpdate",
-            updateLimit: 100,
-        },
-    ],
-    distribute: [{
-        artifactTags: {
-            tagName: "value",
-        },
-        imageId: "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1",
-        location: "1_location",
-        runOutputName: "image_it_pir_1",
-        type: "ManagedImage",
-    }],
-    identity: {
-        type: "UserAssigned",
-    },
-    imageTemplateName: "myImageTemplate",
-    location: "westus",
-    resourceGroupName: "myResourceGroup",
-    source: {
-        imageId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image",
-        type: "ManagedImage",
-    },
-    tags: {
-        imagetemplate_tag1: "IT_T1",
-        imagetemplate_tag2: "IT_T2",
-    },
-    vmProfile: {
-        osDiskSizeGB: 64,
-        vmSize: "Standard_D2s_v3",
-        vnetConfig: {
-            subnetId: "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
-        },
-    },
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a VirtualMachineImageTemplate Resource {#create}
@@ -459,7 +23,7 @@ const virtualMachineImageTemplate = new azurerm.virtualmachineimages.latest.Virt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/virtualmachineimages/latest/#pulumi_azurerm.virtualmachineimages/latest.VirtualMachineImageTemplate">VirtualMachineImageTemplate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build_timeout_in_minutes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">customize</span><span class="p">:</span> <span class="nx">Optional[List[Union&lt;Azurerm:Virtualmachineimages/Latest:ImageTemplateFileCustomizer, Azurerm:Virtualmachineimages/Latest:ImageTemplatePowerShellCustomizer, Azurerm:Virtualmachineimages/Latest:ImageTemplateRestartCustomizer, Azurerm:Virtualmachineimages/Latest:ImageTemplateShellCustomizer, Azurerm:Virtualmachineimages/Latest:ImageTemplateWindowsUpdateCustomizer, Default=&gt;]]</span> = None<span class="p">, </span><span class="nx">distribute</span><span class="p">:</span> <span class="nx">Optional[List[Union&lt;Azurerm:Virtualmachineimages/Latest:ImageTemplateManagedImageDistributor, Azurerm:Virtualmachineimages/Latest:ImageTemplateSharedImageDistributor, Azurerm:Virtualmachineimages/Latest:ImageTemplateVhdDistributor, Default=&gt;]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ImageTemplateIdentity]]</span> = None<span class="p">, </span><span class="nx">image_template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Dict[ImageTemplateManagedImageSource] | Dict[ImageTemplatePlatformImageSource] | Dict[ImageTemplateSharedImageVersionSource]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ImageTemplateVmProfile]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/virtualmachineimages/latest/#pulumi_azurerm.virtualmachineimages/latest.VirtualMachineImageTemplate">VirtualMachineImageTemplate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build_timeout_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">customize</span><span class="p">:</span> <span class="nx">Optional[List[Union&lt;Azurerm:Virtualmachineimages/Latest:ImageTemplateFileCustomizer, Azurerm:Virtualmachineimages/Latest:ImageTemplatePowerShellCustomizer, Azurerm:Virtualmachineimages/Latest:ImageTemplateRestartCustomizer, Azurerm:Virtualmachineimages/Latest:ImageTemplateShellCustomizer, Azurerm:Virtualmachineimages/Latest:ImageTemplateWindowsUpdateCustomizer, Default=&gt;]]</span> = None<span class="p">, </span><span class="nx">distribute</span><span class="p">:</span> <span class="nx">Optional[List[Union&lt;Azurerm:Virtualmachineimages/Latest:ImageTemplateManagedImageDistributor, Azurerm:Virtualmachineimages/Latest:ImageTemplateSharedImageDistributor, Azurerm:Virtualmachineimages/Latest:ImageTemplateVhdDistributor, Default=&gt;]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ImageTemplateIdentity]]</span> = None<span class="p">, </span><span class="nx">image_template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Dict[ImageTemplateManagedImageSource] | Dict[ImageTemplatePlatformImageSource] | Dict[ImageTemplateSharedImageVersionSource]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ImageTemplateVmProfile]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1018,7 +582,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#build_timeout_in_minutes_python" style="color: inherit; text-decoration: inherit;">build_<wbr>timeout_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).{{% /md %}}</dd>
 
@@ -5946,7 +5510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.{{% /md %}}</dd>
 
@@ -6112,7 +5676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.{{% /md %}}</dd>
 
@@ -6338,7 +5902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatelimit_python" style="color: inherit; text-decoration: inherit;">update<wbr>Limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000){{% /md %}}</dd>
 
@@ -6544,7 +6108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatelimit_python" style="color: inherit; text-decoration: inherit;">update<wbr>Limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000){{% /md %}}</dd>
 

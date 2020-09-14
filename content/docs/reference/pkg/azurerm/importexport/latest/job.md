@@ -12,177 +12,6 @@ meta_desc: "Explore the Job resource of the importexport/latest module, includin
 
 Contains the job information.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Create export job
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var job = new AzureRM.ImportExport.Latest.Job("job", new AzureRM.ImportExport.Latest.JobArgs
-        {
-            JobName = "myExportJob",
-            Location = "West US",
-            ResourceGroupName = "myResourceGroup",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	importexport "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/importexport/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := importexport.NewJob(ctx, "job", &importexport.JobArgs{
-			JobName:           pulumi.String("myExportJob"),
-			Location:          pulumi.String("West US"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-job = azurerm.importexport.latest.Job("job",
-    job_name="myExportJob",
-    location="West US",
-    resource_group_name="myResourceGroup")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const job = new azurerm.importexport.latest.Job("job", {
-    jobName: "myExportJob",
-    location: "West US",
-    resourceGroupName: "myResourceGroup",
-});
-
-```
-
-{{% /example %}}
-
-### Create import job
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureRM = Pulumi.AzureRM;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var job = new AzureRM.ImportExport.Latest.Job("job", new AzureRM.ImportExport.Latest.JobArgs
-        {
-            JobName = "myJob",
-            Location = "West US",
-            ResourceGroupName = "myResourceGroup",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	importexport "github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/importexport/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := importexport.NewJob(ctx, "job", &importexport.JobArgs{
-			JobName:           pulumi.String("myJob"),
-			Location:          pulumi.String("West US"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azurerm as azurerm
-
-job = azurerm.importexport.latest.Job("job",
-    job_name="myJob",
-    location="West US",
-    resource_group_name="myResourceGroup")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azurerm from "@pulumi/azurerm";
-
-const job = new azurerm.importexport.latest.Job("job", {
-    jobName: "myJob",
-    location: "West US",
-    resourceGroupName: "myResourceGroup",
-});
-
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Job Resource {#create}
@@ -1217,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bytessucceeded_python" style="color: inherit; text-decoration: inherit;">bytes<wbr>Succeeded</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
 
@@ -1297,7 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_complete_python" style="color: inherit; text-decoration: inherit;">percent_<wbr>complete</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage completed for the drive. {{% /md %}}</dd>
 
@@ -1743,7 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bytessucceeded_python" style="color: inherit; text-decoration: inherit;">bytes<wbr>Succeeded</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
 
@@ -1823,7 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_complete_python" style="color: inherit; text-decoration: inherit;">percent_<wbr>complete</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage completed for the drive. {{% /md %}}</dd>
 
@@ -3369,7 +3198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_complete_python" style="color: inherit; text-decoration: inherit;">percent_<wbr>complete</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Overall percentage completed for the job.{{% /md %}}</dd>
 
@@ -4135,7 +3964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_complete_python" style="color: inherit; text-decoration: inherit;">percent_<wbr>complete</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Overall percentage completed for the job.{{% /md %}}</dd>
 
@@ -4391,7 +4220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drive_count_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
 
@@ -4597,7 +4426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drive_count_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
 
