@@ -252,6 +252,6 @@ in other resources that support group memberships. s
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`wavefront` Terraform Provider](https://github.com/terraform-providers/terraform-provider-wavefront).</dd>
+	<dd>This Pulumi package is based on the [`wavefront` Terraform Provider](https://github.com/vmware/terraform-provider-wavefront).</dd>
 </dl>
 

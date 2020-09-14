@@ -32,6 +32,7 @@ A Pulumi package for creating and managing wavefront cloud resources.
     <li><a href="derivedmetric" title="DerivedMetric"><span class="symbol resource"></span>DerivedMetric</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
+    <li><a href="serviceaccount" title="ServiceAccount"><span class="symbol resource"></span>ServiceAccount</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
     <li><a href="usergroup" title="UserGroup"><span class="symbol resource"></span>UserGroup</a></li>
 </ul>
@@ -48,9 +49,9 @@ A Pulumi package for creating and managing wavefront cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`wavefront` Terraform Provider](https://github.com/terraform-providers/terraform-provider-wavefront).</dd>
+	<dd>This Pulumi package is based on the [`wavefront` Terraform Provider](https://github.com/vmware/terraform-provider-wavefront).</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 
 

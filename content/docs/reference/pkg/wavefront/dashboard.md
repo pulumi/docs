@@ -99,7 +99,7 @@ const testDashboard = new wavefront.Dashboard("testDashboard", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_wavefront/#pulumi_wavefront.Dashboard">Dashboard</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">can_modifies</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">can_views</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_query_parameters</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_section_table_of_contents</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_filter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameter_details</span><span class="p">:</span> <span class="nx">Optional[List[DashboardParameterDetailArgs]]</span> = None<span class="p">, </span><span class="nx">sections</span><span class="p">:</span> <span class="nx">Optional[List[DashboardSectionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_wavefront/#pulumi_wavefront.Dashboard">Dashboard</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">can_modifies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">can_views</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_query_parameters</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_section_table_of_contents</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_filter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameter_details</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardParameterDetailArgs]]</span> = None<span class="p">, </span><span class="nx">sections</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardSectionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -681,7 +681,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#sections_python" style="color: inherit; text-decoration: inherit;">sections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsection">List[Dashboard<wbr>Section<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardsection">Sequence[Dashboard<wbr>Section<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard chart sections. See dashboard sections
 {{% /md %}}</dd>
@@ -692,7 +692,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
 {{% /md %}}</dd>
@@ -714,7 +714,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#can_modifies_python" style="color: inherit; text-decoration: inherit;">can_<wbr>modifies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of users that have modify ACL access to the dashboard
 {{% /md %}}</dd>
@@ -725,7 +725,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#can_views_python" style="color: inherit; text-decoration: inherit;">can_<wbr>views</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of users that have view ACL access to the dashboard
 {{% /md %}}</dd>
@@ -783,7 +783,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#parameter_details_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardparameterdetail">List[Dashboard<wbr>Parameter<wbr>Detail<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardparameterdetail">Sequence[Dashboard<wbr>Parameter<wbr>Detail<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The current JSON representation of dashboard parameters. See parameter details
 {{% /md %}}</dd>
@@ -887,7 +887,7 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">can_modifies</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">can_views</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_query_parameters</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_section_table_of_contents</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_filter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameter_details</span><span class="p">:</span> <span class="nx">Optional[List[DashboardParameterDetailArgs]]</span> = None<span class="p">, </span><span class="nx">sections</span><span class="p">:</span> <span class="nx">Optional[List[DashboardSectionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Dashboard</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">can_modifies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">can_views</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_query_parameters</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_section_table_of_contents</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_filter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameter_details</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardParameterDetailArgs]]</span> = None<span class="p">, </span><span class="nx">sections</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardSectionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Dashboard</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1400,7 +1400,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_can_modifies_python" style="color: inherit; text-decoration: inherit;">can_<wbr>modifies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of users that have modify ACL access to the dashboard
 {{% /md %}}</dd>
@@ -1411,7 +1411,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_can_views_python" style="color: inherit; text-decoration: inherit;">can_<wbr>views</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of users that have view ACL access to the dashboard
 {{% /md %}}</dd>
@@ -1480,7 +1480,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_parameter_details_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardparameterdetail">List[Dashboard<wbr>Parameter<wbr>Detail<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardparameterdetail">Sequence[Dashboard<wbr>Parameter<wbr>Detail<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The current JSON representation of dashboard parameters. See parameter details
 {{% /md %}}</dd>
@@ -1491,7 +1491,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_sections_python" style="color: inherit; text-decoration: inherit;">sections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsection">List[Dashboard<wbr>Section<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardsection">Sequence[Dashboard<wbr>Section<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard chart sections. See dashboard sections
 {{% /md %}}</dd>
@@ -1502,7 +1502,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
 {{% /md %}}</dd>
@@ -2105,7 +2105,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#rows_python" style="color: inherit; text-decoration: inherit;">rows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsectionrow">List[Dashboard<wbr>Section<wbr>Row<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardsectionrow">Sequence[Dashboard<wbr>Section<wbr>Row<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See dashboard section rows
 {{% /md %}}</dd>
@@ -2195,7 +2195,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#charts_python" style="color: inherit; text-decoration: inherit;">charts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsectionrowchart">List[Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardsectionrowchart">Sequence[Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Charts in this section. See dashboard chart
 {{% /md %}}</dd>
@@ -2475,7 +2475,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsectionrowchartsource">List[Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardsectionrowchartsource">Sequence[Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Query expression to plot on the chart. See chart source queries
 {{% /md %}}</dd>
@@ -4562,7 +4562,7 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 <a href="#custom_tags_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}For the tabular view, a list of point tags to display when using the `custom` tag display mode
 {{% /md %}}</dd>
@@ -4573,7 +4573,7 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 <a href="#expected_data_spacing_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>spacing</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Threshold (in seconds) for time delta between consecutive points in a series
 above which a dotted line will replace a solid in in line plots. Default 60
@@ -4585,7 +4585,7 @@ above which a dotted line will replace a solid in in line plots. Default 60
 <a href="#fixed_legend_display_stats_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>display_<wbr>stats</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}For a chart with a fixed legend, a list of statistics to display in the legend
 {{% /md %}}</dd>
@@ -4619,7 +4619,7 @@ Valid options are `CURRENT`, `MEAN`, `MEDIAN`, `SUM`, `MIN`, `MAX`, `COUNT`
 <a href="#fixed_legend_filter_limit_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>filter_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of series to include in the fixed legend
 {{% /md %}}</dd>
@@ -4735,7 +4735,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#num_tags_python" style="color: inherit; text-decoration: inherit;">num_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}For the tabular view, how many point tags to display
 {{% /md %}}</dd>
@@ -4801,7 +4801,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#sparkline_decimal_precision_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>decimal_<wbr>precision</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}For the single stat view, the decimal precision of the displayed number
 {{% /md %}}</dd>
@@ -4939,7 +4939,7 @@ the displayed `TEXT` or `BACKGROUND`. Valid options are `TEXT` or `BACKGROUND`
 <a href="#sparkline_value_color_map_colors_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>color_<wbr>map_<wbr>colors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}For the single stat view, A list of colors that differing query values map to. 
 Must contain one more element than `sparkline_value_color_map_values_v2`. Values should be in `rgba(,,,,)`
@@ -4951,7 +4951,7 @@ Must contain one more element than `sparkline_value_color_map_values_v2`. Values
 <a href="#sparkline_value_color_map_values_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>color_<wbr>map_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
@@ -4962,7 +4962,7 @@ Must contain one more element than `sparkline_value_color_map_values_v2`. Values
 <a href="#sparkline_value_color_map_values_v2s_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>color_<wbr>map_<wbr>values_<wbr>v2s</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of boundaries for mapping different
 query values to colors.  Must contain one less element than `sparkline_value_color_map_colors`
@@ -4974,7 +4974,7 @@ query values to colors.  Must contain one less element than `sparkline_value_col
 <a href="#sparkline_value_text_map_texts_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>text_<wbr>map_<wbr>texts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of display text values that different query
 values map to.  Must contain one more element than `sparkline_value_text_map_thresholds`
@@ -4986,7 +4986,7 @@ values map to.  Must contain one more element than `sparkline_value_text_map_thr
 <a href="#sparkline_value_text_map_thresholds_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>text_<wbr>map_<wbr>thresholds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of threshold boundaries for 
 mapping different query values to display text.  Must contain one less element than `sparkline_value_text_map_text`
@@ -5034,7 +5034,7 @@ Valid options are `all`, `top`, or `custom`
 <a href="#window_size_python" style="color: inherit; text-decoration: inherit;">window_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Width, in minutes, of the time window to use for `last` windowing
 {{% /md %}}</dd>
@@ -5500,6 +5500,6 @@ Valid options are `full` or `last`
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`wavefront` Terraform Provider](https://github.com/terraform-providers/terraform-provider-wavefront).</dd>
+	<dd>This Pulumi package is based on the [`wavefront` Terraform Provider](https://github.com/vmware/terraform-provider-wavefront).</dd>
 </dl>
 

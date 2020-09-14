@@ -349,8 +349,7 @@ routing key. <code class="docutils literal notranslate"><span class="pre">WEBHOO
 <li><p><strong>routes</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'AlertTargetRouteArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – List of routing targets that this alert target will notify. See Route</p></li>
 <li><p><strong>template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A mustache template that will form the body of the POST request, email and summary of the PagerDuty.</p></li>
 <li><p><strong>triggers</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of occurrences on which this webhook will be fired. Valid values are <code class="docutils literal notranslate"><span class="pre">ALERT_OPENED</span></code>,
-<code class="docutils literal notranslate"><span class="pre">ALERT_UPDATED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_RESOLVED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_MAINTENANCE</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_SNOOZED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_INVALID</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_LONGER_INVALID</span></code>,
-<code class="docutils literal notranslate"><span class="pre">ALERT_RETRIGGERED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_DATA</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_DATA_RESOLVED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_DATA_MAINTENANCE</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_SEVERITY_UPDATE</span></code>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">ALERT_UPDATED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_RESOLVED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_MAINTENANCE</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_SNOOZED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_DATA</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_DATA_RESOLVED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_DATA_MAINTENANCE</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -378,8 +377,7 @@ routing key. <code class="docutils literal notranslate"><span class="pre">WEBHOO
 <li><p><strong>routes</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'AlertTargetRouteArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – List of routing targets that this alert target will notify. See Route</p></li>
 <li><p><strong>template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A mustache template that will form the body of the POST request, email and summary of the PagerDuty.</p></li>
 <li><p><strong>triggers</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of occurrences on which this webhook will be fired. Valid values are <code class="docutils literal notranslate"><span class="pre">ALERT_OPENED</span></code>,
-<code class="docutils literal notranslate"><span class="pre">ALERT_UPDATED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_RESOLVED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_MAINTENANCE</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_SNOOZED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_INVALID</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_LONGER_INVALID</span></code>,
-<code class="docutils literal notranslate"><span class="pre">ALERT_RETRIGGERED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_DATA</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_DATA_RESOLVED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_DATA_MAINTENANCE</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_SEVERITY_UPDATE</span></code>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">ALERT_UPDATED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_RESOLVED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_MAINTENANCE</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_SNOOZED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_DATA</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_DATA_RESOLVED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_DATA_MAINTENANCE</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -451,8 +449,7 @@ routing key. <code class="docutils literal notranslate"><span class="pre">WEBHOO
 <dt id="pulumi_wavefront.AlertTarget.triggers">
 <em class="property">property </em><code class="sig-name descname">triggers</code><a class="headerlink" href="#pulumi_wavefront.AlertTarget.triggers" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of occurrences on which this webhook will be fired. Valid values are <code class="docutils literal notranslate"><span class="pre">ALERT_OPENED</span></code>,
-<code class="docutils literal notranslate"><span class="pre">ALERT_UPDATED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_RESOLVED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_MAINTENANCE</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_SNOOZED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_INVALID</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_LONGER_INVALID</span></code>,
-<code class="docutils literal notranslate"><span class="pre">ALERT_RETRIGGERED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_DATA</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_DATA_RESOLVED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_DATA_MAINTENANCE</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_SEVERITY_UPDATE</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">ALERT_UPDATED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_RESOLVED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_MAINTENANCE</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_SNOOZED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_DATA</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_DATA_RESOLVED</span></code>, <code class="docutils literal notranslate"><span class="pre">ALERT_NO_DATA_MAINTENANCE</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2797,6 +2794,126 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_wavefront.Role.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_wavefront.Role.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_wavefront.ServiceAccount">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_wavefront.</code><code class="sig-name descname">ServiceAccount</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">active</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identifier</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_groups</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_wavefront.ServiceAccount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Wavefront Service Account Resource. This allows service accounts to be created, updated, and deleted.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_wavefront</span> <span class="k">as</span> <span class="nn">wavefront</span>
+
+<span class="n">basic</span> <span class="o">=</span> <span class="n">wavefront</span><span class="o">.</span><span class="n">ServiceAccount</span><span class="p">(</span><span class="s2">&quot;basic&quot;</span><span class="p">,</span>
+    <span class="n">active</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">identifier</span><span class="o">=</span><span class="s2">&quot;sa::tftesting&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>active</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not the service account is active</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the service account</p></li>
+<li><p><strong>identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The (unique) identifier of the service account to create. Must start with sa:</p></li>
+<li><p><strong>permissions</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – List of permission to grant to this service account.  Valid options are
+<code class="docutils literal notranslate"><span class="pre">agent_management</span></code>, <code class="docutils literal notranslate"><span class="pre">alerts_management</span></code>, <code class="docutils literal notranslate"><span class="pre">dashboard_management</span></code>, <code class="docutils literal notranslate"><span class="pre">embedded_charts</span></code>, <code class="docutils literal notranslate"><span class="pre">events_management</span></code>, <code class="docutils literal notranslate"><span class="pre">external_links_management</span></code>,
+<code class="docutils literal notranslate"><span class="pre">host_tag_management</span></code>, <code class="docutils literal notranslate"><span class="pre">metrics_management</span></code>, <code class="docutils literal notranslate"><span class="pre">user_management</span></code></p></li>
+<li><p><strong>user_groups</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – List of user groups for this service account</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_wavefront.ServiceAccount.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">active</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identifier</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_groups</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_wavefront.service_account.ServiceAccount<a class="headerlink" href="#pulumi_wavefront.ServiceAccount.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ServiceAccount resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>active</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not the service account is active</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the service account</p></li>
+<li><p><strong>identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The (unique) identifier of the service account to create. Must start with sa:</p></li>
+<li><p><strong>permissions</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – List of permission to grant to this service account.  Valid options are
+<code class="docutils literal notranslate"><span class="pre">agent_management</span></code>, <code class="docutils literal notranslate"><span class="pre">alerts_management</span></code>, <code class="docutils literal notranslate"><span class="pre">dashboard_management</span></code>, <code class="docutils literal notranslate"><span class="pre">embedded_charts</span></code>, <code class="docutils literal notranslate"><span class="pre">events_management</span></code>, <code class="docutils literal notranslate"><span class="pre">external_links_management</span></code>,
+<code class="docutils literal notranslate"><span class="pre">host_tag_management</span></code>, <code class="docutils literal notranslate"><span class="pre">metrics_management</span></code>, <code class="docutils literal notranslate"><span class="pre">user_management</span></code></p></li>
+<li><p><strong>user_groups</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – List of user groups for this service account</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.ServiceAccount.active">
+<em class="property">property </em><code class="sig-name descname">active</code><a class="headerlink" href="#pulumi_wavefront.ServiceAccount.active" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not the service account is active</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.ServiceAccount.description">
+<em class="property">property </em><code class="sig-name descname">description</code><a class="headerlink" href="#pulumi_wavefront.ServiceAccount.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the service account</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.ServiceAccount.identifier">
+<em class="property">property </em><code class="sig-name descname">identifier</code><a class="headerlink" href="#pulumi_wavefront.ServiceAccount.identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>The (unique) identifier of the service account to create. Must start with sa:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.ServiceAccount.permissions">
+<em class="property">property </em><code class="sig-name descname">permissions</code><a class="headerlink" href="#pulumi_wavefront.ServiceAccount.permissions" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of permission to grant to this service account.  Valid options are
+<code class="docutils literal notranslate"><span class="pre">agent_management</span></code>, <code class="docutils literal notranslate"><span class="pre">alerts_management</span></code>, <code class="docutils literal notranslate"><span class="pre">dashboard_management</span></code>, <code class="docutils literal notranslate"><span class="pre">embedded_charts</span></code>, <code class="docutils literal notranslate"><span class="pre">events_management</span></code>, <code class="docutils literal notranslate"><span class="pre">external_links_management</span></code>,
+<code class="docutils literal notranslate"><span class="pre">host_tag_management</span></code>, <code class="docutils literal notranslate"><span class="pre">metrics_management</span></code>, <code class="docutils literal notranslate"><span class="pre">user_management</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.ServiceAccount.user_groups">
+<em class="property">property </em><code class="sig-name descname">user_groups</code><a class="headerlink" href="#pulumi_wavefront.ServiceAccount.user_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of user groups for this service account</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.ServiceAccount.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_wavefront.ServiceAccount.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.ServiceAccount.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_wavefront.ServiceAccount.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
